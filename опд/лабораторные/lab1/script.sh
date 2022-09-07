@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 # Init
 mkdir lab0
@@ -426,11 +426,13 @@ chmod u-r tynamo2/whiscash
 echo -e '-- Step 3 completed!\n========================'
 
 # Step 4
+shopt -s globstar
 echo -e '-- Step 4\n...'
 
 # 4.1
 echo '- 4.1'
-wc -l $(find . -type f -name "*r") | sort -nrk1 | tail -n +2
+# wc -l $(find . -type f -name "*e") | sort -nrk1 | tail -n +2
+wc -l $(ls -dp1 **/*e | grep -v "/$") | sort -nrk1 | tail -n +2
 
 # 4.2
 echo '- 4.2'
@@ -438,26 +440,27 @@ ls -ltr $(grep -rl "sa" .) 2>&1
 
 # 4.3
 echo '- 4.3'
-# if add line nums and sort
-# find . -type f -name "*e" -exec sh -c "cat -n {} | sort -kr2" \; 2>&1
-# if sort then add line nums
-find . -type f -name "*e" -exec sh -c "cat {} | sort -r | nl 2>&1" \; 2>&1
+# find . -type f -name "*k" -exec sh -c "cat {} | sort -r | nl 2>&1" \; 2>&1
+[ ! -z $(ls -1 -dp **/*k | grep -v "/$")] && cat $(ls -1 -dp **/*k | grep -v "/$")  | sort -r | nl 2>&1
 
 # 4.4
 echo '- 4.4'
-[ ! -z "$(grep -rl \"gla\" .)"] && ls -l $(grep -rl \"gla\" .) 2>&1
+[ ! -z $(grep -rl "gla" .)] && ls -l $(grep -rl "gla" .) 2>&1
 
 # 4.5
 echo '- 4.5'
-wc -c $(find wigglytuff1 -maxdepth 1 -type f) | head -n -1 | sort -nk1 2> /tmp/opd_lab1_errors.log
+# wc -c $(find wigglytuff1 -maxdepth 1 -type f) | head -n -1 | sort -nk1 2> /tmp/opd_lab1_errors.log
+wc -c $(ls -1 -dp "$PWD/wigglytuff1/"* | grep -v "/$") | head -n -1 | sort -nk1 2> /tmp/opd_lab1_errors.log
 
 # 4.6
 echo '- 4.6'
-ls -lt $(find wigglytuff1 -maxdepth 1 -type f)
+# ls -lt $(find wigglytuff1 -maxdepth 1 -type f)
+ls -lt $(ls -1 -dp "$PWD/wigglytuff1/"* | grep -v "/$")
 
 # 4.7
 echo '- 4.7'
-find . -type f -name "k*" -exec ls -ltr {} + | head -4
+# find . -type f -name "k*" -exec ls -ltr {} + | head -4
+ls -ltr $(ls -1 -dp **/* | grep -v "/$" | grep "/k") | head -4
 
 # 4.8
 echo '- 4.8'
@@ -465,7 +468,8 @@ sort -r tynamo2/smoochum/venomoth/mismagius tynamo2/smoochum/staravia tynamo2/sm
 
 # 4.9
 echo '- 4.9'
-find . -type f -exec ls -lt {} + 2> /dev/null | head -4
+# find . -type f -exec ls -lt {} + 2> /dev/null | head -4
+ls -lt $(ls -1 -dp **/*) 2> /dev/null | grep -v "\->" | head -4
 
 # 4.10
 echo '- 4.10'
@@ -491,11 +495,13 @@ cat -n prinplup8 | grep "She" 2>&1
 
 # 4.13
 echo '- 4.13'
-find wigglytuff1 -maxdepth 1 -type f -exec cat -n {} + | grep -viE "*r" 2> /dev/null
+# find wigglytuff1 -maxdepth 1 -type f -exec cat -n {} + | grep -viE "*r" 2> /dev/null
+cat -n $(ls -1 -dp "$PWD/wigglytuff1/"* | grep -v "/$") 2> /dev/null
 
 # 4.14
 echo '- 4.14'
-find . -type f -exec ls -lt {} + | tail -4
+# find . -type f -exec ls -lt {} + | tail -4
+ls -lt $(ls -1 -dp **/*) | grep -v "\->" | tail -4
 
 # 4.15
 echo '- 4.15'
@@ -503,7 +509,8 @@ cat -n tynamo2/cascoon/herdier/ariados tynamo2/cascoon/herdier/kingler tynamo2/c
 
 # 4.16
 echo '- 4.16'
-sort $(find wigglytuff1 -maxdepth 1 -type f) 2> /tmp/opd_lab1_errors16.log
+# sort $(find wigglytuff1 -maxdepth 1 -type f) 2> /tmp/opd_lab1_errors16.log
+sort $(ls -1 -dp "$PWD/wigglytuff1/"* | grep -v "/$") 2> /tmp/opd_lab1_errors16.log
 
 # 4.17
 echo '- 4.17'
@@ -511,21 +518,19 @@ ls -ltr $(grep -rl "ti" .)
 
 # 4.18
 echo '- 4.18'
-# if add line nums and sort
-# find . -type f -name "*2" -exec sh -c "cat -n {} | sort -k2" \; 2> /tmp/opd_lab1_errors18.log
-# if sort then add line nums
-find . -type f -name "*2" -exec sh -c "cat {} | sort | nl 2>&1" \; 2> /tmp/opd_lab1_errors18.log
+# find . -type f -name "*2" -exec sh -c "cat {} | sort | nl" \; 2> /tmp/opd_lab1_errors18.log
+cat $(ls -1 -dp **/*2 | grep -v "/$") | sort | nl 2> /tmp/opd_lab1_errors18.log
 
 echo -e '-- Step 4 completed!\n========================'
 
 # Step 5
 echo -e '-- Step 5\n...'
 
-rm houndour3
-rm wigglytuff1/snorunt/vespiquen
-rm Copy_*
-rm wigglytuff1/growlithe/pansage/slakingchingli*
-yes | rm -r scraggy9
+rm -f houndour3
+rm -f wigglytuff1/snorunt/vespiquen
+rm -f Copy_*
+rm -f wigglytuff1/growlithe/pansage/slakingchingli*
+rm -rf scraggy9
 rmdir tynamo2/smoochum/tangrowth/flareon
 
 echo -e '-- Step 5 completed!\n========================'
