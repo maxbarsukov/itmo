@@ -519,7 +519,7 @@ ls -ltr $(grep -rl "ti" .)
 # 4.18
 echo '- 4.18'
 # find . -type f -name "*2" -exec sh -c "cat {} | sort | nl" \; 2> /tmp/opd_lab1_errors18.log
-cat $(ls -1 -dp **/*2 | grep -v "/$") | sort | nl 2> /tmp/opd_lab1_errors18.log
+cat $(ls -1 -dp **/*t | grep -v "/$") | sort | nl 2> /tmp/opd_lab1_errors18.log
 
 echo -e '-- Step 4 completed!\n========================'
 
