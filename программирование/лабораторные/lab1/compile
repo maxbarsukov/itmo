@@ -1,0 +1,3 @@
+#!/bin/bash
+
+javac -d build/ src/Lab1.java && cd build && jar -cvfm lab1.jar MANIFEST.MF .

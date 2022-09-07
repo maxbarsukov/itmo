@@ -1,0 +1,4 @@
+#!/bin/bash
+
+javac src/Lab1.java
+java src/Lab1
