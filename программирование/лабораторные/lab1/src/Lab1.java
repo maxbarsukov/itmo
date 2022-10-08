@@ -16,22 +16,22 @@ public class Lab1 {
     private static final int DECIMAL_PLACES = 4;
 
     public static void main(String[] args) {
-        long[] p =  makeArray1(ARR1_FROM, ARR1_TO);
+        var p =  makeArray1(ARR1_FROM, ARR1_TO);
         System.out.println("First array:\n" + Arrays.toString(p) + "\n\n");
 
-        double[] x = makeArray2(ARR2_SIZE, RAND_FROM, RAND_TO);
+        var x = makeArray2(ARR2_SIZE, RAND_FROM, RAND_TO);
         System.out.println("Second array:");
         printArray(x, DECIMAL_PLACES);
 
-        double[][] s = makeArray3(ARR3_COLUMNS_NUM, ARR3_ROWS_NUM, p, x);
+        var s = makeArray3(ARR3_COLUMNS_NUM, ARR3_ROWS_NUM, p, x);
         System.out.println("Third matrix:");
         printMatrix(s, DECIMAL_PLACES);
     }
 
     private static long[] makeArray1(int from, int to) {
-        int size = (from - to) / 2 + 1;
-        long[] result = new long[size];
-        long temp = from;
+        var size = (from - to) / 2 + 1;
+        var result = new long[size];
+        var temp = from;
 
         for (int i = 0; i < size; i++) {
             result[i] = temp;
@@ -41,7 +41,7 @@ public class Lab1 {
     }
 
     private static double[] makeArray2(int size, double from, double to) {
-        double[] result = new double[size];
+        var result = new double[size];
         Random rand = new Random();
 
         for (int i = 0; i < size; i++) {
@@ -51,7 +51,7 @@ public class Lab1 {
     }
 
     private static double[][] makeArray3(int columnsSize, int rowsSize, long[] p, double[] x) {
-        double[][] result = new double[columnsSize][rowsSize];
+        var result = new double[columnsSize][rowsSize];
 
         for (int i = 0; i < columnsSize; i++) {
             for (int j = 0; j < rowsSize; j++) {
@@ -78,7 +78,7 @@ public class Lab1 {
     }
 
     public static double round(double value, int places) {
-        long factor = (long) Math.pow(10, places);
+        var factor = (long) Math.pow(10, places);
         value *= factor;
         return (double) Math.round(value) / factor;
     }
