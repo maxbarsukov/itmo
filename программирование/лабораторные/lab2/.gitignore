@@ -2,6 +2,7 @@
 # Compiled class file
 *.class
 *.jar
+!app/vendor/Pokemon.jar
 
 # Log file
 *.log
