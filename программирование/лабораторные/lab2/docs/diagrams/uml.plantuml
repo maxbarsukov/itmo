@@ -1,0 +1,59 @@
+@startuml
+
+top to bottom direction
+skinparam linetype ortho
+
+class Facade
+class PinMissile
+class DarkPulse
+class DreamEater
+class MegaDrain
+class ShadowBall
+class StruggleBug
+class Confide
+class DoubleTeam
+class Hypnosis
+
+class Move
+class PhysicalMove
+class SpecialMove
+class StatusMove
+
+class Pokemon
+class Budew
+class Golisopod
+class Roselia
+class Roserade
+class Sigilyph
+class Wimpod
+
+class App
+
+Facade        -[#000082,plain]-^  PhysicalMove
+PinMissile    -[#000082,plain]-^  PhysicalMove
+
+DarkPulse     -[#000082,plain]-^  SpecialMove
+DreamEater    -[#000082,plain]-^  SpecialMove
+MegaDrain     -[#000082,plain]-^  SpecialMove
+ShadowBall    -[#000082,plain]-^  SpecialMove
+StruggleBug   -[#000082,plain]-^  SpecialMove
+
+Confide       -[#000082,plain]-^  StatusMove
+DoubleTeam    -[#000082,plain]-^  StatusMove
+Hypnosis      -[#000082,plain]-^  StatusMove
+
+StatusMove    -[#000082,plain]-^  Move
+DamageMove    -[#000082,plain]-^  Move
+PhysicalMove  -[#000082,plain]-^  DamageMove
+SpecialMove   -[#000082,plain]-^  DamageMove
+
+Budew         -[#000082,plain]-^  Pokemon
+Roselia       -[#000082,plain]-^  Budew
+Roserade      -[#000082,plain]-^  Roselia
+
+Wimpod        -[#000082,plain]-^  Pokemon
+Golisopod     -[#000082,plain]-^  Wimpod
+
+Sigilyph      -[#000082,plain]-^  Pokemon
+
+@enduml
