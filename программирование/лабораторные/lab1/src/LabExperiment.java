@@ -24,10 +24,11 @@ class Inf implements Iterable<Integer> {
 }
 
 public class LabExperiment {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws InterruptedException {
         var inf = new Inf();
         for(var i : inf){
             System.out.println(i);
+            Thread.sleep(10);
         }
     }
 }
