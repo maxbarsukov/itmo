@@ -42,7 +42,7 @@ public class Lab1 {
 
     private static double[] makeArray2(int size, double from, double to) {
         var result = new double[size];
-        Random rand = new Random();
+        var rand = new Random();
 
         for (int i = 0; i < size; i++) {
             result[i] = rand.nextDouble() * (to - from) + from;
@@ -62,25 +62,19 @@ public class Lab1 {
     }
 
     private static void printArray(double[] array, int places) {
-        for (int i = 0; i < array.length; i++) {
-            System.out.format("%6.4f ", array[i]);
+        for (double elem : array) {
+            System.out.format("%6.4f ", elem);
         }
         System.out.println("\n");
     }
 
     private static void printMatrix(double[][] matrix, int places) {
-        for (int row = 0; row < matrix.length; row++) {
-            for (int col = 0; col < matrix[row].length; col++) {
-                System.out.format("%10.4f ", round(matrix[row][col], places));
+        for (double[] rows : matrix) {
+            for (double elem : rows) {
+                System.out.format("%15.4f ", elem);
             }
             System.out.println();
         }
-    }
-
-    public static double round(double value, int places) {
-        var factor = (long) Math.pow(10, places);
-        value *= factor;
-        return (double) Math.round(value) / factor;
     }
 
     private static double calculateValue(long p, double x) {
@@ -91,15 +85,12 @@ public class Lab1 {
             );
         }
 
-        else if (p == 4 || p == 8 || p == 10) {
+        if (p == 4 || p == 8 || p == 10) {
             return Math.log(Math.pow(Math.E, Math.pow(Math.E, Math.pow(x, x))));
         }
 
         return Math.pow(
-                Math.pow(
-                        Math.tan(Math.tan(x)) * (Math.pow(((1.0 / 4.0) / Math.tan(x)), 3) - 1.0),
-                        3
-                ),
+                Math.pow(Math.tan(Math.tan(x)) * (Math.pow(((1.0 / 4.0) / Math.tan(x)), 3) - 1.0), 3),
                 2
         );
     }
