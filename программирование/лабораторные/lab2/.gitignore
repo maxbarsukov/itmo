@@ -13,8 +13,9 @@ replay_pid*
 
 ## Gradle
 .gradle
-**/build/
+app/build/
 !src/**/build/
+!build/lab2.jar
 
 # Ignore Gradle GUI config
 gradle-app.setting
