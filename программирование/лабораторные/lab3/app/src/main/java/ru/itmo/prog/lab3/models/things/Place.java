@@ -31,4 +31,11 @@ public abstract class Place implements HasCases {
   public int hashCode() {
     return Objects.hash(name);
   }
+
+  @Override
+  public String toString() {
+    return "Place{" +
+      "name='" + name + '\'' +
+      '}';
+  }
 }

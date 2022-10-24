@@ -55,4 +55,12 @@ public class Wind {
   public int hashCode() {
     return Objects.hash(name, power);
   }
+
+  @Override
+  public String toString() {
+    return "Wind{" +
+      "name='" + name + '\'' +
+      ", power=" + power +
+      '}';
+  }
 }

@@ -27,19 +27,6 @@ public class PersonGroup implements Cannable {
   }
 
   @Override
-  public boolean equals(Object o) {
-    if (this == o) return true;
-    if (o == null || getClass() != o.getClass()) return false;
-    PersonGroup that = (PersonGroup) o;
-    return people.equals(that.people);
-  }
-
-  @Override
-  public int hashCode() {
-    return Objects.hash(people);
-  }
-
-  @Override
   public String can(Supplier<String> function) {
     return description().toLowerCase() + " в любой момент могут " + function.get();
   }
@@ -52,6 +39,19 @@ public class PersonGroup implements Cannable {
     } else {
       return people.get(0).getPluralName();
     }
+  }
+
+  @Override
+  public boolean equals(Object o) {
+    if (this == o) return true;
+    if (o == null || getClass() != o.getClass()) return false;
+    PersonGroup that = (PersonGroup) o;
+    return people.equals(that.people);
+  }
+
+  @Override
+  public int hashCode() {
+    return Objects.hash(people);
   }
 
   @Override

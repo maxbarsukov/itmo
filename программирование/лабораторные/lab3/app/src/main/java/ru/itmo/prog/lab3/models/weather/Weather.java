@@ -25,4 +25,11 @@ public class Weather {
   public int hashCode() {
     return Objects.hash(wind);
   }
+
+  @Override
+  public String toString() {
+    return "Weather{" +
+      "wind=" + wind +
+      '}';
+  }
 }

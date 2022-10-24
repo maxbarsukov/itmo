@@ -16,4 +16,11 @@ public class Roof extends Place implements HasCases {
   public String genitiveCase() {
     return "крыши";
   }
+
+  @Override
+  public String toString() {
+    return "Roof{" +
+      "name='" + getName() + '\'' +
+      '}';
+  }
 }

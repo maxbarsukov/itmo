@@ -6,6 +6,8 @@ import ru.itmo.prog.lab3.models.Impression;
 import ru.itmo.prog.lab3.models.JumpDistance;
 import ru.itmo.prog.lab3.models.things.Place;
 
+import java.util.Objects;
+
 public class Shorty extends Person {
   private int jumpDistance;
 
@@ -78,5 +80,30 @@ public class Shorty extends Person {
 
   public void setJumpDistance(int jumpDistance) {
     this.jumpDistance = jumpDistance;
+  }
+
+  @Override
+  public boolean equals(Object o) {
+    if (this == o) return true;
+    if (o == null || getClass() != o.getClass()) return false;
+    if (!super.equals(o)) return false;
+    Shorty shorty = (Shorty) o;
+    return jumpDistance == shorty.jumpDistance;
+  }
+
+  @Override
+  public int hashCode() {
+    return Objects.hash(super.hashCode(), jumpDistance);
+  }
+
+  @Override
+  public String toString() {
+    return "Shorty{" +
+      "name=" + getName() +
+      "mass=" + getMass() +
+      "currentImpression=" + getCurrentImpression() +
+      "location=" + getLocation() +
+      "jumpDistance=" + jumpDistance +
+      '}';
   }
 }
