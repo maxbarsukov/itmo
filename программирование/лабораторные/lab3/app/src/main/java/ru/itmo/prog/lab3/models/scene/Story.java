@@ -1,21 +1,19 @@
 package ru.itmo.prog.lab3.models.scene;
 
+import com.google.inject.Inject;
+import com.google.inject.name.Named;
 import ru.itmo.prog.lab3.interfaces.Tellable;
 
 import java.util.*;
 
 public class Story implements Tellable {
   private List<Sentence> sentences;
+
+  @Inject @Named("Title")
   private String title;
 
-  public Story(String title) {
-    this.title = title;
+  public Story() {
     this.sentences = new ArrayList<>(Collections.emptyList());
-  }
-
-  public Story(String title, List<Sentence> sentences) {
-    this.title = title;
-    this.sentences = sentences;
   }
 
   @Override

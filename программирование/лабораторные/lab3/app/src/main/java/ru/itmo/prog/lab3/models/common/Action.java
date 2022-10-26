@@ -1,4 +1,4 @@
-package ru.itmo.prog.lab3.models;
+package ru.itmo.prog.lab3.models.common;
 
 import ru.itmo.prog.lab3.models.people.Person;
 

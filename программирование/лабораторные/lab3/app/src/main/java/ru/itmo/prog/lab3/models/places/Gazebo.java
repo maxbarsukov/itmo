@@ -1,6 +1,8 @@
 package ru.itmo.prog.lab3.models.places;
 
-import ru.itmo.prog.lab3.models.Action;
+import com.google.inject.Inject;
+import com.google.inject.name.Named;
+import ru.itmo.prog.lab3.models.common.Action;
 import ru.itmo.prog.lab3.models.people.Group;
 import ru.itmo.prog.lab3.interfaces.ShortiesContainer;
 import ru.itmo.prog.lab3.models.people.Shorty;
@@ -13,17 +15,13 @@ public class Gazebo extends Place implements ShortiesContainer {
 
   public static final String DEFAULT_NAME = "Беседка";
 
-  public Gazebo() {
-    super(DEFAULT_NAME);
-    this.shortiesGroup = new Group<Shorty>(Collections.emptyList());
-  }
-
   public Gazebo(Group<Shorty> shortiesGroup) {
     super(DEFAULT_NAME);
     this.shortiesGroup = shortiesGroup;
   }
 
-  public Gazebo(String name, Group<Shorty> shortiesGroup) {
+  @Inject(optional=true)
+  public Gazebo(@Named("GazeboName") String name, Group<Shorty> shortiesGroup) {
     super(name);
     this.shortiesGroup = shortiesGroup;
   }

@@ -2,7 +2,7 @@ package ru.itmo.prog.lab3.models.places;
 
 import ru.itmo.prog.lab3.interfaces.Climbable;
 import ru.itmo.prog.lab3.interfaces.HasCases;
-import ru.itmo.prog.lab3.models.Action;
+import ru.itmo.prog.lab3.models.common.Action;
 import ru.itmo.prog.lab3.models.people.Person;
 
 import java.util.Objects;

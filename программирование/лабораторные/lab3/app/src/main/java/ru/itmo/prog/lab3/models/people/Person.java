@@ -1,9 +1,9 @@
 package ru.itmo.prog.lab3.models.people;
 
 import ru.itmo.prog.lab3.interfaces.*;
-import ru.itmo.prog.lab3.models.Action;
-import ru.itmo.prog.lab3.models.Impression;
-import ru.itmo.prog.lab3.models.Time;
+import ru.itmo.prog.lab3.models.common.Action;
+import ru.itmo.prog.lab3.models.common.Impression;
+import ru.itmo.prog.lab3.models.common.Time;
 import ru.itmo.prog.lab3.models.places.Place;
 
 import java.util.Objects;
@@ -36,6 +36,10 @@ public abstract class Person implements Climber, HasCases, Cannable, Pluralable 
   @Override
   public String can(Supplier<String> function) {
     return getName() + "в любой момент " + Action.CAN.getDescription(this) + " " + function.get();
+  }
+
+  public int distanceTo(Place place) {
+    return place.getName().length();
   }
 
   public boolean isMale() {

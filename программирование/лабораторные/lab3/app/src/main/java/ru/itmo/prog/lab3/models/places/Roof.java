@@ -1,14 +1,12 @@
 package ru.itmo.prog.lab3.models.places;
 
+import com.google.inject.Inject;
 import ru.itmo.prog.lab3.interfaces.HasCases;
 
 public class Roof extends Place implements HasCases {
   public static final String DEFAULT_NAME = "Крыша";
 
-  public Roof() {
-    super(DEFAULT_NAME);
-  }
-
+  @Inject
   public Roof(String name) {
     super(name);
   }

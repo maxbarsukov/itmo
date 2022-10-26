@@ -1,16 +1,16 @@
 package ru.itmo.prog.lab3.models.weather;
 
+import com.google.inject.Inject;
+import com.google.inject.name.Named;
+
 import java.util.Objects;
 
 public class Weather {
+  @Inject @Named("Wind")
   private Wind wind;
 
   public Wind getWind() {
     return wind;
-  }
-
-  public void setWind(Wind wind) {
-    this.wind = wind;
   }
 
   @Override

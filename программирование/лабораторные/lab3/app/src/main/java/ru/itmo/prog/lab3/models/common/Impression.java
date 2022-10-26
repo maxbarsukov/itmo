@@ -1,4 +1,4 @@
-package ru.itmo.prog.lab3.models;
+package ru.itmo.prog.lab3.models.common;
 
 public enum Impression {
   SCARED,

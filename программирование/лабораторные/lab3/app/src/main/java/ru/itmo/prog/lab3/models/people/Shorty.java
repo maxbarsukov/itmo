@@ -2,9 +2,9 @@ package ru.itmo.prog.lab3.models.people;
 
 import ru.itmo.prog.lab3.interfaces.Climbable;
 import ru.itmo.prog.lab3.interfaces.Jumpable;
-import ru.itmo.prog.lab3.models.Action;
-import ru.itmo.prog.lab3.models.Impression;
-import ru.itmo.prog.lab3.models.JumpDistance;
+import ru.itmo.prog.lab3.models.common.Action;
+import ru.itmo.prog.lab3.models.common.Impression;
+import ru.itmo.prog.lab3.models.common.JumpDistance;
 import ru.itmo.prog.lab3.models.places.Place;
 
 import java.util.Objects;
