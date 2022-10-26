@@ -1,18 +1,15 @@
 package ru.itmo.prog.lab3.models.people;
 
-import ru.itmo.prog.lab3.interfaces.Cannable;
-import ru.itmo.prog.lab3.interfaces.Climbable;
-import ru.itmo.prog.lab3.interfaces.Climber;
-import ru.itmo.prog.lab3.interfaces.HasCases;
+import ru.itmo.prog.lab3.interfaces.*;
 import ru.itmo.prog.lab3.models.Action;
 import ru.itmo.prog.lab3.models.Impression;
 import ru.itmo.prog.lab3.models.Time;
-import ru.itmo.prog.lab3.models.things.Place;
+import ru.itmo.prog.lab3.models.places.Place;
 
 import java.util.Objects;
 import java.util.function.Supplier;
 
-public abstract class Person implements Climber, HasCases, Cannable {
+public abstract class Person implements Climber, HasCases, Cannable, Pluralable {
   private String name;
   private Sex sex;
   private double mass;

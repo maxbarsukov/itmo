@@ -5,7 +5,7 @@ import static org.junit.Assert.*;
 
 public class StoryTest {
     @Test public void appHasAGreeting() {
-        Story classUnderTest = new Story();
+        Main classUnderTest = new Main();
         assertNotNull("app should have a greeting", 1);
     }
 }

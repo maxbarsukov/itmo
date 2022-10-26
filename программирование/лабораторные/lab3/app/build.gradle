@@ -34,5 +34,5 @@ tasks.register('fatJar', Jar) {
 
 application {
     // Define the main class for the application.
-    mainClass = 'ru.itmo.prog.lab3.Story'
+    mainClass = 'ru.itmo.prog.lab3.Main'
 }

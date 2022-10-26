@@ -3,11 +3,11 @@ package ru.itmo.prog.lab3.models.things;
 import ru.itmo.prog.lab3.interfaces.Binadle;
 import ru.itmo.prog.lab3.interfaces.HasCases;
 import ru.itmo.prog.lab3.models.people.Person;
-import ru.itmo.prog.lab3.models.people.PersonGroup;
+import ru.itmo.prog.lab3.models.people.Group;
 
 import java.util.Objects;
 
-public class Rope implements Binadle<Person, PersonGroup>, HasCases {
+public class Rope implements Binadle<Person, Group<? extends Person>>, HasCases {
   public static class NothingIsBindedException extends RuntimeException {
     public NothingIsBindedException(String message) {
       super(message);
@@ -16,25 +16,25 @@ public class Rope implements Binadle<Person, PersonGroup>, HasCases {
 
   private boolean binded = false;
   private Person person;
-  private PersonGroup personGroup;
+  private Group<? extends Person> group;
 
   @Override
-  public void bind(Person person, PersonGroup personGroup) {
+  public void bind(Person person, Group<? extends Person> group) {
     this.person = person;
-    this.personGroup = personGroup;
+    this.group = group;
     this.binded = true;
   }
 
   @Override
   public void unbind() {
     this.person = null;
-    this.personGroup = null;
+    this.group = null;
     this.binded = false;
   }
 
   public String pull() {
     checkBinded();
-    return personGroup.description() + " принялись тянуть " + genitiveCase() + " и притянули " + person.genitiveCase();
+    return group.description() + " принялись тянуть " + genitiveCase() + " и притянули " + person.genitiveCase();
   }
 
   public String pull(String whereToPull) {
@@ -66,12 +66,12 @@ public class Rope implements Binadle<Person, PersonGroup>, HasCases {
     if (this == o) return true;
     if (o == null || getClass() != o.getClass()) return false;
     Rope rope = (Rope) o;
-    return binded == rope.binded && Objects.equals(person, rope.person) && Objects.equals(personGroup, rope.personGroup);
+    return binded == rope.binded && Objects.equals(person, rope.person) && Objects.equals(group, rope.group);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(binded, person, personGroup);
+    return Objects.hash(binded, person, group);
   }
 
   @Override
@@ -79,7 +79,7 @@ public class Rope implements Binadle<Person, PersonGroup>, HasCases {
     return "Rope{" +
       "binded=" + binded +
       ", person=" + person +
-      ", personGroup=" + personGroup +
+      ", personGroup=" + group +
       '}';
   }
 }

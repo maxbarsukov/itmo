@@ -1,10 +1,16 @@
-package ru.itmo.prog.lab3.models.things;
+package ru.itmo.prog.lab3.models.places;
 
 import ru.itmo.prog.lab3.interfaces.HasCases;
 
 public class Roof extends Place implements HasCases {
+  public static final String DEFAULT_NAME = "Крыша";
+
   public Roof() {
-    super("Крыша");
+    super(DEFAULT_NAME);
+  }
+
+  public Roof(String name) {
+    super(name);
   }
 
   @Override

@@ -1,14 +1,15 @@
 package ru.itmo.prog.lab3.models.people;
 
 import ru.itmo.prog.lab3.interfaces.Climbable;
+import ru.itmo.prog.lab3.interfaces.Jumpable;
 import ru.itmo.prog.lab3.models.Action;
 import ru.itmo.prog.lab3.models.Impression;
 import ru.itmo.prog.lab3.models.JumpDistance;
-import ru.itmo.prog.lab3.models.things.Place;
+import ru.itmo.prog.lab3.models.places.Place;
 
 import java.util.Objects;
 
-public class Shorty extends Person {
+public class Shorty extends Person implements Jumpable {
   private int jumpDistance;
 
   public Shorty(String name, Sex sex, double mass) {

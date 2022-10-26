@@ -1,4 +1,4 @@
-package ru.itmo.prog.lab3.models.things;
+package ru.itmo.prog.lab3.models.places;
 
 import ru.itmo.prog.lab3.interfaces.Climbable;
 import ru.itmo.prog.lab3.interfaces.HasCases;
@@ -7,11 +7,19 @@ import ru.itmo.prog.lab3.models.people.Person;
 
 import java.util.Objects;
 
-public class Downpipe implements Climbable, HasCases {
+public class Downpipe extends Place implements Climbable, HasCases {
   private static final int MAX_TIME_FOR_FAST_CLIMB_UP = 10;
+  public static final String DEFAULT_NAME = "Водосточная труба";
+
   private final int timeToClimbUp;
 
   public Downpipe(int timeToClimbUp) {
+    super(DEFAULT_NAME);
+    this.timeToClimbUp = timeToClimbUp;
+  }
+
+  public Downpipe(String name, int timeToClimbUp) {
+    super(name);
     this.timeToClimbUp = timeToClimbUp;
   }
 

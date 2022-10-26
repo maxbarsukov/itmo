@@ -1,4 +1,4 @@
-package ru.itmo.prog.lab3.utils;
+package ru.itmo.prog.lab3.models.scene;
 
 import java.util.Objects;
 

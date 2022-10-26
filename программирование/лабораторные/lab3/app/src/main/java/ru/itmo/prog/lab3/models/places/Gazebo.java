@@ -1,18 +1,31 @@
-package ru.itmo.prog.lab3.models.things;
+package ru.itmo.prog.lab3.models.places;
 
 import ru.itmo.prog.lab3.models.Action;
-import ru.itmo.prog.lab3.models.people.PersonGroup;
+import ru.itmo.prog.lab3.models.people.Group;
 import ru.itmo.prog.lab3.interfaces.ShortiesContainer;
 import ru.itmo.prog.lab3.models.people.Shorty;
 
+import java.util.Collections;
 import java.util.Objects;
 
 public class Gazebo extends Place implements ShortiesContainer {
-  public PersonGroup people;
+  private final Group<Shorty> shortiesGroup;
 
-  public Gazebo(PersonGroup people) {
-    super("Беседка");
-    this.people = people;
+  public static final String DEFAULT_NAME = "Беседка";
+
+  public Gazebo() {
+    super(DEFAULT_NAME);
+    this.shortiesGroup = new Group<Shorty>(Collections.emptyList());
+  }
+
+  public Gazebo(Group<Shorty> shortiesGroup) {
+    super(DEFAULT_NAME);
+    this.shortiesGroup = shortiesGroup;
+  }
+
+  public Gazebo(String name, Group<Shorty> shortiesGroup) {
+    super(name);
+    this.shortiesGroup = shortiesGroup;
   }
 
   public String findShorty(Shorty shorty) {
@@ -25,7 +38,12 @@ public class Gazebo extends Place implements ShortiesContainer {
 
   @Override
   public boolean checkShorty(Shorty shorty) {
-    return people.contains(shorty);
+    return shortiesGroup.contains(shorty);
+  }
+
+  @Override
+  public void addShorty(Shorty shorty) {
+    shortiesGroup.addMember(shorty);
   }
 
   @Override
@@ -44,18 +62,18 @@ public class Gazebo extends Place implements ShortiesContainer {
     if (o == null || getClass() != o.getClass()) return false;
     if (!super.equals(o)) return false;
     Gazebo gazebo = (Gazebo) o;
-    return Objects.equals(people, gazebo.people);
+    return Objects.equals(shortiesGroup, gazebo.shortiesGroup);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(super.hashCode(), people);
+    return Objects.hash(super.hashCode(), shortiesGroup);
   }
 
   @Override
   public String toString() {
     return "Gazebo{" +
-      "people=" + people +
+      "shortiesGroup=" + shortiesGroup +
       '}';
   }
 }
