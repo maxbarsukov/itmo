@@ -1,0 +1,53 @@
+syntax = "proto3";
+
+package dop4;
+
+message Schedule {
+    message ScheduleItem {
+        message Type {
+            int32 id = 1;
+            string title = 2;
+        }
+
+        message Campus {
+            enum CampusId {
+                GK = 0;
+                LOMO = 1;
+            }
+
+            CampusId id = 1;
+            string address = 2;
+        }
+
+        message Time {
+            int32 period = 1;
+            string from_time = 2;
+            string to_time = 3;
+        }
+
+        message Auditory {
+            int32 id = 1;
+            string name = 2;
+        }
+
+        message Teacher {
+            int32 id = 1;
+            string name = 2;
+        }
+
+        int32 id = 1;
+        string title = 2;
+        string class_format = 3;
+        Type type = 4;
+        Campus campus = 5;
+        Time time = 6;
+        Auditory auditory = 7;
+        Teacher teacher = 8;
+    }
+
+    bool even_week = 1;
+    int32 day_id = 2;
+    string group_name = 3;
+    string date = 4;
+    repeated ScheduleItem schedule = 5;
+}
