@@ -15,4 +15,3 @@ if __name__ == "__main__":
     string = open(input_file, "r").read()
     open(output_file, "w").write(parse(string))
     print("task0.main complete!")
-

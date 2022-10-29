@@ -3,24 +3,15 @@ from enum import Enum, auto
 class Type(Enum):
     NULL = auto()
     BOOL = auto()
-    INT_10 = auto()
-    INT_8 = auto()
-    INT_16 = auto()
+    INT = auto()
     FLOAT = auto()
     STR = auto()
     ARR = auto()
     OBJ = auto()
 
-    def is_hex(s):
-        try:
-            int(s, 16)
-            return True
-        except ValueError:
-            return False
-
     def to_type(value):
         if isinstance(value, bool):       return Type.BOOL
-        elif isinstance(value, int):      return Type.INT_10
+        elif isinstance(value, int):      return Type.INT
         elif isinstance(value, float):    return Type.FLOAT
         elif isinstance(value, str):      return Type.STR
         elif isinstance(value, type([])): return Type.ARR
@@ -68,9 +59,5 @@ class Yaml:
                                           for val in self._data.split('\n'))
             else:
                 return prefix + self._data
-        elif self._data_type == Type.INT_8:
-            return prefix + str(oct(self._data))
-        elif self._data_type == Type.INT_16:
-            return prefix + str(hex(self._data))
         else:
             return prefix + str(self._data)
