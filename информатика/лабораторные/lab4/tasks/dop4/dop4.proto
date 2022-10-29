@@ -38,6 +38,7 @@ message Schedule {
         int32 id = 1;
         string title = 2;
         string class_format = 3;
+
         Type type = 4;
         Campus campus = 5;
         Time time = 6;

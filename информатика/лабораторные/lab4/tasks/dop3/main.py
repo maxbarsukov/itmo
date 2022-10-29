@@ -9,7 +9,7 @@ from dop2.main import parse as parse_dop2
 
 def benchmark(function, src):
     start_time = time.time()
-    for _ in range(0, 100):
+    for _ in range(100):
         function(src)
     print("--- %s seconds ---" % (time.time() - start_time))
 

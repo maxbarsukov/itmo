@@ -1,5 +1,4 @@
 import os
-import yaml
 import json
 
 import generated.dop4_pb2 as schedule
