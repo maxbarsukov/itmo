@@ -1,0 +1,112 @@
+001:  0030 // ascii 0
+002:  0031 // ascii 1
+003:  0031 // char 1
+004:  0031 // char 2
+005:  0031 // char 3
+006:  0031 // char 4
+007:  0031 // char 5
+008:  0031 // char 6
+009:  0031 // char 7
+00A:  0031 // char 8
+00B:  0000 // result
+00C:  0000 // NOP
+00D:  0000 // NOP - возможно, нужно будет что-то дописать
+00F:  0000 // NOP
+00F:+ 0200 // CLA
+010:  A001 // LD ascii 0 - > AC
+011:  7003 // CMP char1, ascii 0
+012:  F007 // BEQ 7 - если char1 = ascii 0 ==> 01A
+013:  A002 // LD ascii 1 - > AC
+014:  7003 // CMP char1, ascii 1
+015:  F001 // BEQ 1 - если char1 = ascii 1 ==> 017
+016:  C069 // выход - число не равно ни ascii 0, ни ascii 1
+017:  A00B // LD result -> AC
+018:  0700 // INC = AC++ 
+019:  E00B // ST result
+01A:  0200 // CLA
+01B:  A001 // LD ascii 0 - > AC
+01C:  7004 // CMP char2, ascii 0
+01D:  F007 // BEQ 7 - если char2 = ascii 0 ==> 025
+01E:  A002 // LD ascii 1 - > AC
+01F:  7004 // CMP char2, ascii 1
+020:  F001 // BEQ 1 - если char2 = ascii 1 ==> 022
+021:  C069 // выход - число не равно ни ascii 0, ни ascii 1
+022:  A00B // LD result -> AC
+023:  4070 // ADD 070 <=> result += 2
+024:  E00B // ST result
+025:  0200 // CLA
+026:  A001 // LD ascii 0 - > AC
+027:  7005 // CMP char3, ascii 0
+028:  F007 // BEQ 7 - если char3 = ascii 0 ==> 030
+029:  A002 // LD ascii 1 - > AC
+02A:  7005 // CMP char3, ascii 1
+02B:  F001 // BEQ 1 - если char3 = ascii 1 ==> 02D
+02C:  C069 // выход - число не равно ни ascii 0, ни ascii 1
+02D:  A00B // LD result -> AC
+02E:  4071 // ADD 071 <=> result += 4
+02F:  E00B // ST result
+030:  0200 // CLA
+031:  A001 // LD ascii 0 - > AC
+032:  7006 // CMP char4, ascii 0
+033:  F007 // BEQ 7 - если char4 = ascii 0 ==> 03B
+034:  A002 // LD ascii 1 - > AC
+035:  7006 // CMP char4, ascii 1
+036:  F001 // BEQ 1 - если char4 = ascii 1 ==> 038
+037:  C069 // выход - число не равно ни ascii 0, ни ascii 1
+038:  A00B // LD result -> AC
+039:  4072 // ADD 072 <=> result += 8
+03A:  E00B // ST result
+03B:  0200 // CLA
+03С:  A001 // LD ascii 0 - > AC
+03D:  7007 // CMP char5, ascii 0
+03E:  F007 // BEQ 7 - если char5 = ascii 0 ==> 046
+03F:  A002 // LD ascii 1 - > AC
+040:  7007 // CMP char5, ascii 1
+041:  F001 // BEQ 1 - если char5 = ascii 1 ==> 043
+042:  C069 // выход - число не равно ни ascii 0, ни ascii 1
+043:  A00B // LD result -> AC
+044:  4073 // ADD 073 <=> result += 16
+045:  E00B // ST result
+046:  0200 // CLA
+047:  A001 // LD ascii 0 - > AC
+048:  7008 // CMP char6, ascii 0
+049:  F007 // BEQ 7 - если char6 = ascii 0 ==> 051
+04A:  A002 // LD ascii 1 - > AC
+04B:  7008 // CMP char6, ascii 1
+04C:  F001 // BEQ 1 - если char6 = ascii 1 ==> 04E
+04D:  C069 // выход - число не равно ни ascii 0, ни ascii 1
+04E:  A00B // LD result -> AC
+04F:  4074 // ADD 074 <=> result += 32
+050:  E00B // ST result
+051:  0200 // CLA
+052:  A001 // LD ascii 0 - > AC
+053:  7009 // CMP char7, ascii 0
+054:  F007 // BEQ 7 - если char7 = ascii 0 ==> 05C
+055:  A002 // LD ascii 1 - > AC
+056:  7009 // CMP char7, ascii 1
+057:  F001 // BEQ 1 - если char7 = ascii 1 ==> 059
+058:  C069 // выход - число не равно ни ascii 0, ни ascii 1
+059:  A00B // LD result -> AC
+05A:  4075 // ADD 75 <=> result += 64
+05B:  E00B // ST result
+05C:  0200 // CLA
+05D:  A001 // LD ascii 0 - > AC
+05E:  700A // CMP char8, ascii 0
+05F:  F007 // BEQ 7 - если char8 = ascii 0 ==> 067
+060:  A002 // LD ascii 1 - > AC
+061:  700A // CMP char8, ascii 1
+062:  F001 // BEQ 1 - если char8 = ascii 1 ==> 064
+063:  C069 // JUMP 069 выход - число не равно ни ascii 0, ни ascii 1
+064:  A00B // LD result -> AC
+065:  4076 // ADD 076 <=> result += 128
+066:  E00B // ST result
+067:  0200 // CLA
+068:  A00B // LD result -> AC
+069:  0100 // HLT
+070:  0002
+071:  0004
+072:  0008
+073:  0010
+074:  0020
+075:  0040
+076:  0080  
