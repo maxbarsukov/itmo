@@ -11,6 +11,7 @@ public class Direction {
     BACKWARD,
     FORWARD,
     SIDEWARD,
+    LOOKED,
     NONE,
   }
 
@@ -42,6 +43,7 @@ public class Direction {
       case BACKWARD -> "обратно";
       case FORWARD -> "вперед";
       case SIDEWARD -> "в сторону";
+      case LOOKED -> "выглянул";
       default -> "";
     };
   }

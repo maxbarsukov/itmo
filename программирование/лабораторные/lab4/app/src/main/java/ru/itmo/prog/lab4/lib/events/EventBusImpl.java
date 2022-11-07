@@ -13,7 +13,7 @@ import java.util.concurrent.atomic.AtomicInteger;
 import java.util.function.BiConsumer;
 
 @Singleton
-public class EventBusImpl<E extends Event, H extends EventBusHandler<?>> implements EventBus<E, H> {
+public class EventBusImpl<E extends Event, H extends EventHandler<?>> implements EventBus<E, H> {
   private final ReferenceQueue<? super H> gcQueue = new ReferenceQueue<>();
   private final AtomicInteger processing = new AtomicInteger();
   private final Set<WeakHandler<H>> handlers = Collections.newSetFromMap(new ConcurrentHashMap<>());
@@ -93,9 +93,10 @@ public class EventBusImpl<E extends Event, H extends EventBusHandler<?>> impleme
         eventWrapper.success.accept(eventWrapper.event, handler);
       }
     } catch (EventException eventException) {
-      System.err.println("Обработка обработчиком провалилась для " + eventWrapper.event.getClass().getSimpleName() + ". " + eventException.getMessage());
       if (eventWrapper.failure != null) {
         eventWrapper.failure.accept(eventWrapper.event, handler, eventException);
+      } else {
+        System.err.println("Обработка обработчиком провалилась для " + eventWrapper.event.getClass().getSimpleName() + ". " + eventException.getMessage());
       }
     }
   }

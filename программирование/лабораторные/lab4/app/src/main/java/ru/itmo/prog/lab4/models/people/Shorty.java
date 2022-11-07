@@ -1,6 +1,7 @@
 package ru.itmo.prog.lab4.models.people;
 
 import ru.itmo.prog.lab4.interfaces.Climbable;
+import ru.itmo.prog.lab4.interfaces.Hearable;
 import ru.itmo.prog.lab4.interfaces.Jumpable;
 import ru.itmo.prog.lab4.models.common.Action;
 import ru.itmo.prog.lab4.models.common.Impression;
@@ -55,6 +56,11 @@ public class Shorty extends Person implements Jumpable {
   @Override
   public int calculateTimeToClimb() {
     return this.getMass() < 60 ? 5 : 10;
+  }
+
+  public boolean canHear(Hearable hearable) {
+    // У коротышек острый слух
+    return hearable.getVolume() > 20;
   }
 
   @Override

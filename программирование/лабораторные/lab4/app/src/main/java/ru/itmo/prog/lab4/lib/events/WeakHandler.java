@@ -3,7 +3,7 @@ package ru.itmo.prog.lab4.lib.events;
 import java.lang.ref.ReferenceQueue;
 import java.lang.ref.WeakReference;
 
-class WeakHandler<H extends EventBusHandler<?>> extends WeakReference<H> {
+class WeakHandler<H extends EventHandler<?>> extends WeakReference<H> {
   private final int hash;
   private final Class<?> handlerTypeClass;
 

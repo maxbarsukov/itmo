@@ -48,7 +48,6 @@ public class House extends Place {
     return roof;
   }
 
-  @Inject
   public void setRoof(Roof roof) {
     this.roof = roof;
   }

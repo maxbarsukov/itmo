@@ -4,33 +4,45 @@ import java.util.Objects;
 
 public class Sentence {
   private final String content;
+  private final String punctuationMark;
 
   public Sentence(String content) {
     this.content = content;
+    this.punctuationMark = ".";
+  }
+
+  public Sentence(String content, String punctuationMark) {
+    this.content = content;
+    this.punctuationMark = punctuationMark;
   }
 
   public void print() {
-    System.out.println(content + ".");
-  }
-
-  public void print(String punctuationMark) {
     System.out.println(content + punctuationMark);
   }
+
 
   public Sentence and(String text) {
     return new Sentence(content + " и " + text);
   }
 
   public Sentence but(String text) {
-    return new Sentence(content + ", но " + text);
+    return comma("но " + text);
   }
 
   public Sentence because(String text) {
-    return new Sentence(content + ", так как " + text);
+    return comma("так как " + text);
   }
 
   public Sentence that(String text) {
-    return new Sentence(content + ", что " + text);
+    return comma("что " + text);
+  }
+
+  public Sentence thatTime(String text) {
+    return comma("который в это время " + text);
+  }
+
+  public Sentence comma(String text) {
+    return new Sentence(content + ", " + text);
   }
 
   @Override

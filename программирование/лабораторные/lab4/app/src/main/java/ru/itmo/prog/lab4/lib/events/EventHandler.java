@@ -4,7 +4,7 @@ import ru.itmo.prog.lab4.interfaces.events.Event;
 
 import java.lang.reflect.ParameterizedType;
 
-public abstract class EventBusHandler<E extends Event> {
+public abstract class EventHandler<E extends Event> {
   public Class<E> eventClass;
 
   private Class<E> getGenericTypeClass() {

@@ -5,7 +5,7 @@ import ru.itmo.prog.lab4.interfaces.events.FailureConsumer;
 
 import java.util.function.BiConsumer;
 
-public class EventWrapper<E extends Event, H extends EventBusHandler<?>> {
+public class EventWrapper<E extends Event, H extends EventHandler<?>> {
   protected final E event;
   protected final BiConsumer<E, H> success;
   protected final FailureConsumer<E, H> failure;

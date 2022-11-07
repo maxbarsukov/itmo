@@ -9,12 +9,13 @@ import ru.itmo.prog.lab4.models.places.Place;
 import java.util.Objects;
 import java.util.function.Supplier;
 
-public abstract class Person implements Climber, HasCases, Cannable, Pluralable {
+public abstract class Person implements Climber, HasCases, Cannable, Pluralable, Hearer {
   private String name;
   private Sex sex;
   private double mass;
   private Place location;
   private Impression currentImpression = Impression.NONE;
+  private String currentActivity;
 
   public Person(String name, Sex sex, double mass) {
     this.name = name;
@@ -36,6 +37,20 @@ public abstract class Person implements Climber, HasCases, Cannable, Pluralable 
   @Override
   public String can(Supplier<String> function) {
     return getName() + "в любой момент " + Action.CAN.getDescription(this) + " " + function.get();
+  }
+
+  public boolean canHear(Hearable hearable) {
+    return hearable.getVolume() > 70;
+  }
+
+  public boolean hear(Hearable hearable) {
+    if (!canHear(hearable)) return false;
+
+    if (hearable.getContent().equals("Медведь сел в машину и сгорел")) {
+      setCurrentImpression(Impression.JOYFUL);
+      return true;
+    }
+    return !hearable.getContent().equals("бла-бла-бла");
   }
 
   public int distanceTo(Place place) {
@@ -101,6 +116,14 @@ public abstract class Person implements Climber, HasCases, Cannable, Pluralable 
 
   public void setCurrentImpression(Impression currentImpression) {
     this.currentImpression = currentImpression;
+  }
+
+  public String getCurrentActivity() {
+    return currentActivity;
+  }
+
+  public void setCurrentActivity(String currentActivity) {
+    this.currentActivity = currentActivity;
   }
 
   @Override
