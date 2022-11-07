@@ -1,0 +1,2 @@
+rootProject.name = 'lab4'
+include('app')
