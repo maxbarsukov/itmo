@@ -1,6 +1,8 @@
 package ru.itmo.prog.lab4.models.scene;
 
+import com.google.inject.Inject;
 import ru.itmo.prog.lab4.interfaces.Tellable;
+import ru.itmo.prog.lab4.interfaces.events.EventBus;
 import ru.itmo.prog.lab4.models.people.Group;
 import ru.itmo.prog.lab4.models.people.Person;
 import ru.itmo.prog.lab4.models.places.Place;
@@ -12,11 +14,13 @@ import java.util.Objects;
 public class Scene {
   private Person mainCharacter;
   private Tellable story;
+  private EventBus eventBus;
 
   private Map<String, Place> locations;
   private Map<String, Person> characters;
   private Map<String, Group<Person>> characterGroups;
 
+  @Inject
   public Scene() {
     this.locations = new HashMap<>();
     this.characters = new HashMap<>();
@@ -39,6 +43,15 @@ public class Scene {
 
   public void play() {
     story.tell();
+  }
+
+  public EventBus getEventBus() {
+    return eventBus;
+  }
+
+  @Inject
+  public void setEventBus(EventBus eventBus){
+    this.eventBus = eventBus;
   }
 
   public Person getCharacter(String name) {

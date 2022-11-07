@@ -2,6 +2,7 @@ package ru.itmo.prog.lab4;
 
 import com.google.inject.Guice;
 import com.google.inject.Injector;
+import ru.itmo.prog.lab4.lib.events.EventBusImpl;
 import ru.itmo.prog.lab4.models.common.Action;
 import ru.itmo.prog.lab4.models.common.JumpDistance;
 import ru.itmo.prog.lab4.models.common.Time;
@@ -12,7 +13,7 @@ import ru.itmo.prog.lab4.models.scene.Story;
 import ru.itmo.prog.lab4.models.things.Rope;
 import ru.itmo.prog.lab4.models.weather.Weather;
 import ru.itmo.prog.lab4.modules.HouseModule;
-import ru.itmo.prog.lab4.modules.RoofModule;
+import ru.itmo.prog.lab4.modules.SceneModule;
 import ru.itmo.prog.lab4.modules.StoryModule;
 import ru.itmo.prog.lab4.modules.WeatherModule;
 import ru.itmo.prog.lab4.utils.Direction;
@@ -22,10 +23,12 @@ import java.util.ArrayList;
 
 public class Main {
   public static void main(String[] args) {
-    Injector injector = Guice.createInjector(new StoryModule());
+    var injector = Guice.createInjector(new StoryModule());
     var story = injector.getInstance(Story.class);
 
-    var scene = new Scene();
+    var sceneInjector = Guice.createInjector(new SceneModule());
+    var scene = sceneInjector.getInstance(Scene.class);
+    sceneInjector.injectMembers(new EventBusImpl());
 
     scene.setMainCharacter(new Shorty("Знайка", Sex.MALE, 56.99, JumpDistance.BIG.getDistance()));
     scene.addCharacter(new Shorty("Винтик", Sex.MALE, 67.0));
@@ -36,9 +39,9 @@ public class Main {
     }}));
 
     var house = Guice.createInjector(new HouseModule()).getInstance(House.class);
-    var roof = Guice.createInjector(new RoofModule()).getInstance(Roof.class);
+    house.setRoof(house.new Roof(House.Roof.DEFAULT_NAME));
 
-    scene.addLocation(roof);
+    scene.addLocation(house.getRoof());
     scene.addLocation(house);
     scene.addLocation(new Downpipe(scene.getMainCharacter().calculateTimeToClimb()));
     scene.addLocation(new Gazebo(new Group<>(new ArrayList<>() {{
@@ -46,7 +49,12 @@ public class Main {
     }})));
 
     var rope = new Rope();
-    rope.bind(scene.getMainCharacter(), scene.getCharactersGroup("коротышки"));
+    try {
+      rope.pull("куда-нибудь");
+    } catch (Rope.NothingIsBindedException e) {
+      // О нет, веревка ни к чему не привязана
+      rope.bind(scene.getMainCharacter(), scene.getCharactersGroup("коротышки"));
+    }
 
     Injector weatherInjector = Guice.createInjector(new WeatherModule());
     var weather = weatherInjector.getInstance(Weather.class);
@@ -82,9 +90,9 @@ public class Main {
     story.addSentence(
       new Sentence(
         scene.getMainCharacter().climb(
-          (Downpipe) scene.getLocation(Downpipe.DEFAULT_NAME), scene.getLocation(Roof.DEFAULT_NAME)
+          (Downpipe) scene.getLocation(Downpipe.DEFAULT_NAME), scene.getLocation(house.getRoof().getName())
         ) + new Direction(
-          Direction.Type.NONE, Direction.Preposition.ON, scene.getLocation(Roof.DEFAULT_NAME).dativeCase()
+          Direction.Type.NONE, Direction.Preposition.ON, scene.getLocation(house.getRoof().getName()).dativeCase()
         )
       ).and(
         scene.getMainCharacter().wantTo(Action.LOOK_AROUND, Time.PAST)

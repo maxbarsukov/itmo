@@ -1,10 +1,33 @@
 package ru.itmo.prog.lab4.models.places;
 
 import com.google.inject.Inject;
-import ru.itmo.prog.lab4.interfaces.HasCases;
 
-public class House extends Place implements HasCases {
+public class House extends Place {
+  public class Roof extends Place {
+    public static final String DEFAULT_NAME = "Крыша";
+
+    public Roof(String name) {
+      super(name + " дома " + House.this.getName());
+    }
+
+    @Override
+    public String dativeCase() {
+      return "крышу";
+    }
+
+    @Override
+    public String genitiveCase() {
+      return "крыши";
+    }
+
+    @Override
+    public String toString() {
+      return getName();
+    }
+  }
+
   public static final String DEFAULT_NAME = "Дом";
+  private Roof roof;
 
   @Inject
   public House(String name) {
@@ -19,6 +42,15 @@ public class House extends Place implements HasCases {
   @Override
   public String genitiveCase() {
     return "дома";
+  }
+
+  public Roof getRoof() {
+    return roof;
+  }
+
+  @Inject
+  public void setRoof(Roof roof) {
+    this.roof = roof;
   }
 
   @Override
