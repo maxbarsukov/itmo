@@ -1,5 +1,7 @@
 package ru.itmo.prog.lab3.models.weather;
 
+import com.google.inject.Inject;
+import com.google.inject.name.Named;
 import ru.itmo.prog.lab3.models.people.Person;
 
 import java.util.Objects;
@@ -12,7 +14,8 @@ public class Wind {
    */
   private double power;
 
-  public Wind(String name, double power) {
+  @Inject
+  public Wind(String name, @Named("power") double power) {
     this.name = name;
     this.power = power;
   }
