@@ -1,6 +1,6 @@
 package ru.itmo.prog.lab4.models.places;
 
-import ru.itmo.prog.lab4.interfaces.HasCases;
+import ru.itmo.prog.lab4.interfaces.speech.HasCases;
 
 import java.util.Objects;
 

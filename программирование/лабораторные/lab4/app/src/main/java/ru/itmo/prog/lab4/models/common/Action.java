@@ -9,7 +9,8 @@ public enum Action {
   CLIMBED_UP("вскарабкался по", "вскарабкалась по"),
   LOOK_AROUND("оглядеться по сторонам"),
   KNEW("он знал", "она знала"),
-  CAN("может");
+  CAN("может"),
+  TRIED("попробовал");
 
   private final String maleText;
   private final String femaleText;

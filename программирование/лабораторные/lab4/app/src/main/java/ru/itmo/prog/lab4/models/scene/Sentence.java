@@ -37,12 +37,28 @@ public class Sentence {
     return comma("что " + text);
   }
 
+  public Sentence which(String text) {
+    return comma("который " + text);
+  }
+
+  public Sentence like(String text) {
+    return comma("словно " + text);
+  }
+
   public Sentence thatTime(String text) {
     return comma("который в это время " + text);
   }
 
+  public Sentence however(String text) {
+    return comma("однако, " + text);
+  }
+
   public Sentence comma(String text) {
     return new Sentence(content + ", " + text);
+  }
+
+  public Sentence ellipsis() {
+    return new Sentence(content + "..");
   }
 
   @Override

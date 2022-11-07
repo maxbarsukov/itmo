@@ -24,7 +24,7 @@ public class Wind {
     String prefix = "налетевший неожиданно " + getName() + " ";
     if (person.getMass() >= getPower()) return prefix + "ничего не сделал";
 
-    String result = prefix + "сдул " + person.pronunciation();
+    String result = prefix + "сдул " + person.possessivePronoun();
     if (person.getLocation() == null) return result;
 
     return result + " с " + person.getLocation().genitiveCase();

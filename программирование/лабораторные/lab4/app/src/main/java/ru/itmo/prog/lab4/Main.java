@@ -3,9 +3,7 @@ package ru.itmo.prog.lab4;
 import com.google.inject.Guice;
 import com.google.inject.Injector;
 import ru.itmo.prog.lab4.lib.events.EventBusImpl;
-import ru.itmo.prog.lab4.models.common.Action;
-import ru.itmo.prog.lab4.models.common.JumpDistance;
-import ru.itmo.prog.lab4.models.common.Time;
+import ru.itmo.prog.lab4.models.common.*;
 import ru.itmo.prog.lab4.models.events.OrderGiven;
 import ru.itmo.prog.lab4.models.events.WordsSpokenEvent;
 import ru.itmo.prog.lab4.models.people.*;
@@ -37,16 +35,17 @@ public class Main {
     setupLocations(scene);
 
     var house = (House)scene.getLocation(House.DEFAULT_NAME);
+    var mainCharacter = (Shorty) scene.getMainCharacter();
 
     var bus = scene.getEventBus();
-    bus.subscribe(new WordsSpokenEvent.Handler(scene.getMainCharacter()));
+    bus.subscribe(new WordsSpokenEvent.Handler(mainCharacter));
     bus.subscribe(new OrderGiven.Handler());
 
     var rope = new Rope();
     try {
       rope.pull("куда-нибудь");
     } catch (Rope.NothingIsBindedException e) {
-      rope.bind(scene.getMainCharacter(), scene.getCharactersGroup("коротышки"));
+      rope.bind(mainCharacter, scene.getCharactersGroup("коротышки"));
     }
 
     Injector weatherInjector = Guice.createInjector(new WeatherModule());
@@ -100,15 +99,19 @@ public class Main {
     );
 
     story.addSentence(
-      new Sentence("Придав своему телу наклонное положение").comma("Знайка с силой оттолкнулся ногами от порога и полетел в направлении мастерской, которая находилась неподалеку от дома")
+      new Sentence("Придав своему телу наклонное положение")
+        .comma("Знайка с силой оттолкнулся ногами от порога и полетел в направлении мастерской, которая находилась неподалеку от дома")
     );
 
     story.addSentence(
-      new Sentence("Он немного не рассчитал толчка и поднялся выше, чем было надо")
+      new Sentence("Он немного не рассчитал толчка")
+        .and("поднялся выше, чем было надо")
     );
 
     story.addSentence(
-      new Sentence("Пролетая над мастерской").comma("он ухватился рукой за флюгер, который показывал направление ветра")
+      new Sentence("Пролетая над мастерской")
+        .comma("он ухватился рукой за флюгер")
+        .which("показывал направление ветра")
     );
 
     story.addSentence(
@@ -116,7 +119,9 @@ public class Main {
     );
 
     story.addSentence(
-      new Sentence("Спустившись по водосточной трубе").comma("Знайка отворил дверь и проник в мастерскую")
+      new Sentence("Спустившись по водосточной трубе")
+        .comma("Знайка отворил дверь")
+        .and("проник в мастерскую")
     );
 
     story.addSentence(
@@ -129,11 +134,11 @@ public class Main {
 
     story.addSentence(
       new Sentence(
-        ((Shorty) scene.getMainCharacter()).jumpTo(
+        mainCharacter.jumpTo(
           scene.getLocation(Gazebo.DEFAULT_NAME),
-          scene.getMainCharacter().distanceTo(scene.getLocation(Gazebo.DEFAULT_NAME))
+          mainCharacter.distanceTo(scene.getLocation(Gazebo.DEFAULT_NAME))
         )
-      ).and(Action.LOOKED_INSIDE.getDescription(scene.getMainCharacter()))
+      ).and(Action.LOOKED_INSIDE.getDescription(mainCharacter))
     );
 
     story.addSentence(
@@ -156,57 +161,62 @@ public class Main {
     );
 
     story.addSentence(
-      new Sentence(
-        scene.getMainCharacter().climb(
+      new Sentence(mainCharacter.climb(
           (Downpipe) scene.getLocation(Downpipe.DEFAULT_NAME), scene.getLocation(house.getRoof().getName())
         ) + new Direction(
           Direction.Type.NONE, Direction.Preposition.ON, scene.getLocation(house.getRoof().getName()).dativeCase()
-        )
-      ).and(
-        scene.getMainCharacter().wantTo(Action.LOOK_AROUND, Time.PAST)
-      ).but(
-        weather.getWind().swoopInSuddenly(scene.getMainCharacter())
-      ).and(
-        weather.getWind().carryAside(scene.getMainCharacter())
+        ))
+        .and(mainCharacter.wantTo(Action.LOOK_AROUND, Time.PAST))
+        .but(weather.getWind().swoopInSuddenly(mainCharacter))
+        .and(weather.getWind().carryAside(mainCharacter)
       )
     );
 
     story.addSentence(
-      new Sentence(
-        scene.getMainCharacter().checkFear("Это")
-      ).because(
-        Action.KNEW.getDescription(scene.getMainCharacter())
-      ).that(
-        scene.getCharactersGroup("коротышки").can(rope::pullBack)
-      )
+      new Sentence(mainCharacter.checkFear("Это"))
+        .because(Action.KNEW.getDescription(mainCharacter))
+        .that(scene.getCharactersGroup("коротышки").can(rope::pullBack))
     );
 
     story.addSentence(
-      new Sentence("Ему, однако, не удалось ничего разглядеть, так как в следующий момент произошло то, чего никто не ожидал")
+      new Sentence("Ему")
+        .however("не удалось ничего разглядеть")
+        .because("в следующий момент произошло то, чего никто не ожидал")
     );
 
     story.addSentence(
-      new Sentence("Не долетев до забора, Знайка вдруг начал стремительно падать, словно какая-то сила неожиданно потянула его вниз")
+      new Sentence("Не долетев до забора, Знайка вдруг начал стремительно падать")
+        .like("какая-то сила неожиданно потянула его вниз")
     );
 
     story.addSentence(
-      new Sentence("Шлепнувшись с размаху о землю, он растянулся во весь рост и не успел даже сообразить, что произошло")
+      new Sentence("Шлепнувшись с размаху о землю")
+        .comma("он растянулся во весь рост")
+        .and("не успел даже сообразить, что произошло")
+    );
+
+    mainCharacter.getBody().breakDown();
+    mainCharacter.setCurrentImpression(Impression.SURPRISED);
+
+    story.addSentence(
+      new Sentence("Ощущая во всем теле страшную тяжесть")
+        .comma("он с трудом поднялся на ноги")
+        .and("огляделся по сторонам")
     );
 
     story.addSentence(
-      new Sentence("Ощущая во всем теле страшную тяжесть, он с трудом поднялся на ноги и огляделся по сторонам")
+      new Sentence(mainCharacter.getCurrentImpression().reaction(mainCharacter))
+        .that(mainCharacter.checkStandingAbility("снова"))
     );
 
     story.addSentence(
-      new Sentence("Его удивило, что он снова твердо держится на ногах")
+      new Sentence(Utils.capitalize(mainCharacter.pronoun()) + ' ' + mainCharacter.tryTo(mainCharacter::warmUpArms))
+        .comma(mainCharacter.tryTo(mainCharacter::warmUpLegs))
+        .ellipsis()
     );
 
     story.addSentence(
-      new Sentence("Он попробовал поднять руку, потом другую, попробовал сделать шаг, другой", "...")
-    );
-
-    story.addSentence(
-      new Sentence("Руки и ноги повиновались с трудом, словно были свинцом налиты")
+      new Sentence(mainCharacter.healthStatus())
     );
 
     scene.setStory(story);

@@ -1,7 +1,7 @@
 package ru.itmo.prog.lab4.models.places;
 
 import ru.itmo.prog.lab4.interfaces.Climbable;
-import ru.itmo.prog.lab4.interfaces.HasCases;
+import ru.itmo.prog.lab4.interfaces.speech.HasCases;
 import ru.itmo.prog.lab4.models.common.Action;
 import ru.itmo.prog.lab4.models.people.Person;
 

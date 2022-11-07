@@ -1,7 +1,7 @@
 package ru.itmo.prog.lab4.models.things;
 
 import ru.itmo.prog.lab4.interfaces.Binadle;
-import ru.itmo.prog.lab4.interfaces.HasCases;
+import ru.itmo.prog.lab4.interfaces.speech.HasCases;
 import ru.itmo.prog.lab4.models.people.Person;
 import ru.itmo.prog.lab4.models.people.Group;
 
@@ -44,7 +44,7 @@ public class Rope implements Binadle<Person, Group<? extends Person>>, HasCases 
 
   public String pullBack() {
     checkBinded();
-    return "притянуть " + person.pronunciation() + " на веревке обратно";
+    return "притянуть " + person.possessivePronoun() + " на веревке обратно";
   }
 
   public void checkBinded() {
