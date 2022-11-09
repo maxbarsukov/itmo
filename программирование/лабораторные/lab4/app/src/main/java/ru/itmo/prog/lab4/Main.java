@@ -35,16 +35,14 @@ public class Main {
     var house = (House)scene.getLocation(House.DEFAULT_NAME);
     var mainCharacter = (Shorty) scene.getMainCharacter();
 
-    var bus = scene.getEventBus();
-    bus.subscribe(new WordsSpokenEvent.Handler(mainCharacter));
-    bus.subscribe(new OrderGiven.Handler());
-    bus.subscribe(new NoOneExpectedEvent.Handler());
+    var ebb =  Guice.createInjector(new EventBusBeanModule()).getInstance(EventBusBean.class);
+    ebb.bus().subscribe(new WordsSpokenEvent.Handler(mainCharacter));
 
     Injector weatherInjector = Guice.createInjector(new WeatherModule());
     var weather = weatherInjector.getInstance(Weather.class);
 
     AtomicReference<String> hearedWords = new AtomicReference<>("услыхал слова ");
-    bus.publish(
+    ebb.bus().publish(
       new WordsSpokenEvent(
         scene.getCharacter("Шпунтик"),
         new WordsSpokenEvent.WordsSpoken("бла-бла-бла", 90)
@@ -53,9 +51,7 @@ public class Main {
         var e = (WordsSpokenEvent)event;
         hearedWords.set(hearedWords.get() + e.getWhoSaid().genitiveCase() + ": \"" + e.getWordsSpoken().getContent() + '"');
       },
-      (event, handler, exception) -> {
-        hearedWords.set(hearedWords.get() + ((WordsSpokenEvent)event).getWhoSaid().genitiveCase());
-      }
+      (event, handler, exception) -> hearedWords.set(hearedWords.get() + ((WordsSpokenEvent)event).getWhoSaid().genitiveCase())
     );
 
     class Hallway extends Place {
@@ -80,14 +76,10 @@ public class Main {
         .and(Action.GO_TO_EXIT.getDescription(mainCharacter))
     );
 
-    bus.publish(
+    ebb.bus().publish(
       new OrderGiven(OrderGiven.TimeToExecute.LOW),
-      (event, handler) -> {
-        story.addSentence(new Sentence(((OrderGiven.Handler) handler).description((OrderGiven) event)));
-      },
-      (event, handler, exception) -> {
-        story.addSentence(new Sentence(exception.getMessage()));
-      }
+      (event, handler) -> story.addSentence(new Sentence(((OrderGiven.Handler) handler).description((OrderGiven) event))),
+      (event, handler, exception) -> story.addSentence(new Sentence(exception.getMessage()))
     );
 
     var rope = new Rope();
@@ -178,7 +170,7 @@ public class Main {
     );
 
     AtomicReference<String> spanishInquisitionMessage = new AtomicReference<>("");
-    bus.publish(
+    ebb.bus().publish(
       new NoOneExpectedEvent(),
       (event, handler) -> {
         var e = (NoOneExpectedEvent) event;

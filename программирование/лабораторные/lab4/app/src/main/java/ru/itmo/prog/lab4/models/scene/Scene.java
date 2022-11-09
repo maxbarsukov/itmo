@@ -2,7 +2,7 @@ package ru.itmo.prog.lab4.models.scene;
 
 import com.google.inject.Inject;
 import ru.itmo.prog.lab4.interfaces.Tellable;
-import ru.itmo.prog.lab4.interfaces.events.EventBus;
+import ru.itmo.prog.lab4.lib.events.interfaces.EventBus;
 import ru.itmo.prog.lab4.models.people.Group;
 import ru.itmo.prog.lab4.models.people.Person;
 import ru.itmo.prog.lab4.models.places.Place;

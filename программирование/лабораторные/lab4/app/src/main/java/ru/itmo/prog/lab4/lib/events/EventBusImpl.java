@@ -1,9 +1,9 @@
 package ru.itmo.prog.lab4.lib.events;
 
 import com.google.inject.Singleton;
-import ru.itmo.prog.lab4.interfaces.events.Event;
-import ru.itmo.prog.lab4.interfaces.events.EventBus;
-import ru.itmo.prog.lab4.interfaces.events.FailureConsumer;
+import ru.itmo.prog.lab4.lib.events.interfaces.Event;
+import ru.itmo.prog.lab4.lib.events.interfaces.EventBus;
+import ru.itmo.prog.lab4.lib.events.interfaces.FailureConsumer;
 
 import java.lang.ref.ReferenceQueue;
 import java.util.Collections;

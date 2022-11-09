@@ -1,7 +1,7 @@
 package ru.itmo.prog.lab4.lib.events;
 
-import ru.itmo.prog.lab4.interfaces.events.Event;
-import ru.itmo.prog.lab4.interfaces.events.FailureConsumer;
+import ru.itmo.prog.lab4.lib.events.interfaces.Event;
+import ru.itmo.prog.lab4.lib.events.interfaces.FailureConsumer;
 
 import java.util.function.BiConsumer;
 

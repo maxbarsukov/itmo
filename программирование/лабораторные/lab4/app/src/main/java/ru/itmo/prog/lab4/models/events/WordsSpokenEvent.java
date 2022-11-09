@@ -1,7 +1,7 @@
 package ru.itmo.prog.lab4.models.events;
 
 import ru.itmo.prog.lab4.interfaces.Hearable;
-import ru.itmo.prog.lab4.interfaces.events.Event;
+import ru.itmo.prog.lab4.lib.events.interfaces.Event;
 import ru.itmo.prog.lab4.lib.events.EventException;
 import ru.itmo.prog.lab4.lib.events.EventHandler;
 import ru.itmo.prog.lab4.models.people.Person;
