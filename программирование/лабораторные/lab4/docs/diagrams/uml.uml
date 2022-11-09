@@ -1,0 +1,1898 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement>ru.itmo.prog.lab4.models.people.Person.Body</OriginalElement>
+  <nodes>
+    <node x="5946.556926406927" y="1898.5">ru.itmo.prog.lab4.interfaces.things.Lockable.LockingException</node>
+    <node x="6870.059808909204" y="3548.5">ru.itmo.prog.lab4.models.people.Person.Body.Arm</node>
+    <node x="12433.187781384888" y="5516.5">ru.itmo.prog.lab4.models.events.EventBusBean</node>
+    <node x="1625.5276515151509" y="5540.5">ru.itmo.prog.lab4.interfaces.Tellable</node>
+    <node x="7739.353907278653" y="1840.0">ru.itmo.prog.lab4.models.common.UnknownEntity</node>
+    <node x="2588.542045454546" y="5436.0">ru.itmo.prog.lab4.models.people.Group</node>
+    <node x="11962.44531024531" y="1911.0">ru.itmo.prog.lab4.lib.events.interfaces.Event</node>
+    <node x="8952.630422430168" y="5540.5">ru.itmo.prog.lab4.modules.WindModule</node>
+    <node x="11156.895310245309" y="3572.0">ru.itmo.prog.lab4.lib.events.interfaces.FailureConsumer</node>
+    <node x="5444.556926406927" y="1851.5">ru.itmo.prog.lab4.models.things.Key</node>
+    <node x="10201.432647907648" y="6198.5">ru.itmo.prog.lab4.modules.EventBusBeanModule</node>
+    <node x="4549.363744588743" y="1898.5">ru.itmo.prog.lab4.interfaces.Climbable</node>
+    <node x="11311.945472230333" y="6198.5">ru.itmo.prog.lab4.modules.SceneModule</node>
+    <node x="11048.986219336219" y="1083.5">java.lang.Throwable.PrintStreamOrWriter</node>
+    <node x="10134.611219336219" y="2493.5">ru.itmo.prog.lab4.lib.events.EventException</node>
+    <node x="6916.809808909204" y="1852.0">ru.itmo.prog.lab4.models.people.Limb.HealthStatus</node>
+    <node x="1677.7776515151509" y="4669.0">com.google.inject.ImplementedBy</node>
+    <node x="7310.129253353648" y="2400.0">ru.itmo.prog.lab4.models.things.Door</node>
+    <node x="5684.262012634374" y="5540.5">ru.itmo.prog.lab4.models.things.Rope.NothingIsBindedException</node>
+    <node x="5311.306926406927" y="2482.0">ru.itmo.prog.lab4.interfaces.Hearer</node>
+    <node x="7012.027757627153" y="1407.0">java.lang.Throwable.WrappedPrintWriter</node>
+    <node x="4602.963939286651" y="3030.0">ru.itmo.prog.lab4.models.people.Person</node>
+    <node x="10045.111219336219" y="1049.0">java.lang.Exception</node>
+    <node x="8110.500232374627" y="0.0">java.io.Serializable</node>
+    <node x="8319.747089096836" y="4622.0">ru.itmo.prog.lab4.models.events.OrderGiven</node>
+    <node x="7364.295920020315" y="1852.0">ru.itmo.prog.lab4.models.things.Door.State</node>
+    <node x="6187.556926406927" y="1887.0">ru.itmo.prog.lab4.interfaces.speech.Pluralable</node>
+    <node x="881.7776515151509" y="4541.5">ru.itmo.prog.lab4.models.places.Downpipe</node>
+    <node x="1928.5346622817688" y="4484.0">ru.itmo.prog.lab4.models.people.Shorty</node>
+    <node x="8157.498719336219" y="6174.5">ru.itmo.prog.lab4.models.events.WordsSpokenEvent.Handler</node>
+    <node x="11270.895310245309" y="4681.5">com.google.inject.Singleton</node>
+    <node x="10692.508546282941" y="80.0">java.lang.Throwable</node>
+    <node x="7968.038755763502" y="6198.5">ru.itmo.prog.lab4.modules.HouseModule</node>
+    <node x="705.2545454545452" y="5344.0">ru.itmo.prog.lab4.models.scene.Sentence</node>
+    <node x="4756.825865800865" y="2481.5">ru.itmo.prog.lab4.models.people.Person.Eye</node>
+    <node x="9473.611219336219" y="6186.5">ru.itmo.prog.lab4.models.things.Vane</node>
+    <node x="5800.444424293819" y="1107.0">ru.itmo.prog.lab4.interfaces.things.Opener</node>
+    <node x="9027.986219336219" y="6198.5">ru.itmo.prog.lab4.modules.WeatherModule</node>
+    <node x="8280.872089096836" y="3514.0">ru.itmo.prog.lab4.models.events.OrderGiven.TimeToExecute</node>
+    <node x="1767.5276515151509" y="5529.0">ru.itmo.prog.lab4.interfaces.ShortiesContainer</node>
+    <node x="4571.983381617988" y="6037.0">ru.itmo.prog.lab4.models.things.Rope</node>
+    <node x="769.6503787878792" y="6117.0">ru.itmo.prog.lab4.models.scene.Story</node>
+    <node x="811.6943181818178" y="1851.5">ru.itmo.prog.lab4.models.places.Place</node>
+    <node x="6809.4845544093005" y="6175.0">ru.itmo.prog.lab4.models.events.WordsSpokenEvent.WordsSpoken</node>
+    <node x="11503.966305563667" y="5413.5">ru.itmo.prog.lab4.lib.events.EventBusImpl</node>
+    <node x="6173.185744885492" y="1384.5">java.lang.RuntimeException</node>
+    <node x="7699.020573945321" y="2435.5">ru.itmo.prog.lab4.models.common.UnknownEntity.Direction</node>
+    <node x="4269.02207580897" y="1107.0">java.lang.Comparable</node>
+    <node x="488.0" y="4622.0">ru.itmo.prog.lab4.models.places.Workshop</node>
+    <node x="6138.512012634374" y="6163.5">ru.itmo.prog.lab4.models.weather.Weather</node>
+    <node x="8598.747089096836" y="4369.0">com.google.inject.AbstractModule</node>
+    <node x="8023.718795093795" y="2493.5">ru.itmo.prog.lab4.interfaces.things.Seized</node>
+    <node x="8864.852886002885" y="3572.0">com.google.inject.Module</node>
+    <node x="4699.670378680591" y="6760.0">ru.itmo.prog.lab4.Main</node>
+    <node x="2004.2392077363138" y="2262.0">ru.itmo.prog.lab4.models.common.Action</node>
+    <node x="0.0" y="6783.0">ru.itmo.prog.lab4.models.places.Earth.EarthHolder</node>
+    <node x="3405.539696862409" y="2458.5">ru.itmo.prog.lab4.models.people.Sex</node>
+    <node x="1519.2456165304766" y="6071.0">ru.itmo.prog.lab4.models.places.Gazebo</node>
+    <node x="6977.3600225844175" y="4576.0">ru.itmo.prog.lab4.models.people.Person.Body</node>
+    <node x="12088.145310245309" y="1083.5">java.lang.Throwable.SentinelHolder</node>
+    <node x="2552.2720758089704" y="6002.0">ru.itmo.prog.lab4.models.scene.Scene</node>
+    <node x="8698.005422430168" y="5540.5">ru.itmo.prog.lab4.modules.StoryModule</node>
+    <node x="4250.52207580897" y="1280.0">java.lang.Enum</node>
+    <node x="3808.539696862409" y="2493.5">ru.itmo.prog.lab4.interfaces.Cannable</node>
+    <node x="5980.262012634374" y="5540.5">ru.itmo.prog.lab4.modules.WorkshopModule</node>
+    <node x="4782.45560384021" y="5529.0">ru.itmo.prog.lab4.interfaces.Binadle</node>
+    <node x="2160.4504848998786" y="6128.5">ru.itmo.prog.lab4.utils.Direction</node>
+    <node x="4471.613744588743" y="2470.5">ru.itmo.prog.lab4.interfaces.Climber</node>
+    <node x="4981.825865800865" y="2493.5">ru.itmo.prog.lab4.interfaces.Tryable</node>
+    <node x="6160.262012634374" y="5459.0">ru.itmo.prog.lab4.models.weather.Wind</node>
+    <node x="3447.475896400643" y="6175.5">ru.itmo.prog.lab4.models.things.Door.Doorhandle</node>
+    <node x="11875.895310245309" y="1407.0">java.lang.Throwable.WrappedPrintStream</node>
+    <node x="5705.556926406927" y="1887.0">ru.itmo.prog.lab4.utils.Utils</node>
+    <node x="2337.7629848998786" y="5471.0">ru.itmo.prog.lab4.utils.Direction.Type</node>
+    <node x="9712.611219336219" y="2285.0">java.lang.ref.Reference</node>
+    <node x="10328.895310245309" y="4623.0">ru.itmo.prog.lab4.lib.events.interfaces.EventBus</node>
+    <node x="9197.611219336219" y="5529.0">ru.itmo.prog.lab4.models.events.OrderGiven.Handler</node>
+    <node x="10368.566305563667" y="5540.5">ru.itmo.prog.lab4.models.events.NoOneExpectedEvent.Handler</node>
+    <node x="1310.7776515151509" y="2482.0">ru.itmo.prog.lab4.interfaces.Jumpable</node>
+    <node x="9083.852886002885" y="3548.5">java.lang.ref.Reference.ReferenceHandler</node>
+    <node x="3603.539696862409" y="2447.0">ru.itmo.prog.lab4.models.common.Time</node>
+    <node x="19.200000000000728" y="6163.5">ru.itmo.prog.lab4.models.places.Earth</node>
+    <node x="2083.7629848998786" y="5494.0">ru.itmo.prog.lab4.utils.Direction.Preposition</node>
+    <node x="5036.556926406927" y="1863.5">ru.itmo.prog.lab4.models.people.Person.Eye.VisualAcuity</node>
+    <node x="11917.88951333926" y="2506.0">java.lang.FunctionalInterface</node>
+    <node x="7215.295920020315" y="1887.0">ru.itmo.prog.lab4.interfaces.things.Openable</node>
+    <node x="5898.710744885491" y="1431.0">ru.itmo.prog.lab4.interfaces.things.Lockable</node>
+    <node x="12147.689513339259" y="4645.5">ru.itmo.prog.lab4.models.events.NoOneExpectedEvent</node>
+    <node x="10714.28951333926" y="3560.5">java.lang.ref.WeakReference</node>
+    <node x="4223.613744588743" y="2378.0">ru.itmo.prog.lab4.models.common.Impression</node>
+    <node x="11410.895310245309" y="4633.5">ru.itmo.prog.lab4.lib.events.EventWrapper</node>
+    <node x="4038.5220758089704" y="1431.0">ru.itmo.prog.lab4.interfaces.speech.HasCases</node>
+    <node x="4016.039696862409" y="5553.0">ru.itmo.prog.lab4.models.things.Thing</node>
+    <node x="276.5" y="5458.5">ru.itmo.prog.lab4.models.places.House</node>
+    <node x="1179.7776515151509" y="3513.0">ru.itmo.prog.lab4.models.common.JumpDistance</node>
+    <node x="6936.059808909204" y="2458.5">ru.itmo.prog.lab4.models.people.Limb</node>
+    <node x="5297.556926406927" y="1887.0">ru.itmo.prog.lab4.interfaces.Hearable</node>
+    <node x="7127.129253353648" y="3548.5">ru.itmo.prog.lab4.models.people.Person.Body.Leg</node>
+    <node x="10785.895310245309" y="4621.5">ru.itmo.prog.lab4.lib.events.WeakHandler</node>
+    <node x="6812.127411552157" y="5482.0">ru.itmo.prog.lab4.models.events.WordsSpokenEvent</node>
+    <node x="10900.008546282941" y="2435.5">ru.itmo.prog.lab4.lib.events.EventHandler</node>
+    <node x="231.20000000000073" y="6151.5">ru.itmo.prog.lab4.models.places.House.Roof</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="ru.itmo.prog.lab4.utils.Direction.Type" target="ru.itmo.prog.lab4.utils.Direction">
+      <point x="23.125" y="97.0" />
+      <point x="2453.3879848998786" y="5952.0" />
+      <point x="2439.1171515665446" y="5952.0" />
+      <point x="126.66666666666606" y="-97.5" />
+    </edge>
+    <edge source="ru.itmo.prog.lab4.models.places.Workshop" target="ru.itmo.prog.lab4.models.places.Place">
+      <point x="48.0" y="-74.5" />
+      <point x="632.0" y="4349.0" />
+      <point x="589.5" y="4349.0" />
+      <point x="589.5" y="2222.0" />
+      <point x="876.5856225296438" y="2222.0" />
+      <point x="-34.60869565217399" y="74.5" />
+    </edge>
+    <edge source="ru.itmo.prog.lab4.utils.Direction.Type" target="java.lang.Enum">
+      <point x="0.0" y="-97.0" />
+      <point x="2430.2629848998786" y="5284.0" />
+      <point x="2815.753982576695" y="5284.0" />
+      <point x="2815.753982576695" y="2960.0" />
+      <point x="3167.3358762707367" y="2960.0" />
+      <point x="3167.3358762707367" y="1790.0" />
+      <point x="4333.063742475636" y="1790.0" />
+      <point x="-58.95833333333394" y="190.0" />
+    </edge>
+    <edge source="ru.itmo.prog.lab4.models.things.Door.Doorhandle" target="ru.itmo.prog.lab4.models.things.Door">
+      <point x="-48.0" y="-50.5" />
+      <point x="3495.475896400643" y="5962.0" />
+      <point x="3769.2368506493513" y="5962.0" />
+      <point x="3769.2368506493513" y="4349.0" />
+      <point x="5502.632499892712" y="4349.0" />
+      <point x="5502.632499892712" y="2990.0" />
+      <point x="7376.879253353648" y="2990.0" />
+      <point x="-22.25" y="121.0" />
+    </edge>
+    <edge source="ru.itmo.prog.lab4.modules.EventBusBeanModule" target="com.google.inject.AbstractModule">
+      <point x="-27.42857142857156" y="-27.5" />
+      <point x="10270.004076479076" y="5962.0" />
+      <point x="9680.111219336219" y="5962.0" />
+      <point x="9680.111219336219" y="5214.0" />
+      <point x="9184.580422430168" y="5214.0" />
+      <point x="234.33333333333303" y="327.5" />
+    </edge>
+    <edge source="ru.itmo.prog.lab4.lib.events.interfaces.FailureConsumer" target="ru.itmo.prog.lab4.lib.events.interfaces.Event">
+      <point x="34.5" y="-27.5" />
+      <point x="11329.395310245309" y="2990.0" />
+      <point x="11907.38951333926" y="2990.0" />
+      <point x="11907.38951333926" y="2242.0" />
+      <point x="12002.04531024531" y="2242.0" />
+      <point x="-4.399999999999636" y="15.0" />
+    </edge>
+    <edge source="ru.itmo.prog.lab4.models.people.Person.Eye" target="ru.itmo.prog.lab4.models.people.Person.Eye.VisualAcuity">
+      <point x="0.0" y="-39.5" />
+      <point x="4858.825865800865" y="2192.0" />
+      <point x="5126.931926406927" y="2192.0" />
+      <point x="-30.125" y="62.5" />
+    </edge>
+    <edge source="ru.itmo.prog.lab4.modules.WeatherModule" target="com.google.inject.AbstractModule">
+      <point x="58.875" y="-27.5" />
+      <point x="9165.361219336219" y="5982.0" />
+      <point x="9176.111219336219" y="5982.0" />
+      <point x="9176.111219336219" y="5274.0" />
+      <point x="9090.847089096835" y="5274.0" />
+      <point x="140.60000000000036" y="327.5" />
+    </edge>
+    <edge source="ru.itmo.prog.lab4.models.people.Shorty" target="ru.itmo.prog.lab4.models.common.Action">
+      <point x="-25.090909090909918" y="-212.5" />
+      <point x="2041.4437531908588" y="4229.0" />
+      <point x="1914.9244044092648" y="4229.0" />
+      <point x="1914.9244044092648" y="2930.0" />
+      <point x="2107.5725410696477" y="2930.0" />
+      <point x="-20.66666666666606" y="259.0" />
+    </edge>
+    <edge source="ru.itmo.prog.lab4.modules.StoryModule" target="com.google.inject.AbstractModule">
+      <point x="-39.25" y="-27.5" />
+      <point x="8737.255422430168" y="5284.0" />
+      <point x="8856.513755763503" y="5284.0" />
+      <point x="-93.73333333333358" y="327.5" />
+    </edge>
+    <edge source="java.lang.Throwable.PrintStreamOrWriter" target="java.lang.Throwable">
+      <point x="0.0" y="-51.0" />
+      <point x="11148.986219336219" y="1029.0" />
+      <point x="11072.008546282941" y="1029.0" />
+      <point x="0.0" y="454.5" />
+    </edge>
+    <edge source="ru.itmo.prog.lab4.models.people.Shorty" target="ru.itmo.prog.lab4.interfaces.Jumpable">
+      <point x="-100.36363636363603" y="-212.5" />
+      <point x="1966.1710259181327" y="4259.0" />
+      <point x="1431.2776515151509" y="4259.0" />
+      <point x="0.0" y="39.0" />
+    </edge>
+    <edge source="ru.itmo.prog.lab4.models.things.Rope" target="ru.itmo.prog.lab4.models.people.Group">
+      <point x="-143.33333333333303" y="-189.0" />
+      <point x="4643.650048284655" y="5882.0" />
+      <point x="2812.32775974026" y="5882.0" />
+      <point x="103.28571428571377" y="132.0" />
+    </edge>
+    <edge source="java.lang.Throwable.WrappedPrintWriter" target="java.lang.Throwable">
+      <point x="-67.25" y="-63.0" />
+      <point x="7079.277757627153" y="1009.0" />
+      <point x="10746.722831997227" y="1009.0" />
+      <point x="-325.2857142857147" y="454.5" />
+    </edge>
+    <edge source="ru.itmo.prog.lab4.Main" target="ru.itmo.prog.lab4.models.scene.Scene">
+      <point x="-21.272727272727025" y="-50.5" />
+      <point x="4795.397651407864" y="6520.0" />
+      <point x="2900.2720758089704" y="6520.0" />
+      <point x="0.0" y="224.0" />
+    </edge>
+    <edge source="ru.itmo.prog.lab4.models.events.NoOneExpectedEvent.Handler" target="ru.itmo.prog.lab4.lib.events.EventHandler">
+      <point x="-32.75" y="-27.5" />
+      <point x="10466.816305563667" y="5284.0" />
+      <point x="10313.986219336219" y="5284.0" />
+      <point x="10313.986219336219" y="3000.0" />
+      <point x="11005.644909919305" y="3000.0" />
+      <point x="-60.36363636363603" y="85.5" />
+    </edge>
+    <edge source="ru.itmo.prog.lab4.modules.WorkshopModule" target="com.google.inject.AbstractModule">
+      <point x="53.33333333333303" y="-27.5" />
+      <point x="6113.595345967706" y="5254.0" />
+      <point x="8715.913755763502" y="5254.0" />
+      <point x="-234.33333333333303" y="327.5" />
+    </edge>
+    <edge source="ru.itmo.prog.lab4.interfaces.ShortiesContainer" target="com.google.inject.ImplementedBy">
+      <point x="-58.5" y="-39.0" />
+      <point x="1826.0276515151509" y="5324.0" />
+      <point x="1795.5276515151509" y="5324.0" />
+      <point x="39.25" y="27.5" />
+    </edge>
+    <edge source="ru.itmo.prog.lab4.models.common.JumpDistance" target="java.lang.Enum">
+      <point x="0.0" y="-86.5" />
+      <point x="1300.2776515151509" y="1760.0" />
+      <point x="4262.313742475636" y="1760.0" />
+      <point x="-129.70833333333394" y="190.0" />
+    </edge>
+    <edge source="ru.itmo.prog.lab4.models.places.House.Roof" target="ru.itmo.prog.lab4.models.places.Place">
+      <point x="-38.399999999999636" y="-74.5" />
+      <point x="288.8000000000011" y="5962.0" />
+      <point x="171.42608695652234" y="5962.0" />
+      <point x="171.42608695652234" y="2182.0" />
+      <point x="841.9769268774699" y="2182.0" />
+      <point x="-69.21739130434798" y="74.5" />
+    </edge>
+    <edge source="ru.itmo.prog.lab4.Main" target="ru.itmo.prog.lab4.modules.WorkshopModule">
+      <point x="8.509090909091356" y="-50.5" />
+      <point x="4825.179469589682" y="6490.0" />
+      <point x="6060.262012634374" y="6490.0" />
+      <point x="0.0" y="27.5" />
+    </edge>
+    <edge source="ru.itmo.prog.lab4.models.places.Gazebo" target="ru.itmo.prog.lab4.models.people.Group">
+      <point x="113.33333333333394" y="-155.0" />
+      <point x="1760.0789498638105" y="5972.0" />
+      <point x="2640.184902597403" y="5972.0" />
+      <point x="-68.85714285714312" y="132.0" />
+    </edge>
+    <edge source="ru.itmo.prog.lab4.lib.events.EventBusImpl" target="ru.itmo.prog.lab4.lib.events.interfaces.Event">
+      <point x="200.29166666666697" y="-154.5" />
+      <point x="11922.757972230334" y="5304.0" />
+      <point x="12137.189513339259" y="5304.0" />
+      <point x="12137.189513339259" y="2232.0" />
+      <point x="12019.645310245309" y="2232.0" />
+      <point x="13.199999999999818" y="15.0" />
+    </edge>
+    <edge source="ru.itmo.prog.lab4.Main" target="ru.itmo.prog.lab4.models.things.Door.Doorhandle">
+      <point x="-12.763636363636579" y="-50.5" />
+      <point x="4803.9067423169545" y="6500.0" />
+      <point x="3543.475896400643" y="6500.0" />
+      <point x="0.0" y="50.5" />
+    </edge>
+    <edge source="ru.itmo.prog.lab4.models.people.Person" target="ru.itmo.prog.lab4.interfaces.Climber">
+      <point x="-36.84848484848408" y="-569.5" />
+      <point x="4718.115454438167" y="2800.0" />
+      <point x="4599.113744588743" y="2800.0" />
+      <point x="0.0" y="50.5" />
+    </edge>
+    <edge source="ru.itmo.prog.lab4.models.common.Impression" target="java.lang.Enum">
+      <point x="-56.75" y="-143.0" />
+      <point x="4280.363744588743" y="1820.0" />
+      <point x="4403.813742475636" y="1820.0" />
+      <point x="11.79166666666606" y="190.0" />
+    </edge>
+    <edge source="ru.itmo.prog.lab4.lib.events.EventBusImpl" target="ru.itmo.prog.lab4.lib.events.interfaces.FailureConsumer">
+      <point x="18.20833333333394" y="-154.5" />
+      <point x="11740.674638897" y="5114.0" />
+      <point x="11260.395310245309" y="5114.0" />
+      <point x="-34.5" y="27.5" />
+    </edge>
+    <edge source="com.google.inject.Module" target="com.google.inject.Module">
+      <point x="-66.33333333333348" y="27.5" />
+      <point x="8898.019552669552" y="3647.0" />
+      <point x="8844.852886002885" y="3647.0" />
+      <point x="8844.852886002885" y="3599.5" />
+      <point x="-99.5" y="-0.0" />
+    </edge>
+    <edge source="ru.itmo.prog.lab4.Main" target="ru.itmo.prog.lab4.utils.Direction.Type">
+      <point x="-38.290909090908826" y="-50.5" />
+      <point x="4778.379469589682" y="6560.0" />
+      <point x="2494.844045505939" y="6560.0" />
+      <point x="2494.844045505939" y="5952.0" />
+      <point x="2499.6379848998786" y="5952.0" />
+      <point x="69.375" y="97.0" />
+    </edge>
+    <edge source="ru.itmo.prog.lab4.models.events.WordsSpokenEvent" target="ru.itmo.prog.lab4.lib.events.interfaces.Event">
+      <point x="103.66666666666697" y="-86.0" />
+      <point x="7071.294078218825" y="5234.0" />
+      <point x="7929.520573945321" y="5234.0" />
+      <point x="7929.520573945321" y="2202.0" />
+      <point x="11966.84531024531" y="2202.0" />
+      <point x="-39.600000000000364" y="15.0" />
+    </edge>
+    <edge source="ru.itmo.prog.lab4.models.people.Person" target="ru.itmo.prog.lab4.interfaces.Climbable">
+      <point x="-27.636363636363967" y="-569.5" />
+      <point x="4727.327575650287" y="2800.0" />
+      <point x="4737.113744588743" y="2800.0" />
+      <point x="4737.113744588743" y="2202.0" />
+      <point x="4708.263744588743" y="2202.0" />
+      <point x="45.399999999999636" y="27.5" />
+    </edge>
+    <edge source="ru.itmo.prog.lab4.models.scene.Story" target="ru.itmo.prog.lab4.interfaces.Tellable">
+      <point x="28.375" y="-109.0" />
+      <point x="911.5253787878792" y="5902.0" />
+      <point x="1640.7776515151509" y="5902.0" />
+      <point x="-45.75" y="27.5" />
+    </edge>
+    <edge source="ru.itmo.prog.lab4.modules.WeatherModule" target="ru.itmo.prog.lab4.modules.WindModule">
+      <point x="-19.625" y="-27.5" />
+      <point x="9086.861219336219" y="5812.0" />
+      <point x="9031.130422430168" y="5812.0" />
+      <point x="0.0" y="27.5" />
+    </edge>
+    <edge source="ru.itmo.prog.lab4.Main" target="ru.itmo.prog.lab4.models.places.Workshop">
+      <point x="-97.85454545454559" y="-50.5" />
+      <point x="4718.8158332260455" y="6700.0" />
+      <point x="584.0" y="6700.0" />
+      <point x="0.0" y="74.5" />
+    </edge>
+    <edge source="ru.itmo.prog.lab4.interfaces.things.Lockable.LockingException" target="java.lang.RuntimeException">
+      <point x="73.33333333333303" y="-27.5" />
+      <point x="6129.890259740259" y="1800.0" />
+      <point x="6384.685744885492" y="1800.0" />
+      <point x="0.0" y="85.5" />
+    </edge>
+    <edge source="ru.itmo.prog.lab4.lib.events.interfaces.EventBus" target="ru.itmo.prog.lab4.lib.events.interfaces.FailureConsumer">
+      <point x="145.66666666666652" y="-73.5" />
+      <point x="10693.061976911977" y="4349.0" />
+      <point x="11191.395310245309" y="4349.0" />
+      <point x="-103.5" y="27.5" />
+    </edge>
+    <edge source="ru.itmo.prog.lab4.modules.HouseModule" target="ru.itmo.prog.lab4.models.places.House">
+      <point x="-52.33333333333303" y="-27.5" />
+      <point x="7994.20542243017" y="5852.0" />
+      <point x="543.7999999999993" y="5852.0" />
+      <point x="118.79999999999973" y="109.5" />
+    </edge>
+    <edge source="ru.itmo.prog.lab4.models.places.Earth.EarthHolder" target="ru.itmo.prog.lab4.models.places.Earth">
+      <point x="24.0" y="-27.5" />
+      <point x="120.0" y="6740.0" />
+      <point x="115.20000000000073" y="6740.0" />
+      <point x="0.0" y="62.5" />
+    </edge>
+    <edge source="ru.itmo.prog.lab4.Main" target="ru.itmo.prog.lab4.models.people.Sex">
+      <point x="-17.0181818181818" y="-50.5" />
+      <point x="4799.652196862409" y="6510.0" />
+      <point x="3258.7720758089704" y="6510.0" />
+      <point x="3258.7720758089704" y="2990.0" />
+      <point x="3472.289696862409" y="2990.0" />
+      <point x="-22.25" y="62.5" />
+    </edge>
+    <edge source="ru.itmo.prog.lab4.interfaces.Climber" target="ru.itmo.prog.lab4.models.places.Place">
+      <point x="-63.75" y="-50.5" />
+      <point x="4535.363744588743" y="2102.0" />
+      <point x="989.0638833992089" y="2102.0" />
+      <point x="77.86956521739103" y="74.5" />
+    </edge>
+    <edge source="ru.itmo.prog.lab4.lib.events.EventWrapper" target="ru.itmo.prog.lab4.lib.events.interfaces.FailureConsumer">
+      <point x="-55.5" y="-63.0" />
+      <point x="11577.395310245309" y="4339.0" />
+      <point x="11398.395310245309" y="4339.0" />
+      <point x="103.5" y="27.5" />
+    </edge>
+    <edge source="ru.itmo.prog.lab4.models.places.Gazebo" target="ru.itmo.prog.lab4.models.places.Place">
+      <point x="-113.33333333333394" y="-155.0" />
+      <point x="1533.4122831971426" y="5892.0" />
+      <point x="1158.2776515151509" y="5892.0" />
+      <point x="1158.2776515151509" y="2182.0" />
+      <point x="919.8464920948609" y="2182.0" />
+      <point x="8.652173913043043" y="74.5" />
+    </edge>
+    <edge source="ru.itmo.prog.lab4.Main" target="ru.itmo.prog.lab4.models.events.OrderGiven.TimeToExecute">
+      <point x="38.290909090908826" y="-50.5" />
+      <point x="4854.9612877715" y="6560.0" />
+      <point x="7949.029664854412" y="6560.0" />
+      <point x="7949.029664854412" y="4349.0" />
+      <point x="8305.672089096835" y="4349.0" />
+      <point x="-99.19999999999982" y="85.5" />
+    </edge>
+    <edge source="ru.itmo.prog.lab4.Main" target="ru.itmo.prog.lab4.models.weather.Weather">
+      <point x="12.763636363636579" y="-50.5" />
+      <point x="4829.434015044228" y="6500.0" />
+      <point x="6238.012012634374" y="6500.0" />
+      <point x="0.0" y="62.5" />
+    </edge>
+    <edge source="ru.itmo.prog.lab4.models.things.Rope" target="ru.itmo.prog.lab4.models.things.Rope.NothingIsBindedException">
+      <point x="143.33333333333303" y="-189.0" />
+      <point x="4930.316714951321" y="5972.0" />
+      <point x="5730.262012634374" y="5972.0" />
+      <point x="-92.0" y="27.5" />
+    </edge>
+    <edge source="ru.itmo.prog.lab4.models.people.Person" target="ru.itmo.prog.lab4.interfaces.things.Lockable.LockingException">
+      <point x="82.90909090909008" y="-569.5" />
+      <point x="4837.873030195741" y="2920.0" />
+      <point x="6001.556926406927" y="2920.0" />
+      <point x="-55.0" y="27.5" />
+    </edge>
+    <edge source="ru.itmo.prog.lab4.models.places.Downpipe" target="ru.itmo.prog.lab4.models.common.Action">
+      <point x="63.75" y="-155.0" />
+      <point x="1073.0276515151509" y="4349.0" />
+      <point x="1041.5276515151509" y="4349.0" />
+      <point x="1041.5276515151509" y="2910.0" />
+      <point x="2024.9058744029799" y="2910.0" />
+      <point x="-103.33333333333394" y="259.0" />
+    </edge>
+    <edge source="ru.itmo.prog.lab4.models.things.Door" target="ru.itmo.prog.lab4.interfaces.things.Opener">
+      <point x="79.11111111111131" y="-121.0" />
+      <point x="7478.240364464759" y="2232.0" />
+      <point x="7717.853907278653" y="2232.0" />
+      <point x="7717.853907278653" y="1240.0" />
+      <point x="5992.944424293819" y="1240.0" />
+      <point x="82.5" y="27.5" />
+    </edge>
+    <edge source="ru.itmo.prog.lab4.models.common.Action" target="ru.itmo.prog.lab4.models.people.Person">
+      <point x="103.33333333333394" y="259.0" />
+      <point x="2231.5725410696477" y="2910.0" />
+      <point x="4616.782121104833" y="2910.0" />
+      <point x="-138.18181818181802" y="-569.5" />
+    </edge>
+    <edge source="ru.itmo.prog.lab4.models.things.Rope" target="ru.itmo.prog.lab4.interfaces.Binadle">
+      <point x="95.55555555555566" y="-189.0" />
+      <point x="4882.538937173544" y="5982.0" />
+      <point x="4857.45560384021" y="5982.0" />
+      <point x="0.0" y="39.0" />
+    </edge>
+    <edge source="ru.itmo.prog.lab4.models.places.House" target="ru.itmo.prog.lab4.models.places.House.Roof">
+      <point x="0.0" y="109.5" />
+      <point x="425.0" y="5982.0" />
+      <point x="404.0000000000009" y="5982.0" />
+      <point x="76.80000000000018" y="-74.5" />
+    </edge>
+    <edge source="ru.itmo.prog.lab4.utils.Direction" target="ru.itmo.prog.lab4.utils.Direction.Type">
+      <point x="76.0" y="-97.5" />
+      <point x="2388.4504848998786" y="5952.0" />
+      <point x="2407.1379848998786" y="5952.0" />
+      <point x="-23.125" y="97.0" />
+    </edge>
+    <edge source="ru.itmo.prog.lab4.models.people.Person.Body" target="ru.itmo.prog.lab4.models.people.Limb.HealthStatus">
+      <point x="98.30769230769147" y="-120.5" />
+      <point x="7182.167714892109" y="4349.0" />
+      <point x="7299.629253353648" y="4349.0" />
+      <point x="7299.629253353648" y="2232.0" />
+      <point x="7133.709808909203" y="2232.0" />
+      <point x="96.39999999999964" y="74.0" />
+    </edge>
+    <edge source="ru.itmo.prog.lab4.models.things.Rope" target="ru.itmo.prog.lab4.models.people.Person">
+      <point x="0.0" y="-189.0" />
+      <point x="4786.983381617988" y="5982.0" />
+      <point x="4760.95560384021" y="5982.0" />
+      <point x="4760.95560384021" y="4339.0" />
+      <point x="4729.630605953317" y="4339.0" />
+      <point x="-25.33333333333394" y="569.5" />
+    </edge>
+    <edge source="ru.itmo.prog.lab4.Main" target="ru.itmo.prog.lab4.models.events.WordsSpokenEvent.Handler">
+      <point x="55.30909090909063" y="-50.5" />
+      <point x="4871.979469589682" y="6600.0" />
+      <point x="8281.49871933622" y="6600.0" />
+      <point x="0.0" y="51.5" />
+    </edge>
+    <edge source="ru.itmo.prog.lab4.models.common.UnknownEntity" target="ru.itmo.prog.lab4.models.common.UnknownEntity.Direction">
+      <point x="0.0" y="86.0" />
+      <point x="7866.853907278653" y="2242.0" />
+      <point x="7882.353907278655" y="2242.0" />
+      <point x="73.33333333333394" y="-85.5" />
+    </edge>
+    <edge source="ru.itmo.prog.lab4.Main" target="ru.itmo.prog.lab4.models.places.Place">
+      <point x="-89.34545454545423" y="-50.5" />
+      <point x="4727.324924135137" y="6680.0" />
+      <point x="694.7545454545452" y="6680.0" />
+      <point x="694.7545454545452" y="2242.0" />
+      <point x="893.8899703557308" y="2242.0" />
+      <point x="-17.304347826086996" y="74.5" />
+    </edge>
+    <edge source="ru.itmo.prog.lab4.models.things.Thing" target="ru.itmo.prog.lab4.interfaces.speech.HasCases">
+      <point x="0.0" y="-15.0" />
+      <point x="4060.039696862409" y="1740.0" />
+      <point x="4118.522075808971" y="1740.0" />
+      <point x="-16.0" y="39.0" />
+    </edge>
+    <edge source="com.google.inject.AbstractModule" target="com.google.inject.Module">
+      <point x="234.33333333333303" y="-327.5" />
+      <point x="9184.580422430168" y="4349.0" />
+      <point x="9030.686219336218" y="4349.0" />
+      <point x="66.33333333333303" y="27.5" />
+    </edge>
+    <edge source="java.lang.RuntimeException" target="java.lang.Exception">
+      <point x="0.0" y="-85.5" />
+      <point x="6384.685744885492" y="1250.0" />
+      <point x="10107.444552669553" y="1250.0" />
+      <point x="-124.66666666666652" y="85.5" />
+    </edge>
+    <edge source="ru.itmo.prog.lab4.models.events.WordsSpokenEvent.WordsSpoken" target="ru.itmo.prog.lab4.models.events.WordsSpokenEvent">
+      <point x="-27.5" y="-51.0" />
+      <point x="6891.9845544093005" y="5982.0" />
+      <point x="6878.770268695014" y="5982.0" />
+      <point x="-88.85714285714312" y="86.0" />
+    </edge>
+    <edge source="ru.itmo.prog.lab4.models.people.Limb.HealthStatus" target="java.lang.Enum">
+      <point x="0.0" y="-74.0" />
+      <point x="7037.309808909204" y="1720.0" />
+      <point x="4450.980409142304" y="1720.0" />
+      <point x="58.95833333333394" y="190.0" />
+    </edge>
+    <edge source="ru.itmo.prog.lab4.models.events.WordsSpokenEvent.Handler" target="ru.itmo.prog.lab4.lib.events.EventHandler">
+      <point x="103.33333333333303" y="-51.5" />
+      <point x="8384.832052669553" y="5982.0" />
+      <point x="8557.247089096836" y="5982.0" />
+      <point x="8557.247089096836" y="2970.0" />
+      <point x="10915.09945537385" y="2970.0" />
+      <point x="-150.909090909091" y="85.5" />
+    </edge>
+    <edge source="ru.itmo.prog.lab4.lib.events.EventBusImpl" target="java.lang.Throwable">
+      <point x="163.875" y="-154.5" />
+      <point x="11886.341305563667" y="5304.0" />
+      <point x="11865.395310245309" y="5304.0" />
+      <point x="11865.395310245309" y="1029.0" />
+      <point x="11180.437117711514" y="1029.0" />
+      <point x="108.42857142857156" y="454.5" />
+    </edge>
+    <edge source="ru.itmo.prog.lab4.utils.Direction" target="ru.itmo.prog.lab4.utils.Direction.Preposition">
+      <point x="-76.0" y="-97.5" />
+      <point x="2236.4504848998786" y="5952.0" />
+      <point x="2230.0129848998786" y="5952.0" />
+      <point x="29.25" y="74.0" />
+    </edge>
+    <edge source="ru.itmo.prog.lab4.models.people.Person.Body" target="ru.itmo.prog.lab4.models.people.Limb">
+      <point x="32.76923076923049" y="-120.5" />
+      <point x="7116.629253353648" y="4209.0" />
+      <point x="7042.559808909204" y="4209.0" />
+      <point x="7042.559808909204" y="2970.0" />
+      <point x="7030.559808909204" y="2970.0" />
+      <point x="13.5" y="62.5" />
+    </edge>
+    <edge source="ru.itmo.prog.lab4.models.people.Shorty" target="ru.itmo.prog.lab4.models.places.Place">
+      <point x="-75.27272727272793" y="-212.5" />
+      <point x="1991.2619350090408" y="4249.0" />
+      <point x="1562.2776515151509" y="4249.0" />
+      <point x="1562.2776515151509" y="2152.0" />
+      <point x="945.8030138339918" y="2152.0" />
+      <point x="34.60869565217399" y="74.5" />
+    </edge>
+    <edge source="ru.itmo.prog.lab4.Main" target="ru.itmo.prog.lab4.utils.Direction.Preposition">
+      <point x="-51.054545454545405" y="-50.5" />
+      <point x="4765.615833226046" y="6590.0" />
+      <point x="2120.869424293818" y="6590.0" />
+      <point x="2120.869424293818" y="5952.0" />
+      <point x="2113.0129848998786" y="5952.0" />
+      <point x="-87.75" y="74.0" />
+    </edge>
+    <edge source="ru.itmo.prog.lab4.models.places.Place" target="ru.itmo.prog.lab4.interfaces.speech.HasCases">
+      <point x="0.0" y="-74.5" />
+      <point x="911.1943181818178" y="1730.0" />
+      <point x="4086.5220758089704" y="1730.0" />
+      <point x="-48.0" y="39.0" />
+    </edge>
+    <edge source="ru.itmo.prog.lab4.models.things.Door" target="ru.itmo.prog.lab4.interfaces.things.Lockable.LockingException">
+      <point x="-39.55555555555566" y="-121.0" />
+      <point x="7359.573697798092" y="2072.0" />
+      <point x="6111.556926406927" y="2072.0" />
+      <point x="55.0" y="27.5" />
+    </edge>
+    <edge source="ru.itmo.prog.lab4.models.weather.Wind" target="ru.itmo.prog.lab4.models.people.Person">
+      <point x="0.0" y="-109.0" />
+      <point x="6287.762012634374" y="5204.0" />
+      <point x="5555.95560384021" y="5204.0" />
+      <point x="5555.95560384021" y="4319.0" />
+      <point x="4763.408383731096" y="4319.0" />
+      <point x="8.444444444445253" y="569.5" />
+    </edge>
+    <edge source="ru.itmo.prog.lab4.models.things.Vane" target="ru.itmo.prog.lab4.interfaces.things.Seized">
+      <point x="0.0" y="-39.5" />
+      <point x="9566.111219336219" y="2920.0" />
+      <point x="8103.218795093795" y="2920.0" />
+      <point x="26.5" y="27.5" />
+    </edge>
+    <edge source="ru.itmo.prog.lab4.models.scene.Scene" target="ru.itmo.prog.lab4.models.people.Group">
+      <point x="-126.54545454545405" y="-224.0" />
+      <point x="2773.7266212635163" y="5982.0" />
+      <point x="2743.4706168831176" y="5982.0" />
+      <point x="34.42857142857156" y="132.0" />
+    </edge>
+    <edge source="ru.itmo.prog.lab4.Main" target="ru.itmo.prog.lab4.utils.Utils">
+      <point x="76.58181818181856" y="-50.5" />
+      <point x="4893.25219686241" y="6650.0" />
+      <point x="9463.111219336219" y="6650.0" />
+      <point x="9463.111219336219" y="2052.0" />
+      <point x="5898.056926406927" y="2052.0" />
+      <point x="82.5" y="39.0" />
+    </edge>
+    <edge source="ru.itmo.prog.lab4.models.things.Door.Doorhandle" target="ru.itmo.prog.lab4.models.things.Thing">
+      <point x="48.0" y="-50.5" />
+      <point x="3591.475896400643" y="5982.0" />
+      <point x="4038.039696862409" y="5982.0" />
+      <point x="-22.0" y="15.0" />
+    </edge>
+    <edge source="ru.itmo.prog.lab4.models.people.Person" target="ru.itmo.prog.lab4.models.people.Person.Eye.VisualAcuity">
+      <point x="46.060606060606005" y="-569.5" />
+      <point x="4801.024545347257" y="2880.0" />
+      <point x="5247.325865800865" y="2880.0" />
+      <point x="90.375" y="62.5" />
+    </edge>
+    <edge source="ru.itmo.prog.lab4.models.things.Key" target="ru.itmo.prog.lab4.interfaces.things.Lockable">
+      <point x="80.33333333333331" y="-74.5" />
+      <point x="5645.39025974026" y="1770.0" />
+      <point x="5965.460744885491" y="1770.0" />
+      <point x="-22.25" y="39.0" />
+    </edge>
+    <edge source="ru.itmo.prog.lab4.models.things.Door.State" target="ru.itmo.prog.lab4.models.things.Door">
+      <point x="64.0" y="74.0" />
+      <point x="7524.295920020315" y="2212.0" />
+      <point x="7438.684808909204" y="2212.0" />
+      <point x="39.55555555555566" y="-121.0" />
+    </edge>
+    <edge source="ru.itmo.prog.lab4.models.places.Downpipe" target="ru.itmo.prog.lab4.models.people.Person">
+      <point x="106.25" y="-155.0" />
+      <point x="1115.5276515151509" y="4279.0" />
+      <point x="4611.408383731096" y="4279.0" />
+      <point x="-143.55555555555475" y="569.5" />
+    </edge>
+    <edge source="ru.itmo.prog.lab4.Main" target="ru.itmo.prog.lab4.models.common.JumpDistance">
+      <point x="-68.0727272727272" y="-50.5" />
+      <point x="4748.597651407864" y="6630.0" />
+      <point x="1147.2776515151509" y="6630.0" />
+      <point x="1147.2776515151509" y="4269.0" />
+      <point x="1240.0276515151509" y="4269.0" />
+      <point x="-60.25" y="86.5" />
+    </edge>
+    <edge source="ru.itmo.prog.lab4.lib.events.EventBusImpl" target="ru.itmo.prog.lab4.lib.events.EventHandler">
+      <point x="-18.20833333333303" y="-154.5" />
+      <point x="11704.257972230334" y="5124.0" />
+      <point x="11146.395310245309" y="5124.0" />
+      <point x="11146.395310245309" y="2920.0" />
+      <point x="11096.19036446476" y="2920.0" />
+      <point x="30.181818181818016" y="85.5" />
+    </edge>
+    <edge source="ru.itmo.prog.lab4.models.people.Person" target="ru.itmo.prog.lab4.models.places.Place">
+      <point x="-92.12121212121201" y="-569.5" />
+      <point x="4662.842727165439" y="2860.0" />
+      <point x="4203.901623376623" y="2860.0" />
+      <point x="4203.901623376623" y="2122.0" />
+      <point x="971.7595355731219" y="2122.0" />
+      <point x="60.56521739130403" y="74.5" />
+    </edge>
+    <edge source="ru.itmo.prog.lab4.models.people.Shorty" target="ru.itmo.prog.lab4.utils.Utils">
+      <point x="25.090909090909918" y="-212.5" />
+      <point x="2091.6255713726787" y="4249.0" />
+      <point x="2133.739207736314" y="4249.0" />
+      <point x="2133.739207736314" y="2970.0" />
+      <point x="3205.8358762707367" y="2970.0" />
+      <point x="3205.8358762707367" y="2232.0" />
+      <point x="5733.056926406927" y="2232.0" />
+      <point x="-82.5" y="39.0" />
+    </edge>
+    <edge source="ru.itmo.prog.lab4.Main" target="ru.itmo.prog.lab4.modules.EventBusBeanModule">
+      <point x="97.85454545454559" y="-50.5" />
+      <point x="4914.524924135137" y="6700.0" />
+      <point x="10297.432647907648" y="6700.0" />
+      <point x="0.0" y="27.5" />
+    </edge>
+    <edge source="ru.itmo.prog.lab4.lib.events.WeakHandler" target="ru.itmo.prog.lab4.lib.events.EventHandler">
+      <point x="113.0" y="-75.0" />
+      <point x="11068.395310245309" y="4339.0" />
+      <point x="11077.78951333926" y="4339.0" />
+      <point x="11077.78951333926" y="3010.0" />
+      <point x="11066.008546282941" y="3010.0" />
+      <point x="0.0" y="85.5" />
+    </edge>
+    <edge source="ru.itmo.prog.lab4.Main" target="ru.itmo.prog.lab4.models.events.WordsSpokenEvent">
+      <point x="17.0181818181818" y="-50.5" />
+      <point x="4833.688560498773" y="6510.0" />
+      <point x="6533.0164284641405" y="6510.0" />
+      <point x="6533.0164284641405" y="5982.0" />
+      <point x="6834.341697266444" y="5982.0" />
+      <point x="-133.28571428571468" y="86.0" />
+    </edge>
+    <edge source="ru.itmo.prog.lab4.lib.events.EventBusImpl" target="com.google.inject.Singleton">
+      <point x="54.625" y="-154.5" />
+      <point x="11777.091305563667" y="5104.0" />
+      <point x="11330.895310245309" y="5104.0" />
+      <point x="0.0" y="15.0" />
+    </edge>
+    <edge source="ru.itmo.prog.lab4.Main" target="ru.itmo.prog.lab4.models.events.OrderGiven">
+      <point x="42.54545454545496" y="-50.5" />
+      <point x="4859.215833226046" y="6570.0" />
+      <point x="7953.284210308957" y="6570.0" />
+      <point x="7953.284210308957" y="5224.0" />
+      <point x="8348.122089096836" y="5224.0" />
+      <point x="-85.125" y="74.5" />
+    </edge>
+    <edge source="ru.itmo.prog.lab4.lib.events.EventBusImpl" target="ru.itmo.prog.lab4.lib.events.interfaces.EventBus">
+      <point x="-200.29166666666652" y="-154.5" />
+      <point x="11522.174638897" y="5174.0" />
+      <point x="10609.823881673881" y="5174.0" />
+      <point x="62.42857142857133" y="73.5" />
+    </edge>
+    <edge source="ru.itmo.prog.lab4.models.people.Shorty" target="ru.itmo.prog.lab4.models.common.Impression">
+      <point x="75.27272727272793" y="-212.5" />
+      <point x="2141.8073895544967" y="4269.0" />
+      <point x="4087.289696862409" y="4269.0" />
+      <point x="4087.289696862409" y="3010.0" />
+      <point x="4251.988744588743" y="3010.0" />
+      <point x="-85.125" y="143.0" />
+    </edge>
+    <edge source="ru.itmo.prog.lab4.lib.events.interfaces.FailureConsumer" target="ru.itmo.prog.lab4.lib.events.EventHandler">
+      <point x="-34.5" y="-27.5" />
+      <point x="11260.395310245309" y="2900.0" />
+      <point x="11126.372182646577" y="2900.0" />
+      <point x="60.36363636363626" y="85.5" />
+    </edge>
+    <edge source="ru.itmo.prog.lab4.modules.SceneModule" target="com.google.inject.AbstractModule">
+      <point x="-19.625" y="-27.5" />
+      <point x="11370.820472230333" y="5932.0" />
+      <point x="10684.816305563667" y="5932.0" />
+      <point x="10684.816305563667" y="5194.0" />
+      <point x="9278.313755763502" y="5194.0" />
+      <point x="328.0666666666666" y="327.5" />
+    </edge>
+    <edge source="ru.itmo.prog.lab4.models.people.Person.Body.Arm" target="ru.itmo.prog.lab4.models.people.Person.Body">
+      <point x="54.0" y="51.0" />
+      <point x="7005.059808909204" y="4219.0" />
+      <point x="7100.244637969033" y="4219.0" />
+      <point x="16.384615384615245" y="-120.5" />
+    </edge>
+    <edge source="ru.itmo.prog.lab4.modules.WorkshopModule" target="ru.itmo.prog.lab4.models.places.Workshop">
+      <point x="-53.33333333333303" y="-27.5" />
+      <point x="6006.92867930104" y="5214.0" />
+      <point x="648.0" y="5214.0" />
+      <point x="64.0" y="74.5" />
+    </edge>
+    <edge source="ru.itmo.prog.lab4.lib.events.EventBusImpl" target="ru.itmo.prog.lab4.lib.events.WeakHandler">
+      <point x="-91.04166666666652" y="-154.5" />
+      <point x="11631.424638897" y="5144.0" />
+      <point x="11068.395310245309" y="5144.0" />
+      <point x="113.0" y="75.0" />
+    </edge>
+    <edge source="java.lang.Enum" target="java.io.Serializable">
+      <point x="70.75" y="-190.0" />
+      <point x="4462.77207580897" y="1260.0" />
+      <point x="4436.52207580897" y="1260.0" />
+      <point x="4436.52207580897" y="55.0" />
+      <point x="8146.500232374627" y="55.0" />
+      <point x="-36.0" y="15.0" />
+    </edge>
+    <edge source="ru.itmo.prog.lab4.interfaces.Tellable" target="ru.itmo.prog.lab4.models.scene.Story">
+      <point x="-15.25" y="27.5" />
+      <point x="1671.2776515151509" y="5912.0" />
+      <point x="968.2753787878792" y="5912.0" />
+      <point x="85.125" y="-109.0" />
+    </edge>
+    <edge source="ru.itmo.prog.lab4.lib.events.EventException" target="java.lang.Exception">
+      <point x="-51.5" y="-27.5" />
+      <point x="10186.111219336219" y="2192.0" />
+      <point x="10232.111219336219" y="2192.0" />
+      <point x="0.0" y="85.5" />
+    </edge>
+    <edge source="ru.itmo.prog.lab4.interfaces.Climbable" target="ru.itmo.prog.lab4.models.people.Person">
+      <point x="90.79999999999927" y="27.5" />
+      <point x="4753.663744588743" y="2202.0" />
+      <point x="4746.325865800865" y="2202.0" />
+      <point x="4746.325865800865" y="2810.0" />
+      <point x="4736.539696862409" y="2810.0" />
+      <point x="-18.42424242424204" y="-569.5" />
+    </edge>
+    <edge source="ru.itmo.prog.lab4.models.scene.Scene" target="ru.itmo.prog.lab4.models.people.Person">
+      <point x="63.272727272727025" y="-224.0" />
+      <point x="2963.5448030816974" y="5922.0" />
+      <point x="3491.975896400643" y="5922.0" />
+      <point x="3491.975896400643" y="5274.0" />
+      <point x="3720.0220758089704" y="5274.0" />
+      <point x="3720.0220758089704" y="4319.0" />
+      <point x="4678.963939286651" y="4319.0" />
+      <point x="-76.0" y="569.5" />
+    </edge>
+    <edge source="ru.itmo.prog.lab4.models.people.Person.Body" target="ru.itmo.prog.lab4.utils.Utils">
+      <point x="-32.76923076923049" y="-120.5" />
+      <point x="7051.090791815187" y="4249.0" />
+      <point x="6859.559808909204" y="4249.0" />
+      <point x="6859.559808909204" y="2202.0" />
+      <point x="5843.056926406927" y="2202.0" />
+      <point x="27.5" y="39.0" />
+    </edge>
+    <edge source="ru.itmo.prog.lab4.Main" target="ru.itmo.prog.lab4.models.events.EventBusBean">
+      <point x="114.87272727272739" y="-50.5" />
+      <point x="4931.543105953318" y="6740.0" />
+      <point x="12616.687781384888" y="6740.0" />
+      <point x="0.0" y="51.5" />
+    </edge>
+    <edge source="ru.itmo.prog.lab4.models.people.Shorty" target="ru.itmo.prog.lab4.models.common.JumpDistance">
+      <point x="-125.45454545454595" y="-212.5" />
+      <point x="1941.0801168272228" y="4269.0" />
+      <point x="1360.5276515151509" y="4269.0" />
+      <point x="60.25" y="86.5" />
+    </edge>
+    <edge source="ru.itmo.prog.lab4.models.people.Limb" target="ru.itmo.prog.lab4.models.people.Limb.HealthStatus">
+      <point x="20.25" y="-62.5" />
+      <point x="0.0" y="74.0" />
+    </edge>
+    <edge source="ru.itmo.prog.lab4.models.common.Time" target="java.lang.Enum">
+      <point x="0.0" y="-74.0" />
+      <point x="3696.039696862409" y="1810.0" />
+      <point x="4380.230409142304" y="1810.0" />
+      <point x="-11.79166666666606" y="190.0" />
+    </edge>
+    <edge source="java.lang.Throwable.SentinelHolder" target="java.lang.Throwable">
+      <point x="0.0" y="-51.0" />
+      <point x="12271.645310245309" y="1009.0" />
+      <point x="11397.294260568655" y="1009.0" />
+      <point x="325.28571428571377" y="454.5" />
+    </edge>
+    <edge source="ru.itmo.prog.lab4.models.people.Person" target="ru.itmo.prog.lab4.interfaces.Cannable">
+      <point x="-101.33333333333394" y="-569.5" />
+      <point x="4653.630605953317" y="2870.0" />
+      <point x="3989.289696862409" y="2870.0" />
+      <point x="60.25" y="27.5" />
+    </edge>
+    <edge source="ru.itmo.prog.lab4.models.events.NoOneExpectedEvent" target="ru.itmo.prog.lab4.lib.events.interfaces.Event">
+      <point x="0.0" y="-51.0" />
+      <point x="12243.689513339259" y="2222.0" />
+      <point x="12028.44531024531" y="2222.0" />
+      <point x="22.0" y="15.0" />
+    </edge>
+    <edge source="ru.itmo.prog.lab4.models.common.UnknownEntity" target="ru.itmo.prog.lab4.models.people.Person">
+      <point x="-102.0" y="86.0" />
+      <point x="7764.853907278653" y="2242.0" />
+      <point x="6071.647835497835" y="2242.0" />
+      <point x="6071.647835497835" y="2950.0" />
+      <point x="4865.509393832105" y="2950.0" />
+      <point x="110.54545454545405" y="-569.5" />
+    </edge>
+    <edge source="ru.itmo.prog.lab4.models.people.Person.Eye.VisualAcuity" target="ru.itmo.prog.lab4.models.people.Person.Eye">
+      <point x="30.125" y="62.5" />
+      <point x="5187.181926406927" y="2202.0" />
+      <point x="4926.825865800865" y="2202.0" />
+      <point x="68.0" y="-39.5" />
+    </edge>
+    <edge source="ru.itmo.prog.lab4.models.things.Door" target="ru.itmo.prog.lab4.interfaces.things.Openable">
+      <point x="-19.777777777777374" y="-121.0" />
+      <point x="7379.351475575871" y="2062.0" />
+      <point x="7279.795920020315" y="2062.0" />
+      <point x="0.0" y="39.0" />
+    </edge>
+    <edge source="ru.itmo.prog.lab4.interfaces.things.Lockable.LockingException" target="ru.itmo.prog.lab4.interfaces.things.Lockable">
+      <point x="-73.33333333333303" y="-27.5" />
+      <point x="5983.223593073593" y="1770.0" />
+      <point x="6009.960744885491" y="1770.0" />
+      <point x="22.25" y="39.0" />
+    </edge>
+    <edge source="ru.itmo.prog.lab4.models.things.Door.State" target="java.lang.Enum">
+      <point x="0.0" y="-74.0" />
+      <point x="7460.295920020315" y="1710.0" />
+      <point x="4474.563742475636" y="1710.0" />
+      <point x="82.54166666666606" y="190.0" />
+    </edge>
+    <edge source="ru.itmo.prog.lab4.models.places.House.Roof" target="ru.itmo.prog.lab4.models.places.House">
+      <point x="0.0" y="-74.5" />
+      <point x="327.2000000000007" y="5982.0" />
+      <point x="306.1999999999998" y="5982.0" />
+      <point x="-118.80000000000018" y="109.5" />
+    </edge>
+    <edge source="ru.itmo.prog.lab4.models.places.Downpipe" target="ru.itmo.prog.lab4.interfaces.Climbable">
+      <point x="21.25" y="-155.0" />
+      <point x="1030.5276515151509" y="2192.0" />
+      <point x="4572.063744588744" y="2192.0" />
+      <point x="-90.79999999999927" y="27.5" />
+    </edge>
+    <edge source="ru.itmo.prog.lab4.models.events.EventBusBean" target="ru.itmo.prog.lab4.lib.events.interfaces.Event">
+      <point x="152.91666666666697" y="-51.5" />
+      <point x="12769.604448051556" y="5314.0" />
+      <point x="12707.99357829094" y="5314.0" />
+      <point x="12707.99357829094" y="2202.0" />
+      <point x="12046.04531024531" y="2202.0" />
+      <point x="39.600000000000364" y="15.0" />
+    </edge>
+    <edge source="ru.itmo.prog.lab4.models.things.Key" target="ru.itmo.prog.lab4.interfaces.things.Opener">
+      <point x="-80.33333333333331" y="-74.5" />
+      <point x="5484.723593073593" y="1750.0" />
+      <point x="5622.569424293819" y="1750.0" />
+      <point x="5622.569424293819" y="1260.0" />
+      <point x="5827.944424293819" y="1260.0" />
+      <point x="-82.5" y="27.5" />
+    </edge>
+    <edge source="ru.itmo.prog.lab4.models.events.WordsSpokenEvent.WordsSpoken" target="ru.itmo.prog.lab4.interfaces.Hearable">
+      <point x="-82.5" y="-51.0" />
+      <point x="6836.9845544093005" y="5972.0" />
+      <point x="6728.944424293819" y="5972.0" />
+      <point x="6728.944424293819" y="2212.0" />
+      <point x="5408.681926406927" y="2212.0" />
+      <point x="47.625" y="39.0" />
+    </edge>
+    <edge source="ru.itmo.prog.lab4.models.events.WordsSpokenEvent" target="ru.itmo.prog.lab4.models.people.Person">
+      <point x="-103.66666666666697" y="-86.0" />
+      <point x="6863.960744885491" y="5194.0" />
+      <point x="6268.556926406927" y="5194.0" />
+      <point x="6268.556926406927" y="4309.0" />
+      <point x="4780.297272619985" y="4309.0" />
+      <point x="25.33333333333394" y="569.5" />
+    </edge>
+    <edge source="ru.itmo.prog.lab4.models.people.Person.Body" target="ru.itmo.prog.lab4.models.people.Person.Body.Leg">
+      <point x="65.53846153846098" y="-120.5" />
+      <point x="7149.3984841228785" y="4329.0" />
+      <point x="7208.129253353648" y="4329.0" />
+      <point x="0.0" y="51.0" />
+    </edge>
+    <edge source="ru.itmo.prog.lab4.Main" target="ru.itmo.prog.lab4.models.places.House">
+      <point x="-102.10909090909081" y="-50.5" />
+      <point x="4714.5612877715" y="6710.0" />
+      <point x="496.22272727272684" y="6710.0" />
+      <point x="496.22272727272684" y="5982.0" />
+      <point x="484.39999999999964" y="5982.0" />
+      <point x="59.399999999999636" y="109.5" />
+    </edge>
+    <edge source="ru.itmo.prog.lab4.models.events.OrderGiven.Handler" target="ru.itmo.prog.lab4.lib.events.EventHandler">
+      <point x="102.0" y="-39.0" />
+      <point x="9427.111219336219" y="5294.0" />
+      <point x="9416.352886002885" y="5294.0" />
+      <point x="9416.352886002885" y="2980.0" />
+      <point x="10945.281273555669" y="2980.0" />
+      <point x="-120.72727272727298" y="85.5" />
+    </edge>
+    <edge source="ru.itmo.prog.lab4.modules.WeatherModule" target="ru.itmo.prog.lab4.models.weather.Wind">
+      <point x="-58.875" y="-27.5" />
+      <point x="9047.611219336219" y="5822.0" />
+      <point x="6372.762012634374" y="5822.0" />
+      <point x="85.0" y="109.0" />
+    </edge>
+    <edge source="ru.itmo.prog.lab4.interfaces.Tellable" target="com.google.inject.ImplementedBy">
+      <point x="0.0" y="-27.5" />
+      <point x="1686.5276515151509" y="5324.0" />
+      <point x="1717.0276515151509" y="5324.0" />
+      <point x="-39.25" y="27.5" />
+    </edge>
+    <edge source="ru.itmo.prog.lab4.models.people.Person" target="ru.itmo.prog.lab4.interfaces.Hearable">
+      <point x="55.272727272727934" y="-569.5" />
+      <point x="4810.236666559379" y="2890.0" />
+      <point x="5300.806926406927" y="2890.0" />
+      <point x="5300.806926406927" y="2222.0" />
+      <point x="5345.181926406927" y="2222.0" />
+      <point x="-15.875" y="39.0" />
+    </edge>
+    <edge source="ru.itmo.prog.lab4.models.places.Downpipe" target="ru.itmo.prog.lab4.models.places.Place">
+      <point x="-63.75" y="-155.0" />
+      <point x="945.5276515151509" y="4339.0" />
+      <point x="901.3682312252959" y="4339.0" />
+      <point x="901.3682312252959" y="2242.0" />
+      <point x="902.5421442687739" y="2242.0" />
+      <point x="-8.652173913043953" y="74.5" />
+    </edge>
+    <edge source="ru.itmo.prog.lab4.models.weather.Weather" target="ru.itmo.prog.lab4.models.weather.Wind">
+      <point x="49.75" y="-62.5" />
+      <point x="0.0" y="109.0" />
+    </edge>
+    <edge source="ru.itmo.prog.lab4.lib.events.EventBusImpl" target="ru.itmo.prog.lab4.lib.events.EventException">
+      <point x="-54.625" y="-154.5" />
+      <point x="11667.841305563667" y="5134.0" />
+      <point x="11135.395310245309" y="5134.0" />
+      <point x="11135.395310245309" y="2930.0" />
+      <point x="10278.811219336218" y="2930.0" />
+      <point x="41.19999999999982" y="27.5" />
+    </edge>
+    <edge source="ru.itmo.prog.lab4.models.people.Person" target="ru.itmo.prog.lab4.models.common.Action">
+      <point x="-147.39393939393995" y="-569.5" />
+      <point x="4607.569999892711" y="2920.0" />
+      <point x="2190.239207736314" y="2920.0" />
+      <point x="62.0" y="259.0" />
+    </edge>
+    <edge source="ru.itmo.prog.lab4.lib.events.interfaces.FailureConsumer" target="ru.itmo.prog.lab4.lib.events.EventException">
+      <point x="-103.5" y="-27.5" />
+      <point x="11191.395310245309" y="2910.0" />
+      <point x="10320.011219336218" y="2910.0" />
+      <point x="82.40000000000009" y="27.5" />
+    </edge>
+    <edge source="ru.itmo.prog.lab4.Main" target="ru.itmo.prog.lab4.modules.WeatherModule">
+      <point x="68.0727272727272" y="-50.5" />
+      <point x="4884.743105953318" y="6630.0" />
+      <point x="9106.486219336219" y="6630.0" />
+      <point x="0.0" y="27.5" />
+    </edge>
+    <edge source="ru.itmo.prog.lab4.models.events.OrderGiven.TimeToExecute" target="java.lang.Enum">
+      <point x="0.0" y="-85.5" />
+      <point x="8404.872089096836" y="1680.0" />
+      <point x="4521.730409142304" y="1680.0" />
+      <point x="129.70833333333394" y="190.0" />
+    </edge>
+    <edge source="ru.itmo.prog.lab4.models.people.Person" target="ru.itmo.prog.lab4.interfaces.Tryable">
+      <point x="36.84848484848408" y="-569.5" />
+      <point x="4791.812424135135" y="2870.0" />
+      <point x="5109.325865800865" y="2870.0" />
+      <point x="0.0" y="27.5" />
+    </edge>
+    <edge source="ru.itmo.prog.lab4.models.common.Impression" target="ru.itmo.prog.lab4.utils.Utils">
+      <point x="56.75" y="-143.0" />
+      <point x="4393.863744588743" y="2242.0" />
+      <point x="5788.056926406927" y="2242.0" />
+      <point x="-27.5" y="39.0" />
+    </edge>
+    <edge source="ru.itmo.prog.lab4.models.places.Gazebo" target="ru.itmo.prog.lab4.interfaces.ShortiesContainer">
+      <point x="-28.33333333333394" y="-155.0" />
+      <point x="1618.4122831971426" y="5922.0" />
+      <point x="1826.0276515151509" y="5922.0" />
+      <point x="-58.5" y="39.0" />
+    </edge>
+    <edge source="ru.itmo.prog.lab4.models.people.Limb" target="ru.itmo.prog.lab4.interfaces.speech.Pluralable">
+      <point x="-60.75" y="-62.5" />
+      <point x="6956.309808909204" y="2192.0" />
+      <point x="6309.056926406927" y="2192.0" />
+      <point x="40.5" y="39.0" />
+    </edge>
+    <edge source="ru.itmo.prog.lab4.Main" target="ru.itmo.prog.lab4.models.common.Time">
+      <point x="-8.509090909090446" y="-50.5" />
+      <point x="4808.161287771501" y="6490.0" />
+      <point x="3649.975896400643" y="6490.0" />
+      <point x="3649.975896400643" y="5264.0" />
+      <point x="3339.741396103897" y="5264.0" />
+      <point x="3339.741396103897" y="4249.0" />
+      <point x="3362.039696862409" y="4249.0" />
+      <point x="3362.039696862409" y="3000.0" />
+      <point x="3649.789696862409" y="3000.0" />
+      <point x="-46.25" y="74.0" />
+    </edge>
+    <edge source="ru.itmo.prog.lab4.Main" target="ru.itmo.prog.lab4.models.scene.Sentence">
+      <point x="-85.09090909090901" y="-50.5" />
+      <point x="4731.579469589682" y="6670.0" />
+      <point x="748.3254848998786" y="6670.0" />
+      <point x="748.3254848998786" y="5982.0" />
+      <point x="741.9212121212122" y="5982.0" />
+      <point x="-73.33333333333303" y="224.0" />
+    </edge>
+    <edge source="ru.itmo.prog.lab4.models.places.Gazebo" target="ru.itmo.prog.lab4.models.people.Shorty">
+      <point x="56.66666666666606" y="-155.0" />
+      <point x="1703.4122831971426" y="5952.0" />
+      <point x="2023.1526515151513" y="5952.0" />
+      <point x="2023.1526515151513" y="5324.0" />
+      <point x="2066.5346622817688" y="5324.0" />
+      <point x="0.0" y="212.5" />
+    </edge>
+    <edge source="ru.itmo.prog.lab4.models.people.Person.Eye" target="ru.itmo.prog.lab4.models.people.Person">
+      <point x="76.5" y="39.5" />
+      <point x="4935.325865800865" y="2850.0" />
+      <point x="4773.388181710893" y="2850.0" />
+      <point x="18.42424242424204" y="-569.5" />
+    </edge>
+    <edge source="ru.itmo.prog.lab4.interfaces.things.Opener" target="ru.itmo.prog.lab4.interfaces.things.Lockable">
+      <point x="27.5" y="27.5" />
+      <point x="5937.944424293819" y="1250.0" />
+      <point x="6032.210744885491" y="1250.0" />
+      <point x="44.5" y="-39.0" />
+    </edge>
+    <edge source="ru.itmo.prog.lab4.Main" target="ru.itmo.prog.lab4.models.places.Gazebo">
+      <point x="-59.56363636363585" y="-50.5" />
+      <point x="4757.106742316955" y="6610.0" />
+      <point x="1710.4956165304766" y="6610.0" />
+      <point x="63.75" y="155.0" />
+    </edge>
+    <edge source="ru.itmo.prog.lab4.Main" target="ru.itmo.prog.lab4.models.things.Rope.NothingIsBindedException">
+      <point x="4.254545454545223" y="-50.5" />
+      <point x="4820.924924135136" y="6480.0" />
+      <point x="5985.1347399071" y="6480.0" />
+      <point x="5985.1347399071" y="5982.0" />
+      <point x="5914.262012634374" y="5982.0" />
+      <point x="92.0" y="27.5" />
+    </edge>
+    <edge source="ru.itmo.prog.lab4.Main" target="ru.itmo.prog.lab4.modules.HouseModule">
+      <point x="51.054545454545405" y="-50.5" />
+      <point x="4867.7249241351365" y="6590.0" />
+      <point x="8046.538755763502" y="6590.0" />
+      <point x="0.0" y="27.5" />
+    </edge>
+    <edge source="ru.itmo.prog.lab4.models.events.WordsSpokenEvent" target="ru.itmo.prog.lab4.models.events.WordsSpokenEvent.WordsSpoken">
+      <point x="0.0" y="86.0" />
+      <point x="6967.627411552157" y="5982.0" />
+      <point x="7001.9845544093005" y="5982.0" />
+      <point x="82.5" y="-51.0" />
+    </edge>
+    <edge source="java.lang.Throwable.WrappedPrintStream" target="java.lang.Throwable.PrintStreamOrWriter">
+      <point x="-67.25" y="-63.0" />
+      <point x="11943.145310245309" y="1260.0" />
+      <point x="11198.986219336219" y="1260.0" />
+      <point x="50.0" y="51.0" />
+    </edge>
+    <edge source="ru.itmo.prog.lab4.interfaces.ShortiesContainer" target="ru.itmo.prog.lab4.models.people.Shorty">
+      <point x="58.5" y="-39.0" />
+      <point x="1943.0276515151509" y="5324.0" />
+      <point x="1956.1346622817691" y="5324.0" />
+      <point x="-110.39999999999964" y="212.5" />
+    </edge>
+    <edge source="ru.itmo.prog.lab4.models.things.Door" target="ru.itmo.prog.lab4.interfaces.things.Lockable">
+      <point x="59.33333333333303" y="-121.0" />
+      <point x="7458.462586686981" y="2222.0" />
+      <point x="7566.795920020315" y="2222.0" />
+      <point x="7566.795920020315" y="1700.0" />
+      <point x="6054.460744885491" y="1700.0" />
+      <point x="66.75" y="39.0" />
+    </edge>
+    <edge source="ru.itmo.prog.lab4.models.scene.Scene" target="ru.itmo.prog.lab4.lib.events.interfaces.EventBus">
+      <point x="253.090909090909" y="-224.0" />
+      <point x="3153.3629848998794" y="5952.0" />
+      <point x="3524.975896400643" y="5952.0" />
+      <point x="3524.975896400643" y="5304.0" />
+      <point x="10360.109595959595" y="5304.0" />
+      <point x="-187.28571428571468" y="73.5" />
+    </edge>
+    <edge source="ru.itmo.prog.lab4.models.people.Group" target="ru.itmo.prog.lab4.interfaces.Cannable">
+      <point x="-60.25" y="-132.0" />
+      <point x="2648.792045454546" y="5294.0" />
+      <point x="3357.4868506493513" y="5294.0" />
+      <point x="3357.4868506493513" y="4259.0" />
+      <point x="3373.039696862409" y="4259.0" />
+      <point x="3373.039696862409" y="3010.0" />
+      <point x="3868.789696862409" y="3010.0" />
+      <point x="-60.25" y="27.5" />
+    </edge>
+    <edge source="ru.itmo.prog.lab4.modules.SceneModule" target="ru.itmo.prog.lab4.lib.events.interfaces.EventBus">
+      <point x="19.625" y="-27.5" />
+      <point x="11410.070472230333" y="5922.0" />
+      <point x="10695.816305563667" y="5922.0" />
+      <point x="10695.816305563667" y="5184.0" />
+      <point x="10547.395310245309" y="5184.0" />
+      <point x="0.0" y="73.5" />
+    </edge>
+    <edge source="ru.itmo.prog.lab4.models.people.Person" target="ru.itmo.prog.lab4.models.common.Time">
+      <point x="-110.54545454545405" y="-569.5" />
+      <point x="4644.418484741197" y="2880.0" />
+      <point x="3742.289696862409" y="2880.0" />
+      <point x="46.25" y="74.0" />
+    </edge>
+    <edge source="ru.itmo.prog.lab4.Main" target="ru.itmo.prog.lab4.models.things.Rope">
+      <point x="0.0" y="-50.5" />
+      <point x="4816.670378680591" y="6470.0" />
+      <point x="4894.483381617988" y="6470.0" />
+      <point x="107.5" y="189.0" />
+    </edge>
+    <edge source="ru.itmo.prog.lab4.models.people.Person" target="ru.itmo.prog.lab4.interfaces.speech.HasCases">
+      <point x="27.636363636363967" y="-569.5" />
+      <point x="4782.600302923015" y="2860.0" />
+      <point x="4971.325865800865" y="2860.0" />
+      <point x="4971.325865800865" y="1740.0" />
+      <point x="4214.522075808969" y="1740.0" />
+      <point x="79.99999999999909" y="39.0" />
+    </edge>
+    <edge source="ru.itmo.prog.lab4.models.common.Action" target="java.lang.Enum">
+      <point x="0.0" y="-259.0" />
+      <point x="2128.239207736314" y="1770.0" />
+      <point x="4285.89707580897" y="1770.0" />
+      <point x="-106.125" y="190.0" />
+    </edge>
+    <edge source="ru.itmo.prog.lab4.modules.EventBusBeanModule" target="ru.itmo.prog.lab4.lib.events.EventBusImpl">
+      <point x="82.28571428571422" y="-27.5" />
+      <point x="10379.718362193362" y="5972.0" />
+      <point x="11613.216305563667" y="5972.0" />
+      <point x="-109.25" y="154.5" />
+    </edge>
+    <edge source="ru.itmo.prog.lab4.models.people.Person.Eye.VisualAcuity" target="java.lang.Enum">
+      <point x="0.0" y="-62.5" />
+      <point x="5157.056926406927" y="1730.0" />
+      <point x="4427.39707580897" y="1730.0" />
+      <point x="35.375" y="190.0" />
+    </edge>
+    <edge source="ru.itmo.prog.lab4.interfaces.Jumpable" target="ru.itmo.prog.lab4.models.places.Place">
+      <point x="0.0" y="-39.0" />
+      <point x="1431.2776515151509" y="2162.0" />
+      <point x="937.1508399209479" y="2162.0" />
+      <point x="25.95652173913004" y="74.5" />
+    </edge>
+    <edge source="ru.itmo.prog.lab4.Main" target="ru.itmo.prog.lab4.models.common.UnknownEntity">
+      <point x="89.34545454545423" y="-50.5" />
+      <point x="4906.015833226045" y="6680.0" />
+      <point x="9669.111219336219" y="6680.0" />
+      <point x="9669.111219336219" y="2042.0" />
+      <point x="7917.853907278653" y="2042.0" />
+      <point x="51.0" y="86.0" />
+    </edge>
+    <edge source="ru.itmo.prog.lab4.models.people.Person" target="ru.itmo.prog.lab4.models.people.Limb">
+      <point x="119.75757575757598" y="-569.5" />
+      <point x="4874.721515044227" y="2960.0" />
+      <point x="6949.559808909204" y="2960.0" />
+      <point x="-67.5" y="62.5" />
+    </edge>
+    <edge source="ru.itmo.prog.lab4.Main" target="ru.itmo.prog.lab4.modules.StoryModule">
+      <point x="63.81818181818198" y="-50.5" />
+      <point x="4880.488560498773" y="6620.0" />
+      <point x="8776.505422430168" y="6620.0" />
+      <point x="0.0" y="27.5" />
+    </edge>
+    <edge source="ru.itmo.prog.lab4.models.people.Person.Body.Arm" target="ru.itmo.prog.lab4.models.people.Limb">
+      <point x="-40.5" y="-51.0" />
+      <point x="6910.559808909204" y="2970.0" />
+      <point x="6976.559808909204" y="2970.0" />
+      <point x="-40.5" y="62.5" />
+    </edge>
+    <edge source="ru.itmo.prog.lab4.models.things.Rope.NothingIsBindedException" target="java.lang.RuntimeException">
+      <point x="-69.0" y="-27.5" />
+      <point x="5753.262012634374" y="5224.0" />
+      <point x="6177.056926406927" y="5224.0" />
+      <point x="6177.056926406927" y="1810.0" />
+      <point x="6469.285744885492" y="1810.0" />
+      <point x="84.60000000000036" y="85.5" />
+    </edge>
+    <edge source="ru.itmo.prog.lab4.models.people.Person" target="ru.itmo.prog.lab4.models.people.Person.Body">
+      <point x="109.77777777777737" y="569.5" />
+      <point x="4864.7417170644285" y="4259.0" />
+      <point x="7034.706176430572" y="4259.0" />
+      <point x="-49.153846153845734" y="-120.5" />
+    </edge>
+    <edge source="ru.itmo.prog.lab4.models.people.Person" target="ru.itmo.prog.lab4.interfaces.things.Seized">
+      <point x="147.39393939393995" y="-569.5" />
+      <point x="4902.357878680591" y="3010.0" />
+      <point x="8050.218795093795" y="3010.0" />
+      <point x="-26.5" y="27.5" />
+    </edge>
+    <edge source="ru.itmo.prog.lab4.models.people.Person.Body.Leg" target="ru.itmo.prog.lab4.models.people.Person.Body">
+      <point x="54.0" y="51.0" />
+      <point x="7262.129253353648" y="4339.0" />
+      <point x="7165.783099507494" y="4339.0" />
+      <point x="81.92307692307622" y="-120.5" />
+    </edge>
+    <edge source="ru.itmo.prog.lab4.Main" target="ru.itmo.prog.lab4.models.common.UnknownEntity.Direction">
+      <point x="59.56363636363676" y="-50.5" />
+      <point x="4876.234015044228" y="6610.0" />
+      <point x="8568.247089096836" y="6610.0" />
+      <point x="8568.247089096836" y="2940.0" />
+      <point x="7864.020573945321" y="2940.0" />
+      <point x="55.0" y="85.5" />
+    </edge>
+    <edge source="ru.itmo.prog.lab4.models.events.NoOneExpectedEvent.Handler" target="ru.itmo.prog.lab4.lib.events.EventException">
+      <point x="-98.25" y="-27.5" />
+      <point x="10401.316305563667" y="5294.0" />
+      <point x="10237.611219336219" y="5294.0" />
+      <point x="0.0" y="27.5" />
+    </edge>
+    <edge source="ru.itmo.prog.lab4.models.things.Rope.NothingIsBindedException" target="ru.itmo.prog.lab4.models.things.Rope">
+      <point x="0.0" y="27.5" />
+      <point x="5822.262012634374" y="5982.0" />
+      <point x="4978.094492729099" y="5982.0" />
+      <point x="191.1111111111113" y="-189.0" />
+    </edge>
+    <edge source="ru.itmo.prog.lab4.Main" target="ru.itmo.prog.lab4.models.events.WordsSpokenEvent.WordsSpoken">
+      <point x="21.272727272727025" y="-50.5" />
+      <point x="4837.943105953318" y="6520.0" />
+      <point x="6919.4845544093005" y="6520.0" />
+      <point x="0.0" y="51.0" />
+    </edge>
+    <edge source="ru.itmo.prog.lab4.models.scene.Story" target="ru.itmo.prog.lab4.models.scene.Sentence">
+      <point x="-28.375" y="-109.0" />
+      <point x="854.7753787878792" y="5982.0" />
+      <point x="888.5878787878783" y="5982.0" />
+      <point x="73.33333333333303" y="224.0" />
+    </edge>
+    <edge source="ru.itmo.prog.lab4.models.things.Door" target="ru.itmo.prog.lab4.models.things.Door.State">
+      <point x="19.777777777777374" y="-121.0" />
+      <point x="7418.907031131425" y="2202.0" />
+      <point x="7460.295920020315" y="2202.0" />
+      <point x="0.0" y="74.0" />
+    </edge>
+    <edge source="ru.itmo.prog.lab4.models.people.Shorty" target="ru.itmo.prog.lab4.models.people.Sex">
+      <point x="50.18181818181802" y="-212.5" />
+      <point x="2116.716480463587" y="4259.0" />
+      <point x="2793.753982576695" y="4259.0" />
+      <point x="2793.753982576695" y="2980.0" />
+      <point x="3427.789696862409" y="2980.0" />
+      <point x="-66.75" y="62.5" />
+    </edge>
+    <edge source="ru.itmo.prog.lab4.models.events.WordsSpokenEvent.Handler" target="ru.itmo.prog.lab4.models.people.Person">
+      <point x="20.66666666666697" y="-51.5" />
+      <point x="8302.165386002885" y="5972.0" />
+      <point x="8259.372089096836" y="5972.0" />
+      <point x="8259.372089096836" y="4189.0" />
+      <point x="4898.519494842206" y="4189.0" />
+      <point x="143.55555555555475" y="569.5" />
+    </edge>
+    <edge source="ru.itmo.prog.lab4.models.events.OrderGiven.Handler" target="ru.itmo.prog.lab4.models.events.OrderGiven.TimeToExecute">
+      <point x="0.0" y="-39.0" />
+      <point x="9325.111219336219" y="5294.0" />
+      <point x="9365.111219336219" y="5294.0" />
+      <point x="9365.111219336219" y="4339.0" />
+      <point x="8504.072089096835" y="4339.0" />
+      <point x="99.19999999999982" y="85.5" />
+    </edge>
+    <edge source="ru.itmo.prog.lab4.Main" target="ru.itmo.prog.lab4.models.things.Vane">
+      <point x="85.09090909090901" y="-50.5" />
+      <point x="4901.7612877715" y="6670.0" />
+      <point x="9612.361219336219" y="6670.0" />
+      <point x="46.25" y="39.5" />
+    </edge>
+    <edge source="ru.itmo.prog.lab4.Main" target="ru.itmo.prog.lab4.models.scene.Story">
+      <point x="-80.83636363636379" y="-50.5" />
+      <point x="4735.834015044227" y="6660.0" />
+      <point x="883.1503787878792" y="6660.0" />
+      <point x="0.0" y="109.0" />
+    </edge>
+    <edge source="ru.itmo.prog.lab4.lib.events.EventHandler" target="ru.itmo.prog.lab4.lib.events.interfaces.Event">
+      <point x="0.0" y="-85.5" />
+      <point x="11066.008546282941" y="2232.0" />
+      <point x="11993.245310245311" y="2232.0" />
+      <point x="-13.200000000000045" y="15.0" />
+    </edge>
+    <edge source="ru.itmo.prog.lab4.utils.Direction.Preposition" target="ru.itmo.prog.lab4.utils.Direction">
+      <point x="87.75" y="74.0" />
+      <point x="2288.5129848998786" y="5952.0" />
+      <point x="2287.1171515665446" y="5952.0" />
+      <point x="-25.33333333333394" y="-97.5" />
+    </edge>
+    <edge source="ru.itmo.prog.lab4.models.scene.Scene" target="ru.itmo.prog.lab4.interfaces.Tellable">
+      <point x="-253.090909090909" y="-224.0" />
+      <point x="2647.1811667180614" y="5902.0" />
+      <point x="1732.2776515151509" y="5902.0" />
+      <point x="45.75" y="27.5" />
+    </edge>
+    <edge source="java.lang.Throwable" target="java.io.Serializable">
+      <point x="0.0" y="-454.5" />
+      <point x="11072.008546282941" y="55.0" />
+      <point x="8218.500232374627" y="55.0" />
+      <point x="36.0" y="15.0" />
+    </edge>
+    <edge source="ru.itmo.prog.lab4.models.people.Shorty" target="ru.itmo.prog.lab4.interfaces.Climbable">
+      <point x="-50.18181818181802" y="-212.5" />
+      <point x="2016.3528440999507" y="4239.0" />
+      <point x="1573.2776515151509" y="4239.0" />
+      <point x="1573.2776515151509" y="2202.0" />
+      <point x="4617.463744588744" y="2202.0" />
+      <point x="-45.399999999999636" y="27.5" />
+    </edge>
+    <edge source="ru.itmo.prog.lab4.lib.events.interfaces.EventBus" target="ru.itmo.prog.lab4.lib.events.EventHandler">
+      <point x="0.0" y="-73.5" />
+      <point x="10547.395310245309" y="3010.0" />
+      <point x="11035.826728101123" y="3010.0" />
+      <point x="-30.181818181818016" y="85.5" />
+    </edge>
+    <edge source="ru.itmo.prog.lab4.models.things.Door" target="ru.itmo.prog.lab4.models.places.Place">
+      <point x="-59.33333333333303" y="-121.0" />
+      <point x="7339.795920020315" y="2082.0" />
+      <point x="1006.3682312252959" y="2082.0" />
+      <point x="95.17391304347802" y="74.5" />
+    </edge>
+    <edge source="ru.itmo.prog.lab4.models.common.UnknownEntity.Direction" target="ru.itmo.prog.lab4.models.common.UnknownEntity">
+      <point x="0.0" y="-85.5" />
+      <point x="7809.020573945321" y="2242.0" />
+      <point x="7815.853907278653" y="2242.0" />
+      <point x="-51.0" y="86.0" />
+    </edge>
+    <edge source="ru.itmo.prog.lab4.models.events.OrderGiven.TimeToExecute" target="ru.itmo.prog.lab4.models.events.OrderGiven">
+      <point x="49.59999999999991" y="85.5" />
+      <point x="8454.472089096835" y="4349.0" />
+      <point x="8461.622089096836" y="4349.0" />
+      <point x="28.375" y="-74.5" />
+    </edge>
+    <edge source="ru.itmo.prog.lab4.models.people.Person" target="ru.itmo.prog.lab4.interfaces.Hearer">
+      <point x="64.48484848484804" y="-569.5" />
+      <point x="4819.448787771499" y="2900.0" />
+      <point x="5421.306926406927" y="2900.0" />
+      <point x="0.0" y="39.0" />
+    </edge>
+    <edge source="ru.itmo.prog.lab4.models.people.Person" target="ru.itmo.prog.lab4.models.common.Impression">
+      <point x="-64.48484848484804" y="-569.5" />
+      <point x="4690.479090801803" y="2830.0" />
+      <point x="4365.488744588743" y="2830.0" />
+      <point x="28.375" y="143.0" />
+    </edge>
+    <edge source="ru.itmo.prog.lab4.Main" target="ru.itmo.prog.lab4.models.places.Earth">
+      <point x="-114.87272727272739" y="-50.5" />
+      <point x="4701.797651407864" y="6740.0" />
+      <point x="192.0000000000009" y="6740.0" />
+      <point x="76.80000000000007" y="62.5" />
+    </edge>
+    <edge source="ru.itmo.prog.lab4.models.things.Rope" target="ru.itmo.prog.lab4.interfaces.speech.HasCases">
+      <point x="-47.777777777777374" y="-189.0" />
+      <point x="4739.205603840211" y="5862.0" />
+      <point x="4114.539696862409" y="5862.0" />
+      <point x="4114.539696862409" y="1750.0" />
+      <point x="4150.522075808971" y="1750.0" />
+      <point x="16.0" y="39.0" />
+    </edge>
+    <edge source="ru.itmo.prog.lab4.models.people.Sex" target="java.lang.Enum">
+      <point x="0.0" y="-62.5" />
+      <point x="3494.539696862409" y="1800.0" />
+      <point x="4356.64707580897" y="1800.0" />
+      <point x="-35.375" y="190.0" />
+    </edge>
+    <edge source="ru.itmo.prog.lab4.Main" target="ru.itmo.prog.lab4.models.events.NoOneExpectedEvent">
+      <point x="106.36363636363603" y="-50.5" />
+      <point x="4923.034015044227" y="6720.0" />
+      <point x="12418.433235930343" y="6720.0" />
+      <point x="12418.433235930343" y="5324.0" />
+      <point x="12267.689513339259" y="5324.0" />
+      <point x="24.0" y="51.0" />
+    </edge>
+    <edge source="ru.itmo.prog.lab4.Main" target="ru.itmo.prog.lab4.models.things.Door">
+      <point x="29.78181818181838" y="-50.5" />
+      <point x="4846.452196862409" y="6540.0" />
+      <point x="7940.520573945321" y="6540.0" />
+      <point x="7940.520573945321" y="2990.0" />
+      <point x="7421.379253353648" y="2990.0" />
+      <point x="22.25" y="121.0" />
+    </edge>
+    <edge source="ru.itmo.prog.lab4.models.events.OrderGiven" target="ru.itmo.prog.lab4.models.events.OrderGiven.TimeToExecute">
+      <point x="-28.375" y="-74.5" />
+      <point x="0.0" y="85.5" />
+    </edge>
+    <edge source="ru.itmo.prog.lab4.models.places.Downpipe" target="ru.itmo.prog.lab4.interfaces.speech.HasCases">
+      <point x="-106.25" y="-155.0" />
+      <point x="903.0276515151509" y="4349.0" />
+      <point x="801.1943181818178" y="4349.0" />
+      <point x="801.1943181818178" y="1720.0" />
+      <point x="4054.5220758089704" y="1720.0" />
+      <point x="-80.0" y="39.0" />
+    </edge>
+    <edge source="ru.itmo.prog.lab4.models.people.Person.Body" target="ru.itmo.prog.lab4.models.people.Person">
+      <point x="-98.30769230769147" y="-120.5" />
+      <point x="6985.552330276726" y="4289.0" />
+      <point x="4814.075050397762" y="4289.0" />
+      <point x="59.11111111111131" y="569.5" />
+    </edge>
+    <edge source="ru.itmo.prog.lab4.Main" target="ru.itmo.prog.lab4.models.places.Downpipe">
+      <point x="-76.58181818181765" y="-50.5" />
+      <point x="4740.088560498773" y="6650.0" />
+      <point x="1007.1503787878792" y="6650.0" />
+      <point x="1007.1503787878792" y="5324.0" />
+      <point x="945.5276515151509" y="5324.0" />
+      <point x="-63.75" y="155.0" />
+    </edge>
+    <edge source="ru.itmo.prog.lab4.models.events.OrderGiven" target="ru.itmo.prog.lab4.lib.events.interfaces.Event">
+      <point x="85.125" y="-74.5" />
+      <point x="8518.372089096836" y="4349.0" />
+      <point x="8539.372089096836" y="4349.0" />
+      <point x="8539.372089096836" y="2212.0" />
+      <point x="11975.645310245309" y="2212.0" />
+      <point x="-30.800000000000182" y="15.0" />
+    </edge>
+    <edge source="ru.itmo.prog.lab4.models.events.WordsSpokenEvent.Handler" target="ru.itmo.prog.lab4.models.events.WordsSpokenEvent">
+      <point x="-62.0" y="-51.5" />
+      <point x="8219.49871933622" y="5832.0" />
+      <point x="7100.913125837871" y="5832.0" />
+      <point x="133.28571428571377" y="86.0" />
+    </edge>
+    <edge source="java.lang.Enum" target="java.lang.Comparable">
+      <point x="-70.75" y="-190.0" />
+      <point x="4321.27207580897" y="1260.0" />
+      <point x="4347.52207580897" y="1260.0" />
+      <point x="0.0" y="27.5" />
+    </edge>
+    <edge source="ru.itmo.prog.lab4.lib.events.EventWrapper" target="ru.itmo.prog.lab4.lib.events.EventHandler">
+      <point x="55.5" y="-63.0" />
+      <point x="11688.395310245309" y="4349.0" />
+      <point x="11738.395310245309" y="4349.0" />
+      <point x="11738.395310245309" y="2890.0" />
+      <point x="11156.554000828395" y="2890.0" />
+      <point x="90.54545454545405" y="85.5" />
+    </edge>
+    <edge source="ru.itmo.prog.lab4.models.people.Person" target="ru.itmo.prog.lab4.interfaces.speech.Pluralable">
+      <point x="92.12121212121201" y="-569.5" />
+      <point x="4847.085151407863" y="2930.0" />
+      <point x="6053.223593073593" y="2930.0" />
+      <point x="6053.223593073593" y="2222.0" />
+      <point x="6228.056926406927" y="2222.0" />
+      <point x="-40.5" y="39.0" />
+    </edge>
+    <edge source="ru.itmo.prog.lab4.modules.EventBusBeanModule" target="ru.itmo.prog.lab4.lib.events.EventHandler">
+      <point x="0.0" y="-27.5" />
+      <point x="10297.432647907648" y="5952.0" />
+      <point x="10248.611219336219" y="5952.0" />
+      <point x="10248.611219336219" y="2990.0" />
+      <point x="10975.463091737487" y="2990.0" />
+      <point x="-90.54545454545405" y="85.5" />
+    </edge>
+    <edge source="ru.itmo.prog.lab4.Main" target="ru.itmo.prog.lab4.models.people.Shorty">
+      <point x="-55.30909090909063" y="-50.5" />
+      <point x="4761.3612877715" y="6600.0" />
+      <point x="2073.2629848998786" y="6600.0" />
+      <point x="2073.2629848998786" y="5324.0" />
+      <point x="2121.7346622817695" y="5324.0" />
+      <point x="55.20000000000073" y="212.5" />
+    </edge>
+    <edge source="ru.itmo.prog.lab4.interfaces.things.Lockable" target="ru.itmo.prog.lab4.interfaces.things.Opener">
+      <point x="-44.5" y="-39.0" />
+      <point x="5943.210744885491" y="1260.0" />
+      <point x="5882.944424293819" y="1260.0" />
+      <point x="-27.5" y="27.5" />
+    </edge>
+    <edge source="ru.itmo.prog.lab4.models.events.NoOneExpectedEvent.Handler" target="ru.itmo.prog.lab4.models.events.NoOneExpectedEvent">
+      <point x="32.75" y="-27.5" />
+      <point x="10532.316305563667" y="5314.0" />
+      <point x="12171.689513339259" y="5314.0" />
+      <point x="-72.0" y="51.0" />
+    </edge>
+    <edge source="java.lang.Throwable.WrappedPrintStream" target="java.lang.Throwable">
+      <point x="67.25" y="-63.0" />
+      <point x="12077.645310245309" y="1019.0" />
+      <point x="11288.865689140084" y="1019.0" />
+      <point x="216.85714285714312" y="454.5" />
+    </edge>
+    <edge source="ru.itmo.prog.lab4.models.people.Person" target="ru.itmo.prog.lab4.models.things.Door">
+      <point x="128.9696969696961" y="-569.5" />
+      <point x="4883.933636256347" y="2980.0" />
+      <point x="7332.379253353648" y="2980.0" />
+      <point x="-66.75" y="121.0" />
+    </edge>
+    <edge source="ru.itmo.prog.lab4.Main" target="ru.itmo.prog.lab4.models.people.Group">
+      <point x="-25.527272727272248" y="-50.5" />
+      <point x="4791.143105953319" y="6530.0" />
+      <point x="2541.7720758089704" y="6530.0" />
+      <point x="2541.7720758089704" y="5982.0" />
+      <point x="2674.6134740259745" y="5982.0" />
+      <point x="-34.42857142857156" y="132.0" />
+    </edge>
+    <edge source="java.lang.ref.Reference.ReferenceHandler" target="java.lang.ref.Reference">
+      <point x="0.0" y="-51.0" />
+      <point x="9239.352886002885" y="2940.0" />
+      <point x="9813.111219336219" y="2940.0" />
+      <point x="-100.5" y="236.0" />
+    </edge>
+    <edge source="ru.itmo.prog.lab4.models.people.Person.Body" target="ru.itmo.prog.lab4.models.people.Person.Body.Arm">
+      <point x="0.0" y="-120.5" />
+      <point x="7083.8600225844175" y="4229.0" />
+      <point x="6951.059808909204" y="4229.0" />
+      <point x="0.0" y="51.0" />
+    </edge>
+    <edge source="ru.itmo.prog.lab4.Main" target="ru.itmo.prog.lab4.utils.Direction">
+      <point x="-42.54545454545405" y="-50.5" />
+      <point x="4774.124924135137" y="6570.0" />
+      <point x="2388.4504848998786" y="6570.0" />
+      <point x="76.0" y="97.5" />
+    </edge>
+    <edge source="ru.itmo.prog.lab4.Main" target="ru.itmo.prog.lab4.models.places.House.Roof">
+      <point x="-106.36363636363603" y="-50.5" />
+      <point x="4710.306742316955" y="6720.0" />
+      <point x="375.2000000000007" y="6720.0" />
+      <point x="48.0" y="74.5" />
+    </edge>
+    <edge source="ru.itmo.prog.lab4.interfaces.ShortiesContainer" target="ru.itmo.prog.lab4.models.places.Gazebo">
+      <point x="58.5" y="39.0" />
+      <point x="1943.0276515151509" y="5932.0" />
+      <point x="1646.7456165304766" y="5932.0" />
+      <point x="0.0" y="-155.0" />
+    </edge>
+    <edge source="ru.itmo.prog.lab4.Main" target="ru.itmo.prog.lab4.models.events.OrderGiven.Handler">
+      <point x="72.32727272727243" y="-50.5" />
+      <point x="4888.9976514078635" y="6640.0" />
+      <point x="9261.361219336219" y="6640.0" />
+      <point x="-63.75" y="39.0" />
+    </edge>
+    <edge source="java.lang.ref.WeakReference" target="java.lang.ref.Reference">
+      <point x="0.0" y="-39.0" />
+      <point x="10890.78951333926" y="2940.0" />
+      <point x="10014.111219336219" y="2940.0" />
+      <point x="100.5" y="236.0" />
+    </edge>
+    <edge source="ru.itmo.prog.lab4.modules.EventBusBeanModule" target="ru.itmo.prog.lab4.models.events.OrderGiven.Handler">
+      <point x="-54.85714285714266" y="-27.5" />
+      <point x="10242.575505050505" y="5972.0" />
+      <point x="9388.861219336219" y="5972.0" />
+      <point x="63.75" y="39.0" />
+    </edge>
+    <edge source="ru.itmo.prog.lab4.lib.events.EventBusImpl" target="ru.itmo.prog.lab4.lib.events.EventWrapper">
+      <point x="127.45833333333326" y="-154.5" />
+      <point x="11849.924638896999" y="5084.0" />
+      <point x="11743.895310245309" y="5084.0" />
+      <point x="111.0" y="63.0" />
+    </edge>
+    <edge source="ru.itmo.prog.lab4.interfaces.Hearer" target="ru.itmo.prog.lab4.interfaces.Hearable">
+      <point x="0.0" y="-39.0" />
+      <point x="5421.306926406927" y="2222.0" />
+      <point x="5376.931926406927" y="2222.0" />
+      <point x="15.875" y="39.0" />
+    </edge>
+    <edge source="ru.itmo.prog.lab4.models.people.Shorty" target="ru.itmo.prog.lab4.models.people.Person">
+      <point x="100.36363636363603" y="-212.5" />
+      <point x="2166.898298645405" y="4289.0" />
+      <point x="4628.297272619985" y="4289.0" />
+      <point x="-126.66666666666606" y="569.5" />
+    </edge>
+    <edge source="ru.itmo.prog.lab4.models.people.Person" target="ru.itmo.prog.lab4.models.people.Limb.HealthStatus">
+      <point x="101.33333333333394" y="-569.5" />
+      <point x="4856.297272619985" y="2940.0" />
+      <point x="6062.435714285715" y="2940.0" />
+      <point x="6062.435714285715" y="2232.0" />
+      <point x="6940.909808909204" y="2232.0" />
+      <point x="-96.39999999999964" y="74.0" />
+    </edge>
+    <edge source="ru.itmo.prog.lab4.models.places.House" target="ru.itmo.prog.lab4.models.places.Place">
+      <point x="-99.0" y="-109.5" />
+      <point x="326.0" y="5324.0" />
+      <point x="249.75217391304432" y="5324.0" />
+      <point x="249.75217391304432" y="2192.0" />
+      <point x="850.6291007905138" y="2192.0" />
+      <point x="-60.56521739130403" y="74.5" />
+    </edge>
+    <edge source="ru.itmo.prog.lab4.modules.WindModule" target="com.google.inject.AbstractModule">
+      <point x="-39.25" y="-27.5" />
+      <point x="8991.880422430168" y="5294.0" />
+      <point x="8950.247089096836" y="5294.0" />
+      <point x="0.0" y="327.5" />
+    </edge>
+    <edge source="ru.itmo.prog.lab4.models.events.EventBusBean" target="ru.itmo.prog.lab4.lib.events.interfaces.EventBus">
+      <point x="-91.75" y="-51.5" />
+      <point x="12524.937781384888" y="5064.0" />
+      <point x="10734.681024531024" y="5064.0" />
+      <point x="187.28571428571422" y="73.5" />
+    </edge>
+    <edge source="ru.itmo.prog.lab4.models.people.Person" target="ru.itmo.prog.lab4.models.common.UnknownEntity.Direction">
+      <point x="138.18181818181802" y="-569.5" />
+      <point x="4893.145757468469" y="3000.0" />
+      <point x="7754.020573945321" y="3000.0" />
+      <point x="-55.0" y="85.5" />
+    </edge>
+    <edge source="ru.itmo.prog.lab4.models.people.Person.Body.Leg" target="ru.itmo.prog.lab4.models.people.Limb">
+      <point x="-40.5" y="-51.0" />
+      <point x="7167.629253353648" y="2970.0" />
+      <point x="7057.559808909204" y="2970.0" />
+      <point x="40.5" y="62.5" />
+    </edge>
+    <edge source="ru.itmo.prog.lab4.lib.events.interfaces.EventBus" target="ru.itmo.prog.lab4.lib.events.interfaces.Event">
+      <point x="-145.66666666666697" y="-73.5" />
+      <point x="10401.728643578643" y="4349.0" />
+      <point x="10468.736219336219" y="4349.0" />
+      <point x="10468.736219336219" y="2222.0" />
+      <point x="11984.44531024531" y="2222.0" />
+      <point x="-22.0" y="15.0" />
+    </edge>
+    <edge source="ru.itmo.prog.lab4.models.events.EventBusBean" target="ru.itmo.prog.lab4.lib.events.EventHandler">
+      <point x="30.58333333333303" y="-51.5" />
+      <point x="12647.271114718222" y="5324.0" />
+      <point x="12685.99357829094" y="5324.0" />
+      <point x="12685.99357829094" y="2870.0" />
+      <point x="11216.917637192033" y="2870.0" />
+      <point x="150.909090909091" y="85.5" />
+    </edge>
+    <edge source="ru.itmo.prog.lab4.modules.HouseModule" target="com.google.inject.AbstractModule">
+      <point x="0.0" y="-27.5" />
+      <point x="8046.538755763502" y="5264.0" />
+      <point x="8762.780422430169" y="5264.0" />
+      <point x="-187.46666666666624" y="327.5" />
+    </edge>
+    <edge source="ru.itmo.prog.lab4.models.people.Person" target="java.lang.RuntimeException">
+      <point x="73.69696969696997" y="-569.5" />
+      <point x="4828.660908983621" y="2910.0" />
+      <point x="5936.056926406927" y="2910.0" />
+      <point x="5936.056926406927" y="1780.0" />
+      <point x="6215.485744885491" y="1780.0" />
+      <point x="-169.19999999999982" y="85.5" />
+    </edge>
+    <edge source="java.lang.Exception" target="java.lang.Throwable">
+      <point x="0.0" y="-85.5" />
+      <point x="10232.111219336219" y="1029.0" />
+      <point x="10963.579974854369" y="1029.0" />
+      <point x="-108.42857142857156" y="454.5" />
+    </edge>
+    <edge source="ru.itmo.prog.lab4.lib.events.WeakHandler" target="java.lang.ref.WeakReference">
+      <point x="-113.0" y="-75.0" />
+      <point x="10842.395310245309" y="4339.0" />
+      <point x="10802.53951333926" y="4339.0" />
+      <point x="-88.25" y="39.0" />
+    </edge>
+    <edge source="ru.itmo.prog.lab4.models.people.Shorty" target="ru.itmo.prog.lab4.interfaces.Hearable">
+      <point x="0.0" y="-212.5" />
+      <point x="2066.5346622817688" y="4269.0" />
+      <point x="2059.489207736314" y="4269.0" />
+      <point x="2059.489207736314" y="2940.0" />
+      <point x="3145.3358762707367" y="2940.0" />
+      <point x="3145.3358762707367" y="2212.0" />
+      <point x="5313.431926406927" y="2212.0" />
+      <point x="-47.625" y="39.0" />
+    </edge>
+    <edge source="ru.itmo.prog.lab4.modules.SceneModule" target="ru.itmo.prog.lab4.lib.events.EventBusImpl">
+      <point x="58.875" y="-27.5" />
+      <point x="11449.320472230333" y="5982.0" />
+      <point x="11831.716305563667" y="5982.0" />
+      <point x="109.25" y="154.5" />
+    </edge>
+    <edge source="ru.itmo.prog.lab4.models.people.Person" target="ru.itmo.prog.lab4.models.people.Person.Eye">
+      <point x="9.212121212121929" y="-569.5" />
+      <point x="4764.176060498773" y="2840.0" />
+      <point x="4884.325865800865" y="2840.0" />
+      <point x="25.5" y="39.5" />
+    </edge>
+    <edge source="ru.itmo.prog.lab4.lib.events.interfaces.FailureConsumer" target="java.lang.FunctionalInterface">
+      <point x="103.5" y="-27.5" />
+      <point x="11398.395310245309" y="3000.0" />
+      <point x="12017.88951333926" y="3000.0" />
+      <point x="0.0" y="15.0" />
+    </edge>
+    <edge source="ru.itmo.prog.lab4.models.things.Rope" target="ru.itmo.prog.lab4.models.things.Thing">
+      <point x="-95.55555555555566" y="-189.0" />
+      <point x="4691.427826062432" y="5872.0" />
+      <point x="4082.039696862409" y="5872.0" />
+      <point x="22.0" y="15.0" />
+    </edge>
+    <edge source="ru.itmo.prog.lab4.modules.EventBusBeanModule" target="ru.itmo.prog.lab4.lib.events.interfaces.EventBus">
+      <point x="27.42857142857156" y="-27.5" />
+      <point x="10324.86121933622" y="5952.0" />
+      <point x="10347.306024531023" y="5952.0" />
+      <point x="10347.306024531023" y="5324.0" />
+      <point x="10484.966738816738" y="5324.0" />
+      <point x="-62.42857142857156" y="73.5" />
+    </edge>
+    <edge source="ru.itmo.prog.lab4.models.places.Earth" target="ru.itmo.prog.lab4.models.places.Earth.EarthHolder">
+      <point x="38.399999999999636" y="62.5" />
+      <point x="153.60000000000036" y="6740.0" />
+      <point x="168.0" y="6740.0" />
+      <point x="72.0" y="-27.5" />
+    </edge>
+    <edge source="ru.itmo.prog.lab4.Main" target="ru.itmo.prog.lab4.modules.SceneModule">
+      <point x="102.10909090909081" y="-50.5" />
+      <point x="4918.779469589682" y="6710.0" />
+      <point x="11390.445472230333" y="6710.0" />
+      <point x="0.0" y="27.5" />
+    </edge>
+    <edge source="java.lang.Throwable.WrappedPrintWriter" target="java.lang.Throwable.PrintStreamOrWriter">
+      <point x="67.25" y="-63.0" />
+      <point x="7213.777757627153" y="1260.0" />
+      <point x="11098.986219336219" y="1260.0" />
+      <point x="-50.0" y="51.0" />
+    </edge>
+    <edge source="ru.itmo.prog.lab4.models.common.UnknownEntity.Direction" target="java.lang.Enum">
+      <point x="-73.33333333333394" y="-85.5" />
+      <point x="7735.687240611987" y="2232.0" />
+      <point x="7728.853907278653" y="2232.0" />
+      <point x="7728.853907278653" y="1690.0" />
+      <point x="4498.14707580897" y="1690.0" />
+      <point x="106.125" y="190.0" />
+    </edge>
+    <edge source="ru.itmo.prog.lab4.models.events.WordsSpokenEvent.Handler" target="ru.itmo.prog.lab4.lib.events.EventException">
+      <point x="62.0" y="-51.5" />
+      <point x="8343.49871933622" y="5962.0" />
+      <point x="8270.372089096836" y="5962.0" />
+      <point x="8270.372089096836" y="2950.0" />
+      <point x="10155.211219336219" y="2950.0" />
+      <point x="-82.39999999999964" y="27.5" />
+    </edge>
+    <edge source="ru.itmo.prog.lab4.modules.EventBusBeanModule" target="ru.itmo.prog.lab4.models.events.NoOneExpectedEvent.Handler">
+      <point x="54.85714285714266" y="-27.5" />
+      <point x="10352.289790764791" y="5962.0" />
+      <point x="10499.566305563667" y="5962.0" />
+      <point x="0.0" y="27.5" />
+    </edge>
+    <edge source="ru.itmo.prog.lab4.lib.events.EventWrapper" target="ru.itmo.prog.lab4.lib.events.interfaces.Event">
+      <point x="166.5" y="-63.0" />
+      <point x="11799.395310245309" y="4349.0" />
+      <point x="11749.395310245309" y="4349.0" />
+      <point x="11749.395310245309" y="3010.0" />
+      <point x="12128.38951333926" y="3010.0" />
+      <point x="12128.38951333926" y="2242.0" />
+      <point x="12010.84531024531" y="2242.0" />
+      <point x="4.399999999999636" y="15.0" />
+    </edge>
+    <edge source="ru.itmo.prog.lab4.models.common.Impression" target="ru.itmo.prog.lab4.models.people.Person">
+      <point x="85.125" y="143.0" />
+      <point x="4422.238744588743" y="2820.0" />
+      <point x="4699.691212013923" y="2820.0" />
+      <point x="-55.272727272727934" y="-569.5" />
+    </edge>
+    <edge source="com.google.inject.AbstractModule" target="com.google.inject.AbstractModule">
+      <point x="-328.0666666666666" y="327.5" />
+      <point x="8622.180422430169" y="5044.0" />
+      <point x="8578.747089096836" y="5044.0" />
+      <point x="8578.747089096836" y="4696.5" />
+      <point x="-351.5" y="-0.0" />
+    </edge>
+    <edge source="ru.itmo.prog.lab4.interfaces.Climber" target="ru.itmo.prog.lab4.interfaces.Climbable">
+      <point x="63.75" y="-50.5" />
+      <point x="0.0" y="27.5" />
+    </edge>
+    <edge source="ru.itmo.prog.lab4.models.people.Limb.HealthStatus" target="ru.itmo.prog.lab4.models.people.Limb">
+      <point x="48.20000000000073" y="74.0" />
+      <point x="7085.509808909204" y="2232.0" />
+      <point x="7077.809808909204" y="2232.0" />
+      <point x="60.75" y="-62.5" />
+    </edge>
+    <edge source="ru.itmo.prog.lab4.models.events.OrderGiven.Handler" target="ru.itmo.prog.lab4.models.events.OrderGiven">
+      <point x="-51.0" y="-39.0" />
+      <point x="9274.111219336219" y="5224.0" />
+      <point x="8518.372089096836" y="5224.0" />
+      <point x="85.125" y="74.5" />
+    </edge>
+    <edge source="com.google.inject.AbstractModule" target="java.lang.Throwable">
+      <point x="-234.33333333333303" y="-327.5" />
+      <point x="8715.913755763502" y="4349.0" />
+      <point x="8713.852886002885" y="4349.0" />
+      <point x="8713.852886002885" y="2930.0" />
+      <point x="9566.111219336219" y="2930.0" />
+      <point x="9566.111219336219" y="1019.0" />
+      <point x="10855.151403425798" y="1019.0" />
+      <point x="-216.85714285714312" y="454.5" />
+    </edge>
+    <edge source="ru.itmo.prog.lab4.models.scene.Scene" target="ru.itmo.prog.lab4.models.places.Place">
+      <point x="-63.272727272727025" y="-224.0" />
+      <point x="2836.9993485362434" y="5902.0" />
+      <point x="3291.7720758089704" y="5902.0" />
+      <point x="3291.7720758089704" y="5314.0" />
+      <point x="3379.4868506493513" y="5314.0" />
+      <point x="3379.4868506493513" y="4239.0" />
+      <point x="3340.039696862409" y="4239.0" />
+      <point x="3340.039696862409" y="2930.0" />
+      <point x="3134.3358762707367" y="2930.0" />
+      <point x="3134.3358762707367" y="2142.0" />
+      <point x="954.4551877470349" y="2142.0" />
+      <point x="43.260869565217035" y="74.5" />
+    </edge>
+    <edge source="ru.itmo.prog.lab4.models.places.Earth" target="ru.itmo.prog.lab4.models.places.Place">
+      <point x="-48.0" y="-62.5" />
+      <point x="67.20000000000073" y="5982.0" />
+      <point x="109.70000000000073" y="5982.0" />
+      <point x="109.70000000000073" y="2152.0" />
+      <point x="816.0204051383398" y="2152.0" />
+      <point x="-95.17391304347802" y="74.5" />
+    </edge>
+    <edge source="ru.itmo.prog.lab4.models.places.House" target="ru.itmo.prog.lab4.models.places.Workshop">
+      <point x="98.99999999999955" y="-109.5" />
+      <point x="524.0" y="5324.0" />
+      <point x="520.0" y="5324.0" />
+      <point x="-64.0" y="74.5" />
+    </edge>
+    <edge source="ru.itmo.prog.lab4.Main" target="ru.itmo.prog.lab4.models.common.Action">
+      <point x="-29.78181818181838" y="-50.5" />
+      <point x="4786.888560498773" y="6540.0" />
+      <point x="2537.517530354424" y="6540.0" />
+      <point x="2537.517530354424" y="2930.0" />
+      <point x="2148.90587440298" y="2930.0" />
+      <point x="20.66666666666606" y="259.0" />
+    </edge>
+    <edge source="ru.itmo.prog.lab4.models.events.OrderGiven.Handler" target="ru.itmo.prog.lab4.lib.events.EventException">
+      <point x="51.0" y="-39.0" />
+      <point x="9376.111219336219" y="5294.0" />
+      <point x="9405.352886002885" y="5294.0" />
+      <point x="9405.352886002885" y="2960.0" />
+      <point x="10196.41121933622" y="2960.0" />
+      <point x="-41.19999999999982" y="27.5" />
+    </edge>
+    <edge source="ru.itmo.prog.lab4.models.people.Person" target="ru.itmo.prog.lab4.models.people.Sex">
+      <point x="-119.75757575757598" y="-569.5" />
+      <point x="4635.206363529075" y="2890.0" />
+      <point x="3561.289696862409" y="2890.0" />
+      <point x="66.75" y="62.5" />
+    </edge>
+    <edge source="ru.itmo.prog.lab4.utils.Direction.Preposition" target="java.lang.Enum">
+      <point x="0.0" y="-74.0" />
+      <point x="2200.7629848998786" y="5274.0" />
+      <point x="2804.753982576695" y="5274.0" />
+      <point x="2804.753982576695" y="2950.0" />
+      <point x="3156.3358762707367" y="2950.0" />
+      <point x="3156.3358762707367" y="1780.0" />
+      <point x="4309.480409142304" y="1780.0" />
+      <point x="-82.54166666666606" y="190.0" />
+    </edge>
+    <edge source="ru.itmo.prog.lab4.models.people.Group" target="ru.itmo.prog.lab4.models.people.Person">
+      <point x="60.25" y="-132.0" />
+      <point x="2769.292045454546" y="5304.0" />
+      <point x="3368.4868506493513" y="5304.0" />
+      <point x="3368.4868506493513" y="4309.0" />
+      <point x="4662.075050397762" y="4309.0" />
+      <point x="-92.88888888888869" y="569.5" />
+    </edge>
+    <edge source="ru.itmo.prog.lab4.models.places.Gazebo" target="ru.itmo.prog.lab4.models.common.Action">
+      <point x="-56.66666666666606" y="-155.0" />
+      <point x="1590.0789498638105" y="5892.0" />
+      <point x="1615.0276515151509" y="5892.0" />
+      <point x="1615.0276515151509" y="2920.0" />
+      <point x="2066.239207736314" y="2920.0" />
+      <point x="-62.0" y="259.0" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="0.1847047812183137" x="6400.5" y="3430.5" />
+  <SelectedNodes />
+  <Categories>
+    <Category>Fields</Category>
+    <Category>Constructors</Category>
+    <Category>Methods</Category>
+    <Category>Properties</Category>
+    <Category>Inner Classes</Category>
+  </Categories>
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+
