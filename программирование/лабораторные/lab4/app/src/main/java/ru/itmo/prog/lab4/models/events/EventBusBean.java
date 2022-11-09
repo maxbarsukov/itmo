@@ -1,9 +1,11 @@
-package ru.itmo.prog.lab4.lib.events;
+package ru.itmo.prog.lab4.models.events;
 
 import com.google.inject.Inject;
 
 import ru.itmo.prog.lab4.interfaces.events.Event;
 import ru.itmo.prog.lab4.interfaces.events.EventBus;
+import ru.itmo.prog.lab4.lib.events.EventBusImpl;
+import ru.itmo.prog.lab4.lib.events.EventHandler;
 
 import java.util.List;
 
