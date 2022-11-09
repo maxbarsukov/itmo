@@ -58,16 +58,19 @@ public class Main {
       }
     );
 
+    class Hallway extends Place {
+      public Hallway() { super("коридор"); }
+      @Override public String dativeCase() { return "коридору"; }
+      @Override public String genitiveCase() { return "коридора"; }
+    }
+
     story.addSentence(
       new Sentence(scene.getCharacter("Незнайка").getName())
         .thatTime(
           new Direction(
             Direction.Type.LOOKED,
             Direction.Preposition.IN,
-            new Place("коридор") {
-              @Override public String dativeCase() { return "коридору"; }
-              @Override public String genitiveCase() { return "коридора"; }
-            }.getName()
+            (new Hallway()).getName()
           ).toString()
         ).comma(hearedWords.get())
     );
