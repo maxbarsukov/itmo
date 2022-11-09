@@ -5,14 +5,14 @@
 005:  0031 // char 3
 006:  0031 // char 4
 007:  0031 // char 5
-008:  0031 // char 6
+008:  0030 // char 6
 009:  0031 // char 7
 00A:  0031 // char 8
 00B:  0000 // result
 00C:  0000 // NOP
 00D:  0000 // NOP - возможно, нужно будет что-то дописать
-00F:  0000 // NOP
-00F:+ 0200 // CLA
+00E:  0000 // NOP
+00F: +0200 // CLA
 010:  A001 // LD ascii 0 - > AC
 011:  7003 // CMP char1, ascii 0
 012:  F007 // BEQ 7 - если char1 = ascii 0 ==> 01A
@@ -21,7 +21,7 @@
 015:  F001 // BEQ 1 - если char1 = ascii 1 ==> 017
 016:  C069 // выход - число не равно ни ascii 0, ни ascii 1
 017:  A00B // LD result -> AC
-018:  0700 // INC = AC++ 
+018:  0700 // INC = AC++
 019:  E00B // ST result
 01A:  0200 // CLA
 01B:  A001 // LD ascii 0 - > AC
