@@ -6,12 +6,8 @@ import ru.itmo.prog.lab4.models.common.*;
 import ru.itmo.prog.lab4.models.events.*;
 import ru.itmo.prog.lab4.models.people.*;
 import ru.itmo.prog.lab4.models.places.*;
-import ru.itmo.prog.lab4.models.scene.Scene;
-import ru.itmo.prog.lab4.models.scene.Story;
-import ru.itmo.prog.lab4.models.things.Door;
-import ru.itmo.prog.lab4.models.things.Doorhandle;
-import ru.itmo.prog.lab4.models.things.Rope;
-import ru.itmo.prog.lab4.models.things.Vane;
+import ru.itmo.prog.lab4.models.scene.*;
+import ru.itmo.prog.lab4.models.things.*;
 import ru.itmo.prog.lab4.models.weather.Weather;
 import ru.itmo.prog.lab4.modules.*;
 import ru.itmo.prog.lab4.utils.Direction;
@@ -83,6 +79,9 @@ public class Main {
     );
 
     var rope = new Rope();
+    var workshop = (Workshop) scene.getLocation(Workshop.DEFAULT_NAME);
+    var doorToWorkshop = new Door(workshop);
+
     try {
       rope.pull("куда-нибудь");
     } catch (Rope.NothingIsBindedException e) {
@@ -91,14 +90,13 @@ public class Main {
           rope.bindWith(
             mainCharacter,
             scene.getCharactersGroup("коротышки"),
-            new Doorhandle()
+            doorToWorkshop.new Doorhandle()
           ) + " и " + Action.STRICTLY_SAY.getDescription(mainCharacter),
           ":"
         )
       );
     }
 
-    var workshop = (Workshop) scene.getLocation(Workshop.DEFAULT_NAME);
     story.addSentence(
       new Sentence(mainCharacter.jumpTo(workshop))
         .comma(((House) scene.getLocation(House.DEFAULT_NAME)).distanceDescription(workshop))
@@ -115,7 +113,6 @@ public class Main {
         .which(vane.description())
     );
 
-    var doorToWorkshop = new Door(workshop);
     story.addSentence(new Sentence("Это задержало полет"));
     story.addSentence(
       new Sentence(mainCharacter.goTo(scene.getLocation(Downpipe.DEFAULT_NAME), UnknownEntity.Direction.DOWN))

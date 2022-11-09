@@ -6,6 +6,23 @@ import ru.itmo.prog.lab4.interfaces.things.Opener;
 import ru.itmo.prog.lab4.models.places.Place;
 
 public class Door implements Openable, Lockable {
+  public class Doorhandle extends Thing {
+    @Override
+    public String dativeCase() {
+      return "дверной ручке";
+    }
+
+    @Override
+    public String genitiveCase() {
+      return "дверной ручки";
+    }
+
+    @Override
+    public String toString() {
+      return "Дверная ручка";
+    }
+  }
+
   enum State {
     OPENED,
     CLOSED,
