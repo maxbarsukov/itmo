@@ -6,9 +6,11 @@ import ru.itmo.prog.lab4.interfaces.Jumpable;
 import ru.itmo.prog.lab4.models.common.Action;
 import ru.itmo.prog.lab4.models.common.Impression;
 import ru.itmo.prog.lab4.models.common.JumpDistance;
+import ru.itmo.prog.lab4.models.common.Utils;
 import ru.itmo.prog.lab4.models.places.Place;
 
 import java.util.Objects;
+import java.util.function.Supplier;
 
 public class Shorty extends Person implements Jumpable {
   private int jumpDistance;
@@ -31,6 +33,15 @@ public class Shorty extends Person implements Jumpable {
     return "Коротышки";
   }
 
+  public String jumpResult() {
+    var result = Utils.capitalize(pronoun()) + ' ';
+    if (jumpDistance == JumpDistance.BIG.getDistance()) {
+      return result + "немного не рассчитал толчка и поднялся выше, чем было надо";
+    }
+    return result + "рассчитал прыжок и поднялся точно туда, куда надо было";
+  }
+
+  @Override
   public String jumpTo(Place place, double distance) {
     int numberOfJumps = (int) Math.ceil(distance / jumpDistance);
     String jumpDescription = switch (numberOfJumps) {
@@ -61,6 +72,15 @@ public class Shorty extends Person implements Jumpable {
   public boolean canHear(Hearable hearable) {
     // У коротышек острый слух
     return hearable.getVolume() > 20;
+  }
+
+  @Override
+  public String tryTo(Supplier<String> function) {
+    // Коротышки с плохим зрением ничего не могут разглядеть
+    if (!this.hasGoodVision() && function.get().equals(Action.DISCERN.getDefault())) {
+      return "не удалось ничего " + function.get();
+    }
+    return Action.TRIED.getDescription(this) + ' ' + function.get();
   }
 
   @Override

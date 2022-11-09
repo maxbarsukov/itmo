@@ -18,6 +18,13 @@ public class Rope implements Binadle<Person, Group<? extends Person>>, HasCases 
   private Person person;
   private Group<? extends Person> group;
 
+  public String bindWith(Person person, Group<? extends Person> group, Thing thing) {
+    bind(person, group);
+    return person.getName()
+      + " обвязал один конец веревки вокруг пояса, а другой конец привязал к "
+      + thing.dativeCase();
+  }
+
   @Override
   public void bind(Person person, Group<? extends Person> group) {
     this.person = person;

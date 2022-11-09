@@ -3,11 +3,11 @@ package ru.itmo.prog.lab4.models.people;
 import ru.itmo.prog.lab4.interfaces.*;
 import ru.itmo.prog.lab4.interfaces.speech.HasCases;
 import ru.itmo.prog.lab4.interfaces.speech.Pluralable;
-import ru.itmo.prog.lab4.models.common.Action;
-import ru.itmo.prog.lab4.models.common.Impression;
-import ru.itmo.prog.lab4.models.common.Time;
-import ru.itmo.prog.lab4.models.common.Utils;
+import ru.itmo.prog.lab4.interfaces.things.Lockable;
+import ru.itmo.prog.lab4.interfaces.things.Seized;
+import ru.itmo.prog.lab4.models.common.*;
 import ru.itmo.prog.lab4.models.places.Place;
+import ru.itmo.prog.lab4.models.things.Door;
 
 import java.util.Objects;
 import java.util.function.Supplier;
@@ -48,8 +48,29 @@ abstract class Limb implements Pluralable {
 }
 
 public abstract class Person implements Cannable, Climber, HasCases, Hearer, Pluralable, Tryable {
-  public class Body {
-    public class Arm extends Limb {
+  static class Eye {
+    enum VisualAcuity {
+      GOOD,
+      BAD,
+    }
+
+    private VisualAcuity visualAcuity;
+
+    public Eye(VisualAcuity visualAcuity) {
+      this.visualAcuity = visualAcuity;
+    }
+
+    public VisualAcuity getVisualAcuity() {
+      return visualAcuity;
+    }
+
+    public void setVisualAcuity(VisualAcuity visualAcuity) {
+      this.visualAcuity = visualAcuity;
+    }
+  }
+
+  class Body {
+    class Arm extends Limb {
       public Arm() {
         super("Рука");
       }
@@ -65,7 +86,7 @@ public abstract class Person implements Cannable, Climber, HasCases, Hearer, Plu
       }
     }
 
-    public class Leg extends Limb {
+    class Leg extends Limb {
       public Leg() {
         super("Нога");
       }
@@ -120,13 +141,24 @@ public abstract class Person implements Cannable, Climber, HasCases, Hearer, Plu
     }
   }
 
+  private static final boolean PEOPLE_CAN_FLY = false; // No
+
   private final Body body = new Body();
+  private final Eye[] eyes = {
+    new Eye(Eye.VisualAcuity.GOOD),
+    new Eye(Eye.VisualAcuity.GOOD),
+  };
+
   private String name;
   private Sex sex;
   private double mass;
   private Place location;
   private Impression currentImpression = Impression.NONE;
   private String currentActivity;
+
+  private boolean isStretched = false;
+  private boolean isLying = false;
+  private boolean isFlying = false;
 
   public Person(String name, Sex sex, double mass) {
     this.name = name;
@@ -165,6 +197,84 @@ public abstract class Person implements Cannable, Climber, HasCases, Hearer, Plu
     return Action.TRIED.getDescription(this) + ' ' + function.get();
   }
 
+  public String flyTo(Place placeToFly, Supplier<String> ifYouCantFly) {
+    if (PEOPLE_CAN_FLY) {
+      return getName() + " успешно долетел до " + placeToFly.genitiveCase();
+    }
+    return "Не долетев до " + placeToFly.genitiveCase() + ", " + ifYouCantFly.get();
+  }
+
+  public String jumpTo(Place place) {
+    isFlying = true;
+    setLocation(place);
+    return "Придав своему телу наклонное положение, "
+      + getName() + " с силой оттолкнулся ногами от порога и полетел в направлении " + place.genitiveCase();
+  }
+
+  public String goTo(Place place, UnknownEntity.Direction direction) {
+    setLocation(place);
+    return switch (direction) {
+      case UP -> "Поднявшись по " + place.dativeCase();
+      case DOWN -> "Спустившись по " + place.dativeCase();
+      case NONE -> getName() + " проник в " + place.dativeCase();
+    };
+  }
+
+  public String goTo(Door door) {
+    try {
+      door.open();
+    } catch (Lockable.LockingException e) {
+      return getName() + " не смог пройти в " + door.getEntranceTo().dativeCase() + ". " + e.getMessage();
+    }
+
+    setLocation(door.getEntranceTo());
+    return getName() + " отворил дверь и проник в " + door.getEntranceTo().dativeCase();
+  }
+
+  public String peekOut(int delayInSeconds) {
+    return "Через " + (delayInSeconds < 60 ? "минуту " : "несколько минут ")
+      + getName() + " выглянул из " + getLocation().genitiveCase();
+  }
+
+  public String grubHoldOf(Seized seized) {
+    var healthArms = getBody().leftArm.isHealth() || getBody().rightArm.isHealth();
+    return pronoun() + " ухватился " + (healthArms ? "рукой" : "ногой") + " за " + seized.getName();
+  }
+
+  public String react() {
+    return currentImpression.react(this);
+  }
+
+  public String bodyStatus() {
+    return "Ощущая во всем теле страшную тяжесть";
+  }
+
+  public String flopAbout(Place place) {
+    isStretched = true;
+    isLying = true;
+    isFlying = false;
+    getBody().breakDown();
+    setCurrentImpression(Impression.WTF);
+    return "Шлепнувшись с размаху о " + place.dativeCase();
+  }
+
+  public String riseToYourFeet() {
+    if (!isLying) throw new RuntimeException("Нельзя встать, если ты уже стоишь");
+
+    isLying = false;
+    setCurrentImpression(Impression.SURPRISED);
+    return pronoun() + (body.areLegsHealthy() && body.areArmsHealthy() ? " легко" : " с трудом") + " поднялся на ноги";
+  }
+
+  public boolean hasGoodVision() {
+    return eyes[0].getVisualAcuity() == Eye.VisualAcuity.GOOD && eyes[1].getVisualAcuity() == Eye.VisualAcuity.GOOD;
+  }
+
+  public void readALot() {
+    eyes[0].setVisualAcuity(Eye.VisualAcuity.BAD);
+    eyes[1].setVisualAcuity(Eye.VisualAcuity.BAD);
+  }
+
   @Override
   public boolean canHear(Hearable hearable) {
     return hearable.getVolume() > 70;
@@ -182,6 +292,7 @@ public abstract class Person implements Cannable, Climber, HasCases, Hearer, Plu
   }
 
   public String warmUpArms() {
+    isStretched = false;
     String result = "";
     if (body.leftArm.getStatus() != Limb.HealthStatus.MISSING && body.rightArm.getStatus() != Limb.HealthStatus.MISSING) {
       result += "поднять руку, потом другую";
@@ -192,6 +303,7 @@ public abstract class Person implements Cannable, Climber, HasCases, Hearer, Plu
   }
 
   public String warmUpLegs() {
+    isStretched = false;
     String result = "";
     if (body.leftLeg.getStatus() != Limb.HealthStatus.MISSING && body.rightLeg.getStatus() != Limb.HealthStatus.MISSING) {
       result += "сделать шаг, другой";
@@ -217,9 +329,22 @@ public abstract class Person implements Cannable, Climber, HasCases, Hearer, Plu
     return isMale() ? "его" : "её";
   }
 
+  public String dativePronoun() {
+    return isMale() ? "ему" : "ей";
+  }
+
   public String checkFear(String reason) {
     String impression =  (currentImpression == Impression.SCARED ? " испугало " : " не испугало ");
     return reason + impression + genitiveCase();
+  }
+
+  public String checkStretched() {
+    var pronoun = pronoun() + " растянулся ";
+    if (isStretched) {
+      return pronoun + "во весь рост";
+    }
+
+    return pronoun + "в малую часть своего роста";
   }
 
   public String checkStandingAbility(String adverb) {
@@ -227,6 +352,14 @@ public abstract class Person implements Cannable, Climber, HasCases, Hearer, Plu
       return pronoun() + ' ' + adverb + " твердо держится на ногах";
     }
     return pronoun() + "не может стоять и падает";
+  }
+
+  public String locationDescription() {
+    var loc = getLocation().genitiveCase();
+    if (isFlying) return "Пролетая над " + loc;
+    if (isLying) return "Лежа возле " + loc;
+    if (isStretched) return "Растянувшись около " + loc;
+    return "Находясь у " + loc;
   }
 
   public String getSingularName() {

@@ -10,7 +10,13 @@ public enum Action {
   LOOK_AROUND("оглядеться по сторонам"),
   KNEW("он знал", "она знала"),
   CAN("может"),
-  TRIED("попробовал");
+  TRIED("попробовал"),
+  DISCERN("разглядеть"),
+  LOOKED_AROUND("огляделся по сторонам", "огляделась по сторонам"),
+  PLUMMET("стремительно падать"),
+  SUDDENLY_STARTED("вдруг начал", "вдруг начала"),
+  STRICTLY_SAY("строго сказал", "строго сказала"),
+  GO_TO_EXIT("бросились к выходу");
 
   private final String maleText;
   private final String femaleText;
@@ -23,6 +29,10 @@ public enum Action {
   Action(String maleText, String femaleText) {
     this.maleText = maleText;
     this.femaleText = femaleText;
+  }
+
+  public String getDefault() {
+    return maleText;
   }
 
   public String getDescription(Person person) {

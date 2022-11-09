@@ -30,9 +30,17 @@ public class Group <M extends Person> implements Cannable {
     this.members.add(member);
   }
 
+  public String takeAlarm() {
+    return "Все всполошились";
+  }
+
   @Override
   public String can(Supplier<String> action) {
     return description().toLowerCase() + " в любой момент могут " + action.get();
+  }
+
+  public String track(M somebody) {
+    return description() + " с напряжением следили за " + somebody.possessivePronoun() + " действиями";
   }
 
   public String description() {

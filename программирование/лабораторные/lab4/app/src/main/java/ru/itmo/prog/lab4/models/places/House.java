@@ -34,6 +34,14 @@ public class House extends Place {
     super(name);
   }
 
+  public String distanceDescription(Workshop workshop) {
+    return "которая находилась неподалеку от " + genitiveCase();
+  }
+
+  public String distanceDescription(Place place) {
+    return "которая находилась чрезвычайно далеко от " + genitiveCase();
+  }
+
   @Override
   public String dativeCase() {
     return "дому";

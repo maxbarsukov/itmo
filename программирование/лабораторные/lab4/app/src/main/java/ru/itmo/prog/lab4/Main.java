@@ -2,20 +2,18 @@ package ru.itmo.prog.lab4;
 
 import com.google.inject.Guice;
 import com.google.inject.Injector;
-import ru.itmo.prog.lab4.lib.events.EventBusImpl;
 import ru.itmo.prog.lab4.models.common.*;
-import ru.itmo.prog.lab4.models.events.OrderGiven;
-import ru.itmo.prog.lab4.models.events.WordsSpokenEvent;
+import ru.itmo.prog.lab4.models.events.*;
 import ru.itmo.prog.lab4.models.people.*;
 import ru.itmo.prog.lab4.models.places.*;
 import ru.itmo.prog.lab4.models.scene.Scene;
 import ru.itmo.prog.lab4.models.scene.Story;
+import ru.itmo.prog.lab4.models.things.Door;
+import ru.itmo.prog.lab4.models.things.Doorhandle;
 import ru.itmo.prog.lab4.models.things.Rope;
+import ru.itmo.prog.lab4.models.things.Vane;
 import ru.itmo.prog.lab4.models.weather.Weather;
-import ru.itmo.prog.lab4.modules.HouseModule;
-import ru.itmo.prog.lab4.modules.SceneModule;
-import ru.itmo.prog.lab4.modules.StoryModule;
-import ru.itmo.prog.lab4.modules.WeatherModule;
+import ru.itmo.prog.lab4.modules.*;
 import ru.itmo.prog.lab4.utils.Direction;
 import ru.itmo.prog.lab4.models.scene.Sentence;
 
@@ -29,7 +27,6 @@ public class Main {
 
     var sceneInjector = Guice.createInjector(new SceneModule());
     var scene = sceneInjector.getInstance(Scene.class);
-    sceneInjector.injectMembers(new EventBusImpl());
 
     setupCharacters(scene);
     setupLocations(scene);
@@ -40,13 +37,7 @@ public class Main {
     var bus = scene.getEventBus();
     bus.subscribe(new WordsSpokenEvent.Handler(mainCharacter));
     bus.subscribe(new OrderGiven.Handler());
-
-    var rope = new Rope();
-    try {
-      rope.pull("куда-нибудь");
-    } catch (Rope.NothingIsBindedException e) {
-      rope.bind(mainCharacter, scene.getCharactersGroup("коротышки"));
-    }
+    bus.subscribe(new NoOneExpectedEvent.Handler());
 
     Injector weatherInjector = Guice.createInjector(new WeatherModule());
     var weather = weatherInjector.getInstance(Weather.class);
@@ -81,7 +72,8 @@ public class Main {
     );
 
     story.addSentence(
-      new Sentence("Все всполошились и бросились к выходу")
+      new Sentence(scene.getCharactersGroup("все").takeAlarm())
+        .and(Action.GO_TO_EXIT.getDescription(mainCharacter))
     );
 
     bus.publish(
@@ -94,42 +86,52 @@ public class Main {
       }
     );
 
+    var rope = new Rope();
+    try {
+      rope.pull("куда-нибудь");
+    } catch (Rope.NothingIsBindedException e) {
+      story.addSentence(
+        new Sentence(
+          rope.bindWith(
+            mainCharacter,
+            scene.getCharactersGroup("коротышки"),
+            new Doorhandle()
+          ) + " и " + Action.STRICTLY_SAY.getDescription(mainCharacter),
+          ":"
+        )
+      );
+    }
+
+    var workshop = (Workshop) scene.getLocation(Workshop.DEFAULT_NAME);
     story.addSentence(
-      new Sentence("Знайка обвязал один конец веревки вокруг пояса, а другой конец привязал к дверной ручке и строго сказал", ":")
+      new Sentence(mainCharacter.jumpTo(workshop))
+        .comma(((House) scene.getLocation(House.DEFAULT_NAME)).distanceDescription(workshop))
     );
 
     story.addSentence(
-      new Sentence("Придав своему телу наклонное положение")
-        .comma("Знайка с силой оттолкнулся ногами от порога и полетел в направлении мастерской, которая находилась неподалеку от дома")
+      new Sentence(mainCharacter.jumpResult())
+    );
+
+    var vane = new Vane();
+    story.addSentence(
+      new Sentence(mainCharacter.locationDescription())
+        .comma(mainCharacter.grubHoldOf(vane))
+        .which(vane.description())
+    );
+
+    var doorToWorkshop = new Door(workshop);
+    story.addSentence(new Sentence("Это задержало полет"));
+    story.addSentence(
+      new Sentence(mainCharacter.goTo(scene.getLocation(Downpipe.DEFAULT_NAME), UnknownEntity.Direction.DOWN))
+        .comma(mainCharacter.goTo(doorToWorkshop))
     );
 
     story.addSentence(
-      new Sentence("Он немного не рассчитал толчка")
-        .and("поднялся выше, чем было надо")
+      new Sentence(scene.getCharactersGroup("коротышки").track(mainCharacter))
     );
 
     story.addSentence(
-      new Sentence("Пролетая над мастерской")
-        .comma("он ухватился рукой за флюгер")
-        .which("показывал направление ветра")
-    );
-
-    story.addSentence(
-      new Sentence("Это задержало полет")
-    );
-
-    story.addSentence(
-      new Sentence("Спустившись по водосточной трубе")
-        .comma("Знайка отворил дверь")
-        .and("проник в мастерскую")
-    );
-
-    story.addSentence(
-      new Sentence("Коротышки с напряжением следили за его действиями")
-    );
-
-    story.addSentence(
-      new Sentence("Через минуту Знайка выглянул из мастерской")
+      new Sentence(mainCharacter.peekOut(59))
     );
 
     story.addSentence(
@@ -143,20 +145,13 @@ public class Main {
 
     story.addSentence(
       new Sentence(
-        ((Gazebo) scene.getLocation(Gazebo.DEFAULT_NAME)).findShorty(
-          (Shorty) scene.getCharacter("Винтик")
-        )
+        ((Gazebo) scene.getLocation(Gazebo.DEFAULT_NAME)).findShorty((Shorty) scene.getCharacter("Винтик"))
       )
     );
 
     story.addSentence(
       new Sentence(
-        rope.pull(
-          new Direction(
-            Direction.Type.BACKWARD, Direction.Preposition.TO,
-            house.dativeCase()
-          ).toString()
-        )
+        rope.pull(new Direction(Direction.Type.BACKWARD, Direction.Preposition.TO, house.dativeCase()).toString())
       )
     );
 
@@ -178,34 +173,54 @@ public class Main {
         .that(scene.getCharactersGroup("коротышки").can(rope::pullBack))
     );
 
-    story.addSentence(
-      new Sentence("Ему")
-        .however("не удалось ничего разглядеть")
-        .because("в следующий момент произошло то, чего никто не ожидал")
+    AtomicReference<String> spanishInquisitionMessage = new AtomicReference<>("");
+    bus.publish(
+      new NoOneExpectedEvent(),
+      (event, handler) -> {
+        var e = (NoOneExpectedEvent) event;
+        spanishInquisitionMessage.set(e.execute() + NoOneExpectedEvent.GOOD_END);
+      },
+      (event, handler, exception) -> {
+        var e = (NoOneExpectedEvent) event;
+        spanishInquisitionMessage.set(e.execute() + exception.getMessage());
+      }
     );
 
     story.addSentence(
-      new Sentence("Не долетев до забора, Знайка вдруг начал стремительно падать")
-        .like("какая-то сила неожиданно потянула его вниз")
+      new Sentence(Utils.capitalize(mainCharacter.dativePronoun()))
+        .however(mainCharacter.tryTo(Action.DISCERN::getDefault))
+        .because(spanishInquisitionMessage.get())
     );
 
     story.addSentence(
-      new Sentence("Шлепнувшись с размаху о землю")
-        .comma("он растянулся во весь рост")
-        .and("не успел даже сообразить, что произошло")
+      new Sentence(mainCharacter.flyTo(new Place("забор") {
+          @Override public String dativeCase() { return getName() + "у"; }
+          @Override public String genitiveCase() { return getName() + "а"; }
+        },
+        () -> String.join(
+          " ",
+          mainCharacter.getName(),
+          Action.SUDDENLY_STARTED.getDescription(mainCharacter),
+          Action.PLUMMET.getDescription(mainCharacter)
+        )
+      )
+      ).like((new UnknownEntity("какая-то сила") {}).pull(mainCharacter, UnknownEntity.Direction.DOWN))
     );
 
-    mainCharacter.getBody().breakDown();
-    mainCharacter.setCurrentImpression(Impression.SURPRISED);
-
     story.addSentence(
-      new Sentence("Ощущая во всем теле страшную тяжесть")
-        .comma("он с трудом поднялся на ноги")
-        .and("огляделся по сторонам")
+      new Sentence(mainCharacter.flopAbout(Earth.getInstance()))
+        .comma(mainCharacter.checkStretched())
+        .and(mainCharacter.getCurrentImpression().reaction())
     );
 
     story.addSentence(
-      new Sentence(mainCharacter.getCurrentImpression().reaction(mainCharacter))
+      new Sentence(mainCharacter.bodyStatus())
+        .comma(mainCharacter.riseToYourFeet())
+        .and(Action.LOOKED_AROUND.getDescription(mainCharacter))
+    );
+
+    story.addSentence(
+      new Sentence(mainCharacter.react())
         .that(mainCharacter.checkStandingAbility("снова"))
     );
 
@@ -224,7 +239,11 @@ public class Main {
   }
 
   private static void setupCharacters(Scene scene) {
-    scene.setMainCharacter(new Shorty("Знайка", Sex.MALE, 56.99, JumpDistance.BIG.getDistance()));
+    var allKnow = new Shorty("Знайка", Sex.MALE, 56.99, JumpDistance.BIG.getDistance());
+    // Знайка много читает
+    allKnow.readALot();
+
+    scene.setMainCharacter(allKnow);
     scene.addCharacter(new Shorty("Незнайка", Sex.MALE, 58.9, JumpDistance.BIG.getDistance()));
     scene.addCharacter(new Shorty("Винтик", Sex.MALE, 67.0));
     scene.addCharacter(new Shorty("Шпунтик", Sex.MALE, 56.0));
@@ -242,6 +261,7 @@ public class Main {
     house.setRoof(house.new Roof(House.Roof.DEFAULT_NAME));
 
     scene.addLocation(house.getRoof());
+    scene.addLocation(Guice.createInjector(new WorkshopModule()).getInstance(Workshop.class));
     scene.addLocation(house);
     scene.addLocation(new Downpipe(scene.getMainCharacter().calculateTimeToClimb()));
     scene.addLocation(new Gazebo(new Group<>(new ArrayList<>() {{
