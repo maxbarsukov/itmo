@@ -8,6 +8,7 @@ import ru.itmo.prog.lab4.interfaces.things.Seized;
 import ru.itmo.prog.lab4.models.common.*;
 import ru.itmo.prog.lab4.models.places.Place;
 import ru.itmo.prog.lab4.models.things.Door;
+import ru.itmo.prog.lab4.utils.Utils;
 
 import java.util.Objects;
 import java.util.function.Supplier;

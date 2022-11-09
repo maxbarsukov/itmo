@@ -1,4 +1,4 @@
-package ru.itmo.prog.lab4.models.common;
+package ru.itmo.prog.lab4.utils;
 
 public class Utils {
   public static boolean randomBoolean(){

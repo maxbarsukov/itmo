@@ -6,7 +6,7 @@ import ru.itmo.prog.lab4.interfaces.Jumpable;
 import ru.itmo.prog.lab4.models.common.Action;
 import ru.itmo.prog.lab4.models.common.Impression;
 import ru.itmo.prog.lab4.models.common.JumpDistance;
-import ru.itmo.prog.lab4.models.common.Utils;
+import ru.itmo.prog.lab4.utils.Utils;
 import ru.itmo.prog.lab4.models.places.Place;
 
 import java.util.Objects;

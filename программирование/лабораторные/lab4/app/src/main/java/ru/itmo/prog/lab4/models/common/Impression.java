@@ -1,6 +1,7 @@
 package ru.itmo.prog.lab4.models.common;
 
 import ru.itmo.prog.lab4.models.people.Person;
+import ru.itmo.prog.lab4.utils.Utils;
 
 public enum Impression {
   SCARED,
