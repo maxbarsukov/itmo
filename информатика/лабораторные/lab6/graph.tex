@@ -1,0 +1,34 @@
+\newpage
+\thispagestyle{empty}
+
+\vspace{10em}
+
+\centering
+
+{\Large \textbf{Диаграмма состояний (граф переходов) конечного автомата}}\\[2em]
+Вариант: $1 + ((length(Barsukov) * length(Maksim))\mod 8) = \newline = 1 + ((8 * 6)\mod 8) = $ \textbf{1}
+
+\vspace{3em}
+
+\begin{tikzpicture} [scale=2, transform shape, node distance = 2cm, on grid]
+\node (b1) [state] at (-2,2) {$b_1$};
+\node (b2) [state, right = of b1] {$b_2$};
+\node (b3) [state, right = of b2] {$b_3$};
+\node (b4) [state, below = of b1] {$b_4$};
+\node (b5) [state, below = of b2] {$b_5$};
+\node (b6) [state, below = of b3] {$b_6$}; 
+\path [-stealth, thin] 
+    (b1) edge [loop left]  node {$z_1$}()
+    (b4) edge node[left] {$z_1$} (b1)
+    (b2) edge node[above, near start] {$z_1$} (b6)
+    (b3) edge [bend left] node[right] {$z_1$} (b6)
+    (b2) edge [loop above]  node {$z_2$}()
+    (b1) edge node[above right] {$z_2$} (b5)
+    (b6) edge [bend left] node[below] {$z_2$} (b4)
+    (b5) edge node[below] {$z_2$} (b4)
+    (b3) edge node[above] {$z_2$} (b2)
+    (b4) edge [loop left]  node {$z_3$}()
+    (b1) edge node[above] {$z_3$} (b2)
+    (b6) edge node[left] {$z_3$} (b3)
+    (b5) edge node[left, near start] {$z_3$} (b3);
+\end{tikzpicture}
