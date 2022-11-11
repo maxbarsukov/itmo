@@ -1,5 +1,5 @@
 # Fdb version 3
-["pdflatex"] 1668110748 "c:/Data/ITMO/itmo/информатика/лабораторные/lab6/main.tex" "main.pdf" "main" 1668110750
+["pdflatex"] 1668176046 "c:/Data/ITMO/itmo/информатика/лабораторные/lab6/main.tex" "main.pdf" "main" 1668176048
   "C:/Users/maxim/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1668097085 80909 eab91d9745dd2edfd62a31d53cd5fe15 ""
   "C:/Users/maxim/AppData/Local/MiKTeX/fonts/pk/ljfour/lh/lh-t2a/dpi600/labx1200.pk" 1668091988 29472 e3258ba66495a674be064f631a57683f ""
   "C:/Users/maxim/AppData/Local/MiKTeX/fonts/pk/ljfour/lh/lh-t2a/dpi600/labx1728.pk" 1668091983 45168 998bedd6e753d29bf5c04d433476ab0d ""
@@ -168,11 +168,11 @@
   "C:/Users/maxim/AppData/Local/Programs/MiKTeX/tex/latex/tools/calc.sty" 1654690828 10214 de3e21cfc0eccc98ca7f8dac0ef263d2 ""
   "C:/Users/maxim/AppData/Local/Programs/MiKTeX/tex/latex/tools/multicol.sty" 1654690828 32329 5d201ab4b4c773e7c876c2a052b07be3 ""
   "C:/Users/maxim/AppData/Local/Programs/MiKTeX/tex/latex/xcolor/xcolor.sty" 1656236890 56148 51a9a8571c07b9921892ae11063ae853 ""
-  "c:/Data/ITMO/itmo/информатика/лабораторные/lab6/main.tex" 1668108631 876 a170dae17f62c050f6069a066f6644af ""
+  "c:/Data/ITMO/itmo/информатика/лабораторные/lab6/main.tex" 1668111150 876 a170dae17f62c050f6069a066f6644af ""
   "graph.tex" 1668108684 1292 5f8a653bb689b69dc8d838a2be201c76 ""
   "images//fig3.png" 1668091086 23307 9c09527c0673e73259b7dc83fcb35685 ""
-  "main.aux" 1668110750 132 655c6400fc15544b7f70031f0cd5d0d5 "pdflatex"
-  "page.tex" 1668110747 5465 f77b54c53021b9c19d85d27bf54128e6 ""
+  "main.aux" 1668176048 132 655c6400fc15544b7f70031f0cd5d0d5 "pdflatex"
+  "page.tex" 1668176045 5474 ff8b786bd16f2e095e36a1c7380eb5ad ""
   "title.tex" 1668098741 953 5cd7a6a02ce11cabe986c71e589cc6c3 ""
   (generated)
   "main.aux"
