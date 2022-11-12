@@ -1,6 +1,6 @@
 # Основы Профессиональной Деятельности
 
-![Angry](https://github.com/maxbarsukov/itmo/blob/master/.docs/angry2.gif)
+<img alt="Angry" src="https://github.com/maxbarsukov/itmo/blob/master/.docs/angry2.gif" height="150">
 
 Задания для лаборатнорных работ: https://se.ifmo.ru/courses/csbasics#labs
 

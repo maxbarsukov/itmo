@@ -1,6 +1,6 @@
 # Программирование
 
-![Bongo](https://github.com/maxbarsukov/itmo/blob/master/.docs/bongo.gif)
+<img alt="Bongo" src="https://github.com/maxbarsukov/itmo/blob/master/.docs/bongo.gif" height="150">
 
 Задания для лаборатнорных работ: https://se.ifmo.ru/courses/programming#labs
 
