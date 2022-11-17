@@ -1,10 +1,41 @@
-\rfoot{\textbf{45\phantom{page}}}
+\setcounter{page}{44}
 \newgeometry{top=0cm, bottom=1.8cm, left=3.3cm, right=3.5cm} 
 
 \begin{multicols*}{2}
 \begin{figure}[H]
-  \vspace{0.83cm}
-  \fbox{\includegraphics[width=6.7cm]{fig3.png}}
+  \vspace{0.9cm}
+  \fbox{
+    \begin{tikzpicture}[scale=0.8, every node/.style={scale=0.8}]
+      \begin{axis}[
+          axis lines=middle,
+          axis line style={->},
+        xlabel = {$x$},
+        ylabel = {$y$},
+          ymax = 3,
+        ymin = -1.5,
+          xmax = 2.8,
+          xmin = -2.8,
+          xtick={-1, 1},
+          semithick,
+        ytick=\empty,
+          xlabel style={at={(ticklabel* cs:1)}, xshift=-4pt, anchor=north},
+          ylabel style={at={(ticklabel* cs:1)}, yshift=-4pt, anchor=east},
+      ]
+      \addplot[color=red, domain=-2.37:0.37, samples=300] {2*(x+1)^2 - 1};
+      \addplot[color=red, domain=-0.37:2.37, samples=300] {2*(x-1)^2 - 1};
+      \node[
+          anchor=north east,
+          outer sep=25*\pgflinewidth-3*\pgfkeysvalueof{/pgfplots/major tick length},
+          ]
+          at({xticklabel* cs:0}-|{yticklabel* cs:0})
+          {\pgfmathprintnumber{0}};
+      \draw [black, fill] (120, 150) circle (0pt) node [above] {$z_1$};
+      \draw [black, fill] (240, 150) circle (0pt) node [above] {$z_2$};
+      \draw [black, fill] (320, 150) circle (0pt) node [above] {$z_1$};
+      \draw [black, fill] (435, 150) circle (0pt) node [above] {$z_2$};
+      \end{axis}
+      \end{tikzpicture}
+  }
 	\caption*{Рис. 3.}
 \end{figure}
 \vspace{0.5cm}
@@ -121,3 +152,4 @@ $(z_1 < z_2)$
 то одновременно установлена необходимость и достаточность \mbox{условия (6).
 Остается решить}
 \end{multicols*}
+\newgeometry{left=1.5cm, right=1.5cm, top=1.5cm, bottom=1.5cm}
