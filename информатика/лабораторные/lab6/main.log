@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.10) (preloaded format=pdflatex 2022.11.10)  11 NOV 2022 17:14
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.10) (preloaded format=pdflatex 2022.11.10)  17 NOV 2022 12:21
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -881,14 +881,14 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 * layoutoffset:(h,v)=(0.0pt,0.0pt)
 * modes: 
 * h-part:(L,W,R)=(93.89418pt, 404.02905pt, 99.58464pt)
-* v-part:(T,H,B)=(19.91684pt, 805.21317pt, 19.91684pt)
+* v-part:(T,H,B)=(0.0pt, 793.8318pt, 51.21504pt)
 * \paperwidth=597.50787pt
 * \paperheight=845.04684pt
 * \textwidth=404.02905pt
-* \textheight=805.21317pt
+* \textheight=793.8318pt
 * \oddsidemargin=21.62419pt
 * \evensidemargin=21.62419pt
-* \topmargin=-89.35315pt
+* \topmargin=-109.26999pt
 * \headheight=12.0pt
 * \headsep=25.0pt
 * \topskip=12.0pt
@@ -909,71 +909,58 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 <images//fig3.png, id=15, 148.1535pt x 104.18925pt>
 File: images//fig3.png Graphic file (type png)
 <use images//fig3.png>
-Package pdftex.def Info: images//fig3.png  used on input line 8.
+Package pdftex.def Info: images//fig3.png  used on input line 7.
 (pdftex.def)             Requested size: 190.63338pt x 134.07399pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 39--46
-\T2A/cmr/m/n/12 венно рас-смот-реть со-от-вет-ству-
+Underfull \hbox (badness 5908) in paragraph at lines 38--45
+\T2A/cmr/m/n/12 ствен-но рас-смот-реть со-от-вет-ству-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 39--46
+Underfull \hbox (badness 10000) in paragraph at lines 38--45
 \T2A/cmr/m/n/12 ю-щее ей квад-рат-ное урав-не-ние
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 54--57
-
- []
-
-
-Overfull \hbox (10.36447pt too wide) in paragraph at lines 105--115
+Overfull \hbox (10.36447pt too wide) in paragraph at lines 105--118
 [][]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 105--115
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 117--120
+Underfull \hbox (badness 10000) in paragraph at lines 120--123
 []\T2A/cmr/m/n/12 Поскольку ис-чер-па-ны все
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 117--120
+Underfull \hbox (badness 10000) in paragraph at lines 120--123
 \T2A/cmr/m/n/12 воз-мож-ные ва-ри-ан-ты, то од-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 117--120
+Underfull \hbox (badness 10000) in paragraph at lines 120--123
 \T2A/cmr/m/n/12 но-вре-мен-но уста-нов-ле-на необ-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 117--120
+Underfull \hbox (badness 10000) in paragraph at lines 120--123
 \T2A/cmr/m/n/12 хо-ди-мость и до-ста-точ-ность
  []
 
-
-Overfull \vbox (1.50334pt too high) has occurred while \output is active []
-
- [2
+[2
 
  <./images//fig3.png>]) (graph.tex) [3] (main.aux) ) 
 Here is how much of TeX's memory you used:
  20382 strings out of 475385
  414453 string characters out of 2776906
- 851149 words of memory out of 3000000
+ 841149 words of memory out of 3000000
  41398 multiletter control sequences out of 15000+600000
  479469 words of font info for 55 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  84i,13n,89p,456b,817s stack positions out of 10000i,1000n,20000p,200000b,80000s
  <C:\Users\maxim\AppData\Local\MiKTeX\fonts/pk/ljfour/lh/lh-t2a/dpi600\lati1200.pk> <C:\Users\maxim\AppData\Local\MiKTeX\fonts/pk/ljfour/lh/lh-t2a/dpi600\labx1728.pk> <C:\Users\maxim\AppData\Local\MiKTeX\fonts/pk/ljfour/lh/lh-t2a/dpi600\larm1728.pk> <C:\Users\maxim\AppData\Local\MiKTeX\fonts/pk/ljfour/lh/lh-t2a/dpi600\larm1200.pk> <C:\Users\maxim\AppData\Local\MiKTeX\fonts/pk/ljfour/lh/lh-t2a/dpi600\labx1200.pk><C:/Users/maxim/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/maxim/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/maxim/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi6.pfb><C:/Users/maxim/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/maxim/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr5.pfb><C:/Users/maxim/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Users/maxim/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/maxim/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/maxim/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy6.pfb><C:/Users/maxim/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msam10.pfb>
-Output written on main.pdf (3 pages, 185168 bytes).
+Output written on main.pdf (3 pages, 184123 bytes).
 PDF statistics:
- 253 PDF objects out of 1000 (max. 8388607)
+ 250 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  18 words of extra memory for PDF output out of 10000 (max. 10000000)
 

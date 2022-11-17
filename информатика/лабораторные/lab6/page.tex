@@ -1,11 +1,10 @@
-\newgeometry{top=0.7cm, bottom=0.7cm, left=3.3cm, right=3.5cm} 
-\rfoot{\textbf{45}}
-\setlength{\headwidth}{\textwidth}
+\rfoot{\textbf{45\phantom{page}}}
+\newgeometry{top=0cm, bottom=1.8cm, left=3.3cm, right=3.5cm} 
 
-\begin{multicols}{2}
+\begin{multicols*}{2}
 \begin{figure}[H]
   \vspace{0.83cm}
-    \fbox{\includegraphics[width=6.7cm]{fig3.png}}
+  \fbox{\includegraphics[width=6.7cm]{fig3.png}}
 	\caption*{Рис. 3.}
 \end{figure}
 \vspace{0.5cm}
@@ -36,7 +35,7 @@ $-16/7 \leqslant m < -2$
 \textit{удовлетворяет \space\space условию $|x| < 1$, \space $|y| > 1$}?
 
 
-Наряду с системой $(2)$, $(3)$ естест-\linebreakвенно рассмотреть
+Наряду с системой $(2)$, $(3)$ естественно рассмотреть
 соответствующее ей квадратное уравнение
 \mbox{\centerline{$z^2 - 2(k + 1)z + k^2 + 3k - 1 = 0$. \space (4)}}
 \noindent
@@ -47,15 +46,15 @@ $-16/7 \leqslant m < -2$
 
 Легко переформулировать задачу для уравнения (4):
 \textit{при каких действительных k один из действительных корней
-уравнения (4) находится в интервале $(-1, 1)$, а другой корень
+уравнения $(4)$ находится в интервале $(-1, 1)$, а другой корень
 расположен вне этого интервала}.
 
 
 Так как у квадратного трехчлена $(4)$ должны существовать два различных
 действительных корня, то $D > 0$, и график левой части
-уравне-\newline
-\vfill\null
+уравне-
 \columnbreak
+
 ния $(4)$ - парабола, пересекающая\newlineось $z$ в двух различных точках
 $z_1$\newline и $z_2$ $(z_1 < z_2)$.
 
@@ -99,11 +98,14 @@ $z_1$ и $z_2$ относительно интервала $(-1, 1)$
 \newline
 $(z_1 < z_2)$
 
+\vspace{0.5cm}
 \tiny
-% \setlength\extrarowheight{2pt}    
+\setlength\extrarowheight{2pt}    
 {\centering
 \begin{tabular}{ c | c | c | c }
+  & & & \\
   & $z_2 < -1$ & $-1 < z_2 < 1$ & $z_2 > 1$ \\
+  & & & \\
   \hline
   $z_1 < -1$ & $(+)(+)=+$ & $(-)(+)=-$ & $(-)(-)=+$ \\
   $-1 < z_1 < 1$ & $-$ & $(+)(+)=+$ & $(+)(-)=-$ \\
@@ -112,9 +114,10 @@ $(z_1 < z_2)$
 \end{tabular}
 }
 \normalsize
+\vspace{0.35cm}
 
 
 Поскольку исчерпаны все возможные варианты,
 то одновременно установлена необходимость и достаточность \mbox{условия (6).
 Остается решить}
-\end{multicols}
+\end{multicols*}
