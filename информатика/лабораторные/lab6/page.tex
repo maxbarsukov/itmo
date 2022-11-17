@@ -5,19 +5,19 @@
 \begin{figure}[H]
   \vspace{0.9cm}
   \fbox{
-    \begin{tikzpicture}[scale=0.8, every node/.style={scale=0.8}]
+    \begin{tikzpicture}[scale=0.8]
       \begin{axis}[
           axis lines=middle,
           axis line style={->},
-        xlabel = {$x$},
-        ylabel = {$y$},
+          xlabel = {$x$},
+          ylabel = {$y$},
           ymax = 3,
-        ymin = -1.5,
+          ymin = -1.5,
           xmax = 2.8,
           xmin = -2.8,
           xtick={-1, 1},
           semithick,
-        ytick=\empty,
+          ytick=\empty,
           xlabel style={at={(ticklabel* cs:1)}, xshift=-4pt, anchor=north},
           ylabel style={at={(ticklabel* cs:1)}, yshift=-4pt, anchor=east},
       ]
@@ -29,9 +29,9 @@
           ]
           at({xticklabel* cs:0}-|{yticklabel* cs:0})
           {\pgfmathprintnumber{0}};
-      \draw [black, fill] (120, 150) circle (0pt) node [above] {$z_1$};
-      \draw [black, fill] (240, 150) circle (0pt) node [above] {$z_2$};
-      \draw [black, fill] (320, 150) circle (0pt) node [above] {$z_1$};
+      \draw [black, fill] (125, 150) circle (0pt) node [above] {$z_1$};
+      \draw [black, fill] (235, 150) circle (0pt) node [above] {$z_2$};
+      \draw [black, fill] (325, 150) circle (0pt) node [above] {$z_1$};
       \draw [black, fill] (435, 150) circle (0pt) node [above] {$z_2$};
       \end{axis}
       \end{tikzpicture}

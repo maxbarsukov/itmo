@@ -1,5 +1,5 @@
 # Fdb version 3
-["pdflatex"] 1668687062 "c:/Data/ITMO/itmo/информатика/лабораторные/lab6/main.tex" "main.pdf" "main" 1668687066
+["pdflatex"] 1668690370 "c:/Data/ITMO/itmo/информатика/лабораторные/lab6/main.tex" "main.pdf" "main" 1668690373
   "C:/Users/maxim/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1668679121 80909 eab91d9745dd2edfd62a31d53cd5fe15 ""
   "C:/Users/maxim/AppData/Local/MiKTeX/fonts/pk/ljfour/lh/lh-t2a/dpi600/labx1200.pk" 1668091988 29472 e3258ba66495a674be064f631a57683f ""
   "C:/Users/maxim/AppData/Local/MiKTeX/fonts/pk/ljfour/lh/lh-t2a/dpi600/labx1728.pk" 1668091983 45168 470c69e23efadbb136c5c1519b91395c ""
@@ -213,9 +213,9 @@
   "C:/Users/maxim/AppData/Local/Programs/MiKTeX/tex/latex/xcolor/xcolor.sty" 1656236890 56148 51a9a8571c07b9921892ae11063ae853 ""
   "c:/Data/ITMO/itmo/информатика/лабораторные/lab6/main.tex" 1668686172 938 2f00878c84ca7b3be8ac99ccc4e6f41e ""
   "graph.tex" 1668108684 1292 07deaf3e4465ecae2affbaf66e188ede ""
-  "main.aux" 1668687066 132 655c6400fc15544b7f70031f0cd5d0d5 "pdflatex"
+  "main.aux" 1668690372 132 655c6400fc15544b7f70031f0cd5d0d5 "pdflatex"
   "main.tex" 1668686172 938 2f00878c84ca7b3be8ac99ccc4e6f41e ""
-  "page.tex" 1668687060 6738 ed5aa449942fe44aebb8400a886f5d59 ""
+  "page.tex" 1668690366 6715 07f176169a1c5a6664c4c09589c10d6a ""
   "title.tex" 1668680381 955 60ea5e971dd092afed66c6a2f2da906b ""
   (generated)
   "main.aux"
