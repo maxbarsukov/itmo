@@ -1,0 +1,144 @@
+ORG 0
+START:
+    result_code: WORD ?
+    result: WORD ?
+
+    data: WORD 0x32, 0x30, 0x38, 0x39
+    data_length: WORD 4
+
+    result_code_address: WORD $result_code
+    result_address: WORD $result
+    first_elem_address: WORD $data
+
+    CLA
+    LD first_elem_address
+    PUSH
+    LD data_length
+    PUSH
+    LD result_address
+    PUSH
+    LD result_code_address
+    PUSH
+
+    CALL ascii_to_int
+
+    POP
+    POP
+    POP
+    POP
+    HLT
+
+
+ascii_to_int:
+    ; Переводит строку из ASCII символов в беззнаковое число
+    ; &1 = result_code_address, &2 = result_address
+    ; &3 = data_length, $4 = first_elem_address 
+    ASCII0: WORD 0x30
+    ASCII9: WORD 0x39
+
+    rc_addr: WORD ?
+    r_addr: WORD ?
+    fe_addr: WORD ?
+
+    LD &1
+    ST rc_addr
+    LD &2
+    ST r_addr
+    LD &4
+    ST fe_addr
+
+    LD fe_addr
+    CMP #0
+    BEQ if_zero_elements
+    JUMP if_not_zero_elements
+    if_zero_elements:
+        CLA
+        ST (rc_addr)
+        ST (r_addr)
+        RET
+    
+    if_not_zero_elements:
+    arr: WORD 4 DUP (0x30)
+    arr_addr: WORD $arr
+
+    LD &3
+    INC
+    data_length_plus_1: WORD ?
+    ST data_length_plus_1
+
+    validation_cycle_go_back: LOOP data_length_plus_1
+    JUMP validation_cycle_body
+    JUMP after_validation_cycle
+    validation_cycle_body:
+        value: WORD ?
+        CLA
+        ADD (fe_addr)+
+        ST value
+
+        LD value
+        CMP ASCII0
+        BMI bad_value
+        CMP ASCII9
+        BEQ good_value
+        BPL bad_value
+        JUMP good_value
+        bad_value:
+            CLA
+            INC
+            ST (rc_addr)
+            RET
+
+        good_value:
+            LD value
+            SUB ASCII0
+            ST (arr_addr)+
+
+        JUMP validation_cycle_go_back
+    
+    after_validation_cycle:
+    LD arr_addr
+    SUB &3
+    ST arr_addr ; обнуляем указатель на начало массива
+
+    pows10: WORD 10, 100, 1000
+    pows10_addr: WORD $pows10
+
+    res: WORD ?
+    LD (arr_addr)+
+    ST res
+
+    LD &3
+    do_arr_length_times: WORD ?
+    ST do_arr_length_times
+
+    values_cycle_go_back: LOOP do_arr_length_times
+    JUMP values_cycle_body
+    JUMP after_values_cycle
+    values_cycle_body:
+        LD (arr_addr)+
+        INC
+        times_to_add: WORD ?
+        ST times_to_add
+
+        value_to_add: WORD ?
+        LD (pows10_addr)+
+        ST value_to_add
+
+        add_value_cycle_go_back: LOOP times_to_add
+        JUMP add_value_cycle_body
+        JUMP after_add_value_cycle
+        add_value_cycle_body:
+            LD res
+            ADD value_to_add
+            ST res
+            JUMP add_value_cycle_go_back
+
+        after_add_value_cycle:
+        JUMP values_cycle_go_back
+    
+    after_values_cycle:
+    CLA
+    ST (rc_addr)
+    LD res
+    ST (r_addr)
+    RET
