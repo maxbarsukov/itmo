@@ -10,7 +10,6 @@ START:
     result_address: WORD $result
     first_elem_address: WORD $data
 
-    CLA
     LD first_elem_address
     PUSH
     LD data_length

@@ -25,9 +25,9 @@ void conversion(int* first_elem_ref, int array_legth, int* result, int* result_c
         i++;
     }
 
-    int res = *arr; // первый элемент
+    int res = *arr;
     const int pows10[4] = {1, 10, 100, 1000};
-    // -----------------------
+
     i = 1;
     while (i < array_legth) {
         int temp = *(arr + i);
