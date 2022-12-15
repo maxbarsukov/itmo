@@ -42,4 +42,6 @@ for i in range(4):
     n = cur_date + ' - Close'
     fig.add_trace(go.Box(y=pd.DataFrame(d_close[i], columns=[n])[n], name=n))
 
+fig.update_layout(legend=dict(yanchor="top", orientation="h", y=1.2))
+fig.update_xaxes(tickangle=90, title_standoff=25)
 fig.show()
