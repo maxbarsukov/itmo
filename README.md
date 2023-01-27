@@ -18,8 +18,9 @@
 
 | Ссылка | Описание |
 | --- | --- |
-| https://t.me/ITMOhomework | канал с большим количеством материалов, примеры готовых лабораторных работ |
-| https://github.com/EgorMIt/ITMO | какой-то студентй из старичков, много готовых лаб и ДЗ |
+| https://t.me/ITMOhomework | Канал с примерами готовых лабораторных работ |
+| https://github.com/EgorMIt/ITMO <br> https://github.com/RomanVassilchenko/ITMOProjects <br> https://github.com/band-of-four/cheatsheets | Много готовых лаб и ДЗ |
 | https://picloud.pw/about/ | Некоторые ДЗ и лабораторные |
-| https://rosroble.github.io/ | Полезная инфа по лабам |
+| https://rosroble.github.io/ | Полезная инфа по лабораторным |
+| https://dima.mysoftware.ru/P3110.html | Полезные ссылки |
 | https://telegra.ph/Poleznye-ssylki-dlya-pervokursnikov-VT-08-26 | Другие полезные ссылки |
