@@ -1,4 +1,4 @@
-# Базовая Математика
+# Математика (Базовый уровень)
 
 <img alt="Hug" src="https://github.com/maxbarsukov/itmo/blob/master/.docs/hug.gif" height="150">
 
