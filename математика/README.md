@@ -2,7 +2,7 @@
 
 # Математика (Продвинутый уровень)
 
-<img alt="Happy1" src="https://github.com/maxbarsukov/itmo/blob/master/.docs/happy1.gif" height="150">
+<img alt="Happy1" src="https://github.com/maxbarsukov/itmo/blob/master/.docs/happy1.gif" height="250">
 
 ## Полезные ссылки
 
