@@ -1,0 +1,35 @@
+\documentclass[a4paper,12pt,openany]{article}
+
+\IfFileExists{pscyr.sty}{\usepackage{pscyr}}{}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T2A]{fontenc}
+\usepackage[english, russian]{babel}
+\usepackage{subfiles}
+\usepackage[bookmarks]{hyperref}
+\usepackage{pgfpatch}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{color}
+\usepackage{cmap}
+\usepackage{graphicx}
+\usepackage{indentfirst}
+\usepackage{titling}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage{esint}
+\usepackage{soul}
+\usepackage{cancel}
+\usepackage{centernot}
+\usepackage{ulem}
+
+\usepackage[left=2cm,right=2cm,top=2cm,bottom=3cm,bindingoffset=0cm]{geometry}
+
+\input{tikz-stylesheet.tikzstyles}
+
+\begin{document}
+    \input{files/title}
+    \input{files/answers}
+\end{document}
