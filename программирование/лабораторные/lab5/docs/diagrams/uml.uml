@@ -1,0 +1,1646 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement>ru.itmo.prog.lab5.models.Coordinates</OriginalElement>
+  <nodes>
+    <node x="4489.562489272468" y="3375.0">ru.itmo.prog.lab5.managers.CollectionManager</node>
+    <node x="596.6049999999996" y="6784.0">ru.itmo.prog.lab5.commands.Help</node>
+    <node x="6045.3127482169075" y="3559.5">ru.itmo.prog.lab5.models.forms.UnitOfMeasureForm</node>
+    <node x="6180.8304761904765" y="5806.5">ru.itmo.prog.lab5.exceptions.ScriptRecursionException</node>
+    <node x="3881.376364288336" y="1247.0">com.google.gson.JsonSerializer</node>
+    <node x="9409.304414883572" y="3596.0">ru.itmo.prog.lab5.exceptions.WrongAmountOfElementsException</node>
+    <node x="4144.063981538654" y="2662.0">ru.itmo.prog.lab5.managers.DumpManager</node>
+    <node x="6643.2814982169075" y="5678.0">ru.itmo.prog.lab5.models.forms.ProductForm</node>
+    <node x="10585.554414883572" y="2034.0">java.lang.Throwable.SentinelHolder</node>
+    <node x="4973.758425983098" y="105.0">java.lang.Enum</node>
+    <node x="2706.554504169289" y="7205.5">ru.itmo.prog.lab5.Main</node>
+    <node x="1850.528867201449" y="5758.5">ru.itmo.prog.lab5.commands.Info</node>
+    <node x="6537.493669038654" y="555.5">ru.itmo.prog.lab5.models.OrganizationType</node>
+    <node x="7245.7189982169075" y="2651.0">ru.itmo.prog.lab5.utility.Interrogator</node>
+    <node x="4823.376364288336" y="1177.5">ru.itmo.prog.lab5.models.UnitOfMeasure</node>
+    <node x="4091.063981538654" y="2046.0">ru.itmo.prog.lab5.utility.LocalDateAdapter</node>
+    <node x="237.69204160358913" y="5770.0">ru.itmo.prog.lab5.commands.ExecuteScript</node>
+    <node x="10300.304414883572" y="2034.0">java.lang.Throwable.PrintStreamOrWriter</node>
+    <node x="3886.223276722637" y="6784.0">ru.itmo.prog.lab5.commands.Add</node>
+    <node x="4901.376364288336" y="1849.0">ru.itmo.prog.lab5.models.Product</node>
+    <node x="8057.287748216906" y="555.0">ru.itmo.prog.lab5.models.Address</node>
+    <node x="2477.6145814871634" y="5758.5">ru.itmo.prog.lab5.commands.Head</node>
+    <node x="878.9621428571427" y="6749.5">ru.itmo.prog.lab5.utility.Runner</node>
+    <node x="10410.304414883572" y="2685.0">java.lang.Throwable.WrappedPrintWriter</node>
+    <node x="3562.223276722637" y="6772.5">ru.itmo.prog.lab5.commands.AddIfMax</node>
+    <node x="1628.136624936923" y="3572.0">ru.itmo.prog.lab5.commands.Describable</node>
+    <node x="10121.304414883572" y="2685.0">java.lang.Throwable.WrappedPrintStream</node>
+    <node x="9167.899919038653" y="1999.5">java.lang.Exception</node>
+    <node x="7982.948530149765" y="12.5">java.io.Serializable</node>
+    <node x="823.5246232169065" y="7159.0">ru.itmo.prog.lab5.utility.Runner.ExitCode</node>
+    <node x="690.6920416035891" y="5759.0">ru.itmo.prog.lab5.managers.CommandManager</node>
+    <node x="6202.2679761904765" y="1073.0">ru.itmo.prog.lab5.models.Organization</node>
+    <node x="9974.699226190474" y="820.0">java.lang.Throwable</node>
+    <node x="7564.899919038654" y="267.5">ru.itmo.prog.lab5.utility.Validatable</node>
+    <node x="1069.6947201750181" y="5758.5">ru.itmo.prog.lab5.commands.Show</node>
+    <node x="2167.6145814871634" y="5758.5">ru.itmo.prog.lab5.commands.Save</node>
+    <node x="8206.06658570532" y="5806.5">ru.itmo.prog.lab5.exceptions.CollectionIsEmptyException</node>
+    <node x="7764.1877482169075" y="4257.0">ru.itmo.prog.lab5.models.forms.OrganizationForm</node>
+    <node x="10.5" y="6715.0">ru.itmo.prog.lab5.utility.console.StandardConsole</node>
+    <node x="4034.0414585408193" y="5747.0">ru.itmo.prog.lab5.commands.FilterContainsPartNumber</node>
+    <node x="8391.637748216906" y="2733.0">ru.itmo.prog.lab5.exceptions.IncorrectInputInScriptException</node>
+    <node x="9227.637748216908" y="2733.0">ru.itmo.prog.lab5.exceptions.MustBeNotEmptyException</node>
+    <node x="6830.2189982169075" y="6784.0">ru.itmo.prog.lab5.commands.Update</node>
+    <node x="8494.06658570532" y="5806.5">ru.itmo.prog.lab5.exceptions.NotFoundException</node>
+    <node x="4703.551875207486" y="6772.5">ru.itmo.prog.lab5.commands.SumOfPrice</node>
+    <node x="2710.3740058893036" y="1976.5">ru.itmo.prog.lab5.utility.console.Console</node>
+    <node x="7523.1877482169075" y="3536.5">ru.itmo.prog.lab5.models.forms.CoordinatesForm</node>
+    <node x="4379.551875207486" y="6772.5">ru.itmo.prog.lab5.commands.AddIfMin</node>
+    <node x="2914.1131529157346" y="5747.0">ru.itmo.prog.lab5.commands.FilterByPrice</node>
+    <node x="463.69204160358913" y="5770.0">ru.itmo.prog.lab5.commands.Exit</node>
+    <node x="8935.637748216908" y="2733.0">ru.itmo.prog.lab5.exceptions.NotInDeclaredLimitsException</node>
+    <node x="8707.637748216906" y="2733.0">ru.itmo.prog.lab5.exceptions.InvalidFormException</node>
+    <node x="1670.4373613121452" y="4291.5">ru.itmo.prog.lab5.commands.Command</node>
+    <node x="9869.304414883572" y="2733.0">ru.itmo.prog.lab5.exceptions.HistoryIsEmptyException</node>
+    <node x="7772.4377482169075" y="2720.5">ru.itmo.prog.lab5.models.forms.Form</node>
+    <node x="1803.136624936923" y="3583.5">ru.itmo.prog.lab5.commands.Executable</node>
+    <node x="8167.637748216906" y="3536.5">ru.itmo.prog.lab5.models.forms.AddressForm</node>
+    <node x="4338.376364288336" y="1247.0">com.google.gson.JsonDeserializer</node>
+    <node x="7247.1877482169075" y="3559.5">ru.itmo.prog.lab5.models.forms.OrganizationTypeForm</node>
+    <node x="1539.528867201449" y="5758.5">ru.itmo.prog.lab5.commands.Clear</node>
+    <node x="7632.038441065085" y="1177.0">ru.itmo.prog.lab5.models.Coordinates</node>
+    <node x="4925.383425983098" y="0.0">java.lang.Comparable</node>
+    <node x="6005.938113483098" y="625.0">ru.itmo.prog.lab5.utility.Element</node>
+    <node x="5152.029294038654" y="6784.0">ru.itmo.prog.lab5.commands.RemoveById</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="ru.itmo.prog.lab5.Main" target="ru.itmo.prog.lab5.commands.Info">
+      <point x="-22.25" y="-27.5" />
+      <point x="2773.304504169289" y="7029.0" />
+      <point x="1995.528867201449" y="7029.0" />
+      <point x="0.0" y="63.0" />
+    </edge>
+    <edge source="ru.itmo.prog.lab5.commands.SumOfPrice" target="ru.itmo.prog.lab5.models.Product">
+      <point x="28.90909090909099" y="-74.5" />
+      <point x="4891.460966116577" y="6345.0" />
+      <point x="5065.733839493199" y="6345.0" />
+      <point x="5065.733839493199" y="5288.0" />
+      <point x="6300.8127482169075" y="5288.0" />
+      <point x="6300.8127482169075" y="2561.0" />
+      <point x="5297.843030955003" y="2561.0" />
+      <point x="83.46666666666715" y="236.0" />
+    </edge>
+    <edge source="ru.itmo.prog.lab5.commands.FilterContainsPartNumber" target="ru.itmo.prog.lab5.exceptions.WrongAmountOfElementsException">
+      <point x="184.8888888888887" y="-74.5" />
+      <point x="4426.9303474297085" y="5508.0" />
+      <point x="9168.72108155024" y="5508.0" />
+      <point x="9168.72108155024" y="4217.0" />
+      <point x="9497.304414883572" y="4217.0" />
+      <point x="-56.0" y="15.0" />
+    </edge>
+    <edge source="ru.itmo.prog.lab5.models.forms.UnitOfMeasureForm" target="ru.itmo.prog.lab5.models.UnitOfMeasure">
+      <point x="-19.5" y="-51.5" />
+      <point x="6142.8127482169075" y="2965.0" />
+      <point x="4890.876364288336" y="2965.0" />
+      <point x="4890.876364288336" y="1829.0" />
+      <point x="4916.376364288336" y="1829.0" />
+      <point x="-31.0" y="97.0" />
+    </edge>
+    <edge source="ru.itmo.prog.lab5.Main" target="ru.itmo.prog.lab5.commands.Add">
+      <point x="34.96428571428578" y="-27.5" />
+      <point x="2830.5187898835748" y="7059.0" />
+      <point x="4031.223276722637" y="7059.0" />
+      <point x="0.0" y="63.0" />
+    </edge>
+    <edge source="ru.itmo.prog.lab5.commands.RemoveById" target="ru.itmo.prog.lab5.models.Product">
+      <point x="0.0" y="-63.0" />
+      <point x="5311.029294038654" y="5308.0" />
+      <point x="6402.0627482169075" y="5308.0" />
+      <point x="6402.0627482169075" y="2541.0" />
+      <point x="5381.309697621669" y="2541.0" />
+      <point x="166.9333333333334" y="236.0" />
+    </edge>
+    <edge source="ru.itmo.prog.lab5.commands.AddIfMin" target="ru.itmo.prog.lab5.managers.CollectionManager">
+      <point x="-37.999999999999545" y="-74.5" />
+      <point x="4493.551875207486" y="6195.0" />
+      <point x="4471.54145854082" y="6195.0" />
+      <point x="4471.54145854082" y="5208.0" />
+      <point x="4798.503252371987" y="5208.0" />
+      <point x="4798.503252371987" y="4217.0" />
+      <point x="4670.859364272468" y="4217.0" />
+      <point x="39.796875" y="236.0" />
+    </edge>
+    <edge source="ru.itmo.prog.lab5.commands.RemoveById" target="ru.itmo.prog.lab5.exceptions.WrongAmountOfElementsException">
+      <point x="48.92307692307713" y="-63.0" />
+      <point x="5359.9523709617315" y="6575.0" />
+      <point x="8195.56658570532" y="6575.0" />
+      <point x="8195.56658570532" y="5618.0" />
+      <point x="9637.804414883572" y="5618.0" />
+      <point x="9637.804414883572" y="4237.0" />
+      <point x="9657.304414883572" y="4237.0" />
+      <point x="104.0" y="15.0" />
+    </edge>
+    <edge source="ru.itmo.prog.lab5.utility.LocalDateAdapter" target="com.google.gson.JsonDeserializer">
+      <point x="130.25" y="-39.0" />
+      <point x="4481.813981538654" y="1829.0" />
+      <point x="4570.876364288336" y="1829.0" />
+      <point x="0.0" y="27.5" />
+    </edge>
+    <edge source="java.lang.Throwable.PrintStreamOrWriter" target="java.lang.Throwable">
+      <point x="0.0" y="-51.0" />
+      <point x="10400.304414883572" y="1829.0" />
+      <point x="10354.199226190474" y="1829.0" />
+      <point x="0.0" y="454.5" />
+    </edge>
+    <edge source="java.lang.Throwable.WrappedPrintWriter" target="java.lang.Throwable">
+      <point x="67.25" y="-63.0" />
+      <point x="10612.054414883572" y="2631.0" />
+      <point x="10575.054414883572" y="2631.0" />
+      <point x="10575.054414883572" y="1829.0" />
+      <point x="10505.999226190474" y="1829.0" />
+      <point x="151.79999999999927" y="454.5" />
+    </edge>
+    <edge source="ru.itmo.prog.lab5.utility.console.StandardConsole" target="ru.itmo.prog.lab5.utility.console.Console">
+      <point x="0.0" y="-132.0" />
+      <point x="141.5" y="2341.0" />
+      <point x="2712.9940058893035" y="2341.0" />
+      <point x="-128.3800000000001" y="108.5" />
+    </edge>
+    <edge source="ru.itmo.prog.lab5.Main" target="ru.itmo.prog.lab5.commands.Clear">
+      <point x="-28.607142857142662" y="-27.5" />
+      <point x="2766.9473613121463" y="7039.0" />
+      <point x="1684.528867201449" y="7039.0" />
+      <point x="0.0" y="63.0" />
+    </edge>
+    <edge source="ru.itmo.prog.lab5.commands.Show" target="ru.itmo.prog.lab5.utility.console.Console">
+      <point x="-72.5" y="-63.0" />
+      <point x="1142.1947201750181" y="4788.0" />
+      <point x="869.8306351216688" y="4788.0" />
+      <point x="869.8306351216688" y="2441.0" />
+      <point x="2765.3940058893036" y="2441.0" />
+      <point x="-75.98000000000002" y="108.5" />
+    </edge>
+    <edge source="ru.itmo.prog.lab5.exceptions.NotInDeclaredLimitsException" target="java.lang.Exception">
+      <point x="0.0" y="-15.0" />
+      <point x="9071.637748216908" y="2631.0" />
+      <point x="9313.344363483098" y="2631.0" />
+      <point x="-41.55555555555475" y="85.5" />
+    </edge>
+    <edge source="ru.itmo.prog.lab5.commands.SumOfPrice" target="ru.itmo.prog.lab5.managers.CollectionManager">
+      <point x="0.0" y="-74.5" />
+      <point x="4862.551875207486" y="6125.0" />
+      <point x="4668.008788086274" y="6125.0" />
+      <point x="4668.008788086274" y="5238.0" />
+      <point x="4840.347002371987" y="5238.0" />
+      <point x="4840.347002371987" y="4017.0" />
+      <point x="4697.390614272468" y="4017.0" />
+      <point x="66.328125" y="236.0" />
+    </edge>
+    <edge source="ru.itmo.prog.lab5.commands.RemoveById" target="ru.itmo.prog.lab5.managers.CollectionManager">
+      <point x="-24.46153846153811" y="-63.0" />
+      <point x="5286.567755577116" y="6065.0" />
+      <point x="4687.852538086274" y="6065.0" />
+      <point x="4687.852538086274" y="5258.0" />
+      <point x="4860.190752371987" y="5258.0" />
+      <point x="4860.190752371987" y="3997.0" />
+      <point x="4715.078114272468" y="3997.0" />
+      <point x="84.015625" y="236.0" />
+    </edge>
+    <edge source="ru.itmo.prog.lab5.models.Product" target="ru.itmo.prog.lab5.managers.CollectionManager">
+      <point x="-83.46666666666624" y="236.0" />
+      <point x="5130.90969762167" y="2601.0" />
+      <point x="5267.063981538654" y="2601.0" />
+      <point x="5267.063981538654" y="3105.0" />
+      <point x="4662.506933716912" y="3105.0" />
+      <point x="31.444444444444343" y="-236.0" />
+    </edge>
+    <edge source="ru.itmo.prog.lab5.commands.SumOfPrice" target="ru.itmo.prog.lab5.exceptions.WrongAmountOfElementsException">
+      <point x="86.72727272727298" y="-74.5" />
+      <point x="4949.279147934759" y="6555.0" />
+      <point x="8173.566585705321" y="6555.0" />
+      <point x="8173.566585705321" y="5598.0" />
+      <point x="9615.804414883572" y="5598.0" />
+      <point x="9615.804414883572" y="4217.0" />
+      <point x="9625.304414883572" y="4217.0" />
+      <point x="72.0" y="15.0" />
+    </edge>
+    <edge source="ru.itmo.prog.lab5.commands.Clear" target="ru.itmo.prog.lab5.utility.console.Console">
+      <point x="-120.83333333333348" y="-63.0" />
+      <point x="1563.6955338681155" y="4798.0" />
+      <point x="1555.2182142857146" y="4798.0" />
+      <point x="1555.2182142857146" y="2481.0" />
+      <point x="2786.3540058893036" y="2481.0" />
+      <point x="-55.01999999999998" y="108.5" />
+    </edge>
+    <edge source="ru.itmo.prog.lab5.models.forms.UnitOfMeasureForm" target="ru.itmo.prog.lab5.exceptions.IncorrectInputInScriptException">
+      <point x="97.5" y="-51.5" />
+      <point x="6259.8127482169075" y="3235.0" />
+      <point x="8406.437748216906" y="3235.0" />
+      <point x="-133.20000000000073" y="15.0" />
+    </edge>
+    <edge source="ru.itmo.prog.lab5.models.forms.AddressForm" target="ru.itmo.prog.lab5.exceptions.InvalidFormException">
+      <point x="24.0" y="-74.5" />
+      <point x="8287.637748216906" y="3295.0" />
+      <point x="8746.637748216906" y="3295.0" />
+      <point x="-65.0" y="15.0" />
+    </edge>
+    <edge source="ru.itmo.prog.lab5.Main" target="ru.itmo.prog.lab5.commands.Update">
+      <point x="79.46428571428578" y="-27.5" />
+      <point x="2875.0187898835748" y="7129.0" />
+      <point x="6975.2189982169075" y="7129.0" />
+      <point x="0.0" y="63.0" />
+    </edge>
+    <edge source="ru.itmo.prog.lab5.commands.ExecuteScript" target="ru.itmo.prog.lab5.commands.Command">
+      <point x="77.25" y="-51.5" />
+      <point x="417.94204160358913" y="4818.0" />
+      <point x="1679.5659327407166" y="4818.0" />
+      <point x="-97.37142857142862" y="86.0" />
+    </edge>
+    <edge source="ru.itmo.prog.lab5.Main" target="ru.itmo.prog.lab5.commands.FilterContainsPartNumber">
+      <point x="41.32142857142844" y="-27.5" />
+      <point x="2836.8759327407174" y="7069.0" />
+      <point x="4242.04145854082" y="7069.0" />
+      <point x="0.0" y="74.5" />
+    </edge>
+    <edge source="ru.itmo.prog.lab5.commands.Show" target="ru.itmo.prog.lab5.commands.Command">
+      <point x="72.5" y="-63.0" />
+      <point x="1287.1947201750181" y="4908.0" />
+      <point x="1734.3373613121453" y="4908.0" />
+      <point x="-42.59999999999991" y="86.0" />
+    </edge>
+    <edge source="ru.itmo.prog.lab5.commands.AddIfMax" target="ru.itmo.prog.lab5.models.forms.ProductForm">
+      <point x="38.0" y="-74.5" />
+      <point x="3752.223276722637" y="6375.0" />
+      <point x="6683.9064982169075" y="6375.0" />
+      <point x="-121.875" y="143.5" />
+    </edge>
+    <edge source="ru.itmo.prog.lab5.commands.Add" target="ru.itmo.prog.lab5.managers.CollectionManager">
+      <point x="-26.363636363636033" y="-63.0" />
+      <point x="4004.859640359001" y="6245.0" />
+      <point x="3982.69560556725" y="6245.0" />
+      <point x="3982.69560556725" y="5168.0" />
+      <point x="4519.313649398418" y="5168.0" />
+      <point x="4519.313649398418" y="4227.0" />
+      <point x="4635.484364272468" y="4227.0" />
+      <point x="4.421875" y="236.0" />
+    </edge>
+    <edge source="ru.itmo.prog.lab5.commands.AddIfMin" target="ru.itmo.prog.lab5.models.Product">
+      <point x="12.66666666666697" y="-74.5" />
+      <point x="4544.218541874153" y="6335.0" />
+      <point x="4886.612627371987" y="6335.0" />
+      <point x="4886.612627371987" y="5278.0" />
+      <point x="6289.8127482169075" y="5278.0" />
+      <point x="6289.8127482169075" y="2571.0" />
+      <point x="5256.1096976216695" y="2571.0" />
+      <point x="41.733333333333576" y="236.0" />
+    </edge>
+    <edge source="ru.itmo.prog.lab5.Main" target="ru.itmo.prog.lab5.commands.SumOfPrice">
+      <point x="54.03571428571422" y="-27.5" />
+      <point x="2849.590218455003" y="7089.0" />
+      <point x="4862.551875207486" y="7089.0" />
+      <point x="0.0" y="74.5" />
+    </edge>
+    <edge source="ru.itmo.prog.lab5.models.forms.ProductForm" target="ru.itmo.prog.lab5.models.forms.Form">
+      <point x="24.375" y="-143.5" />
+      <point x="6830.1564982169075" y="5308.0" />
+      <point x="7753.6877482169075" y="5308.0" />
+      <point x="7753.6877482169075" y="3225.0" />
+      <point x="7835.4377482169075" y="3225.0" />
+      <point x="9.0" y="27.5" />
+    </edge>
+    <edge source="ru.itmo.prog.lab5.models.Organization" target="ru.itmo.prog.lab5.managers.CollectionManager">
+      <point x="-47.0" y="201.5" />
+      <point x="6366.7679761904765" y="1789.0" />
+      <point x="5537.876364288336" y="1789.0" />
+      <point x="5537.876364288336" y="3125.0" />
+      <point x="4725.3958226058" y="3125.0" />
+      <point x="94.33333333333303" y="-236.0" />
+    </edge>
+    <edge source="ru.itmo.prog.lab5.models.forms.OrganizationForm" target="ru.itmo.prog.lab5.exceptions.NotInDeclaredLimitsException">
+      <point x="99.0" y="-120.5" />
+      <point x="8043.1877482169075" y="4097.0" />
+      <point x="9111.47108155024" y="4097.0" />
+      <point x="9111.47108155024" y="3325.0" />
+      <point x="9094.304414883572" y="3325.0" />
+      <point x="22.66666666666606" y="15.0" />
+    </edge>
+    <edge source="ru.itmo.prog.lab5.Main" target="ru.itmo.prog.lab5.commands.AddIfMin">
+      <point x="47.67857142857156" y="-27.5" />
+      <point x="2843.2330755978605" y="7079.0" />
+      <point x="4531.551875207486" y="7079.0" />
+      <point x="0.0" y="74.5" />
+    </edge>
+    <edge source="ru.itmo.prog.lab5.commands.Save" target="ru.itmo.prog.lab5.managers.CollectionManager">
+      <point x="120.83333333333303" y="-63.0" />
+      <point x="2433.4479148204964" y="5078.0" />
+      <point x="4328.556908915325" y="5078.0" />
+      <point x="4328.556908915325" y="4137.0" />
+      <point x="4555.890614272468" y="4137.0" />
+      <point x="-75.171875" y="236.0" />
+    </edge>
+    <edge source="ru.itmo.prog.lab5.commands.AddIfMax" target="ru.itmo.prog.lab5.commands.Command">
+      <point x="-88.66666666666697" y="-74.5" />
+      <point x="3625.55661005597" y="6315.0" />
+      <point x="1466.7717243443058" y="6315.0" />
+      <point x="1466.7717243443058" y="4918.0" />
+      <point x="1740.4230755978597" y="4918.0" />
+      <point x="-36.514285714285506" y="86.0" />
+    </edge>
+    <edge source="ru.itmo.prog.lab5.commands.FilterByPrice" target="ru.itmo.prog.lab5.utility.console.Console">
+      <point x="-75.33333333333348" y="-74.5" />
+      <point x="3008.279819582401" y="4958.0" />
+      <point x="3255.097856554523" y="4958.0" />
+      <point x="3255.097856554523" y="2631.0" />
+      <point x="2870.1940058893038" y="2631.0" />
+      <point x="28.820000000000164" y="108.5" />
+    </edge>
+    <edge source="ru.itmo.prog.lab5.commands.AddIfMin" target="ru.itmo.prog.lab5.exceptions.InvalidFormException">
+      <point x="88.66666666666697" y="-74.5" />
+      <point x="4620.218541874153" y="6475.0" />
+      <point x="7864.483252371987" y="6475.0" />
+      <point x="7864.483252371987" y="5438.0" />
+      <point x="8837.637748216906" y="5438.0" />
+      <point x="8837.637748216906" y="3315.0" />
+      <point x="8876.637748216906" y="3315.0" />
+      <point x="65.0" y="15.0" />
+    </edge>
+    <edge source="ru.itmo.prog.lab5.managers.DumpManager" target="ru.itmo.prog.lab5.utility.console.Console">
+      <point x="-41.5" y="-86.0" />
+      <point x="4268.563981538654" y="2451.0" />
+      <point x="2964.514005889304" y="2451.0" />
+      <point x="123.14000000000033" y="108.5" />
+    </edge>
+    <edge source="ru.itmo.prog.lab5.models.forms.ProductForm" target="ru.itmo.prog.lab5.models.forms.CoordinatesForm">
+      <point x="8.125" y="-143.5" />
+      <point x="6813.9064982169075" y="5298.0" />
+      <point x="7633.1877482169075" y="5298.0" />
+      <point x="0.0" y="74.5" />
+    </edge>
+    <edge source="ru.itmo.prog.lab5.commands.FilterContainsPartNumber" target="ru.itmo.prog.lab5.models.Product">
+      <point x="92.44444444444434" y="-74.5" />
+      <point x="4334.485902985263" y="5268.0" />
+      <point x="6034.8127482169075" y="5268.0" />
+      <point x="6034.8127482169075" y="2581.0" />
+      <point x="5214.376364288336" y="2581.0" />
+      <point x="0.0" y="236.0" />
+    </edge>
+    <edge source="ru.itmo.prog.lab5.models.forms.UnitOfMeasureForm" target="ru.itmo.prog.lab5.utility.console.Console">
+      <point x="-97.5" y="-51.5" />
+      <point x="6064.8127482169075" y="2985.0" />
+      <point x="4070.635788690476" y="2985.0" />
+      <point x="4070.635788690476" y="2531.0" />
+      <point x="2922.594005889304" y="2531.0" />
+      <point x="81.22000000000025" y="108.5" />
+    </edge>
+    <edge source="ru.itmo.prog.lab5.commands.Add" target="ru.itmo.prog.lab5.utility.console.Console">
+      <point x="-131.81818181818198" y="-63.0" />
+      <point x="3899.405094904455" y="6285.0" />
+      <point x="1386.434720175018" y="6285.0" />
+      <point x="1386.434720175018" y="2471.0" />
+      <point x="2781.1140058893034" y="2471.0" />
+      <point x="-60.26000000000022" y="108.5" />
+    </edge>
+    <edge source="ru.itmo.prog.lab5.models.forms.CoordinatesForm" target="ru.itmo.prog.lab5.models.Coordinates">
+      <point x="-13.75" y="-74.5" />
+      <point x="7619.4377482169075" y="3185.0" />
+      <point x="7627.6877482169075" y="3185.0" />
+      <point x="7627.6877482169075" y="1819.0" />
+      <point x="7749.038441065085" y="1819.0" />
+      <point x="0.0" y="97.5" />
+    </edge>
+    <edge source="ru.itmo.prog.lab5.commands.Head" target="ru.itmo.prog.lab5.commands.Command">
+      <point x="-120.83333333333348" y="-63.0" />
+      <point x="2501.78124815383" y="4698.0" />
+      <point x="1843.8802184550023" y="4698.0" />
+      <point x="66.94285714285706" y="86.0" />
+    </edge>
+    <edge source="ru.itmo.prog.lab5.Main" target="ru.itmo.prog.lab5.models.Product">
+      <point x="60.39285714285734" y="-27.5" />
+      <point x="2855.9473613121463" y="7099.0" />
+      <point x="5141.529294038654" y="7099.0" />
+      <point x="5141.529294038654" y="5298.0" />
+      <point x="6311.8127482169075" y="5298.0" />
+      <point x="6311.8127482169075" y="2551.0" />
+      <point x="5339.576364288336" y="2551.0" />
+      <point x="125.19999999999982" y="236.0" />
+    </edge>
+    <edge source="ru.itmo.prog.lab5.commands.AddIfMin" target="ru.itmo.prog.lab5.exceptions.WrongAmountOfElementsException">
+      <point x="139.33333333333348" y="-74.5" />
+      <point x="4670.88520854082" y="6535.0" />
+      <point x="8151.566585705321" y="6535.0" />
+      <point x="8151.566585705321" y="5578.0" />
+      <point x="9593.804414883572" y="5578.0" />
+      <point x="40.0" y="15.0" />
+    </edge>
+    <edge source="ru.itmo.prog.lab5.models.forms.OrganizationForm" target="ru.itmo.prog.lab5.exceptions.WrongAmountOfElementsException">
+      <point x="171.0" y="-120.5" />
+      <point x="8115.1877482169075" y="4177.0" />
+      <point x="9433.304414883572" y="4177.0" />
+      <point x="-120.0" y="15.0" />
+    </edge>
+    <edge source="ru.itmo.prog.lab5.Main" target="ru.itmo.prog.lab5.utility.Interrogator">
+      <point x="85.82142857142844" y="-27.5" />
+      <point x="2881.3759327407174" y="7139.0" />
+      <point x="8688.56658570532" y="7139.0" />
+      <point x="8688.56658570532" y="5288.0" />
+      <point x="7233.7189982169075" y="5288.0" />
+      <point x="7233.7189982169075" y="3175.0" />
+      <point x="7351.1564982169075" y="3175.0" />
+      <point x="-15.0625" y="97.0" />
+    </edge>
+    <edge source="ru.itmo.prog.lab5.commands.Update" target="ru.itmo.prog.lab5.commands.Command">
+      <point x="-117.8125" y="-63.0" />
+      <point x="6857.4064982169075" y="6045.0" />
+      <point x="2848.8345814871627" y="6045.0" />
+      <point x="2848.8345814871627" y="4678.0" />
+      <point x="1856.051647026431" y="4678.0" />
+      <point x="79.11428571428587" y="86.0" />
+    </edge>
+    <edge source="ru.itmo.prog.lab5.models.forms.ProductForm" target="ru.itmo.prog.lab5.models.Coordinates">
+      <point x="56.875" y="-143.5" />
+      <point x="6862.6564982169075" y="5328.0" />
+      <point x="8134.6877482169075" y="5328.0" />
+      <point x="8134.6877482169075" y="1829.0" />
+      <point x="7842.638441065085" y="1829.0" />
+      <point x="93.60000000000036" y="97.5" />
+    </edge>
+    <edge source="ru.itmo.prog.lab5.commands.Exit" target="ru.itmo.prog.lab5.commands.Command">
+      <point x="25.75" y="-51.5" />
+      <point x="592.4420416035891" y="4828.0" />
+      <point x="1685.651647026431" y="4828.0" />
+      <point x="-91.28571428571422" y="86.0" />
+    </edge>
+    <edge source="ru.itmo.prog.lab5.models.Product" target="ru.itmo.prog.lab5.models.Organization">
+      <point x="69.55555555555566" y="-236.0" />
+      <point x="5283.931919843892" y="1769.0" />
+      <point x="6272.7679761904765" y="1769.0" />
+      <point x="-141.0" y="201.5" />
+    </edge>
+    <edge source="ru.itmo.prog.lab5.models.forms.CoordinatesForm" target="ru.itmo.prog.lab5.exceptions.IncorrectInputInScriptException">
+      <point x="68.75" y="-74.5" />
+      <point x="7701.9377482169075" y="3255.0" />
+      <point x="8465.637748216906" y="3255.0" />
+      <point x="-74.0" y="15.0" />
+    </edge>
+    <edge source="ru.itmo.prog.lab5.Main" target="ru.itmo.prog.lab5.commands.Help">
+      <point x="-60.39285714285734" y="-27.5" />
+      <point x="2735.1616470264316" y="7089.0" />
+      <point x="724.1049999999996" y="7089.0" />
+      <point x="0.0" y="63.0" />
+    </edge>
+    <edge source="ru.itmo.prog.lab5.managers.CollectionManager" target="ru.itmo.prog.lab5.utility.console.Console">
+      <point x="-125.77777777777737" y="-236.0" />
+      <point x="4505.284711494691" y="3025.0" />
+      <point x="3938.095092649766" y="3025.0" />
+      <point x="3938.095092649766" y="2551.0" />
+      <point x="2912.114005889304" y="2551.0" />
+      <point x="70.74000000000024" y="108.5" />
+    </edge>
+    <edge source="ru.itmo.prog.lab5.commands.AddIfMax" target="ru.itmo.prog.lab5.utility.console.Console">
+      <point x="-114.0" y="-74.5" />
+      <point x="3600.223276722637" y="6325.0" />
+      <point x="1381.1947201750181" y="6325.0" />
+      <point x="1381.1947201750181" y="2461.0" />
+      <point x="2775.8740058893036" y="2461.0" />
+      <point x="-65.5" y="108.5" />
+    </edge>
+    <edge source="ru.itmo.prog.lab5.commands.Add" target="ru.itmo.prog.lab5.exceptions.IncorrectInputInScriptException">
+      <point x="52.727272727272975" y="-63.0" />
+      <point x="4083.95054944991" y="6425.0" />
+      <point x="7696.649919038654" y="6425.0" />
+      <point x="7696.649919038654" y="5378.0" />
+      <point x="8717.237748216907" y="5378.0" />
+      <point x="8717.237748216907" y="3255.0" />
+      <point x="8613.637748216906" y="3255.0" />
+      <point x="74.0" y="15.0" />
+    </edge>
+    <edge source="ru.itmo.prog.lab5.models.forms.ProductForm" target="ru.itmo.prog.lab5.managers.CollectionManager">
+      <point x="-89.375" y="-143.5" />
+      <point x="6716.4064982169075" y="4558.0" />
+      <point x="5032.905714493199" y="4558.0" />
+      <point x="5032.905714493199" y="3957.0" />
+      <point x="4750.453114272468" y="3957.0" />
+      <point x="119.390625" y="236.0" />
+    </edge>
+    <edge source="ru.itmo.prog.lab5.commands.Save" target="ru.itmo.prog.lab5.utility.console.Console">
+      <point x="24.16666666666697" y="-63.0" />
+      <point x="2336.7812481538303" y="5008.0" />
+      <point x="2299.447914820497" y="5008.0" />
+      <point x="2299.447914820497" y="2531.0" />
+      <point x="2812.5540058893034" y="2531.0" />
+      <point x="-28.820000000000164" y="108.5" />
+    </edge>
+    <edge source="ru.itmo.prog.lab5.utility.Runner" target="ru.itmo.prog.lab5.utility.Runner.ExitCode">
+      <point x="0.0" y="97.5" />
+      <point x="1013.4621428571427" y="7139.0" />
+      <point x="1001.0246232169065" y="7139.0" />
+      <point x="71.0" y="-74.0" />
+    </edge>
+    <edge source="ru.itmo.prog.lab5.exceptions.WrongAmountOfElementsException" target="java.lang.Exception">
+      <point x="0.0" y="-15.0" />
+      <point x="9553.304414883572" y="2631.0" />
+      <point x="9396.455474594208" y="2631.0" />
+      <point x="41.55555555555475" y="85.5" />
+    </edge>
+    <edge source="ru.itmo.prog.lab5.models.forms.AddressForm" target="ru.itmo.prog.lab5.utility.Interrogator">
+      <point x="-72.0" y="-74.5" />
+      <point x="8191.637748216906" y="2895.0" />
+      <point x="7471.6564982169075" y="2895.0" />
+      <point x="105.4375" y="97.0" />
+    </edge>
+    <edge source="ru.itmo.prog.lab5.models.forms.OrganizationForm" target="ru.itmo.prog.lab5.utility.Interrogator">
+      <point x="-27.0" y="-120.5" />
+      <point x="7917.1877482169075" y="3867.0" />
+      <point x="7512.6877482169075" y="3867.0" />
+      <point x="7512.6877482169075" y="3175.0" />
+      <point x="7411.4064982169075" y="3175.0" />
+      <point x="45.1875" y="97.0" />
+    </edge>
+    <edge source="ru.itmo.prog.lab5.utility.Runner" target="ru.itmo.prog.lab5.commands.Command">
+      <point x="16.8125" y="-97.5" />
+      <point x="1030.2746428571427" y="6335.0" />
+      <point x="1059.1947201750186" y="6335.0" />
+      <point x="1059.1947201750186" y="4888.0" />
+      <point x="1722.1659327407165" y="4888.0" />
+      <point x="-54.771428571428714" y="86.0" />
+    </edge>
+    <edge source="ru.itmo.prog.lab5.commands.Update" target="ru.itmo.prog.lab5.exceptions.WrongAmountOfElementsException">
+      <point x="99.6875" y="-63.0" />
+      <point x="7074.9064982169075" y="6655.0" />
+      <point x="8483.56658570532" y="6655.0" />
+      <point x="8483.56658570532" y="5638.0" />
+      <point x="9792.804414883572" y="5638.0" />
+      <point x="9792.804414883572" y="4227.0" />
+      <point x="9689.304414883572" y="4227.0" />
+      <point x="136.0" y="15.0" />
+    </edge>
+    <edge source="ru.itmo.prog.lab5.models.forms.AddressForm" target="ru.itmo.prog.lab5.utility.console.Console">
+      <point x="-88.0" y="-74.5" />
+      <point x="8175.637748216906" y="2905.0" />
+      <point x="4119.355788690476" y="2905.0" />
+      <point x="4119.355788690476" y="2471.0" />
+      <point x="2954.034005889304" y="2471.0" />
+      <point x="112.66000000000031" y="108.5" />
+    </edge>
+    <edge source="ru.itmo.prog.lab5.models.forms.AddressForm" target="ru.itmo.prog.lab5.models.forms.Form">
+      <point x="-56.0" y="-74.5" />
+      <point x="8207.637748216906" y="2885.0" />
+      <point x="7871.4377482169075" y="2885.0" />
+      <point x="45.0" y="27.5" />
+    </edge>
+    <edge source="ru.itmo.prog.lab5.models.Organization" target="ru.itmo.prog.lab5.utility.Element">
+      <point x="-105.75" y="-201.5" />
+      <point x="6308.0179761904765" y="790.0" />
+      <point x="6096.938113483098" y="790.0" />
+      <point x="39.0" y="27.5" />
+    </edge>
+    <edge source="ru.itmo.prog.lab5.Main" target="ru.itmo.prog.lab5.commands.RemoveById">
+      <point x="66.75" y="-27.5" />
+      <point x="2862.304504169289" y="7109.0" />
+      <point x="5311.029294038654" y="7109.0" />
+      <point x="0.0" y="63.0" />
+    </edge>
+    <edge source="ru.itmo.prog.lab5.commands.Help" target="ru.itmo.prog.lab5.commands.Command">
+      <point x="-21.25" y="-63.0" />
+      <point x="702.8549999999996" y="6695.0" />
+      <point x="680.1920416035891" y="6695.0" />
+      <point x="680.1920416035891" y="4848.0" />
+      <point x="1697.8230755978593" y="4848.0" />
+      <point x="-79.11428571428587" y="86.0" />
+    </edge>
+    <edge source="ru.itmo.prog.lab5.Main" target="ru.itmo.prog.lab5.commands.Exit">
+      <point x="-66.75" y="-27.5" />
+      <point x="2728.804504169289" y="7099.0" />
+      <point x="513.4799999999996" y="7099.0" />
+      <point x="513.4799999999996" y="6695.0" />
+      <point x="566.6920416035891" y="6695.0" />
+      <point x="0.0" y="51.5" />
+    </edge>
+    <edge source="ru.itmo.prog.lab5.commands.FilterContainsPartNumber" target="ru.itmo.prog.lab5.utility.console.Console">
+      <point x="-46.222222222222626" y="-74.5" />
+      <point x="4195.819236318597" y="4618.0" />
+      <point x="3415.569965485264" y="4618.0" />
+      <point x="3415.569965485264" y="2601.0" />
+      <point x="2885.9140058893036" y="2601.0" />
+      <point x="44.539999999999964" y="108.5" />
+    </edge>
+    <edge source="ru.itmo.prog.lab5.managers.CollectionManager" target="ru.itmo.prog.lab5.models.Organization">
+      <point x="125.77777777777737" y="-236.0" />
+      <point x="4756.8402670502455" y="3135.0" />
+      <point x="6671.7502482169075" y="3135.0" />
+      <point x="6671.7502482169075" y="1789.0" />
+      <point x="6413.7679761904765" y="1789.0" />
+      <point x="0.0" y="201.5" />
+    </edge>
+    <edge source="ru.itmo.prog.lab5.models.forms.AddressForm" target="ru.itmo.prog.lab5.exceptions.NotInDeclaredLimitsException">
+      <point x="56.0" y="-74.5" />
+      <point x="8319.637748216906" y="3335.0" />
+      <point x="9003.637748216908" y="3335.0" />
+      <point x="-68.0" y="15.0" />
+    </edge>
+    <edge source="ru.itmo.prog.lab5.commands.Save" target="ru.itmo.prog.lab5.commands.Command">
+      <point x="-120.83333333333348" y="-63.0" />
+      <point x="2191.78124815383" y="4718.0" />
+      <point x="1831.708789883574" y="4718.0" />
+      <point x="54.771428571428714" y="86.0" />
+    </edge>
+    <edge source="ru.itmo.prog.lab5.managers.CollectionManager" target="ru.itmo.prog.lab5.models.Product">
+      <point x="62.88888888888869" y="-236.0" />
+      <point x="4693.951378161357" y="3115.0" />
+      <point x="5278.063981538654" y="3115.0" />
+      <point x="5278.063981538654" y="2591.0" />
+      <point x="5172.643030955002" y="2591.0" />
+      <point x="-41.733333333333576" y="236.0" />
+    </edge>
+    <edge source="ru.itmo.prog.lab5.Main" target="ru.itmo.prog.lab5.commands.Show">
+      <point x="-34.96428571428578" y="-27.5" />
+      <point x="2760.590218455003" y="7049.0" />
+      <point x="1214.6947201750181" y="7049.0" />
+      <point x="0.0" y="63.0" />
+    </edge>
+    <edge source="ru.itmo.prog.lab5.Main" target="ru.itmo.prog.lab5.utility.console.StandardConsole">
+      <point x="-79.46428571428578" y="-27.5" />
+      <point x="2716.090218455003" y="7119.0" />
+      <point x="207.0" y="7119.0" />
+      <point x="65.5" y="132.0" />
+    </edge>
+    <edge source="ru.itmo.prog.lab5.models.forms.OrganizationTypeForm" target="ru.itmo.prog.lab5.models.OrganizationType">
+      <point x="21.25" y="-51.5" />
+      <point x="7395.9377482169075" y="3185.0" />
+      <point x="7510.4377482169075" y="3185.0" />
+      <point x="7510.4377482169075" y="780.0" />
+      <point x="6772.868669038654" y="780.0" />
+      <point x="100.875" y="97.0" />
+    </edge>
+    <edge source="ru.itmo.prog.lab5.models.forms.OrganizationTypeForm" target="ru.itmo.prog.lab5.utility.console.Console">
+      <point x="-106.25" y="-51.5" />
+      <point x="7268.4377482169075" y="2955.0" />
+      <point x="4086.875788690476" y="2955.0" />
+      <point x="4086.875788690476" y="2511.0" />
+      <point x="2933.074005889304" y="2511.0" />
+      <point x="91.70000000000027" y="108.5" />
+    </edge>
+    <edge source="ru.itmo.prog.lab5.exceptions.NotFoundException" target="java.lang.Exception">
+      <point x="0.0" y="-15.0" />
+      <point x="8586.06658570532" y="5658.0" />
+      <point x="9858.804414883572" y="5658.0" />
+      <point x="9858.804414883572" y="2611.0" />
+      <point x="9479.56658570532" y="2611.0" />
+      <point x="124.66666666666606" y="85.5" />
+    </edge>
+    <edge source="ru.itmo.prog.lab5.utility.Element" target="java.lang.Comparable">
+      <point x="-26.0" y="-27.5" />
+      <point x="6031.938113483098" y="515.0" />
+      <point x="4963.258425983098" y="515.0" />
+      <point x="4963.258425983098" y="80.0" />
+      <point x="4964.633425983098" y="80.0" />
+      <point x="-39.25" y="27.5" />
+    </edge>
+    <edge source="java.lang.Enum" target="java.io.Serializable">
+      <point x="70.75" y="-190.0" />
+      <point x="5186.008425983098" y="80.0" />
+      <point x="8018.948530149765" y="80.0" />
+      <point x="-36.0" y="15.0" />
+    </edge>
+    <edge source="ru.itmo.prog.lab5.commands.Add" target="ru.itmo.prog.lab5.exceptions.WrongAmountOfElementsException">
+      <point x="105.45454545454504" y="-63.0" />
+      <point x="4136.677822177182" y="6505.0" />
+      <point x="8118.566585705321" y="6505.0" />
+      <point x="8118.566585705321" y="5548.0" />
+      <point x="9560.804414883572" y="5548.0" />
+      <point x="9560.804414883572" y="4237.0" />
+      <point x="9545.304414883572" y="4237.0" />
+      <point x="-8.0" y="15.0" />
+    </edge>
+    <edge source="ru.itmo.prog.lab5.commands.Update" target="ru.itmo.prog.lab5.models.Product">
+      <point x="-27.1875" y="-63.0" />
+      <point x="6948.0314982169075" y="5995.0" />
+      <point x="6622.8127482169075" y="5995.0" />
+      <point x="6622.8127482169075" y="2531.0" />
+      <point x="5423.043030955003" y="2531.0" />
+      <point x="208.66666666666697" y="236.0" />
+    </edge>
+    <edge source="ru.itmo.prog.lab5.commands.Add" target="ru.itmo.prog.lab5.commands.Command">
+      <point x="-79.09090909090901" y="-63.0" />
+      <point x="3952.132367631728" y="6265.0" />
+      <point x="1494.8574386300202" y="6265.0" />
+      <point x="1494.8574386300202" y="4948.0" />
+      <point x="1758.6802184550024" y="4948.0" />
+      <point x="-18.257142857142753" y="86.0" />
+    </edge>
+    <edge source="ru.itmo.prog.lab5.utility.Runner" target="ru.itmo.prog.lab5.utility.Interrogator">
+      <point x="50.4375" y="-97.5" />
+      <point x="1063.8996428571427" y="6345.0" />
+      <point x="4460.54145854082" y="6345.0" />
+      <point x="4460.54145854082" y="5328.0" />
+      <point x="6704.7502482169075" y="5328.0" />
+      <point x="6704.7502482169075" y="3155.0" />
+      <point x="7290.9064982169075" y="3155.0" />
+      <point x="-75.3125" y="97.0" />
+    </edge>
+    <edge source="ru.itmo.prog.lab5.commands.Clear" target="ru.itmo.prog.lab5.commands.Command">
+      <point x="-24.166666666666515" y="-63.0" />
+      <point x="1660.3622005347825" y="4998.0" />
+      <point x="1789.108789883574" y="4998.0" />
+      <point x="12.171428571428805" y="86.0" />
+    </edge>
+    <edge source="ru.itmo.prog.lab5.commands.SumOfPrice" target="ru.itmo.prog.lab5.exceptions.CollectionIsEmptyException">
+      <point x="144.54545454545496" y="-74.5" />
+      <point x="5007.097329752941" y="6595.0" />
+      <point x="8270.06658570532" y="6595.0" />
+      <point x="-64.0" y="15.0" />
+    </edge>
+    <edge source="ru.itmo.prog.lab5.commands.Update" target="ru.itmo.prog.lab5.utility.console.Console">
+      <point x="-81.5625" y="-63.0" />
+      <point x="6893.6564982169075" y="6025.0" />
+      <point x="4698.852538086274" y="6025.0" />
+      <point x="4698.852538086274" y="4608.0" />
+      <point x="3745.1791369047623" y="4608.0" />
+      <point x="3745.1791369047623" y="2591.0" />
+      <point x="2891.154005889304" y="2591.0" />
+      <point x="49.7800000000002" y="108.5" />
+    </edge>
+    <edge source="ru.itmo.prog.lab5.commands.Update" target="ru.itmo.prog.lab5.models.forms.ProductForm">
+      <point x="-9.0625" y="-63.0" />
+      <point x="6966.1564982169075" y="5985.0" />
+      <point x="6927.6564982169075" y="5985.0" />
+      <point x="121.875" y="143.5" />
+    </edge>
+    <edge source="ru.itmo.prog.lab5.commands.AddIfMin" target="ru.itmo.prog.lab5.exceptions.IncorrectInputInScriptException">
+      <point x="63.33333333333394" y="-74.5" />
+      <point x="4594.88520854082" y="6435.0" />
+      <point x="7707.649919038654" y="6435.0" />
+      <point x="7707.649919038654" y="5388.0" />
+      <point x="8728.237748216907" y="5388.0" />
+      <point x="8728.237748216907" y="3245.0" />
+      <point x="8643.237748216907" y="3245.0" />
+      <point x="103.60000000000036" y="15.0" />
+    </edge>
+    <edge source="java.lang.Throwable.SentinelHolder" target="java.lang.Throwable">
+      <point x="0.0" y="-51.0" />
+      <point x="10769.054414883572" y="1829.0" />
+      <point x="10657.799226190476" y="1829.0" />
+      <point x="303.60000000000036" y="454.5" />
+    </edge>
+    <edge source="ru.itmo.prog.lab5.models.Organization" target="ru.itmo.prog.lab5.models.Address">
+      <point x="176.25" y="-201.5" />
+      <point x="6590.0179761904765" y="800.0" />
+      <point x="8121.187748216906" y="800.0" />
+      <point x="-42.600000000000364" y="97.5" />
+    </edge>
+    <edge source="ru.itmo.prog.lab5.commands.Head" target="ru.itmo.prog.lab5.managers.CollectionManager">
+      <point x="72.5" y="-63.0" />
+      <point x="2695.1145814871634" y="5088.0" />
+      <point x="4337.400658915325" y="5088.0" />
+      <point x="4337.400658915325" y="4147.0" />
+      <point x="4564.734364272468" y="4147.0" />
+      <point x="-66.328125" y="236.0" />
+    </edge>
+    <edge source="ru.itmo.prog.lab5.utility.Runner" target="ru.itmo.prog.lab5.utility.console.Console">
+      <point x="-84.0625" y="-97.5" />
+      <point x="929.3996428571427" y="6655.0" />
+      <point x="227.19204160358913" y="6655.0" />
+      <point x="227.19204160358913" y="2381.0" />
+      <point x="2733.9540058893035" y="2381.0" />
+      <point x="-107.42000000000007" y="108.5" />
+    </edge>
+    <edge source="ru.itmo.prog.lab5.models.forms.ProductForm" target="ru.itmo.prog.lab5.models.UnitOfMeasure">
+      <point x="-121.875" y="-143.5" />
+      <point x="6683.9064982169075" y="4578.0" />
+      <point x="4809.503252371987" y="4578.0" />
+      <point x="4809.503252371987" y="4047.0" />
+      <point x="4308.359176788336" y="4047.0" />
+      <point x="4308.359176788336" y="3065.0" />
+      <point x="4756.789557136513" y="3065.0" />
+      <point x="4756.789557136513" y="1829.0" />
+      <point x="4854.376364288336" y="1829.0" />
+      <point x="-93.0" y="97.0" />
+    </edge>
+    <edge source="ru.itmo.prog.lab5.commands.AddIfMin" target="ru.itmo.prog.lab5.commands.Command">
+      <point x="-113.99999999999955" y="-74.5" />
+      <point x="4417.551875207486" y="6225.0" />
+      <point x="1511.9431529157346" y="6225.0" />
+      <point x="1511.9431529157346" y="4968.0" />
+      <point x="1770.8516470264308" y="4968.0" />
+      <point x="-6.085714285714403" y="86.0" />
+    </edge>
+    <edge source="ru.itmo.prog.lab5.commands.Help" target="ru.itmo.prog.lab5.utility.console.Console">
+      <point x="-63.75" y="-63.0" />
+      <point x="660.3549999999996" y="6675.0" />
+      <point x="157.73999999999978" y="6675.0" />
+      <point x="157.73999999999978" y="2361.0" />
+      <point x="2723.4740058893035" y="2361.0" />
+      <point x="-117.90000000000009" y="108.5" />
+    </edge>
+    <edge source="ru.itmo.prog.lab5.Main" target="ru.itmo.prog.lab5.managers.DumpManager">
+      <point x="-3.1785714285715585" y="-27.5" />
+      <point x="2792.3759327407174" y="6999.0" />
+      <point x="2778.1145814871634" y="6999.0" />
+      <point x="2778.1145814871634" y="4978.0" />
+      <point x="3936.040014880952" y="4978.0" />
+      <point x="3936.040014880952" y="4047.0" />
+      <point x="3952.8385863095236" y="4047.0" />
+      <point x="3952.8385863095236" y="3035.0" />
+      <point x="4185.563981538654" y="3035.0" />
+      <point x="-124.5" y="86.0" />
+    </edge>
+    <edge source="ru.itmo.prog.lab5.models.forms.ProductForm" target="ru.itmo.prog.lab5.models.forms.UnitOfMeasureForm">
+      <point x="-73.125" y="-143.5" />
+      <point x="6732.6564982169075" y="4548.0" />
+      <point x="6162.3127482169075" y="4548.0" />
+      <point x="0.0" y="51.5" />
+    </edge>
+    <edge source="ru.itmo.prog.lab5.models.forms.OrganizationTypeForm" target="ru.itmo.prog.lab5.models.forms.Form">
+      <point x="63.75" y="-51.5" />
+      <point x="7438.4377482169075" y="3205.0" />
+      <point x="7799.4377482169075" y="3205.0" />
+      <point x="-27.0" y="27.5" />
+    </edge>
+    <edge source="ru.itmo.prog.lab5.models.forms.OrganizationForm" target="ru.itmo.prog.lab5.models.Organization">
+      <point x="-81.0" y="-120.5" />
+      <point x="7863.1877482169075" y="3897.0" />
+      <point x="6726.7502482169075" y="3897.0" />
+      <point x="6726.7502482169075" y="1749.0" />
+      <point x="6601.7679761904765" y="1749.0" />
+      <point x="188.0" y="201.5" />
+    </edge>
+    <edge source="ru.itmo.prog.lab5.models.OrganizationType" target="java.lang.Enum">
+      <point x="0.0" y="-97.0" />
+      <point x="6671.993669038654" y="505.0" />
+      <point x="5209.591759316431" y="505.0" />
+      <point x="94.33333333333303" y="190.0" />
+    </edge>
+    <edge source="ru.itmo.prog.lab5.managers.CommandManager" target="ru.itmo.prog.lab5.commands.Command">
+      <point x="63.75" y="-62.5" />
+      <point x="881.9420416035891" y="4868.0" />
+      <point x="1709.9945041692881" y="4868.0" />
+      <point x="-66.94285714285706" y="86.0" />
+    </edge>
+    <edge source="ru.itmo.prog.lab5.models.forms.OrganizationForm" target="ru.itmo.prog.lab5.models.OrganizationType">
+      <point x="-63.0" y="-120.5" />
+      <point x="7881.1877482169075" y="3887.0" />
+      <point x="6749.2502482169075" y="3887.0" />
+      <point x="6749.2502482169075" y="780.0" />
+      <point x="6705.618669038654" y="780.0" />
+      <point x="33.625" y="97.0" />
+    </edge>
+    <edge source="ru.itmo.prog.lab5.commands.Update" target="ru.itmo.prog.lab5.exceptions.IncorrectInputInScriptException">
+      <point x="9.0625" y="-63.0" />
+      <point x="6984.2814982169075" y="6445.0" />
+      <point x="7724.149919038654" y="6445.0" />
+      <point x="7724.149919038654" y="5408.0" />
+      <point x="8750.237748216907" y="5408.0" />
+      <point x="8750.237748216907" y="3235.0" />
+      <point x="8672.837748216907" y="3235.0" />
+      <point x="133.20000000000073" y="15.0" />
+    </edge>
+    <edge source="ru.itmo.prog.lab5.models.forms.ProductForm" target="ru.itmo.prog.lab5.exceptions.InvalidFormException">
+      <point x="89.375" y="-143.5" />
+      <point x="6895.1564982169075" y="5398.0" />
+      <point x="8739.237748216907" y="5398.0" />
+      <point x="8739.237748216907" y="3315.0" />
+      <point x="8798.637748216906" y="3315.0" />
+      <point x="-13.0" y="15.0" />
+    </edge>
+    <edge source="ru.itmo.prog.lab5.commands.RemoveById" target="ru.itmo.prog.lab5.commands.Command">
+      <point x="-146.7692307692305" y="-63.0" />
+      <point x="5164.260063269424" y="6115.0" />
+      <point x="1840.028867201449" y="6115.0" />
+      <point x="1840.028867201449" y="5008.0" />
+      <point x="1801.2802184550023" y="5008.0" />
+      <point x="24.342857142857156" y="86.0" />
+    </edge>
+    <edge source="ru.itmo.prog.lab5.commands.AddIfMax" target="ru.itmo.prog.lab5.exceptions.InvalidFormException">
+      <point x="88.66666666666697" y="-74.5" />
+      <point x="3802.889943389304" y="6415.0" />
+      <point x="7119.382191065085" y="6415.0" />
+      <point x="7119.382191065085" y="5418.0" />
+      <point x="8815.637748216906" y="5418.0" />
+      <point x="8815.637748216906" y="3295.0" />
+      <point x="8824.637748216906" y="3295.0" />
+      <point x="13.0" y="15.0" />
+    </edge>
+    <edge source="ru.itmo.prog.lab5.Main" target="ru.itmo.prog.lab5.commands.FilterByPrice">
+      <point x="9.53571428571422" y="-27.5" />
+      <point x="2805.090218455003" y="7019.0" />
+      <point x="3083.6131529157346" y="7019.0" />
+      <point x="0.0" y="74.5" />
+    </edge>
+    <edge source="ru.itmo.prog.lab5.models.forms.OrganizationTypeForm" target="ru.itmo.prog.lab5.utility.Interrogator">
+      <point x="-21.25" y="-51.5" />
+      <point x="7353.4377482169075" y="3185.0" />
+      <point x="7381.2814982169075" y="3185.0" />
+      <point x="15.0625" y="97.0" />
+    </edge>
+    <edge source="ru.itmo.prog.lab5.commands.Command" target="ru.itmo.prog.lab5.commands.Describable">
+      <point x="-53.25" y="-86.0" />
+      <point x="1723.6873613121452" y="4057.0" />
+      <point x="1705.636624936923" y="4057.0" />
+      <point x="0.0" y="39.0" />
+    </edge>
+    <edge source="ru.itmo.prog.lab5.models.forms.ProductForm" target="ru.itmo.prog.lab5.exceptions.IncorrectInputInScriptException">
+      <point x="73.125" y="-143.5" />
+      <point x="6878.9064982169075" y="5358.0" />
+      <point x="8580.637748216906" y="5358.0" />
+      <point x="8580.637748216906" y="3275.0" />
+      <point x="8554.437748216906" y="3275.0" />
+      <point x="14.799999999999272" y="15.0" />
+    </edge>
+    <edge source="ru.itmo.prog.lab5.commands.SumOfPrice" target="ru.itmo.prog.lab5.commands.Command">
+      <point x="-115.63636363636397" y="-74.5" />
+      <point x="4746.915511571122" y="6165.0" />
+      <point x="1529.028867201449" y="6165.0" />
+      <point x="1529.028867201449" y="4988.0" />
+      <point x="1783.0230755978596" y="4988.0" />
+      <point x="6.085714285714403" y="86.0" />
+    </edge>
+    <edge source="ru.itmo.prog.lab5.models.forms.OrganizationForm" target="ru.itmo.prog.lab5.exceptions.InvalidFormException">
+      <point x="63.0" y="-120.5" />
+      <point x="8007.1877482169075" y="4077.0" />
+      <point x="8695.237748216907" y="4077.0" />
+      <point x="8695.237748216907" y="3305.0" />
+      <point x="8772.637748216906" y="3305.0" />
+      <point x="-39.0" y="15.0" />
+    </edge>
+    <edge source="ru.itmo.prog.lab5.exceptions.InvalidFormException" target="java.lang.Exception">
+      <point x="0.0" y="-15.0" />
+      <point x="8811.637748216906" y="2621.0" />
+      <point x="9271.788807927544" y="2621.0" />
+      <point x="-83.11111111111131" y="85.5" />
+    </edge>
+    <edge source="ru.itmo.prog.lab5.managers.DumpManager" target="ru.itmo.prog.lab5.models.Product">
+      <point x="124.5" y="-86.0" />
+      <point x="4434.563981538654" y="2621.0" />
+      <point x="4922.243030955003" y="2621.0" />
+      <point x="-292.1333333333332" y="236.0" />
+    </edge>
+    <edge source="ru.itmo.prog.lab5.utility.Runner.ExitCode" target="ru.itmo.prog.lab5.utility.Runner">
+      <point x="0.0" y="-74.0" />
+      <point x="930.0246232169065" y="7139.0" />
+      <point x="923.7954761904762" y="7139.0" />
+      <point x="-89.66666666666663" y="97.5" />
+    </edge>
+    <edge source="ru.itmo.prog.lab5.models.forms.OrganizationForm" target="ru.itmo.prog.lab5.utility.console.Console">
+      <point x="-171.0" y="-120.5" />
+      <point x="7773.1877482169075" y="3947.0" />
+      <point x="3775.3377083333335" y="3947.0" />
+      <point x="3775.3377083333335" y="2561.0" />
+      <point x="2906.8740058893036" y="2561.0" />
+      <point x="65.5" y="108.5" />
+    </edge>
+    <edge source="ru.itmo.prog.lab5.commands.Info" target="ru.itmo.prog.lab5.utility.console.Console">
+      <point x="-120.83333333333348" y="-63.0" />
+      <point x="1874.6955338681155" y="4778.0" />
+      <point x="1606.636624936923" y="4778.0" />
+      <point x="1606.636624936923" y="2501.0" />
+      <point x="2796.8340058893036" y="2501.0" />
+      <point x="-44.539999999999964" y="108.5" />
+    </edge>
+    <edge source="ru.itmo.prog.lab5.models.Coordinates" target="ru.itmo.prog.lab5.utility.Validatable">
+      <point x="0.0" y="-97.5" />
+      <point x="7749.038441065085" y="535.0" />
+      <point x="7650.399919038654" y="535.0" />
+      <point x="0.0" y="27.5" />
+    </edge>
+    <edge source="java.lang.Throwable.WrappedPrintStream" target="java.lang.Throwable.PrintStreamOrWriter">
+      <point x="67.25" y="-63.0" />
+      <point x="10323.054414883572" y="2631.0" />
+      <point x="10350.304414883572" y="2631.0" />
+      <point x="-50.0" y="51.0" />
+    </edge>
+    <edge source="ru.itmo.prog.lab5.commands.RemoveById" target="ru.itmo.prog.lab5.utility.console.Console">
+      <point x="-97.84615384615427" y="-63.0" />
+      <point x="5213.1831401925" y="6095.0" />
+      <point x="2826.8345814871627" y="6095.0" />
+      <point x="2826.8345814871627" y="2611.0" />
+      <point x="2854.4740058893035" y="2611.0" />
+      <point x="13.099999999999909" y="108.5" />
+    </edge>
+    <edge source="ru.itmo.prog.lab5.commands.RemoveById" target="ru.itmo.prog.lab5.exceptions.NotFoundException">
+      <point x="146.7692307692305" y="-63.0" />
+      <point x="5457.798524807885" y="6675.0" />
+      <point x="8563.06658570532" y="6675.0" />
+      <point x="-23.0" y="15.0" />
+    </edge>
+    <edge source="ru.itmo.prog.lab5.commands.Clear" target="ru.itmo.prog.lab5.managers.CollectionManager">
+      <point x="72.5" y="-63.0" />
+      <point x="1757.028867201449" y="5028.0" />
+      <point x="4277.869408915325" y="5028.0" />
+      <point x="4277.869408915325" y="4087.0" />
+      <point x="4511.671864272468" y="4087.0" />
+      <point x="-119.390625" y="236.0" />
+    </edge>
+    <edge source="ru.itmo.prog.lab5.models.forms.ProductForm" target="ru.itmo.prog.lab5.exceptions.MustBeNotEmptyException">
+      <point x="138.125" y="-143.5" />
+      <point x="6943.9064982169075" y="5468.0" />
+      <point x="9096.97108155024" y="5468.0" />
+      <point x="9096.97108155024" y="4147.0" />
+      <point x="9387.804414883572" y="4147.0" />
+      <point x="9387.804414883572" y="3345.0" />
+      <point x="9401.637748216908" y="3345.0" />
+      <point x="58.0" y="15.0" />
+    </edge>
+    <edge source="ru.itmo.prog.lab5.Main" target="ru.itmo.prog.lab5.commands.Save">
+      <point x="-15.892857142857338" y="-27.5" />
+      <point x="2779.6616470264316" y="7019.0" />
+      <point x="2312.6145814871634" y="7019.0" />
+      <point x="0.0" y="63.0" />
+    </edge>
+    <edge source="ru.itmo.prog.lab5.commands.AddIfMax" target="ru.itmo.prog.lab5.exceptions.WrongAmountOfElementsException">
+      <point x="114.0" y="-74.5" />
+      <point x="3828.223276722637" y="6455.0" />
+      <point x="7842.483252371987" y="6455.0" />
+      <point x="7842.483252371987" y="5528.0" />
+      <point x="9322.871774398418" y="5528.0" />
+      <point x="9322.871774398418" y="4227.0" />
+      <point x="9513.304414883572" y="4227.0" />
+      <point x="-40.0" y="15.0" />
+    </edge>
+    <edge source="ru.itmo.prog.lab5.models.forms.OrganizationForm" target="ru.itmo.prog.lab5.exceptions.IncorrectInputInScriptException">
+      <point x="45.0" y="-120.5" />
+      <point x="7989.1877482169075" y="4067.0" />
+      <point x="8370.137748216906" y="4067.0" />
+      <point x="8370.137748216906" y="3275.0" />
+      <point x="8524.837748216907" y="3275.0" />
+      <point x="-14.799999999999272" y="15.0" />
+    </edge>
+    <edge source="ru.itmo.prog.lab5.commands.Info" target="ru.itmo.prog.lab5.commands.Command">
+      <point x="24.166666666666515" y="-63.0" />
+      <point x="2019.6955338681155" y="4748.0" />
+      <point x="1813.4516470264311" y="4748.0" />
+      <point x="36.51428571428596" y="86.0" />
+    </edge>
+    <edge source="ru.itmo.prog.lab5.commands.Help" target="ru.itmo.prog.lab5.managers.CommandManager">
+      <point x="63.75" y="-63.0" />
+      <point x="787.8549999999996" y="6695.0" />
+      <point x="754.4420416035891" y="6695.0" />
+      <point x="-63.75" y="62.5" />
+    </edge>
+    <edge source="ru.itmo.prog.lab5.exceptions.CollectionIsEmptyException" target="java.lang.Exception">
+      <point x="0.0" y="-15.0" />
+      <point x="8334.06658570532" y="5648.0" />
+      <point x="9807.554414883572" y="5648.0" />
+      <point x="9807.554414883572" y="2621.0" />
+      <point x="9438.011030149766" y="2621.0" />
+      <point x="83.11111111111131" y="85.5" />
+    </edge>
+    <edge source="ru.itmo.prog.lab5.models.forms.CoordinatesForm" target="ru.itmo.prog.lab5.exceptions.InvalidFormException">
+      <point x="96.25" y="-74.5" />
+      <point x="7729.4377482169075" y="3285.0" />
+      <point x="8720.637748216906" y="3285.0" />
+      <point x="-91.0" y="15.0" />
+    </edge>
+    <edge source="ru.itmo.prog.lab5.commands.Command" target="ru.itmo.prog.lab5.commands.Executable">
+      <point x="53.25" y="-86.0" />
+      <point x="1830.1873613121452" y="4057.0" />
+      <point x="1906.136624936923" y="4057.0" />
+      <point x="0.0" y="27.5" />
+    </edge>
+    <edge source="ru.itmo.prog.lab5.utility.Runner" target="ru.itmo.prog.lab5.exceptions.ScriptRecursionException">
+      <point x="117.6875" y="-97.5" />
+      <point x="1131.1496428571427" y="6365.0" />
+      <point x="6360.8304761904765" y="6365.0" />
+      <point x="60.0" y="15.0" />
+    </edge>
+    <edge source="ru.itmo.prog.lab5.commands.Add" target="ru.itmo.prog.lab5.models.forms.ProductForm">
+      <point x="26.363636363636033" y="-63.0" />
+      <point x="4057.586913086273" y="6385.0" />
+      <point x="6765.1564982169075" y="6385.0" />
+      <point x="-40.625" y="143.5" />
+    </edge>
+    <edge source="ru.itmo.prog.lab5.utility.Runner" target="ru.itmo.prog.lab5.managers.CommandManager">
+      <point x="-16.8125" y="-97.5" />
+      <point x="996.6496428571427" y="6635.0" />
+      <point x="924.4420416035891" y="6635.0" />
+      <point x="106.25" y="62.5" />
+    </edge>
+    <edge source="ru.itmo.prog.lab5.commands.AddIfMax" target="ru.itmo.prog.lab5.models.Product">
+      <point x="-38.0" y="-74.5" />
+      <point x="3676.223276722637" y="6295.0" />
+      <point x="3274.6131529157346" y="6295.0" />
+      <point x="3274.6131529157346" y="5008.0" />
+      <point x="4155.695729166667" y="5008.0" />
+      <point x="4155.695729166667" y="4057.0" />
+      <point x="4479.062489272468" y="4057.0" />
+      <point x="4479.062489272468" y="3075.0" />
+      <point x="5138.397314871987" y="3075.0" />
+      <point x="5138.397314871987" y="2631.0" />
+      <point x="5005.709697621669" y="2631.0" />
+      <point x="-208.66666666666697" y="236.0" />
+    </edge>
+    <edge source="ru.itmo.prog.lab5.commands.Exit" target="ru.itmo.prog.lab5.utility.console.Console">
+      <point x="-25.75" y="-51.5" />
+      <point x="540.9420416035891" y="4798.0" />
+      <point x="520.6920416035891" y="4798.0" />
+      <point x="520.6920416035891" y="2421.0" />
+      <point x="2754.9140058893036" y="2421.0" />
+      <point x="-86.46000000000004" y="108.5" />
+    </edge>
+    <edge source="ru.itmo.prog.lab5.Main" target="ru.itmo.prog.lab5.commands.AddIfMax">
+      <point x="28.607142857142662" y="-27.5" />
+      <point x="2824.1616470264316" y="7049.0" />
+      <point x="3714.223276722637" y="7049.0" />
+      <point x="0.0" y="74.5" />
+    </edge>
+    <edge source="ru.itmo.prog.lab5.models.forms.CoordinatesForm" target="ru.itmo.prog.lab5.models.forms.Form">
+      <point x="41.25" y="-74.5" />
+      <point x="7674.4377482169075" y="3215.0" />
+      <point x="7817.4377482169075" y="3215.0" />
+      <point x="-9.0" y="27.5" />
+    </edge>
+    <edge source="ru.itmo.prog.lab5.models.Address" target="ru.itmo.prog.lab5.utility.Validatable">
+      <point x="0.0" y="-97.5" />
+      <point x="8163.787748216906" y="525.0" />
+      <point x="7707.399919038654" y="525.0" />
+      <point x="57.0" y="27.5" />
+    </edge>
+    <edge source="ru.itmo.prog.lab5.commands.FilterContainsPartNumber" target="ru.itmo.prog.lab5.commands.Command">
+      <point x="-138.66666666666652" y="-74.5" />
+      <point x="4103.374791874153" y="4638.0" />
+      <point x="1880.3945041692882" y="4638.0" />
+      <point x="103.45714285714303" y="86.0" />
+    </edge>
+    <edge source="ru.itmo.prog.lab5.Main" target="ru.itmo.prog.lab5.models.Organization">
+      <point x="73.10714285714266" y="-27.5" />
+      <point x="2868.6616470264316" y="7119.0" />
+      <point x="6170.3304761904765" y="7119.0" />
+      <point x="6170.3304761904765" y="5318.0" />
+      <point x="6682.7502482169075" y="5318.0" />
+      <point x="6682.7502482169075" y="1779.0" />
+      <point x="6460.7679761904765" y="1779.0" />
+      <point x="47.0" y="201.5" />
+    </edge>
+    <edge source="ru.itmo.prog.lab5.utility.Runner.ExitCode" target="java.lang.Enum">
+      <point x="-71.0" y="-74.0" />
+      <point x="859.0246232169065" y="7139.0" />
+      <point x="0.0" y="7139.0" />
+      <point x="0.0" y="525.0" />
+      <point x="5020.925092649765" y="525.0" />
+      <point x="-94.33333333333303" y="190.0" />
+    </edge>
+    <edge source="ru.itmo.prog.lab5.commands.Update" target="ru.itmo.prog.lab5.exceptions.InvalidFormException">
+      <point x="27.1875" y="-63.0" />
+      <point x="7002.4064982169075" y="6485.0" />
+      <point x="8091.066585705321" y="6485.0" />
+      <point x="8091.066585705321" y="5518.0" />
+      <point x="9179.72108155024" y="5518.0" />
+      <point x="9179.72108155024" y="4077.0" />
+      <point x="8887.137748216906" y="4077.0" />
+      <point x="8887.137748216906" y="3315.0" />
+      <point x="8902.637748216906" y="3315.0" />
+      <point x="91.0" y="15.0" />
+    </edge>
+    <edge source="ru.itmo.prog.lab5.models.forms.OrganizationForm" target="ru.itmo.prog.lab5.exceptions.MustBeNotEmptyException">
+      <point x="135.0" y="-120.5" />
+      <point x="8079.1877482169075" y="4137.0" />
+      <point x="9376.804414883572" y="4137.0" />
+      <point x="9376.804414883572" y="3345.0" />
+      <point x="9362.97108155024" y="3345.0" />
+      <point x="19.33333333333394" y="15.0" />
+    </edge>
+    <edge source="ru.itmo.prog.lab5.models.forms.UnitOfMeasureForm" target="ru.itmo.prog.lab5.utility.Interrogator">
+      <point x="19.5" y="-51.5" />
+      <point x="6181.8127482169075" y="3145.0" />
+      <point x="7260.7814982169075" y="3145.0" />
+      <point x="-105.4375" y="97.0" />
+    </edge>
+    <edge source="ru.itmo.prog.lab5.models.forms.OrganizationForm" target="ru.itmo.prog.lab5.managers.CollectionManager">
+      <point x="-135.0" y="-120.5" />
+      <point x="7809.1877482169075" y="3927.0" />
+      <point x="4768.140614272468" y="3927.0" />
+      <point x="137.078125" y="236.0" />
+    </edge>
+    <edge source="ru.itmo.prog.lab5.commands.RemoveById" target="ru.itmo.prog.lab5.exceptions.CollectionIsEmptyException">
+      <point x="97.84615384615427" y="-63.0" />
+      <point x="5408.875447884809" y="6615.0" />
+      <point x="8355.399919038655" y="6615.0" />
+      <point x="21.33333333333394" y="15.0" />
+    </edge>
+    <edge source="ru.itmo.prog.lab5.exceptions.IncorrectInputInScriptException" target="java.lang.Exception">
+      <point x="0.0" y="-15.0" />
+      <point x="8539.637748216906" y="2611.0" />
+      <point x="9230.233252371989" y="2611.0" />
+      <point x="-124.66666666666606" y="85.5" />
+    </edge>
+    <edge source="ru.itmo.prog.lab5.models.forms.ProductForm" target="ru.itmo.prog.lab5.utility.Interrogator">
+      <point x="-8.125" y="-143.5" />
+      <point x="6797.6564982169075" y="3165.0" />
+      <point x="7321.0314982169075" y="3165.0" />
+      <point x="-45.1875" y="97.0" />
+    </edge>
+    <edge source="ru.itmo.prog.lab5.models.forms.AddressForm" target="ru.itmo.prog.lab5.models.Address">
+      <point x="-24.0" y="-74.5" />
+      <point x="8239.637748216906" y="2865.0" />
+      <point x="8206.387748216906" y="2865.0" />
+      <point x="42.600000000000364" y="97.5" />
+    </edge>
+    <edge source="java.lang.Throwable" target="java.io.Serializable">
+      <point x="0.0" y="-454.5" />
+      <point x="10354.199226190474" y="80.0" />
+      <point x="8090.948530149765" y="80.0" />
+      <point x="36.0" y="15.0" />
+    </edge>
+    <edge source="ru.itmo.prog.lab5.Main" target="ru.itmo.prog.lab5.managers.CollectionManager">
+      <point x="22.25" y="-27.5" />
+      <point x="2817.804504169289" y="7039.0" />
+      <point x="3551.723276722637" y="7039.0" />
+      <point x="3551.723276722637" y="5138.0" />
+      <point x="4383.445301772468" y="5138.0" />
+      <point x="4383.445301772468" y="4197.0" />
+      <point x="4608.953114272468" y="4197.0" />
+      <point x="-22.109375" y="236.0" />
+    </edge>
+    <edge source="ru.itmo.prog.lab5.Main" target="ru.itmo.prog.lab5.commands.ExecuteScript">
+      <point x="-73.10714285714312" y="-27.5" />
+      <point x="2722.447361312146" y="7109.0" />
+      <point x="287.47999999999956" y="7109.0" />
+      <point x="287.47999999999956" y="6695.0" />
+      <point x="340.69204160358913" y="6695.0" />
+      <point x="0.0" y="51.5" />
+    </edge>
+    <edge source="ru.itmo.prog.lab5.commands.FilterByPrice" target="ru.itmo.prog.lab5.commands.Command">
+      <point x="-150.66666666666652" y="-74.5" />
+      <point x="2932.946486249068" y="4668.0" />
+      <point x="1862.1373613121455" y="4668.0" />
+      <point x="85.20000000000027" y="86.0" />
+    </edge>
+    <edge source="ru.itmo.prog.lab5.managers.DumpManager" target="ru.itmo.prog.lab5.utility.LocalDateAdapter">
+      <point x="41.5" y="-86.0" />
+      <point x="0.0" y="39.0" />
+    </edge>
+    <edge source="ru.itmo.prog.lab5.models.forms.OrganizationForm" target="ru.itmo.prog.lab5.models.forms.OrganizationTypeForm">
+      <point x="-45.0" y="-120.5" />
+      <point x="7899.1877482169075" y="3877.0" />
+      <point x="7374.6877482169075" y="3877.0" />
+      <point x="0.0" y="51.5" />
+    </edge>
+    <edge source="ru.itmo.prog.lab5.commands.FilterByPrice" target="ru.itmo.prog.lab5.managers.CollectionManager">
+      <point x="75.33333333333348" y="-74.5" />
+      <point x="3158.946486249068" y="5118.0" />
+      <point x="4368.244408915325" y="5118.0" />
+      <point x="4368.244408915325" y="4177.0" />
+      <point x="4591.265614272468" y="4177.0" />
+      <point x="-39.796875" y="236.0" />
+    </edge>
+    <edge source="ru.itmo.prog.lab5.models.forms.CoordinatesForm" target="ru.itmo.prog.lab5.utility.console.Console">
+      <point x="-96.25" y="-74.5" />
+      <point x="7536.9377482169075" y="2935.0" />
+      <point x="4103.115788690476" y="2935.0" />
+      <point x="4103.115788690476" y="2491.0" />
+      <point x="2943.554005889304" y="2491.0" />
+      <point x="102.18000000000029" y="108.5" />
+    </edge>
+    <edge source="ru.itmo.prog.lab5.commands.AddIfMax" target="ru.itmo.prog.lab5.exceptions.IncorrectInputInScriptException">
+      <point x="63.33333333333303" y="-74.5" />
+      <point x="3777.55661005597" y="6405.0" />
+      <point x="7108.382191065085" y="6405.0" />
+      <point x="7108.382191065085" y="5368.0" />
+      <point x="8706.237748216907" y="5368.0" />
+      <point x="8706.237748216907" y="3265.0" />
+      <point x="8584.037748216906" y="3265.0" />
+      <point x="44.399999999999636" y="15.0" />
+    </edge>
+    <edge source="ru.itmo.prog.lab5.exceptions.MustBeNotEmptyException" target="java.lang.Exception">
+      <point x="0.0" y="-15.0" />
+      <point x="9343.637748216908" y="2631.0" />
+      <point x="9354.899919038653" y="2631.0" />
+      <point x="0.0" y="85.5" />
+    </edge>
+    <edge source="ru.itmo.prog.lab5.commands.AddIfMin" target="ru.itmo.prog.lab5.utility.console.Console">
+      <point x="-63.333333333332575" y="-74.5" />
+      <point x="4468.218541874154" y="6205.0" />
+      <point x="2805.354581487163" y="6205.0" />
+      <point x="2805.354581487163" y="2581.0" />
+      <point x="2838.7540058893037" y="2581.0" />
+      <point x="-2.619999999999891" y="108.5" />
+    </edge>
+    <edge source="ru.itmo.prog.lab5.models.UnitOfMeasure" target="java.lang.Enum">
+      <point x="0.0" y="-97.0" />
+      <point x="4947.376364288336" y="535.0" />
+      <point x="5115.258425983098" y="535.0" />
+      <point x="0.0" y="190.0" />
+    </edge>
+    <edge source="ru.itmo.prog.lab5.models.Product" target="ru.itmo.prog.lab5.models.UnitOfMeasure">
+      <point x="-278.2222222222217" y="-236.0" />
+      <point x="4936.154142066114" y="1829.0" />
+      <point x="4978.376364288336" y="1829.0" />
+      <point x="31.0" y="97.0" />
+    </edge>
+    <edge source="ru.itmo.prog.lab5.models.Organization" target="ru.itmo.prog.lab5.models.OrganizationType">
+      <point x="35.25" y="-201.5" />
+      <point x="6449.0179761904765" y="780.0" />
+      <point x="6638.368669038654" y="780.0" />
+      <point x="-33.625" y="97.0" />
+    </edge>
+    <edge source="ru.itmo.prog.lab5.models.forms.ProductForm" target="ru.itmo.prog.lab5.exceptions.NotInDeclaredLimitsException">
+      <point x="105.625" y="-143.5" />
+      <point x="6911.4064982169075" y="5448.0" />
+      <point x="8970.915892857143" y="5448.0" />
+      <point x="8970.915892857143" y="4107.0" />
+      <point x="9145.08255952381" y="4107.0" />
+      <point x="9145.08255952381" y="3335.0" />
+      <point x="9139.637748216908" y="3335.0" />
+      <point x="68.0" y="15.0" />
+    </edge>
+    <edge source="java.lang.Enum" target="java.lang.Comparable">
+      <point x="-70.75" y="-190.0" />
+      <point x="5044.508425983098" y="80.0" />
+      <point x="5043.133425983098" y="80.0" />
+      <point x="39.25" y="27.5" />
+    </edge>
+    <edge source="ru.itmo.prog.lab5.models.forms.OrganizationForm" target="ru.itmo.prog.lab5.models.forms.AddressForm">
+      <point x="27.0" y="-120.5" />
+      <point x="7971.1877482169075" y="4057.0" />
+      <point x="8263.637748216906" y="4057.0" />
+      <point x="0.0" y="74.5" />
+    </edge>
+    <edge source="ru.itmo.prog.lab5.models.forms.OrganizationForm" target="ru.itmo.prog.lab5.models.forms.Form">
+      <point x="-9.0" y="-120.5" />
+      <point x="7935.1877482169075" y="3225.0" />
+      <point x="7853.4377482169075" y="3225.0" />
+      <point x="27.0" y="27.5" />
+    </edge>
+    <edge source="ru.itmo.prog.lab5.commands.AddIfMin" target="ru.itmo.prog.lab5.models.forms.ProductForm">
+      <point x="38.000000000000455" y="-74.5" />
+      <point x="4569.551875207486" y="6395.0" />
+      <point x="6846.4064982169075" y="6395.0" />
+      <point x="40.625" y="143.5" />
+    </edge>
+    <edge source="ru.itmo.prog.lab5.commands.Update" target="ru.itmo.prog.lab5.managers.CollectionManager">
+      <point x="-63.4375" y="-63.0" />
+      <point x="6911.7814982169075" y="6015.0" />
+      <point x="4875.612627371987" y="6015.0" />
+      <point x="4875.612627371987" y="3987.0" />
+      <point x="4723.921864272468" y="3987.0" />
+      <point x="92.859375" y="236.0" />
+    </edge>
+    <edge source="java.lang.Throwable.WrappedPrintStream" target="java.lang.Throwable">
+      <point x="-67.25" y="-63.0" />
+      <point x="10188.554414883572" y="2631.0" />
+      <point x="10225.554414883572" y="2631.0" />
+      <point x="10225.554414883572" y="1829.0" />
+      <point x="10202.399226190475" y="1829.0" />
+      <point x="-151.79999999999927" y="454.5" />
+    </edge>
+    <edge source="ru.itmo.prog.lab5.commands.FilterByPrice" target="ru.itmo.prog.lab5.models.Product">
+      <point x="0.0" y="-74.5" />
+      <point x="3083.6131529157346" y="4998.0" />
+      <point x="4054.6957291666668" y="4998.0" />
+      <point x="4054.6957291666668" y="3055.0" />
+      <point x="4645.938981538654" y="3055.0" />
+      <point x="4645.938981538654" y="2631.0" />
+      <point x="4963.976364288336" y="2631.0" />
+      <point x="-250.39999999999964" y="236.0" />
+    </edge>
+    <edge source="ru.itmo.prog.lab5.commands.ExecuteScript" target="ru.itmo.prog.lab5.utility.console.Console">
+      <point x="-77.25" y="-51.5" />
+      <point x="263.44204160358913" y="5658.0" />
+      <point x="283.69204160358913" y="5658.0" />
+      <point x="283.69204160358913" y="2391.0" />
+      <point x="2739.1940058893038" y="2391.0" />
+      <point x="-102.17999999999984" y="108.5" />
+    </edge>
+    <edge source="ru.itmo.prog.lab5.commands.AddIfMax" target="ru.itmo.prog.lab5.managers.CollectionManager">
+      <point x="-12.66666666666697" y="-74.5" />
+      <point x="3701.55661005597" y="6335.0" />
+      <point x="3708.723276722637" y="6335.0" />
+      <point x="3708.723276722637" y="5148.0" />
+      <point x="4392.289051772468" y="5148.0" />
+      <point x="4392.289051772468" y="4207.0" />
+      <point x="4617.796864272468" y="4207.0" />
+      <point x="-13.265625" y="236.0" />
+    </edge>
+    <edge source="ru.itmo.prog.lab5.commands.Head" target="ru.itmo.prog.lab5.utility.console.Console">
+      <point x="-24.166666666666515" y="-63.0" />
+      <point x="2598.4479148204973" y="2541.0" />
+      <point x="2817.7940058893037" y="2541.0" />
+      <point x="-23.579999999999927" y="108.5" />
+    </edge>
+    <edge source="ru.itmo.prog.lab5.commands.SumOfPrice" target="ru.itmo.prog.lab5.utility.console.Console">
+      <point x="-57.81818181818198" y="-74.5" />
+      <point x="4804.733693389304" y="6145.0" />
+      <point x="2821.594581487163" y="6145.0" />
+      <point x="2821.594581487163" y="2601.0" />
+      <point x="2849.2340058893037" y="2601.0" />
+      <point x="7.860000000000127" y="108.5" />
+    </edge>
+    <edge source="ru.itmo.prog.lab5.exceptions.ScriptRecursionException" target="java.lang.Exception">
+      <point x="0.0" y="-15.0" />
+      <point x="6300.8304761904765" y="5348.0" />
+      <point x="8381.137748216906" y="5348.0" />
+      <point x="8381.137748216906" y="2601.0" />
+      <point x="9188.67769681643" y="2601.0" />
+      <point x="-166.22222222222263" y="85.5" />
+    </edge>
+    <edge source="ru.itmo.prog.lab5.models.Product" target="ru.itmo.prog.lab5.utility.Element">
+      <point x="-139.1111111111113" y="-236.0" />
+      <point x="5075.265253177225" y="1819.0" />
+      <point x="5170.359001580959" y="1819.0" />
+      <point x="5170.359001580959" y="790.0" />
+      <point x="6018.938113483098" y="790.0" />
+      <point x="-39.0" y="27.5" />
+    </edge>
+    <edge source="ru.itmo.prog.lab5.commands.Show" target="ru.itmo.prog.lab5.managers.CollectionManager">
+      <point x="120.83333333333348" y="-63.0" />
+      <point x="1335.5280535083516" y="5018.0" />
+      <point x="4269.025658915325" y="5018.0" />
+      <point x="4269.025658915325" y="4077.0" />
+      <point x="4502.828114272468" y="4077.0" />
+      <point x="-128.234375" y="236.0" />
+    </edge>
+    <edge source="ru.itmo.prog.lab5.models.forms.CoordinatesForm" target="ru.itmo.prog.lab5.utility.Interrogator">
+      <point x="-41.25" y="-74.5" />
+      <point x="7591.9377482169075" y="2915.0" />
+      <point x="7441.5314982169075" y="2915.0" />
+      <point x="75.3125" y="97.0" />
+    </edge>
+    <edge source="ru.itmo.prog.lab5.models.forms.ProductForm" target="ru.itmo.prog.lab5.models.forms.OrganizationForm">
+      <point x="40.625" y="-143.5" />
+      <point x="6846.4064982169075" y="5318.0" />
+      <point x="7944.1877482169075" y="5318.0" />
+      <point x="0.0" y="120.5" />
+    </edge>
+    <edge source="java.lang.Exception" target="java.lang.Throwable">
+      <point x="0.0" y="-85.5" />
+      <point x="9354.899919038653" y="1829.0" />
+      <point x="10050.599226190476" y="1829.0" />
+      <point x="-303.60000000000036" y="454.5" />
+    </edge>
+    <edge source="ru.itmo.prog.lab5.models.forms.UnitOfMeasureForm" target="ru.itmo.prog.lab5.models.forms.Form">
+      <point x="58.5" y="-51.5" />
+      <point x="6220.8127482169075" y="3195.0" />
+      <point x="7781.4377482169075" y="3195.0" />
+      <point x="-45.0" y="27.5" />
+    </edge>
+    <edge source="ru.itmo.prog.lab5.models.forms.ProductForm" target="ru.itmo.prog.lab5.utility.console.Console">
+      <point x="-138.125" y="-143.5" />
+      <point x="6667.6564982169075" y="4588.0" />
+      <point x="4032.3971577380953" y="4588.0" />
+      <point x="4032.3971577380953" y="4037.0" />
+      <point x="3770.0977083333337" y="4037.0" />
+      <point x="3770.0977083333337" y="2571.0" />
+      <point x="2901.634005889304" y="2571.0" />
+      <point x="60.26000000000022" y="108.5" />
+    </edge>
+    <edge source="ru.itmo.prog.lab5.utility.Element" target="ru.itmo.prog.lab5.utility.Validatable">
+      <point x="26.0" y="-27.5" />
+      <point x="6083.938113483098" y="535.0" />
+      <point x="7593.399919038654" y="535.0" />
+      <point x="-57.0" y="27.5" />
+    </edge>
+    <edge source="ru.itmo.prog.lab5.models.forms.AddressForm" target="ru.itmo.prog.lab5.exceptions.MustBeNotEmptyException">
+      <point x="88.0" y="-74.5" />
+      <point x="8351.637748216906" y="3355.0" />
+      <point x="9285.637748216908" y="3355.0" />
+      <point x="-58.0" y="15.0" />
+    </edge>
+    <edge source="java.lang.Throwable.WrappedPrintWriter" target="java.lang.Throwable.PrintStreamOrWriter">
+      <point x="-67.25" y="-63.0" />
+      <point x="10477.554414883572" y="2631.0" />
+      <point x="10450.304414883572" y="2631.0" />
+      <point x="50.0" y="51.0" />
+    </edge>
+    <edge source="ru.itmo.prog.lab5.commands.Update" target="ru.itmo.prog.lab5.exceptions.NotFoundException">
+      <point x="135.9375" y="-63.0" />
+      <point x="7111.1564982169075" y="6695.0" />
+      <point x="8655.06658570532" y="6695.0" />
+      <point x="69.0" y="15.0" />
+    </edge>
+    <edge source="ru.itmo.prog.lab5.commands.Add" target="ru.itmo.prog.lab5.exceptions.InvalidFormException">
+      <point x="79.09090909090901" y="-63.0" />
+      <point x="4110.314185813546" y="6465.0" />
+      <point x="7853.483252371987" y="6465.0" />
+      <point x="7853.483252371987" y="5428.0" />
+      <point x="8826.637748216906" y="5428.0" />
+      <point x="8826.637748216906" y="3305.0" />
+      <point x="8850.637748216906" y="3305.0" />
+      <point x="39.0" y="15.0" />
+    </edge>
+    <edge source="ru.itmo.prog.lab5.commands.Update" target="ru.itmo.prog.lab5.exceptions.CollectionIsEmptyException">
+      <point x="63.4375" y="-63.0" />
+      <point x="7038.6564982169075" y="6635.0" />
+      <point x="8440.733252371987" y="6635.0" />
+      <point x="106.66666666666606" y="15.0" />
+    </edge>
+    <edge source="ru.itmo.prog.lab5.models.Product" target="ru.itmo.prog.lab5.models.Coordinates">
+      <point x="278.2222222222226" y="-236.0" />
+      <point x="5492.598586510559" y="1809.0" />
+      <point x="7702.238441065085" y="1809.0" />
+      <point x="-46.80000000000018" y="97.5" />
+    </edge>
+    <edge source="ru.itmo.prog.lab5.utility.LocalDateAdapter" target="com.google.gson.JsonSerializer">
+      <point x="-130.25" y="-39.0" />
+      <point x="4221.313981538654" y="1829.0" />
+      <point x="4099.876364288336" y="1829.0" />
+      <point x="0.0" y="27.5" />
+    </edge>
+    <edge source="ru.itmo.prog.lab5.Main" target="ru.itmo.prog.lab5.managers.CommandManager">
+      <point x="-47.67857142857156" y="-27.5" />
+      <point x="2747.8759327407174" y="7069.0" />
+      <point x="868.4621428571427" y="7069.0" />
+      <point x="868.4621428571427" y="6675.0" />
+      <point x="839.4420416035891" y="6675.0" />
+      <point x="21.25" y="62.5" />
+    </edge>
+    <edge source="ru.itmo.prog.lab5.models.forms.OrganizationTypeForm" target="ru.itmo.prog.lab5.exceptions.IncorrectInputInScriptException">
+      <point x="106.25" y="-51.5" />
+      <point x="7480.9377482169075" y="3245.0" />
+      <point x="8436.037748216906" y="3245.0" />
+      <point x="-103.60000000000036" y="15.0" />
+    </edge>
+    <edge source="ru.itmo.prog.lab5.models.forms.AddressForm" target="ru.itmo.prog.lab5.exceptions.IncorrectInputInScriptException">
+      <point x="8.0" y="-74.5" />
+      <point x="8271.637748216906" y="3265.0" />
+      <point x="8495.237748216907" y="3265.0" />
+      <point x="-44.399999999999636" y="15.0" />
+    </edge>
+    <edge source="ru.itmo.prog.lab5.managers.CollectionManager" target="ru.itmo.prog.lab5.managers.DumpManager">
+      <point x="-62.88888888888869" y="-236.0" />
+      <point x="4568.1736003835795" y="3005.0" />
+      <point x="4434.563981538654" y="3005.0" />
+      <point x="124.5" y="86.0" />
+    </edge>
+    <edge source="ru.itmo.prog.lab5.commands.FilterByPrice" target="ru.itmo.prog.lab5.exceptions.WrongAmountOfElementsException">
+      <point x="113.0" y="-74.5" />
+      <point x="3196.6131529157346" y="5338.0" />
+      <point x="8263.637748216906" y="5338.0" />
+      <point x="8263.637748216906" y="4187.0" />
+      <point x="9449.304414883572" y="4187.0" />
+      <point x="-104.0" y="15.0" />
+    </edge>
+    <edge source="ru.itmo.prog.lab5.models.Organization" target="ru.itmo.prog.lab5.models.Product">
+      <point x="-94.0" y="201.5" />
+      <point x="6319.7679761904765" y="1779.0" />
+      <point x="5353.487475399447" y="1779.0" />
+      <point x="139.1111111111113" y="-236.0" />
+    </edge>
+    <edge source="ru.itmo.prog.lab5.Main" target="ru.itmo.prog.lab5.utility.Runner">
+      <point x="-41.32142857142844" y="-27.5" />
+      <point x="2754.2330755978605" y="7059.0" />
+      <point x="1103.1288095238097" y="7059.0" />
+      <point x="89.66666666666674" y="97.5" />
+    </edge>
+    <edge source="ru.itmo.prog.lab5.Main" target="ru.itmo.prog.lab5.commands.Head">
+      <point x="-9.53571428571422" y="-27.5" />
+      <point x="2786.0187898835748" y="7009.0" />
+      <point x="2622.6145814871634" y="7009.0" />
+      <point x="0.0" y="63.0" />
+    </edge>
+    <edge source="ru.itmo.prog.lab5.models.forms.OrganizationForm" target="ru.itmo.prog.lab5.models.Address">
+      <point x="9.0" y="-120.5" />
+      <point x="7953.1877482169075" y="4047.0" />
+      <point x="8157.137748216906" y="4047.0" />
+      <point x="8157.137748216906" y="800.0" />
+      <point x="8163.787748216906" y="800.0" />
+      <point x="0.0" y="97.5" />
+    </edge>
+    <edge source="ru.itmo.prog.lab5.models.forms.ProductForm" target="ru.itmo.prog.lab5.models.Product">
+      <point x="-40.625" y="-143.5" />
+      <point x="6765.1564982169075" y="4528.0" />
+      <point x="6660.7502482169075" y="4528.0" />
+      <point x="6660.7502482169075" y="2511.0" />
+      <point x="5506.509697621669" y="2511.0" />
+      <point x="292.1333333333332" y="236.0" />
+    </edge>
+    <edge source="ru.itmo.prog.lab5.exceptions.HistoryIsEmptyException" target="java.lang.Exception">
+      <point x="0.0" y="-15.0" />
+      <point x="9985.304414883572" y="2601.0" />
+      <point x="9521.122141260876" y="2601.0" />
+      <point x="166.22222222222263" y="85.5" />
+    </edge>
+    <edge source="ru.itmo.prog.lab5.commands.Info" target="ru.itmo.prog.lab5.managers.CollectionManager">
+      <point x="120.83333333333348" y="-63.0" />
+      <point x="2116.3622005347825" y="5058.0" />
+      <point x="4308.713158915325" y="5058.0" />
+      <point x="4308.713158915325" y="4117.0" />
+      <point x="4538.203114272468" y="4117.0" />
+      <point x="-92.859375" y="236.0" />
+    </edge>
+    <edge source="ru.itmo.prog.lab5.models.forms.ProductForm" target="ru.itmo.prog.lab5.models.Organization">
+      <point x="-24.375" y="-143.5" />
+      <point x="6781.4064982169075" y="4518.0" />
+      <point x="6693.7502482169075" y="4518.0" />
+      <point x="6693.7502482169075" y="1769.0" />
+      <point x="6507.7679761904765" y="1769.0" />
+      <point x="94.0" y="201.5" />
+    </edge>
+    <edge source="ru.itmo.prog.lab5.commands.FilterContainsPartNumber" target="ru.itmo.prog.lab5.managers.CollectionManager">
+      <point x="46.222222222222626" y="-74.5" />
+      <point x="4288.263680763042" y="5198.0" />
+      <point x="4702.442488483099" y="5198.0" />
+      <point x="4702.442488483099" y="4227.0" />
+      <point x="4662.015614272468" y="4227.0" />
+      <point x="30.953125" y="236.0" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="0.10700150129657432" x="5476.5" y="3653.5" />
+  <SelectedNodes>
+    <node>ru.itmo.prog.lab5.models.Coordinates</node>
+  </SelectedNodes>
+  <Categories>
+    <Category>Fields</Category>
+    <Category>Constructors</Category>
+    <Category>Methods</Category>
+    <Category>Properties</Category>
+    <Category>Inner Classes</Category>
+  </Categories>
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+

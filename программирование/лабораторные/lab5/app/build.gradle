@@ -10,11 +10,16 @@ repositories {
 dependencies {
     testImplementation 'junit:junit:4.13.2'
     implementation 'com.google.inject:guice:5.1.0'
+    implementation 'com.google.code.gson:gson:2.10.1'
 }
 
 ext.sharedManifest = manifest {
     attributes("Implementation-Title": "Gradle",
         "Implementation-Version": version)
+}
+
+run {
+    standardInput = System.in
 }
 
 tasks.register('fatJar', Jar) {
