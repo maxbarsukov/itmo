@@ -2,7 +2,7 @@
 
 <img alt="Grrr... gif" src="https://github.com/maxbarsukov/itmo/blob/master/.docs/grr.gif" height="250">
 
-> Очевидно.
+> 10 глава не чилл...
 
 **Лектор:** Карпов Дмитрий Валерьевич
 

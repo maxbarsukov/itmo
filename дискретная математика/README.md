@@ -1,6 +1,6 @@
 # Дискетная Математика (Продвинутый уровень)
 
-<img alt="Onizuka gif" src="https://github.com/maxbarsukov/itmo/blob/master/.docs/onizuka2.gif" height="250">
+<img alt="Onizuka gif" src="https://github.com/maxbarsukov/itmo/blob/master/.docs/onizuka2.gif" height="200">
 
 > Очевидно.
 
@@ -18,4 +18,4 @@
 | Ссылка | Описание |
 | --- | --- |
 | https://logic.pdmi.ras.ru/~pastor/ITMO/2022-23/ | Теория множеств 2022-23 |
-| https://logic.pdmi.ras.ru/~dvk/ITMO/DM/2022-23/%D0%9B%D0%B5%D0%BA%D1%86%D0%B8%D0%B8/ | Теория Графов 2022-23 |
+| https://logic.pdmi.ras.ru/~dvk/ITMO/DM/2022-23/%D0%9B%D0%B5%D0%BA%D1%86%D0%B8%D0%B8/ | Теория графов 2022-23 |
