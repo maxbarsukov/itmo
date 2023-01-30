@@ -2,6 +2,8 @@
 
 <img alt="Hug" src="https://github.com/maxbarsukov/itmo/blob/master/.docs/hug.gif" height="250">
 
+> Terra incognita...
+
 ## Полезные ссылки
 
 | Ссылка | Описание |

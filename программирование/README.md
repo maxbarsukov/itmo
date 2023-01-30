@@ -2,6 +2,10 @@
 
 <img alt="Bongo" src="https://github.com/maxbarsukov/itmo/blob/master/.docs/bongo.gif" height="150">
 
+**Лектор:** Письмак Алексей Евгеньевич
+
+**Практик:** Сорокин Роман Борисович
+
 Задания для лабораторных работ: https://se.ifmo.ru/courses/programming#labs
 
 ### 1 семестр
