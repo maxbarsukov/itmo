@@ -1,4 +1,5 @@
-# Информатика: Лабораторные работы
+# Информатика
+## Лабораторные работы
 
 <img alt="Chill2" src="https://github.com/maxbarsukov/itmo/blob/master/.docs/chill2.gif" height="150">
 
