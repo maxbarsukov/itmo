@@ -1,4 +1,5 @@
-# ОПД: Лабораторные работы
+# ОПД
+## Лабораторные работы
 
 <img alt="Scared" src="https://github.com/maxbarsukov/itmo/blob/master/.docs/scared.gif" height="150">
 

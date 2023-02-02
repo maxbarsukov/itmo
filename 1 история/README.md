@@ -1,4 +1,5 @@
 # История
+## История западноевропейской и русской культуры
 
 <img alt="haruhi gif" src="https://github.com/maxbarsukov/itmo/blob/master/.docs/haruhi.gif" height="250">
 
