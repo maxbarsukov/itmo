@@ -8,6 +8,6 @@
 
 ## Вариант 990055
 
-![Задание](https://raw.githubusercontent.com/maxbarsukov/itmo/master/%D0%BE%D0%BF%D0%B4/%D0%BB%D0%B0%D0%B1%D0%BE%D1%80%D0%B0%D1%82%D0%BE%D1%80%D0%BD%D1%8B%D0%B5/lab2/docs/task.png)
+![Задание](./docs/task.png)
 
-- [Отчёт](https://github.com/maxbarsukov/itmo/blob/master/%D0%BE%D0%BF%D0%B4/%D0%BB%D0%B0%D0%B1%D0%BE%D1%80%D0%B0%D1%82%D0%BE%D1%80%D0%BD%D1%8B%D0%B5/lab2/docs/report.pdf)
+- [Отчёт](./docs/report.pdf)
