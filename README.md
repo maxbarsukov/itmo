@@ -6,18 +6,18 @@
 
 | Предмет \ Семестр                          | 1   | 2   | 3   | 4   | 5   | 6   | 7   | 8   |
 | ---                                        | --- | --- | --- | --- | --- | --- | --- | --- |
-| Информатика                                | :heavy_check_mark: |  |  |  |  |  |  |  |
-| Основы профессиональной<br>деятельности    | :heavy_check_mark: | :construction: |  |  |  |  |  |  |
-| Программирование                           | :heavy_check_mark: | :construction: |  |  |  |  |  |  |
-| Базы данных                                |  | :construction: |  |  |  |  |  |  |
-| Иностранный язык                           | :heavy_check_mark: | :construction: | :hourglass: | :hourglass: | :hourglass: | :hourglass: | | |
-| История                                    | :heavy_check_mark: |  |  |  |  |  |  |  |
-| Коммуникации и<br>командообразование       |  | :construction: |  |  |  |  |  |  |
-| Математика                                 | :heavy_check_mark: | :construction:* | :hourglass: |  |  |  |  |  |
-| Дискретная математика                      | :heavy_check_mark: | :construction:* |  |  |  |  |  |  |
-| Линейная алгебра<br>(продвинутый уровень)  | :heavy_check_mark: | :walking:* |  |  |  |  |  |  |
+| [Информатика](./1%20информатика)                                | :heavy_check_mark: |  |  |  |  |  |  |  |
+| [Основы профессиональной<br>деятельности](./1-2%20опд)    | :heavy_check_mark: | :construction: |  |  |  |  |  |  |
+| [Программирование](./1-2%20программирование)                           | :heavy_check_mark: | :construction: |  |  |  |  |  |  |
+| [Базы данных](./2%20базы%20данных)                                |  | :construction: |  |  |  |  |  |  |
+| [Иностранный язык](./1-6%20английский%20язык)                           | :heavy_check_mark: | :construction: | :hourglass: | :hourglass: | :hourglass: | :hourglass: | | |
+| [История](./1%20история)                                    | :heavy_check_mark: |  |  |  |  |  |  |  |
+| [Коммуникации и<br>командообразование](./2%20кик)       |  | :construction: |  |  |  |  |  |  |
+| [Математика](./1-3%20математика)                                 | :heavy_check_mark: | :construction:* | :hourglass: |  |  |  |  |  |
+| [Дискретная математика](./1-2%20дискретная%20математика)                      | :heavy_check_mark: | :construction:* |  |  |  |  |  |  |
+| [Линейная алгебра<br>(продвинутый уровень)](./1-2%20линейная%20алгебра)  | :heavy_check_mark: | :walking:* |  |  |  |  |  |  |
 | Физическая<br>культура и спорт             | :heavy_check_mark: | :construction: | :hourglass: | :hourglass: | :hourglass: | :hourglass: | | |
-| Безопасность<br>жизнедеятельности          |  | :construction: |  |  |  |  |  |  |
+| [Безопасность<br>жизнедеятельности](./2%20бжд)          |  | :construction: |  |  |  |  |  |  |
 | ITMOEnter                                  | :heavy_check_mark: |  |  |  |  |  |  |  |
 
 | :heavy_check_mark: | :construction: | :hourglass: |
