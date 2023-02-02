@@ -1,20 +1,32 @@
 # ИТМО
 
-> Системное прикладное программное обеспечение в Университете ИТМО
+> Системное прикладное программное обеспечение в Университете |/iТМО <sub><sup>(Механико-оптическое и часовое отделение Ремесленного училища цесаревича Николая)</sup></sub>
 
 ![Lain](https://github.com/maxbarsukov/itmo/blob/master/.docs/lain2.gif)
 
-## 1 семестр
+| Предмет \ Семестр                          | 1   | 2   | 3   | 4   | 5   | 6   | 7   | 8   |
+| ---                                        | --- | --- | --- | --- | --- | --- | --- | --- |
+| Информатика                                | :heavy_check_mark: |  |  |  |  |  |  |  |
+| Основы профессиональной<br>деятельности    | :heavy_check_mark: | :construction: |  |  |  |  |  |  |
+| Программирование                           | :heavy_check_mark: | :construction: |  |  |  |  |  |  |
+| Базы данных                                |  | :construction: |  |  |  |  |  |  |
+| Иностранный язык                           | :heavy_check_mark: | :construction: | :hourglass: | :hourglass: | :hourglass: | :hourglass: | | |
+| История                                    | :heavy_check_mark: |  |  |  |  |  |  |  |
+| Коммуникации и<br>командообразование       |  | :construction: |  |  |  |  |  |  |
+| Математика                                 | :heavy_check_mark: | :construction:* | :hourglass: |  |  |  |  |  |
+| Дискретная математика                      | :heavy_check_mark: | :construction:* |  |  |  |  |  |  |
+| Линейная алгебра<br>(продвинутый уровень)  | :heavy_check_mark: | :walking:* |  |  |  |  |  |  |
+| Физическая<br>культура и спорт                | :heavy_check_mark: | :construction: | :hourglass: | :hourglass: | :hourglass: | :hourglass: | | |
+| Безопасность<br>жизнедеятельности          |  | :construction: |  |  |  |  |  |  |
+| ITMOEnter                                  | :heavy_check_mark: |  |  |  |  |  |  |  |
 
-- [ОПД](https://github.com/maxbarsukov/itmo/tree/master/%D0%BE%D0%BF%D0%B4)
-- [Программирование](https://github.com/maxbarsukov/itmo/tree/master/%D0%BF%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%BC%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5)
-- [Информатика](https://github.com/maxbarsukov/itmo/tree/master/%D0%B8%D0%BD%D1%84%D0%BE%D1%80%D0%BC%D0%B0%D1%82%D0%B8%D0%BA%D0%B0)
-- [Дискретная математика (продвинутый)](https://github.com/maxbarsukov/itmo/tree/master/%D0%B4%D0%B8%D1%81%D0%BA%D1%80%D0%B5%D1%82%D0%BD%D0%B0%D1%8F%20%D0%BC%D0%B0%D1%82%D0%B5%D0%BC%D0%B0%D1%82%D0%B8%D0%BA%D0%B0)
-- [Математика (продвинутый)](https://github.com/maxbarsukov/itmo/tree/master/%D0%BC%D0%B0%D1%82%D0%B5%D0%BC%D0%B0%D1%82%D0%B8%D0%BA%D0%B0)
-- [Линейная алгебра](https://github.com/maxbarsukov/itmo/tree/master/%D0%BB%D0%B8%D0%BD%D0%B5%D0%B9%D0%BD%D0%B0%D1%8F%20%D0%B0%D0%BB%D0%B3%D0%B5%D0%B1%D1%80%D0%B0)
-- [Английский язык](https://github.com/maxbarsukov/itmo/tree/master/%D0%B0%D0%BD%D0%B3%D0%BB%D0%B8%D0%B9%D1%81%D0%BA%D0%B8%D0%B9%20%D1%8F%D0%B7%D1%8B%D0%BA)
-- [История](https://github.com/maxbarsukov/itmo/tree/master/%D0%B8%D1%81%D1%82%D0%BE%D1%80%D0%B8%D1%8F)
+| :heavy_check_mark: | :construction: | :hourglass: |
+| ---                | ---            | ---         |
+| зачтено            | в процессе     | ещё впереди |
 
+:walking:* — Ушел с продвинутой математики на базовую.
+
+---
 
 ## Полезные ссылки
 
