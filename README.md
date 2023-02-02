@@ -16,7 +16,7 @@
 | Математика                                 | :heavy_check_mark: | :construction:* | :hourglass: |  |  |  |  |  |
 | Дискретная математика                      | :heavy_check_mark: | :construction:* |  |  |  |  |  |  |
 | Линейная алгебра<br>(продвинутый уровень)  | :heavy_check_mark: | :walking:* |  |  |  |  |  |  |
-| Физическая<br>культура и спорт                | :heavy_check_mark: | :construction: | :hourglass: | :hourglass: | :hourglass: | :hourglass: | | |
+| Физическая<br>культура и спорт             | :heavy_check_mark: | :construction: | :hourglass: | :hourglass: | :hourglass: | :hourglass: | | |
 | Безопасность<br>жизнедеятельности          |  | :construction: |  |  |  |  |  |  |
 | ITMOEnter                                  | :heavy_check_mark: |  |  |  |  |  |  |  |
 
