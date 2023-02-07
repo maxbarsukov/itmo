@@ -8,5 +8,5 @@
 
 | Ссылка | Описание |
 | --- | --- |
-| https://dima.mysoftware.ru/karnaugh_map.html | Карты Карно |
+| https://www.youtube.com/playlist?list=PLj83Zl_bweJxqZUbGBtq5PT9splwkS98d<br>https://www.youtube.com/playlist?list=PLj83Zl_bweJzjexdKEIJLz7I7KlpnBL6R | Лекции Правдина 2022-23 |
 | https://dima.mysoftware.ru/proj/calc/calc.html#2+2 | Калькулятор |
