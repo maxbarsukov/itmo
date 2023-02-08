@@ -62,7 +62,10 @@ public class Runner {
     String[] userCommand = {"", ""};
     ExitCode commandStatus;
     scriptStack.add(argument);
-    try (Scanner scriptScanner = new Scanner(new File("../" + argument))) {
+    if (!new File(argument).exists()) {
+      argument = "../" + argument;
+    }
+    try (Scanner scriptScanner = new Scanner(new File(argument))) {
       if (!scriptScanner.hasNext()) throw new NoSuchElementException();
       Scanner tmpScanner = Interrogator.getUserScanner();
       Interrogator.setUserScanner(scriptScanner);

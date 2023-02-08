@@ -31,6 +31,9 @@ public class DumpManager {
   private final Console console;
 
   public DumpManager(String fileName, Console console) {
+    if (!(new File(fileName).exists())) {
+      fileName = "../" + fileName;
+    }
     this.fileName = fileName;
     this.console = console;
   }

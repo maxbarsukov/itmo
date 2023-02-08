@@ -23,7 +23,7 @@ public class Main {
       System.exit(1);
     }
 
-    var dumpManager = new DumpManager("../" + args[0], console);
+    var dumpManager = new DumpManager(args[0], console);
     var collectionManager = new CollectionManager(dumpManager);
 
     Organization.updateNextId(collectionManager);

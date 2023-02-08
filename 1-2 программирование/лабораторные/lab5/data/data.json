@@ -22,28 +22,6 @@
     }
   },
   {
-    "id": 5,
-    "name": "ScriptProduct",
-    "coordinates": {
-      "x": 99,
-      "y": 99
-    },
-    "creationDate": "2023-01-28",
-    "price": 100,
-    "partNumber": "my_awesome_part",
-    "unitOfMeasure": "SQUARE_METERS",
-    "manufacturer": {
-      "id": 3,
-      "name": "NEW_ORG",
-      "employeesCount": 15,
-      "type": "PRIVATE_LIMITED_COMPANY",
-      "postalAddress": {
-        "street": "Пушкина",
-        "zipCode": "1234567"
-      }
-    }
-  },
-  {
     "id": 4,
     "name": "HELLo",
     "coordinates": {
@@ -62,6 +40,28 @@
       "postalAddress": {
         "street": "Str",
         "zipCode": null
+      }
+    }
+  },
+  {
+    "id": 5,
+    "name": "ScriptProduct",
+    "coordinates": {
+      "x": 99,
+      "y": 99
+    },
+    "creationDate": "2023-01-28",
+    "price": 100,
+    "partNumber": "my_awesome_part",
+    "unitOfMeasure": "SQUARE_METERS",
+    "manufacturer": {
+      "id": 3,
+      "name": "NEW_ORG",
+      "employeesCount": 15,
+      "type": "PRIVATE_LIMITED_COMPANY",
+      "postalAddress": {
+        "street": "Пушкина",
+        "zipCode": "1234567"
       }
     }
   },
