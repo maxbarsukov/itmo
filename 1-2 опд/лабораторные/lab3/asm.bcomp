@@ -1,0 +1,27 @@
+ORG 0x455
+arr_first_elem: WORD 0x046C ; WORD $arr
+arr_last_elem: WORD 0xA000  ; адрес последнего элемента массива
+arr_length: WORD 0xE000     ; = WORD 3
+result: WORD 0x0200 ; = WORD ?
+START:
+    CLA
+    ST result
+    LD #3
+    ST arr_length
+    ADD arr_first_elem
+    ST arr_last_elem
+    repeat: LD -(arr_last_elem)
+    ROR ; нечёт => C = 1
+    BCS c_is_1
+    ROR
+    c_is_1: CMC
+    CLA        ; \
+    NOT        ;  |= LD result
+    AND result ; /
+    ROL
+    ST result  ; result = result * 2 + C
+    LOOP $arr_length
+    JUMP repeat
+    HLT
+
+arr: WORD 0x1000, 0x845D, 0x0740
