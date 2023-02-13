@@ -44,6 +44,8 @@ tasks.register('fatJar', Jar) {
     from sourceSets.main.output
     dependsOn configurations.runtimeClasspath
 
+    duplicatesStrategy = DuplicatesStrategy.EXCLUDE
+
     manifest {
         attributes['Main-Class'] = application.mainClass
     }
