@@ -1,69 +1,84 @@
 BEGIN;
 
 CREATE TYPE sex AS ENUM ('М', 'Ж');
-CREATE TYPE employment_type AS ENUM ('Полная', 'Частичная', 'Вахта');
+CREATE TYPE actions AS ENUM (
+    'войти в лабораторию',
+    'уйти обедать',
+    'расстегнуть молнию',
+    'достать баночку',
+    'отвинить дно',
+    'заглянуть внутрь'
+);
+
+CREATE TYPE brands AS ENUM (
+    'Жиллетт'
+);
 
 CREATE DOMAIN uint2 AS int4 CHECK(VALUE >= 0 AND VALUE < 65536);
 
 CREATE TABLE people (
     id SERIAL PRIMARY KEY,
     name VARCHAR(50) NOT NULL,
+    current_location VARCHAR(200) NOT NULL DEFAULT 'кое-где',
     sex sex NOT NULL
+);
+
+CREATE TABLE items (
+    id SERIAL PRIMARY KEY
+);
+
+CREATE TABLE people_actions (
+    id SERIAL PRIMARY KEY,
+    action actions NOT NULL,
+    item_id INT REFERENCES items(id),
+    person_id INT REFERENCES people(id),
+    created_at TIMESTAMPTZ NOT NULL DEFAULT NOW()
 );
 
 CREATE TABLE backpacks (
     id SERIAL PRIMARY KEY,
-    person_id INT NOT NULL REFERENCES people(id)
+    is_zipper_fastened BOOLEAN NOT NULL DEFAULT TRUE,
+    person_id INT REFERENCES people(id),
+    item_id INT REFERENCES items(id)
 );
 
 CREATE TABLE shaving_foams (
     id SERIAL PRIMARY KEY,
-    brand VARCHAR(30),
+    brand brands NOT NULL,
     is_bottom_in_place BOOLEAN NOT NULL DEFAULT TRUE,
-    backpack_id INT NOT NULL REFERENCES backpacks(id)
+    backpack_id INT REFERENCES backpacks(id),
+    item_id INT REFERENCES items(id)
 );
 
 CREATE TABLE cylinders (
     id SERIAL PRIMARY KEY,
     volume uint2 NOT NULL,
     is_big BOOLEAN GENERATED ALWAYS AS (volume > 100) STORED,
-    shaving_foam_id INT NOT NULL REFERENCES shaving_foams(id)
+    shaving_foam_id INT NOT NULL REFERENCES shaving_foams(id),
+    item_id INT REFERENCES items(id)
 );
 
-CREATE TABLE schedules (
+CREATE TABLE employees (
     id SERIAL PRIMARY KEY,
-    type employment_type
+    person_id INT NOT NULL REFERENCES people(id)
 );
 
 CREATE TABLE breaks (
     id SERIAL PRIMARY KEY,
     name VARCHAR(20) NOT NULL,
     from_time TIME NOT NULL,
-    to_time TIME NOT NULL
-);
-
-CREATE TABLE daily_routines (
-    schedule_id INT NOT NULL REFERENCES schedules(id),
-    break_id INT NOT NULL REFERENCES breaks(id),
-    CONSTRAINT daily_routineid PRIMARY KEY (schedule_id, break_id)
-);
-
-CREATE TABLE employees (
-    id SERIAL PRIMARY KEY,
-    person_id INT NOT NULL REFERENCES people(id),
-    schedule_id INT NOT NULL REFERENCES schedules(id)
+    to_time TIME NOT NULL,
+    employee_id INT NOT NULL REFERENCES employees(id)
 );
 
 CREATE TABLE research_areas (
     id SERIAL PRIMARY KEY,
-    name VARCHAR(50) UNIQUE NOT NULL,
-    created_at TIMESTAMPTZ NOT NULL DEFAULT NOW()
+    name VARCHAR(50) NOT NULL
 );
 
 CREATE TABLE laboratories (
     id SERIAL PRIMARY KEY,
-    auditorium VARCHAR(100) NOT NULL,
-    created_at TIMESTAMPTZ NOT NULL DEFAULT NOW()
+    name VARCHAR(200) NOT NULL
 );
 
 CREATE TABLE appointments (
@@ -78,26 +93,30 @@ CREATE TABLE development_directions (
     CONSTRAINT development_direction_id PRIMARY KEY (laboratory_id, research_area_id)
 );
 
-INSERT INTO people(name, sex)
-VALUES ('Недри', 'М'),
-       ('Аноним', 'М'),
-       ('Аноним', 'Ж');
+INSERT INTO people(name, sex, current_location)
+VALUES ('Недри', 'М', 'у входа в лабораторию'),
+       ('Аноним', 'М', 'столовая'),
+       ('Аноним', 'Ж', 'столовая');
 
-INSERT INTO backpacks(person_id) VALUES (1);
-INSERT INTO shaving_foams(brand, is_bottom_in_place, backpack_id) VALUES ('Жиллетт', FALSE, 1);
-INSERT INTO cylinders(volume, shaving_foam_id) VALUES (100, 1);
+--- доделать
 
-INSERT INTO schedules(type) VALUES ('Полная');
-INSERT INTO breaks(name, from_time, to_time)
-VALUES ('Обед', '15:00', '15:30'),
-       ('Перекур', '17:30', '17:45');
+INSERT INTO items VALUES (default);
+INSERT INTO backpacks(person_id, item_id) VALUES (1, 1);
 
-INSERT INTO daily_routines(schedule_id, break_id) VALUES (1, 1), (1, 2);
+INSERT INTO items VALUES (default);
+INSERT INTO shaving_foams(brand, is_bottom_in_place, backpack_id, item_id) VALUES ('Жиллетт', TRUE, 1, 2);
 
-INSERT INTO employees(person_id, schedule_id) VALUES (2, 1), (3, 1);
+INSERT INTO items VALUES (default);
+INSERT INTO cylinders(volume, shaving_foam_id, item_id) VALUES (100, 1, 3);
+
+INSERT INTO employees(person_id) VALUES (2), (3);
+
+INSERT INTO breaks(name, from_time, to_time, employee_id)
+VALUES ('Обед', '15:00', '15:30', 1),
+       ('Перекур', '15:00', '17:45', 2);
 
 INSERT INTO research_areas(name) VALUES ('Оплодотворение');
-INSERT INTO laboratories(auditorium) VALUES ('ауд. 1328 (бывш. 371)');
+INSERT INTO laboratories(name) VALUES ('ауд. 365');
 
 INSERT INTO appointments(laboratory_id, employee_id) VALUES (1, 1), (1, 2);
 INSERT INTO development_directions(laboratory_id, research_area_id) VALUES (1, 1);
