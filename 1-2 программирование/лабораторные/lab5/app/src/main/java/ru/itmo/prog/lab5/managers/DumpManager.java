@@ -57,7 +57,7 @@ public class DumpManager {
    */
   public Collection<Product> readCollection() {
     if (fileName != null && !fileName.isEmpty()) {
-      try (var fileReader = new FileReader(new File(fileName))) {
+      try (var fileReader = new FileReader(fileName)) {
         var collectionType = new TypeToken<PriorityQueue<Product>>() {}.getType();
         var reader = new BufferedReader(fileReader);
 
@@ -93,6 +93,6 @@ public class DumpManager {
     } else {
       console.printError("Аргумент командной строки с загрузочным файлом не найден!");
     }
-    return new PriorityQueue<Product>();
+    return new PriorityQueue<>();
   }
 }
