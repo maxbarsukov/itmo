@@ -1,0 +1,51 @@
+ORG 0x10C
+START: ; result = -f(x+1) + f(y-1) + f(z+1) + 1
+    CLA
+    ST result
+    LD y
+    DEC
+    PUSH
+    CALL $function
+    POP
+    INC
+    ADD result
+    ST result
+    LD x
+    INC
+    PUSH
+    CALL $function
+    POP
+    DEC
+    SUB result
+    ST result
+    LD z
+    INC
+    PUSH
+    CALL $function
+    POP
+    DEC
+    SUB result
+    ST result
+    HLT
+    z: WORD 0x1
+    y: WORD 0x2
+    x: WORD 0x3
+    result: WORD 0x08B0 ; = 0
+
+
+ORG 0x6ED
+function: ; f(x) = if (x <= 0 || x >= 0x08AF) then return 0x08AF else return 4x - 0x008D
+    LD &1
+    BMI exit
+    BEQ exit
+    CMP var_1
+    BGE exit
+    ASL
+    ASL
+    SUB var_2
+    JUMP return
+    exit: LD var_1
+    return: ST &1
+    RET
+    var_1: WORD 0x08AF
+    var_2: WORD 0x008D
