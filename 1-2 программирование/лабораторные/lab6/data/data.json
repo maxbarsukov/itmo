@@ -1,0 +1,112 @@
+[
+  {
+    "id": 2,
+    "name": "product",
+    "coordinates": {
+      "x": 10,
+      "y": 1234
+    },
+    "creationDate": "2023-01-28",
+    "price": 1234,
+    "partNumber": null,
+    "unitOfMeasure": null,
+    "manufacturer": {
+      "id": 1,
+      "name": "org",
+      "employeesCount": 123,
+      "type": "TRUST",
+      "postalAddress": {
+        "street": "Street",
+        "zipCode": "123456"
+      }
+    }
+  },
+  {
+    "id": 4,
+    "name": "HELLo",
+    "coordinates": {
+      "x": 123,
+      "y": 43
+    },
+    "creationDate": "2023-01-28",
+    "price": 999,
+    "partNumber": "o1",
+    "unitOfMeasure": "LITERS",
+    "manufacturer": {
+      "id": 2,
+      "name": "or2",
+      "employeesCount": 90,
+      "type": "TRUST",
+      "postalAddress": {
+        "street": "Str",
+        "zipCode": null
+      }
+    }
+  },
+  {
+    "id": 5,
+    "name": "ScriptProduct",
+    "coordinates": {
+      "x": 99,
+      "y": 99
+    },
+    "creationDate": "2023-01-28",
+    "price": 100,
+    "partNumber": "my_awesome_part",
+    "unitOfMeasure": "SQUARE_METERS",
+    "manufacturer": {
+      "id": 3,
+      "name": "NEW_ORG",
+      "employeesCount": 15,
+      "type": "PRIVATE_LIMITED_COMPANY",
+      "postalAddress": {
+        "street": "Пушкина",
+        "zipCode": "1234567"
+      }
+    }
+  },
+  {
+    "id": 6,
+    "name": "ScriptProduct",
+    "coordinates": {
+      "x": 99,
+      "y": 99
+    },
+    "creationDate": "2023-01-28",
+    "price": 100,
+    "partNumber": "my_awesome_part",
+    "unitOfMeasure": "SQUARE_METERS",
+    "manufacturer": {
+      "id": 4,
+      "name": "NEW_ORG",
+      "employeesCount": 15,
+      "type": "PRIVATE_LIMITED_COMPANY",
+      "postalAddress": {
+        "street": "Пушкина",
+        "zipCode": "1234567"
+      }
+    }
+  },
+  {
+    "id": 7,
+    "name": "ScriptProduct",
+    "coordinates": {
+      "x": 99,
+      "y": 99
+    },
+    "creationDate": "2023-02-15",
+    "price": 100,
+    "partNumber": "my_awesome_part",
+    "unitOfMeasure": "SQUARE_METERS",
+    "manufacturer": {
+      "id": 5,
+      "name": "NEW_ORG",
+      "employeesCount": 15,
+      "type": "PRIVATE_LIMITED_COMPANY",
+      "postalAddress": {
+        "street": "Пушкина",
+        "zipCode": "1234567"
+      }
+    }
+  }
+]
