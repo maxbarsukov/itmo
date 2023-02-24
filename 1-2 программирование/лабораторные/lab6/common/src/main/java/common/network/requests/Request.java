@@ -1,43 +1,36 @@
-package common.network;
+package common.network.requests;
 
 import java.io.Serializable;
 import java.util.Objects;
 
-public class Response implements Serializable {
+public abstract class Request implements Serializable {
   private final String name;
-  private final String error;
 
-  public Response(String name, String error) {
+  public Request(String name) {
     this.name = name;
-    this.error = error;
   }
 
   public String getName() {
     return name;
   }
 
-  public String getError() {
-    return error;
-  }
-
   @Override
   public boolean equals(Object o) {
     if (this == o) return true;
     if (o == null || getClass() != o.getClass()) return false;
-    Response response = (Response) o;
-    return Objects.equals(name, response.name) && Objects.equals(error, response.error);
+    Request response = (Request) o;
+    return Objects.equals(name, response.name);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(name, error);
+    return Objects.hash(name);
   }
 
   @Override
   public String toString() {
     return "Response{" +
       "name='" + name + '\'' +
-      ", error='" + error + '\'' +
       '}';
   }
 }

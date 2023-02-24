@@ -5,14 +5,13 @@ import com.google.common.collect.Iterables;
 import common.domain.Organization;
 import common.domain.Product;
 
+import common.utility.ProductComparator;
 import server.App;
 import server.managers.DumpManager;
 
 import java.time.LocalDateTime;
-import java.util.ArrayList;
-import java.util.Objects;
-import java.util.PriorityQueue;
-import java.util.Queue;
+import java.util.*;
+import java.util.stream.Collectors;
 
 /**
  * Оперирует коллекцией.
@@ -29,28 +28,31 @@ public class ProductRepository {
     this.lastSaveTime = null;
     this.dumpManager = dumpManager;
 
-    loadCollection();
+    load();
     updateOrganizations();
   }
 
-  public void validateAll() {
-    (new ArrayList<>(this.getCollection())).forEach(product -> {
+  public boolean validateAll() {
+    for(var product : new ArrayList<>(get())) {
       if (!product.validate()) {
         App.logger.warn("Продукт с id=" + product.getId() + " имеет невалидные поля.");
+        return false;
       }
       if (product.getManufacturer() != null) {
         if(!product.getManufacturer().validate()) {
           App.logger.warn("Производитель продукта с id=" + product.getId() + " имеет невалидные поля.");
+          return false;
         }
       }
-    });
+    };
     App.logger.info("! Загруженные продукты валидны.");
+    return true;
   }
 
   /**
    * @return коллекция.
    */
-  public Queue<Product> getCollection() {
+  public Queue<Product> get() {
     return collection;
   }
 
@@ -71,31 +73,41 @@ public class ProductRepository {
   /**
    * @return Имя типа коллекции.
    */
-  public String collectionType() {
+  public String type() {
     return collection.getClass().getName();
   }
 
   /**
    * @return Размер коллекции.
    */
-  public int collectionSize() {
+  public int size() {
     return collection.size();
   }
 
   /**
    * @return Первый элемент коллекции (null если коллекция пустая).
    */
-  public Product getFirst() {
+  public Product first() {
     if (collection.isEmpty()) return null;
-    return collection.peek();
+    return sorted().get(1);
   }
 
   /**
    * @return Последний элемент коллекции (null если коллекция пустая).
    */
-  public Product getLast() {
+  public Product last() {
     if (collection.isEmpty()) return null;
-    return Iterables.getLast(collection);
+    return Iterables.getLast(sorted());
+  }
+
+  /**
+   * @return Отсортированная коллекция.
+   */
+  public List<Product> sorted() {
+    return new ArrayList<>(collection)
+      .stream()
+      .sorted(new ProductComparator())
+      .collect(Collectors.toList());
   }
 
   /**
@@ -114,10 +126,7 @@ public class ProductRepository {
    * @return Проверяет, существует ли элемент с таким ID.
    */
   public boolean checkExist(int id) {
-    for (Product element : collection) {
-      if (element.getId() == id) return true;
-    }
-    return false;
+    return getById(id) != null;
   }
 
   /**
@@ -136,7 +145,7 @@ public class ProductRepository {
    * @param element Элемент для добавления.
    * @return id нового элемента
    */
-  public int addToCollection(Product element) {
+  public int add(Product element) {
     var maxId = collection.stream().filter(Objects::nonNull)
       .map(Product::getId)
       .mapToInt(Integer::intValue).max().orElse(0);
@@ -155,23 +164,23 @@ public class ProductRepository {
 
   /**
    * Удаляет элемент из коллекции.
-   * @param element Элемент для удаления.
+   * @param id ID элемента для удаления.
    */
-  public void removeFromCollection(Product element) {
-    collection.remove(element);
+  public void remove(int id) {
+    collection.removeIf(product -> product.getId() == id);
   }
 
   /**
    * Очищает коллекцию.
    */
-  public void clearCollection() {
+  public void clear() {
     collection.clear();
   }
 
   /**
    * Сохраняет коллекцию в файл
    */
-  public void saveCollection() {
+  public void save() {
     dumpManager.writeCollection(collection);
     lastSaveTime = LocalDateTime.now();
   }
@@ -179,7 +188,7 @@ public class ProductRepository {
   /**
    * Загружает коллекцию из файла.
    */
-  private void loadCollection() {
+  private void load() {
     collection = (PriorityQueue<Product>) dumpManager.readCollection();
     lastInitTime = LocalDateTime.now();
   }
@@ -196,13 +205,12 @@ public class ProductRepository {
   @Override
   public String toString() {
     if (collection.isEmpty()) return "Коллекция пуста!";
-    var last = getLast();
 
-    StringBuilder info = new StringBuilder();
+    var info = new StringBuilder();
     for (Product product : collection) {
       info.append(product);
-      if (product != last) info.append("\n\n");
+      info.append("\n\n");
     }
-    return info.toString();
+    return info.substring(0, info.length() - 2);
   }
 }

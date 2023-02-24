@@ -1,23 +1,20 @@
-package ru.itmo.prog.lab5.commands;
+package server.commands;
 
-import ru.itmo.prog.lab5.exceptions.CollectionIsEmptyException;
-import ru.itmo.prog.lab5.exceptions.WrongAmountOfElementsException;
-import ru.itmo.prog.lab5.managers.CollectionManager;
-import ru.itmo.prog.lab5.models.Product;
-import ru.itmo.prog.lab5.utility.console.Console;
+import common.domain.Product;
+import common.network.requests.Request;
+import common.network.responses.*;
+import server.repositories.ProductRepository;
 
 /**
  * Команда 'sum_of_price'. Сумма цен всех продуктов.
  * @author maxbarsukov
  */
 public class SumOfPrice extends Command {
-  private final Console console;
-  private final CollectionManager collectionManager;
+  private final ProductRepository productRepository;
 
-  public SumOfPrice(Console console, CollectionManager collectionManager) {
+  public SumOfPrice(ProductRepository productRepository) {
     super("sum_of_price", "вывести сумму значений поля price для всех элементов коллекции");
-    this.console = console;
-    this.collectionManager = collectionManager;
+    this.productRepository = productRepository;
   }
 
   /**
@@ -25,25 +22,16 @@ public class SumOfPrice extends Command {
    * @return Успешность выполнения команды.
    */
   @Override
-  public boolean apply(String[] arguments) {
+  public Response apply(Request request) {
     try {
-      if (!arguments[1].isEmpty()) throw new WrongAmountOfElementsException();
-
-      var sumOfPrice = getSumOfPrice();
-      if (sumOfPrice == 0) throw new CollectionIsEmptyException();
-
-      console.println("Сумма цен всех продуктов: " + sumOfPrice);
-      return true;
-    } catch (WrongAmountOfElementsException exception) {
-      console.println("Использование: '" + getName() + "'");
-    } catch (CollectionIsEmptyException exception) {
-      console.println("Коллекция пуста!");
+      return new SumOfPriceResponse(getSumOfPrice(), null);
+    } catch (Exception e) {
+      return new SumOfPriceResponse(-1, e.toString());
     }
-    return false;
   }
 
   private Long getSumOfPrice() {
-    return collectionManager.getCollection().stream()
+    return productRepository.get().stream()
       .map(Product::getPrice)
       .mapToLong(Long::longValue)
       .sum();

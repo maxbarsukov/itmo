@@ -1,12 +1,12 @@
 package common.network.responses;
 
-import common.network.Response;
+import common.utility.Commands;
 
 public class HelpResponse extends Response {
   public final String helpMessage;
 
   public HelpResponse(String helpMessage, String error) {
-    super("help", error);
+    super(Commands.HELP, error);
     this.helpMessage = helpMessage;
   }
 }

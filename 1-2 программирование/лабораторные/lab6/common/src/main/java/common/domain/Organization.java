@@ -9,7 +9,7 @@ import java.util.*;
  * @author maxbarsukov
  */
 public class Organization extends Element {
-  private static transient Map<Integer, Organization> organizations = new HashMap<>();
+  private static final transient Map<Integer, Organization> organizations = new HashMap<>();
 
   private Integer id; // Поле не может быть null, Значение поля должно быть больше 0, Значение этого поля должно быть уникальным, Значение этого поля должно генерироваться автоматически
   private final String name; // Поле не может быть null, Строка не может быть пустой

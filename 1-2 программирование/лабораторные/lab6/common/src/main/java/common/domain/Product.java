@@ -11,13 +11,13 @@ import java.util.Objects;
  */
 public class Product extends Element {
   private final int id; // Значение поля должно быть больше 0, Значение этого поля должно быть уникальным, Значение этого поля должно генерироваться автоматически
-  private final String name; // Поле не может быть null, Строка не может быть пустой
-  private final Coordinates coordinates; // Поле не может быть null
-  private final LocalDate creationDate; // Поле не может быть null, Значение этого поля должно генерироваться автоматически
-  private final Long price; // Поле не может быть null, Значение поля должно быть больше 0
-  private final String partNumber; // Строка не может быть пустой, Поле может быть null
-  private final UnitOfMeasure unitOfMeasure; // Поле может быть null
-  private final Organization manufacturer; // Поле может быть null
+  private String name; // Поле не может быть null, Строка не может быть пустой
+  private Coordinates coordinates; // Поле не может быть null
+  private LocalDate creationDate; // Поле не может быть null, Значение этого поля должно генерироваться автоматически
+  private Long price; // Поле не может быть null, Значение поля должно быть больше 0
+  private String partNumber; // Строка не может быть пустой, Поле может быть null
+  private UnitOfMeasure unitOfMeasure; // Поле может быть null
+  private Organization manufacturer; // Поле может быть null
 
   public Product(int id, String name, Coordinates coordinates, LocalDate creationDate,
                  Long price, String partNumber, UnitOfMeasure unitOfMeasure, Organization manufacturer) {
@@ -49,6 +49,16 @@ public class Product extends Element {
     if (creationDate == null) return false;
     if (price == null || price <= 0) return false;
     return partNumber == null || !partNumber.isEmpty();
+  }
+
+  public void update(Product product) {
+    this.name = product.name;
+    this.coordinates = product.coordinates;
+    this.creationDate = product.creationDate;
+    this.price = product.price;
+    this.partNumber = product.partNumber;
+    this.unitOfMeasure = product.unitOfMeasure;
+    this.manufacturer = product.manufacturer;
   }
 
   @Override

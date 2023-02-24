@@ -1,20 +1,19 @@
-package ru.itmo.prog.lab5.commands;
+package server.commands;
 
-import ru.itmo.prog.lab5.managers.CollectionManager;
-import ru.itmo.prog.lab5.utility.console.Console;
+import common.network.requests.Request;
+import common.network.responses.*;
+import server.repositories.ProductRepository;
 
 /**
  * Команда 'show'. Выводит все элементы коллекции.
  * @author maxbarsukov
  */
 public class Show extends Command {
-  private final Console console;
-  private final CollectionManager collectionManager;
+  private final ProductRepository productRepository;
 
-  public Show(Console console, CollectionManager collectionManager) {
+  public Show(ProductRepository productRepository) {
     super("show", "вывести все элементы коллекции");
-    this.console = console;
-    this.collectionManager = collectionManager;
+    this.productRepository = productRepository;
   }
 
   /**
@@ -22,13 +21,11 @@ public class Show extends Command {
    * @return Успешность выполнения команды.
    */
   @Override
-  public boolean apply(String[] arguments) {
-    if (!arguments[1].isEmpty()) {
-      console.println("Использование: '" + getName() + "'");
-      return false;
+  public Response apply(Request request) {
+    try {
+      return new ShowResponse(productRepository.sorted(), null);
+    } catch (Exception e) {
+      return new ShowResponse(null, e.toString());
     }
-
-    console.println(collectionManager);
-    return true;
   }
 }

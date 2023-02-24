@@ -1,9 +1,9 @@
 package common.network.requests;
 
-import common.network.Request;
+import common.utility.Commands;
 
 public class SumOfPriceRequest extends Request {
   public SumOfPriceRequest() {
-    super("sum_of_price");
+    super(Commands.SUM_OF_PRICE);
   }
 }

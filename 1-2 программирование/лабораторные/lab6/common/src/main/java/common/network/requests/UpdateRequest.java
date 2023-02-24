@@ -1,14 +1,14 @@
 package common.network.requests;
 
 import common.domain.Product;
-import common.network.Request;
+import common.utility.Commands;
 
 public class UpdateRequest extends Request {
   public final int id;
   public final Product updatedProduct;
 
   public UpdateRequest(int id, Product updatedProduct) {
-    super("update");
+    super(Commands.UPDATE);
     this.id = id;
     this.updatedProduct = updatedProduct;
   }

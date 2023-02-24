@@ -1,22 +1,19 @@
-package ru.itmo.prog.lab5.commands;
+package server.commands;
 
-import ru.itmo.prog.lab5.managers.CollectionManager;
-import ru.itmo.prog.lab5.utility.console.Console;
-
-import java.time.LocalDateTime;
+import common.network.requests.Request;
+import common.network.responses.*;
+import server.repositories.ProductRepository;
 
 /**
  * Команда 'info'. Выводит информацию о коллекции.
  * @author maxbarsukov
  */
 public class Info extends Command {
-  private final Console console;
-  private final CollectionManager collectionManager;
+  private final ProductRepository productRepository;
 
-  public Info(Console console, CollectionManager collectionManager) {
+  public Info(ProductRepository productRepository) {
     super("info", "вывести информацию о коллекции");
-    this.console = console;
-    this.collectionManager = collectionManager;
+    this.productRepository = productRepository;
   }
 
   /**
@@ -24,25 +21,20 @@ public class Info extends Command {
    * @return Успешность выполнения команды.
    */
   @Override
-  public boolean apply(String[] arguments) {
-    if (!arguments[1].isEmpty()) {
-      console.println("Использование: '" + getName() + "'");
-      return false;
-    }
-
-    LocalDateTime lastInitTime = collectionManager.getLastInitTime();
-    String lastInitTimeString = (lastInitTime == null) ? "в данной сессии инициализации еще не происходило" :
+  public Response apply(Request request) {
+    var lastInitTime = productRepository.getLastInitTime();
+    var lastInitTimeString = (lastInitTime == null) ? "в данной сессии инициализации еще не происходило" :
       lastInitTime.toLocalDate().toString() + " " + lastInitTime.toLocalTime().toString();
 
-    LocalDateTime lastSaveTime = collectionManager.getLastSaveTime();
-    String lastSaveTimeString = (lastSaveTime == null) ? "в данной сессии сохранения еще не происходило" :
+    var lastSaveTime = productRepository.getLastSaveTime();
+    var lastSaveTimeString = (lastSaveTime == null) ? "в данной сессии сохранения еще не происходило" :
       lastSaveTime.toLocalDate().toString() + " " + lastSaveTime.toLocalTime().toString();
 
-    console.println("Сведения о коллекции:");
-    console.println(" Тип: " + collectionManager.collectionType());
-    console.println(" Количество элементов: " + collectionManager.collectionSize());
-    console.println(" Дата последнего сохранения: " + lastSaveTimeString);
-    console.println(" Дата последней инициализации: " + lastInitTimeString);
-    return true;
+    var message = "Сведения о коллекции:\n" +
+      " Тип: " + productRepository.type() + "\n" +
+      " Количество элементов: " + productRepository.size() + "\n" +
+      " Дата последнего сохранения: " + lastSaveTimeString + "\n" +
+      " Дата последней инициализации: " + lastInitTimeString;
+    return new InfoResponse(message, null);
   }
 }

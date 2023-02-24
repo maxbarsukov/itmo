@@ -10,6 +10,8 @@ import server.network.UDPDatagramServer;
 import server.repositories.ProductRepository;
 import server.commands.*;
 
+import common.utility.Commands;
+
 import java.net.SocketException;
 
 /**
@@ -17,7 +19,7 @@ import java.net.SocketException;
  * @author maxbarsukov
  */
 public class App {
-  public static final int PORT = 2345;
+  public static final int PORT = 23586;
 
   public static Logger logger = LogManager.getLogger("ServerLogger");
 
@@ -29,31 +31,34 @@ public class App {
 
     var dumpManager = new DumpManager(args[0]);
     var repository = new ProductRepository(dumpManager);
-    repository.validateAll();
+    if(!repository.validateAll()) {
+      logger.fatal("Невалидные продукты в загруженном файле!");
+      System.exit(2);
+    }
 
-    Runtime.getRuntime().addShutdownHook(new Thread(repository::saveCollection));
+    Runtime.getRuntime().addShutdownHook(new Thread(repository::save));
 
     var commandManager = new CommandManager() {{
-//      register("help", new Help(this));
-//      register("info", new Info(repository));
-//      register("show", new Show(repository));
-      register("add", new Add(repository));
-//      register("update", new Update(repository));
-//      register("remove_by_id", new RemoveById(repository));
-//      register("clear", new Clear(repository));
-//      register("execute_script", new ExecuteScript());
-//      register("head", new Head(repository));
-      register("add_if_max", new AddIfMax(repository));
-//      register("add_if_min", new AddIfMin(repository));
-//      register("sum_of_price", new SumOfPrice(repository));
-//      register("filter_by_price", new FilterByPrice(repository));
-//      register("filter_contains_part_number", new FilterContainsPartNumber(repository));
+      register(Commands.HELP, new Help(this));
+      register(Commands.INFO, new Info(repository));
+      register(Commands.SHOW, new Show(repository));
+      register(Commands.ADD, new Add(repository));
+      register(Commands.UPDATE, new Update(repository));
+      register(Commands.REMOVE_BY_ID, new RemoveById(repository));
+      register(Commands.CLEAR, new Clear(repository));
+      register(Commands.HEAD, new Head(repository));
+      register(Commands.ADD_IF_MAX, new AddIfMax(repository));
+      register(Commands.ADD_IF_MIN, new AddIfMin(repository));
+      register(Commands.SUM_OF_PRICE, new SumOfPrice(repository));
+      register(Commands.FILTER_BY_PRICE, new FilterByPrice(repository));
+      register(Commands.FILTER_CONTAINS_PART_NUMBER, new FilterContainsPartNumber(repository));
     }};
 
     try {
       var server = new UDPDatagramServer(PORT, new CommandHandler(commandManager));
+      server.setAfterHook(repository::save);
       server.run();
-    } catch (Exception e) {
+    } catch (SocketException e) {
       logger.fatal("Случилась ошибка сокета", e);
     }
   }

@@ -1,9 +1,9 @@
 package common.network.requests;
 
-import common.network.Request;
+import common.utility.Commands;
 
 public class HelpRequest extends Request {
   public HelpRequest() {
-    super("help");
+    super(Commands.HELP);
   }
 }

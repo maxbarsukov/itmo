@@ -1,10 +1,8 @@
 package server.commands;
 
 import common.domain.Product;
-import common.network.Request;
-import common.network.Response;
-import common.network.requests.AddIfMaxRequest;
-import common.network.responses.AddIfMaxResponse;
+import common.network.requests.*;
+import common.network.responses.*;
 import server.repositories.ProductRepository;
 
 /**
@@ -29,8 +27,8 @@ public class AddIfMax extends Command {
       var req = (AddIfMaxRequest) request;
       var maxPrice = maxPrice();
       if (req.product.getPrice() > maxPrice) {
-          var newId = productRepository.addToCollection(req.product);
-          return new AddIfMaxResponse(true, newId, null);
+        var newId = productRepository.add(req.product);
+        return new AddIfMaxResponse(true, newId, null);
       }
       return new AddIfMaxResponse(false, -1, null);
     } catch (Exception e) {
@@ -39,7 +37,7 @@ public class AddIfMax extends Command {
   }
 
   private Long maxPrice() {
-    return productRepository.getCollection().stream()
+    return productRepository.get().stream()
       .map(Product::getPrice)
       .mapToLong(Long::longValue)
       .max()

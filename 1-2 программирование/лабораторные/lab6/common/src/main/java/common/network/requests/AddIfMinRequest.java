@@ -1,13 +1,13 @@
 package common.network.requests;
 
 import common.domain.Product;
-import common.network.Request;
+import common.utility.Commands;
 
 public class AddIfMinRequest extends Request {
   public final Product product;
 
   public AddIfMinRequest(Product product) {
-    super("add_if_min");
+    super(Commands.ADD_IF_MIN);
     this.product = product;
   }
 }

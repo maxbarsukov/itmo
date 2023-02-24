@@ -1,10 +1,8 @@
 package server.commands;
 
 import common.domain.Product;
-import common.network.Request;
-import common.network.Response;
-import common.network.requests.AddIfMinRequest;
-import common.network.responses.AddIfMinResponse;
+import common.network.requests.*;
+import common.network.responses.*;
 import server.repositories.ProductRepository;
 
 /**
@@ -29,7 +27,7 @@ public class AddIfMin extends Command {
       var req = (AddIfMinRequest) request;
       var minPrice = minPrice();
       if (req.product.getPrice() < minPrice) {
-        var newId = productRepository.addToCollection(req.product);
+        var newId = productRepository.add(req.product);
         return new AddIfMinResponse(true, newId, null);
       }
       return new AddIfMinResponse(false, -1, null);
@@ -39,7 +37,7 @@ public class AddIfMin extends Command {
   }
 
   private Long minPrice() {
-    return productRepository.getCollection().stream()
+    return productRepository.get().stream()
       .map(Product::getPrice)
       .mapToLong(Long::longValue)
       .min()

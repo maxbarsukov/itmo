@@ -1,12 +1,12 @@
 package common.network.responses;
 
-import common.network.Response;
+import common.utility.Commands;
 
 public class AddResponse extends Response {
   public final int newId;
 
   public AddResponse(int newId, String error) {
-    super("add", error);
+    super(Commands.ADD, error);
     this.newId = newId;
   }
 }

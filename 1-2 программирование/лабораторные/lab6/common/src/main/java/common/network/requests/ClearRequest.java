@@ -1,9 +1,9 @@
 package common.network.requests;
 
-import common.network.Request;
+import common.utility.Commands;
 
 public class ClearRequest extends Request {
   public ClearRequest() {
-    super("clear");
+    super(Commands.CLEAR);
   }
 }

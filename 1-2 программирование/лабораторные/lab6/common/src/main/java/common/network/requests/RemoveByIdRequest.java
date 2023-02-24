@@ -1,12 +1,12 @@
 package common.network.requests;
 
-import common.network.Request;
+import common.utility.Commands;
 
 public class RemoveByIdRequest extends Request {
   public final int id;
 
   public RemoveByIdRequest(int id) {
-    super("remove_by_id");
+    super(Commands.REMOVE_BY_ID);
     this.id = id;
   }
 }

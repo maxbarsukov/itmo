@@ -1,13 +1,13 @@
 package common.network.requests;
 
 import common.domain.Product;
-import common.network.Request;
+import common.utility.Commands;
 
 public class AddIfMaxRequest extends Request {
   public final Product product;
 
   public AddIfMaxRequest(Product product) {
-    super("add_if_max");
+    super(Commands.ADD_IF_MAX);
     this.product = product;
   }
 }

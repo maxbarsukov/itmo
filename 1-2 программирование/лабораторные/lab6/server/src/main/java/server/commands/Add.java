@@ -1,9 +1,7 @@
 package server.commands;
 
-import common.network.Request;
-import common.network.Response;
-import common.network.requests.AddRequest;
-import common.network.responses.AddResponse;
+import common.network.requests.*;
+import common.network.responses.*;
 import server.repositories.ProductRepository;
 
 /**
@@ -24,8 +22,12 @@ public class Add extends Command {
    */
   @Override
   public Response apply(Request request) {
+    var req = (AddRequest) request;
     try {
-      var newId = productRepository.addToCollection(((AddRequest) request).product);
+      if (!req.product.validate()) {
+        return new AddResponse(-1, "Поля продукта не валидны! Продукт не добавлен!");
+      }
+      var newId = productRepository.add(req.product);
       return new AddResponse(newId, null);
     } catch (Exception e) {
       return new AddResponse(-1, e.toString());

@@ -1,9 +1,9 @@
 package common.network.requests;
 
-import common.network.Request;
+import common.utility.Commands;
 
 public class ShowRequest extends Request {
   public ShowRequest() {
-    super("show");
+    super(Commands.SHOW);
   }
 }

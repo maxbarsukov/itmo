@@ -1,11 +1,11 @@
 package common.network.requests;
 
-import common.network.Request;
+import common.utility.Commands;
 
 public class FilterByPriceRequest extends Request {
-  public final int price;
+  public final long price;
 
-  public FilterByPriceRequest(int price) {
-    super("filter_by_price");
+  public FilterByPriceRequest(long price) {
+    super(Commands.FILTER_BY_PRICE);
     this.price = price;
   }}

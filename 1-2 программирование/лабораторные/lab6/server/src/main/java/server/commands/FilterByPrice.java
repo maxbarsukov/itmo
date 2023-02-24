@@ -1,9 +1,10 @@
-package ru.itmo.prog.lab5.commands;
+package server.commands;
 
-import ru.itmo.prog.lab5.exceptions.WrongAmountOfElementsException;
-import ru.itmo.prog.lab5.managers.CollectionManager;
-import ru.itmo.prog.lab5.models.Product;
-import ru.itmo.prog.lab5.utility.console.Console;
+import common.domain.Product;
+import common.network.requests.*;
+import common.network.responses.*;
+import common.utility.ProductComparator;
+import server.repositories.ProductRepository;
 
 import java.util.List;
 import java.util.stream.Collectors;
@@ -13,13 +14,11 @@ import java.util.stream.Collectors;
  * @author maxbarsukov
  */
 public class FilterByPrice extends Command {
-  private final Console console;
-  private final CollectionManager collectionManager;
+  private final ProductRepository productRepository;
 
-  public FilterByPrice(Console console, CollectionManager collectionManager) {
+  public FilterByPrice(ProductRepository productRepository) {
     super("filter_by_price <PRICE>", "вывести элементы, значение поля price которых равно заданному");
-    this.console = console;
-    this.collectionManager = collectionManager;
+    this.productRepository = productRepository;
   }
 
   /**
@@ -27,34 +26,19 @@ public class FilterByPrice extends Command {
    * @return Успешность выполнения команды.
    */
   @Override
-  public boolean apply(String[] arguments) {
+  public Response apply(Request request) {
+    var req = (FilterByPriceRequest) request;
     try {
-      if (arguments[1].isEmpty()) throw new WrongAmountOfElementsException();
-
-      var price = Long.parseLong(arguments[1]);
-      var products = filterByPrice(price);
-
-      if (products.isEmpty()) {
-        console.println("Продуктов с ценой " + price + " не обнаружено.");
-      } else {
-        console.println("Продуктов с ценой " + price + ": " + products.size() + " шт.\n");
-        products.forEach(console::println);
-      }
-
-      return true;
-
-    } catch (NumberFormatException exception) {
-      console.printError("Цена должна быть представлена числом!");
-    } catch (WrongAmountOfElementsException exception) {
-      console.printError("Неправильное количество аргументов!");
-      console.println("Использование: '" + getName() + "'");
+      return new FilterByPriceResponse(filterByPrice(req.price), null);
+    } catch (Exception e) {
+      return new FilterByPriceResponse(null, e.toString());
     }
-    return false;
   }
 
   private List<Product> filterByPrice(Long price) {
-    return collectionManager.getCollection().stream()
+    return productRepository.get().stream()
       .filter(product -> (product.getPrice().equals(price)))
+      .sorted(new ProductComparator())
       .collect(Collectors.toList());
   }
 }

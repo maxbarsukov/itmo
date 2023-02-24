@@ -1,5 +1,7 @@
 package server.network;
 
+import common.network.requests.Request;
+import common.network.responses.Response;
 import org.apache.commons.lang3.ArrayUtils;
 import org.apache.logging.log4j.Logger;
 
@@ -7,7 +9,6 @@ import org.apache.commons.lang3.tuple.Pair;
 import org.apache.commons.lang3.SerializationUtils;
 import server.App;
 
-import common.network.*;
 import common.network.responses.NoSuchCommandResponse;
 import server.handlers.CommandHandler;
 
@@ -23,11 +24,22 @@ import java.nio.charset.StandardCharsets;
  * @author maxbarsukov
  */
 abstract class UDPServer {
-  private InetSocketAddress addr;
-  private CommandHandler commandHandler;
+  private final InetSocketAddress addr;
+  private final CommandHandler commandHandler;
+  private Runnable afterHook;
+
   private final Logger logger = App.logger;
 
   private boolean running = true;
+
+  public UDPServer(InetSocketAddress addr, CommandHandler commandHandler) {
+    this.addr = addr;
+    this.commandHandler = commandHandler;
+  }
+
+  public InetSocketAddress getAddr() {
+    return addr;
+  }
 
   /**
    * Получает данные с клиента.
@@ -94,6 +106,7 @@ abstract class UDPServer {
       Response response = null;
       try {
         response = commandHandler.handle(request);
+        if (afterHook != null) afterHook.run();
       } catch (Exception e) {
         logger.error("Ошибка выполнения команды : " + e.toString(), e);
       }
@@ -115,6 +128,14 @@ abstract class UDPServer {
     }
 
     close();
+  }
+
+  /**
+   * Вызывает хук после каждого запроса.
+   * @param afterHook хук, вызываемый после каждого запроса
+   */
+  public void setAfterHook(Runnable afterHook) {
+    this.afterHook = afterHook;
   }
 
   public void stop() {

@@ -1,9 +1,9 @@
 package common.network.responses;
 
-import common.network.Response;
+import common.utility.Commands;
 
 public class UpdateResponse extends Response {
   public UpdateResponse(String error) {
-    super("update", error);
+    super(Commands.UPDATE, error);
   }
 }

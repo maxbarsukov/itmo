@@ -1,7 +1,7 @@
 package server.handlers;
 
-import common.network.Request;
-import common.network.Response;
+import common.network.requests.Request;
+import common.network.responses.Response;
 import common.network.responses.NoSuchCommandResponse;
 import server.managers.CommandManager;
 

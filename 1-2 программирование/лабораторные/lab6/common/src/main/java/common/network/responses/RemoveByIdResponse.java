@@ -1,9 +1,9 @@
 package common.network.responses;
 
-import common.network.Response;
+import common.utility.Commands;
 
 public class RemoveByIdResponse extends Response {
   public RemoveByIdResponse(String error) {
-    super("remove_by_id", error);
+    super(Commands.REMOVE_BY_ID, error);
   }
 }

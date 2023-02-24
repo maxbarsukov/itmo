@@ -1,9 +1,9 @@
 package common.network.responses;
 
-import common.network.Response;
+import common.utility.Commands;
 
 public class ClearResponse extends Response {
   public ClearResponse(String error) {
-    super("clear", error);
+    super(Commands.CLEAR, error);
   }
 }

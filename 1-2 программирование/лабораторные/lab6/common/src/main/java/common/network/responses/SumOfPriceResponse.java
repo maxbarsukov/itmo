@@ -1,12 +1,12 @@
 package common.network.responses;
 
-import common.network.Response;
+import common.utility.Commands;
 
 public class SumOfPriceResponse extends Response {
-  public final int sum;
+  public final long sum;
 
-  public SumOfPriceResponse(int sum, String error) {
-    super("sum_of_price", error);
+  public SumOfPriceResponse(long sum, String error) {
+    super(Commands.SUM_OF_PRICE, error);
     this.sum = sum;
   }
 }

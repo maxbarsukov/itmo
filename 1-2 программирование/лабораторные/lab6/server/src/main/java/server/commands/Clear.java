@@ -1,20 +1,20 @@
 package server.commands;
 
-import ru.itmo.prog.lab5.managers.CollectionManager;
-import ru.itmo.prog.lab5.utility.console.Console;
+import common.network.requests.Request;
+import common.network.responses.ClearResponse;
+import common.network.responses.Response;
+import server.repositories.ProductRepository;
 
 /**
  * Команда 'clear'. Очищает коллекцию.
  * @author maxbarsukov
  */
 public class Clear extends Command {
-  private final Console console;
-  private final CollectionManager collectionManager;
+  private final ProductRepository productRepository;
 
-  public Clear(Console console, CollectionManager collectionManager) {
+  public Clear(ProductRepository productRepository) {
     super("clear", "очистить коллекцию");
-    this.console = console;
-    this.collectionManager = collectionManager;
+    this.productRepository = productRepository;
   }
 
   /**
@@ -22,14 +22,12 @@ public class Clear extends Command {
    * @return Успешность выполнения команды.
    */
   @Override
-  public boolean apply(String[] arguments) {
-    if (!arguments[1].isEmpty()) {
-      console.println("Использование: '" + getName() + "'");
-      return false;
+  public Response apply(Request request) {
+    try {
+      productRepository.clear();
+      return new ClearResponse(null);
+    } catch (Exception e) {
+      return new ClearResponse(e.toString());
     }
-
-    collectionManager.clearCollection();
-    console.println("Коллекция очищена!");
-    return true;
   }
 }

@@ -1,5 +1,7 @@
 package server.commands;
 
+import common.network.requests.Request;
+import common.network.responses.*;
 import server.managers.CommandManager;
 
 /**
@@ -19,15 +21,13 @@ public class Help extends Command {
    * @return Успешность выполнения команды.
    */
   @Override
-  public boolean apply(String[] arguments) {
-    if (!arguments[1].isEmpty()) {
-      console.println("Использование: '" + getName() + "'");
-      return false;
-    }
+  public Response apply(Request request) {
+    var helpMessage = new StringBuilder();
 
     commandManager.getCommands().values().forEach(command -> {
-      console.printTable(command.getName(), command.getDescription());
+      helpMessage.append(" %-35s%-1s%n".formatted(command.getName(), command.getDescription()));
     });
-    return true;
+
+    return new InfoResponse(helpMessage.toString(), null);
   }
 }

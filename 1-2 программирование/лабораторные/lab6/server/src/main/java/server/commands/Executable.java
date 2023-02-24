@@ -1,7 +1,7 @@
 package server.commands;
 
-import common.network.Request;
-import common.network.Response;
+import common.network.requests.Request;
+import common.network.responses.Response;
 
 /**
  * Интерфейс для всех выполняемых команд.

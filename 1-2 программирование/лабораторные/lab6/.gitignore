@@ -9,9 +9,12 @@ replay_pid*
 
 ## Gradle
 .gradle
-app/build/
-!/build
-!src/**/build/
+client/build/*
+common/build/*
+server/build/*
+
+# Logs
+*/logs/*
 
 # Ignore Gradle GUI config
 gradle-app.setting

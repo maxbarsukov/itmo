@@ -1,13 +1,13 @@
 package common.network.responses;
 
-import common.network.Response;
+import common.utility.Commands;
 
 public class AddIfMaxResponse extends Response {
   public final boolean isAdded;
   public final int newId;
 
   public AddIfMaxResponse(boolean isAdded, int newId, String error) {
-    super("add_if_max", error);
+    super(Commands.ADD_IF_MAX, error);
     this.isAdded = isAdded;
     this.newId = newId;
   }

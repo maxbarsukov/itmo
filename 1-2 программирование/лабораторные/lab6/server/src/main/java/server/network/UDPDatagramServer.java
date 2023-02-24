@@ -13,14 +13,13 @@ import java.nio.charset.StandardCharsets;
 
 public class UDPDatagramServer extends UDPServer {
   private final DatagramSocket datagramSocket;
-  private CommandHandler commandHandler;
 
   private final Logger logger = App.logger;
 
   public UDPDatagramServer(int port, CommandHandler commandHandler) throws SocketException {
-    InetSocketAddress addr = new InetSocketAddress(port);
-    this.datagramSocket = new DatagramSocket(port);
-    datagramSocket.bind(addr);
+    super(new InetSocketAddress(port), commandHandler);
+    this.datagramSocket = new DatagramSocket(getAddr());
+    this.datagramSocket.setReuseAddress(true);
   }
 
   @Override
