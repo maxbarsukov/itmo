@@ -16,8 +16,6 @@ import java.io.IOException;
 import java.net.InetSocketAddress;
 import java.net.SocketAddress;
 import java.net.SocketException;
-import java.nio.ByteBuffer;
-import java.nio.charset.StandardCharsets;
 
 /**
  * UDP обработчик запросов
@@ -98,7 +96,7 @@ abstract class UDPServer {
         logger.error("Ошибка соединения с клиентом : " + e.toString(), e);
       }
 
-      logger.info("Соединено с" + " ${clientAddr}");
+      logger.info("Соединено с " + clientAddr);
 
       Request request = SerializationUtils.deserialize(ArrayUtils.toPrimitive(dataFromClient));
       logger.info("Обработка " + request + " из " + clientAddr);
@@ -116,7 +114,7 @@ abstract class UDPServer {
       logger.info("Ответ: " + new String(data));
 
       try {
-        sendData(Integer.toString(data.length).getBytes(StandardCharsets.UTF_8), clientAddr);
+        sendData(Integer.toString(data.length).getBytes(), clientAddr);
         logger.info("Размер ответа отправлен на клиент. Размер сообщения: " + data.length);
         sendData(data, clientAddr);
         logger.info("Отправлен ответ клиенту " + clientAddr);
@@ -140,13 +138,5 @@ abstract class UDPServer {
 
   public void stop() {
     running = false;
-  }
-
-  private String extractMessage(ByteBuffer buffer) {
-    buffer.flip();
-    var data = new byte[buffer.remaining()];
-    buffer.get(data);
-
-    return new String(data, StandardCharsets.UTF_8);
   }
 }

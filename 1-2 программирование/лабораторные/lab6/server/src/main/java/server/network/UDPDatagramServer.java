@@ -9,7 +9,7 @@ import server.handlers.CommandHandler;
 
 import java.io.IOException;
 import java.net.*;
-import java.nio.charset.StandardCharsets;
+import java.nio.ByteBuffer;
 
 public class UDPDatagramServer extends UDPServer {
   private final DatagramSocket datagramSocket;
@@ -39,9 +39,7 @@ public class UDPDatagramServer extends UDPServer {
     var dp = new DatagramPacket(data, data.length);
     datagramSocket.receive(dp);
 
-    var dataStr = new String(dp.getData(), StandardCharsets.UTF_8);
-    var dataInt = Integer.parseInt(dataStr);
-    return new ImmutablePair<>(dataInt, dp.getSocketAddress());
+    return new ImmutablePair<>(ByteBuffer.wrap(dp.getData()).getInt(), dp.getSocketAddress());
   }
 
   @Override

@@ -28,6 +28,6 @@ public class Help extends Command {
       helpMessage.append(" %-35s%-1s%n".formatted(command.getName(), command.getDescription()));
     });
 
-    return new InfoResponse(helpMessage.toString(), null);
+    return new HelpResponse(helpMessage.toString(), null);
   }
 }
