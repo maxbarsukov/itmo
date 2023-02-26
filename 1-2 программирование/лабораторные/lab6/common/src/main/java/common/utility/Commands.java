@@ -8,6 +8,8 @@ public interface Commands {
   String UPDATE = "update";
   String REMOVE_BY_ID = "remove_by_id";
   String CLEAR = "clear";
+  String EXIT = "exit";
+  String EXECUTE_SCRIPT = "execute_script";
   String HEAD = "head";
   String ADD_IF_MAX = "add_if_max";
   String ADD_IF_MIN = "add_if_min";

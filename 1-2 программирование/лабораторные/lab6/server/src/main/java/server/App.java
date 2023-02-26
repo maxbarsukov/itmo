@@ -12,7 +12,9 @@ import server.commands.*;
 
 import common.utility.Commands;
 
+import java.net.InetAddress;
 import java.net.SocketException;
+import java.net.UnknownHostException;
 
 /**
  * Серверная часть приложения.
@@ -55,11 +57,13 @@ public class App {
     }};
 
     try {
-      var server = new UDPDatagramServer(PORT, new CommandHandler(commandManager));
+      var server = new UDPDatagramServer(InetAddress.getLocalHost(), PORT, new CommandHandler(commandManager));
       server.setAfterHook(repository::save);
       server.run();
     } catch (SocketException e) {
       logger.fatal("Случилась ошибка сокета", e);
+    } catch (UnknownHostException e) {
+      logger.fatal("Неизвестный хост", e);
     }
   }
 }

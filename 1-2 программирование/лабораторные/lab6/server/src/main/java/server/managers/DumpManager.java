@@ -67,7 +67,7 @@ public class DumpManager {
           }
         }
 
-        if (jsonString.length() == 0) {
+        if (jsonString.isEmpty()) {
           jsonString = new StringBuilder("[]");
         }
 

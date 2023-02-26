@@ -89,7 +89,7 @@ public class ProductRepository {
    */
   public Product first() {
     if (collection.isEmpty()) return null;
-    return sorted().get(1);
+    return sorted().get(0);
   }
 
   /**
@@ -157,7 +157,9 @@ public class ProductRepository {
       .map(Organization::getId)
       .mapToInt(Integer::intValue).max().orElse(0) + 1;
 
-    element.getManufacturer().setId(nextOrgId);
+    if (element.getManufacturer() != null) {
+      element.getManufacturer().setId(nextOrgId);
+    }
     collection.add(element.copy(newId));
     return newId;
   }

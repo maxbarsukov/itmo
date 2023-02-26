@@ -2,6 +2,7 @@ package common.domain;
 
 import common.utility.Element;
 
+import java.io.Serial;
 import java.util.*;
 
 /**
@@ -9,6 +10,9 @@ import java.util.*;
  * @author maxbarsukov
  */
 public class Organization extends Element {
+  @Serial
+  private static final long serialVersionUID = 1L;
+
   private static final transient Map<Integer, Organization> organizations = new HashMap<>();
 
   private Integer id; // Поле не может быть null, Значение поля должно быть больше 0, Значение этого поля должно быть уникальным, Значение этого поля должно генерироваться автоматически

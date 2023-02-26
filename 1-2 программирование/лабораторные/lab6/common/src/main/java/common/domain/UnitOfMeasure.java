@@ -1,10 +1,12 @@
 package common.domain;
 
+import java.io.Serializable;
+
 /**
  * Перечисление типов единиц измерения продукта.
  * @author maxbarsukov
  */
-public enum UnitOfMeasure {
+public enum UnitOfMeasure implements Serializable {
   KILOGRAMS,
   SQUARE_METERS,
   LITERS,

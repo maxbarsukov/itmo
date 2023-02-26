@@ -2,13 +2,14 @@ package common.domain;
 
 import common.utility.Validatable;
 
+import java.io.Serializable;
 import java.util.Objects;
 
 /**
  * Классс координат.
  * @author maxbarsukov
  */
-public class Coordinates implements Validatable {
+public class Coordinates implements Validatable, Serializable {
   private final Integer x; // Поле не может быть null
   private final Long y; // Поле не может быть null
 

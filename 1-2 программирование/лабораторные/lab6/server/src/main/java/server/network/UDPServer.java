@@ -111,7 +111,7 @@ abstract class UDPServer {
       if (response == null) response = new NoSuchCommandResponse(request.getName());
 
       var data = SerializationUtils.serialize(response);
-      logger.info("Ответ: " + new String(data));
+      logger.info("Ответ: " + response);
 
       try {
         sendData(Integer.toString(data.length).getBytes(), clientAddr);

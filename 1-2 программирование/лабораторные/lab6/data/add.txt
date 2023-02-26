@@ -1,0 +1,14 @@
+add
+ScriptProduct
+99
+99
+100
+my_awesome_part
+SQUARE_METERS
+new
+NEW_ORG
+15
+PRIVATE_LIMITED_COMPANY
+Пушкина
+1234567
+show

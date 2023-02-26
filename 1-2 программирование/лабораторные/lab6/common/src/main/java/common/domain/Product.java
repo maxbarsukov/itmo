@@ -2,6 +2,7 @@ package common.domain;
 
 import common.utility.Element;
 
+import java.io.Serial;
 import java.time.LocalDate;
 import java.util.Objects;
 
@@ -10,6 +11,9 @@ import java.util.Objects;
  * @author maxbarsukov
  */
 public class Product extends Element {
+  @Serial
+  private static final long serialVersionUID = 1L;
+
   private final int id; // Значение поля должно быть больше 0, Значение этого поля должно быть уникальным, Значение этого поля должно генерироваться автоматически
   private String name; // Поле не может быть null, Строка не может быть пустой
   private Coordinates coordinates; // Поле не может быть null

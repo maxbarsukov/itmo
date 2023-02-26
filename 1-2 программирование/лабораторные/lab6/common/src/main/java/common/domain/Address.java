@@ -2,13 +2,14 @@ package common.domain;
 
 import common.utility.Validatable;
 
+import java.io.Serializable;
 import java.util.Objects;
 
 /**
  * Класс адреса.
  * @author maxbarsukov
  */
-public class Address implements Validatable {
+public class Address implements Validatable, Serializable {
   private final String street; // Строка не может быть пустой, Поле не может быть null
   private final String zipCode; // Длина строки должна быть не меньше 6, Поле может быть null
 

@@ -16,8 +16,8 @@ public class UDPDatagramServer extends UDPServer {
 
   private final Logger logger = App.logger;
 
-  public UDPDatagramServer(int port, CommandHandler commandHandler) throws SocketException {
-    super(new InetSocketAddress(port), commandHandler);
+  public UDPDatagramServer(InetAddress address, int port, CommandHandler commandHandler) throws SocketException {
+    super(new InetSocketAddress(address, port), commandHandler);
     this.datagramSocket = new DatagramSocket(getAddr());
     this.datagramSocket.setReuseAddress(true);
   }

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration xmlns="http://logging.apache.org/log4j/2.0/config">
+    <Appenders>
+        <File name="File" fileName="logs/client_log_${date:dd-MM-yyyy_HH-mm-ss}.log" append="false">
+            <PatternLayout pattern="%-5p | %d{dd-MM-yyyy HH:mm:ss} | %C{2} - %m%n" />
+        </File>
+    </Appenders>
+
+    <Loggers>
+        <Root level="debug">
+            <AppenderRef ref="File"/>
+        </Root>
+    </Loggers>
+</Configuration>

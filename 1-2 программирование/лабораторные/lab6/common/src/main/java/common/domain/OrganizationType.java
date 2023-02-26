@@ -1,10 +1,12 @@
 package common.domain;
 
+import java.io.Serializable;
+
 /**
  * Перечисление типов организации.
  * @author maxbarsukov
  */
-public enum OrganizationType {
+public enum OrganizationType implements Serializable {
   COMMERCIAL,
   GOVERNMENT,
   TRUST,
