@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement>server.managers.DumpManager</OriginalElement>
+  <nodes>
+    <node x="1898.5" y="821.0">server.commands.Command</node>
+    <node x="1860.0" y="1083.0">server.commands.FilterByPrice</node>
+    <node x="0.0" y="1254.0">com.google.gson.JsonSerializer</node>
+    <node x="3741.0" y="1094.5">server.commands.Add</node>
+    <node x="193.5" y="1359.0">server.utility.LocalDateAdapter</node>
+    <node x="1651.0" y="1254.0">server.App</node>
+    <node x="3121.0" y="1094.5">server.commands.Head</node>
+    <node x="2027.75" y="693.0">server.commands.Describable</node>
+    <node x="620.0" y="1094.5">server.commands.Update</node>
+    <node x="1801.75" y="704.5">server.commands.Executable</node>
+    <node x="1240.0" y="1094.5">server.commands.RemoveById</node>
+    <node x="1550.0" y="1083.0">server.commands.AddIfMax</node>
+    <node x="3431.0" y="1094.5">server.commands.Info</node>
+    <node x="0.0" y="407.0">server.network.UDPDatagramServer</node>
+    <node x="2480.0" y="1083.0">server.commands.FilterContainsPartNumber</node>
+    <node x="454.0" y="0.0">server.repositories.ProductRepository</node>
+    <node x="1344.0" y="1254.0">server.handlers.CommandHandler</node>
+    <node x="21.0" y="0.0">server.network.UDPServer</node>
+    <node x="2170.0" y="1083.0">server.commands.AddIfMin</node>
+    <node x="1874.0" y="1254.0">server.managers.CommandManager</node>
+    <node x="2853.0" y="1094.5">server.commands.Help</node>
+    <node x="930.0" y="1094.5">server.commands.Show</node>
+    <node x="310.0" y="1083.0">server.commands.SumOfPrice</node>
+    <node x="457.0" y="1254.0">com.google.gson.JsonDeserializer</node>
+    <node x="0.0" y="1094.5">server.commands.Clear</node>
+    <node x="967.0" y="1254.0">server.managers.DumpManager</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="server.commands.Command" target="server.commands.Executable">
+      <point x="-53.25" y="-86.0" />
+      <point x="1951.75" y="796.0" />
+      <point x="1904.75" y="796.0" />
+      <point x="0.0" y="27.5" />
+    </edge>
+    <edge source="server.commands.AddIfMax" target="server.commands.Command">
+      <point x="0.0" y="-63.0" />
+      <point x="1695.0" y="1063.0" />
+      <point x="1988.6153846153845" y="1063.0" />
+      <point x="-16.384615384615472" y="86.0" />
+    </edge>
+    <edge source="server.commands.Clear" target="server.commands.Command">
+      <point x="0.0" y="-51.5" />
+      <point x="145.0" y="1013.0" />
+      <point x="1906.6923076923076" y="1013.0" />
+      <point x="-98.30769230769238" y="86.0" />
+    </edge>
+    <edge source="server.network.UDPDatagramServer" target="server.network.UDPServer">
+      <point x="0.0" y="-120.5" />
+      <point x="0.0" y="178.5" />
+    </edge>
+    <edge source="server.commands.Show" target="server.commands.Command">
+      <point x="0.0" y="-51.5" />
+      <point x="1075.0" y="1043.0" />
+      <point x="1955.8461538461538" y="1043.0" />
+      <point x="-49.15384615384619" y="86.0" />
+    </edge>
+    <edge source="server.commands.Command" target="server.commands.Describable">
+      <point x="53.25" y="-86.0" />
+      <point x="2058.25" y="796.0" />
+      <point x="2105.25" y="796.0" />
+      <point x="0.0" y="39.0" />
+    </edge>
+    <edge source="server.commands.Update" target="server.commands.Command">
+      <point x="0.0" y="-51.5" />
+      <point x="765.0" y="1033.0" />
+      <point x="1939.4615384615386" y="1033.0" />
+      <point x="-65.53846153846143" y="86.0" />
+    </edge>
+    <edge source="server.commands.SumOfPrice" target="server.commands.Command">
+      <point x="0.0" y="-63.0" />
+      <point x="455.0" y="1023.0" />
+      <point x="1923.076923076923" y="1023.0" />
+      <point x="-81.9230769230769" y="86.0" />
+    </edge>
+    <edge source="server.commands.Info" target="server.commands.Command">
+      <point x="0.0" y="-51.5" />
+      <point x="3576.0" y="1023.0" />
+      <point x="2086.923076923077" y="1023.0" />
+      <point x="81.92307692307713" y="86.0" />
+    </edge>
+    <edge source="server.commands.Head" target="server.commands.Command">
+      <point x="0.0" y="-51.5" />
+      <point x="3266.0" y="1033.0" />
+      <point x="2070.5384615384614" y="1033.0" />
+      <point x="65.53846153846143" y="86.0" />
+    </edge>
+    <edge source="server.utility.LocalDateAdapter" target="com.google.gson.JsonSerializer">
+      <point x="-130.25" y="-39.0" />
+      <point x="323.75" y="1334.0" />
+      <point x="218.5" y="1334.0" />
+      <point x="0.0" y="27.5" />
+    </edge>
+    <edge source="server.commands.AddIfMin" target="server.commands.Command">
+      <point x="0.0" y="-63.0" />
+      <point x="2315.0" y="1063.0" />
+      <point x="2021.3846153846155" y="1063.0" />
+      <point x="16.384615384615472" y="86.0" />
+    </edge>
+    <edge source="server.commands.Add" target="server.commands.Command">
+      <point x="0.0" y="-51.5" />
+      <point x="3886.0" y="1013.0" />
+      <point x="2103.3076923076924" y="1013.0" />
+      <point x="98.30769230769238" y="86.0" />
+    </edge>
+    <edge source="server.commands.RemoveById" target="server.commands.Command">
+      <point x="0.0" y="-51.5" />
+      <point x="1385.0" y="1053.0" />
+      <point x="1972.2307692307693" y="1053.0" />
+      <point x="-32.76923076923072" y="86.0" />
+    </edge>
+    <edge source="server.utility.LocalDateAdapter" target="com.google.gson.JsonDeserializer">
+      <point x="130.25" y="-39.0" />
+      <point x="584.25" y="1334.0" />
+      <point x="689.5" y="1334.0" />
+      <point x="0.0" y="27.5" />
+    </edge>
+    <edge source="server.commands.FilterContainsPartNumber" target="server.commands.Command">
+      <point x="0.0" y="-63.0" />
+      <point x="2656.5" y="1053.0" />
+      <point x="2037.7692307692307" y="1053.0" />
+      <point x="32.76923076923072" y="86.0" />
+    </edge>
+    <edge source="server.commands.FilterByPrice" target="server.commands.Command">
+      <point x="0.0" y="-63.0" />
+      <point x="0.0" y="86.0" />
+    </edge>
+    <edge source="server.commands.Help" target="server.commands.Command">
+      <point x="0.0" y="-51.5" />
+      <point x="2977.0" y="1043.0" />
+      <point x="2054.153846153846" y="1043.0" />
+      <point x="49.15384615384619" y="86.0" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="0.272772155023451" x="2015.5000000000002" y="718.5" />
+  <SelectedNodes />
+  <Categories>
+    <Category>Fields</Category>
+    <Category>Constructors</Category>
+    <Category>Methods</Category>
+    <Category>Properties</Category>
+    <Category>Inner Classes</Category>
+  </Categories>
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+

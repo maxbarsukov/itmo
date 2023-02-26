@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement>client.commands.Add</OriginalElement>
+  <nodes>
+    <node x="3111.0" y="871.0">client.commands.AddIfMax</node>
+    <node x="1305.0" y="1203.0">client.forms.CoordinatesForm</node>
+    <node x="247.0" y="1203.0">client.forms.AddressForm</node>
+    <node x="664.75" y="1042.0">client.forms.Form</node>
+    <node x="720.0" y="871.0">client.commands.Help</node>
+    <node x="1594.0" y="871.0">client.commands.Show</node>
+    <node x="1834.0" y="871.0">client.commands.SumOfPrice</node>
+    <node x="1570.0" y="1042.0">client.network.UDPClient</node>
+    <node x="2356.0" y="871.0">client.commands.RemoveById</node>
+    <node x="1933.0" y="1042.0">client.utility.Interrogator</node>
+    <node x="307.0" y="0.0">client.cli.Runner</node>
+    <node x="0.0" y="0.0">client.utility.console.Console</node>
+    <node x="734.0" y="1226.0">client.forms.UnitOfMeasureForm</node>
+    <node x="988.0" y="1157.0">client.forms.ProductForm</node>
+    <node x="2638.0" y="871.0">client.commands.Add</node>
+    <node x="3379.0" y="871.0">client.commands.FilterByPrice</node>
+    <node x="494.0" y="882.5">client.commands.Exit</node>
+    <node x="2116.0" y="871.0">client.commands.Head</node>
+    <node x="335.0" y="291.0">client.cli.Runner.ExitCode</node>
+    <node x="268.0" y="882.5">client.commands.ExecuteScript</node>
+    <node x="1340.0" y="871.0">client.commands.Update</node>
+    <node x="1862.0" y="576.0">client.commands.Command</node>
+    <node x="459.0" y="1226.0">client.forms.OrganizationTypeForm</node>
+    <node x="0.0" y="1180.0">client.forms.OrganizationForm</node>
+    <node x="0.0" y="267.0">client.utility.console.StandardConsole</node>
+    <node x="3682.0" y="871.0">client.commands.Clear</node>
+    <node x="2871.0" y="871.0">client.commands.Info</node>
+    <node x="960.0" y="871.0">client.commands.FilterContainsPartNumber</node>
+    <node x="2219.0" y="1042.0">client.App</node>
+    <node x="0.0" y="871.0">client.commands.AddIfMin</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="client.forms.ProductForm" target="client.forms.Form">
+      <point x="0.0" y="-120.5" />
+      <point x="1136.5" y="1127.0" />
+      <point x="745.75" y="1127.0" />
+      <point x="27.0" y="27.5" />
+    </edge>
+    <edge source="client.commands.RemoveById" target="client.commands.Command">
+      <point x="0.0" y="-63.0" />
+      <point x="2487.0" y="841.0" />
+      <point x="1992.4666666666667" y="841.0" />
+      <point x="27.466666666666697" y="97.5" />
+    </edge>
+    <edge source="client.commands.ExecuteScript" target="client.commands.Command">
+      <point x="0.0" y="-51.5" />
+      <point x="371.0" y="801.0" />
+      <point x="1882.6" y="801.0" />
+      <point x="-82.40000000000009" y="97.5" />
+    </edge>
+    <edge source="client.commands.AddIfMax" target="client.commands.Command">
+      <point x="0.0" y="-63.0" />
+      <point x="3235.0" y="811.0" />
+      <point x="2033.6666666666665" y="811.0" />
+      <point x="68.66666666666652" y="97.5" />
+    </edge>
+    <edge source="client.commands.FilterContainsPartNumber" target="client.commands.Command">
+      <point x="0.0" y="-63.0" />
+      <point x="1140.0" y="831.0" />
+      <point x="1923.8" y="831.0" />
+      <point x="-41.200000000000045" y="97.5" />
+    </edge>
+    <edge source="client.commands.Clear" target="client.commands.Command">
+      <point x="0.0" y="-63.0" />
+      <point x="3795.5" y="791.0" />
+      <point x="2061.133333333333" y="791.0" />
+      <point x="96.13333333333321" y="97.5" />
+    </edge>
+    <edge source="client.commands.AddIfMin" target="client.commands.Command">
+      <point x="0.0" y="-63.0" />
+      <point x="124.0" y="791.0" />
+      <point x="1868.8666666666668" y="791.0" />
+      <point x="-96.13333333333321" y="97.5" />
+    </edge>
+    <edge source="client.forms.OrganizationForm" target="client.forms.Form">
+      <point x="0.0" y="-97.5" />
+      <point x="113.5" y="1117.0" />
+      <point x="673.75" y="1117.0" />
+      <point x="-45.0" y="27.5" />
+    </edge>
+    <edge source="client.commands.Add" target="client.commands.Command">
+      <point x="0.0" y="-63.0" />
+      <point x="2744.5" y="831.0" />
+      <point x="2006.2" y="831.0" />
+      <point x="41.200000000000045" y="97.5" />
+    </edge>
+    <edge source="client.utility.console.StandardConsole" target="client.utility.console.Console">
+      <point x="0.0" y="-132.0" />
+      <point x="0.0" y="108.5" />
+    </edge>
+    <edge source="client.forms.AddressForm" target="client.forms.Form">
+      <point x="0.0" y="-74.5" />
+      <point x="343.0" y="1127.0" />
+      <point x="691.75" y="1127.0" />
+      <point x="-27.0" y="27.5" />
+    </edge>
+    <edge source="client.forms.CoordinatesForm" target="client.forms.Form">
+      <point x="0.0" y="-74.5" />
+      <point x="1415.0" y="1117.0" />
+      <point x="763.75" y="1117.0" />
+      <point x="45.0" y="27.5" />
+    </edge>
+    <edge source="client.forms.OrganizationTypeForm" target="client.forms.Form">
+      <point x="0.0" y="-51.5" />
+      <point x="586.5" y="1137.0" />
+      <point x="709.75" y="1137.0" />
+      <point x="-9.0" y="27.5" />
+    </edge>
+    <edge source="client.cli.Runner.ExitCode" target="client.cli.Runner">
+      <point x="0.0" y="-74.0" />
+      <point x="0.0" y="120.5" />
+    </edge>
+    <edge source="client.commands.Show" target="client.commands.Command">
+      <point x="0.0" y="-63.0" />
+      <point x="1704.0" y="851.0" />
+      <point x="1951.2666666666667" y="851.0" />
+      <point x="-13.733333333333348" y="97.5" />
+    </edge>
+    <edge source="client.commands.FilterByPrice" target="client.commands.Command">
+      <point x="0.0" y="-63.0" />
+      <point x="3520.5" y="801.0" />
+      <point x="2047.3999999999999" y="801.0" />
+      <point x="82.39999999999986" y="97.5" />
+    </edge>
+    <edge source="client.commands.Info" target="client.commands.Command">
+      <point x="0.0" y="-63.0" />
+      <point x="2981.0" y="821.0" />
+      <point x="2019.9333333333334" y="821.0" />
+      <point x="54.933333333333394" y="97.5" />
+    </edge>
+    <edge source="client.commands.Help" target="client.commands.Command">
+      <point x="0.0" y="-63.0" />
+      <point x="830.0" y="821.0" />
+      <point x="1910.0666666666666" y="821.0" />
+      <point x="-54.933333333333394" y="97.5" />
+    </edge>
+    <edge source="client.commands.Head" target="client.commands.Command">
+      <point x="0.0" y="-63.0" />
+      <point x="2226.0" y="851.0" />
+      <point x="1978.7333333333333" y="851.0" />
+      <point x="13.733333333333348" y="97.5" />
+    </edge>
+    <edge source="client.commands.SumOfPrice" target="client.commands.Command">
+      <point x="0.0" y="-63.0" />
+      <point x="0.0" y="97.5" />
+    </edge>
+    <edge source="client.forms.UnitOfMeasureForm" target="client.forms.Form">
+      <point x="0.0" y="-51.5" />
+      <point x="851.0" y="1137.0" />
+      <point x="727.75" y="1137.0" />
+      <point x="9.0" y="27.5" />
+    </edge>
+    <edge source="client.commands.Exit" target="client.commands.Command">
+      <point x="0.0" y="-51.5" />
+      <point x="597.0" y="811.0" />
+      <point x="1896.3333333333333" y="811.0" />
+      <point x="-68.66666666666674" y="97.5" />
+    </edge>
+    <edge source="client.commands.Update" target="client.commands.Command">
+      <point x="0.0" y="-63.0" />
+      <point x="1457.0" y="841.0" />
+      <point x="1937.5333333333333" y="841.0" />
+      <point x="-27.466666666666697" y="97.5" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="0.2812420463222194" x="1954.5" y="699.0" />
+  <SelectedNodes>
+    <node>client.commands.Add</node>
+  </SelectedNodes>
+  <Categories>
+    <Category>Fields</Category>
+    <Category>Constructors</Category>
+    <Category>Methods</Category>
+    <Category>Properties</Category>
+    <Category>Inner Classes</Category>
+  </Categories>
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+

@@ -1,0 +1,482 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement>common.domain.Address</OriginalElement>
+  <nodes>
+    <node x="5016.453108629723" y="1361.0">common.network.responses.NoSuchCommandResponse</node>
+    <node x="2373.453108629723" y="1361.0">common.network.requests.ShowRequest</node>
+    <node x="678.0" y="1854.0">common.utility.Commands</node>
+    <node x="6517.453108629723" y="1349.0">common.network.responses.FilterContainsPartNumberResponse</node>
+    <node x="7242.453108629723" y="1349.0">common.network.responses.AddResponse</node>
+    <node x="474.4531086297229" y="1291.5">common.domain.UnitOfMeasure</node>
+    <node x="9844.023776537084" y="1337.5">java.lang.Throwable.SentinelHolder</node>
+    <node x="2536.453108629723" y="1349.0">common.network.requests.AddRequest</node>
+    <node x="2310.4837675765093" y="525.0">common.network.requests.Request</node>
+    <node x="233.45310862972292" y="398.0">java.lang.Enum</node>
+    <node x="8482.483767576508" y="1731.0">common.exceptions.ScriptRecursionException</node>
+    <node x="11177.004435483872" y="0.0">common.utility.Validatable</node>
+    <node x="9686.483767576508" y="1731.0">common.exceptions.NotInDeclaredLimitsException</node>
+    <node x="1201.453108629723" y="1349.0">common.network.requests.RemoveByIdRequest</node>
+    <node x="11009.483767576508" y="1337.5">java.lang.Throwable.PrintStreamOrWriter</node>
+    <node x="9198.483767576508" y="1718.5">common.exceptions.APIException</node>
+    <node x="2112.453108629723" y="1337.5">common.network.requests.UpdateRequest</node>
+    <node x="1427.453108629723" y="1349.0">common.network.requests.AddIfMaxRequest</node>
+    <node x="9978.483767576508" y="1731.0">common.exceptions.InvalidFormException</node>
+    <node x="11119.483767576508" y="1683.0">java.lang.Throwable.WrappedPrintWriter</node>
+    <node x="8742.483767576508" y="1731.0">common.exceptions.MustBeNotEmptyException</node>
+    <node x="1872.453108629723" y="1349.0">common.network.requests.AddIfMinRequest</node>
+    <node x="9410.483767576508" y="1731.0">common.exceptions.CollectionIsEmptyException</node>
+    <node x="10830.483767576508" y="1683.0">java.lang.Throwable.WrappedPrintStream</node>
+    <node x="9386.453108629723" y="1303.0">java.lang.Exception</node>
+    <node x="8666.453108629723" y="1361.0">common.network.responses.ClearResponse</node>
+    <node x="4398.025434243175" y="12.5">java.io.Serializable</node>
+    <node x="10522.483767576508" y="1731.0">common.exceptions.WrongAmountOfElementsException</node>
+    <node x="4404.703108629723" y="572.0">common.utility.Element</node>
+    <node x="6263.453108629723" y="1361.0">common.network.responses.RemoveByIdResponse</node>
+    <node x="3829.453108629723" y="1164.0">common.domain.Product</node>
+    <node x="7482.453108629723" y="1361.0">common.network.responses.ErrorResponse</node>
+    <node x="7701.453108629723" y="1349.0">common.network.responses.ShowResponse</node>
+    <node x="8885.453108629723" y="1349.0">common.network.responses.HeadResponse</node>
+    <node x="192.5" y="2430.0">common.utility.ProductComparator</node>
+    <node x="10217.379435483872" y="145.0">java.lang.Throwable</node>
+    <node x="11250.379435483872" y="502.0">common.domain.Address</node>
+    <node x="8994.483767576508" y="1731.0">common.exceptions.NotFoundException</node>
+    <node x="178.45310862972292" y="1326.0">java.lang.Enum.EnumDesc</node>
+    <node x="7207.483767576509" y="513.5">common.network.responses.Response</node>
+    <node x="742.4531086297229" y="1291.5">common.domain.OrganizationType</node>
+    <node x="5629.453108629723" y="1349.0">common.network.responses.SumOfPriceResponse</node>
+    <node x="216.5" y="1854.0">java.lang.FunctionalInterface</node>
+    <node x="6974.453108629723" y="1349.0">common.network.responses.InfoResponse</node>
+    <node x="2741.453108629723" y="1361.0">common.network.requests.InfoRequest</node>
+    <node x="3321.453108629723" y="1349.0">common.network.requests.FilterContainsPartNumberRequest</node>
+    <node x="8018.453108629723" y="1349.0">common.network.responses.FilterByPriceResponse</node>
+    <node x="9160.453108629723" y="1361.0">common.network.responses.UpdateResponse</node>
+    <node x="3158.453108629723" y="1361.0">common.network.requests.HelpRequest</node>
+    <node x="10996.379435483872" y="502.0">common.domain.Coordinates</node>
+    <node x="4510.453108629723" y="1187.0">common.domain.Organization</node>
+    <node x="2904.453108629723" y="1349.0">common.network.requests.FilterByPriceRequest</node>
+    <node x="5291.453108629723" y="1337.5">common.network.responses.AddIfMaxResponse</node>
+    <node x="3666.453108629723" y="1361.0">common.network.requests.HeadRequest</node>
+    <node x="1031.453108629723" y="1361.0">common.network.requests.ClearRequest</node>
+    <node x="0.0" y="0.0">java.lang.constant.Constable</node>
+    <node x="10206.483767576508" y="1731.0">common.exceptions.IncorrectInputInScriptException</node>
+    <node x="1667.453108629723" y="1361.0">common.network.requests.SumOfPriceRequest</node>
+    <node x="429.0" y="0.0">java.lang.Comparable</node>
+    <node x="5925.453108629723" y="1337.5">common.network.responses.AddIfMinResponse</node>
+    <node x="8398.453108629723" y="1349.0">common.network.responses.HelpResponse</node>
+    <node x="0.0" y="1934.0">java.util.Comparator</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="common.network.requests.AddIfMinRequest" target="common.network.requests.Request">
+      <point x="0.0" y="-39.5" />
+      <point x="1982.453108629723" y="1134.0" />
+      <point x="2379.3683829611246" y="1134.0" />
+      <point x="-30.615384615384755" y="74.5" />
+    </edge>
+    <edge source="common.exceptions.MustBeNotEmptyException" target="java.lang.Exception">
+      <point x="0.0" y="-15.0" />
+      <point x="8858.483767576508" y="1643.0" />
+      <point x="9448.786441963057" y="1643.0" />
+      <point x="-124.66666666666606" y="85.5" />
+    </edge>
+    <edge source="common.network.responses.ErrorResponse" target="common.network.responses.Response">
+      <point x="0.0" y="-27.5" />
+      <point x="7581.953108629723" y="1134.0" />
+      <point x="7332.150434243176" y="1134.0" />
+      <point x="14.66666666666697" y="86.0" />
+    </edge>
+    <edge source="common.domain.OrganizationType" target="java.io.Serializable">
+      <point x="67.25" y="-97.0" />
+      <point x="944.2031086297229" y="105.0" />
+      <point x="4438.025434243175" y="105.0" />
+      <point x="-32.0" y="15.0" />
+    </edge>
+    <edge source="java.lang.Throwable" target="java.io.Serializable">
+      <point x="0.0" y="-454.5" />
+      <point x="10596.879435483872" y="95.0" />
+      <point x="4502.025434243175" y="95.0" />
+      <point x="32.0" y="15.0" />
+    </edge>
+    <edge source="common.utility.Element" target="java.io.Serializable">
+      <point x="0.0" y="-27.5" />
+      <point x="4456.703108629723" y="125.0" />
+      <point x="4470.025434243175" y="125.0" />
+      <point x="0.0" y="15.0" />
+    </edge>
+    <edge source="common.utility.ProductComparator" target="java.util.Comparator">
+      <point x="0.0" y="-27.5" />
+      <point x="0.0" y="223.0" />
+    </edge>
+    <edge source="common.domain.UnitOfMeasure" target="java.io.Serializable">
+      <point x="62.0" y="-97.0" />
+      <point x="660.4531086297229" y="95.0" />
+      <point x="4422.025434243175" y="95.0" />
+      <point x="-48.0" y="15.0" />
+    </edge>
+    <edge source="java.util.Comparator" target="java.lang.FunctionalInterface">
+      <point x="0.0" y="-223.0" />
+      <point x="0.0" y="15.0" />
+    </edge>
+    <edge source="common.network.requests.SumOfPriceRequest" target="common.network.requests.Request">
+      <point x="0.0" y="-27.5" />
+      <point x="1759.953108629723" y="1124.0" />
+      <point x="2364.060690653432" y="1124.0" />
+      <point x="-45.92307692307713" y="74.5" />
+    </edge>
+    <edge source="common.network.requests.ShowRequest" target="common.network.requests.Request">
+      <point x="0.0" y="-27.5" />
+      <point x="2444.953108629723" y="1144.0" />
+      <point x="2409.9837675765093" y="1144.0" />
+      <point x="0.0" y="74.5" />
+    </edge>
+    <edge source="common.utility.Element" target="common.utility.Validatable">
+      <point x="34.66666666666697" y="-27.5" />
+      <point x="4491.36977529639" y="115.0" />
+      <point x="11205.504435483872" y="115.0" />
+      <point x="-57.0" y="27.5" />
+    </edge>
+    <edge source="common.network.responses.FilterContainsPartNumberResponse" target="common.network.responses.Response">
+      <point x="0.0" y="-39.5" />
+      <point x="6735.953108629723" y="1134.0" />
+      <point x="7288.150434243176" y="1134.0" />
+      <point x="-29.33333333333303" y="86.0" />
+    </edge>
+    <edge source="common.network.requests.HelpRequest" target="common.network.requests.Request">
+      <point x="0.0" y="-27.5" />
+      <point x="3229.953108629723" y="1104.0" />
+      <point x="2471.214536807279" y="1104.0" />
+      <point x="61.23076923076951" y="74.5" />
+    </edge>
+    <edge source="common.network.requests.Request" target="java.io.Serializable">
+      <point x="0.0" y="-74.5" />
+      <point x="2409.9837675765093" y="115.0" />
+      <point x="4454.025434243175" y="115.0" />
+      <point x="-16.0" y="15.0" />
+    </edge>
+    <edge source="java.lang.Throwable.PrintStreamOrWriter" target="java.lang.Throwable">
+      <point x="0.0" y="-51.0" />
+      <point x="11109.483767576508" y="1134.0" />
+      <point x="10748.679435483871" y="1134.0" />
+      <point x="151.79999999999927" y="454.5" />
+    </edge>
+    <edge source="common.network.responses.UpdateResponse" target="common.network.responses.Response">
+      <point x="0.0" y="-27.5" />
+      <point x="9263.453108629723" y="1074.0" />
+      <point x="7420.150434243176" y="1074.0" />
+      <point x="102.66666666666697" y="86.0" />
+    </edge>
+    <edge source="common.network.requests.ClearRequest" target="common.network.requests.Request">
+      <point x="0.0" y="-27.5" />
+      <point x="1106.453108629723" y="1094.0" />
+      <point x="2318.1376137303555" y="1094.0" />
+      <point x="-91.84615384615381" y="74.5" />
+    </edge>
+    <edge source="common.network.requests.HeadRequest" target="common.network.requests.Request">
+      <point x="0.0" y="-27.5" />
+      <point x="3737.953108629723" y="1084.0" />
+      <point x="2501.829921422663" y="1084.0" />
+      <point x="91.84615384615381" y="74.5" />
+    </edge>
+    <edge source="java.lang.Throwable.WrappedPrintWriter" target="java.lang.Throwable">
+      <point x="67.25" y="-63.0" />
+      <point x="11321.233767576508" y="1663.0" />
+      <point x="11284.233767576508" y="1663.0" />
+      <point x="11284.233767576508" y="1124.0" />
+      <point x="10900.47943548387" y="1124.0" />
+      <point x="303.60000000000036" y="454.5" />
+    </edge>
+    <edge source="common.exceptions.WrongAmountOfElementsException" target="java.lang.Exception">
+      <point x="0.0" y="-15.0" />
+      <point x="10666.483767576508" y="1633.0" />
+      <point x="9739.675330851946" y="1633.0" />
+      <point x="166.22222222222263" y="85.5" />
+    </edge>
+    <edge source="common.exceptions.IncorrectInputInScriptException" target="java.lang.Exception">
+      <point x="0.0" y="-15.0" />
+      <point x="10354.483767576508" y="1643.0" />
+      <point x="9698.119775296389" y="1643.0" />
+      <point x="124.66666666666606" y="85.5" />
+    </edge>
+    <edge source="common.network.responses.NoSuchCommandResponse" target="common.network.responses.Response">
+      <point x="0.0" y="-27.5" />
+      <point x="5143.953108629723" y="1084.0" />
+      <point x="7214.817100909842" y="1084.0" />
+      <point x="-102.66666666666697" y="86.0" />
+    </edge>
+    <edge source="common.network.requests.FilterContainsPartNumberRequest" target="common.network.requests.Request">
+      <point x="0.0" y="-39.5" />
+      <point x="3483.953108629723" y="1094.0" />
+      <point x="2486.5222291149707" y="1094.0" />
+      <point x="76.53846153846143" y="74.5" />
+    </edge>
+    <edge source="java.lang.Enum" target="java.lang.constant.Constable">
+      <point x="-110.66666666666669" y="-201.5" />
+      <point x="288.78644196305595" y="125.0" />
+      <point x="204.5" y="125.0" />
+      <point x="0.0" y="27.5" />
+    </edge>
+    <edge source="common.network.responses.ShowResponse" target="common.network.responses.Response">
+      <point x="0.0" y="-39.5" />
+      <point x="7849.953108629723" y="1124.0" />
+      <point x="7346.817100909842" y="1124.0" />
+      <point x="29.33333333333303" y="86.0" />
+    </edge>
+    <edge source="common.domain.Coordinates" target="java.io.Serializable">
+      <point x="-58.5" y="-97.5" />
+      <point x="11054.879435483872" y="85.0" />
+      <point x="4518.025434243175" y="85.0" />
+      <point x="48.0" y="15.0" />
+    </edge>
+    <edge source="java.lang.Enum" target="java.lang.Comparable">
+      <point x="0.0" y="-201.5" />
+      <point x="399.4531086297229" y="125.0" />
+      <point x="468.25" y="125.0" />
+      <point x="-39.25" y="27.5" />
+    </edge>
+    <edge source="common.exceptions.APIException" target="java.lang.Exception">
+      <point x="0.0" y="-27.5" />
+      <point x="9294.483767576508" y="1663.0" />
+      <point x="9531.897553074168" y="1663.0" />
+      <point x="-41.55555555555475" y="85.5" />
+    </edge>
+    <edge source="common.exceptions.NotFoundException" target="java.lang.Exception">
+      <point x="0.0" y="-15.0" />
+      <point x="9086.483767576508" y="1653.0" />
+      <point x="9490.341997518612" y="1653.0" />
+      <point x="-83.11111111111131" y="85.5" />
+    </edge>
+    <edge source="common.exceptions.CollectionIsEmptyException" target="java.lang.Exception">
+      <point x="0.0" y="-15.0" />
+      <point x="9538.483767576508" y="1663.0" />
+      <point x="9573.453108629723" y="1663.0" />
+      <point x="0.0" y="85.5" />
+    </edge>
+    <edge source="common.network.responses.InfoResponse" target="common.network.responses.Response">
+      <point x="0.0" y="-39.5" />
+      <point x="7098.453108629723" y="1144.0" />
+      <point x="7302.817100909842" y="1144.0" />
+      <point x="-14.66666666666697" y="86.0" />
+    </edge>
+    <edge source="common.domain.Address" target="common.utility.Validatable">
+      <point x="53.25" y="-97.5" />
+      <point x="11410.129435483872" y="125.0" />
+      <point x="11319.504435483872" y="125.0" />
+      <point x="57.0" y="27.5" />
+    </edge>
+    <edge source="common.domain.Coordinates" target="common.utility.Validatable">
+      <point x="58.5" y="-97.5" />
+      <point x="11171.879435483872" y="125.0" />
+      <point x="11262.504435483872" y="125.0" />
+      <point x="0.0" y="27.5" />
+    </edge>
+    <edge source="common.network.requests.FilterByPriceRequest" target="common.network.requests.Request">
+      <point x="0.0" y="-39.5" />
+      <point x="3021.453108629723" y="1114.0" />
+      <point x="2455.9068444995864" y="1114.0" />
+      <point x="45.92307692307713" y="74.5" />
+    </edge>
+    <edge source="java.lang.Throwable.WrappedPrintStream" target="java.lang.Throwable">
+      <point x="-67.25" y="-63.0" />
+      <point x="10897.733767576508" y="1663.0" />
+      <point x="10934.733767576508" y="1663.0" />
+      <point x="10934.733767576508" y="1144.0" />
+      <point x="10596.879435483872" y="1144.0" />
+      <point x="0.0" y="454.5" />
+    </edge>
+    <edge source="common.network.requests.RemoveByIdRequest" target="common.network.requests.Request">
+      <point x="0.0" y="-39.5" />
+      <point x="1304.453108629723" y="1104.0" />
+      <point x="2333.445306038048" y="1104.0" />
+      <point x="-76.53846153846143" y="74.5" />
+    </edge>
+    <edge source="java.lang.Enum.EnumDesc" target="java.lang.Enum">
+      <point x="-69.0" y="-62.5" />
+      <point x="247.45310862972292" y="1144.0" />
+      <point x="274.9531086297229" y="1144.0" />
+      <point x="-124.5" y="201.5" />
+    </edge>
+    <edge source="java.lang.Throwable.WrappedPrintStream" target="java.lang.Throwable.PrintStreamOrWriter">
+      <point x="67.25" y="-63.0" />
+      <point x="11032.233767576508" y="1663.0" />
+      <point x="11059.483767576508" y="1663.0" />
+      <point x="-50.0" y="51.0" />
+    </edge>
+    <edge source="common.network.responses.SumOfPriceResponse" target="common.network.responses.Response">
+      <point x="0.0" y="-39.5" />
+      <point x="5767.453108629723" y="1104.0" />
+      <point x="7244.150434243176" y="1104.0" />
+      <point x="-73.33333333333303" y="86.0" />
+    </edge>
+    <edge source="common.network.responses.AddIfMaxResponse" target="common.network.responses.Response">
+      <point x="0.0" y="-51.0" />
+      <point x="5450.453108629723" y="1094.0" />
+      <point x="7229.483767576509" y="1094.0" />
+      <point x="-88.0" y="86.0" />
+    </edge>
+    <edge source="common.exceptions.ScriptRecursionException" target="java.lang.Exception">
+      <point x="0.0" y="-15.0" />
+      <point x="8602.483767576508" y="1633.0" />
+      <point x="9407.2308864075" y="1633.0" />
+      <point x="-166.22222222222263" y="85.5" />
+    </edge>
+    <edge source="common.network.requests.UpdateRequest" target="common.network.requests.Request">
+      <point x="0.0" y="-51.0" />
+      <point x="2232.953108629723" y="1144.0" />
+      <point x="2394.676075268817" y="1144.0" />
+      <point x="-15.307692307692378" y="74.5" />
+    </edge>
+    <edge source="common.domain.UnitOfMeasure" target="java.lang.Enum">
+      <point x="-62.0" y="-97.0" />
+      <point x="536.4531086297229" y="1144.0" />
+      <point x="440.9531086297229" y="1144.0" />
+      <point x="41.5" y="201.5" />
+    </edge>
+    <edge source="common.network.responses.AddResponse" target="common.network.responses.Response">
+      <point x="0.0" y="-39.5" />
+      <point x="7352.453108629723" y="1144.0" />
+      <point x="7317.483767576509" y="1144.0" />
+      <point x="0.0" y="86.0" />
+    </edge>
+    <edge source="common.network.responses.ClearResponse" target="common.network.responses.Response">
+      <point x="0.0" y="-27.5" />
+      <point x="8765.953108629723" y="1094.0" />
+      <point x="7390.817100909842" y="1094.0" />
+      <point x="73.33333333333303" y="86.0" />
+    </edge>
+    <edge source="common.network.responses.AddIfMinResponse" target="common.network.responses.Response">
+      <point x="0.0" y="-51.0" />
+      <point x="6084.453108629723" y="1114.0" />
+      <point x="7258.817100909842" y="1114.0" />
+      <point x="-58.66666666666697" y="86.0" />
+    </edge>
+    <edge source="common.domain.Product" target="common.utility.Element">
+      <point x="0.0" y="-224.5" />
+      <point x="4159.953108629723" y="1144.0" />
+      <point x="4430.703108629723" y="1144.0" />
+      <point x="-26.0" y="27.5" />
+    </edge>
+    <edge source="common.domain.Address" target="java.io.Serializable">
+      <point x="-53.25" y="-97.5" />
+      <point x="11303.629435483872" y="75.0" />
+      <point x="4534.025434243175" y="75.0" />
+      <point x="64.0" y="15.0" />
+    </edge>
+    <edge source="common.network.responses.RemoveByIdResponse" target="common.network.responses.Response">
+      <point x="0.0" y="-27.5" />
+      <point x="6380.453108629723" y="1124.0" />
+      <point x="7273.483767576509" y="1124.0" />
+      <point x="-44.0" y="86.0" />
+    </edge>
+    <edge source="common.network.responses.Response" target="java.io.Serializable">
+      <point x="0.0" y="-86.0" />
+      <point x="7317.483767576509" y="105.0" />
+      <point x="4486.025434243175" y="105.0" />
+      <point x="16.0" y="15.0" />
+    </edge>
+    <edge source="java.lang.Exception" target="java.lang.Throwable">
+      <point x="0.0" y="-85.5" />
+      <point x="9573.453108629723" y="1134.0" />
+      <point x="10293.27943548387" y="1134.0" />
+      <point x="-303.60000000000036" y="454.5" />
+    </edge>
+    <edge source="common.network.requests.AddIfMaxRequest" target="common.network.requests.Request">
+      <point x="0.0" y="-39.5" />
+      <point x="1537.453108629723" y="1114.0" />
+      <point x="2348.7529983457403" y="1114.0" />
+      <point x="-61.230769230769056" y="74.5" />
+    </edge>
+    <edge source="java.lang.Enum" target="java.io.Serializable">
+      <point x="110.66666666666669" y="-201.5" />
+      <point x="510.1197752963899" y="85.0" />
+      <point x="4406.025434243175" y="85.0" />
+      <point x="-64.0" y="15.0" />
+    </edge>
+    <edge source="common.domain.OrganizationType" target="java.lang.Enum">
+      <point x="-67.25" y="-97.0" />
+      <point x="809.7031086297229" y="1134.0" />
+      <point x="523.9531086297229" y="1134.0" />
+      <point x="124.5" y="201.5" />
+    </edge>
+    <edge source="common.exceptions.NotInDeclaredLimitsException" target="java.lang.Exception">
+      <point x="0.0" y="-15.0" />
+      <point x="9822.483767576508" y="1663.0" />
+      <point x="9615.008664185278" y="1663.0" />
+      <point x="41.55555555555475" y="85.5" />
+    </edge>
+    <edge source="common.network.requests.AddRequest" target="common.network.requests.Request">
+      <point x="0.0" y="-39.5" />
+      <point x="2628.953108629723" y="1134.0" />
+      <point x="2425.2914598842017" y="1134.0" />
+      <point x="15.307692307692378" y="74.5" />
+    </edge>
+    <edge source="java.lang.Throwable.WrappedPrintWriter" target="java.lang.Throwable.PrintStreamOrWriter">
+      <point x="-67.25" y="-63.0" />
+      <point x="11186.733767576508" y="1663.0" />
+      <point x="11159.483767576508" y="1663.0" />
+      <point x="50.0" y="51.0" />
+    </edge>
+    <edge source="java.lang.Throwable.SentinelHolder" target="java.lang.Throwable">
+      <point x="0.0" y="-51.0" />
+      <point x="10027.523776537084" y="1144.0" />
+      <point x="10445.079435483873" y="1144.0" />
+      <point x="-151.79999999999927" y="454.5" />
+    </edge>
+    <edge source="common.exceptions.InvalidFormException" target="java.lang.Exception">
+      <point x="0.0" y="-15.0" />
+      <point x="10082.483767576508" y="1653.0" />
+      <point x="9656.564219740834" y="1653.0" />
+      <point x="83.11111111111131" y="85.5" />
+    </edge>
+    <edge source="common.network.requests.InfoRequest" target="common.network.requests.Request">
+      <point x="0.0" y="-27.5" />
+      <point x="2812.953108629723" y="1124.0" />
+      <point x="2440.599152191894" y="1124.0" />
+      <point x="30.615384615384755" y="74.5" />
+    </edge>
+    <edge source="common.domain.Organization" target="common.utility.Element">
+      <point x="0.0" y="-201.5" />
+      <point x="4753.453108629723" y="1144.0" />
+      <point x="4482.703108629723" y="1144.0" />
+      <point x="26.0" y="27.5" />
+    </edge>
+    <edge source="common.network.responses.FilterByPriceResponse" target="common.network.responses.Response">
+      <point x="0.0" y="-39.5" />
+      <point x="8198.453108629723" y="1114.0" />
+      <point x="7361.483767576509" y="1114.0" />
+      <point x="44.0" y="86.0" />
+    </edge>
+    <edge source="common.utility.Element" target="java.lang.Comparable">
+      <point x="-34.66666666666697" y="-27.5" />
+      <point x="4422.036441963056" y="75.0" />
+      <point x="546.75" y="75.0" />
+      <point x="39.25" y="27.5" />
+    </edge>
+    <edge source="common.network.responses.HeadResponse" target="common.network.responses.Response">
+      <point x="0.0" y="-39.5" />
+      <point x="9012.953108629723" y="1084.0" />
+      <point x="7405.483767576509" y="1084.0" />
+      <point x="88.0" y="86.0" />
+    </edge>
+    <edge source="common.network.responses.HelpResponse" target="common.network.responses.Response">
+      <point x="0.0" y="-39.5" />
+      <point x="8522.453108629723" y="1104.0" />
+      <point x="7376.150434243176" y="1104.0" />
+      <point x="58.66666666666697" y="86.0" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="0.09627951555284482" x="5728.5" y="1242.5" />
+  <SelectedNodes>
+    <node>common.domain.Address</node>
+  </SelectedNodes>
+  <Categories>
+    <Category>Fields</Category>
+    <Category>Methods</Category>
+    <Category>Constructors</Category>
+    <Category>Properties</Category>
+    <Category>Inner Classes</Category>
+  </Categories>
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+
