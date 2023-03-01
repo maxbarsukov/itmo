@@ -3,6 +3,7 @@ package server.network;
 import common.network.requests.Request;
 import common.network.responses.Response;
 import org.apache.commons.lang3.ArrayUtils;
+import org.apache.commons.lang3.SerializationException;
 import org.apache.logging.log4j.Logger;
 
 import org.apache.commons.lang3.tuple.Pair;
@@ -43,13 +44,7 @@ abstract class UDPServer {
    * Получает данные с клиента.
    * Возвращает пару из данных и адреса клиента
    */
-  public abstract Pair<Byte[], SocketAddress> receiveData(int bufferSize) throws IOException;
-
-  /**
-   * Получает размер данных от клиента.
-   * Возвращает пару из размера данных и адреса клиента
-   */
-  public abstract Pair<Integer, SocketAddress> receiveDataSize() throws IOException;
+  public abstract Pair<Byte[], SocketAddress> receiveData() throws IOException;
 
   /**
    * Отправляет данные клиенту
@@ -65,23 +60,9 @@ abstract class UDPServer {
     logger.info("Сервер запущен по адресу " + addr);
 
     while (running) {
-      Pair<Integer, SocketAddress> pair;
-      try {
-        pair = receiveDataSize();
-      } catch (Exception e) {
-        logger.error("Ошибка получения размера данных : " + e.toString(), e);
-        disconnectFromClient();
-        continue;
-      }
-
-      var dataSize = pair.getKey();
-      var clientAddr = pair.getValue();
-
-      logger.info("Размер пакета " + dataSize + ". Клиент " + clientAddr);
-
       Pair<Byte[], SocketAddress> dataPair;
       try {
-        dataPair = receiveData(dataSize);
+        dataPair = receiveData();
       } catch (Exception e) {
         logger.error("Ошибка получения данных : " + e.toString(), e);
         disconnectFromClient();
@@ -89,17 +70,24 @@ abstract class UDPServer {
       }
 
       var dataFromClient = dataPair.getKey();
+      var clientAddr = dataPair.getValue();
 
       try {
         connectToClient(clientAddr);
+        logger.info("Соединено с " + clientAddr);
       } catch (Exception e) {
         logger.error("Ошибка соединения с клиентом : " + e.toString(), e);
       }
 
-      logger.info("Соединено с " + clientAddr);
-
-      Request request = SerializationUtils.deserialize(ArrayUtils.toPrimitive(dataFromClient));
-      logger.info("Обработка " + request + " из " + clientAddr);
+      Request request;
+      try {
+        request = SerializationUtils.deserialize(ArrayUtils.toPrimitive(dataFromClient));
+        logger.info("Обработка " + request + " из " + clientAddr);
+      } catch (SerializationException e) {
+        logger.error("Невозможно десериализовать объект запроса.", e);
+        disconnectFromClient();
+        continue;
+      }
 
       Response response = null;
       try {
@@ -114,13 +102,12 @@ abstract class UDPServer {
       logger.info("Ответ: " + response);
 
       try {
-        sendData(Integer.toString(data.length).getBytes(), clientAddr);
-        logger.info("Размер ответа отправлен на клиент. Размер сообщения: " + data.length);
         sendData(data, clientAddr);
         logger.info("Отправлен ответ клиенту " + clientAddr);
       } catch (Exception e) {
         logger.error("Ошибка ввода-вывода : " + e.toString(), e);
       }
+
       disconnectFromClient();
       logger.info("Отключение от клиента " + clientAddr);
     }

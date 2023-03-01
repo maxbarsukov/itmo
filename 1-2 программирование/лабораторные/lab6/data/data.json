@@ -130,5 +130,18 @@
         "zipCode": "1234567"
       }
     }
+  },
+  {
+    "id": 9,
+    "name": "1",
+    "coordinates": {
+      "x": 1,
+      "y": 1
+    },
+    "creationDate": "2023-03-01",
+    "price": 1,
+    "partNumber": "1",
+    "unitOfMeasure": null,
+    "manufacturer": null
   }
 ]
