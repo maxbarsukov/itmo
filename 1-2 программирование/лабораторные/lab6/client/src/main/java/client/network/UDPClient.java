@@ -15,10 +15,10 @@ import java.net.SocketAddress;
 import java.nio.ByteBuffer;
 import java.nio.channels.DatagramChannel;
 import java.util.Arrays;
-import java.util.stream.IntStream;
 
 public class UDPClient {
   private final int PACKET_SIZE = 1024;
+  private final int DATA_SIZE = PACKET_SIZE - 1;
 
   private final DatagramChannel client;
   private final InetSocketAddress addr;
@@ -42,22 +42,29 @@ public class UDPClient {
   }
 
   private void sendData(byte[] data) throws IOException {
-    byte[][] ret = new byte[(int)Math.ceil(data.length / (double)PACKET_SIZE)][PACKET_SIZE];
+    byte[][] ret = new byte[(int)Math.ceil(data.length / (double)DATA_SIZE)][DATA_SIZE];
 
     int start = 0;
     for(int i = 0; i < ret.length; i++) {
-      ret[i] = Arrays.copyOfRange(data, start, start + PACKET_SIZE);
-      start += PACKET_SIZE;
+      ret[i] = Arrays.copyOfRange(data, start, start + DATA_SIZE);
+      start += DATA_SIZE;
     }
 
-    logger.info("Отправляется " + ret.length + " чанков + 1 пустой...");
+    logger.info("Отправляется " + ret.length + " чанков...");
 
-    for(var chunk : ret) {
-      client.send(ByteBuffer.wrap(chunk), addr);
-      logger.info("Чанк размером " + chunk.length + " отправлен на сервер.");
+    for(int i = 0; i < ret.length; i++) {
+      var chunk = ret[i];
+      if (i == ret.length - 1) {
+        var lastChunk = Bytes.concat(chunk, new byte[]{1});
+        client.send(ByteBuffer.wrap(lastChunk), addr);
+        logger.info("Последний чанк размером " + lastChunk.length + " отправлен на сервер.");
+      } else {
+        var answer = Bytes.concat(chunk, new byte[]{0});
+        client.send(ByteBuffer.wrap(answer), addr);
+        logger.info("Чанк размером " + answer.length + " отправлен на сервер.");
+      }
     }
 
-    client.send(ByteBuffer.allocate(PACKET_SIZE), addr);
     logger.info("Отправка данных завершена.");
   }
 
@@ -68,12 +75,13 @@ public class UDPClient {
     while(!received) {
       var data = receiveData(PACKET_SIZE);
       logger.info("Получено \"" + new String(data) + "\"");
-      if (IntStream.range(0, data.length).parallel().allMatch(i -> data[i] == 0)) {
+      logger.info("Последний байт: " + data[data.length - 1]);
+
+      if (data[data.length - 1] == 1) {
         received = true;
         logger.info("Получение данных окончено");
-      } else {
-        result = Bytes.concat(result, data);
       }
+      result = Bytes.concat(result, Arrays.copyOf(data, data.length - 1));
     }
 
     return result;
