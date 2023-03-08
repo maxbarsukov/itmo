@@ -1,0 +1,71 @@
+subprojects {
+    apply plugin: 'java'
+    repositories {
+        mavenCentral()
+    }
+}
+
+project(':server') {
+    apply plugin: 'application'
+    mainClassName = 'server.App'
+    dependencies {
+        implementation project(':common')
+        implementation 'com.google.guava:guava:31.1-jre'
+        implementation 'org.apache.commons:commons-lang3:3.12.0'
+
+        implementation 'org.postgresql:postgresql:42.5.4'
+
+        implementation 'io.github.cdimascio:dotenv-java:2.3.2'
+
+        implementation 'org.apache.logging.log4j:log4j-core:2.20.0'
+        implementation 'org.apache.logging.log4j:log4j-api:2.20.0'
+    }
+
+    jar {
+        manifest.attributes(
+            'Main-Class': 'server.App',
+            'Implementation-Title': 'Gradle'
+        )
+    }
+}
+
+project(':client') {
+    apply plugin: 'application'
+    mainClassName = 'client.App'
+    dependencies {
+        implementation project(':common')
+        implementation 'org.apache.commons:commons-lang3:3.12.0'
+        implementation 'com.google.guava:guava:31.1-jre'
+
+        implementation 'org.apache.logging.log4j:log4j-core:2.20.0'
+        implementation 'org.apache.logging.log4j:log4j-api:2.20.0'
+    }
+    run {
+        standardInput = System.in
+    }
+    jar {
+        manifest.attributes(
+            'Main-Class': 'client.App',
+            'Implementation-Title': 'Gradle'
+        )
+    }
+}
+
+allprojects {
+    tasks.register('fatJar', Jar) {
+        archiveClassifier = 'fat'
+
+        from sourceSets.main.output
+        dependsOn configurations.runtimeClasspath
+
+        duplicatesStrategy = DuplicatesStrategy.EXCLUDE
+
+        manifest {
+            attributes['Main-Class'] = application.mainClass
+        }
+
+        from {
+            configurations.runtimeClasspath.findAll { it.name.endsWith('jar') }.collect { zipTree(it) }
+        }
+    }
+}
