@@ -1,5 +1,6 @@
 package server.commands;
 
+import common.exceptions.BadOwnerException;
 import common.network.requests.*;
 import common.network.responses.*;
 import server.repositories.ProductRepository;
@@ -29,8 +30,13 @@ public class RemoveById extends Command {
         return new RemoveByIdResponse("Продукта с таким ID в коллекции нет!");
       }
 
-      var a = productRepository.remove(req.id);
+      var removedCount = productRepository.remove(req.getUser(), req.id);
+      if (removedCount <= 0) {
+        return new RemoveByIdResponse("Ничего не удалено!");
+      }
       return new RemoveByIdResponse(null);
+    } catch (BadOwnerException e) {
+      return new RemoveByIdResponse("Зафиксирована попытка удалить чужой продукт!");
     } catch (Exception e) {
       return new RemoveByIdResponse(e.toString());
     }

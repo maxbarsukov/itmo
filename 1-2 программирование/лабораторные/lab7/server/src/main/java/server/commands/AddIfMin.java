@@ -27,7 +27,7 @@ public class AddIfMin extends Command {
       var req = (AddIfMinRequest) request;
       var minPrice = minPrice();
       if (req.product.getPrice() < minPrice) {
-        var newId = productRepository.add(req.product);
+        var newId = productRepository.add(req.getUser(), req.product);
         return new AddIfMinResponse(true, newId, null);
       }
       return new AddIfMinResponse(false, -1, null);

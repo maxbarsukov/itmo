@@ -24,7 +24,7 @@ public class Clear extends Command {
   @Override
   public Response apply(Request request) {
     try {
-      productRepository.clear();
+      productRepository.clear(request.getUser());
       return new ClearResponse(null);
     } catch (Exception e) {
       return new ClearResponse(e.toString());

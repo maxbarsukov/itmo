@@ -1,5 +1,6 @@
 package server.commands;
 
+import common.exceptions.BadOwnerException;
 import common.network.requests.*;
 import common.network.responses.*;
 import server.repositories.ProductRepository;
@@ -31,8 +32,10 @@ public class Update extends Command {
         return new UpdateResponse( "Поля продукта не валидны! Продукт не обновлен!");
       }
 
-      productRepository.getById(req.id).update(req.updatedProduct);
+      productRepository.update(req.getUser(), req.updatedProduct);
       return new UpdateResponse(null);
+    } catch (BadOwnerException e) {
+      return new RemoveByIdResponse("Зафиксирована попытка изменить чужой продукт!");
     } catch (Exception e) {
       return new UpdateResponse(e.toString());
     }

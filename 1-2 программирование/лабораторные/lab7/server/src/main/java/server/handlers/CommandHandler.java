@@ -1,8 +1,7 @@
 package server.handlers;
 
-import common.network.requests.AuthenticateRequest;
-import common.network.requests.RegisterRequest;
 import common.network.requests.Request;
+import common.network.responses.BadCredentialsResponse;
 import common.network.responses.ErrorResponse;
 import common.network.responses.Response;
 import common.network.responses.NoSuchCommandResponse;
@@ -25,15 +24,15 @@ public class CommandHandler {
   }
 
   public Response handle(Request request) {
-    if (!(request instanceof AuthenticateRequest || request instanceof RegisterRequest)) {
+    if (!request.isAuth()) {
       var user = request.getUser();
       try {
-        if (authManager.authenticateUser(user.getName(), user.getPassword()) <= 0) {
-          return new BadCredentialsResponse("no such user or password is wrong")
+        if (user == null || authManager.authenticateUser(user.getName(), user.getPassword()) <= 0) {
+          return new BadCredentialsResponse("Неверные учетные данные. Пожалуйста, войдите в свой аккаунт.");
         }
       } catch (SQLException e) {
         logger.error("Невозможно выполнить запрос к БД о аутентификации пользователя.", e);
-        return new ErrorResponse("sql_error", "Невозможно выполнить запрос к БД о аутентификации пользователя.")
+        return new ErrorResponse("sql_error", "Невозможно выполнить запрос к БД о аутентификации пользователя.");
       }
     }
 

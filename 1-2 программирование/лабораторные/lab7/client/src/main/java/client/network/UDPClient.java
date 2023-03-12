@@ -1,7 +1,9 @@
 package client.network;
 
 import client.App;
+import common.exceptions.ErrorResponseException;
 import common.network.requests.Request;
+import common.network.responses.ErrorResponse;
 import common.network.responses.Response;
 
 import com.google.common.primitives.Bytes;
@@ -32,12 +34,15 @@ public class UDPClient {
     logger.info("DatagramChannel подключен к " + addr);
   }
 
-  public Response sendAndReceiveCommand(Request request) throws IOException {
+  public Response sendAndReceiveCommand(Request request) throws IOException, ErrorResponseException {
     var data = SerializationUtils.serialize(request);
     var responseBytes = sendAndReceiveData(data);
 
     Response response = SerializationUtils.deserialize(responseBytes);
     logger.info("Получен ответ от сервера:  " + response);
+    if (response.isErrorResponse()) {
+      throw new ErrorResponseException((ErrorResponse) response);
+    }
     return response;
   }
 

@@ -1,7 +1,9 @@
 package client.commands;
 
+import client.auth.SessionHandler;
 import client.network.UDPClient;
 import client.utility.console.Console;
+import common.exceptions.ErrorResponseException;
 import common.network.requests.HelpRequest;
 import common.network.responses.HelpResponse;
 
@@ -34,11 +36,13 @@ public class Help extends Command {
     }
 
     try {
-      var response = (HelpResponse) client.sendAndReceiveCommand(new HelpRequest());
+      var response = (HelpResponse) client.sendAndReceiveCommand(new HelpRequest(SessionHandler.getCurrentUser()));
       console.print(response.helpMessage);
       return true;
     } catch(IOException e) {
       console.printError("Ошибка взаимодействия с сервером");
+    } catch (ErrorResponseException e) {
+      console.printError(e.getMessage());
     }
     return false;
   }

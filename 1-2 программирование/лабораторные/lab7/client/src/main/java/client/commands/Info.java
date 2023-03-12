@@ -1,7 +1,9 @@
 package client.commands;
 
+import client.auth.SessionHandler;
 import client.network.UDPClient;
 import client.utility.console.Console;
+import common.exceptions.ErrorResponseException;
 import common.network.requests.InfoRequest;
 import common.network.responses.InfoResponse;
 
@@ -34,11 +36,13 @@ public class Info extends Command {
     }
 
     try {
-      var response = (InfoResponse) client.sendAndReceiveCommand(new InfoRequest());
+      var response = (InfoResponse) client.sendAndReceiveCommand(new InfoRequest(SessionHandler.getCurrentUser()));
       console.println(response.infoMessage);
       return true;
     } catch(IOException e) {
       console.printError("Ошибка взаимодействия с сервером");
+    } catch (ErrorResponseException e) {
+      console.printError(e.getMessage());
     }
     return false;
   }

@@ -2,6 +2,7 @@ package common.utility;
 
 public interface Commands {
   String AUTHENTICATE = "authenticate";
+  String AUTH = "auth";
   String REGISTER = "register";
   String HELP = "help";
   String INFO = "info";

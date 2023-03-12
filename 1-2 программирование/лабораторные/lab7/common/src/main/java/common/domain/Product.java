@@ -27,6 +27,11 @@ public class Product extends Element {
 
   public Product(int id, String name, Coordinates coordinates, LocalDate creationDate,
                  Long price, String partNumber, UnitOfMeasure unitOfMeasure, Organization manufacturer) {
+    this(id, name, coordinates, creationDate, price, partNumber, unitOfMeasure, manufacturer, 0);
+  }
+
+  public Product(int id, String name, Coordinates coordinates, LocalDate creationDate,
+                 Long price, String partNumber, UnitOfMeasure unitOfMeasure, Organization manufacturer, int creatorId) {
     this.id = id;
     this.name = name;
     this.coordinates = coordinates;
@@ -35,11 +40,18 @@ public class Product extends Element {
     this.partNumber = partNumber;
     this.unitOfMeasure = unitOfMeasure;
     this.manufacturer = manufacturer;
+    this.creatorId = creatorId;
   }
 
   public Product copy(int id) {
     return new Product(id, this.name, this.coordinates, this.creationDate,
       this.price, this.partNumber, this.unitOfMeasure, this.manufacturer
+    );
+  }
+
+  public Product copy(int id, int creatorId) {
+    return new Product(id, this.name, this.coordinates, this.creationDate,
+      this.price, this.partNumber, this.unitOfMeasure, this.manufacturer, creatorId
     );
   }
 
@@ -145,6 +157,7 @@ public class Product extends Element {
     info += "\n partNumber: " + ((partNumber == null) ? null : "'" + partNumber + "'");
     info += "\n Единица измерения: " + unitOfMeasure;
     info += "\n Производитель:\n    " + manufacturer;
+    info += "\n ID создателя: " + creatorId;
     return info;
   }
 }

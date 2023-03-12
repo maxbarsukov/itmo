@@ -1,5 +1,6 @@
 package client.commands;
 
+import client.auth.SessionHandler;
 import client.network.UDPClient;
 import client.utility.console.Console;
 import common.exceptions.*;
@@ -32,7 +33,9 @@ public class FilterByPrice extends Command {
       if (arguments[1].isEmpty()) throw new WrongAmountOfElementsException();
 
       var price = Long.parseLong(arguments[1]);
-      var response = (FilterByPriceResponse) client.sendAndReceiveCommand(new FilterByPriceRequest(price));
+      var response = (FilterByPriceResponse) client.sendAndReceiveCommand(
+        new FilterByPriceRequest(price, SessionHandler.getCurrentUser())
+      );
       if (response.getError() != null && !response.getError().isEmpty()) {
         throw new APIException(response.getError());
       }
@@ -53,7 +56,7 @@ public class FilterByPrice extends Command {
       console.printError("Ошибка взаимодействия с сервером");
     } catch (NumberFormatException exception) {
       console.printError("Цена должна быть представлена числом!");
-    } catch (APIException e) {
+    } catch (APIException | ErrorResponseException e) {
       console.printError(e.getMessage());
     }
     return false;

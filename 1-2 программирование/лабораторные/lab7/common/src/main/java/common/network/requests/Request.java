@@ -30,6 +30,10 @@ public abstract class Request implements Serializable {
     return Objects.equals(name, request.name) && Objects.equals(user, request.user);
   }
 
+  public boolean isAuth() {
+    return false;
+  }
+
   @Override
   public int hashCode() {
     return Objects.hash(name, user);

@@ -7,4 +7,9 @@ public class AuthenticateRequest extends Request {
   public AuthenticateRequest(User user) {
     super(Commands.AUTHENTICATE, user);
   }
+
+  @Override
+  public boolean isAuth() {
+    return true;
+  }
 }

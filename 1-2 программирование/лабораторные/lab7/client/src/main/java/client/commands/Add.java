@@ -1,5 +1,6 @@
 package client.commands;
 
+import client.auth.SessionHandler;
 import client.forms.ProductForm;
 import client.network.UDPClient;
 import client.utility.console.Console;
@@ -34,7 +35,9 @@ public class Add extends Command {
       console.println("* Создание нового продукта:");
 
       var newProduct = (new ProductForm(console)).build();
-      var response = (AddResponse) client.sendAndReceiveCommand(new AddRequest(newProduct));
+      var response = (AddResponse) client.sendAndReceiveCommand(
+        new AddRequest(newProduct, SessionHandler.getCurrentUser())
+      );
       if (response.getError() != null && !response.getError().isEmpty()) {
         throw new APIException(response.getError());
       }
@@ -49,7 +52,7 @@ public class Add extends Command {
       console.printError("Поля продукта не валидны! Продукт не создан!");
     } catch(IOException e) {
       console.printError("Ошибка взаимодействия с сервером");
-    } catch (APIException e) {
+    } catch (APIException | ErrorResponseException e) {
       console.printError(e.getMessage());
     } catch (IncorrectInputInScriptException ignored) {}
     return false;

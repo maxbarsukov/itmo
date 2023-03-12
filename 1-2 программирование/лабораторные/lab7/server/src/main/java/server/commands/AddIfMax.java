@@ -27,7 +27,7 @@ public class AddIfMax extends Command {
       var req = (AddIfMaxRequest) request;
       var maxPrice = maxPrice();
       if (req.product.getPrice() > maxPrice) {
-        var newId = productRepository.add(req.product);
+        var newId = productRepository.add(req.getUser(), req.product);
         return new AddIfMaxResponse(true, newId, null);
       }
       return new AddIfMaxResponse(false, -1, null);

@@ -1,6 +1,6 @@
 package client.commands;
 
-import client.forms.ProductForm;
+import client.auth.SessionHandler;
 import client.network.UDPClient;
 import client.utility.console.Console;
 import common.exceptions.*;
@@ -32,7 +32,7 @@ public class SumOfPrice extends Command {
     try {
       if (!arguments[1].isEmpty()) throw new WrongAmountOfElementsException();
 
-      var response = (SumOfPriceResponse) client.sendAndReceiveCommand(new SumOfPriceRequest());
+      var response = (SumOfPriceResponse) client.sendAndReceiveCommand(new SumOfPriceRequest(SessionHandler.getCurrentUser()));
       if (response.getError() != null && !response.getError().isEmpty()) {
         throw new APIException(response.getError());
       }
@@ -45,7 +45,7 @@ public class SumOfPrice extends Command {
       console.println("Использование: '" + getName() + "'");
     } catch(IOException e) {
       console.printError("Ошибка взаимодействия с сервером");
-    } catch (APIException e) {
+    } catch (APIException | ErrorResponseException e) {
       console.printError(e.getMessage());
     }
     return false;

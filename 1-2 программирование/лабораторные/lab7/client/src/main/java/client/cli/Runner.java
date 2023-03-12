@@ -12,7 +12,6 @@ import org.apache.logging.log4j.Logger;
 
 import java.io.File;
 import java.io.FileNotFoundException;
-import java.io.IOException;
 import java.util.*;
 
 /**
@@ -38,6 +37,9 @@ public class Runner {
     this.client = client;
     this.console = console;
     this.commands = new HashMap<>() {{
+      put(Commands.AUTH, new Authenticate(console, client));
+      put(Commands.AUTHENTICATE, new Authenticate(console, client));
+      put(Commands.REGISTER, new Register(console, client));
       put(Commands.HELP, new Help(console, client));
       put(Commands.INFO, new Info(console, client));
       put(Commands.SHOW, new Show(console, client));

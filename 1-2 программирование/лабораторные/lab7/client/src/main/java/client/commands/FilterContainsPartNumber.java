@@ -1,5 +1,6 @@
 package client.commands;
 
+import client.auth.SessionHandler;
 import client.network.UDPClient;
 import client.utility.console.Console;
 import common.exceptions.*;
@@ -32,7 +33,7 @@ public class FilterContainsPartNumber extends Command {
       if (arguments[1].isEmpty()) throw new WrongAmountOfElementsException();
 
       var response = (FilterContainsPartNumberResponse) client.sendAndReceiveCommand(
-        new FilterContainsPartNumberRequest(arguments[1])
+        new FilterContainsPartNumberRequest(arguments[1], SessionHandler.getCurrentUser())
       );
       if (response.getError() != null && !response.getError().isEmpty()) {
         throw new APIException(response.getError());
@@ -52,7 +53,7 @@ public class FilterContainsPartNumber extends Command {
       console.println("Использование: '" + getName() + "'");
     } catch(IOException e) {
       console.printError("Ошибка взаимодействия с сервером");
-    } catch (APIException e) {
+    } catch (APIException | ErrorResponseException e) {
       console.printError(e.getMessage());
     }
     return false;

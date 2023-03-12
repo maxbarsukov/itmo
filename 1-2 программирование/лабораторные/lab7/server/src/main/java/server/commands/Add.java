@@ -27,7 +27,7 @@ public class Add extends Command {
       if (!req.product.validate()) {
         return new AddResponse(-1, "Поля продукта не валидны! Продукт не добавлен!");
       }
-      var newId = productRepository.add(req.product);
+      var newId = productRepository.add(req.getUser(), req.product);
       return new AddResponse(newId, null);
     } catch (Exception e) {
       return new AddResponse(-1, e.toString());

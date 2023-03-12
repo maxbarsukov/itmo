@@ -1,5 +1,6 @@
 package client.commands;
 
+import client.auth.SessionHandler;
 import client.forms.ProductForm;
 import client.network.UDPClient;
 import client.utility.console.Console;
@@ -37,7 +38,7 @@ public class Update extends Command {
       console.println("* Введите данные обновленного продукта:");
       var updatedProduct = (new ProductForm(console)).build();
 
-      var response = (UpdateResponse) client.sendAndReceiveCommand(new UpdateRequest(id, updatedProduct));
+      var response = (UpdateResponse) client.sendAndReceiveCommand(new UpdateRequest(id, updatedProduct, SessionHandler.getCurrentUser()));
       if (response.getError() != null && !response.getError().isEmpty()) {
         throw new APIException(response.getError());
       }
@@ -54,7 +55,7 @@ public class Update extends Command {
       console.printError("ID должен быть представлен числом!");
     } catch(IOException e) {
       console.printError("Ошибка взаимодействия с сервером");
-    } catch (APIException e) {
+    } catch (APIException | ErrorResponseException e) {
       console.printError(e.getMessage());
     } catch (IncorrectInputInScriptException ignored) {}
     return false;

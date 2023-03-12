@@ -35,14 +35,16 @@ public class PersistenceManager {
     statement.setInt(2, product.getCoordinates().getX());
     statement.setLong(3, product.getCoordinates().getY());
     statement.setLong(4, product.getPrice());
-    statement.setString(5, product.getPartNumber());
-    statement.setString(6, product.getUnitOfMeasure().toString());
 
-    if (newOrgId == null) {
-      statement.setNull(7, Types.INTEGER);
-    } else {
-      statement.setInt(7, newOrgId);
-    }
+    if (product.getPartNumber() == null) statement.setNull(5, Types.VARCHAR);
+    else statement.setString(5, product.getPartNumber());
+
+    if (product.getUnitOfMeasure() == null) statement.setNull(6, Types.VARCHAR);
+    else statement.setString(6, product.getUnitOfMeasure().toString());
+
+    if (newOrgId == null) statement.setNull(7, Types.INTEGER);
+    else statement.setInt(7, newOrgId);
+
     statement.setString(8, user.getName());
 
     var result = statement.executeQuery();
@@ -101,14 +103,16 @@ public class PersistenceManager {
     statement.setInt(2, product.getCoordinates().getX());
     statement.setLong(3, product.getCoordinates().getY());
     statement.setLong(4, product.getPrice());
-    statement.setString(5, product.getPartNumber());
-    statement.setString(6, product.getUnitOfMeasure().toString());
 
-    if (product.getManufacturer() == null) {
-      statement.setNull(7, Types.INTEGER);
-    } else {
-      statement.setInt(7, product.getManufacturer().getId());
-    }
+    if (product.getPartNumber() == null) statement.setNull(5, Types.VARCHAR);
+    else statement.setString(5, product.getPartNumber());
+
+    if (product.getUnitOfMeasure() == null) statement.setNull(6, Types.VARCHAR);
+    else statement.setString(6, product.getUnitOfMeasure().toString());
+
+    if (product.getManufacturer() == null) statement.setNull(7, Types.INTEGER);
+    else statement.setInt(7, product.getManufacturer().getId());
+
     statement.setInt(8, product.getId());
     statement.setInt(9, user.getId());
 
@@ -131,7 +135,10 @@ public class PersistenceManager {
     statement.setLong(2, organization.getEmployeesCount());
     statement.setString(3, organization.getType().toString());
     statement.setString(4, organization.getPostalAddress().getStreet());
-    statement.setString(5, organization.getPostalAddress().getZipCode());
+
+    if (organization.getPostalAddress().getZipCode() == null) statement.setNull(5, Types.VARCHAR);
+    else statement.setString(5, organization.getPostalAddress().getZipCode());
+
 
     statement.setInt(6, organization.getId());
     statement.setInt(7, user.getId());
@@ -184,7 +191,7 @@ public class PersistenceManager {
         id,
         result.getString("name"),
         result.getLong("employees_count"),
-        OrganizationType.valueOf(result.getString("type")),
+        result.getString("type") != null ? OrganizationType.valueOf(result.getString("type")) : null,
         new Address(
           result.getString("street"),
           result.getString("zip_code")
@@ -223,7 +230,7 @@ public class PersistenceManager {
         result.getDate("creation_date").toLocalDate(),
         result.getLong("price"),
         result.getString("part_number"),
-        UnitOfMeasure.valueOf(result.getString("unit_of_measure")),
+        result.getString("unit_of_measure") != null ? UnitOfMeasure.valueOf(result.getString("unit_of_measure")) : null,
         organization
       );
       product.setCreatorId(result.getInt("creator_id"));

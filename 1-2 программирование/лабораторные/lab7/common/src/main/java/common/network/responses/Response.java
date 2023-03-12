@@ -20,6 +20,10 @@ public abstract class Response implements Serializable {
     return error;
   }
 
+  public boolean isErrorResponse() {
+    return false;
+  }
+
   @Override
   public boolean equals(Object o) {
     if (this == o) return true;

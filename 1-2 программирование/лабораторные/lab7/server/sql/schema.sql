@@ -22,7 +22,7 @@ CREATE TABLE IF NOT EXISTS organizations (
     type organization_type NOT NULL,
     street VARCHAR NOT NULL CONSTRAINT not_empty_street CHECK(length(street) > 0),
     zip_code VARCHAR CONSTRAINT zip_code_ge_6 CHECK (zip_code IS NULL OR length(zip_code) >= 6),
-    creator_id INT NOT NULL REFERENCES users(id)
+    creator_id INT NOT NULL REFERENCES users(id) ON DELETE CASCADE
 );
 
 CREATE TABLE IF NOT EXISTS products (
@@ -35,7 +35,7 @@ CREATE TABLE IF NOT EXISTS products (
     part_number VARCHAR CONSTRAINT not_empty_part_number CHECK(part_number IS NULL OR length(part_number) > 0),
     unit_of_measure unit_of_measure,
     manufacturer_id INT REFERENCES organizations(id) ON DELETE CASCADE,
-    creator_id INT NOT NULL REFERENCES users(id)
+    creator_id INT NOT NULL REFERENCES users(id) ON DELETE CASCADE
 );
 
 END;

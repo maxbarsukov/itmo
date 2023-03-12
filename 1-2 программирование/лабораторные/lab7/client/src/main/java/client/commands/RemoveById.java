@@ -1,5 +1,6 @@
 package client.commands;
 
+import client.auth.SessionHandler;
 import client.network.UDPClient;
 import client.utility.console.Console;
 import common.exceptions.*;
@@ -32,7 +33,7 @@ public class RemoveById extends Command {
       if (arguments[1].isEmpty()) throw new WrongAmountOfElementsException();
       var id = Integer.parseInt(arguments[1]);
 
-      var response = (RemoveByIdResponse) client.sendAndReceiveCommand(new RemoveByIdRequest(id));
+      var response = (RemoveByIdResponse) client.sendAndReceiveCommand(new RemoveByIdRequest(id, SessionHandler.getCurrentUser()));
       if (response.getError() != null && !response.getError().isEmpty()) {
         throw new APIException(response.getError());
       }
@@ -46,7 +47,7 @@ public class RemoveById extends Command {
       console.printError("ID должен быть представлен числом!");
     } catch(IOException e) {
       console.printError("Ошибка взаимодействия с сервером");
-    } catch (APIException e) {
+    } catch (APIException | ErrorResponseException e) {
       console.printError(e.getMessage());
     }
     return false;

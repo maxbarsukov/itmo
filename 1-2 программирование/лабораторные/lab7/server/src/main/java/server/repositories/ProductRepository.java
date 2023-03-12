@@ -142,7 +142,8 @@ public class ProductRepository {
     var newId = persistenceManager.add(user, element);
     logger.info("Новый продукт добавлен в БД.");
 
-    collection.add(element.copy(newId));
+    System.out.println(element.copy(newId, user.getId()));
+    collection.add(element.copy(newId, user.getId()));
     lastSaveTime = LocalDateTime.now();
     logger.info("Продукт добавлен!");
 
