@@ -54,6 +54,7 @@ public class Product extends Element {
     if (coordinates == null) return false;
     if (creationDate == null) return false;
     if (price == null || price <= 0) return false;
+    if (manufacturer != null && !manufacturer.validate()) return false;
     return partNumber == null || !partNumber.isEmpty();
   }
 

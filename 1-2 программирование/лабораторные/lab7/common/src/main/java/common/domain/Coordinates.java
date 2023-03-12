@@ -18,6 +18,14 @@ public class Coordinates implements Validatable, Serializable {
     this.y = y;
   }
 
+  public Integer getX() {
+    return x;
+  }
+
+  public Long getY() {
+    return y;
+  }
+
   /**
    * Валидирует правильность полей.
    * @return true, если все верно, иначе false

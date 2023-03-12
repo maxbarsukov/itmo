@@ -1,10 +1,9 @@
 package server.repositories;
 
-import com.google.common.collect.Iterables;
-
-import common.domain.Organization;
 import common.domain.Product;
 
+import common.exceptions.BadOwnerException;
+import common.user.User;
 import common.utility.ProductComparator;
 import org.apache.logging.log4j.Logger;
 import server.managers.PersistenceManager;
@@ -106,14 +105,6 @@ public class ProductRepository {
   }
 
   /**
-   * @return Последний элемент коллекции (null если коллекция пустая).
-   */
-  public Product last() {
-    if (collection.isEmpty()) return null;
-    return Iterables.getLast(sorted());
-  }
-
-  /**
    * @return Отсортированная коллекция.
    */
   public List<Product> sorted() {
@@ -143,56 +134,70 @@ public class ProductRepository {
   }
 
   /**
-   * @param elementToFind элемент, который нужно найти по значению.
-   * @return Найденный элемент (null если нен найден).
-   */
-  public Product getByValue(Product elementToFind) {
-    for (Product element : collection) {
-      if (element.equals(elementToFind)) return element;
-    }
-    return null;
-  }
-
-  /**
    * Добавляет элемент в коллекцию
    * @param element Элемент для добавления.
    * @return id нового элемента
    */
-  public int add(Product element) {
-    var maxId = collection.stream().filter(Objects::nonNull)
-      .map(Product::getId)
-      .mapToInt(Integer::intValue).max().orElse(0);
-    var newId = maxId + 1;
+  public int add(User user, Product element) throws SQLException {
+    var newId = persistenceManager.add(user, element);
+    logger.info("Новый продукт добавлен в БД.");
 
-    var nextOrgId = collection.stream()
-      .map(Product::getManufacturer)
-      .filter(Objects::nonNull)
-      .map(Organization::getId)
-      .mapToInt(Integer::intValue).max().orElse(0) + 1;
-
-    if (element.getManufacturer() != null) {
-      element.getManufacturer().setId(nextOrgId);
-    }
     collection.add(element.copy(newId));
-
     lastSaveTime = LocalDateTime.now();
+    logger.info("Продукт добавлен!");
+
     return newId;
+  }
+
+  /**
+   * Обновляет элемент в коллекции.
+   * @param user Пользователь.
+   * @param element Элемент для обновления.
+   */
+  public void update(User user, Product element) throws SQLException, BadOwnerException {
+    var product = getById(element.getId());
+    if (product == null) {
+      add(user, element);
+    } else if (product.getCreatorId() == user.getId()) {
+      logger.info("Обновление продукта id#" + product.getId() + " в БД.");
+
+      persistenceManager.update(user, element);
+      getById(element.getId()).update(element);
+      logger.info("Продукт успешно обновлен!ё");
+    } else {
+      logger.warn("Другой владелец. Исключение.");
+      throw new BadOwnerException();
+    }
   }
 
   /**
    * Удаляет элемент из коллекции.
    * @param id ID элемента для удаления.
+   * @return количество удаленных продуктов.
    */
-  public void remove(int id) {
-    collection.removeIf(product -> product.getId() == id);
+  public int remove(User user, int id) throws SQLException, BadOwnerException {
+    if (getById(id).getCreatorId() != user.getId()) {
+      logger.warn("Другой владелец. Исключение.");
+      throw new BadOwnerException();
+    }
+
+    var removedCount = persistenceManager.remove(user, id);
+    if (removedCount == 0) {
+      logger.warn("Ничего не было удалено.");
+      return 0;
+    }
+
+    collection.removeIf(product -> product.getId() == id && product.getCreatorId() == user.getId());
     lastSaveTime = LocalDateTime.now();
+    return removedCount;
   }
 
   /**
    * Очищает коллекцию.
    */
-  public void clear() {
-    collection.clear();
+  public void clear(User user) throws SQLException {
+    persistenceManager.clear(user);
+    collection.removeIf(product -> product.getCreatorId() == user.getId());
     lastSaveTime = LocalDateTime.now();
   }
 
@@ -200,9 +205,11 @@ public class ProductRepository {
    * Загружает коллекцию из базы данных.
    */
   private void load() throws SQLException {
+    logger.info("Загрузка начата...");
     collection = new PriorityQueue<>();
     collection.addAll(persistenceManager.loadProducts());
     lastInitTime = LocalDateTime.now();
+    logger.info("Загрузка завершена!");
   }
 
   @Override

@@ -1,7 +1,7 @@
 package common.network.responses;
 
 public class ErrorResponse extends Response {
-  public ErrorResponse(String error) {
-    super("error", error);
+  public ErrorResponse(String name, String error) {
+    super(name, error);
   }
 }

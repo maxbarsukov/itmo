@@ -1,6 +1,8 @@
 package common.utility;
 
 public interface Commands {
+  String AUTHENTICATE = "authenticate";
+  String REGISTER = "register";
   String HELP = "help";
   String INFO = "info";
   String SHOW = "show";

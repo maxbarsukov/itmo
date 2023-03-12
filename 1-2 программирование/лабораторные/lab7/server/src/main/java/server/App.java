@@ -28,15 +28,20 @@ public class App {
   public static Dotenv dotenv;
 
   public static void main(String[] args) {
+
     var databaseManager = initializeDatabase();
     var persistenceManager = new PersistenceManager(databaseManager);
-//    var authManager = new AuthManager(databaseManager);
+    var authManager = new AuthManager(databaseManager, dotenv.get("PEPPER"));
 
     var repository = new ProductRepository(persistenceManager);
-    var commandManager = initializeCommandManager(repository);
+    var commandManager = initializeCommandManager(repository, authManager);
 
     try {
-      var server = new UDPDatagramServer(InetAddress.getLocalHost(), PORT, new CommandHandler(commandManager)); // CommandHandler(commandManager, authManager));
+      var server = new UDPDatagramServer(
+        InetAddress.getLocalHost(),
+        PORT,
+        new CommandHandler(commandManager, authManager)
+      );
       server.run();
     } catch (SocketException e) {
       logger.fatal("Случилась ошибка сокета", e);
@@ -59,8 +64,10 @@ public class App {
     return new DatabaseManager(url, user, password);
   }
 
-  private static CommandManager initializeCommandManager(ProductRepository repository) {
+  private static CommandManager initializeCommandManager(ProductRepository repository, AuthManager authManager) {
     return new CommandManager() {{
+      register(Commands.REGISTER, new Register(authManager));
+      register(Commands.AUTHENTICATE, new Authenticate(authManager));
       register(Commands.HELP, new Help(this));
       register(Commands.INFO, new Info(repository));
       register(Commands.SHOW, new Show(repository));

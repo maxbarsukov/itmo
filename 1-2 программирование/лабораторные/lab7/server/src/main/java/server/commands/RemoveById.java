@@ -29,7 +29,7 @@ public class RemoveById extends Command {
         return new RemoveByIdResponse("Продукта с таким ID в коллекции нет!");
       }
 
-      productRepository.remove(req.id);
+      var a = productRepository.remove(req.id);
       return new RemoveByIdResponse(null);
     } catch (Exception e) {
       return new RemoveByIdResponse(e.toString());
