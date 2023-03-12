@@ -28,7 +28,6 @@ public class App {
   public static Dotenv dotenv;
 
   public static void main(String[] args) {
-
     var databaseManager = initializeDatabase();
     var persistenceManager = new PersistenceManager(databaseManager);
     var authManager = new AuthManager(databaseManager, dotenv.get("PEPPER"));
@@ -86,7 +85,7 @@ public class App {
 
   private static void loadEnv() {
     var environmentFile = ".env.dev";
-    var isProduction =System.getenv("PROD");
+    var isProduction = System.getenv("PROD");
     if (isProduction != null && isProduction.equals("true")) {
       environmentFile = ".env";
     }

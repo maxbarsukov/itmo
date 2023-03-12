@@ -27,7 +27,7 @@ public class App {
       cli.interactiveMode();
     } catch (IOException e) {
       logger.info("Невозможно подключиться к серверу.", e);
-      System.out.println("Невозможно подключиться к серверу!");
+      console.println("Невозможно подключиться к серверу!");
     }
   }
 }

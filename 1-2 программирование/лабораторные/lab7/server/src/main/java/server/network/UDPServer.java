@@ -17,14 +17,19 @@ import java.io.IOException;
 import java.net.InetSocketAddress;
 import java.net.SocketAddress;
 import java.net.SocketException;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
 
 /**
  * UDP обработчик запросов
  * @author maxbarsukov
  */
 abstract class UDPServer {
+  private static final int READ_POOL_SIZE = 4;
+
   private final InetSocketAddress addr;
   private final CommandHandler commandHandler;
+  private final ExecutorService service;
 
   private final Logger logger = App.logger;
 
@@ -33,6 +38,7 @@ abstract class UDPServer {
   public UDPServer(InetSocketAddress addr, CommandHandler commandHandler) {
     this.addr = addr;
     this.commandHandler = commandHandler;
+    this.service = Executors.newFixedThreadPool(READ_POOL_SIZE);
   }
 
   public InetSocketAddress getAddr() {
@@ -58,59 +64,65 @@ abstract class UDPServer {
   public void run() {
     logger.info("Сервер запущен по адресу " + addr);
 
-    while (running) {
-      Pair<Byte[], SocketAddress> dataPair;
-      try {
-        dataPair = receiveData();
-      } catch (Exception e) {
-        logger.error("Ошибка получения данных : " + e.toString(), e);
+    service.submit(() -> {
+      while (running) {
+        Pair<Byte[], SocketAddress> dataPair;
+        try {
+          dataPair = receiveData();
+        } catch (Exception e) {
+          logger.error("Ошибка получения данных : " + e.toString(), e);
+          disconnectFromClient();
+          continue;
+        }
+
+        var dataFromClient = dataPair.getKey();
+        var clientAddr = dataPair.getValue();
+
+        try {
+          connectToClient(clientAddr);
+          logger.info("Соединено с " + clientAddr);
+        } catch (Exception e) {
+          logger.error("Ошибка соединения с клиентом : " + e.toString(), e);
+        }
+
+        Request request;
+        try {
+          request = SerializationUtils.deserialize(ArrayUtils.toPrimitive(dataFromClient));
+          logger.info("Обработка " + request + " из " + clientAddr);
+        } catch (SerializationException e) {
+          logger.error("Невозможно десериализовать объект запроса.", e);
+          disconnectFromClient();
+          continue;
+        }
+
+        new Thread(() -> {
+          Response response = null;
+          try {
+            response = commandHandler.handle(request);
+          } catch (Exception e) {
+            logger.error("Ошибка выполнения команды : " + e.toString(), e);
+          }
+          if (response == null) response = new NoSuchCommandResponse(request.getName());
+
+          var data = SerializationUtils.serialize(response);
+          logger.info("Ответ: " + response);
+
+          new Thread(() -> {
+            try {
+              sendData(data, clientAddr);
+              logger.info("Отправлен ответ клиенту " + clientAddr);
+            } catch (Exception e) {
+              logger.error("Ошибка ввода-вывода : " + e.toString(), e);
+            }
+          }).start();
+        }).start();
+
         disconnectFromClient();
-        continue;
+        logger.info("Отключение от клиента " + clientAddr);
+        logger.info("Активные треды: " + Thread.activeCount());
       }
-
-      var dataFromClient = dataPair.getKey();
-      var clientAddr = dataPair.getValue();
-
-      try {
-        connectToClient(clientAddr);
-        logger.info("Соединено с " + clientAddr);
-      } catch (Exception e) {
-        logger.error("Ошибка соединения с клиентом : " + e.toString(), e);
-      }
-
-      Request request;
-      try {
-        request = SerializationUtils.deserialize(ArrayUtils.toPrimitive(dataFromClient));
-        logger.info("Обработка " + request + " из " + clientAddr);
-      } catch (SerializationException e) {
-        logger.error("Невозможно десериализовать объект запроса.", e);
-        disconnectFromClient();
-        continue;
-      }
-
-      Response response = null;
-      try {
-        response = commandHandler.handle(request);
-      } catch (Exception e) {
-        logger.error("Ошибка выполнения команды : " + e.toString(), e);
-      }
-      if (response == null) response = new NoSuchCommandResponse(request.getName());
-
-      var data = SerializationUtils.serialize(response);
-      logger.info("Ответ: " + response);
-
-      try {
-        sendData(data, clientAddr);
-        logger.info("Отправлен ответ клиенту " + clientAddr);
-      } catch (Exception e) {
-        logger.error("Ошибка ввода-вывода : " + e.toString(), e);
-      }
-
-      disconnectFromClient();
-      logger.info("Отключение от клиента " + clientAddr);
-    }
-
-    close();
+      close();
+    });
   }
 
   public void stop() {

@@ -38,7 +38,7 @@ public class User extends Element {
     return "User{" +
       "id=" + id +
       ", name='" + name + '\'' +
-      ", password='" + password + '\'' +
+      ", password='********'" +
       '}';
   }
 

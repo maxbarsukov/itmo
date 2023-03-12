@@ -13,6 +13,7 @@ import java.sql.SQLException;
 import java.time.LocalDateTime;
 import java.util.*;
 import java.util.stream.Collectors;
+import java.util.concurrent.locks.ReentrantLock;
 
 /**
  * Оперирует коллекцией.
@@ -25,6 +26,8 @@ public class ProductRepository {
   private LocalDateTime lastInitTime;
   private LocalDateTime lastSaveTime;
   private final PersistenceManager persistenceManager;
+
+  private final ReentrantLock lock = new ReentrantLock();
 
   public ProductRepository(PersistenceManager persistenceManager) {
     this.lastInitTime = null;
@@ -142,9 +145,11 @@ public class ProductRepository {
     var newId = persistenceManager.add(user, element);
     logger.info("Новый продукт добавлен в БД.");
 
-    System.out.println(element.copy(newId, user.getId()));
+    lock.lock();
     collection.add(element.copy(newId, user.getId()));
     lastSaveTime = LocalDateTime.now();
+    lock.unlock();
+
     logger.info("Продукт добавлен!");
 
     return newId;
@@ -163,7 +168,12 @@ public class ProductRepository {
       logger.info("Обновление продукта id#" + product.getId() + " в БД.");
 
       persistenceManager.update(user, element);
+
+      lock.lock();
       getById(element.getId()).update(element);
+      lastSaveTime = LocalDateTime.now();
+      lock.unlock();
+
       logger.info("Продукт успешно обновлен!ё");
     } else {
       logger.warn("Другой владелец. Исключение.");
@@ -188,8 +198,11 @@ public class ProductRepository {
       return 0;
     }
 
+    lock.lock();
     collection.removeIf(product -> product.getId() == id && product.getCreatorId() == user.getId());
     lastSaveTime = LocalDateTime.now();
+    lock.unlock();
+
     return removedCount;
   }
 
@@ -198,8 +211,11 @@ public class ProductRepository {
    */
   public void clear(User user) throws SQLException {
     persistenceManager.clear(user);
+
+    lock.lock();
     collection.removeIf(product -> product.getCreatorId() == user.getId());
     lastSaveTime = LocalDateTime.now();
+    lock.unlock();
   }
 
   /**
@@ -207,9 +223,13 @@ public class ProductRepository {
    */
   private void load() throws SQLException {
     logger.info("Загрузка начата...");
+
+    lock.lock();
     collection = new PriorityQueue<>();
     collection.addAll(persistenceManager.loadProducts());
     lastInitTime = LocalDateTime.now();
+    lock.unlock();
+
     logger.info("Загрузка завершена!");
   }
 
