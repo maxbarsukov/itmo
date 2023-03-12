@@ -1,0 +1,537 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement>server.App</OriginalElement>
+  <nodes>
+    <node x="4965.591366885228" y="1413.5">server.commands.Authenticate</node>
+    <node x="3281.9663668852286" y="185.5">server.commands.Command</node>
+    <node x="2866.4663668852286" y="1402.0">server.commands.FilterByPrice</node>
+    <node x="942.4663668852286" y="1413.5">server.commands.Add</node>
+    <node x="1790.1637205387206" y="1757.0">server.App</node>
+    <node x="3486.4663668852286" y="1413.5">server.commands.Head</node>
+    <node x="3411.2163668852286" y="0.0">server.commands.Describable</node>
+    <node x="405.4663668852286" y="128.0">server.managers.PersistenceManager</node>
+    <node x="632.4663668852288" y="1413.5">server.commands.Update</node>
+    <node x="3185.2163668852286" y="11.5">server.commands.Executable</node>
+    <node x="2246.4663668852286" y="1413.5">server.commands.RemoveById</node>
+    <node x="3176.4663668852286" y="1402.0">server.commands.AddIfMax</node>
+    <node x="2556.4663668852286" y="1413.5">server.commands.Info</node>
+    <node x="4739.591366885228" y="1402.0">server.commands.Register</node>
+    <node x="931.5248513223316" y="2041.0">server.managers.DatabaseManager</node>
+    <node x="2038.2887205387206" y="2237.0">server.managers.AuthManager</node>
+    <node x="117.87901556289717" y="1333.0">server.network.UDPDatagramServer</node>
+    <node x="2012.502986475025" y="625.0">server.repositories.ProductRepository</node>
+    <node x="1872.4663668852286" y="1402.0">server.commands.FilterContainsPartNumber</node>
+    <node x="2034.7887205387206" y="2558.0">server.handlers.CommandHandler</node>
+    <node x="102.25" y="705.5">server.network.UDPServer</node>
+    <node x="4698.261360208184" y="844.5">server.managers.CommandManager</node>
+    <node x="3796.4663668852286" y="1402.0">server.commands.AddIfMin</node>
+    <node x="4416.466366885228" y="1413.5">server.commands.Help</node>
+    <node x="4106.466366885228" y="1402.0">server.commands.SumOfPrice</node>
+    <node x="1252.4663668852286" y="1413.5">server.commands.Show</node>
+    <node x="1562.4663668852286" y="1413.5">server.commands.Clear</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="server.commands.Show" target="server.repositories.ProductRepository">
+      <point x="36.25" y="-51.5" />
+      <point x="1433.7163668852286" y="1273.0" />
+      <point x="2087.3733568453954" y="1273.0" />
+      <point x="-80.62962962962956" y="259.0" />
+    </edge>
+    <edge source="server.commands.Command" target="server.commands.Executable">
+      <point x="-53.25" y="-86.0" />
+      <point x="3335.2163668852286" y="103.0" />
+      <point x="3288.2163668852286" y="103.0" />
+      <point x="0.0" y="27.5" />
+    </edge>
+    <edge source="server.App" target="server.commands.AddIfMin">
+      <point x="140.5185185185187" y="-97.0" />
+      <point x="2201.6822390572393" y="1677.0" />
+      <point x="3941.4663668852286" y="1677.0" />
+      <point x="0.0" y="63.0" />
+    </edge>
+    <edge source="server.handlers.CommandHandler" target="server.managers.AuthManager">
+      <point x="-17.65000000000009" y="-74.5" />
+      <point x="2193.6387205387205" y="2498.0" />
+      <point x="2124.7887205387206" y="2498.0" />
+      <point x="-86.5" y="120.5" />
+    </edge>
+    <edge source="server.App" target="server.managers.DatabaseManager">
+      <point x="-101.625" y="97.0" />
+      <point x="1959.5387205387206" y="2011.0" />
+      <point x="1159.0248513223316" y="2011.0" />
+      <point x="65.0" y="-63.0" />
+    </edge>
+    <edge source="server.commands.Clear" target="server.repositories.ProductRepository">
+      <point x="36.25" y="-51.5" />
+      <point x="1743.7163668852286" y="1293.0" />
+      <point x="2110.4103938824323" y="1293.0" />
+      <point x="-57.59259259259261" y="259.0" />
+    </edge>
+    <edge source="server.repositories.ProductRepository" target="server.managers.PersistenceManager">
+      <point x="-77.75" y="-259.0" />
+      <point x="2090.252986475025" y="445.0" />
+      <point x="693.8235097423712" y="445.0" />
+      <point x="104.85714285714266" y="143.5" />
+    </edge>
+    <edge source="server.commands.Info" target="server.repositories.ProductRepository">
+      <point x="-108.75" y="-51.5" />
+      <point x="2592.7163668852286" y="1273.0" />
+      <point x="2191.0400235120624" y="1273.0" />
+      <point x="23.03703703703718" y="259.0" />
+    </edge>
+    <edge source="server.commands.FilterContainsPartNumber" target="server.repositories.ProductRepository">
+      <point x="44.125" y="-63.0" />
+      <point x="2093.0913668852286" y="1313.0" />
+      <point x="2133.4474309194693" y="1313.0" />
+      <point x="-34.55555555555566" y="259.0" />
+    </edge>
+    <edge source="server.App" target="server.commands.Head">
+      <point x="120.44444444444434" y="-97.0" />
+      <point x="2181.608164983165" y="1667.0" />
+      <point x="3631.4663668852286" y="1667.0" />
+      <point x="0.0" y="51.5" />
+    </edge>
+    <edge source="server.commands.Update" target="server.repositories.ProductRepository">
+      <point x="36.25" y="-51.5" />
+      <point x="813.7163668852288" y="1233.0" />
+      <point x="2041.2992827713213" y="1233.0" />
+      <point x="-126.7037037037037" y="259.0" />
+    </edge>
+    <edge source="server.commands.AddIfMax" target="server.commands.Command">
+      <point x="36.25" y="-63.0" />
+      <point x="3357.7163668852286" y="1313.0" />
+      <point x="3388.4663668852286" y="1313.0" />
+      <point x="0.0" y="86.0" />
+    </edge>
+    <edge source="server.managers.AuthManager" target="server.App">
+      <point x="-76.88888888888869" y="-120.5" />
+      <point x="2134.399831649832" y="2207.0" />
+      <point x="2189.2887205387206" y="2207.0" />
+      <point x="2189.2887205387206" y="2021.0" />
+      <point x="2095.0387205387206" y="2021.0" />
+      <point x="33.875" y="97.0" />
+    </edge>
+    <edge source="server.commands.FilterByPrice" target="server.repositories.ProductRepository">
+      <point x="-108.75" y="-63.0" />
+      <point x="2902.7163668852286" y="1253.0" />
+      <point x="2214.077060549099" y="1253.0" />
+      <point x="46.07407407407413" y="259.0" />
+    </edge>
+    <edge source="server.commands.Register" target="server.managers.AuthManager">
+      <point x="68.66666666666697" y="63.0" />
+      <point x="4911.258033551896" y="1727.0" />
+      <point x="4960.841366885228" y="1727.0" />
+      <point x="4960.841366885228" y="2197.0" />
+      <point x="2288.1776094276092" y="2197.0" />
+      <point x="76.88888888888869" y="-120.5" />
+    </edge>
+    <edge source="server.repositories.ProductRepository" target="server.App">
+      <point x="-149.74074074074088" y="259.0" />
+      <point x="2018.262245734284" y="1213.0" />
+      <point x="610.9663668852286" y="1213.0" />
+      <point x="610.9663668852286" y="1667.0" />
+      <point x="1940.7192760942762" y="1667.0" />
+      <point x="-120.44444444444434" y="-97.0" />
+    </edge>
+    <edge source="server.App" target="server.commands.FilterByPrice">
+      <point x="80.29629629629608" y="-97.0" />
+      <point x="2141.4600168350166" y="1647.0" />
+      <point x="3011.4663668852286" y="1647.0" />
+      <point x="0.0" y="63.0" />
+    </edge>
+    <edge source="server.App" target="server.commands.Clear">
+      <point x="-20.074074074073906" y="-97.0" />
+      <point x="2041.0896464646466" y="1617.0" />
+      <point x="1707.4663668852286" y="1617.0" />
+      <point x="0.0" y="51.5" />
+    </edge>
+    <edge source="server.App" target="server.commands.SumOfPrice">
+      <point x="160.5925925925926" y="-97.0" />
+      <point x="2221.756313131313" y="1687.0" />
+      <point x="4251.466366885228" y="1687.0" />
+      <point x="0.0" y="63.0" />
+    </edge>
+    <edge source="server.App" target="server.managers.AuthManager">
+      <point x="101.625" y="97.0" />
+      <point x="2162.7887205387206" y="2011.0" />
+      <point x="2200.2887205387206" y="2011.0" />
+      <point x="2200.2887205387206" y="2217.0" />
+      <point x="2172.844276094276" y="2217.0" />
+      <point x="-38.44444444444434" y="-120.5" />
+    </edge>
+    <edge source="server.App" target="server.commands.FilterContainsPartNumber">
+      <point x="0.0" y="-97.0" />
+      <point x="2061.1637205387206" y="1737.0" />
+      <point x="2048.9663668852286" y="1737.0" />
+      <point x="0.0" y="63.0" />
+    </edge>
+    <edge source="server.commands.Clear" target="server.commands.Command">
+      <point x="-36.25" y="-51.5" />
+      <point x="1671.2163668852286" y="1193.0" />
+      <point x="1553.8687272157656" y="1193.0" />
+      <point x="1553.8687272157656" y="525.0" />
+      <point x="3330.3754577943196" y="525.0" />
+      <point x="-58.09090909090901" y="86.0" />
+    </edge>
+    <edge source="server.network.UDPDatagramServer" target="server.network.UDPServer">
+      <point x="102.25" y="-132.0" />
+      <point x="424.62901556289717" y="1313.0" />
+      <point x="354.25" y="1313.0" />
+      <point x="72.0" y="178.5" />
+    </edge>
+    <edge source="server.commands.Show" target="server.commands.Command">
+      <point x="-108.75" y="-51.5" />
+      <point x="1288.7163668852286" y="1203.0" />
+      <point x="1232.8687272157656" y="1203.0" />
+      <point x="1232.8687272157656" y="495.0" />
+      <point x="3311.011821430683" y="495.0" />
+      <point x="-77.4545454545455" y="86.0" />
+    </edge>
+    <edge source="server.commands.Head" target="server.repositories.ProductRepository">
+      <point x="-108.75" y="-51.5" />
+      <point x="3522.7163668852286" y="1213.0" />
+      <point x="2260.151134623173" y="1213.0" />
+      <point x="92.14814814814827" y="259.0" />
+    </edge>
+    <edge source="server.App" target="server.managers.PersistenceManager">
+      <point x="-160.5925925925926" y="-97.0" />
+      <point x="1900.571127946128" y="1687.0" />
+      <point x="559.3790155628972" y="1687.0" />
+      <point x="559.3790155628972" y="435.0" />
+      <point x="588.9663668852286" y="435.0" />
+      <point x="0.0" y="143.5" />
+    </edge>
+    <edge source="server.commands.AddIfMin" target="server.repositories.ProductRepository">
+      <point x="-108.75" y="-63.0" />
+      <point x="3832.7163668852286" y="1193.0" />
+      <point x="2283.18817166021" y="1193.0" />
+      <point x="115.18518518518522" y="259.0" />
+    </edge>
+    <edge source="server.commands.Command" target="server.commands.Describable">
+      <point x="53.25" y="-86.0" />
+      <point x="3441.7163668852286" y="103.0" />
+      <point x="3488.7163668852286" y="103.0" />
+      <point x="0.0" y="39.0" />
+    </edge>
+    <edge source="server.App" target="server.commands.Help">
+      <point x="180.66666666666652" y="-97.0" />
+      <point x="2241.830387205387" y="1697.0" />
+      <point x="4540.466366885228" y="1697.0" />
+      <point x="0.0" y="51.5" />
+    </edge>
+    <edge source="server.commands.Update" target="server.commands.Command">
+      <point x="-36.25" y="-51.5" />
+      <point x="741.2163668852288" y="1193.0" />
+      <point x="652.0040155628972" y="1193.0" />
+      <point x="652.0040155628972" y="465.0" />
+      <point x="3291.6481850670466" y="465.0" />
+      <point x="-96.81818181818198" y="86.0" />
+    </edge>
+    <edge source="server.handlers.CommandHandler" target="server.managers.CommandManager">
+      <point x="123.55000000000018" y="-74.5" />
+      <point x="2334.8387205387207" y="2528.0" />
+      <point x="5214.091366885228" y="2528.0" />
+      <point x="5214.091366885228" y="1283.0" />
+      <point x="4932.011360208184" y="1283.0" />
+      <point x="106.25" y="39.5" />
+    </edge>
+    <edge source="server.managers.AuthManager" target="server.managers.DatabaseManager">
+      <point x="-153.77777777777783" y="-120.5" />
+      <point x="2057.5109427609427" y="2217.0" />
+      <point x="1012.7748513223316" y="2217.0" />
+      <point x="-81.25" y="63.0" />
+    </edge>
+    <edge source="server.App" target="server.commands.AddIfMax">
+      <point x="100.37037037037044" y="-97.0" />
+      <point x="2161.534090909091" y="1657.0" />
+      <point x="3321.4663668852286" y="1657.0" />
+      <point x="0.0" y="63.0" />
+    </edge>
+    <edge source="server.commands.Authenticate" target="server.commands.Command">
+      <point x="-56.75" y="-51.5" />
+      <point x="5022.341366885228" y="1303.0" />
+      <point x="5136.064624049604" y="1303.0" />
+      <point x="5136.064624049604" y="475.0" />
+      <point x="3478.8300032488646" y="475.0" />
+      <point x="90.36363636363603" y="86.0" />
+    </edge>
+    <edge source="server.network.UDPDatagramServer" target="server.App">
+      <point x="153.375" y="132.0" />
+      <point x="475.75401556289717" y="1717.0" />
+      <point x="1840.3489057239058" y="1717.0" />
+      <point x="-220.81481481481478" y="-97.0" />
+    </edge>
+    <edge source="server.network.UDPServer" target="server.handlers.CommandHandler">
+      <point x="-72.0" y="178.5" />
+      <point x="210.25" y="1313.0" />
+      <point x="11.0" y="1313.0" />
+      <point x="11.0" y="2528.0" />
+      <point x="2087.7387205387204" y="2528.0" />
+      <point x="-123.55000000000018" y="-74.5" />
+    </edge>
+    <edge source="server.commands.SumOfPrice" target="server.commands.Command">
+      <point x="36.25" y="-63.0" />
+      <point x="4287.716366885228" y="1313.0" />
+      <point x="4318.466366885228" y="1313.0" />
+      <point x="4318.466366885228" y="555.0" />
+      <point x="3427.193639612501" y="555.0" />
+      <point x="38.72727272727252" y="86.0" />
+    </edge>
+    <edge source="server.commands.Info" target="server.commands.Command">
+      <point x="108.75" y="-51.5" />
+      <point x="2810.2163668852286" y="1313.0" />
+      <point x="2878.2613602081838" y="1313.0" />
+      <point x="2878.2613602081838" y="585.0" />
+      <point x="3369.102730521592" y="585.0" />
+      <point x="-19.363636363636488" y="86.0" />
+    </edge>
+    <edge source="server.commands.Head" target="server.commands.Command">
+      <point x="36.25" y="-51.5" />
+      <point x="3667.7163668852286" y="1313.0" />
+      <point x="3698.4663668852286" y="1313.0" />
+      <point x="3698.4663668852286" y="595.0" />
+      <point x="3401.3754577943196" y="595.0" />
+      <point x="12.909090909090992" y="86.0" />
+    </edge>
+    <edge source="server.App" target="server.commands.Register">
+      <point x="240.8888888888887" y="-97.0" />
+      <point x="2302.0526094276092" y="1727.0" />
+      <point x="4773.924700218562" y="1727.0" />
+      <point x="-68.66666666666697" y="63.0" />
+    </edge>
+    <edge source="server.handlers.CommandHandler" target="server.commands.Command">
+      <point x="158.8499999999999" y="-74.5" />
+      <point x="2370.1387205387205" y="2538.0" />
+      <point x="5246.1668967768765" y="2538.0" />
+      <point x="5246.1668967768765" y="455.0" />
+      <point x="3491.7390941579556" y="455.0" />
+      <point x="103.27272727272702" y="86.0" />
+    </edge>
+    <edge source="server.App" target="server.network.UDPDatagramServer">
+      <point x="-260.96296296296305" y="-97.0" />
+      <point x="1800.2007575757575" y="1737.0" />
+      <point x="271.25401556289717" y="1737.0" />
+      <point x="-51.125" y="132.0" />
+    </edge>
+    <edge source="server.App" target="server.commands.Add">
+      <point x="-60.22222222222217" y="-97.0" />
+      <point x="2000.9414983164984" y="1637.0" />
+      <point x="1087.4663668852286" y="1637.0" />
+      <point x="0.0" y="51.5" />
+    </edge>
+    <edge source="server.commands.SumOfPrice" target="server.repositories.ProductRepository">
+      <point x="-108.75" y="-63.0" />
+      <point x="4142.716366885228" y="1173.0" />
+      <point x="2306.2252086972476" y="1173.0" />
+      <point x="138.22222222222263" y="259.0" />
+    </edge>
+    <edge source="server.commands.AddIfMin" target="server.commands.Command">
+      <point x="36.25" y="-63.0" />
+      <point x="3977.7163668852286" y="1313.0" />
+      <point x="4008.4663668852286" y="1313.0" />
+      <point x="4008.4663668852286" y="575.0" />
+      <point x="3414.2845487034106" y="575.0" />
+      <point x="25.818181818181984" y="86.0" />
+    </edge>
+    <edge source="server.commands.RemoveById" target="server.repositories.ProductRepository">
+      <point x="-108.75" y="-51.5" />
+      <point x="2282.7163668852286" y="1293.0" />
+      <point x="2168.002986475025" y="1293.0" />
+      <point x="0.0" y="259.0" />
+    </edge>
+    <edge source="server.commands.Register" target="server.commands.Command">
+      <point x="-51.5" y="-63.0" />
+      <point x="4791.091366885228" y="1303.0" />
+      <point x="4963.761360208184" y="1303.0" />
+      <point x="4963.761360208184" y="495.0" />
+      <point x="3465.920912339774" y="495.0" />
+      <point x="77.4545454545455" y="86.0" />
+    </edge>
+    <edge source="server.commands.Help" target="server.managers.CommandManager">
+      <point x="31.0" y="-51.5" />
+      <point x="4571.466366885228" y="1263.0" />
+      <point x="4719.511360208184" y="1263.0" />
+      <point x="-106.25" y="39.5" />
+    </edge>
+    <edge source="server.commands.AddIfMax" target="server.repositories.ProductRepository">
+      <point x="-108.75" y="-63.0" />
+      <point x="3212.7163668852286" y="1233.0" />
+      <point x="2237.1140975861363" y="1233.0" />
+      <point x="69.11111111111131" y="259.0" />
+    </edge>
+    <edge source="server.network.UDPDatagramServer" target="server.handlers.CommandHandler">
+      <point x="-153.375" y="132.0" />
+      <point x="169.00401556289717" y="1737.0" />
+      <point x="22.0" y="1737.0" />
+      <point x="22.0" y="2518.0" />
+      <point x="2123.0387205387206" y="2518.0" />
+      <point x="-88.25" y="-74.5" />
+    </edge>
+    <edge source="server.App" target="server.commands.Info">
+      <point x="60.22222222222217" y="-97.0" />
+      <point x="2121.3859427609427" y="1637.0" />
+      <point x="2701.4663668852286" y="1637.0" />
+      <point x="0.0" y="51.5" />
+    </edge>
+    <edge source="server.commands.Add" target="server.commands.Command">
+      <point x="-108.75" y="-51.5" />
+      <point x="978.7163668852286" y="1203.0" />
+      <point x="922.8687272157656" y="1203.0" />
+      <point x="922.8687272157656" y="475.0" />
+      <point x="3298.102730521592" y="475.0" />
+      <point x="-90.36363636363649" y="86.0" />
+    </edge>
+    <edge source="server.commands.RemoveById" target="server.commands.Command">
+      <point x="36.25" y="-51.5" />
+      <point x="2427.7163668852286" y="1313.0" />
+      <point x="2468.9663668852286" y="1313.0" />
+      <point x="2468.9663668852286" y="555.0" />
+      <point x="3349.739094157956" y="555.0" />
+      <point x="-38.72727272727252" y="86.0" />
+    </edge>
+    <edge source="server.commands.Add" target="server.repositories.ProductRepository">
+      <point x="36.25" y="-51.5" />
+      <point x="1123.7163668852286" y="1253.0" />
+      <point x="2064.336319808358" y="1253.0" />
+      <point x="-103.66666666666674" y="259.0" />
+    </edge>
+    <edge source="server.App" target="server.managers.CommandManager">
+      <point x="200.74074074074088" y="-97.0" />
+      <point x="2261.9044612794614" y="1707.0" />
+      <point x="4674.966366885228" y="1707.0" />
+      <point x="4674.966366885228" y="1283.0" />
+      <point x="4804.511360208184" y="1283.0" />
+      <point x="-21.25" y="39.5" />
+    </edge>
+    <edge source="server.network.UDPServer" target="server.App">
+      <point x="144.0" y="178.5" />
+      <point x="426.25" y="1303.0" />
+      <point x="537.3790155628972" y="1303.0" />
+      <point x="537.3790155628972" y="1707.0" />
+      <point x="1860.4229797979797" y="1707.0" />
+      <point x="-200.74074074074088" y="-97.0" />
+    </edge>
+    <edge source="server.handlers.CommandHandler" target="server.App">
+      <point x="-52.94999999999982" y="-74.5" />
+      <point x="2158.3387205387207" y="2508.0" />
+      <point x="921.0248513223316" y="2508.0" />
+      <point x="921.0248513223316" y="1991.0" />
+      <point x="1824.0387205387206" y="1991.0" />
+      <point x="-237.125" y="97.0" />
+    </edge>
+    <edge source="server.managers.DatabaseManager" target="server.App">
+      <point x="0.0" y="-63.0" />
+      <point x="1094.0248513223316" y="2001.0" />
+      <point x="1891.7887205387206" y="2001.0" />
+      <point x="-169.375" y="97.0" />
+    </edge>
+    <edge source="server.App" target="server.commands.Authenticate">
+      <point x="260.96296296296305" y="-97.0" />
+      <point x="2322.1266835016836" y="1737.0" />
+      <point x="5003.424700218562" y="1737.0" />
+      <point x="-75.66666666666652" y="51.5" />
+    </edge>
+    <edge source="server.managers.PersistenceManager" target="server.App">
+      <point x="52.42857142857156" y="143.5" />
+      <point x="641.3949383138001" y="445.0" />
+      <point x="570.3790155628972" y="445.0" />
+      <point x="570.3790155628972" y="1677.0" />
+      <point x="1920.6452020202019" y="1677.0" />
+      <point x="-140.5185185185187" y="-97.0" />
+    </edge>
+    <edge source="server.managers.CommandManager" target="server.commands.Command">
+      <point x="-63.75" y="-39.5" />
+      <point x="4762.011360208184" y="515.0" />
+      <point x="3453.011821430683" y="515.0" />
+      <point x="64.5454545454545" y="86.0" />
+    </edge>
+    <edge source="server.App" target="server.handlers.CommandHandler">
+      <point x="237.125" y="97.0" />
+      <point x="2298.2887205387206" y="2021.0" />
+      <point x="5146.591366885228" y="2021.0" />
+      <point x="5146.591366885228" y="2508.0" />
+      <point x="2264.2387205387204" y="2508.0" />
+      <point x="52.94999999999982" y="-74.5" />
+    </edge>
+    <edge source="server.App" target="server.commands.Show">
+      <point x="-40.148148148148266" y="-97.0" />
+      <point x="2021.0155723905723" y="1627.0" />
+      <point x="1397.4663668852286" y="1627.0" />
+      <point x="0.0" y="51.5" />
+    </edge>
+    <edge source="server.App" target="server.commands.Update">
+      <point x="-80.29629629629608" y="-97.0" />
+      <point x="1980.8674242424245" y="1647.0" />
+      <point x="777.4663668852288" y="1647.0" />
+      <point x="0.0" y="51.5" />
+    </edge>
+    <edge source="server.commands.FilterContainsPartNumber" target="server.commands.Command">
+      <point x="-132.375" y="-63.0" />
+      <point x="1916.5913668852286" y="1203.0" />
+      <point x="1876.4937272157656" y="1203.0" />
+      <point x="1876.4937272157656" y="535.0" />
+      <point x="3336.830003248865" y="535.0" />
+      <point x="-51.63636363636351" y="86.0" />
+    </edge>
+    <edge source="server.commands.Help" target="server.commands.Command">
+      <point x="-93.0" y="-51.5" />
+      <point x="4447.466366885228" y="1313.0" />
+      <point x="4420.77000882889" y="1313.0" />
+      <point x="4420.77000882889" y="535.0" />
+      <point x="3440.102730521592" y="535.0" />
+      <point x="51.63636363636351" y="86.0" />
+    </edge>
+    <edge source="server.commands.FilterByPrice" target="server.commands.Command">
+      <point x="36.25" y="-63.0" />
+      <point x="3047.7163668852286" y="1313.0" />
+      <point x="3078.4663668852286" y="1313.0" />
+      <point x="3078.4663668852286" y="595.0" />
+      <point x="3375.5572759761376" y="595.0" />
+      <point x="-12.909090909090992" y="86.0" />
+    </edge>
+    <edge source="server.managers.PersistenceManager" target="server.managers.DatabaseManager">
+      <point x="-157.28571428571422" y="143.5" />
+      <point x="431.68065259951436" y="595.0" />
+      <point x="33.0" y="595.0" />
+      <point x="33.0" y="1981.0" />
+      <point x="964.0248513223316" y="1981.0" />
+      <point x="-130.0" y="-63.0" />
+    </edge>
+    <edge source="server.commands.Authenticate" target="server.managers.AuthManager">
+      <point x="75.66666666666652" y="51.5" />
+      <point x="5154.758033551895" y="1737.0" />
+      <point x="5126.230255774117" y="1737.0" />
+      <point x="5126.230255774117" y="2217.0" />
+      <point x="2365.066498316498" y="2217.0" />
+      <point x="153.77777777777737" y="-120.5" />
+    </edge>
+    <edge source="server.App" target="server.commands.RemoveById">
+      <point x="40.148148148148266" y="-97.0" />
+      <point x="2101.311868686869" y="1627.0" />
+      <point x="2391.4663668852286" y="1627.0" />
+      <point x="0.0" y="51.5" />
+    </edge>
+    <edge source="server.App" target="server.repositories.ProductRepository">
+      <point x="20.074074074073906" y="-97.0" />
+      <point x="2081.2377946127945" y="1617.0" />
+      <point x="2235.9663668852286" y="1617.0" />
+      <point x="2235.9663668852286" y="1303.0" />
+      <point x="2156.4844679565067" y="1303.0" />
+      <point x="-11.518518518518476" y="259.0" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="0.22327700778431744" x="2623.5" y="1353.5" />
+  <SelectedNodes />
+  <Categories>
+    <Category>Fields</Category>
+    <Category>Constructors</Category>
+    <Category>Methods</Category>
+    <Category>Properties</Category>
+    <Category>Inner Classes</Category>
+  </Categories>
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+
