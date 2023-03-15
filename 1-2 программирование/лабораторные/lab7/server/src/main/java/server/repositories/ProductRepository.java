@@ -1,5 +1,8 @@
 package server.repositories;
 
+import common.domain.Address;
+import common.domain.Coordinates;
+import common.domain.Organization;
 import common.domain.Product;
 
 import common.exceptions.BadOwnerException;
@@ -161,8 +164,10 @@ public class ProductRepository {
    * @param element Элемент для обновления.
    */
   public void update(User user, Product element) throws SQLException, BadOwnerException {
+    logger.info(element);
     var product = getById(element.getId());
     if (product == null) {
+      logger.info("ADDDING!!!!!!!!!!!!!!1");
       add(user, element);
     } else if (product.getCreatorId() == user.getId()) {
       logger.info("Обновление продукта id#" + product.getId() + " в БД.");
@@ -226,7 +231,33 @@ public class ProductRepository {
 
     lock.lock();
     collection = new PriorityQueue<>();
-    collection.addAll(persistenceManager.loadProducts()); // TODO
+    var daos = persistenceManager.loadProducts();
+
+    var products = daos.stream().map((dao) -> {
+      Organization manufacturer = null;
+      if (dao.getManufacturer() != null) {
+        manufacturer = new Organization(
+          dao.getManufacturer().getId(),
+          dao.getManufacturer().getName(),
+          dao.getManufacturer().getEmployeesCount(),
+          dao.getManufacturer().getType(),
+          new Address(dao.getManufacturer().getStreet(), dao.getManufacturer().getZipCode())
+        );
+      }
+      return new Product(
+        dao.getId(),
+        dao.getName(),
+        new Coordinates(dao.getX(), dao.getY()),
+        dao.getCreationDate(),
+        dao.getPrice(),
+        dao.getPartNumber(),
+        dao.getUnitOfMeasure(),
+        manufacturer,
+        dao.getCreator().getId()
+      );
+    }).collect(Collectors.toList());
+
+    collection.addAll(products);
     lastInitTime = LocalDateTime.now();
     lock.unlock();
 

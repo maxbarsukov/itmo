@@ -17,6 +17,7 @@ project(':server') {
 
         implementation 'javax.persistence:javax.persistence-api:2.2'
         implementation 'org.hibernate:hibernate-core:6.1.5.Final'
+        implementation 'org.hibernate:hibernate-validator:7.0.5.Final'
 
         implementation 'io.github.cdimascio:dotenv-java:2.3.2'
 

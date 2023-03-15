@@ -3,6 +3,8 @@ package server.dao;
 import common.domain.Product;
 import common.domain.UnitOfMeasure;
 import jakarta.persistence.*;
+import jakarta.validation.constraints.Min;
+import jakarta.validation.constraints.NotBlank;
 
 import java.io.Serializable;
 import java.time.LocalDate;
@@ -38,6 +40,7 @@ public class ProductDAO implements Serializable {
   @Column(name="id", nullable=false, unique=true, length=11)
   private int id;
 
+  @NotBlank(message = "Название продукта не должно быть пустым.")
   @Column(name="name", nullable=false)
   private String name; // Поле не может быть null, Строка не может быть пустой
 
@@ -50,18 +53,20 @@ public class ProductDAO implements Serializable {
   @Column(name="creation_date", nullable=false)
   private LocalDate creationDate; // Поле не может быть null, Значение этого поля должно генерироваться автоматически
 
+  @Min(value = 1L, message = "Цена должна быть больше нуля.")
   @Column(name="price", nullable=false)
   private long price; // Поле не может быть null, Значение поля должно быть больше 0
 
+  @NotBlank(message = "Part number не должно быть пустым.")
   @Column(name="part_number")
   private String partNumber; // Строка не может быть пустой, Поле может быть null
 
-  @Column(name="unit_of_measure", nullable=false)
+  @Column(name="unit_of_measure")
   @Enumerated(EnumType.STRING)
   private UnitOfMeasure unitOfMeasure; // Поле может быть null
 
   @ManyToOne
-  @JoinColumn(name="manufacturer_id", nullable=false)
+  @JoinColumn(name="manufacturer_id")
   private OrganizationDAO manufacturer; // Поле может быть null
 
   @ManyToOne

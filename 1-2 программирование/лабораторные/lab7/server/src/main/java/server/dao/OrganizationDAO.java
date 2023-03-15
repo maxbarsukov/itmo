@@ -3,6 +3,9 @@ package server.dao;
 import common.domain.Organization;
 import common.domain.OrganizationType;
 import jakarta.persistence.*;
+import jakarta.validation.constraints.Min;
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.Size;
 
 import java.io.Serializable;
 import java.util.ArrayList;
@@ -35,9 +38,11 @@ public class OrganizationDAO implements Serializable {
   @Column(name="id", nullable=false, unique=true, length=11)
   private int id;
 
+  @NotBlank(message = "Название организации не должно быть пустым.")
   @Column(name="name", nullable=false)
   private String name; // Поле не может быть null, Строка не может быть пустой
 
+  @Min(value = 1L, message = "Количество сотрудников должно быть больше нуля.")
   @Column(name="employees_count", nullable=false)
   private long employeesCount; // Значение поля должно быть больше 0
 
@@ -45,11 +50,13 @@ public class OrganizationDAO implements Serializable {
   @Enumerated(EnumType.STRING)
   private OrganizationType type; // Поле не может быть null
 
+  @NotBlank(message = "Улица не может быть пустой.")
   @Column(name="street", nullable=false)
-  private String street; // Поле не может быть null
+  private String street; // Строка не может быть пустой, Поле не может быть null
 
-  @Column(name="zip_code", nullable=false)
-  private String zipCode; // Поле не может быть null
+  @Size(min = 6, message = "Длина zip кода должна быть не меньше 6.")
+  @Column(name="zip_code")
+  private String zipCode; // Длина строки должна быть не меньше 6, Поле может быть null
 
   @OneToMany(cascade = CascadeType.REMOVE, fetch = FetchType.EAGER)
   @JoinColumn(name="manufacturer_id")

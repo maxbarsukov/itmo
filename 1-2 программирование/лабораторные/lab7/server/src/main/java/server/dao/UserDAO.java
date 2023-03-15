@@ -22,10 +22,10 @@ public class UserDAO implements Serializable {
   @Column(name="id", nullable=false, unique=true, length=11)
   private int id;
 
-  @Column(name="name", length=40, nullable=false)
+  @Column(name="name", length=40, unique=true, nullable=false)
   private String name;
 
-  @Column(name="password_digest", length=40, nullable=false)
+  @Column(name="password_digest", length=64, nullable=false)
   private String passwordDigest;
 
   @Column(name="salt", length=10, nullable=false)

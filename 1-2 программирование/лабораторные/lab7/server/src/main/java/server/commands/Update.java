@@ -35,7 +35,7 @@ public class Update extends Command {
       productRepository.update(req.getUser(), req.updatedProduct);
       return new UpdateResponse(null);
     } catch (BadOwnerException e) {
-      return new RemoveByIdResponse("Зафиксирована попытка изменить чужой продукт!");
+      return new UpdateResponse("Зафиксирована попытка изменить чужой продукт!");
     } catch (Exception e) {
       return new UpdateResponse(e.toString());
     }

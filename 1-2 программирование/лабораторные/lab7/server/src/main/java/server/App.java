@@ -44,21 +44,8 @@ public class App {
     var session = sessionFactory.getCurrentSession();
     Runtime.getRuntime().addShutdownHook(new Thread(sessionFactory::close));
 
-    session.beginTransaction();
-
-    CriteriaBuilder builder = session.getCriteriaBuilder();
-    var criteria = builder.createQuery(UserDAO.class);
-    criteria.from(UserDAO.class);
-    var products = session.createQuery(criteria).getResultList();
-    session.getTransaction().commit();
-
-    System.out.println(products);
-
-
-     var persistenceManager = new PersistenceManager(session);
-
-
-    var authManager = new AuthManager(session, dotenv.get("PEPPER"));
+    var persistenceManager = new PersistenceManager(sessionFactory);
+    var authManager = new AuthManager(sessionFactory, dotenv.get("PEPPER"));
 
     var repository = new ProductRepository(persistenceManager);
     var commandManager = initializeCommandManager(repository, authManager);
