@@ -36,9 +36,6 @@ public class AuthManager {
     dao.setPasswordDigest(passwordHash);
     dao.setSalt(salt);
 
-    logger.info(dao.getName());
-    logger.info(dao.getPasswordDigest());
-
     var session = sessionFactory.getCurrentSession();
     session.beginTransaction();
     session.persist(dao);
@@ -72,13 +69,6 @@ public class AuthManager {
     var id = user.getId();
     var salt = user.getSalt();
     var expectedHashedPassword = user.getPasswordDigest();
-
-    logger.info(result);
-    logger.info(result.size());
-    logger.info(user);
-    logger.info(user.getName());
-    logger.info(user.getId());
-    logger.info(user.getPasswordDigest());
 
     var actualHashedPassword = generatePasswordHash(password, salt);
     if (expectedHashedPassword.equals(actualHashedPassword)) {;

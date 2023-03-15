@@ -164,10 +164,8 @@ public class ProductRepository {
    * @param element Элемент для обновления.
    */
   public void update(User user, Product element) throws SQLException, BadOwnerException {
-    logger.info(element);
     var product = getById(element.getId());
     if (product == null) {
-      logger.info("ADDDING!!!!!!!!!!!!!!1");
       add(user, element);
     } else if (product.getCreatorId() == user.getId()) {
       logger.info("Обновление продукта id#" + product.getId() + " в БД.");
