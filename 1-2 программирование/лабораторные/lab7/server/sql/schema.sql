@@ -34,7 +34,7 @@ CREATE TABLE IF NOT EXISTS products (
     price BIGINT NOT NULL CONSTRAINT positive_price CHECK (price > 0),
     part_number VARCHAR CONSTRAINT not_empty_part_number CHECK(part_number IS NULL OR length(part_number) > 0),
     unit_of_measure unit_of_measure,
-    manufacturer_id INT REFERENCES organizations(id) ON DELETE CASCADE,
+    manufacturer_id INT REFERENCES organizations(id) ON DELETE SET NULL,
     creator_id INT NOT NULL REFERENCES users(id) ON DELETE CASCADE
 );
 

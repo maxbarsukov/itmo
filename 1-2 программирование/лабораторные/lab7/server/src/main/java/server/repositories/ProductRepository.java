@@ -221,12 +221,12 @@ public class ProductRepository {
   /**
    * Загружает коллекцию из базы данных.
    */
-  private void load() throws SQLException {
+  private void load() {
     logger.info("Загрузка начата...");
 
     lock.lock();
     collection = new PriorityQueue<>();
-    collection.addAll(persistenceManager.loadProducts());
+    collection.addAll(persistenceManager.loadProducts()); // TODO
     lastInitTime = LocalDateTime.now();
     lock.unlock();
 
