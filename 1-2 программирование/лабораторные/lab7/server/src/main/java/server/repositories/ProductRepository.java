@@ -1,5 +1,8 @@
 package server.repositories;
 
+import common.domain.Address;
+import common.domain.Coordinates;
+import common.domain.Organization;
 import common.domain.Product;
 
 import common.exceptions.BadOwnerException;
@@ -221,12 +224,38 @@ public class ProductRepository {
   /**
    * Загружает коллекцию из базы данных.
    */
-  private void load() throws SQLException {
+  private void load() {
     logger.info("Загрузка начата...");
 
     lock.lock();
     collection = new PriorityQueue<>();
-    collection.addAll(persistenceManager.loadProducts());
+    var daos = persistenceManager.loadProducts();
+
+    var products = daos.stream().map((dao) -> {
+      Organization manufacturer = null;
+      if (dao.getManufacturer() != null) {
+        manufacturer = new Organization(
+          dao.getManufacturer().getId(),
+          dao.getManufacturer().getName(),
+          dao.getManufacturer().getEmployeesCount(),
+          dao.getManufacturer().getType(),
+          new Address(dao.getManufacturer().getStreet(), dao.getManufacturer().getZipCode())
+        );
+      }
+      return new Product(
+        dao.getId(),
+        dao.getName(),
+        new Coordinates(dao.getX(), dao.getY()),
+        dao.getCreationDate(),
+        dao.getPrice(),
+        dao.getPartNumber(),
+        dao.getUnitOfMeasure(),
+        manufacturer,
+        dao.getCreator().getId()
+      );
+    }).collect(Collectors.toList());
+
+    collection.addAll(products);
     lastInitTime = LocalDateTime.now();
     lock.unlock();
 

@@ -3,20 +3,25 @@ package server.managers;
 import com.google.common.hash.Hashing;
 import org.apache.commons.lang3.RandomStringUtils;
 import org.apache.logging.log4j.Logger;
+
+import org.hibernate.SessionFactory;
+import org.hibernate.transform.Transformers;
 import server.App;
+import server.dao.UserDAO;
 
 import java.nio.charset.StandardCharsets;
 import java.sql.SQLException;
+import java.util.List;
 
 public class AuthManager {
-  private final DatabaseManager databaseManager;
+  private final SessionFactory sessionFactory;
   private final int SALT_LENGTH = 10;
   private final String pepper;
 
   private final Logger logger = App.logger;
 
-  public AuthManager(DatabaseManager databaseManager, String pepper) {
-    this.databaseManager = databaseManager;
+  public AuthManager(SessionFactory sessionFactory, String pepper) {
+    this.sessionFactory = sessionFactory;
     this.pepper = pepper;
   }
 
@@ -24,47 +29,46 @@ public class AuthManager {
     logger.info("Создание нового пользователя " + login);
 
     var salt = generateSalt();
-    var connection = databaseManager.getConnection();
-    var statement = connection.prepareStatement(
-      "INSERT INTO users(name, password_digest, salt) VALUES (?, ?, ?) RETURNING id"
-    );
-
     var passwordHash = generatePasswordHash(password, salt);
 
-    statement.setString(1, login);
-    statement.setString(2, passwordHash);
-    statement.setString(3, salt);
+    var dao = new UserDAO();
+    dao.setName(login);
+    dao.setPasswordDigest(passwordHash);
+    dao.setSalt(salt);
 
-    var result = statement.executeQuery();
-    connection.close();
+    var session = sessionFactory.getCurrentSession();
+    session.beginTransaction();
+    session.persist(dao);
+    session.getTransaction().commit();
+    session.close();
 
-    result.next();
-    var newId = result.getInt(1);
+    var newId = dao.getId();
     logger.info("Пользователь успешно создан, id#" + newId);
     return newId;
   }
 
   public int authenticateUser(String login, String password) throws SQLException {
     logger.info("Аутентификация пользователя " + login);
+    var session = sessionFactory.getCurrentSession();
+    session.beginTransaction();
 
-    var connection = databaseManager.getConnection();
-    var statement = connection.prepareStatement(
-      "SELECT id, password_digest, salt FROM users WHERE name = ?"
-    );
+    var query = session.createQuery("SELECT u FROM users u WHERE u.name = :name");
+    query.setParameter("name", login);
 
-    statement.setString(1, login);
+    List<UserDAO> result = (List<UserDAO>) query.list();
 
-    var result = statement.executeQuery();
-    connection.close();
-
-    if (!result.next()) {
+    if (result.isEmpty()) {
       logger.warn("Неправильный пароль для пользователя " + login);
       return 0;
     }
 
-    var id = result.getInt("id");
-    var salt = result.getString("salt");
-    var expectedHashedPassword = result.getString("password_digest");
+    var user = result.get(0);
+    session.getTransaction().commit();
+    session.close();
+
+    var id = user.getId();
+    var salt = user.getSalt();
+    var expectedHashedPassword = user.getPasswordDigest();
 
     var actualHashedPassword = generatePasswordHash(password, salt);
     if (expectedHashedPassword.equals(actualHashedPassword)) {;

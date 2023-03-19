@@ -1,8 +1,17 @@
 package server;
 
+import jakarta.persistence.criteria.CriteriaBuilder;
+import jakarta.persistence.criteria.CriteriaQuery;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.engine.spi.SessionFactoryImplementor;
+import org.hibernate.internal.SessionFactoryImpl;
+import org.hibernate.internal.SessionImpl;
+import server.dao.ProductDAO;
+import server.dao.UserDAO;
 import server.handlers.CommandHandler;
 import server.managers.*;
 import server.commands.*;
@@ -14,8 +23,11 @@ import common.utility.Commands;
 import java.net.InetAddress;
 import java.net.SocketException;
 import java.net.UnknownHostException;
+import java.sql.Connection;
+import java.util.List;
 
 import io.github.cdimascio.dotenv.Dotenv;
+import server.utils.HibernateUtil;
 
 /**
  * Серверная часть приложения.
@@ -28,9 +40,12 @@ public class App {
   public static Dotenv dotenv;
 
   public static void main(String[] args) {
-    var databaseManager = initializeDatabase();
-    var persistenceManager = new PersistenceManager(databaseManager);
-    var authManager = new AuthManager(databaseManager, dotenv.get("PEPPER"));
+    SessionFactoryImpl sessionFactory = (SessionFactoryImpl) getHibernateSessionFactory();
+    var session = sessionFactory.getCurrentSession();
+    Runtime.getRuntime().addShutdownHook(new Thread(sessionFactory::close));
+
+    var persistenceManager = new PersistenceManager(sessionFactory);
+    var authManager = new AuthManager(sessionFactory, dotenv.get("PEPPER"));
 
     var repository = new ProductRepository(persistenceManager);
     var commandManager = initializeCommandManager(repository, authManager);
@@ -49,7 +64,7 @@ public class App {
     }
   }
 
-  private static DatabaseManager initializeDatabase() {
+  private static SessionFactory getHibernateSessionFactory() {
     loadEnv();
     var url = dotenv.get("DB_URL");
     var user = dotenv.get("DB_USER");
@@ -57,10 +72,10 @@ public class App {
 
     if (url == null || url.isEmpty() || user == null || user.isEmpty() || password == null || password.isEmpty()) {
       System.out.println("В .env файле не обнаружены данные для подключения к базе данных");
-      System.exit(0);
+      System.exit(1);
     }
 
-    return new DatabaseManager(url, user, password);
+    return HibernateUtil.getSessionFactory(url, user, password);
   }
 
   private static CommandManager initializeCommandManager(ProductRepository repository, AuthManager authManager) {
