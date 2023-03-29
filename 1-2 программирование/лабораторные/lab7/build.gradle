@@ -1,3 +1,7 @@
+plugins {
+    id "org.flywaydb.flyway" version "9.8.1" apply false
+}
+
 subprojects {
     apply plugin: 'java'
     repositories {
@@ -7,11 +11,14 @@ subprojects {
 
 project(':server') {
     apply plugin: 'application'
+    apply plugin: 'org.flywaydb.flyway'
     mainClassName = 'server.App'
     dependencies {
         implementation project(':common')
         implementation 'com.google.guava:guava:31.1-jre'
         implementation 'org.apache.commons:commons-lang3:3.12.0'
+
+        runtimeOnly 'org.flywaydb:flyway-gradle-plugin:9.16.1'
 
         implementation 'org.postgresql:postgresql:42.5.4'
 
@@ -27,6 +34,16 @@ project(':server') {
         implementation 'org.slf4j:slf4j-api:2.0.6'
         implementation 'org.slf4j:slf4j-simple:2.0.6'
     }
+
+    flyway {
+        locations = ["filesystem:./sql/migration"]
+        url = "jdbc:postgresql://127.0.0.1:5432/studs"
+        user = "s367081"
+        password = "s367081"
+        schemas = ['public']
+    }
+
+    flywayMigrate.dependsOn classes
 
     jar {
         manifest.attributes(

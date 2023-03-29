@@ -35,7 +35,7 @@ public class HibernateUtil {
       props.put("hibernate.connection.autocommit", "true");
       props.put("hibernate.show_sql", "true");
       props.put("hibernate.cache.provider_class", "org.hibernate.cache.internal.NoCacheProvider");
-      props.put("hibernate.hbm2ddl.auto", "create");
+      props.put("hibernate.hbm2ddl.auto", "validate");
 
       Configuration configuration = new Configuration();
       configuration.setProperties(props);
