@@ -1,0 +1,223 @@
+01 00A0009004   INFETCH         IP ? BR, AR
+02 0104009420                   BR + 1 ? IP; MEM(AR) ? DR
+03 0002009001                   DR ? CR
+04 8109804002                   if CR(15) = 1 then GOTO CHKBR @ 09
+05 810C404002                   if CR(14) = 1 then GOTO CHKABS @ 0C
+06 810C204002                   if CR(13) = 1 then GOTO CHKABS @ 0C
+07 8078104002                   if CR(12) = 0 then GOTO ADDRLESS @ 78
+08 80C2101040                   GOTO IO @ C2
+09 800C404002   CHKBR           if CR(14) = 0 then GOTO CHKABS @ 0C
+0A 800C204002                   if CR(13) = 0 then GOTO CHKABS @ 0C
+0B 8157104002                   if CR(12) = 1 then GOTO BRANCHES @ 57
+0C 8024084002   CHKABS          if CR(11) = 0 then GOTO OPFETCH @ 24
+0D 0020011002   ADFETCH         extend sign CR(0..7) ? BR
+0E 811C044002                   if CR(10) = 1 then GOTO T11XX @ 1C
+0F 0080009024   T10XX           BR + IP ? AR
+10 0100000000                   MEM(AR) ? DR
+11 8114024002                   if CR(9) = 1 then GOTO T101X @ 14
+12 81E0014002   T100X           if CR(8) = 1 then GOTO RESERVED @ E0
+13 8024101040   T1000           GOTO OPFETCH @ 24
+14 8119014002   T101X           if CR(8) = 1 then GOTO T1011 @ 19
+15 0001009401   T1010           DR + 1 ? DR
+16 0200000000                   DR ? MEM(AR)
+17 0001009201                   ~0 + DR ? DR
+18 8024101040                   GOTO OPFETCH @ 24
+19 0001009201   T1011           ~0 + DR ? DR
+1A 0200000000                   DR ? MEM(AR)
+1B 8024101040                   GOTO OPFETCH @ 24
+1C 8120024002   T11XX           if CR(9) = 1 then GOTO T111X @ 20
+1D 81E0014002   T110X           if CR(8) = 1 then GOTO RESERVED @ E0
+1E 0001009028   T1100           BR + SP ? DR
+1F 8024101040                   GOTO OPFETCH @ 24
+20 8023014002   T111X           if CR(8) = 0 then GOTO T1110 @ 23
+21 0001009020   T1111           BR ? DR
+22 8028101040                   GOTO EXEC @ 28
+23 0001009024   T1110           BR + IP ? DR
+24 8026804002   OPFETCH         if CR(15) = 0 then GOTO RDVALUE @ 26
+25 814A404002                   if CR(14) = 1 then GOTO CMD11XX @ 4A
+26 0080009001   RDVALUE         DR ? AR
+27 0100000000                   MEM(AR) ? DR
+28 813C804002   EXEC            if CR(15) = 1 then GOTO CMD1XXX @ 3C
+29 8130404002   CMD0XXX         if CR(14) = 1 then GOTO CMD01XX @ 30
+2A 812D104002   CMD000X         if CR(12) = 1 then GOTO OR @ 2D
+2B 0010C09811   AND             AC & DR ? AC, N, Z, V
+2C 80C4101040                   GOTO INT @ C4
+2D 0020009B11   OR              ~AC & ~DR ? BR
+2E 0010C09220                   ~BR ? AC, N, Z, V
+2F 80C4101040                   GOTO INT @ C4
+30 8137204002   CMD01XX         if CR(13) = 1 then GOTO CMD011X @ 37
+31 8134104002   CMD010X         if CR(12) = 1 then GOTO ADC @ 34
+32 0010E09011   ADD             AC + DR ? AC, N, Z, V, C
+33 80C4101040                   GOTO INT @ C4
+34 8032011040   ADC             if PS(C) = 0 then GOTO ADD @ 32
+35 0010E09411                   AC + DR + 1 ? AC, N, Z, V, C
+36 80C4101040                   GOTO INT @ C4
+37 813A104002   CMD011X         if CR(12) = 1 then GOTO CMP @ 3A
+38 0010E09511   SUB             AC + ~DR + 1 ? AC, N, Z, V, C
+39 80C4101040                   GOTO INT @ C4
+3A 0000E09511   CMP             AC + ~DR + 1 ? N, Z, V, C
+3B 80C4101040                   GOTO INT @ C4
+3C 8143204002   CMD1XXX         if CR(13) = 1 then GOTO CMD101X @ 43
+3D 81E0104002   CMD100X         if CR(12) = 1 then GOTO RESERVED @ E0
+3E 0001009201   LOOP            ~0 + DR ? DR
+3F 0220009201                   ~0 + DR ? BR; DR ? MEM(AR)
+40 80C4804020                   if BR(15) = 0 then GOTO INT @ C4
+41 0004009404                   IP + 1 ? IP
+42 80C4101040                   GOTO INT @ C4
+43 8146104002   CMD101X         if CR(12) = 1 then GOTO SWAM @ 46
+44 0010C09001   LD              DR ? AC, N, Z, V
+45 80C4101040                   GOTO INT @ C4
+46 0020009001   SWAM            DR ? BR
+47 0001009010                   AC ? DR
+48 0210C09020                   BR ? AC, N, Z, V; DR ? MEM(AR)
+49 80C4101040                   GOTO INT @ C4
+4A 8153204002   CMD11XX         if CR(13) = 1 then GOTO ST @ 53
+4B 814E104002   CMD110X         if CR(12) = 1 then GOTO CALL @ 4E
+4C 0004009001   JUMP            DR ? IP
+4D 80C4101040                   GOTO INT @ C4
+4E 0020009001   CALL            DR ? BR
+4F 0001009004                   IP ? DR
+50 0004009020                   BR ? IP
+51 0088009208   PUSHVAL         ~0 + SP ? SP, AR
+52 8055101040                   GOTO STORE @ 55
+53 0080009001   ST              DR ? AR
+54 0001009010                   AC ? DR
+55 0200000000   STORE           DR ? MEM(AR)
+56 80C4101040                   GOTO INT @ C4
+57 8171084002   BRANCHES        if CR(11) = 1 then GOTO BR1XXX @ 71
+58 8166044002   BR0XXX          if CR(10) = 1 then GOTO BR01XX @ 66
+59 8161024002   BR00XX          if CR(9) = 1 then GOTO BR001X @ 61
+5A 815F014002   BR000X          if CR(8) = 1 then GOTO BNE @ 5F
+5B 80C4041040   BEQ             if PS(Z) = 0 then GOTO INT @ C4
+5C 0020011002   BR              extend sign CR(0..7) ? BR
+5D 0004009024                   BR + IP ? IP
+5E 80C4101040                   GOTO INT @ C4
+5F 805C041040   BNE             if PS(Z) = 0 then GOTO BR @ 5C
+60 80C4101040                   GOTO INT @ C4
+61 8164014002   BR001X          if CR(8) = 1 then GOTO BPL @ 64
+62 815C081040   BMI             if PS(N) = 1 then GOTO BR @ 5C
+63 80C4101040                   GOTO INT @ C4
+64 805C081040   BPL             if PS(N) = 0 then GOTO BR @ 5C
+65 80C4101040                   GOTO INT @ C4
+66 816C024002   BR01XX          if CR(9) = 1 then GOTO BR011X @ 6C
+67 816A014002   BR010X          if CR(8) = 1 then GOTO BCC @ 6A
+68 815C011040   BCS             if PS(C) = 1 then GOTO BR @ 5C
+69 80C4101040                   GOTO INT @ C4
+6A 805C011040   BCC             if PS(C) = 0 then GOTO BR @ 5C
+6B 80C4101040                   GOTO INT @ C4
+6C 816F014002   BR011X          if CR(8) = 1 then GOTO BVC @ 6F
+6D 815C021040   BVS             if PS(V) = 1 then GOTO BR @ 5C
+6E 80C4101040                   GOTO INT @ C4
+6F 805C021040   BVC             if PS(V) = 0 then GOTO BR @ 5C
+70 80C4101040                   GOTO INT @ C4
+71 81E0044002   BR1XXX          if CR(10) = 1 then GOTO RESERVED @ E0
+72 81E0024002   BR10XX          if CR(9) = 1 then GOTO RESERVED @ E0
+73 8176014002   BR100X          if CR(8) = 1 then GOTO BGE @ 76
+74 806D081040   BLT             if PS(N) = 0 then GOTO BVS @ 6D
+75 806F101040                   GOTO BVC @ 6F
+76 806F081040   BGE             if PS(N) = 0 then GOTO BVC @ 6F
+77 806D101040                   GOTO BVS @ 6D
+78 81A4084002   ADDRLESS        if CR(11) = 1 then GOTO AL1XXX @ A4
+79 8189044002   AL0XXX          if CR(10) = 1 then GOTO AL01XX @ 89
+7A 817D024002   AL00XX          if CR(9) = 1 then GOTO AL001X @ 7D
+7B 80C4014002   AL000X          if CR(8) = 0 then GOTO INT @ C4
+7C 80DE101040   HLT             GOTO STOP @ DE
+7D 8183014002   AL001X          if CR(8) = 1 then GOTO AL0011 @ 83
+7E 8181801002   AL0010          if CR(7) = 1 then GOTO CMA @ 81
+7F 0010C00000   CLA             0 ? AC, N, Z, V
+80 80C4101040                   GOTO INT @ C4
+81 0010C09210   CMA             ~AC ? AC, N, Z, V
+82 80C4101040                   GOTO INT @ C4
+83 8186801002   AL0011          if CR(7) = 1 then GOTO CMC @ 86
+84 0000200000   CLC             0 ? C
+85 80C4101040                   GOTO INT @ C4
+86 8184011040   CMC             if PS(C) = 1 then GOTO CLC @ 84
+87 0000208300                   HTOH(~0 + ~0) ? C
+88 80C4101040                   GOTO INT @ C4
+89 8196024002   AL01XX          if CR(9) = 1 then GOTO AL011X @ 96
+8A 8190014002   AL010X          if CR(8) = 1 then GOTO AL0101 @ 90
+8B 818E801002   AL0100          if CR(7) = 1 then GOTO ROR @ 8E
+8C 0010E60010   ROL             ROL(AC) ? AC, N, Z, V, C
+8D 80C4101040                   GOTO INT @ C4
+8E 0010F80010   ROR             ROR(AC) ? AC, N, Z, V, C
+8F 80C4101040                   GOTO INT @ C4
+90 8194801002   AL0101          if CR(7) = 1 then GOTO ASR @ 94
+91 0001009010   ASL             AC ? DR
+92 0010E09011                   AC + DR ? AC, N, Z, V, C
+93 80C4101040                   GOTO INT @ C4
+94 0010E80010   ASR             ASR(AC) ? AC, N, Z, V, C
+95 80C4101040                   GOTO INT @ C4
+96 819C014002   AL011X          if CR(8) = 1 then GOTO AL0111 @ 9C
+97 819A801002   AL0110          if CR(7) = 1 then GOTO SWAB @ 9A
+98 0010C11010   SXTB            extend sign AC(0..7) ? AC, N, Z, V
+99 80C4101040                   GOTO INT @ C4
+9A 0010C06010   SWAB            SWAB(AC) ? AC, N, Z, V
+9B 80C4101040                   GOTO INT @ C4
+9C 81A2801002   AL0111          if CR(7) = 1 then GOTO NEG @ A2
+9D 81A0401002   AL01110         if CR(6) = 1 then GOTO DEC @ A0
+9E 0010E09410   INC             AC + 1 ? AC, N, Z, V, C
+9F 80C4101040                   GOTO INT @ C4
+A0 0010E09110   DEC             AC + ~0 ? AC, N, Z, V, C
+A1 80C4101040                   GOTO INT @ C4
+A2 0010E09610   NEG             ~AC + 1 ? AC, N, Z, V, C
+A3 80C4101040                   GOTO INT @ C4
+A4 81B5044002   AL1XXX          if CR(10) = 1 then GOTO AL11XX @ B5
+A5 0080009008   AL10XX          SP ? AR
+A6 0100000000                   MEM(AR) ? DR
+A7 81AE024002                   if CR(9) = 1 then GOTO AL101X @ AE
+A8 81AC014002   AL100X          if CR(8) = 1 then GOTO POPF @ AC
+A9 0010C09001   POP             DR ? AC, N, Z, V
+AA 0008009408   INCSP           SP + 1 ? SP
+AB 80C4101040                   GOTO INT @ C4
+AC 0040009001   POPF            DR ? PS
+AD 80AA101040                   GOTO INCSP @ AA
+AE 81B1014002   AL101X          if CR(8) = 1 then GOTO IRET @ B1
+AF 0004009001   RET             DR ? IP
+B0 80AA101040                   GOTO INCSP @ AA
+B1 0040009001   IRET            DR ? PS
+B2 0088009408                   SP + 1 ? SP, AR
+B3 0100000000                   MEM(AR) ? DR
+B4 80AF101040                   GOTO RET @ AF
+B5 81BB024002   AL11XX          if CR(9) = 1 then GOTO AL111X @ BB
+B6 81B9014002   AL110X          if CR(8) = 1 then GOTO PUSHF @ B9
+B7 0001009010   PUSH            AC ? DR
+B8 8051101040                   GOTO PUSHVAL @ 51
+B9 0001009040   PUSHF           PS ? DR
+BA 8051101040                   GOTO PUSHVAL @ 51
+BB 81E0014002   AL111X          if CR(8) = 1 then GOTO RESERVED @ E0
+BC 0080009008   SWAP            SP ? AR
+BD 0100000000                   MEM(AR) ? DR
+BE 0020009001                   DR ? BR
+BF 0001009010                   AC ? DR
+C0 0210C09020                   BR ? AC, N, Z, V; DR ? MEM(AR)
+C1 80C4101040                   GOTO INT @ C4
+C2 81C7084002   IO              if CR(11) = 1 then GOTO IRQ @ C7
+C3 0400000000   DOIO            IO
+C4 80DE801040   INT             if PS(W) = 0 then GOTO STOP @ DE
+C5 8001401040                   if PS(IRQ) = 0 then GOTO INFETCH @ 01
+C6 0800000000                   IRQSC
+C7 0088009208   IRQ             ~0 + SP ? SP, AR
+C8 0001009004                   IP ? DR
+C9 0200000000                   DR ? MEM(AR)
+CA 0088009208                   ~0 + SP ? SP, AR
+CB 0001009040                   PS ? DR
+CC 0220001002                   LTOL(CR) ? BR; DR ? MEM(AR)
+CD 00A0020020                   SHL(BR) ? BR, AR
+CE 0100000000                   MEM(AR) ? DR
+CF 0004009001                   DR ? IP
+D0 0080001420                   LTOL(BR + 1) ? AR
+D1 0100000000                   MEM(AR) ? DR
+D2 0040009001                   DR ? PS
+D3 8001101040                   GOTO INFETCH @ 01
+D4 00BBE00000   START           0 ? DR, CR, SP, AC, BR, AR, N, Z, V, C
+D5 80C3101040                   GOTO DOIO @ C3
+D6 0080009004   READ            IP ? AR
+D7 0104009404                   IP + 1 ? IP; MEM(AR) ? DR
+D8 80DE101040                   GOTO STOP @ DE
+D9 0080009004   WRITE           IP ? AR
+DA 0001009080                   IR ? DR
+DB 0204009404                   IP + 1 ? IP; DR ? MEM(AR)
+DC 80DE101040                   GOTO STOP @ DE
+DD 0004009080   SETIP           IR ? IP
+DE 4000000000   STOP            Halt
+DF 8001101040                   GOTO INFETCH @ 01
