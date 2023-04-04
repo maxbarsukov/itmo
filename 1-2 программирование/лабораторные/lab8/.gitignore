@@ -1,0 +1,47 @@
+## Java
+# Compiled class file
+*.class
+*.jar
+
+# virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
+hs_err_pid*
+replay_pid*
+
+# dotenv file with login, password, etc.
+server/.env
+
+## Gradle
+.gradle
+client/build/*
+common/build/*
+server/build/*
+
+# Logs
+*/logs/*
+*.log
+
+# Ignore Gradle GUI config
+gradle-app.setting
+
+# Avoid ignoring Gradle wrapper jar file (.jar files are usually ignored)
+!gradle-wrapper.jar
+
+# Avoid ignore Gradle wrappper properties
+!gradle-wrapper.properties
+
+# Cache of project
+.gradletasknamecache
+
+# Eclipse Gradle plugin generated files
+# Eclipse Core
+.project
+# JDT-specific (Eclipse Java Development Tools)
+.classpath
+
+## IntelliJ IDEA
+.idea/
+.idea_modules/
+.iws
+
+## Misc
+*.DS_Store

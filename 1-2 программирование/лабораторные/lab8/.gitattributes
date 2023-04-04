@@ -1,0 +1,15 @@
+#
+# https://help.github.com/articles/dealing-with-line-endings/
+#
+# Linux start script should use lf
+/gradlew        text eol=lf
+
+# These are Windows script files and should use crlf
+*.bat           text eol=crlf
+
+# Mark the database schema as having been generated.
+gradle/wrapper/gradle-wrapper.jar linguist-generated
+gradle/wrapper/gradle-wrapper.properties linguist-generated
+
+# Mark any vendored files as having been vendored.
+vendor/* linguist-vendored

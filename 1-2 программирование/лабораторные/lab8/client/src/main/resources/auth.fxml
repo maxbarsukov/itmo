@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #d2ffd7;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="client.controllers.AuthController">
+    <children>
+        <Label fx:id="titleLabel" alignment="CENTER" layoutX="181.0" layoutY="90.0" prefHeight="52.0" prefWidth="245.0" text="Авторизация" textAlignment="CENTER">
+            <font>
+                <Font name="Segoe UI Black" size="35.0" />
+            </font>
+        </Label>
+        <TextField fx:id="loginField" alignment="CENTER" layoutX="200.0" layoutY="169.0" prefHeight="30.0" prefWidth="200.0" promptText="Логин">
+            <font>
+                <Font name="Segoe UI" size="16.0" />
+            </font>
+        </TextField>
+        <PasswordField fx:id="passwordField" alignment="CENTER" layoutX="200.0" layoutY="226.0" prefHeight="30.0" prefWidth="200.0" promptText="Пароль">
+            <font>
+                <Font name="Segoe UI" size="16.0" />
+            </font>
+        </PasswordField>
+        <Button fx:id="okButton" layoutX="255.0" layoutY="281.0" mnemonicParsing="false" onAction="#ok" prefHeight="36.0" prefWidth="90.0" style="-fx-border-color: #c0c0c0; -fx-background-radius: 10; -fx-border-radius: 10;" text="ОК">
+            <font>
+                <Font name="Segoe UI" size="18.0" />
+            </font>
+        </Button>
+        <CheckBox fx:id="signUpButton" layoutX="211.0" layoutY="338.0" mnemonicParsing="false" text="Зарегистрироваться">
+            <font>
+                <Font name="Segoe UI" size="16.0" />
+            </font>
+        </CheckBox>
+        <ComboBox fx:id="languageComboBox" layoutX="468.0" layoutY="14.0" prefHeight="27.0" prefWidth="118.0" style="-fx-background-radius: 10; -fx-border-radius: 10; -fx-border-color: #c0c0c0;" />
+    </children>
+</AnchorPane>
