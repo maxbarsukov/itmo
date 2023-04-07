@@ -30,3 +30,11 @@
 
 - [Компилятор Java → БЭВМ](https://github.com/itmo-corp/jbevm)
 - [Перевод ASCII строки в число](./%D0%B4%D0%BE%D0%BF/%D0%BF%D0%B5%D1%80%D0%B5%D0%B2%D0%BE%D0%B4%20%D1%81%D1%82%D1%80%D0%BE%D0%BA%D0%B8%20%D0%B2%20%D1%87%D0%B8%D1%81%D0%BB%D0%BE.basm_mod)
+
+
+## Полезные ссылки
+
+| Ссылка | Описание |
+| --- | --- |
+| https://github.com/owl-from-hogvarts/OPD-guide | Гайд по БЭВМ |
+| https://github.com/Zerumi/OPD-guide-RU- | Перевод гайда на русский |

@@ -34,6 +34,7 @@
 | --- | --- |
 | https://t.me/ITMOhomework | Канал с примерами готовых лабораторных работ |
 | https://github.com/EgorMIt/ITMO <br> https://github.com/RomanVassilchenko/ITMOProjects <br> https://github.com/band-of-four/cheatsheets | Много готовых лаб и ДЗ |
+| https://github.com/Imtjl | Гайды и лабораторные 2023 |
 | https://picloud.pw/about/ | Некоторые ДЗ и лабораторные |
 | https://rosroble.github.io/ | Полезная инфа по лабораторным |
 | https://yank0vy3rdna.github.io/itmo-faq/ | Гайд для первокурсников и абитуриентов |

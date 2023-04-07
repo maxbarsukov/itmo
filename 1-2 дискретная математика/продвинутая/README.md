@@ -1,4 +1,5 @@
-# Дискетная Математика (Продвинутый уровень)
+# Дискетная Математика
+## Продвинутый уровень
 
 <img alt="Onizuka gif" src="https://github.com/maxbarsukov/itmo/blob/master/.docs/onizuka2.gif" height="200">
 
