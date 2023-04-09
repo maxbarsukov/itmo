@@ -11,7 +11,7 @@
 <?import javafx.scene.layout.FlowPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="670.0" prefWidth="1080.0" style="-fx-background-color: #d2ffd7;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="client.controllers.MainController">
+<AnchorPane prefHeight="670.0" prefWidth="1080.0" style="-fx-background-color: #d2efff;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="client.controllers.MainController">
     <children>
         <ComboBox fx:id="languageComboBox" layoutX="966.0" layoutY="14.0" prefHeight="27.0" prefWidth="118.0" style="-fx-background-radius: 10; -fx-border-radius: 10; -fx-border-color: #c0c0c0;" AnchorPane.rightAnchor="10" AnchorPane.topAnchor="16.0" />
         <Label fx:id="userLabel" layoutX="14.0" layoutY="18.0" text="Пользователь:" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="20.0">
@@ -22,67 +22,67 @@
         <AnchorPane layoutX="1.0" layoutY="58.0" prefHeight="590.0" prefWidth="956.0">
             <children>
                 <FlowPane alignment="CENTER" columnHalignment="CENTER" hgap="10.0" layoutY="492.0" prefHeight="120.0" prefWidth="1080.0" vgap="10.0">
-                    <Button fx:id="clearButton" mnemonicParsing="false" onAction="#clear" style="-fx-background-radius: 10; -fx-border-radius: 10;" text="Clear">
+                    <Button fx:id="help" mnemonicParsing="false" onAction="#help" prefHeight="30.0" prefWidth="90.0" style="-fx-background-radius: 10; -fx-border-radius: 10;" text="Help">
                         <font>
                             <Font name="Segoe UI" size="16.0" />
                         </font>
                     </Button>
-                    <Button fx:id="chapterButton" mnemonicParsing="false" onAction="#filterByChapter" prefHeight="30.0" prefWidth="170.0" style="-fx-background-radius: 10; -fx-border-radius: 10;" text="Filter by chapter">
+                    <Button fx:id="info" mnemonicParsing="false" onAction="#info" prefHeight="30.0" prefWidth="125.0" style="-fx-background-radius: 10; -fx-border-radius: 10;" text="Info">
                         <font>
                             <Font name="Segoe UI" size="16.0" />
                         </font>
                     </Button>
-                    <Button fx:id="nameButton" mnemonicParsing="false" onAction="#filterStartsWithName" style="-fx-background-radius: 10; -fx-border-radius: 10;" text="Filter starts with name">
+                    <Button fx:id="add" mnemonicParsing="false" onAction="#add" style="-fx-background-radius: 10; -fx-border-radius: 10;" text="Add">
                         <font>
                             <Font name="Segoe UI" size="16.0" />
                         </font>
                     </Button>
-                    <Button fx:id="coordinatesButton" mnemonicParsing="false" onAction="#groupCountingByCoordinates" style="-fx-background-radius: 10; -fx-border-radius: 10;" text="Group counting by coordinates">
+                    <Button fx:id="update" mnemonicParsing="false" onAction="#update" style="-fx-background-radius: 10; -fx-border-radius: 10;" text="Update">
                         <font>
                             <Font name="Segoe UI" size="16.0" />
                         </font>
                     </Button>
-                    <Button fx:id="helpButton" mnemonicParsing="false" onAction="#help" prefHeight="30.0" prefWidth="90.0" style="-fx-background-radius: 10; -fx-border-radius: 10;" text="Help">
+                    <Button fx:id="removeById" mnemonicParsing="false" onAction="#removeById" prefHeight="30.0" prefWidth="153.0" style="-fx-background-radius: 10; -fx-border-radius: 10;" text="Remove by ID">
                         <font>
                             <Font name="Segoe UI" size="16.0" />
                         </font>
                     </Button>
-                    <Button fx:id="infoButton" mnemonicParsing="false" onAction="#info" prefHeight="30.0" prefWidth="125.0" style="-fx-background-radius: 10; -fx-border-radius: 10;" text="Info">
+                    <Button fx:id="clear" mnemonicParsing="false" onAction="#clear" style="-fx-background-radius: 10; -fx-border-radius: 10;" text="Clear">
                         <font>
                             <Font name="Segoe UI" size="16.0" />
                         </font>
                     </Button>
-                    <Button fx:id="insertButton" mnemonicParsing="false" onAction="#insert" style="-fx-background-radius: 10; -fx-border-radius: 10;" text="Insert">
+                    <Button fx:id="executeScript" mnemonicParsing="false" onAction="#executeScript" style="-fx-background-radius: 10; -fx-border-radius: 10;" text="Execute script">
                         <font>
                             <Font name="Segoe UI" size="16.0" />
                         </font>
                     </Button>
-                    <Button fx:id="removeGreaterButton" mnemonicParsing="false" onAction="#removeGreater" prefHeight="30.0" prefWidth="153.0" style="-fx-background-radius: 10; -fx-border-radius: 10;" text="Remove greater">
+                    <Button fx:id="head" mnemonicParsing="false" onAction="#head" prefHeight="30.0" prefWidth="140.0" style="-fx-background-radius: 10; -fx-border-radius: 10;" text="Head">
                         <font>
                             <Font name="Segoe UI" size="16.0" />
                         </font>
                     </Button>
-                    <Button fx:id="removeGreaterKeyButton" mnemonicParsing="false" onAction="#removeGreaterKey" prefHeight="30.0" prefWidth="193.0" style="-fx-background-radius: 10; -fx-border-radius: 10;" text="Remove greater key">
+                    <Button fx:id="addIfMax" mnemonicParsing="false" onAction="#addIfMax" prefHeight="30.0" prefWidth="140.0" style="-fx-background-radius: 10; -fx-border-radius: 10;" text="Add if max">
                         <font>
                             <Font name="Segoe UI" size="16.0" />
                         </font>
                     </Button>
-                    <Button fx:id="removeKeyButton" mnemonicParsing="false" onAction="#removeKey" prefHeight="30.0" prefWidth="140.0" style="-fx-background-radius: 10; -fx-border-radius: 10;" text="Remove key">
+                    <Button fx:id="addIfMin" mnemonicParsing="false" onAction="#addIfMin" prefHeight="30.0" prefWidth="140.0" style="-fx-background-radius: 10; -fx-border-radius: 10;" text="Add if min">
                         <font>
                             <Font name="Segoe UI" size="16.0" />
                         </font>
                     </Button>
-                    <Button fx:id="replaceButton" mnemonicParsing="false" onAction="#replaceIfGreater" style="-fx-background-radius: 10; -fx-border-radius: 10;" text="Replace if greater">
+                    <Button fx:id="sumOfPrice" mnemonicParsing="false" onAction="#sumOfPrice" prefHeight="30.0" prefWidth="140.0" style="-fx-background-radius: 10; -fx-border-radius: 10;" text="Sum of price">
                         <font>
                             <Font name="Segoe UI" size="16.0" />
                         </font>
                     </Button>
-                    <Button fx:id="updateButton" mnemonicParsing="false" onAction="#update" style="-fx-background-radius: 10; -fx-border-radius: 10;" text="Update">
+                    <Button fx:id="filterByPrice" mnemonicParsing="false" onAction="#filterByPrice" prefHeight="30.0" prefWidth="170.0" style="-fx-background-radius: 10; -fx-border-radius: 10;" text="Filter by price">
                         <font>
                             <Font name="Segoe UI" size="16.0" />
                         </font>
                     </Button>
-                    <Button fx:id="scriptButton" mnemonicParsing="false" onAction="#executeScript" style="-fx-background-radius: 10; -fx-border-radius: 10;" text="Execute script">
+                    <Button fx:id="filterContainsPartNumber" mnemonicParsing="false" onAction="#filterContainsPartNumber" style="-fx-background-radius: 10; -fx-border-radius: 10;" text="Filter contains part number">
                         <font>
                             <Font name="Segoe UI" size="16.0" />
                         </font>
@@ -99,15 +99,19 @@
                                                 <TableColumn fx:id="ownerColumn" prefWidth="90.0" text="Owner" />
                                                 <TableColumn fx:id="idColumn" prefWidth="45.0" text="ID" />
                                                 <TableColumn fx:id="nameColumn" prefWidth="90.0" text="Name" />
-                                                <TableColumn prefWidth="45.0" text="X" fx:id="xColumn" />
+                                                <TableColumn fx:id="xColumn" prefWidth="45.0" text="X" />
                                                 <TableColumn fx:id="yColumn" prefWidth="45.0" text="Y" />
                                                 <TableColumn fx:id="dateColumn" prefWidth="140.0" text="Creation date" />
-                                                <TableColumn fx:id="healthColumn" prefWidth="70.0" text="Health" />
-                                                <TableColumn fx:id="categoryColumn" prefWidth="105.0" text="Astartes category" />
-                                                <TableColumn fx:id="weaponColumn" prefWidth="130.0" text="Weapon" />
-                                                <TableColumn fx:id="meleeColumn" prefWidth="130.0" text="Melee weapon" />
-                                                <TableColumn fx:id="cNameColumn" prefWidth="94.0" text="Chapter name" />
-                                                <TableColumn fx:id="cWorldColumn" prefWidth="94.0" text="Chapter world" />
+                                                <TableColumn fx:id="priceColumn" prefWidth="70.0" text="Price" />
+                                                <TableColumn fx:id="partNumberColumn" prefWidth="105.0" text="Part number" />
+                                                <TableColumn fx:id="unitOfMeasureColumn" prefWidth="130.0" text="Unit of measure" />
+
+                                                <TableColumn fx:id="manufacturerIdColumn" prefWidth="45.0" text="Manufacturer ID" />
+                                                <TableColumn fx:id="manufacturerNameColumn" prefWidth="94.0" text="Manufacturer name" />
+                                                <TableColumn fx:id="manufacturerEmployeesCountColumn" prefWidth="45.0" text="Manufacturer employees count" />
+                                                <TableColumn fx:id="manufacturerTypeColumn" prefWidth="90.0" text="Manufacturer type" />
+                                                <TableColumn fx:id="manufacturerStreetColumn" prefWidth="90.0" text="Manufacturer street" />
+                                                <TableColumn fx:id="manufacturerZipCodeColumn" prefWidth="90.0" text="Manufacturer zip code" />
                                             </columns>
                                         </TableView>
                                     </children>

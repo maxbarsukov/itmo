@@ -9,7 +9,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #d2ffd7;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="client.controllers.AuthController">
+<AnchorPane prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #d2efff;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="client.controllers.AuthController">
     <children>
         <Label fx:id="titleLabel" alignment="CENTER" layoutX="181.0" layoutY="90.0" prefHeight="52.0" prefWidth="245.0" text="Авторизация" textAlignment="CENTER">
             <font>

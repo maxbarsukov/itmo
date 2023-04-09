@@ -72,7 +72,7 @@ project(':client') {
 
     javafx {
         version = '16'
-        modules = [ 'javafx.controls' ]
+        modules = [ 'javafx.base', 'javafx.controls', 'javafx.fxml' ]
     }
 
     jar {
