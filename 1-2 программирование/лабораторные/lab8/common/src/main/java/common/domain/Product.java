@@ -1,5 +1,6 @@
 package common.domain;
 
+import common.user.User;
 import common.utility.Element;
 
 import java.io.Serial;
@@ -12,7 +13,7 @@ import java.util.Objects;
  */
 public class Product extends Element {
   @Serial
-  private static final long serialVersionUID = 1L;
+  private static final long serialVersionUID = 2L;
 
   private final int id; // Значение поля должно быть больше 0, Значение этого поля должно быть уникальным, Значение этого поля должно генерироваться автоматически
   private String name; // Поле не может быть null, Строка не может быть пустой
@@ -23,15 +24,10 @@ public class Product extends Element {
   private UnitOfMeasure unitOfMeasure; // Поле может быть null
   private Organization manufacturer; // Поле может быть null
 
-  private int creatorId;
+  private User creator;
 
   public Product(int id, String name, Coordinates coordinates, LocalDate creationDate,
-                 Long price, String partNumber, UnitOfMeasure unitOfMeasure, Organization manufacturer) {
-    this(id, name, coordinates, creationDate, price, partNumber, unitOfMeasure, manufacturer, 0);
-  }
-
-  public Product(int id, String name, Coordinates coordinates, LocalDate creationDate,
-                 Long price, String partNumber, UnitOfMeasure unitOfMeasure, Organization manufacturer, int creatorId) {
+                 Long price, String partNumber, UnitOfMeasure unitOfMeasure, Organization manufacturer, User creator) {
     this.id = id;
     this.name = name;
     this.coordinates = coordinates;
@@ -40,18 +36,12 @@ public class Product extends Element {
     this.partNumber = partNumber;
     this.unitOfMeasure = unitOfMeasure;
     this.manufacturer = manufacturer;
-    this.creatorId = creatorId;
+    this.creator = creator;
   }
 
-  public Product copy(int id) {
+  public Product copy(int id, User creator) {
     return new Product(id, this.name, this.coordinates, this.creationDate,
-      this.price, this.partNumber, this.unitOfMeasure, this.manufacturer
-    );
-  }
-
-  public Product copy(int id, int creatorId) {
-    return new Product(id, this.name, this.coordinates, this.creationDate,
-      this.price, this.partNumber, this.unitOfMeasure, this.manufacturer, creatorId
+      this.price, this.partNumber, this.unitOfMeasure, this.manufacturer, creator
     );
   }
 
@@ -114,11 +104,15 @@ public class Product extends Element {
   }
 
   public int getCreatorId() {
-    return creatorId;
+    return creator.getId();
   }
 
-  public void setCreatorId(int creatorId) {
-    this.creatorId = creatorId;
+  public User getCreator() {
+    return creator;
+  }
+
+  public void setCreator(User creator) {
+    this.creator = creator;
   }
 
   @Override
@@ -157,7 +151,7 @@ public class Product extends Element {
     info += "\n partNumber: " + ((partNumber == null) ? null : "'" + partNumber + "'");
     info += "\n Единица измерения: " + unitOfMeasure;
     info += "\n Производитель:\n    " + manufacturer;
-    info += "\n ID создателя: " + creatorId;
+    info += "\n Создатель: " + creator.toString();
     return info;
   }
 }

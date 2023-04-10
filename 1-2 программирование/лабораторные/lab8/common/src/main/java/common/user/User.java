@@ -21,6 +21,10 @@ public class User extends Element {
     return new User(id, getName(), getPassword());
   }
 
+  public User withoutPassword() {
+    return new User(this.getId(), this.getName(), "");
+  }
+
   public int getId() {
     return id;
   }
@@ -35,11 +39,7 @@ public class User extends Element {
 
   @Override
   public String toString() {
-    return "User{" +
-      "id=" + id +
-      ", name='" + name + '\'' +
-      ", password='********'" +
-      '}';
+    return name + ", id#" + id;
   }
 
   @Override

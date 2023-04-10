@@ -1,6 +1,6 @@
 package client.utility;
 
-
+import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.time.format.FormatStyle;
@@ -21,7 +21,14 @@ public class Localizator {
     return bundle.getString(key);
   }
 
+  public String getDate(LocalDate date) {
+    if (date == null) return "null";
+    DateTimeFormatter formatter = DateTimeFormatter.ofLocalizedDate(FormatStyle.FULL).withLocale(bundle.getLocale());
+    return date.format(formatter);
+  }
+
   public String getDate(LocalDateTime date) {
+    if (date == null) return "null";
     DateTimeFormatter formatter = DateTimeFormatter.ofLocalizedDate(FormatStyle.FULL).withLocale(bundle.getLocale());
     return date.format(formatter);
   }

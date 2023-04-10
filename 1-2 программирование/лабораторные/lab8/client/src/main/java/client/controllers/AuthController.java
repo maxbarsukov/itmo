@@ -24,7 +24,12 @@ public class AuthController {
   private Runnable callback;
   private Localizator localizator;
   private UDPClient client;
-  private HashMap<String, Locale> localeMap;
+  private final HashMap<String, Locale> localeMap = new HashMap<>() {{
+    put("Русский", new Locale("ru", "RU"));
+    put("English(IN)", new Locale("en", "IN"));
+    put("Íslenska", new Locale("is", "IS"));
+    put("Svenska", new Locale("sv", "SE"));
+  }};
 
   @FXML
   private Label titleLabel;
@@ -39,13 +44,6 @@ public class AuthController {
 
   @FXML
   void initialize() {
-    localeMap = new HashMap<>() {{
-      put("Русский", new Locale("ru", "RU"));
-      put("English(IN)", new Locale("en", "IN"));
-      put("Íslenska", new Locale("is", "IS"));
-      put("Svenska", new Locale("sv", "SE"));
-    }};
-
     languageComboBox.setItems(FXCollections.observableArrayList(localeMap.keySet()));
 
     languageComboBox.setValue(SessionHandler.getCurrentLanguage());
@@ -53,6 +51,7 @@ public class AuthController {
 
     languageComboBox.getSelectionModel().selectedItemProperty().addListener((observableValue, oldValue, newValue) -> {
       localizator.setBundle(ResourceBundle.getBundle("locales/gui", localeMap.get(newValue)));
+      SessionHandler.setCurrentLanguage(newValue);
       changeLanguage();
     });
     loginField.textProperty().addListener((observableValue, oldValue, newValue) -> {

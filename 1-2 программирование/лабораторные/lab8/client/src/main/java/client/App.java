@@ -1,17 +1,13 @@
 package client;
 
-import client.auth.SessionHandler;
-import client.controllers.AuthController;
+import client.controllers.*;
 import client.network.UDPClient;
 import client.utility.Localizator;
-import common.domain.Product;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 import javafx.application.Application;
 import javafx.scene.Scene;
-import javafx.scene.control.Label;
-import javafx.scene.layout.StackPane;
 import javafx.scene.Parent;
 import javafx.fxml.FXMLLoader;
 import javafx.stage.Stage;
@@ -62,29 +58,39 @@ public class App extends Application {
   }
 
   public void startMain() {
-    System.out.println(SessionHandler.currentUser);
-//    FXMLLoader mainLoader = new FXMLLoader(getClass().getResource("/main.fxml"));
-//    Parent mainRoot = mainLoader.load();
-//    MainController mainController = mainLoader.getController();
-//    mainController.setLocalizator(localizator);
-//    mainController.setStage(mainStage);
-//    mainController.setLogin(login);
-//    mainController.setCollection(collection);
-//    mainController.setCommandManager(commandManager);
-//    FXMLLoader editLoader = new FXMLLoader(getClass().getResource("/edit.fxml"));
-//    Parent editRoot = editLoader.load();
-//    Scene editScene = new Scene(editRoot);
-//    Stage editStage = new Stage();
-//    editStage.setScene(editScene);
-//    editStage.setResizable(false);
-//    editStage.setTitle("Products");
-//    EditController editController = editLoader.getController();
-//    editController.setLocalizator(localizator);
-//    editController.setStage(editStage);
-//    mainController.setEditController(editController);
-//    mainController.setPrevLang(language);
-//    mainStage.setScene(new Scene(mainRoot));
-//    mainController.refresh();
-//    mainStage.show();
+    var mainLoader = new FXMLLoader(getClass().getResource("/main.fxml"));
+    var mainRoot = loadFxml(mainLoader);
+
+    var editLoader = new FXMLLoader(getClass().getResource("/edit.fxml"));
+    var editRoot = loadFxml(editLoader);
+
+    var editScene = new Scene(editRoot);
+    var editStage = new Stage();
+    editStage.setScene(editScene);
+    editStage.setResizable(false);
+    editStage.setTitle("Products");
+    EditController editController = editLoader.getController();
+
+    editController.setStage(editStage);
+    editController.setLocalizator(localizator);
+
+    MainController mainController = mainLoader.getController();
+    mainController.setEditController(editController);
+    mainController.setContext(client, localizator, mainStage);
+
+    mainStage.setScene(new Scene(mainRoot));
+    mainController.refresh();
+    mainStage.show();
+  }
+
+  private Parent loadFxml(FXMLLoader loader) {
+    Parent parent = null;
+    try {
+      parent = loader.load();
+    } catch (IOException e) {
+      logger.error("Can't load " + loader.toString(), e);
+      System.exit(1);
+    }
+    return parent;
   }
 }

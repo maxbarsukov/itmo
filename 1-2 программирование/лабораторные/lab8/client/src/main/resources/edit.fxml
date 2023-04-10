@@ -7,7 +7,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="496.0" prefWidth="400.0" style="-fx-background-color: #d2efff;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="client.controllers.EditController">
+<AnchorPane prefHeight="660.0" prefWidth="500.0" style="-fx-background-color: #d2efff;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="client.controllers.EditController">
     <children>
         <Label fx:id="titleLabel" alignment="CENTER" layoutX="70.0" layoutY="27.0" prefHeight="43.0" prefWidth="270.0" text="Редактирование" textAlignment="CENTER">
             <font>
@@ -60,17 +60,17 @@
                 <Font name="Segoe UI" size="20.0" />
             </font>
         </Label>
-        <Label fx:id="mTypeLabel" layoutX="60.0" layoutY="390.0" text="Manufacturer type">
+        <Label fx:id="mTypeLabel" layoutX="60.0" layoutY="433.0" text="Manufacturer type">
             <font>
                 <Font name="Segoe UI" size="20.0" />
             </font>
         </Label>
-        <Label fx:id="mStreetLabel" layoutX="60.0" layoutY="390.0" text="Manufacturer street">
+        <Label fx:id="mStreetLabel" layoutX="60.0" layoutY="476.0" text="Manufacturer street">
             <font>
                 <Font name="Segoe UI" size="20.0" />
             </font>
         </Label>
-        <Label fx:id="mZipCodeLabel" layoutX="60.0" layoutY="390.0" text="Manufacturer zip code">
+        <Label fx:id="mZipCodeLabel" layoutX="60.0" layoutY="519.0" text="Manufacturer zip code">
             <font>
                 <Font name="Segoe UI" size="20.0" />
             </font>
@@ -96,26 +96,26 @@
                 <Font name="Segoe UI" size="12.0" />
             </font>
         </TextField>
-        <TextField fx:id="partNumberField" layoutX="162.0" layoutY="175.0" prefHeight="26.0" prefWidth="176.0">
+        <TextField fx:id="partNumberField" layoutX="248.0" layoutY="218.0" prefHeight="26.0" prefWidth="90.0">
             <font>
                 <Font name="Segoe UI" size="12.0" />
             </font>
         </TextField>
-        <ChoiceBox fx:id="unitOfMeasureBox" layoutX="242.0" layoutY="218.0" prefHeight="26.0" prefWidth="96.0" />
+        <ChoiceBox fx:id="unitOfMeasureBox" layoutX="248.0" layoutY="261.0" prefHeight="26.0" prefWidth="90.0" />
 
-        <ChoiceBox fx:id="hasManufacturerBox" layoutX="174.0" layoutY="261.0" prefHeight="26.0" prefWidth="165.0" />
-        <TextField fx:id="mNameField" layoutX="225.0" layoutY="347.0" prefHeight="26.0" prefWidth="116.0" />
-        <TextField fx:id="mEmployeesCountField" layoutX="224.0" layoutY="390.0" prefHeight="26.0" prefWidth="116.0" />
-        <ChoiceBox fx:id="mTypeBox" layoutX="174.0" layoutY="261.0" prefHeight="26.0" prefWidth="165.0" />
-        <TextField fx:id="mStreetField" layoutX="225.0" layoutY="347.0" prefHeight="26.0" prefWidth="116.0" />
-        <TextField fx:id="mZipCodeField" layoutX="225.0" layoutY="347.0" prefHeight="26.0" prefWidth="116.0" />
+        <ChoiceBox fx:id="hasManufacturerBox" layoutX="248.0" layoutY="304.0" prefHeight="26.0" prefWidth="90.0" />
+        <TextField fx:id="mNameField" layoutX="340.0" layoutY="347.0" prefHeight="26.0" prefWidth="116.0" />
+        <TextField fx:id="mEmployeesCountField" layoutX="340.0" layoutY="390.0" prefHeight="26.0" prefWidth="116.0" />
+        <ChoiceBox fx:id="mTypeBox" layoutX="340.0" layoutY="433.0" prefHeight="26.0" prefWidth="116.0" />
+        <TextField fx:id="mStreetField" layoutX="340.0" layoutY="476.0" prefHeight="26.0" prefWidth="116.0" />
+        <TextField fx:id="mZipCodeField" layoutX="340.0" layoutY="519.0" prefHeight="26.0" prefWidth="116.0" />
 
-        <Button fx:id="okButton" layoutX="60.0" layoutY="440.0" mnemonicParsing="false" onAction="#ok" prefHeight="38.0" prefWidth="116.0" style="-fx-background-radius: 10; -fx-border-radius: 10;" text="OK">
+        <Button fx:id="okButton" layoutX="60.0" layoutY="560.0" mnemonicParsing="false" onAction="#ok" prefHeight="38.0" prefWidth="116.0" style="-fx-background-radius: 10; -fx-border-radius: 10;" text="OK">
             <font>
                 <Font name="Segoe UI" size="20.0" />
             </font>
         </Button>
-        <Button fx:id="cancelButton" layoutX="224.0" layoutY="440.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="116.0" style="-fx-background-radius: 10; -fx-border-radius: 10;" text="Cancel">
+        <Button fx:id="cancelButton" layoutX="224.0" layoutY="560.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="116.0" style="-fx-background-radius: 10; -fx-border-radius: 10;" text="Cancel">
             <font>
                 <Font name="Segoe UI" size="20.0" />
             </font>

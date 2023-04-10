@@ -149,7 +149,7 @@ public class ProductRepository {
     logger.info("Новый продукт добавлен в БД.");
 
     lock.lock();
-    collection.add(element.copy(newId, user.getId()));
+    collection.add(element.copy(newId, user.withoutPassword()));
     lastSaveTime = LocalDateTime.now();
     lock.unlock();
 
@@ -251,7 +251,7 @@ public class ProductRepository {
         dao.getPartNumber(),
         dao.getUnitOfMeasure(),
         manufacturer,
-        dao.getCreator().getId()
+        new User(dao.getCreator().getId(), dao.getCreator().getName(), "")
       );
     }).collect(Collectors.toList());
 
