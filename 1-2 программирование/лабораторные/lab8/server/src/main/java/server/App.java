@@ -41,7 +41,7 @@ public class App {
 
   public static void main(String[] args) {
     SessionFactoryImpl sessionFactory = (SessionFactoryImpl) getHibernateSessionFactory();
-    var session = sessionFactory.getCurrentSession();
+    var session = sessionFactory.openSession();
     Runtime.getRuntime().addShutdownHook(new Thread(sessionFactory::close));
 
     var persistenceManager = new PersistenceManager(sessionFactory);

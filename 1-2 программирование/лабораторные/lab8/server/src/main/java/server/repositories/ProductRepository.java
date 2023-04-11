@@ -170,9 +170,10 @@ public class ProductRepository {
     } else if (product.getCreatorId() == user.getId()) {
       logger.info("Обновление продукта id#" + product.getId() + " в БД.");
 
-      persistenceManager.update(user, element);
+      var orgId = persistenceManager.update(user, element);
 
       lock.lock();
+      if (orgId != -1) element.getManufacturer().setId(orgId);
       getById(element.getId()).update(element);
       lastSaveTime = LocalDateTime.now();
       lock.unlock();

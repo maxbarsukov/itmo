@@ -36,7 +36,7 @@ public class AuthManager {
     dao.setPasswordDigest(passwordHash);
     dao.setSalt(salt);
 
-    var session = sessionFactory.getCurrentSession();
+    var session = sessionFactory.openSession();
     session.beginTransaction();
     session.persist(dao);
     session.getTransaction().commit();
@@ -49,7 +49,7 @@ public class AuthManager {
 
   public int authenticateUser(String login, String password) throws SQLException {
     logger.info("Аутентификация пользователя " + login);
-    var session = sessionFactory.getCurrentSession();
+    var session = sessionFactory.openSession();
     session.beginTransaction();
 
     var query = session.createQuery("SELECT u FROM users u WHERE u.name = :name");

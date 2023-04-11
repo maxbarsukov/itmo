@@ -74,12 +74,28 @@ public class App extends Application {
     editController.setStage(editStage);
     editController.setLocalizator(localizator);
 
+    var consoleLoader = new FXMLLoader(getClass().getResource("/console.fxml"));
+    var consoleRoot = loadFxml(consoleLoader);
+
+    var consoleScene = new Scene(consoleRoot);
+    var consoleStage = new Stage();
+    consoleStage.setScene(consoleScene);
+    consoleStage.setResizable(false);
+    consoleStage.setTitle("Products - Console");
+    ConsoleController consoleController = consoleLoader.getController();
+
+    consoleController.setStage(consoleStage);
+    consoleController.setLocalizator(localizator);
+
     MainController mainController = mainLoader.getController();
     mainController.setEditController(editController);
+    mainController.setConsoleController(consoleController);
     mainController.setContext(client, localizator, mainStage);
 
     mainStage.setScene(new Scene(mainRoot));
     mainController.refresh();
+    mainStage.setHeight(670);
+    mainStage.setWidth(1080);
     mainStage.show();
   }
 

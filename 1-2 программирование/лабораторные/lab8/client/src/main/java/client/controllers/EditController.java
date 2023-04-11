@@ -1,22 +1,18 @@
 package client.controllers;
 
+import client.auth.SessionHandler;
+import client.ui.DialogManager;
 import client.utility.Localizator;
-import common.domain.OrganizationType;
-import common.domain.Product;
-import common.domain.UnitOfMeasure;
+import common.domain.*;
 import javafx.application.Platform;
-import javafx.beans.Observable;
-import javafx.beans.binding.Bindings;
-import javafx.beans.property.SimpleStringProperty;
-import javafx.beans.property.StringProperty;
 import javafx.collections.FXCollections;
 import javafx.fxml.FXML;
-import javafx.scene.control.Button;
-import javafx.scene.control.ChoiceBox;
-import javafx.scene.control.Label;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
 import javafx.stage.Stage;
 
+import java.math.BigInteger;
+import java.time.LocalDate;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.stream.Collectors;
 
@@ -104,39 +100,132 @@ public class EditController {
       );
     });
 
-//    healthField.textProperty().addListener((observableValue, oldValue, newValue) -> {
-//      if (!newValue.matches("\\d{0,10}")) {
-//        healthField.setText(oldValue);
-//      } else if (newValue.length() == 10 && Long.parseLong(newValue) > Integer.MAX_VALUE || newValue.length() == 1 && Integer.parseInt(newValue) == 0) {
-//        healthField.setText(oldValue);
-//      }
-//    });
-//    xField.textProperty().addListener((observableValue, oldValue, newValue) -> {
-//      if (!newValue.matches("[-\\d]{0,11}")) {
-//        xField.setText(oldValue);
-//      } else {
-//        if (newValue.matches(".+-.*")) {
-//          Platform.runLater(() -> xField.clear());
-//        } else if (newValue.length() == 10 && Long.parseLong(newValue) > Integer.MAX_VALUE || newValue.length() == 11 && Long.parseLong(newValue) < Integer.MIN_VALUE) {
-//          xField.setText(oldValue);
-//        }
-//      }
-//    });
-//    yField.textProperty().addListener((observableValue, oldValue, newValue) -> {
-//      if (!newValue.matches("[-\\d]{0,11}")) {
-//        yField.setText(oldValue);
-//      } else {
-//        if (newValue.matches(".+-.*")) {
-//          Platform.runLater(() -> yField.clear());
-//        } else if (newValue.length() >= 3 && Long.parseLong(newValue) > 941 || newValue.length() == 11 && Long.parseLong(newValue) < Integer.MIN_VALUE) {
-//          yField.setText(oldValue);
-//        }
-//      }
-//    });
+    xField.textProperty().addListener((observableValue, oldValue, newValue) -> {
+      if (!newValue.matches("[-\\d]{0,11}")) {
+        xField.setText(oldValue);
+      } else {
+        if (newValue.matches(".+-.*")) {
+          Platform.runLater(() -> xField.clear());
+        } else if (
+          newValue.length() == 10 && Long.parseLong(newValue) > Integer.MAX_VALUE
+            || newValue.length() == 11 && Long.parseLong(newValue) < Integer.MIN_VALUE
+        ) {
+          xField.setText(oldValue);
+        }
+      }
+    });
+
+    yField.textProperty().addListener((observableValue, oldValue, newValue) -> {
+      if (!newValue.matches("[-\\d]{0,20}")) {
+        yField.setText(oldValue);
+      } else {
+        if (newValue.matches(".+-.*")) {
+          Platform.runLater(() -> yField.clear());
+        } else if (!newValue.isEmpty() && (
+          newValue.length() == 19 && new BigInteger(newValue).compareTo(BigInteger.valueOf(Long.MAX_VALUE)) > 0
+            || newValue.length() == 20 && new BigInteger(newValue).compareTo(BigInteger.valueOf(Long.MIN_VALUE)) < 0
+        )) {
+          yField.setText(oldValue);
+        }
+      }
+    });
+
+    Arrays.asList(priceField, mEmployeesCountField).forEach(field -> {
+      field.textProperty().addListener((observableValue, oldValue, newValue) -> {
+        if (!field.isDisabled()) {
+          if (!newValue.matches("\\d{0,19}")) {
+            field.setText(oldValue);
+          } else {
+            if (!newValue.isEmpty() && (
+              new BigInteger(newValue).compareTo(BigInteger.valueOf(Long.MAX_VALUE)) > 0
+                || new BigInteger(newValue).compareTo(new BigInteger(String.valueOf(0))) <= 0
+            )) {
+              field.setText(oldValue);
+            }
+          }
+
+        }
+      });
+    });
   }
 
   @FXML
-  public void ok() {}
+  public void ok() {
+    nameField.setText(nameField.getText().trim());
+    partNumberField.setText(partNumberField.getText().trim());
+    mNameField.setText(mNameField.getText().trim());
+    mStreetField.setText(mStreetField.getText().trim());
+    mZipCodeField.setText(mZipCodeField.getText().trim());
+
+    var errors = new ArrayList<String>();
+
+    Organization organization = null;
+    if (hasManufacturerBox.getValue().equals("TRUE")) {
+      if (mNameField.getText().isEmpty()) errors.add(
+        "- " + localizator.getKeyString("ManufacturerName") + " " + localizator.getKeyString("CannotBeEmpty")
+      );
+      if (mStreetField.getText().isEmpty()) errors.add(
+        "- " + localizator.getKeyString("ManufacturerStreet") + " " + localizator.getKeyString("CannotBeEmpty")
+      );
+
+      String zipCode = mZipCodeField.getText();
+      if (mZipCodeField.getText().isEmpty()) {
+        zipCode = null;
+      } else if (zipCode.length() < 6) {
+        errors.add("- " + localizator.getKeyString("ZipCodeLength"));
+      }
+
+      OrganizationType organizationType = null;
+      if (mTypeBox.getValue() != null) {
+        organizationType = OrganizationType.valueOf(mTypeBox.getValue());
+      } else {
+        errors.add("- " + localizator.getKeyString("ManufacturerType") + " " + localizator.getKeyString("CannotBeEmpty"));
+      }
+
+      organization = new Organization(
+        -1,
+        mNameField.getText(),
+        Long.parseLong(mEmployeesCountField.getText()),
+        organizationType,
+        new Address(
+          mStreetField.getText(),
+          zipCode
+        )
+      );
+    }
+
+    if (nameField.getText().isEmpty()) errors.add(
+      "- " + localizator.getKeyString("Name") + " " + localizator.getKeyString("CannotBeEmpty")
+    );
+
+    var partNumber = partNumberField.getText();
+    if (partNumberField.getText().isEmpty()) partNumber = null;
+
+    UnitOfMeasure unitOfMeasure = null;
+    if (unitOfMeasureBox.getValue() != null) unitOfMeasure = UnitOfMeasure.valueOf(unitOfMeasureBox.getValue());
+
+    if (!errors.isEmpty()) {
+      DialogManager.createAlert(localizator.getKeyString("Error"), String.join("\n", errors), Alert.AlertType.ERROR, false);
+    } else {
+      var newProduct = new Product(
+        -1,
+        nameField.getText(),
+        new Coordinates(Integer.parseInt(xField.getText()), Long.parseLong(yField.getText())),
+        LocalDate.now(),
+        Long.parseLong(priceField.getText()),
+        partNumber,
+        unitOfMeasure,
+        organization,
+        SessionHandler.getCurrentUser()
+      );
+      if (!newProduct.validate()) {
+        DialogManager.alert("InvalidProduct", localizator);
+      } else {
+        product = newProduct;
+        stage.close();
+      }
+    }
+  }
 
   public Product getProduct() {
     var tmpProduct = product;
@@ -176,6 +265,12 @@ public class EditController {
       mTypeBox.setValue(manufacturer.getType().toString());
       mStreetField.setText(manufacturer.getPostalAddress().getStreet());
       mZipCodeField.setText(manufacturer.getPostalAddress().getZipCode());
+    } else {
+      mNameField.clear();
+      mEmployeesCountField.clear();
+      mTypeBox.valueProperty().setValue(null);
+      mStreetField.clear();
+      mZipCodeField.clear();
     }
   }
 
@@ -196,7 +291,7 @@ public class EditController {
   }
 
   public void show() {
-    stage.showAndWait();
+    if (!stage.isShowing()) stage.showAndWait();
   }
 
   public void setStage(Stage stage) {

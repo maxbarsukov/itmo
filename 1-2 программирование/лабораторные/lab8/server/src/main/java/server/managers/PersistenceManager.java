@@ -31,7 +31,7 @@ public class PersistenceManager {
     dao.setManufacturer(newOrg);
     dao.setCreator(new UserDAO(user));
 
-    var session = sessionFactory.getCurrentSession();
+    var session = sessionFactory.openSession();
     session.beginTransaction();
     session.persist(dao);
     session.getTransaction().commit();
@@ -50,7 +50,7 @@ public class PersistenceManager {
     var dao = new OrganizationDAO(organization);
     dao.setCreator(new UserDAO(user));
 
-    var session = sessionFactory.getCurrentSession();
+    var session = sessionFactory.openSession();
     session.beginTransaction();
     session.persist(dao);
     session.getTransaction().commit();
@@ -61,15 +61,16 @@ public class PersistenceManager {
     return dao;
   }
 
-  public void update(User user, Product product) {
+  public int update(User user, Product product) {
     logger.info("Обновление продукта id#" + product.getId());
-    var session = sessionFactory.getCurrentSession();
+    var session = sessionFactory.openSession();
 
     session.beginTransaction();
     var productDAO = session.get(ProductDAO.class, product.getId());
 
+    int ordDaoId = -1;
     if (product.getManufacturer() != null) {
-      updateOrganization(user, product.getManufacturer());
+      ordDaoId = updateOrganization(user, product.getManufacturer()).getId();
     } else {
       productDAO.setManufacturer(null);
     }
@@ -79,12 +80,14 @@ public class PersistenceManager {
     session.getTransaction().commit();
     session.close();
     logger.info("Обновление продукта выполнено!");
+
+    return ordDaoId;
   }
 
-  public void updateOrganization(User user, Organization organization) {
+  public OrganizationDAO updateOrganization(User user, Organization organization) {
     logger.info("Обновление организации id#" + organization.getId());
 
-    var session = sessionFactory.getCurrentSession();
+    var session = sessionFactory.openSession();
     session.beginTransaction();
     var organizationDAO = session.get(OrganizationDAO.class, organization.getId());
     organizationDAO.update(organization);
@@ -93,12 +96,14 @@ public class PersistenceManager {
     session.getTransaction().commit();
     session.close();
     logger.info("Обновление организации выполнено!");
+
+    return organizationDAO;
   }
 
   public void clear(User user) {
     logger.info("Очищение продуктов пользователя id#" + user.getId() + " из базы данных.");
 
-    var session = sessionFactory.getCurrentSession();
+    var session = sessionFactory.openSession();
     session.beginTransaction();
     var query = session.createQuery("DELETE FROM products WHERE creator.id = :creator");
     query.setParameter("creator", user.getId());
@@ -111,7 +116,7 @@ public class PersistenceManager {
   public int remove(User user, int id) {
     logger.info("Удаление продукта №" + id + " пользователя id#" + user.getId() + ".");
 
-    var session = sessionFactory.getCurrentSession();
+    var session = sessionFactory.openSession();
     session.beginTransaction();
 
     var query = session.createQuery("DELETE FROM products WHERE creator.id = :creator AND id = :id");
@@ -127,7 +132,7 @@ public class PersistenceManager {
   }
 
   public List<ProductDAO> loadProducts() {
-    var session = sessionFactory.getCurrentSession();
+    var session = sessionFactory.openSession();
     session.beginTransaction();
 
     var cq = session.getCriteriaBuilder().createQuery(ProductDAO.class);

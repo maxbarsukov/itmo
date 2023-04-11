@@ -51,7 +51,6 @@ public class Product extends Element {
    */
   @Override
   public boolean validate() {
-    if (id <= 0) return false;
     if (name == null || name.isEmpty()) return false;
     if (coordinates == null) return false;
     if (creationDate == null) return false;

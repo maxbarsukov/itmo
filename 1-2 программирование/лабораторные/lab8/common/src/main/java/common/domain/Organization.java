@@ -39,11 +39,10 @@ public class Organization extends Element {
    */
   @Override
   public boolean validate() {
-    if (id == null || id <= 0) return false;
     if (name == null || name.isEmpty()) return false;
     if (employeesCount <= 0) return false;
     if (type == null) return false;
-    return postalAddress != null;
+    return postalAddress == null || postalAddress.validate();
   }
 
   public int getId() {

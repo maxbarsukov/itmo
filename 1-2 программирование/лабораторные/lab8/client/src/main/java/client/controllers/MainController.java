@@ -2,13 +2,12 @@ package client.controllers;
 
 import client.auth.SessionHandler;
 import client.network.UDPClient;
+import client.script.ScriptExecutor;
 import client.ui.DialogManager;
 import client.utility.Localizator;
 import client.utility.ProductPresenter;
 import common.domain.Product;
-import common.exceptions.APIException;
-import common.exceptions.ErrorResponseException;
-import common.exceptions.InvalidFormException;
+import common.exceptions.*;
 import common.network.requests.*;
 import common.network.responses.*;
 
@@ -23,9 +22,11 @@ import javafx.scene.paint.Color;
 import javafx.scene.shape.*;
 import javafx.scene.text.Font;
 import javafx.scene.text.Text;
+import javafx.stage.FileChooser;
 import javafx.stage.Stage;
 import javafx.util.Duration;
 
+import java.io.File;
 import java.io.IOException;
 import java.net.SocketTimeoutException;
 import java.text.MessageFormat;
@@ -34,6 +35,9 @@ import java.util.*;
 public class MainController {
   private Localizator localizator;
   private UDPClient client;
+
+  private List<Product> collection;
+
   private final HashMap<String, Locale> localeMap = new HashMap<>() {{
     put("Русский", new Locale("ru", "RU"));
     put("English(IN)", new Locale("en", "IN"));
@@ -46,6 +50,7 @@ public class MainController {
   private Random random;
 
   private EditController editController;
+  private ConsoleController consoleController;
   private Stage stage;
 
   @FXML
@@ -247,13 +252,87 @@ public class MainController {
   }
 
   @FXML
-  public void add() {}
+  public void add() {
+    editController.clear();
+    editController.show();
+    var product = editController.getProduct();
+    if (product != null) {
+      product = product.copy(product.getId(), SessionHandler.getCurrentUser());
+
+      try {
+        var response = (AddResponse) client.sendAndReceiveCommand(new AddRequest(product, SessionHandler.getCurrentUser()));
+        if (response.getError() != null && !response.getError().isEmpty()) {
+          throw new APIException(response.getError());
+        }
+
+        loadCollection();
+        DialogManager.createAlert(localizator.getKeyString("Add"), localizator.getKeyString("AddResult"), Alert.AlertType.INFORMATION, false);
+      } catch (APIException | ErrorResponseException e) {
+        DialogManager.alert("AddErr", localizator);
+      } catch (IOException e) {
+        DialogManager.alert("UnavailableError", localizator);
+      }
+    }
+  }
 
   @FXML
-  public void update() {}
+  public void update() {
+    Optional<String> input = DialogManager.createDialog(localizator.getKeyString("Update"), "ID:");
+    if (input.isPresent() && !input.get().equals("")) {
+      try {
+        var id = Integer.parseInt(input.orElse(""));
+        var product = collection.stream()
+          .filter(p -> p.getId() == id)
+          .findAny()
+          .orElse(null);
+        if (product == null) throw new NotFoundException();
+        if (product.getCreatorId() != SessionHandler.getCurrentUser().getId()) throw new BadOwnerException();
+        doubleClickUpdate(product, false);
+      } catch (NumberFormatException e) {
+        DialogManager.alert("NumberFormatException", localizator);
+      } catch (BadOwnerException e) {
+        DialogManager.alert("BadOwnerError", localizator);
+      } catch (NotFoundException e) {
+        DialogManager.alert("NotFoundException", localizator);
+      }
+    }
+  }
 
   @FXML
-  public void removeById() {}
+  public void removeById() {
+    Optional<String> input = DialogManager.createDialog(localizator.getKeyString("RemoveByID"), "ID: ");
+    if (input.isPresent() && !input.get().equals("")) {
+      try {
+        var id = Integer.parseInt(input.orElse(""));
+        var product = collection.stream()
+          .filter(p -> p.getId() == id)
+          .findAny()
+          .orElse(null);
+        if (product == null) throw new NotFoundException();
+        if (product.getCreatorId() != SessionHandler.getCurrentUser().getId()) throw new BadOwnerException();
+
+        var response = (RemoveByIdResponse) client.sendAndReceiveCommand(new RemoveByIdRequest(id, SessionHandler.getCurrentUser()));
+        if (response.getError() != null && !response.getError().isEmpty()) {
+          throw new APIException(response.getError());
+        }
+
+        loadCollection();
+        DialogManager.createAlert(
+          localizator.getKeyString("RemoveByID"), localizator.getKeyString("RemoveByIDSuc"), Alert.AlertType.INFORMATION, false
+        );
+      } catch (APIException | ErrorResponseException e) {
+        DialogManager.alert("RemoveByIDErr", localizator);
+      } catch (IOException e) {
+        DialogManager.alert("UnavailableError", localizator);
+      } catch (NumberFormatException e) {
+        DialogManager.alert("NumberFormatException", localizator);
+      } catch (BadOwnerException e) {
+        DialogManager.alert("BadOwnerError", localizator);
+      } catch (NotFoundException e) {
+        DialogManager.alert("NotFoundException", localizator);
+      }
+    }
+  }
 
   @FXML
   public void clear() {
@@ -275,7 +354,14 @@ public class MainController {
   }
 
   @FXML
-  public void executeScript() {}
+  public void executeScript() {
+    var chooser = new FileChooser();
+    chooser.setInitialDirectory(new File("."));
+    var file = chooser.showOpenDialog(stage);
+    if (file != null) {
+      (new ScriptExecutor(client, consoleController)).run(file.getAbsolutePath());
+    }
+  }
 
   @FXML
   public void head() {
@@ -299,10 +385,60 @@ public class MainController {
   }
 
   @FXML
-  public void addIfMax() {}
+  public void addIfMax() {
+    editController.clear();
+    editController.show();
+    var product = editController.getProduct();
+    if (product != null) {
+      product = product.copy(product.getId(), SessionHandler.getCurrentUser());
+
+      try {
+        var response = (AddIfMaxResponse) client.sendAndReceiveCommand(new AddIfMaxRequest(product, SessionHandler.getCurrentUser()));
+        if (response.getError() != null && !response.getError().isEmpty()) {
+          throw new APIException(response.getError());
+        }
+
+        loadCollection();
+        if (response.isAdded) {
+          DialogManager.createAlert(localizator.getKeyString("Add"), localizator.getKeyString("AddResult"), Alert.AlertType.INFORMATION, false);
+        } else {
+          DialogManager.createAlert(localizator.getKeyString("Add"), localizator.getKeyString("AddNotMax"), Alert.AlertType.INFORMATION, false);
+        }
+      } catch (APIException | ErrorResponseException e) {
+        DialogManager.alert("AddErr", localizator);
+      } catch (IOException e) {
+        DialogManager.alert("UnavailableError", localizator);
+      }
+    }
+  }
 
   @FXML
-  public void addIfMin() {}
+  public void addIfMin() {
+    editController.clear();
+    editController.show();
+    var product = editController.getProduct();
+    if (product != null) {
+      product = product.copy(product.getId(), SessionHandler.getCurrentUser());
+
+      try {
+        var response = (AddIfMinResponse) client.sendAndReceiveCommand(new AddIfMinRequest(product, SessionHandler.getCurrentUser()));
+        if (response.getError() != null && !response.getError().isEmpty()) {
+          throw new APIException(response.getError());
+        }
+
+        loadCollection();
+        if (response.isAdded) {
+          DialogManager.createAlert(localizator.getKeyString("Add"), localizator.getKeyString("AddResult"), Alert.AlertType.INFORMATION, false);
+        } else {
+          DialogManager.createAlert(localizator.getKeyString("Add"), localizator.getKeyString("AddNotMin"), Alert.AlertType.INFORMATION, false);
+        }
+      } catch (APIException | ErrorResponseException e) {
+        DialogManager.alert("AddErr", localizator);
+      } catch (IOException e) {
+        DialogManager.alert("UnavailableError", localizator);
+      }
+    }
+  }
 
   @FXML
   public void sumOfPrice() {
@@ -405,7 +541,7 @@ public class MainController {
       while (true) {
         Platform.runLater(this::loadCollection);
         try {
-          Thread.sleep(5_000);
+          Thread.sleep(10_000);
         } catch (InterruptedException ignored) {}
       }
     });
@@ -532,16 +668,31 @@ public class MainController {
   }
 
   private void doubleClickUpdate(Product product) {
+    doubleClickUpdate(product, true);
+  }
+
+  private void doubleClickUpdate(Product product, boolean ignoreAnotherUser) {
+    if (ignoreAnotherUser && product.getCreatorId() != SessionHandler.getCurrentUser().getId()) return;
+
     editController.fill(product);
     editController.show();
 
     var updatedProduct = editController.getProduct();
     if (updatedProduct != null) {
+      updatedProduct = updatedProduct.copy(product.getId(), SessionHandler.getCurrentUser());
+
+      if (product.getManufacturer() != null && updatedProduct.getManufacturer() != null) {
+        updatedProduct.getManufacturer().setId(product.getManufacturer().getId());
+      }
+
       try {
         if (!updatedProduct.validate()) throw new InvalidFormException();
 
         var response = (UpdateResponse) client.sendAndReceiveCommand(new UpdateRequest(product.getId(), updatedProduct, SessionHandler.getCurrentUser()));
         if (response.getError() != null && !response.getError().isEmpty()) {
+          if (response.getError().contains("BAD_OWNER")) {
+            throw new BadOwnerException();
+          }
           throw new APIException(response.getError());
         }
 
@@ -557,6 +708,8 @@ public class MainController {
         DialogManager.createAlert(
           localizator.getKeyString("Update"), localizator.getKeyString("InvalidProduct"), Alert.AlertType.INFORMATION, false
         );
+      } catch (BadOwnerException e) {
+        DialogManager.alert("BadOwnerError", localizator);
       }
     }
   }
@@ -602,6 +755,7 @@ public class MainController {
   }
 
   public void setCollection(List<Product> collection) {
+    this.collection = collection;
     tableTable.setItems(FXCollections.observableArrayList(collection));
   }
 
@@ -620,5 +774,10 @@ public class MainController {
   public void setEditController(EditController editController) {
     this.editController = editController;
     editController.changeLanguage();
+  }
+
+  public void setConsoleController(ConsoleController consoleController) {
+    this.consoleController = consoleController;
+    consoleController.changeLanguage();
   }
 }
