@@ -11,14 +11,14 @@ import common.network.responses.AuthenticateResponse;
 import common.network.responses.RegisterResponse;
 import common.user.User;
 
+import org.apache.commons.validator.routines.EmailValidator;
+
 import javafx.collections.FXCollections;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
 
 import java.io.IOException;
-import java.util.HashMap;
-import java.util.Locale;
-import java.util.ResourceBundle;
+import java.util.*;
 
 public class AuthController {
   private Runnable callback;
@@ -55,7 +55,7 @@ public class AuthController {
       changeLanguage();
     });
     loginField.textProperty().addListener((observableValue, oldValue, newValue) -> {
-      if (!newValue.matches("\\w{0,16}")) {
+      if (!newValue.matches(".{0,40}")) {
         loginField.setText(oldValue);
       }
     });
@@ -66,20 +66,15 @@ public class AuthController {
     });
   }
 
-  @FXML
-  public void ok() {
-    if (signUpButton.isSelected()) {
-      register();
-    } else {
-      authenticate();
-    }
-  }
 
+  
   public void register() {
     try {
       if (loginField.getText().length() < 1  || loginField.getText().length() > 40 || passwordField.getText().length() < 1) {
         throw new InvalidFormException();
       }
+
+      if (!validateRegister()) return;
 
       var user = new User(-1, loginField.getText(), passwordField.getText());
       var response = (RegisterResponse) client.sendAndReceiveCommand(new RegisterRequest(user));
@@ -107,6 +102,55 @@ public class AuthController {
         localizator.getKeyString("Error"), e.getMessage(), Alert.AlertType.ERROR, false
       );
     }
+  }
+
+  private boolean validateRegister() {
+    var emailValid = EmailValidator.getInstance(true).isValid(loginField.getText());
+
+    var passwordErrors = validatePassword(passwordField.getText());
+    if (!passwordErrors.isEmpty()) {
+      String message;
+      if (!emailValid) {
+        message = localizator.getKeyString("EmailInvalid") + "\n\n" + localizator.getKeyString("PasswordBad");
+      } else {
+        message = localizator.getKeyString("PasswordBad");
+      }
+      message += "\n- " + String.join("\n- ", passwordErrors);
+      DialogManager.createAlert(localizator.getKeyString("Error"), message, Alert.AlertType.ERROR, false);
+      return false;
+    } else if (!emailValid) {
+      DialogManager.alert("EmailInvalid", localizator);
+      return false;
+    }
+    return true;
+  }
+
+  private List<String> validatePassword(String password) {
+    var errors = new ArrayList<String>();
+    if (password.length() < 8) {
+      errors.add(localizator.getKeyString("PasswordMin6"));
+    }
+
+    int upChars = 0, lowChars = 0, digits = 0, special = 0;
+    for(var i = 0; i < password.length(); i++) {
+      var ch = password.charAt(i);
+      if (Character.isUpperCase(ch)) {
+        upChars++;
+      } else if(Character.isLowerCase(ch)) {
+        lowChars++;
+      } else if(Character.isDigit(ch)) {
+        digits++;
+      } else {
+        special++;
+      }
+    }
+
+    if (upChars == 0) errors.add(localizator.getKeyString("PasswordContainUp"));
+    if (lowChars == 0) errors.add(localizator.getKeyString("PasswordContainLow"));
+    if (digits == 0) errors.add(localizator.getKeyString("PasswordContainDigit"));
+    if (special == 0) errors.add(localizator.getKeyString("PasswordContainSpecial"));
+
+    return errors;
   }
 
   public void authenticate() {

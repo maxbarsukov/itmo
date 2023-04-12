@@ -16,7 +16,7 @@
                 <Font name="Segoe UI Black" size="35.0" />
             </font>
         </Label>
-        <TextField fx:id="loginField" alignment="CENTER" layoutX="200.0" layoutY="169.0" prefHeight="30.0" prefWidth="200.0" promptText="Логин">
+        <TextField fx:id="loginField" alignment="CENTER" layoutX="200.0" layoutY="169.0" prefHeight="30.0" prefWidth="200.0" promptText="E-mail">
             <font>
                 <Font name="Segoe UI" size="16.0" />
             </font>

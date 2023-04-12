@@ -40,21 +40,10 @@ public class App extends Application {
   }
 
   @Override
-  public void start(Stage stage) throws Exception {
+  public void start(Stage stage) {
     localizator = new Localizator(ResourceBundle.getBundle("locales/gui", new Locale("ru", "RU")));
     mainStage = stage;
-
-    var authLoader = new FXMLLoader(getClass().getResource("/auth.fxml"));
-    Parent authRoot = authLoader.load();
-    AuthController authController = authLoader.getController();
-    authController.setCallback(this::startMain);
-    authController.setClient(client);
-    authController.setLocalizator(localizator);
-
-    mainStage.setScene(new Scene(authRoot));
-    mainStage.setTitle("Products");
-    mainStage.setResizable(false);
-    mainStage.show();
+    authStage();
   }
 
   public void startMain() {
@@ -74,28 +63,28 @@ public class App extends Application {
     editController.setStage(editStage);
     editController.setLocalizator(localizator);
 
-    var consoleLoader = new FXMLLoader(getClass().getResource("/console.fxml"));
-    var consoleRoot = loadFxml(consoleLoader);
-
-    var consoleScene = new Scene(consoleRoot);
-    var consoleStage = new Stage();
-    consoleStage.setScene(consoleScene);
-    consoleStage.setResizable(false);
-    consoleStage.setTitle("Products - Console");
-    ConsoleController consoleController = consoleLoader.getController();
-
-    consoleController.setStage(consoleStage);
-    consoleController.setLocalizator(localizator);
-
     MainController mainController = mainLoader.getController();
     mainController.setEditController(editController);
-    mainController.setConsoleController(consoleController);
     mainController.setContext(client, localizator, mainStage);
+    mainController.setAuthCallback(this::authStage);
 
     mainStage.setScene(new Scene(mainRoot));
+    mainController.setRefreshing(true);
     mainController.refresh();
-    mainStage.setHeight(670);
-    mainStage.setWidth(1080);
+    mainStage.show();
+  }
+
+  private void authStage() {
+    var authLoader = new FXMLLoader(getClass().getResource("/auth.fxml"));
+    Parent authRoot = loadFxml(authLoader);
+    AuthController authController = authLoader.getController();
+    authController.setCallback(this::startMain);
+    authController.setClient(client);
+    authController.setLocalizator(localizator);
+
+    mainStage.setScene(new Scene(authRoot));
+    mainStage.setTitle("Products");
+    mainStage.setResizable(false);
     mainStage.show();
   }
 
@@ -108,5 +97,9 @@ public class App extends Application {
       System.exit(1);
     }
     return parent;
+  }
+
+  public Stage getMainStage() {
+    return mainStage;
   }
 }

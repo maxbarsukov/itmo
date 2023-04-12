@@ -92,6 +92,11 @@
                             <Font name="Segoe UI" size="16.0" />
                         </font>
                     </Button>
+                    <Button fx:id="logoutButton" mnemonicParsing="false" onAction="#logout" style="-fx-background-radius: 10; -fx-border-radius: 10;" text="Log Out">
+                        <font>
+                            <Font name="Segoe UI" size="16.0" />
+                        </font>
+                    </Button>
                 </FlowPane>
                 <TabPane layoutX="-1.0" prefHeight="492.0" prefWidth="1080.0" tabClosingPolicy="UNAVAILABLE">
                     <tabs>

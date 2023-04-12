@@ -36,6 +36,9 @@ public class MainController {
   private Localizator localizator;
   private UDPClient client;
 
+  private Runnable authCallback;
+  private volatile boolean isRefreshing = false;
+
   private List<Product> collection;
 
   private final HashMap<String, Locale> localeMap = new HashMap<>() {{
@@ -50,7 +53,6 @@ public class MainController {
   private Random random;
 
   private EditController editController;
-  private ConsoleController consoleController;
   private Stage stage;
 
   @FXML
@@ -86,6 +88,8 @@ public class MainController {
   private Button filterContainsPartNumberButton;
   @FXML
   private Button exitButton;
+  @FXML
+  private Button logoutButton;
 
   @FXML
   private Tab tableTab;
@@ -216,7 +220,15 @@ public class MainController {
     System.exit(0);
   }
 
-    @FXML
+  @FXML
+  public void logout() {
+    SessionHandler.setCurrentUser(null);
+    SessionHandler.setCurrentLanguage("Русский");
+    setRefreshing(false);
+    authCallback.run();
+  }
+
+  @FXML
   public void help() {
     try {
       var response = (HelpResponse) client.sendAndReceiveCommand(new HelpRequest(SessionHandler.getCurrentUser()));
@@ -359,7 +371,12 @@ public class MainController {
     chooser.setInitialDirectory(new File("."));
     var file = chooser.showOpenDialog(stage);
     if (file != null) {
-      (new ScriptExecutor(client, consoleController)).run(file.getAbsolutePath());
+      var result = (new ScriptExecutor(this, localizator)).run(file.getAbsolutePath());
+      if (result == ScriptExecutor.ExitCode.ERROR) {
+        DialogManager.alert("ScriptExecutionErr", localizator);
+      } else {
+        DialogManager.info("ScriptExecutionSuc", localizator);
+      }
     }
   }
 
@@ -538,14 +555,16 @@ public class MainController {
 
   public void refresh() {
     Thread refresher = new Thread(() -> {
-      while (true) {
+      while (isRefreshing()) {
         Platform.runLater(this::loadCollection);
         try {
           Thread.sleep(10_000);
-        } catch (InterruptedException ignored) {}
+        } catch (InterruptedException ignored) {
+          Thread.currentThread().interrupt();
+          System.out.println("Thread was interrupted, Failed to complete operation");
+        }
       }
     });
-
     refresher.start();
   }
 
@@ -718,6 +737,7 @@ public class MainController {
     userLabel.setText(localizator.getKeyString("UserLabel") + " " + SessionHandler.getCurrentUser().getName());
 
     exitButton.setText(localizator.getKeyString("Exit"));
+    logoutButton.setText(localizator.getKeyString("LogOut"));
     helpButton.setText(localizator.getKeyString("Help"));
     infoButton.setText(localizator.getKeyString("Info"));
     addButton.setText(localizator.getKeyString("Add"));
@@ -759,6 +779,10 @@ public class MainController {
     tableTable.setItems(FXCollections.observableArrayList(collection));
   }
 
+  public void setAuthCallback(Runnable authCallback) {
+    this.authCallback = authCallback;
+  }
+
   public void setContext(UDPClient client, Localizator localizator, Stage stage) {
     this.client = client;
     this.localizator = localizator;
@@ -771,13 +795,16 @@ public class MainController {
     userLabel.setText(localizator.getKeyString("UserLabel") + " " + SessionHandler.getCurrentUser().getName());
   }
 
+  public boolean isRefreshing() {
+    return isRefreshing;
+  }
+
+  public void setRefreshing(boolean refreshing) {
+    isRefreshing = refreshing;
+  }
+
   public void setEditController(EditController editController) {
     this.editController = editController;
     editController.changeLanguage();
-  }
-
-  public void setConsoleController(ConsoleController consoleController) {
-    this.consoleController = consoleController;
-    consoleController.changeLanguage();
   }
 }
