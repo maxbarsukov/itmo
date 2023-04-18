@@ -67,7 +67,7 @@ public class AuthController {
   }
 
 
-  
+
   public void register() {
     try {
       if (loginField.getText().length() < 1  || loginField.getText().length() > 40 || passwordField.getText().length() < 1) {
