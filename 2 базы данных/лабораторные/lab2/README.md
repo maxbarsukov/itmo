@@ -1,4 +1,4 @@
-# Лабораторная работа [#3](https://se.ifmo.ru/courses/db#lab3)
+# Лабораторная работа [#2](https://se.ifmo.ru/courses/db#lab2)
 
 ## Вариант 1501
 
