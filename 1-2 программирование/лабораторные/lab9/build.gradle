@@ -1,6 +1,7 @@
 plugins {
     id 'java'
     id 'war'
+    id 'org.flywaydb.flyway' version '9.8.1'
 }
 
 group 'server'
@@ -29,10 +30,40 @@ dependencies {
     compileOnly('jakarta.ws.rs:jakarta.ws.rs-api:3.1.0')
     compileOnly('jakarta.servlet:jakarta.servlet-api:6.0.0')
     compileOnly('jakarta.websocket:jakarta.websocket-api:2.1.0')
+    compileOnly('jakarta.json:jakarta.json-api:2.1.1')
+
+    implementation('org.postgresql:postgresql:42.6.0')
+    implementation('org.hibernate:hibernate-core-jakarta:5.6.15.Final')
+
+    implementation('io.jsonwebtoken:jjwt-api:0.11.5')
+    runtimeOnly('io.jsonwebtoken:jjwt-impl:0.11.5')
+    runtimeOnly('io.jsonwebtoken:jjwt-jackson:0.11.5')
+
+    runtimeOnly('org.flywaydb:flyway-gradle-plugin:9.16.1')
+
+    implementation('commons-codec:commons-codec:1.15')
+
+    implementation('org.slf4j:slf4j-api:2.0.6')
+    implementation('ch.qos.logback:logback-classic:1.4.6')
+
+    compileOnly('org.projectlombok:lombok:1.18.26')
+    annotationProcessor('org.projectlombok:lombok:1.18.26')
+    testCompileOnly('org.projectlombok:lombok:1.18.26')
+    testAnnotationProcessor('org.projectlombok:lombok:1.18.26')
 
     testImplementation("org.junit.jupiter:junit-jupiter-api:${junitVersion}")
     testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine:${junitVersion}")
 }
+
+flyway {
+    locations = ["filesystem:./sql/migration"]
+    url = "jdbc:postgresql://127.0.0.1:5432/lab9"
+    user = "s367081"
+    password = "s367081"
+    schemas = ['public']
+}
+
+flywayMigrate.dependsOn(classes)
 
 test {
     useJUnitPlatform()

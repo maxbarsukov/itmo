@@ -3,7 +3,7 @@ services:
     postgres:
         image: postgres:14.2
         environment:
-            POSTGRES_DB: "studs"
+            POSTGRES_DB: "lab9"
             POSTGRES_USER: "s367081"
             POSTGRES_PASSWORD: "s367081"
         ports:

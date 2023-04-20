@@ -4,6 +4,23 @@
              xsi:schemaLocation="https://jakarta.ee/xml/ns/persistence https://jakarta.ee/xml/ns/persistence/persistence_3_0.xsd"
              version="3.0">
     <persistence-unit name="default">
+        <class>server.models.Product</class>
+        <class>server.models.Organization</class>
+        <class>server.models.User</class>
 
+        <properties>
+            <!-- database configurations -->
+            <property name="hibernate.dialect" value="org.hibernate.dialect.PostgreSQL95Dialect"/>
+            <property name="hibernate.connection.driver_class" value="org.postgresql.Driver"/>
+            <property name="hibernate.hbm2ddl.auto" value="validate"/>
+            <property name="hibernate.show_sql" value="true"/>
+            <property name="hibernate.format_sql" value="true"/>
+            <property name="hibernate.connection.pool_size" value="100"/>
+            <property name="hibernate.current_session_context_class" value="thread"/>
+
+            <property name="hibernate.connection.url" value="jdbc:postgresql://127.0.0.1:5432/lab9"/>
+            <property name="hibernate.connection.password" value="s367081"/>
+            <property name="hibernate.connection.username" value="s367081"/>
+        </properties>
     </persistence-unit>
 </persistence>
