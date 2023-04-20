@@ -1,4 +1,4 @@
-package server;
+package server.rest.controllers;
 
 import jakarta.json.Json;
 import jakarta.inject.Inject;
