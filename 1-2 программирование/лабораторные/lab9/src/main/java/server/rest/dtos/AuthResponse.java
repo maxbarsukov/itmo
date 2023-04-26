@@ -1,4 +1,4 @@
-package server.rest.responses;
+package server.rest.dtos;
 import lombok.Getter;
 
 @Getter

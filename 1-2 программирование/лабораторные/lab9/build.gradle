@@ -31,6 +31,7 @@ dependencies {
     compileOnly('jakarta.servlet:jakarta.servlet-api:6.0.0')
     compileOnly('jakarta.websocket:jakarta.websocket-api:2.1.0')
     compileOnly('jakarta.json:jakarta.json-api:2.1.1')
+    compileOnly('jakarta.json.bind:jakarta.json.bind-api:3.0.0')
 
     implementation('org.postgresql:postgresql:42.6.0')
     implementation('org.hibernate:hibernate-core-jakarta:5.6.15.Final')

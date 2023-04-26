@@ -3,17 +3,25 @@ package server.services.auth;
 import com.google.common.hash.Hashing;
 import jakarta.ejb.*;
 
+import jakarta.inject.Inject;
 import org.apache.commons.lang3.RandomStringUtils;
+import server.configuration.Configurable;
 import server.models.User;
 import server.daos.UserDAO;
-import server.rest.responses.*;
+import server.rest.dtos.*;
 
 import java.nio.charset.StandardCharsets;
 import java.util.Optional;
 
+@Stateless
 public class AuthService {
-  private final int SALT_LENGTH = 10;
-  private final String pepper = "PEPPER";
+  @Inject
+  @Configurable("authentication.auth.saltLength")
+  private Integer saltLength;
+
+  @Inject
+  @Configurable("authentication.auth.pepper")
+  private String pepper;
 
   @EJB
   private UserDAO users;
@@ -75,7 +83,7 @@ public class AuthService {
   }
 
   private String generateSalt() {
-    return RandomStringUtils.randomAlphanumeric(SALT_LENGTH);
+    return RandomStringUtils.randomAlphanumeric(saltLength);
   }
 
   private String generatePasswordHash(String password, String salt) {

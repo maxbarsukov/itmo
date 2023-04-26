@@ -5,9 +5,10 @@ import io.jsonwebtoken.*;
 import jakarta.ejb.Stateless;
 import jakarta.inject.Inject;
 import org.slf4j.Logger;
+
+import server.configuration.Configurable;
 import server.utils.KeywordKeyGenerator;
 
-import java.security.Key;
 import java.util.Optional;
 
 @Stateless
@@ -15,13 +16,18 @@ public class TokenService {
   @Inject
   private Logger logger;
 
-  private final Key key = new KeywordKeyGenerator("MY_SUPER_KEY").generate();
+  @Inject
+  @Configurable("authentication.jwt.secret")
+  private String secret;
 
   /**
    * @param userId user ID to generate token for
    * @return Generated token
    */
   public String generate(String userId) {
+    logger.info(secret);
+    var key = new KeywordKeyGenerator(secret).generate();
+    logger.info(String.valueOf(key));
     return Jwts.builder()
       .setSubject(userId)
       .signWith(key, SignatureAlgorithm.HS512)
@@ -34,6 +40,7 @@ public class TokenService {
    */
   public Optional<String> verify(String token) {
     try {
+      var key = new KeywordKeyGenerator(secret).generate();
       Jws<Claims> claimsJws = Jwts.parserBuilder()
         .setSigningKey(key)
         .build()
