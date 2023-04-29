@@ -28,6 +28,10 @@ public class AuthService {
   @EJB
   private TokenService tokenService;
 
+  public Optional<User> getUserById(Integer id) {
+    return users.findById(id);
+  }
+
   /**
    * Registers and returns token if everything is fine.
    *
@@ -35,10 +39,10 @@ public class AuthService {
    * @param password password to register
    * @return AuthResponse with token if correct / AuthResponse with errorMessage if not
    */
-  public RegisterResponse register(String username, String password) {
+  public AuthResponse register(String username, String password) {
     final Optional<User> optionalUser = users.findByName(username);
     if (optionalUser.isPresent()) {
-      return RegisterResponse.message("USER_ALREADY_EXISTS");
+      return AuthResponse.message("USER_ALREADY_EXISTS");
     }
 
     var salt = generateSalt();
@@ -47,7 +51,7 @@ public class AuthService {
     var user = new User(username, passwordHash, salt);
     users.save(user);
 
-    return RegisterResponse.registered(tokenService.generate(String.valueOf(user.getId())), user);
+    return AuthResponse.registered(tokenService.generate(String.valueOf(user.getId())), user);
   }
 
   /**
@@ -65,7 +69,7 @@ public class AuthService {
 
     var user = optionalUser.get();
     if (user.getPasswordDigest().equals(generatePasswordHash(password, user.getSalt()))) {
-      return AuthResponse.token(tokenService.generate(String.valueOf(user.getId())));
+      return AuthResponse.token(tokenService.generate(String.valueOf(user.getId())), user);
     }
 
     return AuthResponse.message("WRONG_PASSWORD");

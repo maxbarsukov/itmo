@@ -17,6 +17,7 @@ import java.util.Optional;
 
 import static jakarta.ws.rs.core.HttpHeaders.AUTHORIZATION;
 import static jakarta.ws.rs.core.Response.Status.FORBIDDEN;
+import static jakarta.ws.rs.core.Response.Status.UNAUTHORIZED;
 
 @Secured
 @Priority(Priorities.AUTHENTICATION)
@@ -33,7 +34,7 @@ public class AuthenticationFilter implements ContainerRequestFilter {
 
     if (token.isEmpty()) {
       containerRequestContext.abortWith(
-        Response.status(FORBIDDEN).entity(new ErrorResponse("MISSING_AUTHORIZATION_TOKEN").json()).build()
+        Response.status(UNAUTHORIZED).entity(new ErrorResponse("MISSING_AUTHORIZATION_TOKEN").json()).build()
       );
       return;
     }

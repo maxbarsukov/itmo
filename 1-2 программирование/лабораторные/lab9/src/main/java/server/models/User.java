@@ -27,12 +27,12 @@ public class User implements Serializable {
   @Column(name="salt", length=10, nullable=false)
   private String salt;
 
-  @OneToMany(cascade=CascadeType.REMOVE, fetch=FetchType.EAGER)
+  @OneToMany(cascade=CascadeType.REMOVE, fetch=FetchType.LAZY)
   @JoinColumn(name="creator_id")
   @ToString.Exclude
   private List<Organization> organizations;
 
-  @OneToMany(cascade=CascadeType.REMOVE, fetch=FetchType.EAGER)
+  @OneToMany(cascade=CascadeType.REMOVE, fetch=FetchType.LAZY)
   @JoinColumn(name="creator_id")
   @ToString.Exclude
   private List<Product> products;;

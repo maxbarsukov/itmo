@@ -4,7 +4,6 @@ import io.jsonwebtoken.*;
 
 import jakarta.ejb.Stateless;
 import jakarta.inject.Inject;
-import org.slf4j.Logger;
 
 import server.configuration.Configurable;
 import server.utils.KeywordKeyGenerator;
@@ -14,9 +13,6 @@ import java.util.Optional;
 @Stateless
 public class TokenService {
   @Inject
-  private Logger logger;
-
-  @Inject
   @Configurable("authentication.jwt.secret")
   private String secret;
 
@@ -25,9 +21,7 @@ public class TokenService {
    * @return Generated token
    */
   public String generate(String userId) {
-    logger.info(secret);
     var key = new KeywordKeyGenerator(secret).generate();
-    logger.info(String.valueOf(key));
     return Jwts.builder()
       .setSubject(userId)
       .signWith(key, SignatureAlgorithm.HS512)
@@ -41,6 +35,7 @@ public class TokenService {
   public Optional<String> verify(String token) {
     try {
       var key = new KeywordKeyGenerator(secret).generate();
+
       Jws<Claims> claimsJws = Jwts.parserBuilder()
         .setSigningKey(key)
         .build()
@@ -48,7 +43,7 @@ public class TokenService {
 
       return Optional.of(claimsJws.getBody().getSubject());
     } catch (JwtException e) {
-      logger.error("Bad JWT token", e);
+      System.err.println("Bad JWT token: " + e.getLocalizedMessage());
       return Optional.empty();
     }
   }

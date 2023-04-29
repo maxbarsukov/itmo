@@ -32,6 +32,7 @@ public class Organization implements Serializable {
   @NotBlank(message="EMPTY_ORG_NAME")
   @Column(name="name", nullable=false)
   private String name;
+
   @Min(value=1L, message="ORG_EMPLOYEES_COUNT_NOT_POSITIVE")
   @Column(name="employees_count", nullable=false)
   private long employeesCount;
@@ -48,7 +49,7 @@ public class Organization implements Serializable {
   @Column(name="zip_code")
   private String zipCode;
 
-  @OneToMany(cascade=CascadeType.REMOVE, fetch=FetchType.EAGER)
+  @OneToMany(cascade=CascadeType.REMOVE, fetch=FetchType.LAZY)
   @JoinColumn(name="manufacturer_id")
   @ToString.Exclude
   private List<Product> products;
