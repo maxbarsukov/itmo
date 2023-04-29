@@ -5,13 +5,10 @@
 -- 'K' — километры
 -- 'N' — морские мили
 
-CREATE OR REPLACE FUNCTION calculate_laboratory_distance(lab1_id int, lab2_id int, units varchar)
+CREATE OR REPLACE FUNCTION calculate_distance(loc1_id int, loc2_id int, units varchar)
 RETURNS float AS $dist$
     DECLARE
         dist float := 0;
-        loc1_id int;
-        loc2_id int;
-
         point1 point;
         point2 point;
 
@@ -27,23 +24,21 @@ RETURNS float AS $dist$
         theta float;
         radtheta float;
     BEGIN
-        SELECT laboratories.location_id INTO loc1_id FROM laboratories WHERE laboratories.id = lab1_id;
-        IF NOT FOUND THEN
-            RAISE EXCEPTION 'laboratory % not found', lab1_id;
-        END IF;
-        SELECT laboratories.location_id INTO loc2_id FROM laboratories WHERE laboratories.id = lab2_id;
-        IF NOT FOUND THEN
-            RAISE EXCEPTION 'laboratory % not found', lab2_id;
-        END IF;
-
         IF loc1_id IS NULL OR loc2_id IS NULL THEN
-            RAISE EXCEPTION 'No location for laboratories';
+            RAISE EXCEPTION 'Location is null!';
         END IF;
 
         SELECT locations.coords INTO point1 FROM locations WHERE locations.id = loc1_id;
+        IF NOT FOUND THEN
+            RAISE EXCEPTION 'location % not found', lab1_id;
+        END IF;
         SELECT locations.coords INTO point2 FROM locations WHERE locations.id = loc2_id;
+        IF NOT FOUND THEN
+            RAISE EXCEPTION 'location % not found', lab1_id;
+        END IF;
+
         IF point1 IS NULL OR point2 IS NULL THEN
-            RAISE EXCEPTION 'Null coords in laboratory location';
+            RAISE EXCEPTION 'Null coords in location';
         END IF;
 
         lat1 := point1[0];
@@ -73,3 +68,33 @@ RETURNS float AS $dist$
         END IF;
     END;
 $dist$ LANGUAGE plpgsql;
+
+
+CREATE OR REPLACE FUNCTION update_distance_to_laboratory() RETURNS trigger AS $update_distance_to_laboratory$
+    DECLARE
+        person_id int;
+        cur_loc_id int;
+        lab_loc_id int;
+    BEGIN
+        NEW.distance_to_laboratory := NULL;
+
+        IF NEW.laboratory_id IS NULL THEN
+            RAISE EXCEPTION 'laboratory_id cannot be null';
+        END IF;
+        IF NEW.employee_id IS NULL THEN
+            RAISE EXCEPTION 'employee_id cannot be null';
+        END IF;
+
+        SELECT employees.person_id INTO person_id FROM employees WHERE employees.id = NEW.employee_id;
+        SELECT people.current_location_id INTO cur_loc_id FROM people WHERE people.id = person_id;
+        SELECT laboratories.location_id INTO lab_loc_id FROM laboratories WHERE laboratories.id = NEW.laboratory_id;
+
+        NEW.distance_to_laboratory := calculate_distance(cur_loc_id, lab_loc_id, 'K');
+        RETURN NEW;
+    END;
+$update_distance_to_laboratory$ LANGUAGE plpgsql;
+
+
+CREATE OR REPLACE TRIGGER update_distance_to_laboratory BEFORE INSERT OR UPDATE ON appointments
+    FOR EACH ROW
+    EXECUTE FUNCTION update_distance_to_laboratory();
