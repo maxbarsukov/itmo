@@ -19,7 +19,8 @@ public class UserDAO {
   }
 
   public Optional<User> findByName(String name) {
-    return entityManager.createQuery("SELECT t FROM User t where t.name = :name")
+    final TypedQuery<User> query = entityManager.createQuery("SELECT t FROM User t where t.name = :name", User.class);
+    return query
       .setParameter("name", name)
       .getResultList()
       .stream()
