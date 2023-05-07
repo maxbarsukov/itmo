@@ -1,5 +1,9 @@
 package server.rest.controllers;
 
+import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.Parameter;
+import io.swagger.v3.oas.annotations.responses.ApiResponse;
+import io.swagger.v3.oas.annotations.security.SecurityRequirement;
 import jakarta.ejb.EJB;
 import jakarta.json.Json;
 import jakarta.validation.Valid;
@@ -26,6 +30,14 @@ public class ProductResource {
   private ProductPresenter productPresenter;
 
   @GET
+  @Operation(
+    summary = "Get all products",
+    tags = {"Products"},
+    responses = {
+      @ApiResponse(responseCode = "200", description = "Products"),
+      @ApiResponse(responseCode = "500", description = "Internal error")
+    }
+  )
   public Response index() {
     return Response.ok(
       productPresenter.json(productService.getAllProducts()).build()
@@ -34,7 +46,19 @@ public class ProductResource {
 
   @GET
   @Path("/{id}")
-  public Response show(@PathParam("id") Integer id) {
+  @Operation(
+    summary = "Get product by ID",
+    tags = {"Products"},
+    responses = {
+      @ApiResponse(responseCode = "200", description = "Product"),
+      @ApiResponse(responseCode = "404", description = "Product not found"),
+      @ApiResponse(responseCode = "500", description = "Internal error")
+    }
+  )
+  public Response show(
+    @Parameter(description = "Product to show ID", required = true)
+    @PathParam("id") Integer id
+  ) {
     return Response.ok(
       productPresenter.json(productService.getProductById(id)).build()
     ).build();
@@ -42,8 +66,23 @@ public class ProductResource {
 
   @Secured
   @POST
+  @Operation(
+    summary = "Create products",
+    tags = {"Products"},
+    security = {@SecurityRequirement(name = "Bearer")},
+    responses = {
+      @ApiResponse(responseCode = "201", description = "Created product"),
+      @ApiResponse(responseCode = "400", description = "Invalid product"),
+      @ApiResponse(responseCode = "401", description = "Unauthorized"),
+      @ApiResponse(responseCode = "403", description = "Bad token format"),
+      @ApiResponse(responseCode = "422", description = "Bad user ID in token"),
+      @ApiResponse(responseCode = "500", description = "Internal error")
+    }
+  )
   public Response create(
-    @Context HttpHeaders headers, @Valid ProductForm productForm
+    @Context HttpHeaders headers,
+    @Parameter(description = "Created product object", required = true)
+    @Valid ProductForm productForm
   ) {
     var userId = getUserId(headers);
     if (userId == -1) return badUserId();
@@ -56,8 +95,26 @@ public class ProductResource {
   @Secured
   @PUT
   @Path("/{id}")
+  @Operation(
+    summary = "Update products",
+    tags = {"Products"},
+    security = {@SecurityRequirement(name = "Bearer")},
+    responses = {
+      @ApiResponse(responseCode = "200", description = "Updated product"),
+      @ApiResponse(responseCode = "400", description = "Invalid product to update"),
+      @ApiResponse(responseCode = "401", description = "Unauthorized"),
+      @ApiResponse(responseCode = "403", description = "Bad token format"),
+      @ApiResponse(responseCode = "404", description = "Product not found"),
+      @ApiResponse(responseCode = "422", description = "Bad user ID in token"),
+      @ApiResponse(responseCode = "500", description = "Internal error")
+    }
+  )
   public Response update(
-    @Context HttpHeaders headers, @PathParam("id") Integer id, @Valid ProductForm productForm
+    @Context HttpHeaders headers,
+    @Parameter(description = "Product to update ID", required = true)
+    @PathParam("id") Integer id,
+    @Parameter(description = "Updated product object", required = true)
+    @Valid ProductForm productForm
   ) {
     var userId = getUserId(headers);
     if (userId == -1) return badUserId();
@@ -70,6 +127,18 @@ public class ProductResource {
 
   @Secured
   @DELETE
+  @Operation(
+    summary = "Remove all products of current user",
+    tags = {"Products"},
+    security = {@SecurityRequirement(name = "Bearer")},
+    responses = {
+      @ApiResponse(responseCode = "200", description = "Cleared products data"),
+      @ApiResponse(responseCode = "401", description = "Unauthorized"),
+      @ApiResponse(responseCode = "403", description = "Bad token format"),
+      @ApiResponse(responseCode = "422", description = "Bad user ID in token"),
+      @ApiResponse(responseCode = "500", description = "Internal error")
+    }
+  )
   public Response clear(@Context HttpHeaders headers) {
     var userId = getUserId(headers);
     if (userId == -1) return badUserId();
@@ -86,7 +155,24 @@ public class ProductResource {
   @Secured
   @DELETE
   @Path("/{id}")
-  public Response destroy(@Context HttpHeaders headers, @PathParam("id") Integer id) {
+  @Operation(
+    summary = "Remove products by ID",
+    tags = {"Products"},
+    security = {@SecurityRequirement(name = "Bearer")},
+    responses = {
+      @ApiResponse(responseCode = "200", description = "Cleared product data"),
+      @ApiResponse(responseCode = "401", description = "Unauthorized"),
+      @ApiResponse(responseCode = "403", description = "Bad token format"),
+      @ApiResponse(responseCode = "404", description = "Product not found"),
+      @ApiResponse(responseCode = "422", description = "Bad user ID in token"),
+      @ApiResponse(responseCode = "500", description = "Internal error")
+    }
+  )
+  public Response destroy(
+    @Context HttpHeaders headers,
+    @Parameter(description = "Product to remove ID", required = true)
+    @PathParam("id") Integer id
+  ) {
     var userId = getUserId(headers);
     if (userId == -1) return badUserId();
 

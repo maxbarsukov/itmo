@@ -1,5 +1,7 @@
 package server.rest.controllers;
 
+import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.responses.ApiResponse;
 import jakarta.ejb.EJB;
 import jakarta.json.Json;
 import jakarta.ws.rs.*;
@@ -23,6 +25,14 @@ public class InfoResource {
   private ProductService productService;
 
   @GET
+  @Operation(
+    summary = "Get information about collection & database",
+    tags = {"Info"},
+    responses = {
+      @ApiResponse(responseCode = "200", description = "Information"),
+      @ApiResponse(responseCode = "404", description = "Cannot fetch information"),
+    }
+  )
   public Response info() {
     try {
       return Response.ok(jsonInfo(infoService.info())).build();

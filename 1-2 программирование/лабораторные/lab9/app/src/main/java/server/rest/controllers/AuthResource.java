@@ -1,12 +1,14 @@
 package server.rest.controllers;
 
+import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.Parameter;
+import io.swagger.v3.oas.annotations.responses.ApiResponse;
+import io.swagger.v3.oas.annotations.security.SecurityRequirement;
+
 import jakarta.ejb.EJB;
 import jakarta.json.Json;
 import jakarta.ws.rs.*;
-import jakarta.ws.rs.core.Context;
-import jakarta.ws.rs.core.HttpHeaders;
-import jakarta.ws.rs.core.MediaType;
-import jakarta.ws.rs.core.Response;
+import jakarta.ws.rs.core.*;
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
 
@@ -31,6 +33,18 @@ public class AuthResource {
   private UserPresenter userPresenter;
 
   @GET
+  @Operation(
+    summary = "Get current user by token",
+    tags = {"Auth"},
+    security = {@SecurityRequirement(name = "Bearer")},
+    responses = {
+      @ApiResponse(responseCode = "200", description = "Current user data and token"),
+      @ApiResponse(responseCode = "401", description = "Unauthorized"),
+      @ApiResponse(responseCode = "403", description = "Bad token format"),
+      @ApiResponse(responseCode = "422", description = "Bad user ID in token"),
+      @ApiResponse(responseCode = "500", description = "Internal error")
+    }
+  )
   @Secured
   public Response currentUser(@Context HttpHeaders headers) {
     System.out.println("User #" + headers.getHeaderString("userId") + " is trying to get current user...");
@@ -48,7 +62,20 @@ public class AuthResource {
 
   @POST
   @Path("/login")
-  public Response login(@NotNull(message = "{\"message\": \"MISSING_CREDENTIALS\" }") @Valid Credentials credentials) {
+  @Operation(
+    summary = "Login user by credentials",
+    tags = {"Auth"},
+    responses = {
+      @ApiResponse(responseCode = "200", description = "Logged in user data and token"),
+      @ApiResponse(responseCode = "400", description = "Bad credentials"),
+      @ApiResponse(responseCode = "403", description = "Cannot log in"),
+      @ApiResponse(responseCode = "500", description = "Internal error")
+    }
+  )
+  public Response login(
+    @Parameter(description = "User credentials", required = true)
+    @NotNull(message = "MISSING_CREDENTIALS") @Valid Credentials credentials
+  ) {
     System.out.println("User " + credentials.getName() + " is trying to login...");
     var result = authService.login(credentials.getName(), credentials.getPassword());
     if (result.isSuccessful()) {
@@ -61,7 +88,20 @@ public class AuthResource {
 
   @POST
   @Path("/register")
-  public Response register(@NotNull(message = "{\"message\": \"MISSING_CREDENTIALS\" }") @Valid Credentials credentials) {
+  @Operation(
+    summary = "Register user by credentials",
+    tags = {"Auth"},
+    responses = {
+      @ApiResponse(responseCode = "200", description = "Registered in user data and token"),
+      @ApiResponse(responseCode = "400", description = "Bad credentials"),
+      @ApiResponse(responseCode = "403", description = "Cannot register"),
+      @ApiResponse(responseCode = "500", description = "Internal error")
+    }
+  )
+  public Response register(
+    @Parameter(description = "User credentials", required = true)
+    @NotNull(message = "MISSING_CREDENTIALS") @Valid Credentials credentials
+  ) {
     System.out.println("User " + credentials.getName() + " is trying to register...");
     var result = authService.register(credentials.getName(), credentials.getPassword());
     if (result.isSuccessful()) {

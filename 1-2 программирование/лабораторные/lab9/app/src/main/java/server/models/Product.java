@@ -3,6 +3,7 @@ package server.models;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.Min;
 import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotNull;
 import lombok.*;
 import server.rest.dtos.ProductForm;
 
@@ -58,10 +59,11 @@ public class Product implements Serializable {
   @Column(name="id", nullable=false, unique=true, length=11)
   private int id;
 
-  @NotBlank(message = "EMPTY_PRODUCT_NAME")
+  @NotBlank
   @Column(name="name", nullable=false)
   private String name;
 
+  @NotNull
   @Column(name="x", nullable=false)
   private int x;
 
@@ -71,11 +73,11 @@ public class Product implements Serializable {
   @Column(name="creation_date", nullable=false)
   private LocalDate creationDate;
 
-  @Min(value = 1L, message = "PRODUCT_PRICE_NOT_POSITIVE")
+  @Min(value = 1L)
   @Column(name="price", nullable=false)
   private long price;
 
-  @NotBlank(message = "EMPTY_PRODUCT_PART_NUMBER")
+  @NotBlank
   @Column(name="part_number")
   private String partNumber;
 

@@ -1,5 +1,7 @@
 package server;
 
+import io.swagger.v3.oas.annotations.enums.SecuritySchemeType;
+import io.swagger.v3.oas.annotations.security.SecurityScheme;
 import jakarta.ws.rs.ApplicationPath;
 import jakarta.ws.rs.core.Application;
 
@@ -27,6 +29,12 @@ import io.swagger.v3.oas.annotations.tags.Tag;
       url = "http://localhost:8080/"
     )
   }
+)
+@SecurityScheme(
+  name = "Bearer",
+  type = SecuritySchemeType.HTTP,
+  bearerFormat = "JWT",
+  scheme = "bearer"
 )
 @ApplicationPath("/api")
 public class Lab9Application extends Application {

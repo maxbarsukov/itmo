@@ -27,9 +27,10 @@ public class OrganizationForm {
   )
   private OrganizationType type;
 
-  @NullOrNotBlank(message="ORG_STREET_MUST_BE_NULL_OR_NOT_BLANK")
+  @NotNull
+  @NotBlank
   private String street;
 
-  @Size(min=6, message="ORG_ZIP_CODE_GE_6")
+  @Size(min=6)
   private String zipCode;
 }

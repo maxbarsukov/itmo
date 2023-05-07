@@ -29,11 +29,11 @@ public class Organization implements Serializable {
   @Column(name="id", nullable=false, unique=true, length=11)
   private int id;
 
-  @NotBlank(message="EMPTY_ORG_NAME")
+  @NotBlank
   @Column(name="name", nullable=false)
   private String name;
 
-  @Min(value=1L, message="ORG_EMPLOYEES_COUNT_NOT_POSITIVE")
+  @Min(value=1L)
   @Column(name="employees_count", nullable=false)
   private long employeesCount;
 
@@ -41,11 +41,11 @@ public class Organization implements Serializable {
   @Enumerated(EnumType.STRING)
   private OrganizationType type;
 
-  @NotBlank(message="EMPTY_ORG_STREET")
+  @NotBlank
   @Column(name="street", nullable=false)
   private String street;
 
-  @Size(min=6, message="ORG_ZIP_CODE_GE_6")
+  @Size(min=6)
   @Column(name="zip_code")
   private String zipCode;
 
