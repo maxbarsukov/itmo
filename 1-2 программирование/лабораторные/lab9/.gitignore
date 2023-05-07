@@ -13,7 +13,6 @@ replay_pid*
 
 # Directories #
 build/
-bin/
 target/
 libs/
 tmp/

@@ -2,6 +2,7 @@ plugins {
     id 'java'
     id 'war'
     id 'org.flywaydb.flyway' version '9.8.1'
+    id 'io.swagger.core.v3.swagger-gradle-plugin' version '2.2.9'
 }
 
 group 'server'
@@ -52,6 +53,12 @@ dependencies {
 
     compileOnly('org.slf4j:slf4j-api:2.0.6')
     implementation('org.slf4j:slf4j-simple:2.0.6')
+
+    implementation('io.swagger.core.v3:swagger-core-jakarta:2.2.9')
+    implementation('io.swagger.core.v3:swagger-annotations-jakarta:2.2.9')
+    implementation('io.swagger.core.v3:swagger-models-jakarta:2.2.9')
+    implementation('io.swagger.core.v3:swagger-jaxrs2-jakarta:2.2.9')
+    implementation('io.swagger.core.v3:swagger-jaxrs2-servlet-initializer-v2-jakarta:2.2.9')
 
     compileOnly('org.projectlombok:lombok:1.18.26')
     annotationProcessor('org.projectlombok:lombok:1.18.26')
