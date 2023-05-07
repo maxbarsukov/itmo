@@ -2,6 +2,7 @@ package server.rest.controllers;
 
 import jakarta.ejb.EJB;
 import jakarta.json.Json;
+import jakarta.validation.Valid;
 import jakarta.ws.rs.*;
 import jakarta.ws.rs.core.Context;
 import jakarta.ws.rs.core.HttpHeaders;
@@ -9,6 +10,7 @@ import jakarta.ws.rs.core.MediaType;
 import jakarta.ws.rs.core.Response;
 
 import server.presenters.ProductPresenter;
+import server.rest.dtos.ProductForm;
 import server.rest.dtos.ErrorResponse;
 import server.rest.filters.authentication.Secured;
 import server.services.products.ProductService;
@@ -40,39 +42,65 @@ public class ProductResource {
 
   @Secured
   @POST
-  public Response create(@Context HttpHeaders headers) {
-    return Response.ok().build();
+  public Response create(
+    @Context HttpHeaders headers, @Valid ProductForm productForm
+  ) {
+    var userId = getUserId(headers);
+    if (userId == -1) return badUserId();
+
+    return Response.ok(
+      productPresenter.json(productService.add(productForm, userId)).build()
+    ).status(Response.Status.CREATED).build();
   }
 
   @Secured
   @PUT
   @Path("/{id}")
-  public Response update(@Context HttpHeaders headers, @PathParam("id") Integer id) {
-    return Response.ok().build();
-  }
+  public Response update(
+    @Context HttpHeaders headers, @PathParam("id") Integer id, @Valid ProductForm productForm
+  ) {
+    var userId = getUserId(headers);
+    if (userId == -1) return badUserId();
 
-  @Secured
-  @DELETE
-  @Path("/{id}")
-  public Response destroy(@Context HttpHeaders headers, @PathParam("id") Integer id) {
-    return Response.ok().build();
+    return Response.ok(
+      productPresenter.json(
+        productService.update(id, productForm, userId)).build()
+    ).build();
   }
 
   @Secured
   @DELETE
   public Response clear(@Context HttpHeaders headers) {
     var userId = getUserId(headers);
-    if (userId == -1) {
-      return Response.status(422).entity(new ErrorResponse("UNPROCESSABLE_USER_ID_IN_TOKEN").json()).build();
-    }
+    if (userId == -1) return badUserId();
 
     var removed = productService.clear(userId);
     return Response.ok(
       Json.createObjectBuilder()
-        .add("message", "SUCCESS")
+        .add("success", true)
         .add("removedCount", removed)
         .build()
     ).build();
+  }
+
+  @Secured
+  @DELETE
+  @Path("/{id}")
+  public Response destroy(@Context HttpHeaders headers, @PathParam("id") Integer id) {
+    var userId = getUserId(headers);
+    if (userId == -1) return badUserId();
+
+    var removed = productService.delete(id, userId);
+    return Response.ok(
+      Json.createObjectBuilder()
+        .add("success", true)
+        .add("removedCount", removed)
+        .build()
+    ).build();
+  }
+
+  private Response badUserId() {
+    return Response.status(422).entity(new ErrorResponse("UNPROCESSABLE_USER_ID_IN_TOKEN").json()).build();
   }
 
   private Integer getUserId(HttpHeaders headers) {

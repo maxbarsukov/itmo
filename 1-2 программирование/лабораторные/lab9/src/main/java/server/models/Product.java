@@ -4,6 +4,7 @@ import jakarta.persistence.*;
 import jakarta.validation.constraints.Min;
 import jakarta.validation.constraints.NotBlank;
 import lombok.*;
+import server.rest.dtos.ProductForm;
 
 import java.io.Serializable;
 import java.time.LocalDate;
@@ -23,6 +24,33 @@ public class Product implements Serializable {
     this.price = price;
     this.partNumber = partNumber;
     this.unitOfMeasure = unitOfMeasure;
+  }
+
+  public Product(ProductForm productForm, User creator) {
+    this(
+      productForm.getName(),
+      productForm.getX(),
+      productForm.getY(),
+      LocalDate.now(),
+      productForm.getPrice(),
+      productForm.getPartNumber(),
+      productForm.getUnitOfMeasure()
+    );
+
+    Organization organization = null;
+    if (productForm.getManufacturer() != null) {
+      organization = new Organization(
+        productForm.getManufacturer().getName(),
+        productForm.getManufacturer().getEmployeesCount(),
+        productForm.getManufacturer().getType(),
+        productForm.getManufacturer().getStreet(),
+        productForm.getManufacturer().getZipCode()
+      );
+      organization.setCreator(creator);
+    }
+
+    this.setCreator(creator);
+    this.setManufacturer(organization);
   }
 
   @Id
@@ -55,12 +83,12 @@ public class Product implements Serializable {
   @Enumerated(EnumType.STRING)
   private UnitOfMeasure unitOfMeasure;
 
-  @ManyToOne
+  @ManyToOne(cascade=CascadeType.ALL, fetch=FetchType.LAZY)
   @JoinColumn(name="manufacturer_id")
   @ToString.Exclude
   private Organization manufacturer;
 
-  @ManyToOne
+  @ManyToOne(cascade=CascadeType.ALL, fetch=FetchType.LAZY)
   @JoinColumn(name="creator_id", nullable=false)
   @ToString.Exclude
   private User creator;

@@ -49,12 +49,12 @@ public class Organization implements Serializable {
   @Column(name="zip_code")
   private String zipCode;
 
-  @OneToMany(cascade=CascadeType.REMOVE, fetch=FetchType.LAZY)
+  @OneToMany(cascade=CascadeType.ALL, fetch=FetchType.LAZY)
   @JoinColumn(name="manufacturer_id")
   @ToString.Exclude
   private List<Product> products;
 
-  @ManyToOne
+  @ManyToOne(cascade=CascadeType.ALL, fetch=FetchType.LAZY)
   @JoinColumn(name="creator_id", nullable=false)
   @ToString.Exclude
   private User creator;

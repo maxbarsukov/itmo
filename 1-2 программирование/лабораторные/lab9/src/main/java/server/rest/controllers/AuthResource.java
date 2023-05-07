@@ -41,14 +41,14 @@ public class AuthResource {
 
     var result = authService.getUserById(userId);
     if (result.isPresent()) {
-      return Response.ok(tokenJson(headers.getHeaderString(AUTHORIZATION), result.get())).build();
+      return Response.ok(tokenJson(headers.getHeaderString(AUTHORIZATION).substring(7), result.get())).build();
     }
     return Response.status(FORBIDDEN).entity(new ErrorResponse("CANNOT_GET_USER").json()).build();
   }
 
   @POST
   @Path("/login")
-  public Response login(@NotNull(message = "MISSING_CREDENTIALS") @Valid Credentials credentials) {
+  public Response login(@NotNull(message = "{\"message\": \"MISSING_CREDENTIALS\" }") @Valid Credentials credentials) {
     System.out.println("User " + credentials.getName() + " is trying to login...");
     var result = authService.login(credentials.getName(), credentials.getPassword());
     if (result.isSuccessful()) {
@@ -61,7 +61,7 @@ public class AuthResource {
 
   @POST
   @Path("/register")
-  public Response register(@NotNull(message = "MISSING_CREDENTIALS") @Valid Credentials credentials) {
+  public Response register(@NotNull(message = "{\"message\": \"MISSING_CREDENTIALS\" }") @Valid Credentials credentials) {
     System.out.println("User " + credentials.getName() + " is trying to register...");
     var result = authService.register(credentials.getName(), credentials.getPassword());
     if (result.isSuccessful()) {

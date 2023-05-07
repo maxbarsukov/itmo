@@ -1,5 +1,5 @@
 package server.exceptions;
 
 @jakarta.ejb.ApplicationException
-public class NotFoundException extends RuntimeException {
+public class BadOwnerException extends RuntimeException {
 }
