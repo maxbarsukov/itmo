@@ -1,0 +1,44 @@
+# Ignore editors files
+*.swp
+.idea/
+.vs/
+.vscode/*
+
+# Better proj settings for VS Code
+!.vscode/settings.json
+!.vscode/extensions.json
+!.vscode/launch.json
+
+# Ignore sass cache
+**/.sass-cache/
+**/*.css
+**/*.css.map
+**/*.scssc
+
+# dependencies
+/node_modules
+/.pnp
+.pnp.js
+
+# testing
+/coverage
+
+# auto-generated stuff
+stats.json
+
+# production
+/build
+
+# misc
+.DS_Store
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+.netlify
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+.wakatime-project
