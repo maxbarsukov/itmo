@@ -1,37 +1,39 @@
 import api from 'services/api/api';
 
+import { AxiosResponse } from 'axios';
+import Credentials from 'interfaces/dto/Credentials';
+import AuthResponse from 'interfaces/dto/AuthResponse';
+
 export default class AuthService {
   /**
-   * Login for access_token
-   * @param {string} username Username
-   * @param {string} password Password
-   * @returns {Promise<AxiosResponse<any>>} access_token
+   * Get current user
+   * @returns {Promise<AxiosResponse<AuthResponse>>} User's data and token
+   * @throws 401 - Unauthorized
+   * @throws 422 - Bad token user ID
    */
-  static async token(username, password) {
-    const data = {
-      username,
-      password,
-    };
-    const encodedData = Object.keys(data)
-      .map(key => `${encodeURIComponent(key)}=${encodeURIComponent(data[key])}`)
-      .join('&');
-    return api.post('/token', encodedData, {
-      headers: {
-        'Content-Type': 'application/x-www-form-urlencoded',
-      },
-    });
+  static async me(): Promise<AxiosResponse<AuthResponse>> {
+    return api.get<AuthResponse>('/auth');
+  }
+
+  /**
+   * Login user
+   * @param {Credentials} credentials Username & Password
+   * @returns {Promise<AxiosResponse<AuthResponse>>} User's data and token
+   * @throws 400 - Invalid credentials
+   * @throws 403 - Cannot log in
+   */
+  static async login(credentials: Credentials): Promise<AxiosResponse<AuthResponse>> {
+    return api.post<AuthResponse>('/auth/login', credentials);
   }
 
   /**
    * Create user
-   * @param {string} username
-   * @param {string} email
-   * @param {string} password
-   * @returns {Promise<AxiosResponse<any>>} User's data
-   * @throws 409 - User with this email/username already exists
-   * @throws 422 - Validation Error
+   * @param {Credentials} credentials Username & Password
+   * @returns {Promise<AxiosResponse<AuthResponse>>} User's data and token
+   * @throws 400 - Invalid credentials
+   * @throws 409 - User.ts with this username already exists
    */
-  static async register(username, email, password) {
-    return api.post('/users', { username, email, password });
+  static async register(credentials: Credentials): Promise<AxiosResponse<AuthResponse>> {
+    return api.post<AuthResponse>('/auth/register', credentials);
   }
 }

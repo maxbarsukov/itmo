@@ -10,11 +10,10 @@
     "url": "https://github.com/maxbarsukov/itmo/issues"
   },
   "dependencies": {
-    "@emotion/react": "^11.11.0",
-    "@emotion/styled": "^11.11.0",
-    "@fontsource/roboto": "^4.5.8",
-    "@mui/icons-material": "^5.11.16",
-    "@mui/material": "^5.13.0",
+    "@material-ui/core": "^4.11.3",
+    "@material-ui/icons": "^4.11.2",
+    "@material-ui/lab": "^4.0.0-alpha.57",
+    "@material-ui/styles": "^4.11.3",
     "@reduxjs/toolkit": "^1.9.5",
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",

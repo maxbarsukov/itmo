@@ -31,3 +31,14 @@ export const LANGUAGES_INTERFACE = [
     name: 'Svenska',
   },
 ];
+
+export const HOUR = 1000 * 60 * 60;
+export const DEFAULT_UPDATE_INTERVAL = HOUR / 12;
+
+export const chromeAddressBarHeight = 56;
+export const MIN_WIDTH = 960;
+export const MIDDLE_WIDTH = 1175;
+export const MAX_WIDTH = 1280;
+export const BOTTOM_BAR_HEIGHT = 44;
+export const APP_BAR_HEIGHT = 48;
+export const DRAWER_WIDTH = 296;
