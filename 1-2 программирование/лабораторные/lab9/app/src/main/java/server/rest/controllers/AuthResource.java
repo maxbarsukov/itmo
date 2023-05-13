@@ -20,6 +20,7 @@ import server.rest.filters.authentication.Secured;
 import server.services.auth.AuthService;
 
 import static jakarta.ws.rs.core.HttpHeaders.AUTHORIZATION;
+import static jakarta.ws.rs.core.Response.Status.CONFLICT;
 import static jakarta.ws.rs.core.Response.Status.FORBIDDEN;
 
 @Path("/auth")
@@ -93,7 +94,7 @@ public class AuthResource {
     responses = {
       @ApiResponse(responseCode = "200", description = "Registered in user data and token"),
       @ApiResponse(responseCode = "400", description = "Bad credentials"),
-      @ApiResponse(responseCode = "403", description = "Cannot register"),
+      @ApiResponse(responseCode = "409", description = "User already exists"),
       @ApiResponse(responseCode = "500", description = "Internal error")
     }
   )
@@ -108,7 +109,7 @@ public class AuthResource {
       return Response.ok(tokenJson(result.getToken(), result.getUser())).build();
     }
     System.err.println("User " + credentials.getName() + " cannot register, " + result.getErrorMessage());
-    return Response.status(FORBIDDEN).entity(new ErrorResponse(result.getErrorMessage()).json()).build();
+    return Response.status(CONFLICT).entity(new ErrorResponse(result.getErrorMessage()).json()).build();
   }
 
   private String tokenJson(String token, User newUser) {
