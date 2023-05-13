@@ -39,8 +39,7 @@ public class AuthResource {
     security = {@SecurityRequirement(name = "Bearer")},
     responses = {
       @ApiResponse(responseCode = "200", description = "Current user data and token"),
-      @ApiResponse(responseCode = "401", description = "Unauthorized"),
-      @ApiResponse(responseCode = "403", description = "Bad token format"),
+      @ApiResponse(responseCode = "401", description = "Unauthorized or Bad token format"),
       @ApiResponse(responseCode = "422", description = "Bad user ID in token"),
       @ApiResponse(responseCode = "500", description = "Internal error")
     }

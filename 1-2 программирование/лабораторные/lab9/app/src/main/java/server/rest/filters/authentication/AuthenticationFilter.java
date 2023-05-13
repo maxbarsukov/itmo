@@ -16,7 +16,6 @@ import server.services.auth.AuthService;
 import java.util.Optional;
 
 import static jakarta.ws.rs.core.HttpHeaders.AUTHORIZATION;
-import static jakarta.ws.rs.core.Response.Status.FORBIDDEN;
 import static jakarta.ws.rs.core.Response.Status.UNAUTHORIZED;
 
 @Secured
@@ -41,7 +40,7 @@ public class AuthenticationFilter implements ContainerRequestFilter {
 
     if (!token.get().startsWith(AUTHENTICATION_SCHEME)) {
       containerRequestContext.abortWith(
-        Response.status(FORBIDDEN).entity(new ErrorResponse("BAD_BEARER_TOKEN_FORMAT").json()).build()
+        Response.status(UNAUTHORIZED).entity(new ErrorResponse("BAD_BEARER_TOKEN_FORMAT").json()).build()
       );
       return;
     }
@@ -50,7 +49,7 @@ public class AuthenticationFilter implements ContainerRequestFilter {
     Optional<String> userIdByToken = authService.getUserIdByToken(authenticationToken);
     if (userIdByToken.isEmpty()) {
       containerRequestContext.abortWith(
-        Response.status(FORBIDDEN).entity(new ErrorResponse("INVALID_TOKEN").json()).build()
+        Response.status(UNAUTHORIZED).entity(new ErrorResponse("INVALID_TOKEN").json()).build()
       );
       return;
     }

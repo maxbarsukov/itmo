@@ -73,8 +73,7 @@ public class ProductResource {
     responses = {
       @ApiResponse(responseCode = "201", description = "Created product"),
       @ApiResponse(responseCode = "400", description = "Invalid product"),
-      @ApiResponse(responseCode = "401", description = "Unauthorized"),
-      @ApiResponse(responseCode = "403", description = "Bad token format"),
+      @ApiResponse(responseCode = "401", description = "Unauthorized or Bad token format"),
       @ApiResponse(responseCode = "422", description = "Bad user ID in token"),
       @ApiResponse(responseCode = "500", description = "Internal error")
     }
@@ -102,8 +101,8 @@ public class ProductResource {
     responses = {
       @ApiResponse(responseCode = "200", description = "Updated product"),
       @ApiResponse(responseCode = "400", description = "Invalid product to update"),
-      @ApiResponse(responseCode = "401", description = "Unauthorized"),
-      @ApiResponse(responseCode = "403", description = "Bad token format"),
+      @ApiResponse(responseCode = "401", description = "Unauthorized or Bad token format"),
+      @ApiResponse(responseCode = "403", description = "You are not creator"),
       @ApiResponse(responseCode = "404", description = "Product not found"),
       @ApiResponse(responseCode = "422", description = "Bad user ID in token"),
       @ApiResponse(responseCode = "500", description = "Internal error")
@@ -133,8 +132,8 @@ public class ProductResource {
     security = {@SecurityRequirement(name = "Bearer")},
     responses = {
       @ApiResponse(responseCode = "200", description = "Cleared products data"),
-      @ApiResponse(responseCode = "401", description = "Unauthorized"),
-      @ApiResponse(responseCode = "403", description = "Bad token format"),
+      @ApiResponse(responseCode = "401", description = "Unauthorized or Bad token format"),
+      @ApiResponse(responseCode = "403", description = "You are not creator"),
       @ApiResponse(responseCode = "422", description = "Bad user ID in token"),
       @ApiResponse(responseCode = "500", description = "Internal error")
     }
@@ -161,8 +160,8 @@ public class ProductResource {
     security = {@SecurityRequirement(name = "Bearer")},
     responses = {
       @ApiResponse(responseCode = "200", description = "Cleared product data"),
-      @ApiResponse(responseCode = "401", description = "Unauthorized"),
-      @ApiResponse(responseCode = "403", description = "Bad token format"),
+      @ApiResponse(responseCode = "401", description = "Unauthorized or Bad token format"),
+      @ApiResponse(responseCode = "403", description = "You are not creator"),
       @ApiResponse(responseCode = "404", description = "Product not found"),
       @ApiResponse(responseCode = "422", description = "Bad user ID in token"),
       @ApiResponse(responseCode = "500", description = "Internal error")
