@@ -1,0 +1,3 @@
+codecov:
+  token: YOUR_CODECOV_TOKEN
+  max_report_age: off

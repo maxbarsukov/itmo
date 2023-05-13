@@ -28,6 +28,7 @@ stats.json
 
 # production
 /build
+/dist
 
 # misc
 .DS_Store
@@ -35,6 +36,7 @@ stats.json
 .env.development.local
 .env.test.local
 .env.production.local
+codecov.yml
 
 .netlify
 npm-debug.log*
