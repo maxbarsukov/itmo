@@ -38,6 +38,8 @@ public class AuthController {
   @FXML
   private PasswordField passwordField;
   @FXML
+  private Button okButton;
+  @FXML
   private CheckBox signUpButton;
   @FXML
   private ComboBox<String> languageComboBox;
@@ -66,7 +68,14 @@ public class AuthController {
     });
   }
 
-
+  @FXML
+  void ok() {
+    if (signUpButton.isSelected()) {
+      register();
+    } else {
+      authenticate();
+    }
+  }
 
   public void register() {
     try {
