@@ -20,7 +20,7 @@ function check {
   echo "Checking $1..."
   while read PACKAGE
   do
-    RES=$(cat $FILES | xargs -I {} egrep -i "(import|require).*['\"]$PACKAGE[\"']" '{}' | wc -l)
+    RES=$(cat $FILES | xargs -I {} grep -E -i "(import|require).*['\"]$PACKAGE[\"']" '{}' | wc -l)
     if [ $RES = 0 ]
     then
       echo -e "UNUSED\t\t $PACKAGE"
