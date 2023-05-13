@@ -39,6 +39,11 @@ module.exports = {
     'react',
   ],
   rules: {
+    'quotes': ['error', 'single'],
+    'no-console': 'off',
+    'jsx-no-lambda': 'off',
+    'jsx-boolean-value': 'off',
+
     'linebreak-style': 'off',
     'arrow-parens': 'off',
     'comma-dangle': [
@@ -62,7 +67,6 @@ module.exports = {
     'import/no-extraneous-dependencies': ['error', { devDependencies: true }],
 
     'max-len': ['warn', 100, 2, { ignoreUrls: true }],
-    'no-console': 'warn',
     'no-alert': 'warn',
 
     'no-param-reassign': 'off',
@@ -78,5 +82,24 @@ module.exports = {
     'operator-linebreak': 'off',
 
     'prettier/prettier': ['warn'],
-  },
+
+    "@typescript-eslint/camelcase": "off",
+    "@typescript-eslint/no-use-before-define": "off",
+    "@typescript-eslint/explicit-function-return-type": "off",
+    "@typescript-eslint/no-unused-vars": "off",
+    "@typescript-eslint/explicit-module-boundary-types": "off",
+    "@typescript-eslint/member-delimiter-style": [
+      "error",
+      {
+        multiline: {
+          delimiter: 'semi',
+          requireLast: true,
+        },
+        singleline: {
+          delimiter: 'semi',
+          requireLast: false,
+        },
+      }
+    ]
+  }
 };
