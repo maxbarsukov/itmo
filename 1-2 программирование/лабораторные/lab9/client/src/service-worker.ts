@@ -46,8 +46,8 @@ registerRoute(
 );
 
 setCacheNameDetails({
-  prefix: 'geekr-app',
-  suffix: 'v2',
+  prefix: 'lab9-client',
+  suffix: 'v1',
   precache: 'precache',
   runtime: 'runtime',
 });
@@ -89,7 +89,6 @@ const newResponse = (
 
 const cacheHeaderPlugin = [
   {
-    // @ts-ignore
     cacheWillUpdate: ({ response }) =>
       newResponse(response.clone(), (headers: Headers) => {
         headers.set('x-sw-cache', new Date().getTime().toString());
@@ -99,28 +98,10 @@ const cacheHeaderPlugin = [
 ];
 
 registerRoute(
-  /^https?:\/\/.*\/kek\/(v1|v2)\/.*/,
+  /^https?:\/\/.*\/api\/.*/,
   new NetworkFirst({
     networkTimeoutSeconds: 10,
-    cacheName: 'api-cache-geekr',
-    plugins: [
-      ...cacheHeaderPlugin,
-      new CacheableResponsePlugin({
-        statuses: [200, 201],
-      }),
-      new ExpirationPlugin({
-        maxAgeSeconds: 24 * 60 * 60 * 7, // one week
-        maxEntries: 100,
-      }),
-    ],
-  })
-);
-
-registerRoute(
-  /^https?:\/\/habra\.jarvis394\.ml\/.*/,
-  new NetworkFirst({
-    networkTimeoutSeconds: 10,
-    cacheName: 'api-cache-geekr',
+    cacheName: 'api-cache-lab9',
     plugins: [
       ...cacheHeaderPlugin,
       new CacheableResponsePlugin({
@@ -159,7 +140,7 @@ registerRoute(
 registerRoute(
   /.*\/fonts\/.*/,
   new CacheFirst({
-    cacheName: 'geekr-fonts',
+    cacheName: 'lab9-fonts',
     plugins: [
       new CacheableResponsePlugin({
         statuses: [0, 200],

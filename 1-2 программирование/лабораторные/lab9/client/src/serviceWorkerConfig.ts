@@ -1,5 +1,5 @@
-import { NEEDS_UPDATE_KEY } from './config/constants';
-import { Config } from './serviceWorker';
+import { NEEDS_UPDATE_KEY } from 'config/constants';
+import { Config } from 'serviceWorker';
 
 const config: Config = {
   onUpdate: (registration: ServiceWorkerRegistration) => {
