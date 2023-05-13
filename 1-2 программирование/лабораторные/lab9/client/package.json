@@ -65,11 +65,11 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "// ---LINTING---": "",
-    "eslint": "eslint --ext js,jsx,ts,tsx,json",
+    "eslint": "eslint --ext js,jsx,ts,tsx",
     "lint": "yarn run eslint src",
     "lint:fix": "yarn run eslint --fix src",
-    "prettier": "prettier --write \"src/**/*.{js,jsx,json,ts,tsx}\"",
-    "prettier:eslint": "prettier --write \"src/**/*.{js,jsx,json,ts,tsx}\"",
+    "prettier": "prettier --write \"src/**/*.{js,jsx,ts,tsx}\"",
+    "prettier:eslint": "prettier --write \"src/**/*.{js,jsx,ts,tsx}\"",
     "// ---OTHER---": "",
     "start:prod": "yarn build && serve -s build",
     "deploy": "yarn build && netlify deploy --dir=build --prod",
@@ -84,7 +84,7 @@
     }
   },
   "lint-staged": {
-    "*.{js,jsx,json,ts,tsx}": [
+    "*.{js,jsx,ts,tsx}": [
       "yarn run lint:fix",
       "yarn run prettier:eslint"
     ]

@@ -3,7 +3,6 @@ import { createRoot } from 'react-dom/client';
 
 import { Provider } from 'react-redux';
 import { BrowserRouter as Router } from 'react-router-dom';
-import store from 'store';
 
 import dayjs from 'dayjs';
 import relativeTimePlugin from 'dayjs/plugin/relativeTime';
@@ -15,17 +14,19 @@ import reportWebVitals from 'reportWebVitals';
 import swConfig from 'serviceWorkerConfig';
 import * as serviceWorker from 'serviceWorker';
 
+import store from 'store';
 import App from 'components/App';
+
 import * as userSettingsUtils from 'utils/userSettings';
 
 const container = document.getElementById('root')!;
 const root = createRoot(container);
 
 const userSettings = userSettingsUtils.get();
-dayjs.locale(userSettings.language || 'ru')
-dayjs.extend(relativeTimePlugin)
-dayjs.extend(calendarPlugin)
-dayjs.extend(updateLocalePlugin)
+dayjs.locale(userSettings.language || 'ru');
+dayjs.extend(relativeTimePlugin);
+dayjs.extend(calendarPlugin);
+dayjs.extend(updateLocalePlugin);
 
 dayjs.updateLocale('ru', {
   calendar: {
@@ -34,7 +35,7 @@ dayjs.updateLocale('ru', {
     lastDay: 'Вчера, в hh:mm',
     sameElse: 'DD.MM.YYYY',
   },
-})
+});
 dayjs.updateLocale('en', {
   calendar: {
     lastWeek: 'D MMMM, at hh:mm',
@@ -42,7 +43,7 @@ dayjs.updateLocale('en', {
     lastDay: 'Yesterday, at hh:mm',
     sameElse: 'DD.MM.YYYY',
   },
-})
+});
 dayjs.updateLocale('sv', {
   calendar: {
     lastWeek: 'D MMMM, klockan hh:mm',
@@ -50,7 +51,7 @@ dayjs.updateLocale('sv', {
     lastDay: 'Igår klockan hh:mm',
     sameElse: 'DD.MM.YYYY',
   },
-})
+});
 dayjs.updateLocale('is', {
   calendar: {
     lastWeek: 'D. MMMM, klukkan hh:mm',
@@ -58,7 +59,7 @@ dayjs.updateLocale('is', {
     lastDay: 'Í gær, klukkan hh:mm',
     sameElse: 'DD.MM.YYYY',
   },
-})
+});
 
 root.render(
   <React.StrictMode>
@@ -67,7 +68,7 @@ root.render(
         <App />
       </Router>
     </Provider>
-  </React.StrictMode>,
+  </React.StrictMode>
 );
 
 reportWebVitals();

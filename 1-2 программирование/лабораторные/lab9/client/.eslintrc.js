@@ -1,11 +1,11 @@
 module.exports = {
-  parser:  '@typescript-eslint/parser',
-  extends:  [
+  parser: '@typescript-eslint/parser',
+  extends: [
     'plugin:react/recommended',
     'plugin:@typescript-eslint/recommended',
     'plugin:prettier/recommended',
     'plugin:jest/recommended',
-    'jest-enzyme'
+    'jest-enzyme',
   ],
   parserOptions: {
     ecmaVersion: 2018,
@@ -20,8 +20,8 @@ module.exports = {
         paths: ['src'],
       },
     },
-    react:  {
-      version:  'detect',
+    react: {
+      version: 'detect',
     },
   },
   env: {
@@ -83,13 +83,13 @@ module.exports = {
 
     'prettier/prettier': ['warn'],
 
-    "@typescript-eslint/camelcase": "off",
-    "@typescript-eslint/no-use-before-define": "off",
-    "@typescript-eslint/explicit-function-return-type": "off",
-    "@typescript-eslint/no-unused-vars": "off",
-    "@typescript-eslint/explicit-module-boundary-types": "off",
-    "@typescript-eslint/member-delimiter-style": [
-      "error",
+    '@typescript-eslint/camelcase': 'off',
+    '@typescript-eslint/no-use-before-define': 'off',
+    '@typescript-eslint/explicit-function-return-type': 'off',
+    '@typescript-eslint/no-unused-vars': 'off',
+    '@typescript-eslint/explicit-module-boundary-types': 'off',
+    '@typescript-eslint/member-delimiter-style': [
+      'error',
       {
         multiline: {
           delimiter: 'semi',
@@ -99,7 +99,7 @@ module.exports = {
           delimiter: 'semi',
           requireLast: false,
         },
-      }
-    ]
-  }
+      },
+    ],
+  },
 };

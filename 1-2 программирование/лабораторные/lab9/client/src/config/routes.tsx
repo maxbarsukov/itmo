@@ -1,20 +1,16 @@
-import React, { MemoExoticComponent } from 'react'
+import React, { MemoExoticComponent } from 'react';
 
 export interface Route {
-  path: string | string[]
-  component: MemoExoticComponent<() => React.ReactElement> | React.ReactElement
-  title?: string
-  alias: string
+  path: string | string[];
+  component: MemoExoticComponent<() => React.ReactElement> | React.ReactElement;
+  title?: string;
+  alias: string;
 }
 
 export const routes: Route[] = [
   {
     title: 'Home',
-    path: [
-      '/',
-      '/home',
-      '/products',
-    ],
+    path: ['/', '/home', '/products'],
     component: <Home />,
     alias: 'home',
   },
@@ -36,4 +32,4 @@ export const routes: Route[] = [
     component: <Register />,
     alias: 'register',
   },
-]
+];

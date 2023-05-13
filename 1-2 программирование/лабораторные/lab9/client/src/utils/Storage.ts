@@ -2,25 +2,27 @@
  * Wrapper for convenient work with localStorage.
  * It can store any data type, not just strings
  */
-export default class LocalStorage {
+export default class Storage {
   /**
    * @static
    * Wrapper for localStorage.clear()
+   * @param {Storage} storage localStorage or sessionStorage
    * @description Clears the entire localStorage
    */
-  static clear() {
-    localStorage.clear();
+  static clear(storage = localStorage) {
+    storage.clear();
   }
 
   /**
    * @static
    * Wrapper for localStorage.getItem(key)
    * @param {string} key
+   * @param {Storage} storage localStorage or sessionStorage
    * @returns {Object} Data by the key
    * @description Read data from localStorage for a specific key
    */
-  static get(key: string) {
-    return JSON.parse(<string>localStorage.getItem(key));
+  static get(key: string, storage = localStorage) {
+    return JSON.parse(<string>storage.getItem(key));
   }
 
   /**
@@ -28,19 +30,21 @@ export default class LocalStorage {
    * Wrapper for localStorage.setItem(key, value)
    * @param {string} key
    * @param {Object} value
+   * @param {Storage} storage localStorage or sessionStorage
    * @description Adds data by key
    */
-  static set(key: string, value: object | string) {
-    return localStorage.setItem(key, JSON.stringify(value));
+  static set(key: string, value: object | string, storage = localStorage) {
+    return storage.setItem(key, JSON.stringify(value));
   }
 
   /**
    * @static
    * Wrapper for localStorage.removeItem(key)
    * @param {string} key
+   * @param {Storage} storage localStorage or sessionStorage
    * @description Removes data by key
    */
-  static remove(key: string) {
-    return localStorage.removeItem(key);
+  static remove(key: string, storage = localStorage) {
+    return storage.removeItem(key);
   }
 }
