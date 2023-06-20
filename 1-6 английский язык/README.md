@@ -1,5 +1,3 @@
-
-
 # Английский язык
 
 <img alt="gif" src="https://github.com/maxbarsukov/itmo/blob/master/.docs/cp.gif" height="250">
@@ -11,5 +9,5 @@
 ## Результаты
 
 - 1 семестр: **зачёт**
-- 2 семестр: **...**
+- 2 семестр: **зачёт**
 - ...
