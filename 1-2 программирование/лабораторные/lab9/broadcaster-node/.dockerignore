@@ -1,0 +1,10 @@
+*
+
+!yarn-offline-mirror/
+!src/
+!package.json
+!yarn.lock
+!.yarnrc
+!.npmrc
+!.nvmrc
+!tsconfig.json

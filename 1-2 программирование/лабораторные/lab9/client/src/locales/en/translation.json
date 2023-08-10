@@ -1,0 +1,307 @@
+{
+  "pages": {
+    "app": {
+      "appName": "Lab 9 Client",
+      "goBack": "Back",
+      "routes": {
+        "home": "Table",
+        "chart": "Visualization",
+        "settings": "Settings",
+        "settingsLanguage": "Language",
+        "settingsAppearance": "Appearance",
+        "settingsTable": "Table",
+        "user": "User",
+        "login": "Log In",
+        "register": "Register"
+      },
+      "themes": {
+        "light": "Light",
+        "dark": "Dark",
+        "lab8": "8 lab theme"
+      },
+      "UserMenu": {
+        "profileManagement": "Profile management",
+        "account": "Account",
+        "youLoggedOut": "You are logged out now"
+      },
+      "ProfileInfo": {
+        "update": "Update"
+      },
+      "notifications": {
+        "updated": "The app has been updated",
+        "update": "Refresh the page or click on the message for the changes to take effect",
+        "updateAvailable": "Update available"
+      },
+      "navigationTabs": {
+        "home": "Table",
+        "chart": "Visualization",
+        "settings": "Settings"
+      },
+      "other": {
+        "nobodyUpdated": "No one has updated the state of the table lately.",
+        "unitsOfMeasure": {
+          "KILOGRAMS": "Kilograms",
+          "SQUARE_METERS": "Square meters",
+          "LITERS": "Liters",
+          "MILLILITERS": "Milliliters"
+        },
+        "organizationTypes": {
+          "COMMERCIAL": "Commercial",
+          "GOVERNMENT": "Government",
+          "TRUST": "Trust",
+          "PRIVATE_LIMITED_COMPANY": "P.L.C."
+        }
+      }
+    },
+    "Home": {
+      "Events": {
+        "CREATE": "User {{username}} just created product no.{{id}}.",
+        "UPDATE": "User {{username}} just updated product no.{{id}}.",
+        "DELETE": "User {{username}} just deleted product no.{{id}}.",
+        "CLEAR": "User {{username}} just deleted all his products."
+      },
+      "Sidebar": {
+        "Info": {
+          "Information": "Information",
+          "productsCount": "Products count",
+          "databaseName": "Database",
+          "databaseVersion": "Database version",
+          "driverName": "Database driver",
+          "driverVersion": "Driver version",
+          "JDBCMajorVersion": "JDBC version (major)",
+          "JDBCMinorVersion": "JDBC version (minor)",
+          "maxConnections": "Max connections",
+          "lastUpdated": "Last update",
+          "updatedBy": "Updated by"
+        }
+      },
+      "Table": {
+        "title": "Products",
+        "emptyDataSourceMessage": "No products found",
+        "columns": {
+          "id": "ID",
+          "name": "Name",
+          "x": "X",
+          "y": "Y",
+          "creationDate": "Creation date",
+          "price": "Price",
+          "partNumber": "Part number",
+          "unitOfMeasure": "Unit of measure",
+          "manufacturerId": "Manufacturer ID",
+          "manufacturerName": "Manufacturer's name",
+          "manufacturerEmployeesCount": "Employees count",
+          "manufacturerType": "Organization type",
+          "manufacturerStreet": "Street",
+          "manufacturerZipCode": "Zip-code",
+          "creatorId": "Creator ID",
+          "creatorName": "Creator's name",
+          "summary": "Total"
+        },
+        "header": {
+          "actions": "Actions"
+        },
+        "actions": {
+          "add": "Create a product",
+          "edit": "Update product",
+          "delete": "Delete product",
+          "clear": "Delete current user's products"
+        },
+        "grouping": {
+          "groupedBy": "Grouped by",
+          "placeholder": "Drag titles here to group by"
+        },
+        "filter": {
+          "tooltip": "Filter"
+        },
+        "toolbar": {
+          "addRemoveColumns": "Add or remove columns",
+          "nRowsSelected": "Columns selected: ",
+          "showColumnsTitle": "Show columns",
+          "showColumnsAriaLabel": "Show columns",
+          "exportTitle": "Export",
+          "exportAriaLabel": "Export",
+          "exportCSVName": "Export to CSV",
+          "exportPDFName": "Export to PDF",
+          "searchTooltip": "Search",
+          "searchPlaceholder": "Search",
+          "searchAriaLabel": "Search",
+          "clearSearchAriaLabel": "Clear search bar"
+        },
+        "pagination": {
+          "labelDisplayedRows": "of",
+          "labelRowsPerPage": "Lines per page:",
+          "labelRowsSelect": "lines",
+          "firstAriaLabel": "First page",
+          "firstTooltip": "First page",
+          "previousAriaLabel": "Previous page",
+          "previousTooltip": "Previous page",
+          "nextAriaLabel": "Next page",
+          "nextTooltip": "Next page",
+          "lastAriaLabel": "Last page",
+          "lastTooltip": "Last page"
+        },
+        "export": {
+          "pdf": "Export to PDF",
+          "csv": "Export to CSV"
+        },
+        "errors": {
+          "notLoggedIn": "Login to your profile to complete this action",
+          "badOwner": "You do not own this product!"
+        }
+      },
+      "modals": {
+        "form": {
+          "name": "Name",
+          "x": "X",
+          "y": "Y",
+          "price": "Price",
+          "partNumber": "Part number",
+          "unitOfMeasure": "Unit odd measure",
+          "hasManufacturer": "Does the product have a manufacturer?",
+          "inputManufacturer": "Enter the manufacturer's information for the product.",
+          "manufacturerName": "Manufacturer's name",
+          "manufacturerEmployeesCount": "Employees count",
+          "manufacturerType": "Organization type",
+          "manufacturerStreet": "Street",
+          "manufacturerZipCode": "Zip-code",
+          "errors": {
+            "name": "Product name cannot be empty",
+            "x": "X cannot be empty",
+            "y": "Y cannot be empty",
+            "price": "Price must be positive",
+            "partNumber": "Batch number cannot be empty",
+            "manufacturerName": "Organization name cannot be empty",
+            "manufacturerEmployeesCount": "The number of employees must be positive",
+            "manufacturerType": "Organization type cannot be empty",
+            "manufacturerStreet": "Organization street cannot be empty",
+            "manufacturerZipCode": "Zip code must be empty or contain more than 6 characters"
+          }
+        },
+        "Delete": {
+          "title": "Delete?",
+          "description": "The removal of the product cannot be undone.",
+          "ok": "Ok",
+          "cancel": "Cancel",
+          "success": "Product successfully removed",
+          "errors": {
+            "PRODUCT_NOT_FOUND": "Product not found!",
+            "YOU_ARE_NOT_THE_OWNER": "You do not own this product and cannot remove it!",
+            "ERROR": "An error occurred while deleting the product!"
+          }
+        },
+        "Add": {
+          "title": "Create a product",
+          "description": "Enter the fields for the product you are creating.",
+          "ok": "Create",
+          "cancel": "Cancel",
+          "success": "Product successfully created!",
+          "errors": {
+            "ERROR": "An error occurred while creating the product!"
+          }
+        },
+        "Edit": {
+          "title": "Change product",
+          "description": "Enter the fields of the product to be edited.",
+          "ok": "Change",
+          "cancel": "Cancel",
+          "success": "Product successfully updated!",
+          "errors": {
+            "PRODUCT_NOT_FOUND": "Product not found!",
+            "YOU_ARE_NOT_THE_OWNER": "You do not own this product and cannot change it!",
+            "ERROR": "An error occurred while updating the product!"
+          }
+        },
+        "Clear": {
+          "title": "Delete all your products?",
+          "description": "Clearing all of your products cannot be undone.",
+          "ok": "Ok",
+          "cancel": "Cancel",
+          "success": "Products cleared successfully",
+          "errors": {
+            "PRODUCT_NOT_FOUND": "Products not found!",
+            "ERROR": "An error occurred while clearing products!"
+          }
+        }
+      }
+    },
+    "Login": {
+      "auth": "Authorization",
+      "login": "Log in",
+      "success": "Login done!",
+      "label": "Log In",
+      "username": "Username",
+      "password": "Password",
+      "submit": "Log In",
+      "register": "Don't have an account? "
+    },
+    "Register": {
+      "auth": "Registration",
+      "success": "You have registered!",
+      "label": "Registration",
+      "username": "Username",
+      "password": "Password",
+      "submit": "Register",
+      "login": "Do you already have an account? "
+    },
+    "Auth": {
+      "errors": {
+        "username": {
+          "from4to15": "The username must contain between 4 and 15 characters!",
+          "blank": "Username cannot be empty!"
+        },
+        "password": {
+          "from4": "The password must contain more than 4 characters!",
+          "blank": "Password cannot be empty!"
+        }
+      },
+      "requestErrors": {
+        "USER_NOT_FOUND": "User is not found!",
+        "WRONG_PASSWORD": "Invalid user credentials!",
+        "USER_ALREADY_EXISTS": "A user with the same name already exists!",
+        "UNPROCESSABLE_USER_ID_IN_TOKEN": "Unprocessed user ID in the token!",
+        "CANNOT_GET_USER": "Unable to get user!",
+        "MISSING_CREDENTIALS": "User data not sent!",
+        "ERROR": "An error has occurred."
+      }
+    },
+    "Settings": {
+      "settings": "Settings",
+      "subSettings": {
+        "appearance": "Appearance",
+        "language": "Language",
+        "table": "Table"
+      },
+      "Language": {
+        "interface": "Interface",
+        "cannotChange": "Failed to change language used"
+      },
+      "Table": {
+        "table": "Table",
+        "custom": "Own table",
+        "material": "Material table"
+      },
+      "Appearance": {
+        "ok": "Ok",
+        "cancel": "Cancel",
+        "themeSelect": "Select theme",
+        "appearance": "Appearance",
+        "palette": "Palette",
+        "themes": "Themes",
+        "useSystemTheme": "Use system theme",
+        "useSystemThemeDescription": "The appearance of the application will change automatically when the theme is changed on the device",
+        "preferredLightTheme": "Preferred light theme",
+        "preferredDarkTheme": "Preferred dark theme"
+      }
+    },
+    "Error": {
+      "error": "Error",
+      "errorOccurred": "An error has occurred",
+      "clickHere": "Click here",
+      "goHome": "to return home. "
+    },
+    "NotFound": {
+      "notFound": "Not found",
+      "goHome": "Come back home"
+    }
+  }
+}

@@ -1,0 +1,307 @@
+{
+  "pages": {
+    "app": {
+      "appName": "Лаба 9 Клиент",
+      "goBack": "Назад",
+      "routes": {
+        "home": "Таблица",
+        "chart": "Визуализация",
+        "settings": "Настройки",
+        "settingsLanguage": "Настройки языка",
+        "settingsAppearance": "Внешний вид",
+        "settingsTable": "Таблица",
+        "user": "Пользователь",
+        "login": "Авторизация",
+        "register": "Регистрация"
+      },
+      "themes": {
+        "light": "Светлая",
+        "dark": "Тёмная",
+        "lab8": "Тема 8 лабы"
+      },
+      "UserMenu": {
+        "profileManagement": "Управление профилем",
+        "account": "Аккаунт",
+        "youLoggedOut": "Вы вышли из аккаунта"
+      },
+      "ProfileInfo": {
+        "update": "Изменить"
+      },
+      "notifications": {
+        "updated": "Приложение было обновлено",
+        "update": "Обновите страницу или нажмите на сообщение, чтобы изменения вступили в силу",
+        "updateAvailable": "Доступно обновление"
+      },
+      "navigationTabs": {
+        "home": "Таблица",
+        "chart": "Визуализация",
+        "settings": "Настройки"
+      },
+      "other": {
+        "nobodyUpdated": "В последнее время никто обновлял состояние таблицы.",
+        "unitsOfMeasure": {
+          "KILOGRAMS": "Килограммы",
+          "SQUARE_METERS": "Квадратные метры",
+          "LITERS": "Литры",
+          "MILLILITERS": "Миллилитры"
+        },
+        "organizationTypes": {
+          "COMMERCIAL": "Коммерческая",
+          "GOVERNMENT": "Государственная",
+          "TRUST": "Траст",
+          "PRIVATE_LIMITED_COMPANY": "ООО"
+        }
+      }
+    },
+    "Home": {
+      "Events": {
+        "CREATE": "Пользователь {{username}} только что создал продукт №{{id}}.",
+        "UPDATE": "Пользователь {{username}} только что обновил продукт №{{id}}.",
+        "DELETE": "Пользователь {{username}} только что удалил продукт №{{id}}.",
+        "CLEAR": "Пользователь {{username}} только что удалил все свои продукты."
+      },
+      "Sidebar": {
+        "Info": {
+          "Information": "Информация",
+          "productsCount": "Количество продуктов",
+          "databaseName": "База данных",
+          "databaseVersion": "Версия базы данных",
+          "driverName": "Драйвер базы данных",
+          "driverVersion": "Версия драйвера",
+          "JDBCMajorVersion": "Версия JDBC (major)",
+          "JDBCMinorVersion": "Версия JDBC (minor)",
+          "maxConnections": "Максимальное количество соединений",
+          "lastUpdated": "Последнее обновление",
+          "updatedBy": "Кто обновлял"
+        }
+      },
+      "Table": {
+        "title": "Продукты",
+        "emptyDataSourceMessage": "Записей не обнаружено",
+        "columns": {
+          "id": "ИД",
+          "name": "Название",
+          "x": "X",
+          "y": "Y",
+          "creationDate": "Дата создания",
+          "price": "Цена",
+          "partNumber": "Номер партии",
+          "unitOfMeasure": "Единица измерения",
+          "manufacturerId": "ИД производителя",
+          "manufacturerName": "Название производителя",
+          "manufacturerEmployeesCount": "Количество работников",
+          "manufacturerType": "Тип организации",
+          "manufacturerStreet": "Улица",
+          "manufacturerZipCode": "Zip-код",
+          "creatorId": "ИД создателя",
+          "creatorName": "Имя создателя",
+          "summary": "Итого"
+        },
+        "header": {
+          "actions": "Действия"
+        },
+        "actions": {
+          "add": "Создать продукт",
+          "edit": "Изменить продукт",
+          "delete": "Удалить продукт",
+          "clear": "Удалить продукты текущего пользователя"
+        },
+        "grouping": {
+          "groupedBy": "Сгруппировано по",
+          "placeholder": "Перетащите заголовки сюда, чтобы сгруппировать"
+        },
+        "filter": {
+          "tooltip": "Фильтрация"
+        },
+        "toolbar": {
+          "addRemoveColumns": "Добавить или удалить столбцы",
+          "nRowsSelected": "Столбцов выбрано: ",
+          "showColumnsTitle": "Показать столбцы",
+          "showColumnsAriaLabel": "Показать столбцы",
+          "exportTitle": "Экспорт",
+          "exportAriaLabel": "Экспорт",
+          "exportCSVName": "Экспорт в CSV",
+          "exportPDFName": "Экспорт в PDF",
+          "searchTooltip": "Поиск",
+          "searchPlaceholder": "Поиск",
+          "searchAriaLabel": "Поиск",
+          "clearSearchAriaLabel": "Очистить поисковую строку"
+        },
+        "pagination": {
+          "labelDisplayedRows": "из",
+          "labelRowsPerPage": "Строк на странице:",
+          "labelRowsSelect": "строк",
+          "firstAriaLabel": "Первая страница",
+          "firstTooltip": "Первая страница",
+          "previousAriaLabel": "Предыдущая страница",
+          "previousTooltip": "Предыдущая страница",
+          "nextAriaLabel": "Следующая страница",
+          "nextTooltip": "Следующая страница",
+          "lastAriaLabel": "Последняя страница",
+          "lastTooltip": "Последняя страница"
+        },
+        "export": {
+          "pdf": "Экспорт в PDF",
+          "csv": "Экспорт в CSV"
+        },
+        "errors": {
+          "notLoggedIn": "Войдите в профиль, чтобы совершить это действие",
+          "badOwner": "Вы не являетесь владельцем данного продукта!"
+        }
+      },
+      "modals": {
+        "form": {
+          "name": "Название",
+          "x": "X",
+          "y": "Y",
+          "price": "Цена",
+          "partNumber": "Номер партии",
+          "unitOfMeasure": "Единица измерения",
+          "hasManufacturer": "Продукт имеет производителя?",
+          "inputManufacturer": "Введите данные производителя продукта.",
+          "manufacturerName": "Название производителя",
+          "manufacturerEmployeesCount": "Количество работников",
+          "manufacturerType": "Тип организации",
+          "manufacturerStreet": "Улица",
+          "manufacturerZipCode": "Zip-код",
+          "errors": {
+            "name": "Название продукта не может быть пустым",
+            "x": "X не может быть пустым",
+            "y": "Y не может быть пустым",
+            "price": "Цена должна быть положительной",
+            "partNumber": "Номер партии не может быть пустым",
+            "manufacturerName": "Название организации не может быть пустым",
+            "manufacturerEmployeesCount": "Количество сотрудников должно быть положительным",
+            "manufacturerType": "Тип организации не может быть пустым",
+            "manufacturerStreet": "Улица организации не может быть пустой",
+            "manufacturerZipCode": "Zip-код должен быть пустым или содержать больше 6 символов"
+          }
+        },
+        "Delete": {
+          "title": "Удалить?",
+          "description": "Удаление продукта нельзя будет отменить.",
+          "ok": "Ok",
+          "cancel": "Отмена",
+          "success": "Продукт успешно удалён",
+          "errors": {
+            "PRODUCT_NOT_FOUND": "Продукт не найден!",
+            "YOU_ARE_NOT_THE_OWNER": "Вы не являетесь владельцем данного продукта и не можете его удалить!",
+            "ERROR": "Во время удаления продукта произошла ошибка!"
+          }
+        },
+        "Add": {
+          "title": "Создать продукт",
+          "description": "Введите поля создаваемого продукта.",
+          "ok": "Создать",
+          "cancel": "Отмена",
+          "success": "Продукт успешно создан!",
+          "errors": {
+            "ERROR": "Во время создания продукта произошла ошибка!"
+          }
+        },
+        "Edit": {
+          "title": "Изменить продукт",
+          "description": "Введите поля редактируемого продукта.",
+          "ok": "Изменить",
+          "cancel": "Отмена",
+          "success": "Продукт успешно обновлен!",
+          "errors": {
+            "PRODUCT_NOT_FOUND": "Продукт не найден!",
+            "YOU_ARE_NOT_THE_OWNER": "Вы не являетесь владельцем данного продукта и не можете его изменить!",
+            "ERROR": "Во время обновления продукта произошла ошибка!"
+          }
+        },
+        "Clear": {
+          "title": "Удалить все Ваши продукты?",
+          "description": "Удаление всех ваших продуктов нельзя будет отменить.",
+          "ok": "Ok",
+          "cancel": "Отмена",
+          "success": "Продукты успешно удалены",
+          "errors": {
+            "PRODUCT_NOT_FOUND": "Продукты не найдены!",
+            "ERROR": "Во время удаления продуктов произошла ошибка!"
+          }
+        }
+      }
+    },
+    "Login": {
+      "auth": "Авторизация",
+      "login": "Войти",
+      "success": "Вход выполнен!",
+      "label": "Вход",
+      "username": "Имя пользователя",
+      "password": "Пароль",
+      "submit": "Войти",
+      "register": "У вас нет аккаунта? Зарегистрироваться"
+    },
+    "Register": {
+      "auth": "Регистрация",
+      "success": "Вы зарегистрировались!",
+      "label": "Регистрация",
+      "username": "Имя пользователя",
+      "password": "Пароль",
+      "submit": "Зарегистрироваться",
+      "login": "У вас уже есть аккаунт? Войти"
+    },
+    "Auth": {
+      "errors": {
+        "username": {
+          "from4to15": "Имя пользователя должно содержать от 4 до 15 символов!",
+          "blank": "Имя пользователя не может быть пустым!"
+        },
+        "password": {
+          "from4": "Пароль должен содержать больше 4 символов!",
+          "blank": "Пароль не может быть пустым"
+        }
+      },
+      "requestErrors": {
+        "USER_NOT_FOUND": "Пользователь не найден!",
+        "WRONG_PASSWORD": "Неправильные учётные данные пользователя!",
+        "USER_ALREADY_EXISTS": "Пользователь с таким именем уже существует!",
+        "UNPROCESSABLE_USER_ID_IN_TOKEN": "Необрабатыввемый идентификатор пользователя в токене!",
+        "CANNOT_GET_USER": "Невозможно получить пользователя!",
+        "MISSING_CREDENTIALS": "Не отправлены данные пользователя!",
+        "ERROR": "Произошла ошибка."
+      }
+    },
+    "Settings": {
+      "settings": "Настройки",
+      "subSettings": {
+        "appearance": "Внешний вид",
+        "language": "Настройки языка",
+        "table": "Таблица"
+      },
+      "Language": {
+        "interface": "Интерфейс",
+        "cannotChange": "Не удалось изменить используемый язык"
+      },
+      "Table": {
+        "table": "Таблица",
+        "custom": "Собственная таблица",
+        "material": "Таблица Material"
+      },
+      "Appearance": {
+        "ok": "Ok",
+        "cancel": "Отмена",
+        "themeSelect": "Выбор темы",
+        "appearance": "Внешний вид",
+        "palette": "Палитра",
+        "themes": "Темы",
+        "useSystemTheme": "Использовать системную тему",
+        "useSystemThemeDescription": "Внешний вид приложения будет меняться автоматически при изменении темы на устройстве",
+        "preferredLightTheme": "Предпочитаемая светлая тема",
+        "preferredDarkTheme": "Предпочитаемая темная тема"
+      }
+    },
+    "Error": {
+      "error": "Ошибка",
+      "errorOccurred": "Произошла ошибка",
+      "clickHere": "Нажми сюда",
+      "goHome": ", чтобы вернуться домой. Эта ошибка записана в логи и будет обработана в ближайшее время."
+    },
+    "NotFound": {
+      "notFound": "Не найдено",
+      "goHome": "Возвращайтесь домой"
+    }
+  }
+}

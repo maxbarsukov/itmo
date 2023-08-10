@@ -1,0 +1,77 @@
+version: "3.9"
+services:
+    postgres:
+        image: postgres:14.2
+        restart: unless-stopped
+        environment:
+            - POSTGRES_DB=$POSTGRES_DB
+            - POSTGRES_USER=$POSTGRES_USER
+            - POSTGRES_PASSWORD=$POSTGRES_PASSWORD
+        ports:
+            - "5432:5432"
+        networks:
+            - app-network
+        volumes:
+            - database_data:/var/lib/postgresql/data
+
+    rabbitmq:
+        image: rabbitmq:3-management-alpine
+        hostname: rabbitmq
+        container_name: 'rabbitmq'
+        restart: unless-stopped
+        environment:
+            - RABBITMQ_DEFAULT_USER=$RABBITMQ_DEFAULT_USER
+            - RABBITMQ_DEFAULT_PASS=$RABBITMQ_DEFAULT_USER
+            - RABBITMQ_SERVER_ADDITIONAL_ERL_ARGS=-rabbit disk_free_limit 2147483648
+        ports:
+            - "5672:5672"
+            - "15672:15672"
+        networks:
+            - app-network
+        volumes:
+            - rabbitmq_data:/var/lib/rabbitmq/
+            - rabbitmq_log:/var/log/rabbitmq/
+            - ./rabbitmq-init/rabbitmq.conf:/etc/rabbitmq/rabbitmq.conf:ro
+            - ./rabbitmq-init/definitions.json:/etc/rabbitmq/definitions.json:ro
+        healthcheck:
+            test: rabbitmq-diagnostics -q ping
+            interval: 5s
+            timeout: 10s
+            retries: 5
+
+    broadcaster-node:
+        container_name: broadcaster-node
+        build:
+            context: ./broadcaster-node
+            dockerfile: broadcaster.Dockerfile
+        restart: unless-stopped
+        env_file: ./.env
+        environment:
+            - RABBIT_USERNAME=$RABBIT_USERNAME
+            - RABBIT_PASSWORD=$RABBIT_PASSWORD
+            - RABBIT_HOST=$RABBIT_HOST
+            - RABBIT_PORT=$RABBIT_PORT
+        expose:
+            - "8081"
+        ports:
+            - "8081:8081"
+        volumes:
+            - node_modules:/broadcaster/node_modules
+        depends_on:
+            rabbitmq:
+                condition: service_healthy
+
+        networks:
+            - app-network
+        command: yarn start
+
+volumes:
+    rabbitmq_data:
+    rabbitmq_log:
+    node_modules:
+    database_data:
+        driver: local
+
+networks:
+    app-network:
+        driver: bridge

@@ -1,0 +1,19 @@
+micronaut:
+    application:
+        name: broadcaster
+    server:
+        port: 8081
+
+netty:
+    default:
+        allocator:
+            max-order: 3
+
+endpoints:
+    health:
+        enabled: true
+
+rabbitmq:
+    uri: amqp://lab9rabbitmq:lab9rabbitmq@localhost:5672
+    connection-timeout: 5000
+    handshake-timeout: 5000

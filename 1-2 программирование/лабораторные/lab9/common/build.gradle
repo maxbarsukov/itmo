@@ -1,0 +1,25 @@
+plugins {
+    id('java')
+}
+
+version = "0.1"
+group = "common"
+
+dependencies {
+    implementation('com.google.guava:guava:31.1-jre')
+    implementation('org.apache.commons:commons-lang3:3.12.0')
+
+    compileOnly('org.projectlombok:lombok:1.18.26')
+    annotationProcessor('org.projectlombok:lombok:1.18.26')
+    testCompileOnly('org.projectlombok:lombok:1.18.26')
+    testAnnotationProcessor('org.projectlombok:lombok:1.18.26')
+}
+
+repositories {
+    mavenCentral()
+}
+
+java {
+    sourceCompatibility = JavaVersion.toVersion("11")
+    targetCompatibility = JavaVersion.toVersion("11")
+}

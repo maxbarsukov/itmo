@@ -1,0 +1,307 @@
+{
+  "pages": {
+    "app": {
+      "appName": "Lab 9 klient",
+      "goBack": "Tillbaka",
+      "routes": {
+        "home": "Tabell",
+        "chart": "Visualisering",
+        "settings": "inställningar",
+        "settingsLanguage": "Språk",
+        "settingsAppearance": "Utseende",
+        "settingsTable": "Tabell",
+        "user": "Användare",
+        "login": "Logga in",
+        "register": "Registrera"
+      },
+      "themes": {
+        "light": "Ljus",
+        "dark": "Mörk",
+        "lab8": "8 labb tema"
+      },
+      "UserMenu": {
+        "profileManagement": "Profilhantering",
+        "account": "konto",
+        "youLoggedOut": "Du är utloggad nu"
+      },
+      "ProfileInfo": {
+        "update": "Uppdatering"
+      },
+      "notifications": {
+        "updated": "Appen har uppdaterats",
+        "update": "Uppdatera sidan eller klicka på meddelandet för att ändringarna ska träda i kraft",
+        "updateAvailable": "Uppdatering tillgänglig"
+      },
+      "navigationTabs": {
+        "home": "Tabell",
+        "chart": "Visualisering",
+        "settings": "inställningar"
+      },
+      "other": {
+        "nobodyUpdated": "Ingen har uppdaterat tabellens tillstånd på sistone.",
+        "unitsOfMeasure": {
+          "KILOGRAMS": "Kilogram",
+          "SQUARE_METERS": "Kvadratmeter",
+          "LITERS": "Liter",
+          "MILLILITERS": "Milliliter"
+        },
+        "organizationTypes": {
+          "COMMERCIAL": "Kommersiell",
+          "GOVERNMENT": "Regering",
+          "TRUST": "Förtroende",
+          "PRIVATE_LIMITED_COMPANY": "P.L.C."
+        }
+      }
+    },
+    "Home": {
+      "Events": {
+        "CREATE": "Användare {{username}} har precis skapat produktnr.{{id}}.",
+        "UPDATE": "Användare {{username}} har precis uppdaterat produktnr.{{id}}.",
+        "DELETE": "Användare {{username}} har precis tagit bort produktnr.{{id}}.",
+        "CLEAR": "Användare {{username}} tog precis bort alla hans produkter."
+      },
+      "Sidebar": {
+        "Info": {
+          "Information": "Information",
+          "productsCount": "Produkter räknas",
+          "databaseName": "Databas",
+          "databaseVersion": "Databasversion",
+          "driverName": "Databas drivrutin",
+          "driverVersion": "Drivrutin version",
+          "JDBCMajorVersion": "JDBC-version (stor)",
+          "JDBCMinorVersion": "JDBC-version (mindre)",
+          "maxConnections": "Max anslutningar",
+          "lastUpdated": "Senaste uppdateringen",
+          "updatedBy": "Uppdaterad av"
+        }
+      },
+      "Table": {
+        "title": "Produkter",
+        "emptyDataSourceMessage": "Inga produkter hittades",
+        "columns": {
+          "id": "ID",
+          "name": "namn",
+          "x": "X",
+          "y": "Y",
+          "creationDate": "Skapelsedagen",
+          "price": "Pris",
+          "partNumber": "Artikelnummer",
+          "unitOfMeasure": "Måttenhet",
+          "manufacturerId": "Tillverkarens ID",
+          "manufacturerName": "Tillverkarens namn",
+          "manufacturerEmployeesCount": "Anställda räknas",
+          "manufacturerType": "Organisations typ",
+          "manufacturerStreet": "Gata",
+          "manufacturerZipCode": "Postnummer",
+          "creatorId": "Skapar-ID",
+          "creatorName": "Skaparens namn",
+          "summary": "Total"
+        },
+        "header": {
+          "actions": "Handlingar"
+        },
+        "actions": {
+          "add": "Skapa en produkt",
+          "edit": "Uppdatera produkten",
+          "delete": "Ta bort produkt",
+          "clear": "Ta bort nuvarande användares produkter"
+        },
+        "grouping": {
+          "groupedBy": "Grupperade efter",
+          "placeholder": "Dra titlar hit för att gruppera efter"
+        },
+        "filter": {
+          "tooltip": "Filtrera"
+        },
+        "toolbar": {
+          "addRemoveColumns": "Lägg till eller ta bort kolumner",
+          "nRowsSelected": "Valda kolumner: ",
+          "showColumnsTitle": "Visa kolumner",
+          "showColumnsAriaLabel": "Visa kolumner",
+          "exportTitle": "Exportera",
+          "exportAriaLabel": "Exportera",
+          "exportCSVName": "Exportera till CSV",
+          "exportPDFName": "Exportera till PDF",
+          "searchTooltip": "Sök",
+          "searchPlaceholder": "Sök",
+          "searchAriaLabel": "Sök",
+          "clearSearchAriaLabel": "Rensa sökfältet"
+        },
+        "pagination": {
+          "labelDisplayedRows": "av",
+          "labelRowsPerPage": "Rader per sida:",
+          "labelRowsSelect": "rader",
+          "firstAriaLabel": "Första sidan",
+          "firstTooltip": "Första sidan",
+          "previousAriaLabel": "Föregående sida",
+          "previousTooltip": "Föregående sida",
+          "nextAriaLabel": "Nästa sida",
+          "nextTooltip": "Nästa sida",
+          "lastAriaLabel": "Sista sidan",
+          "lastTooltip": "Sista sidan"
+        },
+        "export": {
+          "pdf": "Exportera till PDF",
+          "csv": "Exportera till CSV"
+        },
+        "errors": {
+          "notLoggedIn": "Logga in på din profil för att slutföra denna åtgärd",
+          "badOwner": "Du äger inte denna produkt!"
+        }
+      },
+      "modals": {
+        "form": {
+          "name": "namn",
+          "x": "X",
+          "y": "Y",
+          "price": "Pris",
+          "partNumber": "Artikelnummer",
+          "unitOfMeasure": "Enhet udda mått",
+          "hasManufacturer": "Har produkten en tillverkare?",
+          "inputManufacturer": "Ange tillverkarens information för produkten.",
+          "manufacturerName": "Tillverkarens namn",
+          "manufacturerEmployeesCount": "Anställda räknas",
+          "manufacturerType": "Organisations typ",
+          "manufacturerStreet": "Gata",
+          "manufacturerZipCode": "Postnummer",
+          "errors": {
+            "name": "Produktnamnet får inte vara tomt",
+            "x": "X kan inte vara tomt",
+            "y": "Y kan inte vara tomt",
+            "price": "Priset måste vara positivt",
+            "partNumber": "Batchnummer kan inte vara tomt",
+            "manufacturerName": "Organisationsnamnet får inte vara tomt",
+            "manufacturerEmployeesCount": "Antalet anställda ska vara positivt",
+            "manufacturerType": "Organisationstypen får inte vara tom",
+            "manufacturerStreet": "Organisationsgatan får inte vara tom",
+            "manufacturerZipCode": "Postnummer måste vara tomt eller innehålla fler än 6 tecken"
+          }
+        },
+        "Delete": {
+          "title": "Radera?",
+          "description": "Borttagningen av produkten kan inte ångras.",
+          "ok": "Ok",
+          "cancel": "Annullera",
+          "success": "Produkten har tagits bort",
+          "errors": {
+            "PRODUCT_NOT_FOUND": "Produkten hittades inte!",
+            "YOU_ARE_NOT_THE_OWNER": "Du äger inte denna produkt och kan inte ta bort den!",
+            "ERROR": "Ett fel uppstod när produkten skulle tas bort!"
+          }
+        },
+        "Add": {
+          "title": "Skapa en produkt",
+          "description": "Ange fälten för produkten du skapar.",
+          "ok": "Skapa",
+          "cancel": "Annullera",
+          "success": "Produkten har skapats framgångsrikt!",
+          "errors": {
+            "ERROR": "Ett fel uppstod när produkten skapades!"
+          }
+        },
+        "Edit": {
+          "title": "Byt produkt",
+          "description": "Ange fälten för produkten som ska redigeras.",
+          "ok": "Förändra",
+          "cancel": "Annullera",
+          "success": "Produkten har uppdaterats!",
+          "errors": {
+            "PRODUCT_NOT_FOUND": "Produkten hittades inte!",
+            "YOU_ARE_NOT_THE_OWNER": "Du äger inte denna produkt och kan inte ändra den!",
+            "ERROR": "Ett fel uppstod när produkten skulle uppdateras!"
+          }
+        },
+        "Clear": {
+          "title": "Ta bort alla dina produkter?",
+          "description": "Rensa alla dina produkter kan inte ångras.",
+          "ok": "Ok",
+          "cancel": "Annullera",
+          "success": "Produkter har rensats",
+          "errors": {
+            "PRODUCT_NOT_FOUND": "Produkterna hittades inte!",
+            "ERROR": "Ett fel uppstod när produkter rensades!"
+          }
+        }
+      }
+    },
+    "Login": {
+      "auth": "Tillstånd",
+      "login": "Logga in",
+      "success": "Inloggning klar!",
+      "label": "Logga in",
+      "username": "Användarnamn",
+      "password": "Lösenord",
+      "submit": "Logga in",
+      "register": "Har du inget konto? "
+    },
+    "Register": {
+      "auth": "Registrering",
+      "success": "Du har registrerat dig!",
+      "label": "Registrering",
+      "username": "Användarnamn",
+      "password": "Lösenord",
+      "submit": "Registrera",
+      "login": "Har du redan ett konto? "
+    },
+    "Auth": {
+      "errors": {
+        "username": {
+          "from4to15": "Användarnamnet måste innehålla mellan 4 och 15 tecken!",
+          "blank": "Användarnamnet får inte vara tomt!"
+        },
+        "password": {
+          "from4": "Lösenordet måste innehålla mer än 4 tecken!",
+          "blank": "Lösenordet får inte vara tomt!"
+        }
+      },
+      "requestErrors": {
+        "USER_NOT_FOUND": "Användaren hittades inte!",
+        "WRONG_PASSWORD": "Ogiltiga användaruppgifter!",
+        "USER_ALREADY_EXISTS": "En användare med samma namn finns redan!",
+        "UNPROCESSABLE_USER_ID_IN_TOKEN": "Obehandlat användar-ID i token!",
+        "CANNOT_GET_USER": "Det gick inte att få användare!",
+        "MISSING_CREDENTIALS": "Användardata har inte skickats!",
+        "ERROR": "Ett fel har uppstått."
+      }
+    },
+    "Settings": {
+      "settings": "inställningar",
+      "subSettings": {
+        "appearance": "Utseende",
+        "language": "Språk",
+        "table": "Tabell"
+      },
+      "Language": {
+        "interface": "Gränssnitt",
+        "cannotChange": "Det gick inte att ändra det använda språket"
+      },
+      "Table": {
+        "table": "Tabell",
+        "custom": "Eget bord",
+        "material": "Materialbord"
+      },
+      "Appearance": {
+        "ok": "Ok",
+        "cancel": "Annullera",
+        "themeSelect": "Välj tema",
+        "appearance": "Utseende",
+        "palette": "Palett",
+        "themes": "teman",
+        "useSystemTheme": "Använd systemtema",
+        "useSystemThemeDescription": "Applikationens utseende ändras automatiskt när temat ändras på enheten",
+        "preferredLightTheme": "Föredraget ljustema",
+        "preferredDarkTheme": "Föredrar mörkt tema"
+      }
+    },
+    "Error": {
+      "error": "Fel",
+      "errorOccurred": "Ett fel har uppstått",
+      "clickHere": "Klicka här",
+      "goHome": "att återvända hem. "
+    },
+    "NotFound": {
+      "notFound": "Hittades inte",
+      "goHome": "Kom tillbaka hem"
+    }
+  }
+}

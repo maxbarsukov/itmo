@@ -1,0 +1,307 @@
+{
+  "pages": {
+    "app": {
+      "appName": "Lab 9 Viðskiptavinur",
+      "goBack": "Til baka",
+      "routes": {
+        "home": "Tafla",
+        "chart": "Visualization",
+        "settings": "Stillingar",
+        "settingsLanguage": "Tungumál",
+        "settingsAppearance": "Útlit",
+        "settingsTable": "Tafla",
+        "user": "Notandi",
+        "login": "Skrá inn",
+        "register": "Skráðu þig"
+      },
+      "themes": {
+        "light": "Ljós",
+        "dark": "Myrkur",
+        "lab8": "8 rannsóknarstofu þema"
+      },
+      "UserMenu": {
+        "profileManagement": "Prófílstjórnun",
+        "account": "Reikningur",
+        "youLoggedOut": "Þú ert skráður út núna"
+      },
+      "ProfileInfo": {
+        "update": "Uppfærsla"
+      },
+      "notifications": {
+        "updated": "Appið hefur verið uppfært",
+        "update": "Endurnýjaðu síðuna eða smelltu á skilaboðin til að breytingarnar taki gildi",
+        "updateAvailable": "Uppfærsla í boði"
+      },
+      "navigationTabs": {
+        "home": "Tafla",
+        "chart": "Visualization",
+        "settings": "Stillingar"
+      },
+      "other": {
+        "nobodyUpdated": "Enginn hefur uppfært stöðu töflunnar undanfarið.",
+        "unitsOfMeasure": {
+          "KILOGRAMS": "Kíló",
+          "SQUARE_METERS": "Fermetrar",
+          "LITERS": "Lítrar",
+          "MILLILITERS": "Millilitrar"
+        },
+        "organizationTypes": {
+          "COMMERCIAL": "Auglýsing",
+          "GOVERNMENT": "Ríkisstjórn",
+          "TRUST": "Traust",
+          "PRIVATE_LIMITED_COMPANY": "P.L.C."
+        }
+      }
+    },
+    "Home": {
+      "Events": {
+        "CREATE": "Notandi {{username}} búin að búa til vöru nr.{{id}}.",
+        "UPDATE": "Notandi {{username}} bara uppfært vöru nr.{{id}}.",
+        "DELETE": "Notandi {{username}} bara eytt vöru nr.{{id}}.",
+        "CLEAR": "Notandi {{username}} eyddi bara öllum vörum hans."
+      },
+      "Sidebar": {
+        "Info": {
+          "Information": "Upplýsingar",
+          "productsCount": "Vörur telja",
+          "databaseName": "Gagnagrunnur",
+          "databaseVersion": "Gagnagrunnsútgáfa",
+          "driverName": "Bílstjóri fyrir gagnagrunn",
+          "driverVersion": "Bílstjóri útgáfa",
+          "JDBCMajorVersion": "JDBC útgáfa (meiriháttar)",
+          "JDBCMinorVersion": "JDBC útgáfa (minniháttar)",
+          "maxConnections": "Hámarks tengingar",
+          "lastUpdated": "Síðasta uppfærsla",
+          "updatedBy": "Uppfært af"
+        }
+      },
+      "Table": {
+        "title": "Vörur",
+        "emptyDataSourceMessage": "Engar vörur fundust",
+        "columns": {
+          "id": "auðkenni",
+          "name": "Nafn",
+          "x": "X",
+          "y": "Y",
+          "creationDate": "Stofndagur",
+          "price": "Verð",
+          "partNumber": "Hlutanúmer",
+          "unitOfMeasure": "Mælieining",
+          "manufacturerId": "Auðkenni framleiðanda",
+          "manufacturerName": "Nafn framleiðanda",
+          "manufacturerEmployeesCount": "Starfsmenn telja",
+          "manufacturerType": "Tegund stofnunar",
+          "manufacturerStreet": "Götu",
+          "manufacturerZipCode": "Póstnúmer",
+          "creatorId": "Auðkenni höfundar",
+          "creatorName": "Nafn skapara",
+          "summary": "Samtals"
+        },
+        "header": {
+          "actions": "Aðgerðir"
+        },
+        "actions": {
+          "add": "Búðu til vöru",
+          "edit": "Uppfærðu vöru",
+          "delete": "Eyða vöru",
+          "clear": "Eyða vörum núverandi notanda"
+        },
+        "grouping": {
+          "groupedBy": "Flokkað eftir",
+          "placeholder": "Dragðu titla hingað til að flokka eftir"
+        },
+        "filter": {
+          "tooltip": "Sía"
+        },
+        "toolbar": {
+          "addRemoveColumns": "Bættu við eða fjarlægðu dálka",
+          "nRowsSelected": "Valdir dálkar: ",
+          "showColumnsTitle": "Sýna dálka",
+          "showColumnsAriaLabel": "Sýna dálka",
+          "exportTitle": "Útflutningur",
+          "exportAriaLabel": "Útflutningur",
+          "exportCSVName": "Flytja út í CSV",
+          "exportPDFName": "Flytja út í PDF",
+          "searchTooltip": "Leita",
+          "searchPlaceholder": "Leita",
+          "searchAriaLabel": "Leita",
+          "clearSearchAriaLabel": "Hreinsaðu leitarstikuna"
+        },
+        "pagination": {
+          "labelDisplayedRows": "af",
+          "labelRowsPerPage": "Línur á síðu:",
+          "labelRowsSelect": "línur",
+          "firstAriaLabel": "Fyrsta síða",
+          "firstTooltip": "Fyrsta síða",
+          "previousAriaLabel": "Fyrri síða",
+          "previousTooltip": "Fyrri síða",
+          "nextAriaLabel": "Næsta síða",
+          "nextTooltip": "Næsta síða",
+          "lastAriaLabel": "Síðasta síða",
+          "lastTooltip": "Síðasta síða"
+        },
+        "export": {
+          "pdf": "Flytja út í PDF",
+          "csv": "Flytja út í CSV"
+        },
+        "errors": {
+          "notLoggedIn": "Skráðu þig inn á prófílinn þinn til að ljúka þessari aðgerð",
+          "badOwner": "Þú átt ekki þessa vöru!"
+        }
+      },
+      "modals": {
+        "form": {
+          "name": "Nafn",
+          "x": "X",
+          "y": "Y",
+          "price": "Verð",
+          "partNumber": "Hlutanúmer",
+          "unitOfMeasure": "Eining stakur mælikvarði",
+          "hasManufacturer": "Er varan með framleiðanda?",
+          "inputManufacturer": "Sláðu inn upplýsingar framleiðanda fyrir vöruna.",
+          "manufacturerName": "Nafn framleiðanda",
+          "manufacturerEmployeesCount": "Starfsmenn telja",
+          "manufacturerType": "Tegund stofnunar",
+          "manufacturerStreet": "Götu",
+          "manufacturerZipCode": "Póstnúmer",
+          "errors": {
+            "name": "Vöruheiti má ekki vera autt",
+            "x": "X má ekki vera tómt",
+            "y": "Y getur ekki verið tómt",
+            "price": "Verð verður að vera jákvætt",
+            "partNumber": "Lotunúmer má ekki vera tómt",
+            "manufacturerName": "Nafn fyrirtækis má ekki vera autt",
+            "manufacturerEmployeesCount": "Fjöldi starfsmanna þarf að vera jákvæður",
+            "manufacturerType": "Tegund fyrirtækis má ekki vera tóm",
+            "manufacturerStreet": "Gata stofnunarinnar má ekki vera auð",
+            "manufacturerZipCode": "Póstnúmer verður að vera autt eða innihalda fleiri en 6 stafi"
+          }
+        },
+        "Delete": {
+          "title": "Eyða?",
+          "description": "Ekki er hægt að afturkalla fjarlægingu vörunnar.",
+          "ok": "Allt í lagi",
+          "cancel": "Hætta við",
+          "success": "Varan tókst að fjarlægja",
+          "errors": {
+            "PRODUCT_NOT_FOUND": "Varan fannst ekki!",
+            "YOU_ARE_NOT_THE_OWNER": "Þú átt ekki þessa vöru og getur ekki fjarlægt hana!",
+            "ERROR": "Villa kom upp við að eyða vörunni!"
+          }
+        },
+        "Add": {
+          "title": "Búðu til vöru",
+          "description": "Sláðu inn reitina fyrir vöruna sem þú ert að búa til.",
+          "ok": "Búa til",
+          "cancel": "Hætta við",
+          "success": "Vara búin til!",
+          "errors": {
+            "ERROR": "Villa kom upp við að búa til vöruna!"
+          }
+        },
+        "Edit": {
+          "title": "Skiptu um vöru",
+          "description": "Sláðu inn reiti vörunnar sem á að breyta.",
+          "ok": "Breyta",
+          "cancel": "Hætta við",
+          "success": "Varan hefur verið uppfærð!",
+          "errors": {
+            "PRODUCT_NOT_FOUND": "Varan fannst ekki!",
+            "YOU_ARE_NOT_THE_OWNER": "Þú átt ekki þessa vöru og getur ekki breytt henni!",
+            "ERROR": "Villa kom upp við að uppfæra vöruna!"
+          }
+        },
+        "Clear": {
+          "title": "Eyða öllum vörum þínum?",
+          "description": "Ekki er hægt að afturkalla allar vörur þínar.",
+          "ok": "Allt í lagi",
+          "cancel": "Hætta við",
+          "success": "Vörur hreinsaðar",
+          "errors": {
+            "PRODUCT_NOT_FOUND": "Vörur fundust ekki!",
+            "ERROR": "Villa kom upp við að hreinsa vörur!"
+          }
+        }
+      }
+    },
+    "Login": {
+      "auth": "Heimild",
+      "login": "Skrá inn",
+      "success": "Innskráningu lokið!",
+      "label": "Skrá inn",
+      "username": "Notandanafn",
+      "password": "Lykilorð",
+      "submit": "Skrá inn",
+      "register": "Ertu ekki með reikning? "
+    },
+    "Register": {
+      "auth": "Skráning",
+      "success": "Þú hefur skráð þig!",
+      "label": "Skráning",
+      "username": "Notandanafn",
+      "password": "Lykilorð",
+      "submit": "Skráðu þig",
+      "login": "Ertu nú þegar með reikning? "
+    },
+    "Auth": {
+      "errors": {
+        "username": {
+          "from4to15": "Notandanafnið verður að innihalda á milli 4 og 15 stafi!",
+          "blank": "Notandanafn má ekki vera tómt!"
+        },
+        "password": {
+          "from4": "Lykilorðið verður að innihalda fleiri en 4 stafi!",
+          "blank": "Lykilorð má ekki vera tómt!"
+        }
+      },
+      "requestErrors": {
+        "USER_NOT_FOUND": "Notandi fannst ekki!",
+        "WRONG_PASSWORD": "Ógild notandaskilríki!",
+        "USER_ALREADY_EXISTS": "Notandi með sama nafni er þegar til!",
+        "UNPROCESSABLE_USER_ID_IN_TOKEN": "Óunnið notandaauðkenni í tákninu!",
+        "CANNOT_GET_USER": "Ekki hægt að ná í notanda!",
+        "MISSING_CREDENTIALS": "Notendagögn ekki send!",
+        "ERROR": "Villa hefur komið upp."
+      }
+    },
+    "Settings": {
+      "settings": "Stillingar",
+      "subSettings": {
+        "appearance": "Útlit",
+        "language": "Tungumál",
+        "table": "Tafla"
+      },
+      "Language": {
+        "interface": "Viðmót",
+        "cannotChange": "Mistókst að breyta tungumáli sem notað er"
+      },
+      "Table": {
+        "table": "Tafla",
+        "custom": "Eigin borð",
+        "material": "Efnisborð"
+      },
+      "Appearance": {
+        "ok": "Allt í lagi",
+        "cancel": "Hætta við",
+        "themeSelect": "Veldu þema",
+        "appearance": "Útlit",
+        "palette": "Litatöflu",
+        "themes": "Þemu",
+        "useSystemTheme": "Notaðu kerfisþema",
+        "useSystemThemeDescription": "Útlit forritsins breytist sjálfkrafa þegar þema er breytt í tækinu",
+        "preferredLightTheme": "Ákjósanlegt ljós þema",
+        "preferredDarkTheme": "Ákjósanlegt dökkt þema"
+      }
+    },
+    "Error": {
+      "error": "Villa",
+      "errorOccurred": "Villa hefur komið upp",
+      "clickHere": "Ýttu hér",
+      "goHome": "að snúa heim. "
+    },
+    "NotFound": {
+      "notFound": "Ekki fundið",
+      "goHome": "Komdu aftur heim"
+    }
+  }
+}
