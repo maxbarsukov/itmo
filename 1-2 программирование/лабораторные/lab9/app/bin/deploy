@@ -1,3 +1,0 @@
-#!/bin/bash
-
-~/glassfish-user/bin/asadmin deploy --contextroot="/" ./app/build/libs/app-1.0-SNAPSHOT.war

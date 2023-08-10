@@ -1,6 +1,0 @@
-#!/bin/sh
-. "$(dirname "$0")/_/husky.sh"
-
-if yarn git-branch-is dev;
-then yarn commitlint --edit $1;
-fi

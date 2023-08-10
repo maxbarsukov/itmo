@@ -1,1 +1,0 @@
-PGPASSWORD=s367081 psql -h localhost -p 5432 -U s367081 -d lab9
