@@ -14,7 +14,7 @@
 
 Задания для лабораторных работ: https://se.ifmo.ru/courses/web#labs
 
-- [Лабораторная работа №1](./%D0%BB%D0%B0%D0%B1%D0%BE%D1%80%D0%B0%D1%82%D0%BE%D1%80%D0%BD%D1%8B%D0%B5/lab1)
+- [Лабораторная работа №1](https://github.com/maxbarsukov-itmo/web-1)
 
 ## Полезные ссылки
 
