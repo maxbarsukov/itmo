@@ -113,6 +113,19 @@ function removeLinks() {
 }
 ```
 
+Генерируемый CSS:
+```css
+.small-uppercase,
+.modal-background,
+.product-link {
+  color: lightslategrey;
+  font-size: 10px;
+  letter-spacing: 0.1em;
+  line-height: 12px;
+  text-transform: uppercase;
+}
+```
+
 `@extend` перегруппирует общие свойства под списком селекторов.
 
 Этот список прост в обслуживании, потому что вы только добавляете селекторы один за другим и непосредственно в соответствующем селекторе.
@@ -197,7 +210,7 @@ function goToIfmo() {
 
 Использует [History API](https://developer.mozilla.org/en-US/docs/Web/API/History_API).
 
-Работает только на том же домене, на который обновляется URL, так как:ы
+Работает только на том же домене, на который обновляется URL, так как:
 
 > Новый URL-адрес должен иметь то же происхождение, что и текущий URL-адрес; в противном случае `pushState()` выдаст исключение.
 
