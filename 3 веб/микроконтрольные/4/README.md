@@ -4,6 +4,16 @@
 
 ### 1. Почему `RequestDispatcher` через контекст сервлета можно получить только по абсолютному пути?
 
+#### Коротко и на английском
+
+> \> The ServletContext object is an interface that provides a view of the entire web application. It is not tied to any particular client request, and as such, it doesn't have the context of a 'current' location within the app. Because it serves application-level information, it has no way of knowing what a 'relative' path would mean.
+> 
+> \> In contrast, ServletRequest is specific to the client's request and has the context of the request URI. So, it knows what a 'relative' path would be relative to.
+
+*by Boris Dvorkin ([@worthant](https://github.com/worthant))*
+
+#### Длинно и на русском
+
 Контекст хранится на уровне приложения. Веб-контейнер запускает приложения одно за другим и запускает их внутри своей JVM. Он хранит singleton-объект в своей JVM, где регистрирует любой объект, помещенный в него. Этот singleton-объект используется всеми приложениями, работающими внутри него, поскольку он хранится внутри JVM самого контейнера.
 
 `ServletContext` — это объект с гораздо более широким scope'ом (весь контекст сервлета), чем `ServletRequest`.
