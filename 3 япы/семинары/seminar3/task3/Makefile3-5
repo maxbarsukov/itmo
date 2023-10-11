@@ -2,10 +2,7 @@ ASM=nasm
 ASMFLAGS=-f elf64
 LD=ld
 
-lib.o: lib.asm
-	$(ASM) $(ASMFLAGS) -o $@ $<
-
-main.o: main.asm lib.o
+%.o: %.asm
 	$(ASM) $(ASMFLAGS) -o $@ $<
 
 app: lib.o main.o
