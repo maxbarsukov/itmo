@@ -2,7 +2,7 @@
 ## Проект
 
 Веб-клиент: https://itmoptics.netlify.app/
-API: https://api.followy.ru/itmoptics/
+API: https://itmoptics.maxbarsukov.ru/
 
 Исходный код:
 1. https://github.com/itmo-corp/itmemory-project
