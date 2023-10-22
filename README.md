@@ -7,6 +7,11 @@
 | :exclamation: <b>Любое копирование материалов целиком или частично,<br>но без ссылки на автора, является кражей интеллектуальной собственности.<br>Это плагиат, за который из ИТМО отчисляют.</b> :exclamation: |
 |-----------------------------------------|
 
+Здесь представлены лабораторные, тесты, рубежки, экзамены по профильным (и не только) предметам по **направлению СППО** и **кафедры ВТ**.  
+Если что-то используете, пожалуйста **подписывайтесь :bell:** и **ставьте :star:**, чтобы не потерять.
+
+Если хотите что-то добавить в репозиторий, отправляйте **Pull request** :mailbox_with_mail:. После проверки информация будет добавлена.
+
 ---
 
 ## Оглавление
@@ -93,21 +98,26 @@
 
 | Ссылка | Описание |
 | --- | --- |
-| https://t.me/ITMOhomework | Канал с примерами готовых лабораторных работ |
-| https://github.com/EgorMIt/ITMO <br> https://github.com/RomanVassilchenko/ITMOProjects <br> https://github.com/band-of-four/cheatsheets | Много готовых лаб и ДЗ |
-| https://github.com/Imtjl | Гайды и лабораторные 2023 |
-| https://picloud.pw/about/ | Некоторые ДЗ и лабораторные |
-| https://rosroble.github.io/ | Полезная инфа по лабораторным |
-| https://yank0vy3rdna.github.io/itmo-faq/ | Гайд для первокурсников и абитуриентов |
-| https://dima.mysoftware.ru/P3110.html | Полезные ссылки |
+| https://github.com/Imtjl/1st-year-guide <br> https://yank0vy3rdna.github.io/itmo-faq/ | Гайд для первокурсников и абитуриентов |
+| https://t.me/ITMOhomework | Примеры готовых лабораторных работ |
+| https://205826.github.io | Полезные ссылки |
+| https://github.com/Imtjl <br> https://github.com/EgorMIt/ITMO <br> https://github.com/RedGry/ITMO <br> https://github.com/RomanVassilchenko/ITMOProjects <br> https://github.com/band-of-four/cheatsheets | Много готовых лабораторных работ, ДЗ и гайдов |
+| https://picloud.pw/about/ | Некоторые ДЗ и лабораторные до 2020 года |
+| https://rosroble.github.io/ | Полезная информация по лабораторным |
 | https://telegra.ph/Poleznye-ssylki-dlya-pervokursnikov-VT-08-26 | Другие полезные ссылки |
 
+[**Сайт кафедры Вычислительной техники с заданиями к работам**](https://se.ifmo.ru)
+
+---
 
 ## Содействие <a name="contributing"></a>
 
 Сообщения об ошибках и запросы на вытягивание приветствуются на GitHub по адресу https://github.com/maxbarsukov/itmo.
 Этот проект задуман как безопасное и гостеприимное пространство для совместной работы, и ожидается, что участники будут придерживаться [кодекса поведения](https://github.com/maxbarsukov/itmo/blob/master/CODE_OF_CONDUCT.md).
 
+<a href="https://github.com/maxbarsukov/itmo/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=maxbarsukov/itmo" />
+</a>
 
 ## Нормы поведения <a name="code-of-conduct"></a>
 
