@@ -4,20 +4,19 @@ LD         = gcc
 ASM        = nasm
 ASMFLAGS   =-felf64 -g
 
-# Если есть код на C, то компоновку тоже нужно производить
-# с помощью gcc, а не ld
-hello: hello.o string.o
+main: main.o print_file.o
 	$(LD) -o $@ $^
 
-# target : dependencies
-#     do this
-hello.o: hello.c 
+target : main
+	./main string.txt
+
+main.o: main.c
 	$(CC) -c $(CFLAGS) -o $@ $<
 
-string.o: string.asm
+print_file.o: print_file.asm
 	$(ASM) $(ASMFLAGS) -o $@ $<
 
-clean: 
-	$(RM) hello hello.o string.o
+clean:
+	$(RM) main main.o print_file.o
 
 .PHONY: clean

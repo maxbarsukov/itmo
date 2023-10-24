@@ -1,5 +1,5 @@
 ; hello_mmap.asm
-%define O_RDONLY 0 
+%define O_RDONLY 0
 %define PROT_READ 0x1
 %define MAP_PRIVATE 0x2
 %define SYS_WRITE 1
@@ -27,7 +27,7 @@ print_string:
     push rdi
     call string_length
     pop  rsi
-    mov  rdx, rax 
+    mov  rdx, rax
     mov  rax, SYS_WRITE
     mov  rdi, FD_STDOUT
     syscall
@@ -37,9 +37,9 @@ string_length:
     xor  rax, rax
 .loop:
     cmp  byte [rdi+rax], 0
-    je   .end 
+    je   .end
     inc  rax
-    jmp .loop 
+    jmp .loop
 .end:
     ret
 
@@ -66,16 +66,42 @@ _start:
 
     ; Вызовите mmap c правильными аргументами
     ; Дайте операционной системе самой выбрать, куда отобразить файл
-    ; Размер области возьмите в размер страницы 
-    ; Область не должна быть общей для нескольких процессов 
+    ; Размер области возьмите в размер страницы
+    ; Область не должна быть общей для нескольких процессов
     ; и должна выделяться только для чтения.
 
+    mov r8, rax
+    push r8
+    mov r9, 0
+    mov r10, MAP_PRIVATE
+    mov rax, SYS_MMAP
+    mov rdi, 0
+    mov rsi, 4096
+    mov rdx, PROT_READ
+    syscall
 
-    ; с помощью print_string теперь можно вывести его содержимое
+    push rax
+    sub rsp, 144
+    mov r15, rax
 
-    ; теперь можно освободить память с помощью munmap
+    mov rax, 5
+    mov rsi, rsp
+    mov rdi, r8
+    syscall
 
-    ; закрыть файл используя close
+    mov rdi, r15
+    mov rsi, [rsp + 48]
+    push rdi
+    call print_substring
 
-    ; и выйти
+    mov rax, 11
+    pop rdi
+    mov rsi, 4096
+
+    syscall
+
+    mov rax, 3
+    pop rdi
+    syscall
+
     call exit
