@@ -1,4 +1,3 @@
 *.o
-hello
-hello2
+*.out
 main

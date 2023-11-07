@@ -4,11 +4,68 @@
 
 Скомпилируйте [следующий файл](./questions/alignas.c) и посмотрите содержимое секции `.data` с помощью `objdump`. По какому адресу начинается переменная `x`? Попробуйте убрать `_Alignas(128)` и объясните эффект.
 
+    $ clang alignas.c -c -o alignas.o
+    $ clang alignas.o -o alignas
+    $ objdump -D alignas.o
+
+С `_Alignas(128)`:
+
+    0000000000004080 <x>:
+    4080:	ff                   	(bad)
+    4081:	ff                   	(bad)
+    4082:	ff                   	(bad)
+    4083:	ff                   	(bad)
+    4084:	ff                   	(bad)
+    4085:	ff                   	(bad)
+    4086:	ff                   	(bad)
+    4087:	ff                   	.byte 0xff
+
+Без `_Alignas(128)`:
+
+    0000000000004010 <x>:
+    4010:	ff                   	(bad)
+    4011:	ff                   	(bad)
+    4012:	ff                   	(bad)
+    4013:	ff                   	(bad)
+    4014:	ff                   	(bad)
+    4015:	ff                   	(bad)
+    4016:	ff                   	(bad)
+    4017:	ff                   	.byte 0xff
+
+Изменился адрес начала переменной `x`. С `_Alignas(128)` он выравнивается по 128 байт, т.е начинается не с `4010`, а с `4080`.
+
+
+Подробнее про команду `_Alignas(SIZE)` [ можно прочитать тут](https://coderoad.ru/17091382/%D0%92%D1%8B%D1%80%D0%B0%D0%B2%D0%BD%D0%B8%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5-%D0%BF%D0%B0%D0%BC%D1%8F%D1%82%D0%B8-%D0%BA%D0%B0%D0%BA-%D0%B8%D1%81%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D1%82%D1%8C-alignof-alignas).
+
+В целом команда делает так, чтобы любые выделяемые данные выделялись с адресов, кратных аргументу, то есть вы можете выделить данные по адресу `10000` в 1 байт, но при минимальной кратности в 128 следующие данные поместятся не в `10001` а в `10080` (адреса в `hex`).
 
 ### Вопрос
 
 Напишите минимальный пример с таким кодом, скомпилируйте его со строгим соответствием стандарту `C17` (`-std=c17 -pedantic -Wall`).  Что выведет компилятор? Объясните сообщение.
 
+```c
+int main() {
+    int x = -1;
+    int y = 2;
+
+    if (x > 0)
+        if (y > 0) {
+            return 1;
+        }
+        else {
+            return 0;
+        }
+}
+```
+
+Мы получим предупреждение:
+
+    ub.c: В функции «main»:
+    ub.c:5:8: предупреждение: используйте фигурные скобки во избежание неоднозначной трактовки «else» [-Wdangling-else]
+        5 |     if (x > 0)
+        |        ^
+
+Компилятор понял, что возможна неоднозначная трактовка и вывел предупреждение. Если использовать фигурные скобки, предупреждение не возникнет.
 
 ### Вопрос
 
@@ -30,11 +87,42 @@ public class Program {
 }
 ```
 
+```
+typeIdentifier {
+    name: "typeIdentifier"
+    children: {
+        Identifier: [
+            {
+                image: "Program"
+                startOffset: 13
+                endOffset: 19
+                startLine: 1
+                endLine 1
+                startColumn: 14
+                endColumn: 20
+                tokenTypeIdx: 3
+            }
+        ]
+    }
+    location: {
+        startOffset: 13
+        endOffset: 19
+        startLine: 1
+        endLine 1
+        startColumn: 14
+        endColumn: 20
+    }
+}
+```
+
+Хранятся поля типа токена и локация в тексте кода программы, чтоб использовать их при дальнейшей компиляции из AST в байткод.
+
 
 ## Задание 0.5
 
 Найдите в AST для примера выше конструкцию `if`. Добавьте код так, чтобы повторить ситуацию с вложенным в `if` предложением `if-else` из первого примера. Нарисуйте примерный вид AST для него.
 
+[task0.5](./task0.5/)
 
 ### Вопрос
 
@@ -46,6 +134,19 @@ public class Program {
 ...
 printf("%d", dbl(3+3));
 ```
+
+В `stdout` выведется `9`, а не `12`, так как препроцессор заменит код на 
+
+    printf("%d", 3+3 * 2);
+
+и из порядка операций это равняется 9.
+
+Чтобы избавиться от нежелательного и неожиданного поведения, стоит в макросе обернуть `y`в скобки:
+
+```c
+#define dbl(y) (y) * 2
+```
+
 
 ## Задание 1
 
@@ -62,15 +163,47 @@ printf("%d", dbl(3+3));
 
 Что будет если написать `print_var(42)`?
 
+Будет выведено `42 is 42`.
+
 
 ### Вопрос
 
 Протестируйте [эту программу](./questions/int_print.c) с помощью ключа `-E` для `gcc/clang`.
 
+```c
+int main() {
+  int64_t x = 42;
+  double d = 99.99;
+
+  int64_t_print(x);
+  newline_print("");
+  double_print(d);
+  newline_print("");
+
+  return 0;
+}
+```
 
 ### Вопрос
 
 Протестируйте [эту программу](./questions/generic_print.c) с помощью ключа `-E` для `gcc/clang`. Что раскрывается раньше: `_Generic` или `#define`?
+
+```c
+int main() {
+  int64_t x = 42;
+  double d = 99.99;
+
+  _Generic((x), int64_t : int64_t_print(x), double : double_print(x), default : error("Unsupported operation"));
+  newline_print();
+  _Generic((d), int64_t : int64_t_print(d), double : double_print(d), default : error("Unsupported operation"));
+  newline_print();
+
+  return 0;
+}
+```
+
+`#define` раскрывается раньше, т.к после препроцессинга (`gcc -E`) мы видим, что подстановка `_Generic` выполнена не была.
+
 
 ## Задание 2
 
@@ -88,7 +221,7 @@ printf("%d", dbl(3+3));
 
 ## Задание 4
 
-Изучим [простой принтер для AST-дерева](https://gitlab.se.ifmo.ru/programming-languages/cse-programming-languages-fall-2023/main/-/blob/master/seminar-5/printer.c). Дерево будем задавать прямо в коде с помощью небольшого доменно-специфичного языка, который определим прямо в программе.
+Изучим [простой принтер для AST-дерева](https://gitlab.se.ifmo.ru/programming-languages/cse-programming-languages-fall-2023/main/-/blob/master/seminar-5/printer.c). Дерево будем задавать прямо в коде с помощью небольшого доменно-специфичного языка (DSL), который определим прямо в программе.
 
 Допишите в main код, чтобы вывести следующие выражения (можно со скобками):
 
