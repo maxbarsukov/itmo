@@ -125,6 +125,7 @@ public class ProbabilityTheory {
   }
 
   public void printData() {
+    System.out.println("\n\n! DEBUG:\n");
     for (int i = 0; i < xi.size(); i++) {
       System.out.println(xi.get(i) + " " + ni.get(i) + " " + pi.get(i));
     }

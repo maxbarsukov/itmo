@@ -19,6 +19,7 @@ public class Main {
     for (int i = 0; i < n; i++) {
       elements[i] = scanner.nextDouble();
     }
+    scanner.close();
 
     var runner = new ProbabilityTheory(elements);
 
