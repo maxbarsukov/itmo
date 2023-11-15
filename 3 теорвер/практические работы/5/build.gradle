@@ -1,0 +1,24 @@
+plugins {
+    id 'application'
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'org.knowm.xchart:xchart:3.8.5'
+    implementation 'com.google.guava:guava:32.1.1-jre'
+
+    testImplementation 'junit:junit:4.13.2'
+}
+
+java {
+    toolchain {
+        languageVersion = JavaLanguageVersion.of(17)
+    }
+}
+
+application {
+    mainClass = 'Main'
+}
