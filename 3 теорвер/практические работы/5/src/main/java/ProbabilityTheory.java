@@ -48,9 +48,12 @@ public class ProbabilityTheory {
       disperancy += Math.pow((xi.get(i) - expectedValue), 2) * ni.get(i);
     }
 
-    disperancy *= 1.0 / values.length;
+    disperancy /= values.length;
+    double fixedDisperancy = xi.size() * disperancy / (xi.size() - 1);
     System.out.printf("! Дисперсия\n%.2f\n\n", disperancy);
+    System.out.printf("! Исправленная дисперсия\n%.2f\n\n", fixedDisperancy);
     System.out.printf("! Cреднеквадратическоe отклонение\n%.2f\n\n", Math.sqrt(disperancy));
+    System.out.printf("! Исправленное СКО\n%.2f\n\n", Math.sqrt(fixedDisperancy));
   }
 
   public double getH() {
