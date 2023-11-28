@@ -7,3 +7,6 @@
 [submodule "3 веб/лабораторные/lab3"]
 	path = 3 веб/лабораторные/lab3
 	url = https://github.com/maxbarsukov-itmo/web-3
+[submodule "3 веб/лабораторные/lab4"]
+	path = 3 веб/лабораторные/lab4
+	url = https://github.com/maxbarsukov-itmo/web-4
