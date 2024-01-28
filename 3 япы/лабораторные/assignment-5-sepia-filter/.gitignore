@@ -1,0 +1,13 @@
+# IDEs
+.vscode
+.idea
+*.iml
+
+# Python
+__pycache__
+
+# Object files
+*.o
+/build
+/obj
+/out

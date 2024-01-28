@@ -1,0 +1,28 @@
+buildType:
+  default: debug
+  description: Build Type
+  choices:
+    debug:
+      short: Debug
+      long: Build with debugging information
+      buildType: Debug
+    release:
+      short: Release
+      long: Optimize the resulting binaries
+      buildType: Release
+    asan:
+      short: ASan
+      long: Instrument with AddressSanitizer
+      buildType: ASan
+    lsan:
+      short: LSan
+      long: Instrument with LeakSanitizer
+      buildType: LSan
+    msan:
+      short: MSan
+      long: Instrument with MemorySanitizer
+      buildType: MSan
+    ubsan:
+      short: UBSan
+      long: Instrument with UndefinedBehaviourSanitizer
+      buildType: UBSan

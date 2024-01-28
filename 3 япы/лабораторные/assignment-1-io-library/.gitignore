@@ -1,0 +1,14 @@
+# IDEs
+.vscode
+.idea
+*.iml
+
+# Python
+__pycache__
+
+# Tests
+/parse_*
+/read_*
+/print_*
+/string_*
+/report.xml

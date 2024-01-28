@@ -1,0 +1,9 @@
+image: generic-c
+
+stages:
+  - test
+
+test:
+  stage: test
+  script:
+    - make test
