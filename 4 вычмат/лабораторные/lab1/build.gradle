@@ -1,0 +1,36 @@
+plugins {
+    id 'java'
+    id 'application'
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+}
+
+ext.sharedManifest = manifest {
+    attributes("Implementation-Title": "Gradle",
+        "Implementation-Version": version)
+}
+
+tasks.register('fatJar', Jar) {
+    archiveClassifier = 'fat'
+
+    from sourceSets.main.output
+    dependsOn configurations.runtimeClasspath
+
+    manifest {
+        attributes['Main-Class'] = application.mainClass
+    }
+
+    from {
+        configurations.runtimeClasspath.findAll { it.name.endsWith('jar') }.collect { zipTree(it) }
+    }
+}
+
+application {
+    // Define the main class for the application.
+    mainClass = 'ru.itmo.computionalmath.lab1.Main'
+}
