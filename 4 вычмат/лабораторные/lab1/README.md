@@ -2,7 +2,7 @@
 
 ## Вариант `2`:  _Метод простых итераций_
 
-<img alt="metropolis" src="./.resources/metropolis.gif" height="160">
+<img alt="metropolis" src="https://github.com/maxbarsukov/itmo/blob/master/.docs/metropolis.gif" height="160">
 
 > «Решение системы линейных алгебраических уравнений СЛАУ»
 
