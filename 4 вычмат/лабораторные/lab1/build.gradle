@@ -15,6 +15,13 @@ ext.sharedManifest = manifest {
         "Implementation-Version": version)
 }
 
+compileJava.options.encoding = 'UTF-8'
+compileTestJava.options.encoding = 'UTF-8'
+
+run {
+    standardInput = System.in
+}
+
 tasks.register('fatJar', Jar) {
     archiveClassifier = 'fat'
 
