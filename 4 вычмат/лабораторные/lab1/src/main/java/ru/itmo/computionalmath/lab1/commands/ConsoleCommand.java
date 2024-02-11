@@ -1,9 +1,10 @@
 package ru.itmo.computionalmath.lab1.commands;
 
-import ru.itmo.computionalmath.lab1.algo.SimpleIterationMethod;
+import ru.itmo.computionalmath.lab1.algo.SimpleIteration;
 import ru.itmo.computionalmath.lab1.models.Matrix;
 import static ru.itmo.computionalmath.lab1.utils.Color.*;
 
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class ConsoleCommand implements Command {
@@ -29,7 +30,7 @@ public class ConsoleCommand implements Command {
       }
       catch (Exception ignored){ }
     }
-    SimpleIterationMethod.compute(matrix, eps);
+    SimpleIteration.compute(matrix, eps);
   }
 
   public Matrix createMatrixFromKeyBoard(){
@@ -40,26 +41,26 @@ public class ConsoleCommand implements Command {
 
       int size = Integer.parseInt(buffer);
       if (size > 20 || size <= 1) {
-        throw new Exception();
+        throw new InputMismatchException();
       }
 
       System.out.println("Введите строки матрицы:");
-      double [][] matrix = new double[size][size+1];
       String [][] arr = new String[size][size+1];
 
-      for (int i = 0; i < size;i++) {
+      for (int i = 0; i < size; i++) {
         buffer = scanner.nextLine();
         arr[i] = buffer.trim().split(" ");
       }
 
-      for (int i = 0; i < size;i++){
-        for (int j = 0; j < size+1;j++) {
+      double [][] matrix = new double[size][size+1];
+      for (int i = 0; i < size; i++){
+        for (int j = 0; j < size+1; j++) {
           matrix[i][j] = Double.parseDouble(arr[i][j].trim());
         }
       }
       return new Matrix(matrix);
 
-    } catch (Exception e) {
+    } catch (InputMismatchException e) {
       System.out.println(RED + "Введена неверная размерность" + RESET);
     }
     return null;

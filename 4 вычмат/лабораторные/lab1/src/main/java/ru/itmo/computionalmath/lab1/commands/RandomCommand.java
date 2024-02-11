@@ -1,6 +1,6 @@
 package ru.itmo.computionalmath.lab1.commands;
 
-import ru.itmo.computionalmath.lab1.algo.SimpleIterationMethod;
+import ru.itmo.computionalmath.lab1.algo.SimpleIteration;
 import ru.itmo.computionalmath.lab1.models.Matrix;
 import static ru.itmo.computionalmath.lab1.utils.Color.*;
 
@@ -34,7 +34,7 @@ public class RandomCommand implements Command {
       catch (Exception ignored){ }
     }
 
-    SimpleIterationMethod.compute(createRandomMatrix(size), eps);
+    SimpleIteration.compute(createRandomMatrix(size), eps);
   }
 
   public Matrix createRandomMatrix(int size) {

@@ -1,6 +1,6 @@
 package ru.itmo.computionalmath.lab1.commands;
 
-import ru.itmo.computionalmath.lab1.algo.SimpleIterationMethod;
+import ru.itmo.computionalmath.lab1.algo.SimpleIteration;
 import ru.itmo.computionalmath.lab1.models.Matrix;
 
 import java.io.BufferedReader;
@@ -26,7 +26,7 @@ public class FileCommand implements Command {
     System.out.println("Имя файла:");
     String path = scanner.nextLine();
     Matrix matrix = readMatrixFromFile(path);
-    SimpleIterationMethod.compute(matrix, eps);
+    SimpleIteration.compute(matrix, eps);
   }
 
   public Matrix readMatrixFromFile(String fileName) {
