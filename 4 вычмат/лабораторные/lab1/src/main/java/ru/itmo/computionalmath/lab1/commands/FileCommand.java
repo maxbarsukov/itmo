@@ -30,8 +30,7 @@ public class FileCommand implements Command {
   }
 
   public Matrix readMatrixFromFile(String fileName) {
-    try {
-      var file = new BufferedReader(new FileReader(fileName));
+    try(var file = new BufferedReader(new FileReader(fileName))) {
       String[] input_const = file.readLine().trim().split(" ");
 
       int size = Integer.parseInt(input_const[0].trim());

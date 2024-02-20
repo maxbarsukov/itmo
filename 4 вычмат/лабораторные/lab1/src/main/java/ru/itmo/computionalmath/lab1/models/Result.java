@@ -20,13 +20,9 @@ public class Result {
     for(int i = 0; i < iters.get(0).size(); i++) {
       stringBuilder.append("x").append(i+1).append("         |");
     }
-    stringBuilder.append(" ###|  ");
+    stringBuilder.append(" ");
     for(int i = 0; i < iters.get(0).size(); i++) {
-      stringBuilder.append("eps").append(i+1).append("   |");
-    }
-    stringBuilder.append("\n").append("0   |");
-    for(int i = 0; i < iters.get(0).size(); i++) {
-      stringBuilder.append("0").append("          |");
+      stringBuilder.append("eps").append(i+1).append("       |");
     }
     stringBuilder.append("\n");
     for(int i = 0; i < iters.size(); i++){
@@ -34,7 +30,7 @@ public class Result {
       for(Double it : iters.get(i)){
         stringBuilder.append(String.format("%.6f",it)).append("   |");
       }
-      stringBuilder.append(" ###| ");
+      stringBuilder.append(" ");
       try {
         if (!e.isEmpty() && !e.get(i).isEmpty()) {
           for (Double it : e.get(i)) {

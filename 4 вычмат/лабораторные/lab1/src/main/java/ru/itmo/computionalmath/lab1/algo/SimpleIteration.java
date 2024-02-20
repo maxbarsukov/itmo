@@ -12,9 +12,11 @@ import static ru.itmo.computionalmath.lab1.utils.Color.*;
 public class SimpleIteration {
   private static final Printer printer = new Printer();
   private static double[][] data;
+  private static int permuts;
 
   public static void compute(Matrix matrix, double eps) {
     printer.printMatrix(matrix);
+    printer.println("");
 
     if (checkDiagonal(matrix.getMatrix(), matrix.getSize())) {
       Result rs = methodOfSimpleIterations(matrix, eps);
@@ -26,6 +28,7 @@ public class SimpleIteration {
     }
 
     permuteMatrix(matrix, 0);
+    printer.println(CYAN_BOLD + "Перестановок строк: " + RESET + permuts);
     if (data != null) {
       Matrix matrix1 = new Matrix(data);
       printer.println(BLUE + "Матрица после перестановки строк" + RESET);
@@ -60,6 +63,7 @@ public class SimpleIteration {
   }
 
   private static void permuteMatrix(Matrix matrix, int index) {
+    permuts = 0;
     if (index >= matrix.getMatrix().length - 1) {
       if (checkDiagonal(matrix.getMatrix(), matrix.getSize())) {
         data = new double[matrix.getSize()][matrix.getSize() + 1];
@@ -77,12 +81,13 @@ public class SimpleIteration {
         matrix.getMatrix()[i] = t;
 
         permuteMatrix(matrix, index + 1);
+        // printer.printMatrix(matrix);
 
         t = matrix.getMatrix()[index];
         matrix.getMatrix()[index] = matrix.getMatrix()[i];
         matrix.getMatrix()[i] = t;
       }
-      printer.printMatrix(matrix);
+      permuts++;
     }
   }
 
@@ -112,9 +117,7 @@ public class SimpleIteration {
       }
       rs.addIter(x);
       rs.addE(esps);
-    }
-    while (norma > eps);
-
+    } while (norma > eps);
 
     rs.setResult(x);
 

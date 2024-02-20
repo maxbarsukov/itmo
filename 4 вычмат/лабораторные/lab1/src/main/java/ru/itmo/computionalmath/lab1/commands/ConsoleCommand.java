@@ -40,7 +40,7 @@ public class ConsoleCommand implements Command {
       buffer = buffer.trim();
 
       int size = Integer.parseInt(buffer);
-      if (size > 20 || size <= 1) {
+      if (size > 20 || size < 1) {
         throw new InputMismatchException();
       }
 
