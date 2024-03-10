@@ -20,33 +20,22 @@ int main() {
     while(cin.get(cur_char)) {
         if (cur_char == '\n') break;
 
-        if (s.empty()) {
-            s.push(cur_char);
-            if(isupper(cur_char)){
-                trap_count++;
-                traps.push(trap_count);
-            } else {
-                animal_count++;
-                animals.push(animal_count);
-            }
+        if (isupper(cur_char)) {
+            trap_count++;
+            traps.push(trap_count);
         } else {
-            if (isupper(cur_char)) {
-                trap_count++;
-                traps.push(trap_count);
-            } else {
-                animal_count++;
-                animals.push(animal_count);
-            }
+            animal_count++;
+            animals.push(animal_count);
+        }
 
-            if (different_cases(cur_char, s.top())) {
-                animal_indexes[traps.top() - 1] = animals.top();
+        if (s.empty() || !different_cases(cur_char, s.top())) {
+            s.push(cur_char);
+        } else {
+            animal_indexes[traps.top()] = animals.top();
 
-                animals.pop();
-                traps.pop();
-                s.pop();
-            } else {
-                s.push(cur_char);
-            }
+            animals.pop();
+            traps.pop();
+            s.pop();
         }
     }
 
@@ -56,7 +45,6 @@ int main() {
     }
 
     cout << "Possible\n";
-
     for (const auto& [_trap, animal_index] : animal_indexes) {
         cout << animal_index << " ";
     }
