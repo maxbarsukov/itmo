@@ -8,6 +8,7 @@ from methods.method import Method
 
 dx = 0.00001
 steps = 100
+MAX_ITERS = 100_000
 
 class SimpleIterationsMethod(Method):
     name = 'Метод простой итерации'
@@ -16,7 +17,7 @@ class SimpleIterationsMethod(Method):
                  epsilon: float, decimal_places: int, log: bool):
         super().__init__(equation, left, right, epsilon, decimal_places, log)
         f = self.equation.function
-        max_derivative = max(derivative(f, self.left, dx), derivative(f, self.right, dx))
+        max_derivative = max(abs(derivative(f, self.left, dx)), abs(derivative(f, self.right, dx)))
         _lambda = - 1 / max_derivative
         self.phi = lambda x: x + _lambda * f(x)
 
@@ -24,7 +25,6 @@ class SimpleIterationsMethod(Method):
         if not self.equation.root_exists(self.left, self.right):
             return False, 'Отсутствует корень на заданном промежутке'
 
-        # Достаточное условие сходимости метода |phi'(x)| < 1
         print('phi\'(a) = ', abs(derivative(self.phi, self.left, dx)))
         print('phi\'(b) = ', abs(derivative(self.phi, self.right, dx)))
         for x in numpy.linspace(self.left, self.right, steps, endpoint=True):
@@ -40,6 +40,11 @@ class SimpleIterationsMethod(Method):
         iteration = 0
         while True:
             iteration += 1
+
+            if iteration == MAX_ITERS:
+              if (input(f'Достигнуто {iteration} итераций и ответа вы не получите! Хотите продолжить? [y/n]\n') != 'y'):
+                break
+
             x = self.phi(prev)
 
             diff = abs(x - prev)
@@ -47,7 +52,7 @@ class SimpleIterationsMethod(Method):
                 print(f'{iteration}: xk = {prev:.3f}, f(xk) = {f(prev):.3f}, '
                       f'xk+1 = 𝜑(𝑥𝑘) = {x:.3f}, |xk - xk+1| = {diff:.3f}')
 
-            if diff <= self.epsilon:
+            if abs(f(x)) <= self.epsilon:
                 break
             prev = x
         return Result(x, f(x), iteration, self.decimal_places)

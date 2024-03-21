@@ -26,7 +26,7 @@ class HalfDivisionMethod(Method):
                 print(f'{iteration}: a = {a:.3f}, b = {b:.3f}, x = {x:.3f}, '
                       f'f(a) = {fa:.3f}, f(b) = {fb:.3f}, f(x)={fx:.3f}, |a-b| = {abs(a - b):.3f}')
 
-            if abs(a - b) <= epsilon or abs(fx) <= epsilon:
+            if abs(a - b) <= epsilon and abs(fx) <= epsilon:
                 break
 
             if fa * fx < 0:

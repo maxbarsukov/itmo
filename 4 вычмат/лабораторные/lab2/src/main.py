@@ -48,10 +48,9 @@ while True:
           except TypeError as te:
               print('(!) Ошибка при вычислении значения функции, возможно она не определена на всем интервале.')
               continue
-          if verified:
-              break
-          else:
-              print('(!) Введенные исходные данные для метода некорректны: ', reason)
+          if not verified:
+            print('(!) Введенные исходные данные для метода некорректны: ', reason)
+          break
 
       try:
           function.draw(left, right)
