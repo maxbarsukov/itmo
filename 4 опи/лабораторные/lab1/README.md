@@ -51,7 +51,7 @@
 | [ОПИ, весна 23/24, 2 курс](https://docs.google.com/spreadsheets/d/1G5DiqM7wJt3m5EmKG1V1vv9qNsdL3ztSSQO-QfhJ1WM/edit#gid=1166494430) | Журнал 2024 |
 | https://notesitmo.github.io/cse-notes/second-course/methods-means-SE/lab-1.html | Обзор теории |
 | https://habr.com/ru/articles/52681/ | Гайд по SRS |
-| https://habr.com/ru/companies/edison/articles/269789/ | Гайд по методологиямы разработки |
+| https://habr.com/ru/companies/edison/articles/269789/ | Гайд по методологиям разработки |
 
 ## Лицензия <a name="license"></a>
 
