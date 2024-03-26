@@ -22,23 +22,30 @@ def solve(
     x2 = a + GOLDEN_RATIO_2 * (b - a)
 
     iteration = 1
+    y1 = f(x1)
+    y2 = f(x2)
     while (b - a > e):
         print(f"Шаг {iteration}:")
         print(f"Рассматриваем отрезок [a = {a}; b = {b}].")
 
-        print(f"x1 = {x1}; x2 = {x2}; y1 = {f(x1)}; y2 = {f(x2)}.")
-        if f(x1) < f(x2):
-            print(f"y1 < y2 → b = {x2}; x2 = x1. Пересчет y2 не требуется.")
+        # print(f"x1 = {x1}; x2 = {x2}; y1 = {f(x1)}; y2 = {f(x2)}.")
+        if y1 < y2:
+            # print(f"y1 < y2 → b = {x2}; x2 = x1. Пересчет y2 не требуется.")
             b = x2
             x2 = x1
+            y2 = y1
             x1 = a + GOLDEN_RATIO_1 * (b - a)
+            y1 = f(x1)
         else:
-            print(f"y1 ≥ y2 → a = {x1}; x1 = x2. Пересчет y1 не требуется.")
+            # print(f"y1 ≥ y2 → a = {x1}; x1 = x2. Пересчет y1 не требуется.")
             a = x1
             x1 = x2
+            y1 = y2
             x2 = a + GOLDEN_RATIO_2 * (b - a)
-        
-        print(f"b - a = {b - a}.\n")
+            y2 = f(x2)
+
+        print(f"a = {a}, b = {b}.\n")
+        # print(f"b - a = {b - a}.\n")
         iteration += 1
 
 

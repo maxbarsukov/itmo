@@ -24,8 +24,9 @@ def solve(
         print(f'Шаг {iteration}:')
         x = x - (f_d1(x) / f_d2(x))
 
-        print(f"Касательная к графику функции f'(x) в точке x{iteration} пересекает ось Oy в точке x{iteration+1} = {x}.")
-        print(f"Выберем это новой точкой. В ней f'(x{iteration + 1}) = {f_d1(x)}.\n")
+        # print(f"Касательная к графику функции f'(x) в точке x{iteration} пересекает ось Oy в точке x{iteration+1} = {x}.")
+        # print(f"Выберем это новой точкой. В ней f'(x{iteration + 1}) = {f_d1(x)}.\n")
+        print(f"x = {x}, f `(x) = {f_d1(x)}\n")
         iteration += 1
 
     print(f"\n|f'(x)| <= ε. Минимум с заданной погрешностью ε = {e} найден!")
