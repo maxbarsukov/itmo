@@ -39,7 +39,7 @@ class Simpson:
         self.h = (self.b - self.a) / self.n
 
         while self.steps != self.n + 1:
-            self.xy.append([self.a, functions.function(self.a)])
+            self.xy.append([self.a, functions.function(self.type_equation, self.a)])
             self.table.append([self.steps, self.xy[self.steps][0], self.xy[self.steps][1]])
 
             if self.steps % 2 == 1 and 0 < self.steps < self.n:
@@ -50,22 +50,21 @@ class Simpson:
             self.a += self.h
             self.steps += 1
 
-            if self.steps > 250000:
-                self.result = self.h / 3 * (self.xy[0][1] + self.xy[-1][1] + 4 * y_odd + 2 * y_even)
-                self.inaccuracy = abs(self.max_value_fun() *
-                                      math.pow(self.b - self.start, 5) / 180 / math.pow(self.n, 4))
-                print('\t', "Метод Симпсона:")
-                self.print_result()
-                print("Число вычислений привысило 250000 шагов, интеграл вычислен от " + str(self.start)
-                      + " до " + str(self.xy[-1][0]) + "!")
-                raise ValueError
+            if self.steps > 25_000:
+                break
 
         self.result = self.h / 3 * (self.xy[0][1] + self.xy[-1][1] + 4 * y_odd + 2 * y_even)
-        self.inaccuracy = abs(self.max_value_fun() *
-                              (math.pow(self.b - self.start, 5) / (180 * math.pow(self.n, 4))))
+        self.inaccuracy = abs(self.max_value_fun() * (math.pow(self.b - self.start, 5) / (180 * math.pow(self.n, 4))))
 
-        self.print_table()
-        self.print_result()
+        print('\t', "Метод Симпсона:")
+        if self.steps > 25_000:
+            self.print_result()
+            print("Число вычислений привысило 25 000 шагов, интеграл вычислен от " + str(self.start)
+                  + " до " + str(self.xy[-1][0]) + "!")
+            raise ValueError
+        else:
+            self.print_table()
+            self.print_result()
 
     def check_n(self):
         n = abs(math.pow(self.max_value_fun() * math.pow(self.b - self.a, 5) / 180 / self.accuracy, 0.25)) // 1
@@ -73,18 +72,15 @@ class Simpson:
             n += 1
         else:
             n += 2
-        if n <= 4:
-            return 4
-        else:
-            return int(n)
+
+        return max(int(n), 4)
 
     def max_value_fun(self):
         x = np.linspace(self.start, self.b, 100000)
-        maximum = [abs(functions.fourth_derivative(i)) for i in x]
+        maximum = [abs(functions.fourth_derivative(self.type_equation, i)) for i in x]
         return max(maximum)
 
     def print_table(self):
-        print('\t', "Метод Симпсона:")
         print(tabulate(self.table, headers=["№ шага", "x", "y"], tablefmt="grid", floatfmt="2.5f"))
 
     def print_result(self, n=0):

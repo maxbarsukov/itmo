@@ -15,6 +15,7 @@ if __name__ == "__main__":
                   '\t', "5: Выход", color.END)
 
             choice = int(input("Ввод: ").strip())
+
             if choice in [1, 2, 3, 4]:
                 select.Input(choice)
                 continue
