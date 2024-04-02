@@ -7,12 +7,14 @@ def choose_equation_type():
     print("Выберите тип программы:")
     print('1: Нелинейное уравнение')
     print('2: Система нелинейных уравнений')
+    print('3: Выход')
+
     try:
         equation_type_number = int(input("Введите номер типа: "))
     except ValueError:
         print('(!) Вы ввели не число')
         return choose_equation_type()
-    if equation_type_number != 1 and equation_type_number != 2:
+    if equation_type_number not in [1, 2, 3]:
         print("(!) Такого номера нет.")
         return choose_equation_type()
     return equation_type_number

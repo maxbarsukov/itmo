@@ -22,24 +22,28 @@ def plot_system(system):
     plt.show()
 
 
-def solve(phi1, phi2, x0, epsilon, max_iterations=1_000):
+def solve(a, phi1, phi2, x0, epsilon, max_iterations=1_000):
     x = np.array(x0, dtype=float)
 
-    iterations = 0
-    for iterations in range(max_iterations):
-        x1 = phi1(x[0], x[1])
-        x2 = phi2(x[0], x[1])
-        x_next = np.array([x1, x2])
+    try:
+        iterations = 0
+        for iterations in range(max_iterations):
+            x1 = phi1(x[0], x[1])
+            x2 = phi2(x[0], x[1])
+            x_next = np.array([x1, x2])
 
-        print(f'{iterations}. x1={x1}, x2={x2}, xnext=({x_next[0]}, {x_next[1]}), |xk+1 - xk|={np.linalg.norm(x_next - x)}')
+            print(f'{iterations}. x1={x1}, x2={x2}, xnext=({x_next[0]}, {x_next[1]}), |xk+1 - xk|={np.linalg.norm(x_next - x)}')
 
-        if np.linalg.norm(x_next - x) < epsilon:
-            return x_next, iterations
+            if abs(a(x_next)[0]) < epsilon and abs(a(x_next)[1]) < epsilon:
+                return x_next, iterations
 
-        x = x_next
+            x = x_next
 
-    print(f"Метод простой итерации не сошелся за заданное количество итераций ({max_iterations})!")
-    return x_next, iterations
+        print(f"Метод простой итерации не сошелся за заданное количество итераций ({max_iterations})!")
+        return x_next, iterations
+    except ValueError:
+      print(f'Невозможно найти phi в точке ({x0[0]}, {x0[1]})')
+      return None, None
 
 
 def choose_system_of_equations(functions):
@@ -75,8 +79,9 @@ def run():
     x0, y0 = map(float, input("Введите начальные приближения x0, y0: ").split())
     epsilon = float(input('Введите погрешность вычисления: '))
 
-    xy_solution, iterations = solve(phi1, phi2, (x0, y0), epsilon)
+    xy_solution, iterations = solve(a, phi1, phi2, (x0, y0), epsilon)
 
-    print(f"\nНеизвестные: x = {xy_solution[0]:.5f}, y = {xy_solution[1]:.5f}")
-    print(f"Количество итераций: {iterations}")
-    print(f'Невязка: {a(xy_solution)[0]}, {a(xy_solution)[1]}')
+    if (iterations != None):
+      print(f"\nНеизвестные: x = {xy_solution[0]:.5f}, y = {xy_solution[1]:.5f}")
+      print(f"Количество итераций: {iterations}")
+      print(f'Невязка: {a(xy_solution)[0]}, {a(xy_solution)[1]}')

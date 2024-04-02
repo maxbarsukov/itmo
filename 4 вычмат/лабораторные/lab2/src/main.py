@@ -30,8 +30,15 @@ ENABLE_LOGGING = True
 while True:
     equation_type = mainboilerplate.choose_equation_type()
 
+    if equation_type == 3:
+      break
+
     if equation_type == 1:
       function = mainboilerplate.choose_equation(predefined_functions)
+      try:
+          function.draw(-100, 100)
+      except Exception as e:
+          print('(!) Не удалось построить график функции, ', e)
 
       method_number = mainboilerplate.choose_method_number(methods)
 
@@ -74,3 +81,5 @@ while True:
           break
     else:
       system_of_equation.run()
+
+print('Спасибо за использование программы!')

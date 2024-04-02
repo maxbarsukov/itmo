@@ -7,7 +7,7 @@ class HalfDivisionMethod(Method):
 
     def check(self):
         root_exists = self.equation.root_exists(self.left, self.right)
-        return root_exists, 'Отсутствует корень на заданном промежутке' if not root_exists else ''
+        return root_exists, 'Отсутствует корень на заданном промежутке или корней > 2' if not root_exists else ''
 
     def solve(self) -> Result:
         f = self.equation.function
@@ -23,8 +23,8 @@ class HalfDivisionMethod(Method):
             x = (a + b) / 2
             fx = f(x)
             if self.log:
-                print(f'{iteration}: a = {a:.3f}, b = {b:.3f}, x = {x:.3f}, '
-                      f'f(a) = {fa:.3f}, f(b) = {fb:.3f}, f(x)={fx:.3f}, |a-b| = {abs(a - b):.3f}')
+                print(f'{iteration}: a = {a:f}, b = {b:.3f}, x = {x:.3f}, '
+                      f'f(a) = {fa:.3f}, f(b) = {fb:.3f}, f(x)={fx}, |a-b| = {abs(a - b)}')
 
             if abs(a - b) <= epsilon and abs(fx) <= epsilon:
                 break
