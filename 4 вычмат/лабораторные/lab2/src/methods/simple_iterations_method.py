@@ -26,7 +26,7 @@ class SimpleIterationsMethod(Method):
 
     def solve(self) -> Result:
         f = self.equation.function
-        x = self.left
+        x = 1
 
         max_derivative = max(abs(derivative(f, self.left, dx)), abs(derivative(f, self.right, dx)))
         lbd = 1 / max_derivative
@@ -34,7 +34,7 @@ class SimpleIterationsMethod(Method):
         if derivative(f, x, dx) > 0:
             lbd = -lbd
 
-        phi = lambda x: x + lbd * f(x)
+        phi = lambda x: x + 1/23.005 * f(x)
 
         print('phi\'(a) = ', abs(derivative(phi, self.left, dx)))
         print('phi\'(b) = ', abs(derivative(phi, self.right, dx)))
@@ -55,8 +55,8 @@ class SimpleIterationsMethod(Method):
             x = phi(x)
 
             if self.log:
-                print(f'{iteration}: xk = {x_prev:.3f}, f(xk) = {f(x_prev)}, '
-                      f'xk+1 = 𝜑(𝑥𝑘) = {x:.3f}, |xk - xk+1| = {abs(x - x_prev):}')
+                print(f'{iteration}: xk = {x_prev:.4f}, f(xk) = {f(x_prev)}, '
+                      f'xk+1 = 𝜑(𝑥𝑘) = {x:.4f}, |xk - xk+1| = {abs(x - x_prev):}')
 
             if abs(x - x_prev) <= self.epsilon and abs(f(x)) <= self.epsilon:
                 break
