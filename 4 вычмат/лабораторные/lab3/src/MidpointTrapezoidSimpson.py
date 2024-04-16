@@ -25,18 +25,13 @@ for i in range(1, n):
 integral_trapezoid = h / 2 * (f.subs(x, a) + 2*sum_trapezoid + f.subs(x, b))
 
 
-sum_simpson = 0
-for i in range(1, n//2):
-    x_i = a + (2*i) * h
-    sum_simpson += f.subs(x, x_i)
+sum_simpson = f.subs(x, a) + f.subs(x, b)
 
-sum_simpson_2 = 0
+for i in range(1, n):
+    coef = 3 + (-1)**(i + 1)
+    sum_simpson += coef * f.subs(x, a + i * h)
 
-for i in range(1, n//2 + 1):
-    x_i = a + (2*i - 1) * h
-    sum_simpson_2 += f.subs(x, x_i)
-
-integral_simpson = h / 3 * (f.subs(x, a) + 4*sum_simpson + 2*sum_simpson_2 + f.subs(x, b))
+integral_simpson = h / 3 * sum_simpson
 
 
 print(integral_midpoint)

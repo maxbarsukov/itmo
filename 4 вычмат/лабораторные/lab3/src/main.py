@@ -21,7 +21,10 @@ def f6(x):
 def f7(x):
     return -3*x**3 - 5*x**2 + 4*x - 2
 
-functions = [f1, f2, f3, f4, f5, f6, f7]
+def f8(x):
+    return 10
+
+functions = [f1, f2, f3, f4, f5, f6, f7, f8]
 
 def rectangle_rule(func, a, b, n, mode="middle"):
     h = (b - a) / n
@@ -76,7 +79,7 @@ methods = {
 
 def compute_integral(func, a, b, epsilon, method):
     n = 4
-    runge_coef = {"rectangle_left": 2, "rectangle_right": 2, "rectangle_middle": 2, "trapezoid": 2, "simpson": 15}
+    runge_coef = {"rectangle_left": 3, "rectangle_right": 3, "rectangle_middle": 3, "trapezoid": 3, "simpson": 15}
     coef = runge_coef[method]
 
     result = methods[method](func, a, b, n)
@@ -86,6 +89,7 @@ def compute_integral(func, a, b, epsilon, method):
         n *= 2
         new_result = methods[method](func, a, b, n)
         error = abs(new_result - result) / coef
+
         result = new_result
 
     return result, n
@@ -95,10 +99,10 @@ def check_convergence(func, a, b):
     if func == f4 and ((a >= -math.inf and b <= 0) or (a >= 0 and b <= math.inf)):
         return True
     elif func == f5 and ((a >= -math.inf and b <= 0) or (a >= 0 and b <= math.inf)):
-        return False
+        return True
     elif func == f6 and (a >= 0 and b <= math.inf):
         return True
-    elif func == f1 or func == f2 or func == f3 or func == f7:
+    elif func == f1 or func == f2 or func == f3 or func == f7 or func == f8:
         return True
     else:
         return False
@@ -108,6 +112,13 @@ def check_discontinuity(func, a, b):
     try:
         func(a)
         func(b)
+        func((a + b) / 2)
+
+        n = 1000
+        h = (b - a) / n
+        for i in range(n):
+            func(a + i * h)
+
         return False
     except (ZeroDivisionError, OverflowError, ValueError):
         return True
@@ -126,29 +137,45 @@ def compute_integral_modified(func, a, b, epsilon, method):
 
 
 if __name__ == "__main__":
-    print("Выберите функцию:")
-    print("1. x^2")
-    print("2. sin(x)")
-    print("3. e^x")
-    print("4. 1/x^2")
-    print("5. 1/x")
-    print("6. 1/sqrt(x)")
-    print("7. -3x^3 - 5x^2 + 4x - 2")
+    while (True):
+      print("Выберите функцию:")
+      print("1. x^2")
+      print("2. sin(x)")
+      print("3. e^x")
+      print("4. 1/x^2")
+      print("5. 1/x")
+      print("6. 1/sqrt(x)")
+      print("7. -3x^3 - 5x^2 + 4x - 2")
+      print("8. 10")
 
-    func = functions[int(input("Ваш выбор: ")) - 1]
+      choosen_f = int(input("Ваш выбор: ")) - 1
+      func = functions[choosen_f]
 
-    a = float(input("Введите начальный предел интегрирования: "))
-    b = float(input("Введите конечный предел интегрирования: "))
+      if (choosen_f not in [1, 2, 3, 4, 5, 6, 7, 8]):
+        print("Пожалуйста, выберите корректный номер функции!\n")
+        continue
 
-    print("Выберите метод интегрирования:")
-    for i, method in enumerate(methods, 1):
-        print(f"{i}. {method}")
+      while (True):
+        a = float(input("Введите начальный предел интегрирования: "))
+        b = float(input("Введите конечный предел интегрирования: "))
 
-    method = list(methods.keys())[int(input("Ваш выбор: ")) - 1]
-    epsilon = float(input("Введите требуемую точность вычислений: "))
+        if (a >= b):
+          print(f'a = {a} >= b = {b}. Пожалуйста, введите a < b')
+        else:
+          break
 
-    result, n = compute_integral_modified(func, a, b, epsilon, method)
+      print("Выберите метод интегрирования:")
+      for i, method in enumerate(methods, 1):
+          print(f"{i}. {method}")
 
-    if result is not None and n is not None:
-        print(f"Значение интеграла: {result}")
-        print(f"Число разбиений интервала интегрирования для достижения требуемой точности: {n}")
+      method = list(methods.keys())[int(input("Ваш выбор: ")) - 1]
+      epsilon = float(input("Введите требуемую точность вычислений: "))
+
+      result, n = compute_integral_modified(func, a, b, epsilon, method)
+
+      if result is not None and n is not None:
+          print(f"Значение интеграла: {result}")
+          print(f"Число разбиений интервала интегрирования для достижения требуемой точности: {n}")
+
+      if (input('Еще раз? [y/n]: ') == 'n'):
+          break
