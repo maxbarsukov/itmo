@@ -196,21 +196,23 @@ if __name__ == "__main__":
                     res = 0
                     n = 0
                     if not (try_to_compute(func, a) is None or try_to_compute(func, breakpoints[0] - eps) is None):
-                        res += compute_integral(func, a, breakpoints[0] - eps, epsilon, method)[0]
-                        n += compute_integral(func, a, breakpoints[0] - eps, epsilon, method)[1]
+                        results = compute_integral(func, a, breakpoints[0] - eps, epsilon, method)
+                        res += results[0]
+                        n += results[1]
 
                     if not (try_to_compute(func, b) is None or try_to_compute(func, breakpoints[0] + eps) is None):
-                        res += compute_integral(func, breakpoints[0] + eps, b, epsilon, method)[0]
-                        n += compute_integral(func, breakpoints[0] + eps, b, epsilon, method)[1]
+                        results = compute_integral(func, breakpoints[0] + eps, b, epsilon, method)
+                        res += results[0]
+                        n += results[1]
 
-                    if (len(breakpoints) > 1):
-                        for bi in range(len(breakpoints) - 1):
-                            b_cur = breakpoints[bi]
-                            b_next = breakpoints[bi + 1]
+                    for bi in range(len(breakpoints) - 1):
+                        b_cur = breakpoints[bi]
+                        b_next = breakpoints[bi + 1]
 
-                            if not (try_to_compute(func, b_cur) is None or try_to_compute(func, b_next) is None):
-                                res += compute_integral(func, b_cur + eps, b_next - eps, epsilon, method)[0]
-                                n += compute_integral(func, b_cur + eps, b_next - eps, epsilon, method)[1]
+                        if not (try_to_compute(func, b_cur + eps) is None or try_to_compute(func, b_next - eps) is None):
+                            results =  compute_integral(func, b_cur + eps, b_next - eps, epsilon, method)
+                            res += results[0]
+                            n += results[1]
 
                     print(f"Значение интеграла: {res}")
                     print(f"Число разбиений интервала интегрирования для достижения требуемой точности: {n}")
