@@ -1,5 +1,8 @@
 import math
 
+
+MAX_BREAKPOINTS = 10_000
+
 def f1(x):
     return x**2
 
@@ -24,7 +27,10 @@ def f7(x):
 def f8(x):
     return 10
 
-functions = [f1, f2, f3, f4, f5, f6, f7, f8]
+def f9(x):
+    return 1 / math.sqrt(2*x - x**2)
+
+functions = [f1, f2, f3, f4, f5, f6, f7, f8, f9]
 
 def rectangle_rule(func, a, b, n, mode="middle"):
     h = (b - a) / n
@@ -79,7 +85,7 @@ methods = {
 
 def compute_integral(func, a, b, epsilon, method):
     n = 4
-    runge_coef = {"rectangle_left": 3, "rectangle_right": 3, "rectangle_middle": 3, "trapezoid": 3, "simpson": 15}
+    runge_coef = {"rectangle_left": 1, "rectangle_right": 1, "rectangle_middle": 3, "trapezoid": 3, "simpson": 15}
     coef = runge_coef[method]
 
     result = methods[method](func, a, b, n)
@@ -121,6 +127,9 @@ def get_discontinuity_points(func, a, b, n):
         except (ZeroDivisionError, OverflowError, ValueError):
             breakpoints.append(point)
 
+            if len(breakpoints) >= MAX_BREAKPOINTS:
+                return get_discontinuity_points(func, a, b, n // 10)
+
     return list(set(breakpoints))
 
 
@@ -142,28 +151,32 @@ if __name__ == "__main__":
         print("6. 1/sqrt(x)")
         print("7. -3x^3 - 5x^2 + 4x - 2")
         print("8. 10")
+        print("9. 1 / sqrt(2x - x^2)")
 
         choosen_f = int(input("Ваш выбор: ")) - 1
         func = functions[choosen_f]
 
-        if (choosen_f not in [0, 2, 3, 4, 5, 6, 7]):
+        if (choosen_f not in [0, 2, 3, 4, 5, 6, 7, 8]):
             print("Пожалуйста, выберите корректный номер функции!\n")
             continue
 
         while (True):
-            a = float(input("Введите начальный предел интегрирования: "))
-            b = float(input("Введите конечный предел интегрирования: "))
+            try:
+                a = float(input("Введите начальный предел интегрирования: "))
+                b = float(input("Введите конечный предел интегрирования: "))
 
-            if (a >= b):
-                print(f'a = {a} >= b = {b}. Пожалуйста, введите a < b')
-            else:
-                break
+                if (a >= b):
+                    print(f'{a} >= {b}. Пожалуйста, введите a < b')
+                else:
+                    break
+            except:
+                print("! Ошибка ввода: введите пределы интегрирования еще раз!\n")
 
         breakpoints = get_discontinuity_points(func, a, b, math.ceil(b - a) * 1_000)
 
         # Если разрыв: установить сходимость
         if len(breakpoints) != 0:
-            print(f"! Обнаружен точка разрыва: функция имеет разрыв или не существует в точке x = {breakpoints[0]}.")
+            print(f"! Обнаружен точка разрыва: функция имеет разрыв или не существует в точках {breakpoints}.")
 
             eps = 0.00001
             converges = True
@@ -180,64 +193,58 @@ if __name__ == "__main__":
             else:
                 # сходящийся => реализовать в программе вычисление несобственных интегралов 2 рода
                 print('+ Интеграл сходится.')
-                print("Выберите метод интегрирования:")
-                for i, method in enumerate(methods, 1):
-                    print(f"{i}. {method}")
-
-                method = list(methods.keys())[int(input("Ваш выбор: ")) - 1]
                 epsilon = float(input("Введите требуемую точность вычислений: "))
 
-                if len(breakpoints) == 1:
-                    if a in breakpoints:
-                        a += eps
-                    elif b in breakpoints:
-                        b -= eps
-                else:
-                    res = 0
-                    n = 0
-                    if not (try_to_compute(func, a) is None or try_to_compute(func, breakpoints[0] - eps) is None):
-                        results = compute_integral(func, a, breakpoints[0] - eps, epsilon, method)
-                        res += results[0]
-                        n += results[1]
+                for method in methods:
+                    print(f"\n*   Метод: {method}")
 
-                    if not (try_to_compute(func, b) is None or try_to_compute(func, breakpoints[0] + eps) is None):
-                        results = compute_integral(func, breakpoints[0] + eps, b, epsilon, method)
-                        res += results[0]
-                        n += results[1]
-
-                    for bi in range(len(breakpoints) - 1):
-                        b_cur = breakpoints[bi]
-                        b_next = breakpoints[bi + 1]
-
-                        if not (try_to_compute(func, b_cur + eps) is None or try_to_compute(func, b_next - eps) is None):
-                            results =  compute_integral(func, b_cur + eps, b_next - eps, epsilon, method)
+                    if len(breakpoints) == 1:
+                        if a in breakpoints:
+                            a += eps
+                        elif b in breakpoints:
+                            b -= eps
+                    else:
+                        res = 0
+                        n = 0
+                        if not (try_to_compute(func, a) is None or try_to_compute(func, breakpoints[0] - eps) is None):
+                            results = compute_integral(func, a, breakpoints[0] - eps, epsilon, method)
                             res += results[0]
                             n += results[1]
 
-                    print(f"Значение интеграла: {res}")
-                    print(f"Число разбиений интервала интегрирования для достижения требуемой точности: {n}")
+                        if not (try_to_compute(func, b) is None or try_to_compute(func, breakpoints[0] + eps) is None):
+                            results = compute_integral(func, breakpoints[0] + eps, b, epsilon, method)
+                            res += results[0]
+                            n += results[1]
 
-                if not breakpoints or a - eps in breakpoints or b + eps in breakpoints:
-                    result, n = compute_integral(func, a, b, epsilon, method)
-                    if result is not None and n is not None:
-                        print(f"Значение интеграла: {result}")
-                        print(f"Число разбиений интервала интегрирования для достижения требуемой точности: {n}")
+                        for bi in range(len(breakpoints) - 1):
+                            b_cur = breakpoints[bi]
+                            b_next = breakpoints[bi + 1]
 
+                            if not (try_to_compute(func, b_cur + eps) is None or try_to_compute(func, b_next - eps) is None):
+                                results =  compute_integral(func, b_cur + eps, b_next - eps, epsilon, method)
+                                res += results[0]
+                                n += results[1]
+
+                        print(f"Значение интеграла: {res}")
+                        print(f"Число разбиений интервала интегрирования для достижения требуемой точности: n = {n}")
+
+                    if not breakpoints or a - eps in breakpoints or b + eps in breakpoints:
+                        result, n = compute_integral(func, a, b, epsilon, method)
+                        if result is not None and n is not None:
+                            print(f"Значение интеграла: {result}")
+                            print(f"Число разбиений интервала интегрирования для достижения требуемой точности: n = {n}")
         else:
             # Если нет разрыва: просто вычисляем
-            print("Выберите метод интегрирования:")
-            for i, method in enumerate(methods, 1):
-                print(f"{i}. {method}")
-
-            method = list(methods.keys())[int(input("Ваш выбор: ")) - 1]
             epsilon = float(input("Введите требуемую точность вычислений: "))
 
-            result, n = compute_integral(func, a, b, epsilon, method)
+            for method in methods:
+                print(f"\n*   Метод: {method}")
+                result, n = compute_integral(func, a, b, epsilon, method)
 
-            if result is not None and n is not None:
-                print(f"Значение интеграла: {result}")
-                print(f"Число разбиений интервала интегрирования для достижения требуемой точности: {n}")
+                if result is not None and n is not None:
+                    print(f"Значение интеграла: {result}")
+                    print(f"Число разбиений интервала интегрирования для достижения требуемой точности: n = {n}")
 
-
-        if (input('Еще раз? [y/n]: ') == 'n'):
+        if (input('\nЕще раз? [y/n]: ') == 'n'):
+            print("Спасибо за использование программы!")
             break
