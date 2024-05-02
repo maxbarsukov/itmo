@@ -13,3 +13,6 @@
 [submodule "4 опи/лабораторные/lab2"]
 	path = 4 опи/лабораторные/lab2
 	url = https://github.com/maxbarsukov-itmo/mispi-2
+[submodule "4 опи/лабораторные/lab3"]
+	path = 4 опи/лабораторные/lab3
+	url = https://github.com/maxbarsukov-itmo/mispi-3
