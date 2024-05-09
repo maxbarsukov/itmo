@@ -53,3 +53,5 @@
 | Ввод | Вывод |
 | -- | -- |
 | a=b<br>b=123<br>var=b<br>b=-34<br>{<br>c=b<br>b=1000000000<br>d=b<br>{<br>a=b<br>e=var<br>}<br>}<br>b=b | 0<br>123<br>-34<br>1000000000<br>1000000000<br>123<br>-34<br><br><br><br><br><br><br><br> |
+
+[Скачать условие задачи](https://contest.yandex.ru/contest/35179/download/C/)

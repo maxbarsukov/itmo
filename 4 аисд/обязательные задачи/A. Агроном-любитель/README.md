@@ -46,3 +46,5 @@
 | Ввод | Вывод |
 | -- | -- |
 | 6 <br> 5 6 6 6 23 9 | 3 6 <br> <br> |
+
+[Скачать условие задачи](https://contest.yandex.ru/contest/35179/download/A/)
