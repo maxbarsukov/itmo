@@ -113,7 +113,7 @@ def compute_coefficient_of_determination(xs, ys, fi, n):
 
 def get_str_content_of_func(func):
     str_func = inspect.getsourcelines(func)[0][0]
-    return str_func.split('lambda xi: ')[-1].split(',')[0].strip()
+    return str_func.split('lambda xi: ')[-1].split(',')[0].strip().replace('xi', 'x')
 
 
 def draw_plot(x, y):
@@ -152,6 +152,8 @@ def run(functions, x, y, n):
     best_mse = float("inf")
     best_func = None
 
+    mses = []
+
     for approximation, name in functions:
         try:
             fi, *coeffs = approximation(x, y, n)
@@ -160,7 +162,8 @@ def run(functions, x, y, n):
             mse = compute_mean_squared_error(x, y, fi, n)
             r2 = compute_coefficient_of_determination(x, y, fi, n)
 
-            if mse < best_mse:
+            if mse <= best_mse:
+                mses.append((mse, name))
                 best_mse = mse
                 best_func = name
 
@@ -170,18 +173,54 @@ def run(functions, x, y, n):
             print(f"*  Функция: f(x) =", get_str_content_of_func(fi))
             print(f"*  Коэффициенты {get_coeffs_str(coeffs)}: {list(map(lambda cf: round(cf, 4), coeffs))}")
             print(f"*  Среднеквадратичное отклонение: σ = {mse:.5f}")
-            print(f"*  Коэффициент детерминации: R^2 = {r2:.5f}")
+            if r2 >= 0.95:
+                r2_status = 'высокая точность аппроксимации'
+            elif r2 >= 0.75:
+                r2_status = 'удовлетворительная точность аппроксимации'
+            elif r2 >= 0.5:
+                r2_status = 'слабая точность аппроксимации'
+            else:
+                r2_status = 'точность аппроксимации недостаточна'
+
+            print(f"*  Коэффициент детерминации: R^2 = {r2:.5f}, ({r2_status})")
             print(f"*  Мера отклонения: S = {s:.5f}")
             if approximation == linear_approximation:
                 correlation = compute_pearson_correlation(x, y, n)
-                print(f"*  Коэффициент корреляции Пирсона: r = {correlation}")
+                rc = abs(correlation)
+                if rc < 0.05:
+                    pir_status = 'связь между переменными отсутствует'
+                elif rc < 0.3:
+                    pir_status = 'связь слабая'
+                elif rc < 0.5:
+                    pir_status = 'связь умеренная'
+                elif rc < 0.7:
+                    pir_status = 'связь заметная'
+                elif rc < 0.9:
+                    pir_status = 'связь высокая'
+                elif rc <= 0.99:
+                    pir_status = 'связь весьма высокая'
+                else:
+                    pir_status = 'строгая линейная функциональная зависимость'
+
+                print(f"*  Коэффициент корреляции Пирсона: r = {correlation}, ({pir_status})")
 
         except Exception as e:
             print(f"Ошибка приближения {name} функции: {e}\n")
 
         print('\n' + ('-' * 30) + '\n')
 
-    print(f"Лучшая функция приближения: {best_func}")
+    best_funcs = []
+    for m, n in mses:
+        if abs(m - best_mse) < 0.0000001:
+            best_funcs.append(n)
+
+    if len(best_funcs) == 1:
+        print(f"Лучшая функция приближения: {best_func}")
+    else:
+        print(f"Лучшие функции приближения:")
+        for n in best_funcs:
+            print(f'*  {n}')
+
     draw_plot(x, y)
 
 
@@ -213,7 +252,7 @@ def read_data_from_input():
             y.append(float(point[1]))
         else:
             if str != 'quit':
-                print("! Неправильный ввод. Введенные числа не будут использованы.")
+                print("! Неправильный ввод. Введенная точка не будет использована.")
     return x, y
 
 
@@ -231,7 +270,7 @@ def main():
                         continue
                     else:
                         print('Ввод с клавиатуры:')
-                        print('Введите \'q\', чтобы закончить ввод')
+                        print('Введите \'quit\', чтобы закончить ввод')
                         x, y = read_data_from_input()
                 else:
                     break
@@ -302,4 +341,35 @@ def main():
 
 if __name__ == "__main__":
     main()
-    print("\nСпасибо за использование программы!")
+    print("\nСпасибо за использование программы!\n")
+    print("""
+                Т И Ш К А
+
+       \`-._           __
+        \\\\  `-..____,.'  `.
+         :`.         /    \`.
+         :  )       :      : \\
+          ;'        '   ;  |  :
+          )..      .. .:.`.;  :
+         /::...  .:::...   ` ;
+         ; _ '    __        /:\\
+         `:o>   /\o_>      ;:. `.
+        `-`.__ ;   __..--- /:.   \\
+        === \_/   ;=====_.':.     ;
+         ,/'`--'...`--....        ;
+              ;                    ;
+            .'                      ;
+          .'                        ;
+        .'     ..     ,      .       ;
+       :       ::..  /      ;::.     |
+      /      `.;::.  |       ;:..    ;
+     :         |:.   :       ;:.    ;
+     :         ::     ;:..   |.    ;
+      :       :;      :::....|     |
+      /\     ,/ \      ;:::::;     ;
+    .:. \:..|    :     ; '.--|     ;
+   ::.  :''  `-.,,;     ;'   ;     ;
+.-'. _.'\      / `;      \,__:      \\
+`---'    `----'   ;      /    \,.,,,/
+                   `----`
+    """)
