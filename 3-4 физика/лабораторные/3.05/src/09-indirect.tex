@@ -1,0 +1,48 @@
+\section{Расчет результатов косвенных измерений}
+\begin{table}[H]
+    \centering
+    \begin{tabular}{|c|c|c|c|}
+    \hline
+        i & j & $E_{gij}$, $10^{-19}$ $\textit{Дж}$ & $E_{gij}$, $\textit{эВ}$  \\ \hline
+         3 & 7 & 0,90 & 0,562 \\ \hline
+        4 & 8 & 0,96 & 0,601 \\ \hline
+        5 & 9 & 0,97 & 0,605 \\ \hline
+        6 & 10 & 1,40 & 0,873 \\ \hline
+        \multicolumn{2}{|c|}{$\langle E_g \rangle$ }  & 1,05 & 0,66 \\ \hline
+        \multicolumn{2}{|c|}{$\Delta E_g$ } & $0,15$ & $0,09$  \\ \hline
+    \end{tabular}
+    \caption{Результаты расчетов ширины запрещенной зоны для полупроводникового образца}
+    \label{width}
+\end{table}
+
+\[
+    E_{g_{i,j}} = 2k \frac{T_i \cdot T_j}{T_j-T_i}ln\left(\frac{R_i}{R_j}\right) 
+\]
+\[
+E_{g_{3,7}} = 2 \times 1.38 \times 10^{-23} \, \text{Дж/K} \times \frac{280 \, \text{K} \times 300 \, \text{K}}{300 \, \text{K} - 280 \, \text{K}} \ln\left(\frac{508.09 \, \text{Ом}}{234.05 \, \text{Ом}}\right) = 0.90 \cdot 10^{-19} \text{Дж}
+\]
+$$\langle E_g \rangle = \frac{1}{n}\sum\limits_{i=1}^n{E_{gij}} = \frac{1}{4} \cdot 4.23 = 1,05 \cdot 10^{-19} \text{Дж}$$
+
+
+\begin{table}[H]
+    \centering
+    \begin{tabular}{|c|c|c|c|}
+    \hline
+        i & j  & $\alpha_{ij}, 10^{-3}\text{/} {}^\circ C$ & $\Delta\alpha_{ij}, 10^{-3}\text{/} {}^\circ C$ \\ \hline
+        3 & 7  & 5,64 & 0,28 \\ \hline
+        4 & 8  & 5,11 & 0,24 \\ \hline
+        5 & 9  & 4,69 & 0,22 \\ \hline
+        6 & 10 & 4,56 & 0,21 \\ \hline
+        7 & 11 & 4,48 & 0,2 \\ \hline
+        \multicolumn{2}{|c|}{$\langle \alpha \rangle$} & 4,90 & 0,11 \\ \hline
+    \end{tabular}
+    \caption{Результаты расчетов температурного коэффициента сопротивления для металлического образца}
+    \label{coeff}
+\end{table}
+
+\[
+    \alpha_{i,j} = \frac{R_i - R_j}{R_j\cdot t_i - R_i\cdot t_j} = \frac{1504,89 - 1407,68}{1407,68 \cdot 51,85 - 1504,89 \cdot 66,85} = 5,64 \cdot 10^3 \frac{1}{^\circ C}
+\]
+\[
+    \langle \alpha \rangle = \frac{1}{n} \sum\limits_{i=1}^{n}a_{i,j} = \frac{1}{5} \cdot 24,5 = 4,90 \frac{1}{^\circ C}
+\]

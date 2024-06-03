@@ -1,0 +1,88 @@
+\usepackage{float}
+\usepackage{mathtools}
+\usepackage[T2A]{fontenc}
+\usepackage{hyperref}
+\usepackage{smartref}
+\usepackage[english,russian]{babel}
+\usepackage{textcomp}
+\usepackage{tabularray}
+\everymath{\displaystyle}
+\usepackage[usenames]{color}
+\usepackage{colortbl}
+\usepackage{microtype}
+% \DisableLigatures{encoding = T1, family = tt* }
+% \usepackage{lmodern} % for bold teletype font
+\usepackage{multirow}
+\usepackage{array}
+\usepackage{geometry}
+\geometry{
+  a4paper,
+  top=25mm, 
+  right=2cm,
+  bottom=25mm, 
+  left=2cm
+}
+
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\usepackage{listings}
+
+\usepackage[table]{xcolor}% http://ctan.org/pkg/xcolor
+
+\fancyhead{}
+\fancyfoot[C]{\thepage}
+
+\renewcommand{\headrulewidth}{0pt}
+\fancypagestyle{firststyle}
+{
+   \fancyhead{}
+   \fancyfoot[C]{г. Санкт-Петербург\\2024 г.}
+}
+
+\lstset{
+    % inputencoding=utf8,
+    extendedchars=\true,
+    literate={-}{-}1,
+    breaklines=true,
+    basicstyle=\ttfamily,
+    columns=fullflexible,
+    frame=single,
+    breaklines=true,
+    postbreak=\mbox{\textcolor{red}{$\hookrightarrow$}\space},
+}
+
+\usepackage[inline]{asymptote}
+
+
+\usepackage{graphicx}
+\usepackage{multicol}
+\usepackage{fancyhdr}
+\usepackage{tabularx}
+\usepackage{verbatim}
+\usepackage[T2A]{fontenc}
+\usepackage{parskip}
+\usepackage{makecell}
+\usepackage{changepage}
+\usepackage{titlesec}
+\usepackage{ulem}
+\usepackage{enumitem}
+\usepackage[margin = 2cm]{geometry}
+
+\newenvironment{titlemargin}{
+    \begin{adjustwidth}{2cm}{2cm}
+    \centering\LARGE\bfseries}{\end{adjustwidth}}
+
+\fancypagestyle{titlepage} {
+    \fancyhead[R]{
+        \includegraphics[width=0.3\textwidth]{img/itmo_logo.png}
+    }
+    \fancyhead[L] { \bfseries
+        Университет ИТМО \\
+        Физико-технический мегафакультет\\
+        Физический факультет
+    }
+    
+    \setlength{\headheight}{2cm}
+    \renewcommand{\headruleskip}{5pt}
+}
+\newcommand{\HRule}{\rule{\linewidth}{0.3mm}}
