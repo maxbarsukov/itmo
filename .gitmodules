@@ -19,3 +19,12 @@
 [submodule "4 опи/лабораторные/lab4"]
 	path = 4 опи/лабораторные/lab4
 	url = https://github.com/maxbarsukov-itmo/mispi-4
+[submodule "4 архитектура компьютера/lab3"]
+	path = 4 архитектура компьютера/lab3
+	url = https://github.com/maxbarsukov/csa3-stack-machine
+[submodule "5 фп/лабораторные/lab0"]
+	path = 5 фп/лабораторные/lab0
+	url = https://github.com/maxbarsukov-itmo/functional-programming-0
+[submodule "5 фп/лабораторные/lab1"]
+	path = 5 фп/лабораторные/lab1
+	url = https://github.com/maxbarsukov-itmo/functional-programming-1
