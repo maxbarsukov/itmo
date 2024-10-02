@@ -1,13 +1,17 @@
 # Лабораторная работа 1
 
-## Часть 1. Создание базы знаний и выполнение запросов в Prolog
-
 <img alt="ewarewashere" src="https://github.com/maxbarsukov/itmo/blob/master/.docs/ewarewashere.gif" height="180">
 
 > [!TIP]
 > -- Wait... It's all Horn Clauses??
 > 
 > -- Always has been
+
+## Часть 1. Создание базы знаний и выполнение запросов в Prolog
+
+| База знаний | Запросы |
+| --- | -- |
+| [knowledge_base.pl](./part1/knowledge_base.pl) | [queries.pl](./part1/queries.pl) |
 
 
 Требуется создать базу знаний в языке программирования **Prolog** и реализовать набор запросов, используя эту базу знаний. Задача направлена на развитие навыков работы с фактами, предикатами, и правилами в логическом программировании.
@@ -50,6 +54,23 @@
 
 ---
 
+## Часть 2.  Создание онтологии в Protege
+
+Целью этой лабораторной работы является знакомство со средой разработки онтологий Protege и перевод базы знаний, созданной в предыдущей лабораторной работе в онтологическую форму в Protege.
+
+### Задание
+
+Преобразовать факты и отношения из Prolog в концепты и свойства в онтологии. Описать классы и свойства в онтологии, которые соответствуют объектам и отношениям из базы знаний. Например, если у были классы "Человек" и "Машина" и свойство "возраст", создайте аналогичные классы и свойства в онтологии в Protege.
+
+### Критерии оценки
+
+- Корректное создание онтологии в Protege на основе базы знаний в Prolog.
+- Качество перевода фактов, предикатов и отношений из Prolog в онтологию.
+- Определение классов, свойств и иерархии классов в Protege.
+- Тестирование онтологии и демонстрация ее функциональности (визуализация и проверка запросов).
+
+---
+
 ## Полезные ссылки
 
 | Ссылка | Описание |
@@ -57,6 +78,8 @@
 | [https://sunnysubmarines.notion.site/AI-System](https://sunnysubmarines.notion.site/AI-System-a559a46cddc44363bdf27b77e10b7d85#e81ed3e5bc1f4131846acb4e13b1c64a) | Задание на ЛР1, 2024 |
 | https://github.com/ThisAster/Artificial-Intelligence-Systems | Пример выполнения ЛР |
 | https://www.swi-prolog.org/pldoc/man?section=quickstart | Гайд по SWI Prolog |
+| https://protegeproject.github.io/protege/views/object-property-characteristics/ | Protege. Характеристики свойств объекта |
+| https://cgi.csc.liv.ac.uk/~frank/teaching/comp08/protege_tutorial.pdf | Protege туториал |
 
 ## Лицензия <a name="license"></a>
 

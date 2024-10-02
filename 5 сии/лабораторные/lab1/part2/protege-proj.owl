@@ -1,0 +1,3055 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/ivtur/ontologies/2024/9/hoi4-network/"
+     xml:base="http://www.semanticweb.org/ivtur/ontologies/2024/9/hoi4-network/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:swrl="http://www.w3.org/2003/11/swrl#"
+     xmlns:swrla="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#"
+     xmlns:swrlb="http://www.w3.org/2003/11/swrlb#"
+     xmlns:hoi4-network="http://www.semanticweb.org/ivtur/ontologies/2024/9/hoi4-network#"
+     xmlns:players-social-net="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#"
+     xmlns:untitled-ontology-2="http://www.semanticweb.org/ivtur/ontologies/2023/8/untitled-ontology-2#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/ivtur/ontologies/2024/9/hoi4-network"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled -->
+
+    <owl:AnnotationProperty rdf:about="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#alliance_head -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#alliance_head">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#army_controlled_by -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#army_controlled_by">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#claims -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#claims"/>
+    
+
+
+    <!-- http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#commander -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#commander">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#controls_province -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#controls_province">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#draft_law -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#draft_law">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#has_access_to_sea -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#has_access_to_sea"/>
+    
+
+
+    <!-- http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#has_division -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#has_division">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#has_equipment -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#has_equipment">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#joined_alliance -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#joined_alliance">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#leader_of_the_country -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#leader_of_the_country">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#populated_with -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#populated_with">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#puppets -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#puppets">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#right_of_passage -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#right_of_passage">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#ruling_party -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#ruling_party">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#strait_controlled_by -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#strait_controlled_by">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ivtur/ontologies/2024/9/hoi4-network#at_offencive_war -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ivtur/ontologies/2024/9/hoi4-network#at_offencive_war">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ivtur/ontologies/2024/9/hoi4-network#connected -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ivtur/ontologies/2024/9/hoi4-network#connected">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ivtur/ontologies/2024/9/hoi4-network#guarantee_independence -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ivtur/ontologies/2024/9/hoi4-network#guarantee_independence">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ivtur/ontologies/2024/9/hoi4-network#non_aggression_pact -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ivtur/ontologies/2024/9/hoi4-network#non_aggression_pact">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#alliance -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#alliance"/>
+    
+
+
+    <!-- http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#army -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#army"/>
+    
+
+
+    <!-- http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#country -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#country"/>
+    
+
+
+    <!-- http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#division -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#division"/>
+    
+
+
+    <!-- http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#draft_rate -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#draft_rate"/>
+    
+
+
+    <!-- http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#equipment -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#equipment"/>
+    
+
+
+    <!-- http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#general -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#general"/>
+    
+
+
+    <!-- http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#ideology -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#ideology"/>
+    
+
+
+    <!-- http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#leader -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#leader"/>
+    
+
+
+    <!-- http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#major_country -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#major_country">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#country"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#population -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#population"/>
+    
+
+
+    <!-- http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#province -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#province"/>
+    
+
+
+    <!-- http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#sea -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#sea"/>
+    
+
+
+    <!-- http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#strait -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#strait"/>
+    
+
+
+    <!-- http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#world_tension -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#world_tension"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#adriatic_sea -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#adriatic_sea">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#sea"/>
+        <hoi4-network:connected rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#otranto"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#afganistan -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#afganistan">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#country"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#alfold -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#alfold">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#province"/>
+        <players-social-net:populated_with rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#3750000"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#allies -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#allies">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#alliance"/>
+        <players-social-net:alliance_head rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#uk"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#alsace_lorraine -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#alsace_lorraine">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#province"/>
+        <players-social-net:populated_with rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#1910000"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#argentina -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#argentina">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#country"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#armored_division -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#armored_division">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#division"/>
+        <players-social-net:has_equipment rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#infantry_rifle"/>
+        <players-social-net:has_equipment rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#tank"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#artillery -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#artillery">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#equipment"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#artillery_division -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#artillery_division">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#division"/>
+        <players-social-net:has_equipment rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#artillery"/>
+        <players-social-net:has_equipment rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#infantry_rifle"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#atlantic_ocean -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#atlantic_ocean">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#sea"/>
+        <hoi4-network:connected rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#gibraltar_strait"/>
+        <hoi4-network:connected rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#indian_ocean"/>
+        <hoi4-network:connected rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#kiel_canal"/>
+        <hoi4-network:connected rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#panama_canal_strait"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#australia -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#australia">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#country"/>
+        <players-social-net:joined_alliance rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#allies"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#axis -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#axis">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#alliance"/>
+        <players-social-net:alliance_head rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#germany"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#bab_el_mandeb -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#bab_el_mandeb">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#strait"/>
+        <players-social-net:strait_controlled_by rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#france"/>
+        <hoi4-network:connected rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#indian_ocean"/>
+        <hoi4-network:connected rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#red_sea"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#baltic_sea -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#baltic_sea">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#sea"/>
+        <hoi4-network:connected rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#kiel_canal"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#banat -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#banat">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#province"/>
+        <players-social-net:populated_with rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#942640"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#battle_ship -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#battle_ship">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#equipment"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#belguim -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#belguim">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#country"/>
+        <players-social-net:controls_province rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#belguim_africa"/>
+        <players-social-net:controls_province rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#vlaanderen"/>
+        <players-social-net:controls_province rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#wallonie"/>
+        <players-social-net:draft_law rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#2.5"/>
+        <players-social-net:leader_of_the_country rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#pierlot"/>
+        <players-social-net:ruling_party rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#democratic"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#belguim_africa -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#belguim_africa">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#province"/>
+        <players-social-net:has_access_to_sea rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#atlantic_ocean"/>
+        <players-social-net:populated_with rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#11470000"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#bessarabia -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#bessarabia">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#province"/>
+        <players-social-net:populated_with rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#2290000"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#bhutan -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#bhutan">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#country"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#bhutanese_army -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#bhutanese_army">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#army"/>
+        <players-social-net:army_controlled_by rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#bhutan"/>
+        <players-social-net:has_division rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#infantry_division"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#black_sea -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#black_sea">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#sea"/>
+        <hoi4-network:connected rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#bosporus_and_dardanelles"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#blum -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#blum">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#leader"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#bolivia -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#bolivia">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#country"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#bomber -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#bomber">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#equipment"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#bosporus_and_dardanelles -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#bosporus_and_dardanelles">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#strait"/>
+        <players-social-net:strait_controlled_by rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#turkey"/>
+        <hoi4-network:connected rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#black_sea"/>
+        <hoi4-network:connected rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#mediterranean_sea"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#brazil -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#brazil">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#country"/>
+        <players-social-net:right_of_passage rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#canada"/>
+        <players-social-net:right_of_passage rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#france"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#british_malaya -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#british_malaya">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#country"/>
+        <players-social-net:joined_alliance rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#allies"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#british_raj -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#british_raj">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#country"/>
+        <players-social-net:claims rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#french_india"/>
+        <players-social-net:claims rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#goa"/>
+        <players-social-net:controls_province rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#india"/>
+        <players-social-net:controls_province rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#pakistan"/>
+        <players-social-net:draft_law rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#1.5"/>
+        <players-social-net:joined_alliance rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#allies"/>
+        <players-social-net:leader_of_the_country rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#linlithgow"/>
+        <players-social-net:ruling_party rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#neutral"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#bucovina -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#bucovina">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#province"/>
+        <players-social-net:populated_with rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#475170"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#bulgaria -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#bulgaria">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#country"/>
+        <players-social-net:claims rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#dobrudja"/>
+        <players-social-net:claims rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#macedonia"/>
+        <players-social-net:claims rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#southern_serbia"/>
+        <hoi4-network:non_aggression_pact rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#italy"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#canada -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#canada">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#country"/>
+        <players-social-net:claims rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#labrador"/>
+        <players-social-net:claims rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#newfoundland"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#canadian_expeditional_army -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#canadian_expeditional_army">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#army"/>
+        <players-social-net:army_controlled_by rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#uk"/>
+        <players-social-net:has_division rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#infantry_division"/>
+        <players-social-net:has_division rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#naval_division"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#carol2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#carol2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#leader"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#carpathian_ruthenia -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#carpathian_ruthenia">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#province"/>
+        <players-social-net:populated_with rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#855340"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#cas -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#cas">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#equipment"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#chamberlain -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#chamberlain">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#leader"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#chili -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#chili">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#country"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#china -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#china">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#country"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#major_country"/>
+        <players-social-net:claims rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#guangzouwan"/>
+        <players-social-net:claims rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#japanese_china"/>
+        <players-social-net:claims rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#macau"/>
+        <players-social-net:claims rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#shaanxi"/>
+        <players-social-net:controls_province rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#whole_china"/>
+        <players-social-net:draft_law rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#10"/>
+        <players-social-net:joined_alliance rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#united_chinese_front"/>
+        <players-social-net:leader_of_the_country rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#kaishek"/>
+        <players-social-net:right_of_passage rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#uk"/>
+        <players-social-net:ruling_party rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#neutral"/>
+        <hoi4-network:non_aggression_pact rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#ussr"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#chinese_army -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#chinese_army">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#army"/>
+        <players-social-net:army_controlled_by rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#china"/>
+        <players-social-net:has_division rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#infantry_division"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#choibalsan -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#choibalsan">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#leader"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#comintern -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#comintern">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#alliance"/>
+        <players-social-net:alliance_head rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#ussr"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#communist -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#communist">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#ideology"/>
+        <players-social-net:claims rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#guangzouwan"/>
+        <players-social-net:claims rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#japanese_china"/>
+        <players-social-net:claims rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#macau"/>
+        <players-social-net:claims rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#whole_china"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#communist_china -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#communist_china">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#country"/>
+        <players-social-net:controls_province rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#shaanxi"/>
+        <players-social-net:draft_law rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#10"/>
+        <players-social-net:joined_alliance rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#united_chinese_front"/>
+        <players-social-net:ruling_party rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#communist"/>
+        <hoi4-network:non_aggression_pact rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#ussr"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#convoy -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#convoy">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#equipment"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#crisana -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#crisana">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#province"/>
+        <players-social-net:populated_with rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#633670"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#cyprus -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#cyprus">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#province"/>
+        <players-social-net:has_access_to_sea rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#mediterranean_sea"/>
+        <players-social-net:populated_with rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#348380"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#dalmacia -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#dalmacia">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#province"/>
+        <players-social-net:has_access_to_sea rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#adriatic_sea"/>
+        <players-social-net:populated_with rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#1680000"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#danzig -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#danzig">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#province"/>
+        <players-social-net:has_access_to_sea rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#baltic_sea"/>
+        <players-social-net:populated_with rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#367170"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#democratic -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#democratic">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#ideology"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#denmark -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#denmark">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#country"/>
+        <players-social-net:puppets rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#iceland"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#dobrudja -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#dobrudja">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#province"/>
+        <players-social-net:has_access_to_sea rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#black_sea"/>
+        <players-social-net:populated_with rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#378460"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#dornod -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#dornod">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#province"/>
+        <players-social-net:populated_with rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#88358"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#dutch_east_indies -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#dutch_east_indies">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#country"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#east_poland -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#east_poland">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#province"/>
+        <players-social-net:populated_with rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#20370000"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#eastern_slovakia -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#eastern_slovakia">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#province"/>
+        <players-social-net:populated_with rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#1190000"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#ecuador -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#ecuador">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#country"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#eisenhower -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#eisenhower">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#general"/>
+        <players-social-net:commander rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#usa_army"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#estonia -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#estonia">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#country"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#fascist -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#fascist">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#ideology"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#fighter -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#fighter">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#equipment"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#finland -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#finland">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#country"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#france -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#france">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#country"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#major_country"/>
+        <players-social-net:controls_province rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#alsace_lorraine"/>
+        <players-social-net:controls_province rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#french_india"/>
+        <players-social-net:controls_province rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#french_islands"/>
+        <players-social-net:controls_province rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#guangzouwan"/>
+        <players-social-net:controls_province rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#other_france"/>
+        <players-social-net:controls_province rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#savoy"/>
+        <players-social-net:draft_law rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#5"/>
+        <players-social-net:joined_alliance rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#allies"/>
+        <players-social-net:leader_of_the_country rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#blum"/>
+        <players-social-net:ruling_party rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#democratic"/>
+        <hoi4-network:guarantee_independence rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#romania"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#francist_spain -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#francist_spain">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#country"/>
+        <players-social-net:controls_province rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#whole_spain"/>
+        <players-social-net:draft_law rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#2.5"/>
+        <players-social-net:leader_of_the_country rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#franco"/>
+        <players-social-net:ruling_party rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#neutral"/>
+        <hoi4-network:non_aggression_pact rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#portugal"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#franco -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#franco">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#leader"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#french_army -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#french_army">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#army"/>
+        <players-social-net:army_controlled_by rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#france"/>
+        <players-social-net:has_division rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#artillery_division"/>
+        <players-social-net:has_division rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#infantry_division"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#french_india -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#french_india">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#province"/>
+        <players-social-net:has_access_to_sea rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#indian_ocean"/>
+        <players-social-net:populated_with rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#286760"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#french_islands -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#french_islands">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#province"/>
+        <players-social-net:has_access_to_sea rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#atlantic_ocean"/>
+        <players-social-net:has_access_to_sea rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#pacific_ocean"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#german_army -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#german_army">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#army"/>
+        <players-social-net:army_controlled_by rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#germany"/>
+        <players-social-net:has_division rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#armored_division"/>
+        <players-social-net:has_division rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#artillery_division"/>
+        <players-social-net:has_division rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#infantry_division"/>
+        <players-social-net:has_division rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#naval_division"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#germany -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#germany">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#country"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#major_country"/>
+        <players-social-net:claims rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#alsace_lorraine"/>
+        <players-social-net:claims rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#danzig"/>
+        <players-social-net:controls_province rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#whole_germany"/>
+        <players-social-net:draft_law rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#5"/>
+        <players-social-net:joined_alliance rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#axis"/>
+        <players-social-net:leader_of_the_country rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#hitler"/>
+        <players-social-net:puppets rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#slovakia"/>
+        <players-social-net:ruling_party rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#fascist"/>
+        <hoi4-network:at_offencive_war rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#australia"/>
+        <hoi4-network:at_offencive_war rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#british_malaya"/>
+        <hoi4-network:at_offencive_war rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#british_raj"/>
+        <hoi4-network:at_offencive_war rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#canada"/>
+        <hoi4-network:at_offencive_war rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#france"/>
+        <hoi4-network:at_offencive_war rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#new_zeland"/>
+        <hoi4-network:at_offencive_war rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#poland"/>
+        <hoi4-network:at_offencive_war rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#south_africa"/>
+        <hoi4-network:at_offencive_war rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#uk"/>
+        <hoi4-network:guarantee_independence rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#hungary"/>
+        <hoi4-network:non_aggression_pact rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#ussr"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#gibraltar -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#gibraltar">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#province"/>
+        <players-social-net:has_access_to_sea rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#atlantic_ocean"/>
+        <players-social-net:has_access_to_sea rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#mediterranean_sea"/>
+        <players-social-net:populated_with rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#21390"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#gibraltar_strait -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#gibraltar_strait">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#strait"/>
+        <players-social-net:strait_controlled_by rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#uk"/>
+        <hoi4-network:connected rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#atlantic_ocean"/>
+        <hoi4-network:connected rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#mediterranean_sea"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#goa -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#goa">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#province"/>
+        <players-social-net:has_access_to_sea rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#indian_ocean"/>
+        <players-social-net:populated_with rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#534600"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#gobi -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#gobi">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#province"/>
+        <players-social-net:populated_with rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#11013"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#graziani -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#graziani">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#general"/>
+        <players-social-net:commander rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#italian_army"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#great_east_asia_coprosperity_sphere -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#great_east_asia_coprosperity_sphere">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#alliance"/>
+        <players-social-net:alliance_head rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#japan"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#greece -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#greece">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#country"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#guangxi_clique -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#guangxi_clique">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#country"/>
+        <players-social-net:joined_alliance rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#united_chinese_front"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#guangzouwan -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#guangzouwan">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#province"/>
+        <players-social-net:has_access_to_sea rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#indian_ocean"/>
+        <players-social-net:populated_with rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#200240"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#guderian -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#guderian">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#general"/>
+        <players-social-net:commander rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#german_army"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#hirohito -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#hirohito">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#leader"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#hitler -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#hitler">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#leader"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#horthy -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#horthy">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#leader"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#hungary -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#hungary">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#country"/>
+        <players-social-net:claims rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#banat"/>
+        <players-social-net:claims rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#crisana"/>
+        <players-social-net:claims rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#north_transylvania"/>
+        <players-social-net:claims rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#transylvania"/>
+        <players-social-net:claims rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#vojvodina"/>
+        <players-social-net:claims rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#west_banat"/>
+        <players-social-net:controls_province rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#alfold"/>
+        <players-social-net:controls_province rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#carpathian_ruthenia"/>
+        <players-social-net:controls_province rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#nothern_hungary"/>
+        <players-social-net:controls_province rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#southern_slovakia"/>
+        <players-social-net:controls_province rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#transdanubia"/>
+        <players-social-net:draft_law rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#5"/>
+        <players-social-net:joined_alliance rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#axis"/>
+        <players-social-net:leader_of_the_country rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#horthy"/>
+        <players-social-net:ruling_party rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#fascist"/>
+        <hoi4-network:at_offencive_war rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#australia"/>
+        <hoi4-network:at_offencive_war rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#british_malaya"/>
+        <hoi4-network:at_offencive_war rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#british_raj"/>
+        <hoi4-network:at_offencive_war rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#canada"/>
+        <hoi4-network:at_offencive_war rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#france"/>
+        <hoi4-network:at_offencive_war rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#new_zeland"/>
+        <hoi4-network:at_offencive_war rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#poland"/>
+        <hoi4-network:at_offencive_war rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#south_africa"/>
+        <hoi4-network:at_offencive_war rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#uk"/>
+        <hoi4-network:guarantee_independence rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#italy"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#iceland -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#iceland">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#country"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#india -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#india">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#province"/>
+        <players-social-net:has_access_to_sea rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#indian_ocean"/>
+        <players-social-net:populated_with rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#313130000"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#indian_ocean -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#indian_ocean">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#sea"/>
+        <hoi4-network:connected rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#atlantic_ocean"/>
+        <hoi4-network:connected rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#bab_el_mandeb"/>
+        <hoi4-network:connected rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#singapur_strait"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#infantry_division -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#infantry_division">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#division"/>
+        <players-social-net:has_equipment rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#artillery"/>
+        <players-social-net:has_equipment rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#infantry_rifle"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#infantry_rifle -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#infantry_rifle">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#equipment"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#inonu -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#inonu">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#leader"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#iran -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#iran">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#country"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#ireland -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#ireland">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#country"/>
+        <players-social-net:claims rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#nothern_ireland"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#ironside -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#ironside">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#general"/>
+        <players-social-net:commander rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#uk_army"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#istanbul -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#istanbul">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#province"/>
+        <players-social-net:has_access_to_sea rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#black_sea"/>
+        <players-social-net:has_access_to_sea rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#mediterranean_sea"/>
+        <players-social-net:populated_with rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#1040000"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#italian_army -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#italian_army">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#army"/>
+        <players-social-net:army_controlled_by rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#italy"/>
+        <players-social-net:has_division rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#armored_division"/>
+        <players-social-net:has_division rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#artillery_division"/>
+        <players-social-net:has_division rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#infantry_division"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#italian_eastern_africa -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#italian_eastern_africa">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#country"/>
+        <players-social-net:joined_alliance rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#axis"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#italy -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#italy">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#country"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#major_country"/>
+        <players-social-net:claims rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#savoy"/>
+        <players-social-net:controls_province rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#dalmacia"/>
+        <players-social-net:controls_province rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#other_italy"/>
+        <players-social-net:draft_law rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#5"/>
+        <players-social-net:joined_alliance rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#axis"/>
+        <players-social-net:leader_of_the_country rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#mussolini"/>
+        <players-social-net:puppets rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#italian_eastern_africa"/>
+        <players-social-net:ruling_party rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#fascist"/>
+        <hoi4-network:guarantee_independence rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#hungary"/>
+        <hoi4-network:non_aggression_pact rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#bulgaria"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#japan -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#japan">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#country"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#major_country"/>
+        <players-social-net:controls_province rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#japanese_china"/>
+        <players-social-net:controls_province rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#kuril_islands"/>
+        <players-social-net:controls_province rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#other_japan"/>
+        <players-social-net:controls_province rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#south_sakhalin"/>
+        <players-social-net:draft_law rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#10"/>
+        <players-social-net:joined_alliance rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#great_east_asia_coprosperity_sphere"/>
+        <players-social-net:leader_of_the_country rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#hirohito"/>
+        <players-social-net:puppets rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#manchukuo"/>
+        <players-social-net:puppets rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#mengkukuo"/>
+        <players-social-net:ruling_party rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#fascist"/>
+        <hoi4-network:at_offencive_war rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#china"/>
+        <hoi4-network:at_offencive_war rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#communist_china"/>
+        <hoi4-network:at_offencive_war rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#guangxi_clique"/>
+        <hoi4-network:at_offencive_war rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#sinkiang"/>
+        <hoi4-network:at_offencive_war rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#xibeisanma"/>
+        <hoi4-network:at_offencive_war rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#yunnan"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#japanese_army -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#japanese_army">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#army"/>
+        <players-social-net:army_controlled_by rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#japan"/>
+        <players-social-net:has_division rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#armored_division"/>
+        <players-social-net:has_division rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#infantry_division"/>
+        <players-social-net:has_division rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#naval_division"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#japanese_china -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#japanese_china">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#province"/>
+        <players-social-net:has_access_to_sea rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#pacific_ocean"/>
+        <players-social-net:populated_with rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#248840000"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#kaishek -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#kaishek">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#leader"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#khovd -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#khovd">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#province"/>
+        <players-social-net:populated_with rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#149182"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#khovsgol -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#khovsgol">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#province"/>
+        <players-social-net:populated_with rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#88308"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#kiel_canal -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#kiel_canal">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#strait"/>
+        <players-social-net:strait_controlled_by rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#denmark"/>
+        <hoi4-network:connected rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#atlantic_ocean"/>
+        <hoi4-network:connected rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#baltic_sea"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#kuril_islands -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#kuril_islands">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#province"/>
+        <players-social-net:has_access_to_sea rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#pacific_ocean"/>
+        <players-social-net:populated_with rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#15010"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#labrador -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#labrador">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#province"/>
+        <players-social-net:has_access_to_sea rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#atlantic_ocean"/>
+        <players-social-net:populated_with rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#22200"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#latvia -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#latvia">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#country"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#leclerc -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#leclerc">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#general"/>
+        <players-social-net:commander rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#french_army"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#liberia -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#liberia">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#country"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#linlithgow -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#linlithgow">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#leader"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#lithuania -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#lithuania">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#country"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#luxembourd -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#luxembourd">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#country"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#macau -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#macau">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#province"/>
+        <players-social-net:has_access_to_sea rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#pacific_ocean"/>
+        <players-social-net:populated_with rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#157990"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#macedonia -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#macedonia">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#province"/>
+        <players-social-net:populated_with rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#1370000"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#maczek -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#maczek">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#general"/>
+        <players-social-net:commander rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#polish_army"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#malta -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#malta">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#province"/>
+        <players-social-net:has_access_to_sea rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#mediterranean_sea"/>
+        <players-social-net:populated_with rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#241910"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#manchukuo -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#manchukuo">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#country"/>
+        <players-social-net:joined_alliance rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#great_east_asia_coprosperity_sphere"/>
+        <hoi4-network:at_offencive_war rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#china"/>
+        <hoi4-network:at_offencive_war rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#communist_china"/>
+        <hoi4-network:at_offencive_war rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#guangxi_clique"/>
+        <hoi4-network:at_offencive_war rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#sinkiang"/>
+        <hoi4-network:at_offencive_war rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#xibeisanma"/>
+        <hoi4-network:at_offencive_war rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#yunnan"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#mediterranean_sea -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#mediterranean_sea">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#sea"/>
+        <hoi4-network:connected rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#bosporus_and_dardanelles"/>
+        <hoi4-network:connected rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#gibraltar_strait"/>
+        <hoi4-network:connected rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#otranto"/>
+        <hoi4-network:connected rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#suez_canal"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#mengkukuo -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#mengkukuo">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#country"/>
+        <players-social-net:joined_alliance rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#great_east_asia_coprosperity_sphere"/>
+        <hoi4-network:at_offencive_war rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#china"/>
+        <hoi4-network:at_offencive_war rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#communist_china"/>
+        <hoi4-network:at_offencive_war rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#guangxi_clique"/>
+        <hoi4-network:at_offencive_war rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#sinkiang"/>
+        <hoi4-network:at_offencive_war rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#xibeisanma"/>
+        <hoi4-network:at_offencive_war rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#yunnan"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#mexico -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#mexico">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#country"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#moldova -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#moldova">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#province"/>
+        <players-social-net:populated_with rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#2800000"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#mongolia -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#mongolia">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#country"/>
+        <players-social-net:controls_province rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#dornod"/>
+        <players-social-net:controls_province rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#gobi"/>
+        <players-social-net:controls_province rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#khovd"/>
+        <players-social-net:controls_province rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#khovsgol"/>
+        <players-social-net:controls_province rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#ulaanbaatar"/>
+        <players-social-net:draft_law rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#2.5"/>
+        <players-social-net:joined_alliance rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#comintern"/>
+        <players-social-net:leader_of_the_country rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#choibalsan"/>
+        <players-social-net:ruling_party rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#communist"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#moscicki -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#moscicki">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#leader"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#muntenia -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#muntenia">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#province"/>
+        <players-social-net:has_access_to_sea rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#black_sea"/>
+        <players-social-net:populated_with rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#4460000"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#murchie -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#murchie">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#general"/>
+        <players-social-net:commander rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#canadian_expeditional_army"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#mussolini -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#mussolini">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#leader"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#naval_division -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#naval_division">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#division"/>
+        <players-social-net:has_equipment rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#battle_ship"/>
+        <players-social-net:has_equipment rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#convoy"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#nepal -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#nepal">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#country"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#netherlands -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#netherlands">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#country"/>
+        <players-social-net:puppets rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#dutch_east_indies"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#neutral -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#neutral">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#ideology"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#new_zeland -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#new_zeland">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#country"/>
+        <players-social-net:joined_alliance rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#allies"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#newfoundland -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#newfoundland">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#province"/>
+        <players-social-net:has_access_to_sea rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#mediterranean_sea"/>
+        <players-social-net:has_access_to_sea rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#red_sea"/>
+        <players-social-net:populated_with rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#255370"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#north_transylvania -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#north_transylvania">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#province"/>
+        <players-social-net:populated_with rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#2350000"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#norway -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#norway">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#country"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#nothern_hungary -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#nothern_hungary">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#province"/>
+        <players-social-net:populated_with rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#2730000"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#nothern_ireland -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#nothern_ireland">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#province"/>
+        <players-social-net:has_access_to_sea rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#atlantic_ocean"/>
+        <players-social-net:populated_with rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#1200000"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#oltenia -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#oltenia">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#province"/>
+        <players-social-net:populated_with rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#1520000"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#other_france -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#other_france">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#province"/>
+        <players-social-net:has_access_to_sea rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#atlantic_ocean"/>
+        <players-social-net:has_access_to_sea rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#indian_ocean"/>
+        <players-social-net:has_access_to_sea rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#mediterranean_sea"/>
+        <players-social-net:has_access_to_sea rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#pacific_ocean"/>
+        <players-social-net:populated_with rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#111768300"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#other_italy -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#other_italy">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#province"/>
+        <players-social-net:has_access_to_sea rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#adriatic_sea"/>
+        <players-social-net:has_access_to_sea rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#mediterranean_sea"/>
+        <players-social-net:has_access_to_sea rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#red_sea"/>
+        <players-social-net:populated_with rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#45028420"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#other_japan -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#other_japan">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#province"/>
+        <players-social-net:has_access_to_sea rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#pacific_ocean"/>
+        <players-social-net:populated_with rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#64860000"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#other_uk -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#other_uk">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#province"/>
+        <players-social-net:has_access_to_sea rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#atlantic_ocean"/>
+        <players-social-net:has_access_to_sea rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#indian_ocean"/>
+        <players-social-net:has_access_to_sea rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#mediterranean_sea"/>
+        <players-social-net:has_access_to_sea rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#pacific_ocean"/>
+        <players-social-net:has_access_to_sea rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#red_sea"/>
+        <players-social-net:populated_with rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#122530000"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#otranto -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#otranto">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#strait"/>
+        <players-social-net:strait_controlled_by rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#italy"/>
+        <hoi4-network:connected rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#adriatic_sea"/>
+        <hoi4-network:connected rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#mediterranean_sea"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#pacific_ocean -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#pacific_ocean">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#sea"/>
+        <hoi4-network:connected rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#panama_canal_strait"/>
+        <hoi4-network:connected rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#singapur_strait"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#pakistan -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#pakistan">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#province"/>
+        <players-social-net:has_access_to_sea rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#indian_ocean"/>
+        <players-social-net:populated_with rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#37810000"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#panama_canal_strait -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#panama_canal_strait">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#strait"/>
+        <players-social-net:strait_controlled_by rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#usa"/>
+        <hoi4-network:connected rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#atlantic_ocean"/>
+        <hoi4-network:connected rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#pacific_ocean"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#paraguay -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#paraguay">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#country"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#peru -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#peru">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#country"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#philipines -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#philipines">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#country"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#pierlot -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#pierlot">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#leader"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#poland -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#poland">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#country"/>
+        <players-social-net:controls_province rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#danzig"/>
+        <players-social-net:controls_province rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#east_poland"/>
+        <players-social-net:controls_province rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#west_poland"/>
+        <players-social-net:draft_law rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#2.5"/>
+        <players-social-net:leader_of_the_country rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#moscicki"/>
+        <players-social-net:ruling_party rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#neutral"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#polish_army -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#polish_army">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#army"/>
+        <players-social-net:army_controlled_by rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#poland"/>
+        <players-social-net:has_division rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#artillery_division"/>
+        <players-social-net:has_division rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#infantry_division"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#portugal -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#portugal">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#country"/>
+        <players-social-net:controls_province rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#goa"/>
+        <players-social-net:controls_province rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#macau"/>
+        <players-social-net:controls_province rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#whole_portugal"/>
+        <players-social-net:draft_law rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#1.5"/>
+        <players-social-net:leader_of_the_country rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#moscicki"/>
+        <players-social-net:ruling_party rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#neutral"/>
+        <hoi4-network:non_aggression_pact rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#francist_spain"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#prince_paul -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#prince_paul">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#leader"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#red_sea -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#red_sea">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#sea"/>
+        <hoi4-network:connected rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#bab_el_mandeb"/>
+        <hoi4-network:connected rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#suez_canal"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#romania -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#romania">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#country"/>
+        <players-social-net:controls_province rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#banat"/>
+        <players-social-net:controls_province rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#bessarabia"/>
+        <players-social-net:controls_province rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#bucovina"/>
+        <players-social-net:controls_province rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#crisana"/>
+        <players-social-net:controls_province rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#dobrudja"/>
+        <players-social-net:controls_province rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#moldova"/>
+        <players-social-net:controls_province rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#muntenia"/>
+        <players-social-net:controls_province rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#north_transylvania"/>
+        <players-social-net:controls_province rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#oltenia"/>
+        <players-social-net:controls_province rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#southern_bessarabia"/>
+        <players-social-net:controls_province rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#transylvania"/>
+        <players-social-net:draft_law rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#2.5"/>
+        <players-social-net:leader_of_the_country rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#carol2"/>
+        <players-social-net:right_of_passage rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#germany"/>
+        <players-social-net:ruling_party rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#neutral"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#roosevelt -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#roosevelt">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#leader"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#salazar -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#salazar">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#leader"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#savoy -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#savoy">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#province"/>
+        <players-social-net:has_access_to_sea rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#mediterranean_sea"/>
+        <players-social-net:populated_with rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#908600"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#serbia -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#serbia">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#province"/>
+        <players-social-net:has_access_to_sea rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#adriatic_sea"/>
+        <players-social-net:populated_with rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#9340000"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#shaanxi -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#shaanxi">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#province"/>
+        <players-social-net:populated_with rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#7010000"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#siamese_empire -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#siamese_empire">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#country"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#singapur_strait -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#singapur_strait">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#strait"/>
+        <players-social-net:strait_controlled_by rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#uk"/>
+        <hoi4-network:connected rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#indian_ocean"/>
+        <hoi4-network:connected rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#pacific_ocean"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#sinkiang -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#sinkiang">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#country"/>
+        <players-social-net:joined_alliance rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#united_chinese_front"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#slovakia -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#slovakia">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#country"/>
+        <players-social-net:claims rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#carpathian_ruthenia"/>
+        <players-social-net:claims rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#southern_slovakia"/>
+        <players-social-net:controls_province rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#eastern_slovakia"/>
+        <players-social-net:controls_province rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#western_slovakia"/>
+        <players-social-net:draft_law rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#10"/>
+        <players-social-net:joined_alliance rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#axis"/>
+        <players-social-net:leader_of_the_country rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#tiso"/>
+        <players-social-net:ruling_party rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#fascist"/>
+        <hoi4-network:at_offencive_war rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#australia"/>
+        <hoi4-network:at_offencive_war rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#british_malaya"/>
+        <hoi4-network:at_offencive_war rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#british_raj"/>
+        <hoi4-network:at_offencive_war rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#canada"/>
+        <hoi4-network:at_offencive_war rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#france"/>
+        <hoi4-network:at_offencive_war rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#new_zeland"/>
+        <hoi4-network:at_offencive_war rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#poland"/>
+        <hoi4-network:at_offencive_war rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#south_africa"/>
+        <hoi4-network:at_offencive_war rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#uk"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#south_africa -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#south_africa">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#country"/>
+        <players-social-net:joined_alliance rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#allies"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#south_sakhalin -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#south_sakhalin">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#province"/>
+        <players-social-net:has_access_to_sea rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#pacific_ocean"/>
+        <players-social-net:populated_with rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#295550"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#southern_bessarabia -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#southern_bessarabia">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#province"/>
+        <players-social-net:has_access_to_sea rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#black_sea"/>
+        <players-social-net:populated_with rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#567290"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#southern_serbia -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#southern_serbia">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#province"/>
+        <players-social-net:populated_with rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#210250"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#southern_slovakia -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#southern_slovakia">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#province"/>
+        <players-social-net:populated_with rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#855340"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#stalin -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#stalin">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#leader"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#suez -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#suez">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#province"/>
+        <players-social-net:populated_with rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#131890"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#suez_canal -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#suez_canal">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#strait"/>
+        <players-social-net:strait_controlled_by rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#uk"/>
+        <hoi4-network:connected rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#mediterranean_sea"/>
+        <hoi4-network:connected rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#red_sea"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#sugiyama -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#sugiyama">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#general"/>
+        <players-social-net:commander rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#japanese_army"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#sweden -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#sweden">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#country"/>
+        <players-social-net:right_of_passage rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#germany"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#tank -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#tank">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#equipment"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#tannutuva -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#tannutuva">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#country"/>
+        <players-social-net:controls_province rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#tuva"/>
+        <players-social-net:joined_alliance rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#comintern"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#tibet -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#tibet">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#country"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#tiso -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#tiso">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#leader"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#transdanubia -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#transdanubia">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#province"/>
+        <players-social-net:populated_with rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#2200000"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#transylvania -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#transylvania">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#province"/>
+        <players-social-net:populated_with rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#1620000"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#turkey -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#turkey">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#country"/>
+        <players-social-net:claims rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#cyprus"/>
+        <players-social-net:controls_province rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#istanbul"/>
+        <players-social-net:controls_province rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#whole_turkey"/>
+        <players-social-net:draft_law rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#2.5"/>
+        <players-social-net:leader_of_the_country rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#inonu"/>
+        <players-social-net:ruling_party rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#neutral"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#tuva -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#tuva">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#province"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#uk -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#uk">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#country"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#major_country"/>
+        <players-social-net:controls_province rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#cyprus"/>
+        <players-social-net:controls_province rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#gibraltar"/>
+        <players-social-net:controls_province rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#labrador"/>
+        <players-social-net:controls_province rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#malta"/>
+        <players-social-net:controls_province rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#newfoundland"/>
+        <players-social-net:controls_province rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#nothern_ireland"/>
+        <players-social-net:controls_province rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#other_uk"/>
+        <players-social-net:controls_province rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#suez"/>
+        <players-social-net:draft_law rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#2.5"/>
+        <players-social-net:joined_alliance rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#allies"/>
+        <players-social-net:leader_of_the_country rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#chamberlain"/>
+        <players-social-net:puppets rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#australia"/>
+        <players-social-net:puppets rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#british_malaya"/>
+        <players-social-net:puppets rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#british_raj"/>
+        <players-social-net:puppets rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#canada"/>
+        <players-social-net:puppets rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#new_zeland"/>
+        <players-social-net:puppets rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#south_africa"/>
+        <players-social-net:ruling_party rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#democratic"/>
+        <hoi4-network:guarantee_independence rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#poland"/>
+        <hoi4-network:guarantee_independence rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#yugoslavia"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#uk_army -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#uk_army">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#army"/>
+        <players-social-net:army_controlled_by rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#uk"/>
+        <players-social-net:has_division rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#armored_division"/>
+        <players-social-net:has_division rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#infantry_division"/>
+        <players-social-net:has_division rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#naval_division"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#ulaanbaatar -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#ulaanbaatar">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#province"/>
+        <players-social-net:populated_with rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#436082"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#united_chinese_front -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#united_chinese_front">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#alliance"/>
+        <players-social-net:alliance_head rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#china"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#uruguay -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#uruguay">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#country"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#usa -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#usa">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#country"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#major_country"/>
+        <players-social-net:controls_province rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#whole_usa"/>
+        <players-social-net:draft_law rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#1.5"/>
+        <players-social-net:leader_of_the_country rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#roosevelt"/>
+        <players-social-net:puppets rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#philipines"/>
+        <players-social-net:ruling_party rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#democratic"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#usa_army -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#usa_army">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#army"/>
+        <players-social-net:army_controlled_by rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#usa"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#ussr -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#ussr">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#country"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#major_country"/>
+        <players-social-net:claims rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#bessarabia"/>
+        <players-social-net:claims rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#bucovina"/>
+        <players-social-net:claims rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#carpathian_ruthenia"/>
+        <players-social-net:claims rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#east_poland"/>
+        <players-social-net:claims rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#kuril_islands"/>
+        <players-social-net:claims rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#south_sakhalin"/>
+        <players-social-net:claims rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#southern_bessarabia"/>
+        <players-social-net:claims rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#tuva"/>
+        <players-social-net:controls_province rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#whole_ussr"/>
+        <players-social-net:draft_law rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#5"/>
+        <players-social-net:joined_alliance rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#comintern"/>
+        <players-social-net:leader_of_the_country rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#stalin"/>
+        <players-social-net:ruling_party rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#communist"/>
+        <hoi4-network:non_aggression_pact rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#china"/>
+        <hoi4-network:non_aggression_pact rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#communist_china"/>
+        <hoi4-network:non_aggression_pact rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#germany"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#ussr_army -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#ussr_army">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#army"/>
+        <players-social-net:army_controlled_by rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#ussr"/>
+        <players-social-net:has_division rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#armored_division"/>
+        <players-social-net:has_division rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#artillery_division"/>
+        <players-social-net:has_division rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#infantry_division"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#vlaanderen -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#vlaanderen">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#province"/>
+        <players-social-net:has_access_to_sea rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#atlantic_ocean"/>
+        <players-social-net:populated_with rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#4750000"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#vojvodina -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#vojvodina">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#province"/>
+        <players-social-net:populated_with rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#839640"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#wallonie -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#wallonie">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#province"/>
+        <players-social-net:populated_with rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#3380000"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#west_banat -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#west_banat">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#province"/>
+        <players-social-net:has_access_to_sea rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#baltic_sea"/>
+        <players-social-net:populated_with rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#586290"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#west_poland -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#west_poland">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#province"/>
+        <players-social-net:has_access_to_sea rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#baltic_sea"/>
+        <players-social-net:populated_with rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#11640000"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#western_slovakia -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#western_slovakia">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#province"/>
+        <players-social-net:populated_with rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#1230000"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#whole_china -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#whole_china">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#province"/>
+        <players-social-net:has_access_to_sea rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#pacific_ocean"/>
+        <players-social-net:populated_with rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#171290000"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#whole_germany -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#whole_germany">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#province"/>
+        <players-social-net:has_access_to_sea rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#baltic_sea"/>
+        <players-social-net:populated_with rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#82980000"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#whole_portugal -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#whole_portugal">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#province"/>
+        <players-social-net:has_access_to_sea rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#atlantic_ocean"/>
+        <players-social-net:has_access_to_sea rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#indian_ocean"/>
+        <players-social-net:populated_with rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#7720000"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#whole_spain -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#whole_spain">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#province"/>
+        <players-social-net:has_access_to_sea rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#atlantic_ocean"/>
+        <players-social-net:has_access_to_sea rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#mediterranean_sea"/>
+        <players-social-net:populated_with rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#25710000"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#whole_turkey -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#whole_turkey">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#province"/>
+        <players-social-net:has_access_to_sea rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#black_sea"/>
+        <players-social-net:has_access_to_sea rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#mediterranean_sea"/>
+        <players-social-net:populated_with rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#15510000"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#whole_usa -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#whole_usa">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#province"/>
+        <players-social-net:has_access_to_sea rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#atlantic_ocean"/>
+        <players-social-net:has_access_to_sea rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#pacific_ocean"/>
+        <players-social-net:populated_with rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#125020000"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#whole_ussr -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#whole_ussr">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#province"/>
+        <players-social-net:has_access_to_sea rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#baltic_sea"/>
+        <players-social-net:has_access_to_sea rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#black_sea"/>
+        <players-social-net:has_access_to_sea rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#pacific_ocean"/>
+        <players-social-net:populated_with rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#161600000"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#xibeisanma -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#xibeisanma">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#country"/>
+        <players-social-net:joined_alliance rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#united_chinese_front"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#yugoslavia -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#yugoslavia">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#country"/>
+        <players-social-net:claims rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#banat"/>
+        <players-social-net:claims rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#dalmacia"/>
+        <players-social-net:controls_province rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#macedonia"/>
+        <players-social-net:controls_province rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#serbia"/>
+        <players-social-net:controls_province rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#southern_serbia"/>
+        <players-social-net:controls_province rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#vojvodina"/>
+        <players-social-net:controls_province rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#west_banat"/>
+        <players-social-net:draft_law rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#2.5"/>
+        <players-social-net:leader_of_the_country rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#prince_paul"/>
+        <players-social-net:ruling_party rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#neutral"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#yunnan -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#yunnan">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#country"/>
+        <players-social-net:joined_alliance rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#united_chinese_front"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#zhihang -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#zhihang">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#general"/>
+        <players-social-net:commander rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#chinese_army"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#zhukov -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#zhukov">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#general"/>
+        <players-social-net:commander rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#ussr_army"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#1.5 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#1.5">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#draft_rate"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#10 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#10">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#draft_rate"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#1040000 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#1040000">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#population"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#11013 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#11013">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#population"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#111768300 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#111768300">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#population"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#11470000 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#11470000">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#population"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#11640000 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#11640000">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#population"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#1190000 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#1190000">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#population"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#1200000 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#1200000">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#population"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#122530000 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#122530000">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#population"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#1230000 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#1230000">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#population"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#125020000 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#125020000">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#population"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#131890 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#131890">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#population"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#1370000 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#1370000">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#population"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#149182 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#149182">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#population"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#15010 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#15010">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#population"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#1520000 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#1520000">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#population"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#15510000 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#15510000">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#population"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#157990 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#157990">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#population"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#161600000 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#161600000">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#population"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#1620000 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#1620000">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#population"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#1680000 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#1680000">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#population"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#171290000 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#171290000">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#population"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#1910000 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#1910000">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#population"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#2.5 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#2.5">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#draft_rate"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#200240 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#200240">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#population"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#20370000 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#20370000">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#population"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#210250 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#210250">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#population"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#21390 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#21390">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#population"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#2200000 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#2200000">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#population"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#22200 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#22200">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#population"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#2290000 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#2290000">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#population"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#2350000 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#2350000">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#population"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#241910 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#241910">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#population"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#248840000 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#248840000">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#population"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#255370 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#255370">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#population"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#25710000 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#25710000">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#population"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#2730000 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#2730000">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#population"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#2800000 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#2800000">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#population"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#286760 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#286760">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#population"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#295550 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#295550">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#population"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#313130000 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#313130000">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#population"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#3380000 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#3380000">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#population"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#348380 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#348380">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#population"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#367170 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#367170">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#population"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#3750000 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#3750000">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#population"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#37810000 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#37810000">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#population"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#378460 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#378460">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#population"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#436082 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#436082">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#population"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#4460000 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#4460000">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#population"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#45028420 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#45028420">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#population"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#4750000 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#4750000">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#population"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#475170 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#475170">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#population"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#5 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#5">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#draft_rate"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#51 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#51">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#world_tension"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#534600 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#534600">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#population"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#567290 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#567290">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#population"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#586290 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#586290">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#population"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#633670 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#633670">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#population"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#64860000 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#64860000">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#population"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#7010000 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#7010000">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#population"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#7720000 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#7720000">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#population"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#82980000 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#82980000">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#population"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#839640 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#839640">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#population"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#855340 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#855340">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#population"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#88308 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#88308">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#population"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#88358 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#88358">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#population"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#908600 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#908600">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#population"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#9340000 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#9340000">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#population"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#942640 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#942640">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ivtur/ontologies/2023/8/players-social-net#population"/>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.25.2023-02-15T19:15:49Z) https://github.com/owlcs/owlapi -->
+
