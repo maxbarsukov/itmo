@@ -646,19 +646,19 @@ guarantee_independence(germany, hungary).
 % Факты о состоянии войн
 % Japanese-Chinese War
 at_offencive_war(japan, china).
-at_offencive_war(japan, sickiang).
+at_offencive_war(japan, sinkiang).
 at_offencive_war(japan, yunnan).
 at_offencive_war(japan, guangxi_clique).
 at_offencive_war(japan, communist_china).
 at_offencive_war(japan, xibeisanma).
 at_offencive_war(manchukuo, china).
-at_offencive_war(manchukuo, sickiang).
+at_offencive_war(manchukuo, sinkiang).
 at_offencive_war(manchukuo, yunnan).
 at_offencive_war(manchukuo, guangxi_clique).
 at_offencive_war(manchukuo, communist_china).
 at_offencive_war(manchukuo, xibeisanma).
 at_offencive_war(mengkukuo, china).
-at_offencive_war(mengkukuo, sickiang).
+at_offencive_war(mengkukuo, sinkiang).
 at_offencive_war(mengkukuo, yunnan).
 at_offencive_war(mengkukuo, guangxi_clique).
 at_offencive_war(mengkukuo, communist_china).
