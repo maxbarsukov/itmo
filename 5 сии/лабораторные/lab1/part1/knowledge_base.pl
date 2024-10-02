@@ -513,7 +513,6 @@ alliance(new_zeland, allies).
 alliance(british_raj, allies).
 alliance(british_malaya, allies).
 alliance(france, allies).
-alliance(uk, allies).
 
 % Факты о выходе провинций к морям
 has_access_to_sea(whole_usa, atlantic_ocean).
@@ -547,7 +546,6 @@ has_access_to_sea(dalmacia, adriatic_sea).
 has_access_to_sea(other_italy, adriatic_sea).
 has_access_to_sea(other_italy, mediterranean_sea).
 has_access_to_sea(other_italy, red_sea).
-has_access_to_sea(other_italy, mediterranean_sea).
 has_access_to_sea(japanese_china, pacific_ocean).
 has_access_to_sea(south_sakhalin, pacific_ocean).
 has_access_to_sea(kuril_islands, pacific_ocean).
@@ -631,10 +629,6 @@ non_aggression_pact(china, ussr).
 non_aggression_pact(communist_china, ussr).
 non_aggression_pact(germany, ussr).
 non_aggression_pact(ussr, germany).
-non_aggression_pact(germany, ussr).
-non_aggression_pact(ussr, germany).
-non_aggression_pact(italy, bulgaria).
-non_aggression_pact(bulgaria, italy).
 non_aggression_pact(italy, bulgaria).
 non_aggression_pact(bulgaria, italy).
 non_aggression_pact(francist_spain, portugal).
