@@ -79,14 +79,13 @@ ignore = [
     "E501",   # allow lines longer than 80 symbols (up to 120)
     "T201",   # `print` found
     "PD011",  # Breaks .values
+    "RUF001", # Breaks cyrillic strings
     "RUF002", # Docstring contains ambiguous `В` (CYRILLIC CAPITAL LETTER VE). Did you mean `B` (LATIN CAPITAL LETTER B)
     "RUF003", # Comment contains ambiguous `с` (CYRILLIC SMALL LETTER ES). Did you mean `c` (LATIN SMALL LETTER C)
     "PTH123", # `open()` should be replaced by `Path.open()`
     # to simplify code for non-Python programmers
     "PTH118", # `os.path.join()` should be replaced by `Path` with `/` operator
     "UP032",  # [*] Use f-string instead of `format` call
-
-
 ]
 unfixable = [
     "ERA001", # prohibit to "auto-fix" (=remove) commented-out code
