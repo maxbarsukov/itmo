@@ -1,0 +1,4 @@
+*.pyc linguist-generated=true
+*.pyo linguist-generated=true
+*.pyd linguist-generated=true
+poetry.lock linguist-generated=true

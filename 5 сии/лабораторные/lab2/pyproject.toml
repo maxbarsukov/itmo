@@ -1,0 +1,97 @@
+[tool.poetry]
+name = "ais-lab2"
+version = "0.1.0"
+description = "Artificial intelligence systems: laboratory work #2"
+authors = ["maxbarsukov <maximbarsukov@bk.ru>"]
+license = "GPL-3.0"
+readme = "README.md"
+packages = [{include = "*.py", from="src"}]
+
+[tool.poetry.scripts]
+main = "src.main:start"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+swiplserver = "^1.0.2"
+
+[tool.poetry.group.dev.dependencies]
+ruff = "^0.1.3"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.ruff]
+line-length = 120
+select = [
+    # A set of chosen linter rules is specified here.
+    # See https://beta.ruff.rs/docs/rules/ for more info.
+    # pyflakes (simple obvious errors)
+    "F",
+    # pycodestyle (style linter, pep8, black-compatible)
+    "E",
+    "W",
+    # pep8-naming (style linter, pep8 naming conventions)
+    "N",
+    # isort (imports sorting)
+    "I",
+    # mccabe (cyclomatic complexity analyzer to prevent overcomplicated functions)
+    "C90",
+    # pyupgrade (possible syntax upgrades checker)
+    "UP",
+    # eradicate (commented-out code finder for it to be removed)
+    "ERA",
+    # flake8-2020 (errors related to sys.version or sys.version_info, just in case)
+    "YTT",
+    # flake8-annotations (enforces presense of type hints so the codebase is fully typed)
+    # "ANN",  # too burdensome
+    # flake8-async (async-related mistakes/errors)
+    "ASYNC",
+    # flake8-builtins (checks builtin names shadowing, it's better not to)
+    "A",
+    # flake8-commas (to enforce trailing commas)
+    "COM",
+    # flake8-future-annotations (to ensure enabling modern (3.7+) postponed evaluation of type hints)
+    "FA",
+    # flake8-import-conventions (to enforce standartized import aliases like "import pandas as pd")
+    "ICN",
+    # flake8-no-pep420 (to enforce presence of __init__.py in packages)
+    "INP",
+    # flake8-print (to disallow print statements)
+    "T20",
+    # flake8-pytest-style (to improve pytest-related style consistency)
+    "PT",
+    # flake8-quotes (to enforce quotes style)
+    "Q",
+    # flake8-return (checks mistakes related to return values)
+    "RET",
+    # flake8-use-pathlib (to enforce pathlib usage instead of os.path)
+    "PTH",
+    # pandas-vet (pandas-related advices)
+    "PD",
+    # tryceratops (try/except-related advices)
+    "TRY",
+    # ruff-specific advices
+    "RUF",
+]
+ignore = [
+    "COM812", # The following rules may cause conflicts when used with the formatter: `COM812`.
+    "E501",   # allow lines longer than 80 symbols (up to 120)
+    "T201",   # `print` found
+    "PD011",  # Breaks .values
+    "RUF002", # Docstring contains ambiguous `В` (CYRILLIC CAPITAL LETTER VE). Did you mean `B` (LATIN CAPITAL LETTER B)
+    "RUF003", # Comment contains ambiguous `с` (CYRILLIC SMALL LETTER ES). Did you mean `c` (LATIN SMALL LETTER C)
+    "PTH123", # `open()` should be replaced by `Path.open()`
+    # to simplify code for non-Python programmers
+    "PTH118", # `os.path.join()` should be replaced by `Path` with `/` operator
+    "UP032",  # [*] Use f-string instead of `format` call
+
+
+]
+unfixable = [
+    "ERA001", # prohibit to "auto-fix" (=remove) commented-out code
+]
+src = ["src"]
+
+[tool.ruff.mccabe]
+max-complexity = 7

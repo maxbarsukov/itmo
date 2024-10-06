@@ -1,0 +1,12 @@
+MD007: false
+MD009: false
+MD012: false # Multiple blanks
+MD013: false # Line length
+MD022: false
+MD026: false
+MD031: false
+MD032: false
+MD033: false
+MD040: false
+MD049: false
+MD051: false # Link fragments should be valid
