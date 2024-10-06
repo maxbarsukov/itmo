@@ -1,0 +1,1 @@
+../../../lab1/part1/knowledge_base.pl
