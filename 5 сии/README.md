@@ -1,6 +1,6 @@
 # Системы искусственного интеллекта
 
-<img alt="ai-animated-anime-girl" src="https://github.com/maxbarsukov/itmo/blob/master/.docs/ai-animated.gif" height="180">
+<img alt="ai-animated-anime-girl" src="https://github.com/maxbarsukov/itmo/blob/master/.docs/ai-animated.gif" width="240">
 
 > [!TIP]
 > Parents : "If all your friends jumped into the well, will you?" \
