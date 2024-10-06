@@ -1,4 +1,4 @@
-% База знаний об игре Hearts of Iron 4
+% База знаний об игре Hearts of Iron 4 в сценарии 1939 года
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 /* Факты */
@@ -700,7 +700,7 @@ at_offencive_war(hungary, british_malaya).
 
 % Правило для вычисления общего населения страны
 total_population(Country, Total) :-
-    findall(Pop, population(Country, Pop), Populations),
+    findall(Pop, (population(Province, Pop), province_of(Country, Province)), Populations),
     sum_list(Populations, Total).
 
 % Правило для вычисления числа рекрутов в стране
@@ -762,9 +762,13 @@ current_relationship(Country1, Country2, Relationship) :-
         AdjustedBase is Base + 100;
         AdjustedBase is Base),
 
-    (puppet(Country1, Country2); puppet(Country2, Country1) ->
+    (puppet(Country1, Country2) ->
         Adjusted1Base is AdjustedBase + 150;
-        Adjusted1Base is AdjustedBase),
+        (puppet(Country2, Country1) ->
+            Adjusted1Base is AdjustedBase + 150;
+            Adjusted1Base = AdjustedBase
+        )
+    ),
 
     (guarantee_independence(Country2, Country1) ->
         Adjusted2Base is Adjusted1Base + 25;
