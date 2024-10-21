@@ -25,7 +25,7 @@
 
 ### Выполнение задания
 
-Задание выполено в Jupyter Notebook'е [`ais-lab3.ipynb`](./ais-lab3.ipynb)
+Задание выполнено в Jupyter Notebook'е [`ais-lab3.ipynb`](./ais-lab3.ipynb)
 
 ---
 
