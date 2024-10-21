@@ -1,4 +1,4 @@
-# Лабораторная работа 2
+# Лабораторная работа 2. Разработка системы поддержки принятия решения на основе базы знаний или онтологии
 
 <img alt="surprised-benisumomo" src="https://github.com/maxbarsukov/itmo/blob/master/.docs/anime-surprised-benisumomo.gif" height="180">
 

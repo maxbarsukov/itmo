@@ -21,7 +21,7 @@
 
 - [Лабораторная работа №1 (8/8)](./лабораторные/lab1/);
 - [Лабораторная работа №2 (8/8)](./лабораторные/lab2/);
-- Лабораторная работа №3 (.../13);
+- [Лабораторная работа №3 (13/13)](./лабораторные/lab3/);
 - Лабораторная работа №4 (.../13);
 - Лабораторная работа №5 (.../13);
 - Лабораторная работа №6 (.../13).
@@ -48,13 +48,14 @@
 
 | Ссылка | Описание |
 | --- | --- |
+| [Методичка по СИИ](./СИИ_Методичка.pdf) | ИСКУССТВЕННЫЙ ИНТЕЛЛЕКТ. Учебное пособие (2010), И.А. Бессмертный |
 | [https://sunnysubmarines.notion.site/AI-System](https://sunnysubmarines.notion.site/AI-System-a559a46cddc44363bdf27b77e10b7d85#e81ed3e5bc1f4131846acb4e13b1c64a) | Задание на ЛР1, 2024 |
+| [docs.google.com/spreadsheets/d/...](https://docs.google.com/spreadsheets/d/17Tfrmk77ghD1yD4cIeah7EOpCZVxJMmE-gdLYyEd1Ug/edit?gid=1446492249#gid=1446492249)| Журнал СИИ 2024 |
 | [github.com/CandyGoose/Artificial_intelligence_systems](https://github.com/CandyGoose/Artificial_intelligence_systems/) | Пример выполнения лаб + отчётов 2024 |
 
 ## Лицензия <a name="license"></a>
 
-Проект доступен с открытым исходным кодом на условиях [Лицензии GNU GPL 3](https://opensource.org/license/gpl-3-0/).
-
+Проект доступен с открытым исходным кодом на условиях [Лицензии GNU GPL 3](https://opensource.org/license/gpl-3-0/). \
 *Авторские права 2024 Max Barsukov*
 
 **Поставьте звезду :star:, если вы нашли этот проект полезным.**
