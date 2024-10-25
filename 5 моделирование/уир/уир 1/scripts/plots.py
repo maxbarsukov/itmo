@@ -1,6 +1,8 @@
 import numpy as np
+import pandas as pd
 from scipy import stats
 import matplotlib.pyplot as plt
+from statsmodels.graphics.tsaplots import plot_acf
 from math import ceil, sqrt
 
 
@@ -11,8 +13,8 @@ def read_data(filename):
 # Функции для расчета характеристик
 def calculate_statistics(data):
     mean = np.mean(data)
-    variance = np.var(data)
-    std_dev = np.std(data)
+    variance = np.var(data, ddof=1)
+    std_dev = np.std(data, ddof=1)
     coef_variation = std_dev / mean
     return mean, variance, std_dev, coef_variation
 
@@ -67,10 +69,8 @@ def plot_histogram(data):
 
 # Автокорреляционный анализ
 def autocorrelation(data, lag):
-    n = len(data)
-    mean = np.mean(data)
-    c0 = np.sum((data - mean) ** 2) / n
-    acf = [np.sum((data[:n-k] - mean) * (data[k:] - mean)) / (n - k) / c0 for k in range(1, lag + 1)]
+    dd = pd.Series(data)
+    acf = [dd.autocorr(lag=k) for k in range(1, lag + 1)]
     return np.array(acf)
 
 # Построение графика автокорреляции
@@ -83,17 +83,9 @@ def plot_autocorrelation(data, lag=10):
     plt.ylabel('Коэффициент автокорреляции')
     plt.show()
 
-def generate_erlang(alpha, k, size=1000):
-    # Генерация случайных величин по закону Эрланга
-    return np.random.gamma(k, 1/alpha, size)
-
-def generate_exponential(lmbda, size=1000):
-    # Генерация экспоненциально распределенных случайных величин
-    return np.random.exponential(1/lmbda, size)
-
 def main():
     # Чтение данных
-    data = read_data('data2.txt')
+    data = read_data('data.txt')
 
     # Исследование для выборок разных размеров
     sample_sizes = [10, 20, 50, 100, 200, 300]

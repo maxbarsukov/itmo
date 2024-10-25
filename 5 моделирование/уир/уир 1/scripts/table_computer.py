@@ -1,11 +1,11 @@
 import numpy as np
-from scipy import stats
-import matplotlib.pyplot as plt
 import pandas as pd
+import scipy.stats as stats
+import matplotlib.pyplot as plt
 
 
 data = np.loadtxt("data.txt")
-# data = np.loadtxt("data2.txt") # Generated data
+generated_data = np.loadtxt("data_generated.txt")
 
 pd.set_option('display.max_rows', 500)
 pd.set_option('display.max_columns', 500)
@@ -20,8 +20,8 @@ for n in sample_sizes:
 
     # Расчет статистических моментов
     mean = np.mean(sample)
-    variance = np.var(sample)
-    std_dev = np.std(sample)
+    variance = np.var(sample, ddof=1)
+    std_dev = np.std(sample, ddof=1)
     coeff_var = std_dev / mean  # Коэффициент вариации в процентах
 
     # Доверительные интервалы
@@ -78,12 +78,14 @@ plt.show()
 def autocorrelation(x):
     n = len(x)
     result = np.correlate(x - np.mean(x), x - np.mean(x), mode='full')
-    return result[result.size // 2:] / (np.var(x) * n)
+    return result[result.size // 2:] / (np.var(x, ddof=1) * n)
 
 autocorr_values = autocorrelation(data)
 
+print(autocorr_values[1:11])
+
 plt.figure(figsize=(12, 6))
-plt.stem(autocorr_values[:10], use_line_collection=True)
+plt.stem(autocorr_values[1:11], use_line_collection=True)
 plt.title('Автокорреляция')
 plt.xlabel('Лаг')
 plt.ylabel('Коэффициент автокорреляции')
@@ -100,7 +102,7 @@ plt.grid()
 plt.show()
 
 # Аппроксимация закона распределения
-cv = coeff_var / 100
+cv = coeff_var
 if cv < 0.1:
     distribution_name = 'Нормальное'
 elif cv < 0.5:
@@ -109,3 +111,29 @@ else:
     distribution_name = 'Гиперэкспоненциальное'
 
 print(f'Предполагаемый закон распределения: {distribution_name}')
+
+# Сравнительный анализ
+plt.figure(figsize=(12, 6))
+plt.hist(generated_data, bins=30, alpha=0.5, label='Сгенерированные данные', density=True)
+plt.hist(data, bins=30, alpha=0.5, label='Исходные данные', density=True)
+plt.title('Сравнительный анализ распределений')
+plt.xlabel('Значение')
+plt.ylabel('Плотность вероятности')
+plt.legend()
+plt.grid()
+plt.show()
+
+# Автокорреляционный анализ сгенерированной последовательности
+autocorr_generated = autocorrelation(generated_data)
+
+plt.figure(figsize=(12, 6))
+plt.stem(autocorr_generated[:20], use_line_collection=True)
+plt.title('Автокорреляция сгенерированных данных')
+plt.xlabel('Лаг')
+plt.ylabel('Коэффициент автокорреляции')
+plt.grid()
+plt.show()
+
+# Оценка корреляционной зависимости
+correlation_coefficient = np.corrcoef(data[:300], generated_data)[0, 1]
+print(f'Корреляционная зависимость между исходными и сгенерированными данными: {correlation_coefficient}')
