@@ -77,6 +77,7 @@
 | --- | --- |
 | [https://sunnysubmarines.notion.site/AI-System](https://sunnysubmarines.notion.site/AI-System-a559a46cddc44363bdf27b77e10b7d85#e81ed3e5bc1f4131846acb4e13b1c64a) | Задание на ЛР1, 2024 |
 | https://github.com/ThisAster/Artificial-Intelligence-Systems | Пример выполнения ЛР |
+| https://swish.swi-prolog.org/ | SWI Prolog online |
 | https://www.swi-prolog.org/pldoc/man?section=quickstart | Гайд по SWI Prolog |
 | https://protegeproject.github.io/protege/views/object-property-characteristics/ | Protege. Характеристики свойств объекта |
 | https://cgi.csc.liv.ac.uk/~frank/teaching/comp08/protege_tutorial.pdf | Protege туториал |

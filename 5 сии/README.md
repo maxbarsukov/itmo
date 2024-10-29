@@ -22,7 +22,7 @@
 - [Лабораторная работа №1 (8/8)](./лабораторные/lab1/);
 - [Лабораторная работа №2 (8/8)](./лабораторные/lab2/);
 - [Лабораторная работа №3 (13/13)](./лабораторные/lab3/);
-- Лабораторная работа №4 (.../13);
+- [Лабораторная работа №4 (13/13)](./лабораторные/lab4/);
 - Лабораторная работа №5 (.../13);
 - Лабораторная работа №6 (.../13).
 
@@ -48,10 +48,12 @@
 
 | Ссылка | Описание |
 | --- | --- |
-| [Методичка по СИИ](./СИИ_Методичка.pdf) | ИСКУССТВЕННЫЙ ИНТЕЛЛЕКТ. Учебное пособие (2010), И.А. Бессмертный |
-| [https://sunnysubmarines.notion.site/AI-System](https://sunnysubmarines.notion.site/AI-System-a559a46cddc44363bdf27b77e10b7d85#e81ed3e5bc1f4131846acb4e13b1c64a) | Задание на ЛР1, 2024 |
-| [docs.google.com/spreadsheets/d/...](https://docs.google.com/spreadsheets/d/17Tfrmk77ghD1yD4cIeah7EOpCZVxJMmE-gdLYyEd1Ug/edit?gid=1446492249#gid=1446492249)| Журнал СИИ 2024 |
+| [sunnysubmarines.notion.site/AI-System](https://sunnysubmarines.notion.site/AI-System-a559a46cddc44363bdf27b77e10b7d85#e81ed3e5bc1f4131846acb4e13b1c64a) | Задание на ЛР 2024 |
+| [docs.google.com/spreadsheets/d/...](https://docs.google.com/spreadsheets/d/17Tfrmk77ghD1yD4cIeah7EOpCZVxJMmE-gdLYyEd1Ug/edit?gid=1446492249#gid=1446492249) | Журнал СИИ 2024 |
 | [github.com/CandyGoose/Artificial_intelligence_systems](https://github.com/CandyGoose/Artificial_intelligence_systems/) | Пример выполнения лаб + отчётов 2024 |
+| [Методичка по СИИ](./СИИ_Методичка.pdf) | Искусственный интеллект. Учебное пособие (2010), И.А. Бессмертный |
+| [t.me/Geek_book_hub/307](https://t.me/Geek_book_hub/307) | Искусственный интеллект: современный подход. 4-е изд. 3 тома, 2021 \| Рассел Роберта С., Норвиг Питер |
+| [urait.ru/bcode/541301](https://urait.ru/bcode/541301) | Интеллектуальные системы, 2024 \| Бессмертный И. А. |
 
 ## Лицензия <a name="license"></a>
 
