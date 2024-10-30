@@ -24,19 +24,6 @@ data
 
 
 <div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -201,19 +188,6 @@ data.describe()
 
 
 <div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -379,7 +353,7 @@ data.hist(bins=100, figsize=(20, 10))
 
 
     
-![png](ais-lab4_files/ais-lab4_8_1.png)
+![png](img/ais-lab4_8_1.png)
     
 
 
@@ -451,7 +425,7 @@ plt.show()
 
 
     
-![png](ais-lab4_files/ais-lab4_16_0.png)
+![png](img/ais-lab4_16_0.png)
     
 
 
@@ -488,7 +462,7 @@ data.hist(bins=100, figsize=(20, 10))
 
 
     
-![png](ais-lab4_files/ais-lab4_20_1.png)
+![png](img/ais-lab4_20_1.png)
     
 
 
@@ -536,7 +510,7 @@ data.hist(bins=100, figsize=(20, 10))
 
 
     
-![png](ais-lab4_files/ais-lab4_25_1.png)
+![png](img/ais-lab4_25_1.png)
     
 
 
@@ -650,19 +624,6 @@ for i, k in enumerate([3, 5, 10], 1):
 
 
 <div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -740,19 +701,6 @@ for i, k in enumerate([3, 5, 10], 1):
 
 
 <div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -836,19 +784,6 @@ for i, k in enumerate([3, 5, 10], 1):
 
 
 <div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -932,7 +867,7 @@ for i, k in enumerate([3, 5, 10], 1):
 
 
     
-![png](ais-lab4_files/ais-lab4_36_6.png)
+![png](img/ais-lab4_36_6.png)
     
 
 
@@ -956,169 +891,169 @@ for i_column_name, j_column_name in combinations:
 
 
     
-![png](ais-lab4_files/ais-lab4_38_1.png)
+![png](img/ais-lab4_38_1.png)
     
 
 
 
     
-![png](ais-lab4_files/ais-lab4_38_2.png)
+![png](img/ais-lab4_38_2.png)
     
 
 
 
     
-![png](ais-lab4_files/ais-lab4_38_3.png)
+![png](img/ais-lab4_38_3.png)
     
 
 
 
     
-![png](ais-lab4_files/ais-lab4_38_4.png)
+![png](img/ais-lab4_38_4.png)
     
 
 
 
     
-![png](ais-lab4_files/ais-lab4_38_5.png)
+![png](img/ais-lab4_38_5.png)
     
 
 
 
     
-![png](ais-lab4_files/ais-lab4_38_6.png)
+![png](img/ais-lab4_38_6.png)
     
 
 
 
     
-![png](ais-lab4_files/ais-lab4_38_7.png)
+![png](img/ais-lab4_38_7.png)
     
 
 
 
     
-![png](ais-lab4_files/ais-lab4_38_8.png)
+![png](img/ais-lab4_38_8.png)
     
 
 
 
     
-![png](ais-lab4_files/ais-lab4_38_9.png)
+![png](img/ais-lab4_38_9.png)
     
 
 
 
     
-![png](ais-lab4_files/ais-lab4_38_10.png)
+![png](img/ais-lab4_38_10.png)
     
 
 
 
     
-![png](ais-lab4_files/ais-lab4_38_11.png)
+![png](img/ais-lab4_38_11.png)
     
 
 
 
     
-![png](ais-lab4_files/ais-lab4_38_12.png)
+![png](img/ais-lab4_38_12.png)
     
 
 
 
     
-![png](ais-lab4_files/ais-lab4_38_13.png)
+![png](img/ais-lab4_38_13.png)
     
 
 
 
     
-![png](ais-lab4_files/ais-lab4_38_14.png)
+![png](img/ais-lab4_38_14.png)
     
 
 
 
     
-![png](ais-lab4_files/ais-lab4_38_15.png)
+![png](img/ais-lab4_38_15.png)
     
 
 
 
     
-![png](ais-lab4_files/ais-lab4_38_16.png)
+![png](img/ais-lab4_38_16.png)
     
 
 
 
     
-![png](ais-lab4_files/ais-lab4_38_17.png)
+![png](img/ais-lab4_38_17.png)
     
 
 
 
     
-![png](ais-lab4_files/ais-lab4_38_18.png)
+![png](img/ais-lab4_38_18.png)
     
 
 
 
     
-![png](ais-lab4_files/ais-lab4_38_19.png)
+![png](img/ais-lab4_38_19.png)
     
 
 
 
     
-![png](ais-lab4_files/ais-lab4_38_20.png)
+![png](img/ais-lab4_38_20.png)
     
 
 
 
     
-![png](ais-lab4_files/ais-lab4_38_21.png)
+![png](img/ais-lab4_38_21.png)
     
 
 
 
     
-![png](ais-lab4_files/ais-lab4_38_22.png)
+![png](img/ais-lab4_38_22.png)
     
 
 
 
     
-![png](ais-lab4_files/ais-lab4_38_23.png)
+![png](img/ais-lab4_38_23.png)
     
 
 
 
     
-![png](ais-lab4_files/ais-lab4_38_24.png)
+![png](img/ais-lab4_38_24.png)
     
 
 
 
     
-![png](ais-lab4_files/ais-lab4_38_25.png)
+![png](img/ais-lab4_38_25.png)
     
 
 
 
     
-![png](ais-lab4_files/ais-lab4_38_26.png)
+![png](img/ais-lab4_38_26.png)
     
 
 
 
     
-![png](ais-lab4_files/ais-lab4_38_27.png)
+![png](img/ais-lab4_38_27.png)
     
 
 
 
     
-![png](ais-lab4_files/ais-lab4_38_28.png)
+![png](img/ais-lab4_38_28.png)
     
 
 
@@ -1178,7 +1113,7 @@ for i, k in enumerate([3, 5, 10], 1):
 
 
     
-![png](ais-lab4_files/ais-lab4_40_1.png)
+![png](img/ais-lab4_40_1.png)
     
 
 
@@ -1215,7 +1150,7 @@ for k in [3, 5, 10]:
 
 
     
-![png](ais-lab4_files/ais-lab4_41_1.png)
+![png](img/ais-lab4_41_1.png)
     
 
 
@@ -1224,7 +1159,7 @@ for k in [3, 5, 10]:
 
 
     
-![png](ais-lab4_files/ais-lab4_41_3.png)
+![png](img/ais-lab4_41_3.png)
     
 
 
@@ -1233,6 +1168,6 @@ for k in [3, 5, 10]:
 
 
     
-![png](ais-lab4_files/ais-lab4_41_5.png)
+![png](img/ais-lab4_41_5.png)
     
 
