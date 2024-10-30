@@ -33,7 +33,7 @@
 
 | Ссылка | Описание |
 | --- | --- |
-| [github.com/CandyGoose/AIS/lab4](https://github.com/CandyGoose/Artificial_intelligence_systems/blob/main/lab3/lab3.ipynb) | Пример выполнения ЛР 4, вариант `wines` |
+| [github.com/CandyGoose/AIS/lab4](https://github.com/CandyGoose/Artificial_intelligence_systems/blob/main/lab4/lab4.ipynb) | Пример выполнения ЛР 4, вариант `wines` |
 | [ru.wikipedia.org/wiki/Метод_k_ближайших_соседей](https://ru.wikipedia.org/wiki/%D0%9C%D0%B5%D1%82%D0%BE%D0%B4_k_%D0%B1%D0%BB%D0%B8%D0%B6%D0%B0%D0%B9%D1%88%D0%B8%D1%85_%D1%81%D0%BE%D1%81%D0%B5%D0%B4%D0%B5%D0%B9) | kNN на wiki |
 | [education.yandex.ru/handbook/ml/article/metricheskiye-metody](https://education.yandex.ru/handbook/ml/article/metricheskiye-metody) | Метрические методы и kNN |
 | [habr.com/ru/articles/680004/](https://habr.com/ru/articles/680004/) | kNN -- реализация с нуля на Python |
