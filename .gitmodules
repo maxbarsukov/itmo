@@ -28,3 +28,9 @@
 [submodule "5 фп/лабораторные/lab1"]
 	path = 5 фп/лабораторные/lab1
 	url = https://github.com/maxbarsukov-itmo/functional-programming-1
+[submodule "5 фп/лабораторные/lab2"]
+	path = 5 фп/лабораторные/lab2
+	url = https://github.com/maxbarsukov-itmo/functional-programming-2
+[submodule "5 фп/лабораторные/lab3"]
+	path = 5 фп/лабораторные/lab3
+	url = https://github.com/maxbarsukov-itmo/functional-programming-3
