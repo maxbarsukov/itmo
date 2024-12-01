@@ -31,7 +31,7 @@
 | Ссылка | Описание |
 | --- | --- |
 | [sunnysubmarines.notion.site/decision-trees](https://sunnysubmarines.notion.site/1-4ac65285f2464ab6964367456fd0206a) | Деревья решений. Теоретическая часть (1) |
-| [github.com/CandyGoose/AIS/lab4](https://github.com/CandyGoose/Artificial_intelligence_systems/blob/main/lab5/lab5.ipynb) | Пример выполнения ЛР 5, вариант `mushroom` |
+| [github.com/CandyGoose/AIS/lab5](https://github.com/CandyGoose/Artificial_intelligence_systems/blob/main/lab5/lab5.ipynb) | Пример выполнения ЛР 5, вариант `mushroom` |
 | [https://ru.wikipedia.org/wiki/Дерево_решений](https://ru.wikipedia.org/wiki/%D0%94%D0%B5%D1%80%D0%B5%D0%B2%D0%BE_%D1%80%D0%B5%D1%88%D0%B5%D0%BD%D0%B8%D0%B9) | Дерево решений |
 | [habr.com/ru/articles/801515](https://habr.com/ru/articles/801515/) | Дерево решений (CART). От теоретических основ до продвинутых техник и реализации с нуля на Python |
 | [loginom.ru/blog/classification-quality](https://loginom.ru/blog/classification-quality) | **Метрики качества моделей бинарной классификации** |

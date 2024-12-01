@@ -43,6 +43,7 @@
 
 | Ссылка | Описание |
 | --- | --- |
+| [github.com/CandyGoose/AIS/lab6](https://github.com/CandyGoose/Artificial_intelligence_systems/blob/main/lab6/lab6.ipynb)| Пример выполнения ЛР 6, вариант `diabetes` |
 | [www.dmitrymakarov.ru/opt/logistic-regression-05/](https://www.dmitrymakarov.ru/opt/logistic-regression-05/) | Логистическая регрессия |
 | [education.yandex.ru/handbook/data-analysis/article/logisticheskaya-regressiya](https://education.yandex.ru/handbook/data-analysis/article/logisticheskaya-regressiya) | Логистическая регрессия |
 | [habr.com/ru/articles/428794/](https://habr.com/ru/articles/428794/) | Обзор основных методов математической оптимизации для задач с ограничениями |
