@@ -2,6 +2,9 @@
 
 <img alt="lucky-star-2" src="https://github.com/maxbarsukov/itmo/blob/master/.docs/lucky-star-2.gif" height="200">
 
+> [!TIP]
+> Выбранные паттерны: Facade (GoF), Visitor (GoF), Controller (GRASP), Pure Fabrication (GRASP)
+
 |.pdf|.docx|
 |-|-|
 | [report](./docs/report.pdf) | [report](./docs/report.docx) |
