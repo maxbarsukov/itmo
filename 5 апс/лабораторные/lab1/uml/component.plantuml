@@ -1,0 +1,136 @@
+@startuml YouTube Component Diagram
+
+top to bottom direction
+skinparam linetype ortho
+
+package "Infrastructure" {
+  package "Hosting" {
+    component Linux
+    component Apache
+  }
+  package "Content Delivery" {
+    component "Google Modular Data center"
+    component GGC
+    package "CDN Services" {
+      component CDN
+      component "Edge Servers"
+      component "Content Replication"
+    }
+  }
+}
+
+package "Networking" {
+  component HTTP
+  component HTTPS
+  component TCP_IP as "TCP/IP"
+  package "Security" {
+    component "Firewall"
+    component "SSL Certificate Manager"
+  }
+}
+
+package "Backend" {
+  package "Core Services" {
+    component "Python Services" as Python
+    package "Database" {
+      component MySQL
+      component Vitess
+      component "Google BigTable"
+    }
+  }
+  package "Templates and Rendering" {
+    component Spitfire
+    component "Template Cache"
+  }
+  package "Abuse Detection" {
+    component Rcat
+    component "Spam Detector"
+    component "Behavioral Analysis"
+  }
+  package "Analytics Backend" {
+    component "Google Analytics Processor"
+    component "Data Aggregator"
+  }
+}
+
+package "External Services" {
+  package "Google APIs" {
+    component "GoogleAuth API"
+    component "GooglePayments API"
+    component "Google Analytics API"
+  }
+  package "Third-Party Integrations" {
+    component "OAuth Providers"
+    component "Social Media APIs"
+    component "Ad Services"
+  }
+}
+
+package "Frontend" {
+  package "Rendering" {
+    component HTML
+    component CSS
+    component JavaScript
+  }
+  package "Client Frameworks" {
+    component spfjs
+    component Cobalt
+  }
+  package "Analytics" {
+    component "Google Analytics JS"
+    component "Event Tracker"
+  }
+}
+
+
+node "Server Cluster" {
+  [Server]
+}
+
+
+node "User Device" {
+  [Browser]
+}
+
+
+[Browser] --> HTML : Render Content
+[Browser] --> CSS : Style Pages
+[Browser] --> JavaScript : Enable Interactivity
+[Browser] --> spfjs : Navigation Updates
+[Browser] --> Cobalt : Video Playback
+[Browser] --> "Google Analytics JS" : User Data Collection
+[Browser] --> "Event Tracker" : Event Logging
+
+Linux --> Apache : Web Hosting
+Apache --> HTTP : Serve Requests
+HTTP --> HTTPS : Secure Communication
+
+"Google Modular Data center" --> GGC : Content Caching
+GGC --> "CDN Services" : Global Distribution
+"CDN Services" --> CDN : Deliver Content
+CDN --> "Edge Servers" : Serve Users
+"Edge Servers" --> "Content Replication" : Sync Content
+
+[Server] --> Python : Business Logic
+[Server] --> MySQL : Data Storage
+[Server] --> Vitess : DB Scalability
+[Server] --> "Google BigTable" : Advanced Storage
+[Server] --> Spitfire : Template Rendering
+[Server] --> "Template Cache" : Cached Templates
+[Server] --> Rcat : Abuse Detection
+[Server] --> "Spam Detector" : Spam Filtering
+[Server] --> "Behavioral Analysis" : Anomaly Detection
+[Server] --> "Google Analytics Processor" : Process Analytics
+[Server] --> "Data Aggregator" : Aggregate Data
+
+[Browser] --> HTTP : Send Requests
+HTTP --> [Server] : Receive Requests
+
+[Server] --> "GoogleAuth API" : Authenticate Users
+[Server] --> "GooglePayments API" : Payment Processing
+[Server] --> "Google Analytics API" : User Tracking
+[Server] --> "OAuth Providers" : Authenticate via OAuth
+[Server] --> "Social Media APIs" : Social Features
+[Server] --> "Ad Services" : Ad Delivery
+
+@enduml
