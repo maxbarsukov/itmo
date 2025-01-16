@@ -40,4 +40,4 @@
 | --- | --- |
 | https://github.com/owl-from-hogvarts/OPD-guide | Гайд по БЭВМ |
 | https://github.com/Zerumi/OPD-guide-RU- | Перевод гайда на русский |
-| [laser-seat-280.notion.site/...](https://laser-seat-280.notion.site/5c785e34e46e404abe56c8632b546ab5) | Первый семестр, расписанные билеты зачёта |
+| [laser-seat-280.notion.site/...](https://laser-seat-280.notion.site/5c785e34e46e404abe56c8632b546ab5) | Расписанные билеты зачёта и экзамена |
