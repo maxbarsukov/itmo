@@ -34,3 +34,9 @@
 [submodule "5 фп/лабораторные/lab3"]
 	path = 5 фп/лабораторные/lab3
 	url = https://github.com/maxbarsukov-itmo/functional-programming-3
+[submodule "5 информационные системы/курсовая"]
+	path = 5 информационные системы/курсовая
+	url = https://github.com/maxbarsukov/MyFilmList
+[submodule "5 фп/лабораторные/lab4"]
+	path = 5 фп/лабораторные/lab4
+	url = https://github.com/maxbarsukov/radish-db
