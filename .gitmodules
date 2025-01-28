@@ -40,3 +40,6 @@
 [submodule "5 фп/лабораторные/lab4"]
 	path = 5 фп/лабораторные/lab4
 	url = https://github.com/maxbarsukov/radish-db
+[submodule "5 встроенные системы/проект"]
+	path = 5 встроенные системы/проект
+	url = https://github.com/maxbarsukov/sleepy
