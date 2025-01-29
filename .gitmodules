@@ -43,3 +43,15 @@
 [submodule "5 встроенные системы/проект"]
 	path = 5 встроенные системы/проект
 	url = https://github.com/maxbarsukov/sleepy
+[submodule "5 информационные системы/лабораторные/lab1"]
+	path = 5 информационные системы/лабораторные/lab1
+	url = https://github.com/maxbarsukov-itmo/information-systems-labs
+	branch = lab-1
+[submodule "5 информационные системы/лабораторные/lab2"]
+	path = 5 информационные системы/лабораторные/lab2
+	url = https://github.com/maxbarsukov-itmo/information-systems-labs
+	branch = lab-2
+[submodule "5 информационные системы/лабораторные/lab3"]
+	path = 5 информационные системы/лабораторные/lab3
+	url = https://github.com/maxbarsukov-itmo/information-systems-labs
+	branch = lab-3
