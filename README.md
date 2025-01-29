@@ -117,17 +117,25 @@
 
 ## Полезные ссылки <a name="links"></a>
 
+[**Сайт кафедры Вычислительной техники с заданиями к работам**](https://se.ifmo.ru)
+
 | Ссылка | Описание |
 | --- | --- |
-| https://github.com/Imtjl/1st-year-guide <br> https://yank0vy3rdna.github.io/itmo-faq/ | Гайд для первокурсников и абитуриентов |
-| https://t.me/ITMOhomework | Примеры готовых лабораторных работ |
-| https://205826.github.io | Полезные ссылки |
-| https://github.com/Imtjl <br> https://github.com/EgorMIt/ITMO <br> https://github.com/RedGry/ITMO <br> https://github.com/RomanVassilchenko/ITMOProjects <br> https://github.com/band-of-four/cheatsheets | Много готовых лабораторных работ, ДЗ и гайдов |
-| https://picloud.pw/about/ | Некоторые ДЗ и лабораторные до 2020 года |
-| https://rosroble.github.io/ | Полезная информация по лабораторным |
-| https://telegra.ph/Poleznye-ssylki-dlya-pervokursnikov-VT-08-26 | Другие полезные ссылки |
-
-[**Сайт кафедры Вычислительной техники с заданиями к работам**](https://se.ifmo.ru)
+| [yank0vy3rdna.github.io/itmo-faq/](https://yank0vy3rdna.github.io/itmo-faq/) | Гайд для первокурсников и абитуриентов |
+| [github.com/Imtjl/1st-year-guide](https://github.com/Imtjl/1st-year-guide) | Гайд для первого курса |
+| [github.com/Imtjl/2nd-year-guide](https://github.com/Imtjl/2nd-year-guide) | Гайд для второго курса |
+| [docs.google.com/spreadsheets/...](https://docs.google.com/spreadsheets/d/1TFTOKxqml1agwgo6Vp0Ql6Rgj9f9ciyOqQPF8VvUkJQ/edit?gid=591156939#gid=591156939) | Таблица с отзывами на лекторов / практиков |
+| [Imtjl](https://github.com/Imtjl), [EgorMIt/ITMO](https://github.com/EgorMIt/ITMO), [RedGry/ITMO](https://github.com/RedGry/ITMO), [RomanVassilchenko/ITMOProjects](https://github.com/RomanVassilchenko/ITMOProjects), [band-of-four/cheatsheets](https://github.com/band-of-four/cheatsheets) | Популярные репозитории с работами |
+| [Zerumi-ITMO-Related](https://github.com/Zerumi-ITMO-Related), [XVIIStarPlatinum/ITMO](https://github.com/XVIIStarPlatinum/ITMO), [Kuchizu/ItmoLabs](https://github.com/Kuchizu/ItmoLabs) | Репозитории студентов (поступили в 2022) |
+|  [petrovviacheslav/myitmo](https://github.com/petrovviacheslav/myitmo), [bilyardvmetro/ITMO-System-Application-Software](https://github.com/bilyardvmetro/ITMO-System-Application-Software), [Gastozavr/itmo](https://github.com/Gastozavr/itmo), [deadxraver](https://github.com/deadxraver/deadxraver/blob/87c813436568571e5eabef93752cdec5a6b5d9ce/README.md) | Репозитории студентов (поступили в 2023) |
+| [AstroSoup](https://github.com/AstroSoup/ITMO.STUDY) | Репозитории студентов (поступили в 2024) |
+| [MakeCheerfulUpload](https://github.com/orgs/MakeCheerfulUpload/repositories) | Сборник работ 1 сема |
+| [205826.github.io](https://205826.github.io) | Полезные ссылки для первого курса |
+| [picloud.pw](https://picloud.pw/about/) | Хранилище работ до 2020 года |
+| [rosroble.github.io](https://rosroble.github.io/) | Конспекты к лабораторным |
+| [t.me/ITMOhomework](https://t.me/ITMOhomework) | Примеры готовых лабораторных работ |
+| [t.me/vt_itmo_bot](https://t.me/vt_itmo_bot) | Бот содержит материалы многих рубежек/тестов + даёт ссылки на нужные репозитории |
+| [Полезные ссылки для первокурсников ВТ, 2022](https://telegra.ph/Poleznye-ssylki-dlya-pervokursnikov-VT-08-26) | Другие полезные ссылки |
 
 ---
 
