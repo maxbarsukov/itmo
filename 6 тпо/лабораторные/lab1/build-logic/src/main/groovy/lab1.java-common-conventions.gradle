@@ -1,0 +1,30 @@
+plugins {
+  // Apply the java Plugin to add support for Java.
+  id 'java'
+}
+
+repositories {
+  // Use Maven Central for resolving dependencies.
+  mavenCentral()
+}
+
+dependencies {
+  constraints {
+    implementation 'org.apache.commons:commons-text:1.10.0'
+  }
+}
+
+testing {
+  suites {
+    test {
+      // Use JUnit Jupiter test framework
+      useJUnitJupiter('5.9.3')
+    }
+  }
+}
+
+java {
+  toolchain {
+    languageVersion = JavaLanguageVersion.of(23)
+  }
+}

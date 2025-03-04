@@ -1,0 +1,4 @@
+plugins {
+  id 'lab1.java-common-conventions'
+  id 'application'
+}

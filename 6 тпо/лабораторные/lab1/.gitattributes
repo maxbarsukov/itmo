@@ -1,0 +1,55 @@
+# See this article for reference: https://help.github.com/articles/dealing-with-line-endings/
+# Refreshing repo after line ending change:
+# https://help.github.com/articles/dealing-with-line-endings/#refreshing-a-repository-after-changing-line-endings
+
+# Handle line endings automatically for files detected as text
+# and leave all files detected as binary untouched.
+* text=auto
+
+# Mark the database schema as having been generated.
+gradle/wrapper/gradle-wrapper.jar linguist-generated
+gradle/wrapper/gradle-wrapper.properties linguist-generated
+
+# Mark any vendored files as having been vendored.
+vendor/* linguist-vendored
+
+#
+# The above will handle all files NOT found below
+#
+# These files are text and should be normalized (Convert crlf => lf)
+# Use lf as eol for these files
+.editorconfig   text    eol=lf
+.gitignore      text    eol=lf
+*.css           text    eol=lf
+*.df            text    eol=lf
+*.htm           text    eol=lf
+*.html          text    eol=lf
+*.java          text    eol=lf
+*.js            text    eol=lf
+*.json          text    eol=lf
+*.jsp           text    eol=lf
+*.jspf          text    eol=lf
+*.md            text    eol=lf
+*.properties    text    eol=lf
+*.scss          text    eol=lf
+*.sh            text    eol=lf
+*.tld           text    eol=lf
+*.ts            text    eol=lf
+*.txt           text    eol=lf
+*.xml           text    eol=lf
+/gradlew        text eol=lf
+
+# These files are binary and should be left untouched
+# (binary is a macro for -text -diff)
+*.class         binary
+*.dll           binary
+*.ear           binary
+*.gif           binary
+*.ico           binary
+*.jar           binary
+*.jpg           binary
+*.jpeg          binary
+*.png           binary
+*.so            binary
+*.war           binary
+*.bat           text eol=crlf
