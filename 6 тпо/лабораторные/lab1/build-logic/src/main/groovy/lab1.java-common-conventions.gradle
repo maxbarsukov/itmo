@@ -1,6 +1,9 @@
 plugins {
   // Apply the java Plugin to add support for Java.
   id 'java'
+
+  // JaCoCo for Code Coverage
+  id 'jacoco'
 }
 
 repositories {
@@ -12,6 +15,16 @@ dependencies {
   constraints {
     implementation 'org.apache.commons:commons-text:1.10.0'
   }
+}
+
+test {
+  // report is always generated after tests run
+  finalizedBy jacocoTestReport
+}
+
+jacocoTestReport {
+  // tests are required to run before generating the report
+  dependsOn test
 }
 
 testing {
