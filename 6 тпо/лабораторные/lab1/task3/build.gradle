@@ -1,0 +1,7 @@
+plugins {
+  id 'lab1.java-application-conventions'
+}
+
+application {
+  mainClass = 'lab1.task3.App'
+}
