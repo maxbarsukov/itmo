@@ -1,6 +1,6 @@
 # Тестирование программного обеспечения
 
-<img alt="bocchi-the-rock-ryo-yamada" src="https://github.com/maxbarsukov/itmo/blob/master/.docs/bocchi-the-rock-ryo-yamada.gif" width="300">
+<img alt="bocchi-the-rock-ryo-yamada" src="https://github.com/maxbarsukov/itmo/blob/master/.docs/bocchi-the-rock-ryo-yamada.gif" height="320">
 
 > [!TIP]
 > A QA engineer walks into a bar. Orders a beer. Orders 0 beers. Orders 999999999 beers. Orders a lizard. Orders -1 beers. Orders a ueicbksjdhd. \
