@@ -1,0 +1,11 @@
+plugins {
+  id 'lab1.java-application-conventions'
+}
+
+dependencies {
+  implementation 'org.apache.commons:commons-text'
+}
+
+application {
+  mainClass = 'lab1.task2.App'
+}
