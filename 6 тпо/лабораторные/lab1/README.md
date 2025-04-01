@@ -47,6 +47,7 @@
 | [github.com/RedGry/ITMO/TPO/ТПО 1 - Подготовка.pdf](https://github.com/RedGry/ITMO/blob/master/TPO/docs/%D0%A2%D0%9F%D0%9E%201%20-%20%20%D0%9F%D0%BE%D0%B4%D0%B3%D0%BE%D1%82%D0%BE%D0%B2%D0%BA%D0%B0.pdf) | Подготовка к защите ЛР 1                                                  |
 | [github.com/band-of-four/cheatsheets/testing/lab1.md](https://github.com/band-of-four/cheatsheets/blob/master/testing/lab1.md)                                                                            | Ответы на вопросы с [se.ifmo.ru](https://se.ifmo.ru/courses/testing#labs) |
 | [youtu.be/4gAvA-8BzS0](https://youtu.be/4gAvA-8BzS0)                                                                                                                                                      | Первая лекция ТПО                                                         |
+| [habr.com/ru/articles/761318/](https://habr.com/ru/companies/otus/articles/761318/) | Как понять, какой объем тестирования достаточен? |
 | [baeldung.com/parameterized-tests-junit-5](https://www.baeldung.com/parameterized-tests-junit-5)                                                                                                          | JUnit 5                                                                   |
 | [baeldung.com/java-unit-testing-best-practices](https://www.baeldung.com/java-unit-testing-best-practices)                                                                                                | Best Practices for Unit Testing in Java                                   |
 
