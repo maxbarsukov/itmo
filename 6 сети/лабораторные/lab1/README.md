@@ -55,7 +55,7 @@
 | --- | --- |
 | [netemul.sourceforge.net/help/ru/](https://netemul.sourceforge.net/help/ru/) | Руководство пользователя Netemul |
 | [4_Рекомендации по работе с NetEmul-25.pdf](../../4_Рекомендации%20по%20работе%20с%20NetEmul-25.pdf) | Рекомендации по работе с программой NetEmul |
-| [en.wikipedia.org/wiki/Metrics_(networking](https://en.wikipedia.org/wiki/Metrics_(networking)) | Metrics (networking) |
+| [en.wikipedia.org/wiki/Metrics_(networking)](https://en.wikipedia.org/wiki/Metrics_(networking)) | Metrics (networking) |
 
 ## Лицензия <a name="license"></a>
 
