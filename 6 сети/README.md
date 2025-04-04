@@ -49,7 +49,7 @@
 | [lms.itmo.ru/course/view.php?id=415](https://lms.itmo.ru/course/view.php?id=415) | Материалы на Moodle |
 | [youtube.com/playlist?list=PLhNob...](https://www.youtube.com/playlist?list=PLhNobRI2f0wZHhJUDU9DtDZLBvOhhbFFJ) | Запись всех лекций 2025 от [@XVIIStarPlatinum](https://github.com/XVIIStarPlatinum/) |
 | [drive.google.com/drive/folders/19gb006...](https://drive.google.com/drive/folders/19gb006cJawjIdZ4iqjlUGw3mJ0cBB5x_) | Материалы на Google Drive |
-| [github.com/RedGry/ITMO/Computer networks](https://github.com/RedGry/ITMO/tree/master/Computer%20networks) | ЛР и тесты от [@RedGry](github.com/RedGry) |
+| [github.com/RedGry/ITMO/Computer networks](https://github.com/RedGry/ITMO/tree/master/Computer%20networks) | ЛР и тесты от [@RedGry](https://github.com/RedGry) |
 | [docs.google.com/spreadsheets/d/...](https://docs.google.com/spreadsheets/d/1gvE-7HjyebpUxW-hAutBJp-O35Hx4Lpze5-HWEaPL58/edit?gid=1930046114#gid=1930046114) | Журнал КС-3315 2025 |
 | [netemul.sourceforge.net/help/ru/](https://netemul.sourceforge.net/help/ru/) | Руководство пользователя NetEmul |
 
