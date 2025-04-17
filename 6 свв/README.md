@@ -2,8 +2,6 @@
 
 <img alt="urusei-yatsura" src="https://github.com/maxbarsukov/itmo/blob/master/.docs/urusei-yatsura.gif" height="350">
 
----
-
 **Лектор:** [Быковский Сергей Вячеславович](https://my.itmo.ru/persons/142291) \
 **Практик:** [Табунщик Сергей Михайлович](https://my.itmo.ru/persons/242548)
 
