@@ -2,8 +2,7 @@
 
 <img alt="anime-computer-girl" src="https://github.com/maxbarsukov/itmo/blob/master/.docs/anime-computer-gurl.gif" height="200">
 
-**Лектор:** [Малышева Татьяна Алексеевна](https://my.itmo.ru/persons/165275)
-
+**Лектор:** [Малышева Татьяна Алексеевна](https://my.itmo.ru/persons/165275) \
 **Практик:** [Малышева Татьяна Алексеевна](https://my.itmo.ru/persons/165275)
 
 Вариант: **2**
@@ -28,10 +27,22 @@
 - [Лабораторная работа №3](./лабораторные/lab3) (100/100) `Python`
 - [Лабораторная работа №4](./лабораторные/lab4) (100/100) `Python`
 - [Лабораторная работа №5](./лабораторные/lab5) (100/100) `Python`
-- [Лабораторная работа №6](./лабораторные/lab6) (?/100) `Python`
+- [Лабораторная работа №6](./лабораторные/lab6) (100/100) `Python`
+
+---
 
 ## Полезные ссылки
 
 | Ссылка | Описание |
 | --- | --- |
-| https://books.ifmo.ru/file/pdf/3229.pdf | Лабораторный практикум по вычислительной математике: учебно-методическое пособие. |
+| [books.ifmo.ru/file/pdf/3229.pdf](https://books.ifmo.ru/file/pdf/3229.pdf) | Лабораторный практикум по вычислительной математике: учебно-методическое пособие. |
+| [https://github.com/MakeCheerfulInstall/Computational-Math-2024](github.com/MakeCheerfulInstall/Computational-Math-2024) | Сборник работ по вычислительной математике 2024 (*удалено*) |
+| [github.com/MakeCheerfulInstall/Computational-Math-2025](https://github.com/MakeCheerfulInstall/Computational-Math-2025) | Сборник работ по вычислительной математике 2025 |
+
+## Лицензия
+
+Проект доступен с открытым исходным кодом на условиях [Лицензии GNU GPL 3](https://opensource.org/license/gpl-3-0/).
+
+*Авторские права 2024 Max Barsukov*
+
+**Поставьте звезду :star:, если вы нашли этот проект полезным.**
