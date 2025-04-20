@@ -36,7 +36,7 @@
 | Ссылка | Описание |
 | --- | --- |
 | [books.ifmo.ru/file/pdf/3229.pdf](https://books.ifmo.ru/file/pdf/3229.pdf) | Лабораторный практикум по вычислительной математике: учебно-методическое пособие. |
-| [https://github.com/MakeCheerfulInstall/Computational-Math-2024](github.com/MakeCheerfulInstall/Computational-Math-2024) | Сборник работ по вычислительной математике 2024 (*удалено*) |
+| [github.com/MakeCheerfulInstall/Computational-Math-2024](github.com/MakeCheerfulInstall/Computational-Math-2024) | Сборник работ по вычислительной математике 2024 (*удалено*) |
 | [github.com/MakeCheerfulInstall/Computational-Math-2025](https://github.com/MakeCheerfulInstall/Computational-Math-2025) | Сборник работ по вычислительной математике 2025 |
 
 ## Лицензия
