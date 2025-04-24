@@ -99,7 +99,7 @@ void
 get_num_counters()
 {
   struct sbiret ret = sbi_call(0, 0, 0, 0, 0, 0, SBI_EXT_CTR_NUM, SBI_EXT_PMU);
-  printf("Число счётчиков: %d\n", ret.value);
+  printf("\nЧисло счётчиков: %d\n", ret.value);
 }
 
 void
@@ -123,12 +123,12 @@ get_counter_details()
   int width = (counter_info >> 12) & 0x3F;
   int csr = counter_info & 0xFFF;
 
-  printf("%4s * Тип: %s", "", type ? "Прошивка\n" : "Аппаратура\n");
+  printf("%4s* Тип: %s", "", type ? "Прошивка\n" : "Аппаратура\n");
 
   if(!type)
   {
     printf("%4s* CSR: %d\n", "", csr);
-    printf("%4s* Ширина: %d биты\n", "", width + 1);
+    printf("%4s* Ширина: %d бит\n", "", width + 1);
   }
   else
   {
@@ -152,10 +152,10 @@ menu()
   while(1)
   {
     printf("\nМеню OpenSBI:\n");
-    printf("%4s", "1. Get SBI specification version\n");
-    printf("%4s", "2. Get number of counters\n");
-    printf("%4s", "3. Get details of a counter\n");
-    printf("%4s", "4. System shutdown\n");
+    printf("%2s* 1. Get SBI specification version\n", "");
+    printf("%2s* 2. Get number of counters\n", "");
+    printf("%2s* 3. Get details of a counter\n", "");
+    printf("%2s* 4. System shutdown\n", "");
     printf("Введите опцию: ");
 
     char input[32];
@@ -179,7 +179,7 @@ menu()
         printf("\nТакой опции нет. Попробуйте снова.\n");
     }
 
-    printf("---------------------\n");
+    printf("\n---------------------");
   }
 }
 
