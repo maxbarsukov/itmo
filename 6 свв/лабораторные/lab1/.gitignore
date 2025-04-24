@@ -1,0 +1,6 @@
+# Building
+*.elf
+*.map
+
+# IDEs
+.vscode/
