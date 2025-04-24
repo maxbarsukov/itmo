@@ -1,4 +1,5 @@
 #include "io.h"
+#include "common.h"
 
 void putchar(char ch);
 
@@ -150,7 +151,7 @@ printf(const char *fmt, ...)
                   putchar(zero_pad ? '0' : ' ');
           }
 
-          print_string(buffer);
+          puts(buffer);
 
           if (width > len && left_align)
           {

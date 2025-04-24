@@ -17,7 +17,7 @@ reverse(char *s)
 {
   if (!s || !*s)
   {
-    return s;
+    return;
   }
 
   int i, j;
