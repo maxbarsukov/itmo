@@ -74,6 +74,11 @@
 
 ## Полезные ссылки
 
+> [!TIP]
+> Для вариантов с этапом 4 *«Восстановление с использованием архивных WAL файлов»*:
+> - Если на момент восстановления вы получаете ошибки, связанные с `.history` файлами (e.g. `00000002.history: No such file or directory`), то скорее всего вы сломали себе `timeline` – это может произойти, если вы, например, начинаете выполнять этап 4, используя дамп с другого узла. Чтобы нормально выполнить этап 4, вам понадобится чистая БД из ЛР2;
+> - Для PITR окажется недостаточно только wal-архива, понадобится `pg_basebackup`. Подробнее см. в [scripts/task4/04-recovery.sh](./scripts/task4/04-recovery.sh).
+
 | Ссылка | Описание |
 | --- | --- |
 | [postgresql.org/docs/current/backup.html](https://www.postgresql.org/docs/current/backup.html) <br> [postgrespro.ru/docs/postgresql/current/backup](https://postgrespro.ru/docs/postgresql/current/backup) | Резервное копирование и восстановление |
