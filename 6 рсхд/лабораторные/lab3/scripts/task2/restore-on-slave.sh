@@ -4,7 +4,7 @@ export PGDATA=$HOME/ubi26
 export PGWAL=$PGDATA/pg_wal
 export PGLOCALE=ru_RU.UTF-8
 export PGENCODE=UTF8
-export PGUSERNAME=postgres2
+export PGUSERNAME=postgres1
 export PGHOST=pg185
 export LANG=ru_RU.UTF-8
 export LC_ALL=ru_RU.UTF-8
@@ -28,4 +28,6 @@ latest_backup=$(ls -t ~/backups/*.sql.gz | head -1)
 unpacked_file="${latest_backup%.gz}"
 
 gzip -d $latest_backup
-psql -h localhost -p 9114 postgres -f $unpacked_file
+sed -i '' 's|/var/db/postgres1/idd21|/var/db/postgres2/idd21|g' $unpacked_file
+sed -i '' 's|/var/db/postgres1/gzp28|/var/db/postgres2/gzp28|g' $unpacked_file
+psql -h localhost -p 9114 -U postgres1 postgres -f $unpacked_file
