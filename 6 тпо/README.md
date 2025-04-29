@@ -39,6 +39,7 @@
 | [docs.google.com/spreadsheets/d/...](https://docs.google.com/spreadsheets/d/1Yofh6xf-WYR2Qttwff-Hrd8tzvBswxCG5sewOv7H2cA/edit?gid=573038098#gid=573038098) | Журнал ТПО 2025 |
 | [se.ifmo.ru/files/-/document_library/...](https://se.ifmo.ru/files/-/document_library/5e8j9w0OFoeD/view_file/319426?_com_liferay_document_library_web_portlet_DLPortlet_INSTANCE_5e8j9w0OFoeD_redirect=https%3A%2F%2Fse.ifmo.ru%2Ffiles%2F-%2Fdocument_library%2F5e8j9w0OFoeD%2Fview%2F319403%3F_com_liferay_document_library_web_portlet_DLPortlet_INSTANCE_5e8j9w0OFoeD_redirect%3Dhttps%253A%252F%252Fse.ifmo.ru%252Ffiles%253Fp_p_id%253Dcom_liferay_document_library_web_portlet_DLPortlet_INSTANCE_5e8j9w0OFoeD%2526p_p_lifecycle%253D0%2526p_p_state%253Dnormal%2526p_p_mode%253Dview) | Слайды лекций с комментариями |
 | [youtube.com/playlist?list=PLBWafxh...](https://www.youtube.com/playlist?list=PLBWafxh1dFuxSlcqz5099WzvHhiIgaa8v) | Видео лекций на Youtube |
+| [github.com/KIMdaniiell/Software-Testing-Course/notes](https://github.com/KIMdaniiell/Software-Testing-Course/tree/main/notes) | Конспект лекций (2023) и cheatsheet'ы по некоторым технологиям из курса |
 | [github.com/band-of-four/cheatsheets/testing](https://github.com/band-of-four/cheatsheets/tree/master/testing) | Полезная информация по теории |
 | [github.com/RedGry/ITMO/TPO/docs](https://github.com/RedGry/ITMO/tree/master/TPO/docs) | Отчёты и подготовка к ЛР |
 
