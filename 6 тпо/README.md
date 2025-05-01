@@ -19,8 +19,8 @@
 
 - [Лабораторная работа №1 (9/10)](./лабораторные/lab1/);
 - [Лабораторная работа №2 (9/10)](https://github.com/maxbarsukov-itmo/tpo-2);
-- [Лабораторная работа №3 (.../10)](https://github.com/maxbarsukov-itmo/tpo-3);
-- [Лабораторная работа №4 (.../10)](./лабораторные/lab4/).
+- [Лабораторная работа №3 (8.5/10)](https://github.com/maxbarsukov-itmo/tpo-3);
+- [Лабораторная работа №4 (.../10)](https://github.com/maxbarsukov-itmo/tpo-4).
 
 ## Рубежная работа
 
