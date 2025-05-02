@@ -45,7 +45,15 @@
 
 ## Защита
 
-TODO
+Если ваш практик — [Тропченко А. А.](https://my.itmo.ru/persons/111848), то скорее всего на защите у вас спросят один из этих вопросов:
+
+1. **Какие типы сообщений есть в DHCP?**
+
+   Список из основных типов можно посмотреть [тут](https://forum.huawei.com/enterprise/intl/en/thread/DHCP-message-types/667235813622169600?blogId=667235813622169600), а более полный [здесь](https://notes.networklessons.com/dhcp-message-types). Отвечая на вопрос, стоит также упомянуть про процесс [DORA](https://notes.networklessons.com/dhcp-dora-process).
+
+2. **Что такое RIP и как он работает?**
+
+   [RIP](https://ru.wikipedia.org/wiki/RIP_(%D1%81%D0%B5%D1%82%D0%B5%D0%B2%D0%BE%D0%B9_%D0%BF%D1%80%D0%BE%D1%82%D0%BE%D0%BA%D0%BE%D0%BB)) — один из самых простых протоколов маршрутизации. Это протокол дистанционно-векторной маршрутизации, который оперирует транзитными участками (**хоп**, **hop**) в качестве **метрики маршрутизации**. Максимальное количество транзитных участков, разрешенное в RIP — 15 (метрика 16 означает «бесконечно большую метрику»). Каждый RIP-маршрутизатор по умолчанию вещает в сеть свою полную таблицу маршрутизации раз в 30 секунд, довольно сильно **нагружая низкоскоростные линии** связи. RIP работает в сетях TCP/IP, используя UDP порт **520**. В современных сетевых средах RIP — не самое лучшее решение для выбора в качестве протокола маршрутизации, так как его возможности уступают более современным протоколам, таким как `EIGRP`, `OSPF`. **Ограничение на 15 транзитных участков** не дает применять его в больших сетях. Преимущество этого протокола — простота конфигурирования.
 
 ---
 
@@ -59,7 +67,7 @@ TODO
 | [netemul.sourceforge.net/help/ru/](https://netemul.sourceforge.net/help/ru/) | Руководство пользователя NetEmul |
 | [4_Рекомендации по работе с NetEmul-25.pdf](../../4_Рекомендации%20по%20работе%20с%20NetEmul-25.pdf) | Рекомендации по работе с программой NetEmul |
 | [geeksforgeeks.org/dhcp](https://www.geeksforgeeks.org/dynamic-host-configuration-protocol-dhcp/) | Dynamic Host Configuration Protocol (DHCP) |
-| [habr.com/ru/articles/825016](https://habr.com/ru/articles/825016/) | Устройство протокола DHCP в технических подробностях |
+| [habr.com/articles/825016](https://habr.com/ru/articles/825016/) | Устройство протокола DHCP в технических подробностях |
 | [ru.wikipedia.org/wiki/RIP_(сетевой_протокол)](https://ru.wikipedia.org/wiki/RIP_(%D1%81%D0%B5%D1%82%D0%B5%D0%B2%D0%BE%D0%B9_%D0%BF%D1%80%D0%BE%D1%82%D0%BE%D0%BA%D0%BE%D0%BB)) | Протокол маршрутной информации RIP (Routing Information Protocol) |
 | [habr.com/articles/858606](https://habr.com/ru/companies/nauka/articles/858606/) | Протоколы внутренней маршрутизации |
 | [habr.com/articles/335090](https://habr.com/ru/articles/335090/) | Маршрутизация: статическая и динамическая на примере RIP, OSPF и EIGRP |
