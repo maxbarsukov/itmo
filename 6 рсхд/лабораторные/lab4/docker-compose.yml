@@ -1,0 +1,42 @@
+services:
+  primary:
+    container_name: primary
+    build:
+      context: ./primary
+    restart: unless-stopped
+    ports:
+      - "5432:5432"
+    environment:
+      - PGDATA=/var/lib/postgresql/data
+      - PGENCODING=UTF8
+      - PGLOCALE=en_US.UTF8
+      - PGUSERNAME=postgres
+      - POSTGRES_PASSWORD=postgres
+    volumes:
+      - ./primary/data:/var/lib/postgresql/data
+    networks:
+      - pg_net
+
+  standby:
+    container_name: standby
+    build:
+      context: ./standby
+    restart: unless-stopped
+    ports:
+      - "5433:5432"
+    depends_on:
+      - primary
+    environment:
+      - PGDATA=/var/lib/postgresql/data
+      - PGENCODING=UTF8
+      - PGLOCALE=en_US.UTF8
+      - PGUSERNAME=postgres
+      - POSTGRES_PASSWORD=postgres
+    volumes:
+      - ./standby/data:/var/lib/postgresql/data
+    networks:
+      - pg_net
+
+networks:
+  pg_net:
+    driver: bridge
