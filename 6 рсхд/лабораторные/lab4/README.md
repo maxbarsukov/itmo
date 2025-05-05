@@ -71,6 +71,7 @@
 
 | Ссылка | Описание |
 | --- | --- |
+| [./how-to-run.md](./how-to-run.md) | Как запустить мою лабу |
 | [postgrespro.ru/docs/postgresql/16/different-replication-solutions](https://postgrespro.ru/docs/postgresql/16/different-replication-solutions) | Отказоустойчивость, балансировка нагрузки и репликация. Сравнение различных решений |
 | [postgrespro.ru/docs/postgresql/16/warm-standby](https://postgrespro.ru/docs/postgresql/16/warm-standby) | Трансляция журналов на резервные серверы |
 | [postgrespro.ru/docs/postgresql/16/warm-standby-failover](https://postgrespro.ru/docs/postgresql/16/warm-standby-failover) | Отработка отказа (failover) |
