@@ -1,0 +1,52 @@
+### IntelliJ IDEA ###
+.idea
+.idea_modules
+*.iws
+*.iml
+*.ipr
+out/
+!**/src/main/**/out/
+!**/src/test/**/out/
+
+### NetBeans ###
+/nbproject/private/
+/nbbuild/
+/dist/
+/nbdist/
+/.nb-gradle/
+
+### VS Code ###
+.vscode/
+.code-workspace
+
+### Log files ###
+jxl.log
+jmx.log
+derby.log
+
+### OS Files ###
+.DS_Store
+Thumbs.db
+Desktop.ini
+.svn
+._*
+
+### Misc ###
+*.java.hsp
+*.sonarj
+*.sw*
+argfile*
+.wakatime-project
+.cache
+.project
+.settings
+.tmproj
+*.esproj
+*.diff
+*.err
+*.orig
+*.rej
+*.swo
+*.swp
+*.zip
+*~
