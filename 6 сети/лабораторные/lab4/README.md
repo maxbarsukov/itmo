@@ -1,6 +1,6 @@
 # Лабораторная работа №4
 
-## Вариант [`cv.maxbarsukov.ru`](https://cv.maxbarsukov.ru/); `4.1, 4.2, 4.3, 4.5 `
+## Вариант [`www.bma.org.uk`](https://www.bma.org.uk/); `4.1, 4.2, 4.3, 4.5 `
 
 <img alt="lain-shizo" src="https://github.com/maxbarsukov/itmo/blob/master/.docs/lain-shizo.gif" height="320">
 
