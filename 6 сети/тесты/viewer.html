@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Интерактивное тестирование</title>
+  <style>
+    body { background-color: #121212; color: #ffffff; font-family: sans-serif; padding: 20px; }
+    #search { width: 100%; padding: 10px; margin-bottom: 20px; background: #343a40; border: 1px solid #5a5a5a; color: #fff; border-radius: 4px; }
+    .item { padding: 10px; border-bottom: 1px solid #333; }
+    .question { font-weight: bold; margin-bottom: 5px; }
+    .answers { margin-top: 5px; padding-left: 20px; }
+    .answers li { list-style: disc; margin: 4px 0; }
+    .correct { color: #4caf50; font-weight: bold; }
+  </style>
+</head>
+<body>
+  <input type="text" id="search" placeholder="Поиск по вопросам и ответам...">
+  <div id="list"></div>
+
+  <script>
+    // Вставьте вместо {} JSON-объект questionsData из вашего html-файла, полученного из decoder.py
+    const questionsData = {};
+
+    function flattenData(data) {
+      const flat = [];
+      Object.values(data).forEach(group => {
+        group.questions.forEach(q => {
+          flat.push({
+            question: q.question,
+            answers: q.answers,
+            rightCount: q.right || 0
+          });
+        });
+      });
+      return flat;
+    }
+
+    const flatList = flattenData(questionsData);
+    const listContainer = document.getElementById('list');
+    const searchInput = document.getElementById('search');
+
+    function render(filter = '') {
+      const term = filter.trim().toLowerCase();
+      listContainer.innerHTML = '';
+      flatList
+        .filter(item => {
+          const inQ = item.question.toLowerCase().includes(term);
+          const inA = item.answers.some(ans => ans.toLowerCase().includes(term));
+          return inQ || inA;
+        })
+        .forEach(item => {
+          const div = document.createElement('div');
+          div.className = 'item';
+
+          const qEl = document.createElement('div');
+          qEl.className = 'question';
+          qEl.innerHTML = item.question;
+          div.appendChild(qEl);
+
+          const ul = document.createElement('ul');
+          ul.className = 'answers';
+          item.answers.forEach((ans, idx) => {
+            const li = document.createElement('li');
+            li.innerHTML = ans;
+            if (idx < item.rightCount) {
+              li.classList.add('correct');
+            }
+            ul.appendChild(li);
+          });
+          div.appendChild(ul);
+          listContainer.appendChild(div);
+        });
+    }
+
+    searchInput.addEventListener('input', () => render(searchInput.value));
+    render();
+  </script>
+</body>
+</html>
