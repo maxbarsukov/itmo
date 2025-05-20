@@ -22,7 +22,7 @@
         python decoder <source>.fdb <target>.html
 
 5. В полученном файлике вопросы разбиты на "группы", что может быть неудобно для просмотра и поиска вопросов, поэтому можем использовать более подходящую альтернативу – [`viewer.html`](./viewer.html). Для этого берем из полученного в декодере HTML-файла JSON-объект `questionsData` и вставляем [сюда](https://github.com/maxbarsukov/itmo/blob/master/6%20%D1%81%D0%B5%D1%82%D0%B8/%D1%82%D0%B5%D1%81%D1%82%D1%8B/viewer.html#L22). Проверьте, что все картинки загружаются (`DevTools > Network`), при необходимости используйте [`to-upper-case.sh`](./to-upper-case.sh) / [`to-lower-case.sh`](./to-lower-case.sh) или измените расширение ссылок на картинки в HTML-файле.
-6. Voi la! Смотрим `viewer.html`, читаем вопросы. По настроению [деплоим]((https://www.netlify.com/blog/2016/09/29/a-step-by-step-guide-deploying-on-netlify/)) итоговый HTML-файл и `/pics` на [netlify.com](https://www.netlify.com/).
+6. Voi la! Смотрим `viewer.html`, читаем вопросы. По настроению [деплоим](https://www.netlify.com/blog/2016/09/29/a-step-by-step-guide-deploying-on-netlify/) итоговый HTML-файл и `/pics` на [netlify.com](https://www.netlify.com/).
 
 ---
 
