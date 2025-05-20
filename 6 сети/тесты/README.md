@@ -18,10 +18,15 @@
 
 Из теста нельзя ничего копировать и ничего вставлять (помогает [Absolute Enable Right Click & Copy](https://chromewebstore.google.com/detail/absolute-enable-right-cli/jdocbkpgdakpekjlhemmfcncgdjeiika)), возможно попытки скопипастить куда-то логируются.
 
-До этого года тесты проходились в `ETester`. Вряд ли вам это понадобится, но:
+До этого года тесты проходились в `eTester`. Вряд ли вам это понадобится, но:
 
-- [Решатель ETester тестов](https://github.com/RedGry/ITMO/tree/master/Computer%20networks/nms);
-- [etest-hack.zip](https://disk.yandex.ru/d/l5Ac4Wn-htWunw) чтобы достать базу вопросов из ET1-файла.
+- [Решатель eTester тестов](https://github.com/RedGry/ITMO/tree/master/Computer%20networks/nms);
+
+### ET1
+
+А можно ли как-то достать базу вопросов из ET1-файла?
+
+[**Да, можно!**](./et1-decode.md)
 
 ## Вопросы из тестов
 
