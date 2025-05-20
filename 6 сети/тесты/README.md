@@ -12,7 +12,7 @@
 
 С этого года тесты проводятся на платформе [lms.itmo.ru](https://lms.itmo.ru/).
 
-В нашем случае первые 3 теста писались на своих компьютерах, а итоговый на компьютерах из аудитории (некоторые, возможно, пишут на компьютерах из аудитории все тесты).
+В нашем случае первые 3 теста писались на своих компьютерах в [lms.itmo.ru](https://lms.itmo.ru/), а итоговый тест в `eTester` (некоторые группы, возможно, пишут на компьютерах из аудитории все тесты).
 
 При запуске теста на платформе он открывается на полный экран в отдельном окне. Однако это окно можно свернуть/переключиться на другое окно (это никак не детектится тестом, возможно только пока).
 
@@ -32,6 +32,7 @@
 
 - [csanswers.netlify.app](https://csanswers.netlify.app/) — Тесты прошлых лет, а также несколько режимов для тренировки от [@desrucvz](https://t.me/desrucvz);
 - [ksgovnoznayte.netlify.app](https://ksgovnoznayte.netlify.app/) — Ответы на все тесты;
+- [ksgovnoznayte2025.netlify.app](https://ksgovnoznayte2025.netlify.app/) — Итоговый тест 2025;
 - [cs1.pdf](./cs1.pdf), [cs2.pdf](./cs2.pdf), [cs3.pdf](./cs3.pdf) — Все (или почти все) вопросы и ответы из [testsCS.zip](./testsCS.zip) полученные с помощью [Imtjl/net-parser](https://github.com/Imtjl/net-parser/);
 - [disk.yandex.ru/d/n9RuZY3o_xTMmQ](https://disk.yandex.ru/d/n9RuZY3o_xTMmQ) — Архив всех тестов, он же в [testsCS.zip](./testsCS.zip).
 - [github.com/dami404/ITMO/tree/main/CN/tests](https://github.com/dami404/ITMO/tree/main/CN/tests) — Набор вопросов из тестов, он же в [cn-tests.pdf](./cn-tests.pdf);
