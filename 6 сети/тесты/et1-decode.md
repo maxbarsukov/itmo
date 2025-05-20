@@ -18,3 +18,7 @@
         python decoder <source>.fdb <target>.html
 
 5. Voi la! Смотрим HTML-файлик, читаем вопросы.
+
+---
+
+*Спасибо [@ColdDirol](https://github.com/ColdDirol) за помощь с составлением гайда!*
