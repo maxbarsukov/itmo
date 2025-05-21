@@ -20,7 +20,7 @@
 
 До этого года тесты проходились в `eTester`. Вряд ли вам это понадобится, но:
 
-- [Решатель eTester тестов](https://github.com/RedGry/ITMO/tree/master/Computer%20networks/nms);
+- [Решатель eTester тестов](./nms/);
 
 ### ET1
 
