@@ -39,7 +39,7 @@
 | Ссылка | Описание |
 | --- | --- |
 | [wavedrom.com/editor.html](https://wavedrom.com/editor.html) | Средство для рисования диаграмм, пригодится в 1 семинаре |
-| [github.com/Melo4ka/IO-Systems](https://github.com/Melo4ka/IO-Systems) <br> [github.com/ANegrash/ITMO-all//6 IO systems](https://github.com/ANegrash/ITMO-all/tree/master/6%20IO%20systems) | Выполненные ЛР |
+| [github.com/XVIIStarPlatinum/ITMO/tree/master/Software Engineering/IO Systems](https://github.com/XVIIStarPlatinum/ITMO/tree/master/Software%20Engineering/IO%20Systems) <br> [github.com/Imtjl/io-systems](https://github.com/Imtjl/io-systems) | Выполненные ЛР 2025 |
 
 ## Лицензия <a name="license"></a>
 
