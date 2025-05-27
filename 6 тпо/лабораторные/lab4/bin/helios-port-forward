@@ -1,1 +1,1 @@
-ssh -f -N -L 8083:stload.se.ifmo.ru:8080 s367081@se.ifmo.ru -p 2222
+ssh -f -N -L 8079:stload.se.ifmo.ru:8080 s367081@se.ifmo.ru -p 2222

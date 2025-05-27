@@ -25,6 +25,10 @@ jmeter.log
 jmx.log
 derby.log
 
+### Reports ###
+load/report
+stress/report
+
 ### OS Files ###
 .DS_Store
 Thumbs.db
