@@ -61,7 +61,33 @@
 
 ## Выполнение
 
-TODO
+Отчёты по тестированию:
+
+| Нагрузочное тестирование | Стресс-тестирование |
+|---|---|
+| [TODO](TODO) | [TODO](TODO) |
+
+### Как построить HTML-отчёт по результатам тестирования?
+
+1. Сгенерировать `csv`-файл с результатами тестирования.
+2. Создать файл конфигурации `user.properties` (может быть пустым).
+3. Нажать `Tools -> Generate HTML Report`.
+4. Указать путь для:
+    - файла с таблицей тестирования;
+    - файла настроек (`user.properties`);
+    - директории, куда будет сохранён отчёт (должна будь пустой).
+
+Также для генерации отчёта можно запустить такую команду:
+
+    jmeter -n -t 'ваш-план-тестирования.jmx' -l 'результаты-тестирования.csv' -e -o 'директория-с-html-отчётом'
+
+### Доступ к серверу `stload.se.ifmo.ru`
+
+Пробрасываем порты из Helios через [эту команду](./bin/helios-port-forward). Порт может быть любым:
+
+    ssh -f -N -L 8083:stload.se.ifmo.ru:8080 sXXXXXX@se.ifmo.ru -p 2222
+
+После пробрасывания порта, в тестах всё равно нужно использовать `localhost` в качестве `url`.
 
 ---
 
@@ -69,7 +95,15 @@ TODO
 
 | Ссылка | Описание |
 |---|---|
-| [TODO](TODO) | TODO |
+| [jmeter.apache.org/](https://jmeter.apache.org/) | Сайт Apache JMeter |
+| [jmeter-plugins.org/](https://jmeter-plugins.org/) | Плагины для JMeter |
+| [jmeter.apache.org/usermanual/index.html](https://jmeter.apache.org/usermanual/index.html) | Официальная документация JMeter |
+| [jmeter.apache.org/usermanual/generating-dashboard.html](https://jmeter.apache.org/usermanual/generating-dashboard.html) | Генерация дашбордов средствами JMeter |
+| [habr.com/articles/514314/](https://habr.com/ru/companies/tbank/articles/514314/) | Анализ результатов нагрузочного тестирования |
+| [www.blazemeter.com/blog/jmeter-tutorial](https://www.blazemeter.com/blog/jmeter-tutorial) | JMeter Tutorial: Getting Started With the Basics |
+| [www.guru99.com/jmeter-performance-testing.html](https://www.guru99.com/jmeter-performance-testing.html) | How to Use JMeter for Performance & Load Testing |
+| [apidog.com/blog/how-to-use-jmeter-for-stress-testing](https://apidog.com/blog/how-to-use-jmeter-for-stress-testing/) | Performance Stress Testing with JMeter: An Ultimate Guide |
+| [www.softwaretestinghelp.com/types-of-software-testing/](https://www.softwaretestinghelp.com/types-of-software-testing/) | Разные типы тестирования ПО |
 
 ## Лицензия <a name="license"></a>
 

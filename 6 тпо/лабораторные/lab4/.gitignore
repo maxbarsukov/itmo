@@ -21,6 +21,7 @@ out/
 
 ### Log files ###
 jxl.log
+jmeter.log
 jmx.log
 derby.log
 
