@@ -129,6 +129,7 @@
 | [www.guru99.com/jmeter-performance-testing.html](https://www.guru99.com/jmeter-performance-testing.html) | How to Use JMeter for Performance & Load Testing |
 | [apidog.com/blog/how-to-use-jmeter-for-stress-testing](https://apidog.com/blog/how-to-use-jmeter-for-stress-testing/) | Performance Stress Testing with JMeter: An Ultimate Guide |
 | [www.softwaretestinghelp.com/types-of-software-testing/](https://www.softwaretestinghelp.com/types-of-software-testing/) | Разные типы тестирования ПО |
+| [https://github.com/band-of-four/cheatsheets/testing/lab4.md](https://github.com/band-of-four/cheatsheets/blob/master/testing/lab4.md) | Ответы на вопросы с [se.ifmo.ru](https://se.ifmo.ru/courses/testing) |
 
 ## Лицензия <a name="license"></a>
 
