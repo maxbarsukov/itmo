@@ -98,6 +98,22 @@
 Для студентов доступ ограничен только сервером helios и другими серверами с адресами в подсети `192.168.10.0/24`.
 Поэтому чтобы послать запрос к `http://stload.se.ifmo.ru:8080`, используйте URL `http://192.168.10.83:8080`.
 
+### Анализ стресс-тестирования
+
+| Скрипт | Описание |
+| --- | --- |
+| [main_indicators.py](./stress/main_indicators.py) | Собирает основные показатели тестирования для более удобного ручного анализа |
+| [autocorrelation.py](./stress/autocorrelation.py) | График автокорреляции для времени отклика |
+| [concurrent_users.py](./stress/concurrent_users.py) | Анализ распределения параллельных пользователей |
+| [error_clustering.py](./stress/error_clustering.py) | Кластеризация ошибок во временном пространстве |
+| [error_domino_effect.py](./stress/error_domino_effect.py) | Анализ временных интервалов между ошибками |
+| [error_type_distribution.py](./stress/error_type_distribution.py) | Динамика распределения ошибок по типам HTTP-статусов |
+| [latency_analysis.py](./stress/latency_analysis.py) | Анализ времени отклика |
+| [percentiles.py](./stress/percentiles.py) | Анализ перцентилей в динамике |
+| [performance_anomalies.py](./stress/performance_anomalies.py) | Выявление аномалий в производительности |
+| [performance_forecast.py](./stress/performance_forecast.py) | Прогнозирование деградации времени отклика |
+| [thread_error_analysis.py](./stress/thread_error_analysis.py) | Распределение частоты ошибок между потоками |
+
 ---
 
 ## Полезные ссылки

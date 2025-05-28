@@ -1,0 +1,49 @@
+{
+    "load_characteristics": {
+        "duration_sec": 318.879,
+        "max_threads": 157,
+        "first_failure_threads": 1,
+        "requests_per_sec": 25.354444789402876
+    },
+    "response_times": {
+        "mean": 3481.3578231292518,
+        "median": 3271.0,
+        "p90": 5674.0,
+        "p95": 6514.799999999999,
+        "p99": 7923.16,
+        "max": 9229.0,
+        "min": 14.0,
+        "std_dev": 1592.002664227259
+    },
+    "error_analysis": {
+        "total_errors": 300,
+        "error_rate": 0.03710575139146568,
+        "error_codes_distribution": {
+            "500": 219,
+            "Non HTTP response code: java.net.SocketException": 81
+        },
+        "error_clustering": {
+            "avg_interval_sec": 0.7690401337792642,
+            "min_interval_sec": -2.846,
+            "cluster_threshold_sec": 5.0,
+            "is_clustered": true
+        }
+    },
+    "network_metrics": {
+        "avg_latency": 3463.8445269016697,
+        "avg_connect_time": 1.838961038961039,
+        "bytes_sent_avg": 160.3769944341373,
+        "bytes_received_avg": 256.2307977736549
+    },
+    "advanced_metrics": {
+        "throughput_mb_sec": 0.006195630660530841,
+        "response_time_slope": 81.97061584806669,
+        "anomaly_count": 405,
+        "domino_effect_ratio": 4.9203539823008855
+    },
+    "thread_stats": {
+        "threads_with_errors": 300,
+        "max_errors_per_thread": 1,
+        "thread_utilization": 294.22631572895466
+    }
+}
