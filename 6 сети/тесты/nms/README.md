@@ -21,6 +21,16 @@
 
 ## Как вернуть рабочий стол без перезагрузки компьютера?
 
+- [`autorestart_explorer.ps1`](./autorestart_explorer.ps1) – Автоперезапуск рабочего стола от [*@Vovanm88*](https://github.com/Vovanm88). Запуск скрипта:
+
+      .\restart_explorer.ps1
+
+Если PowerShell ограничен политикой выполнения, выполните:
+
+    Set-ExecutionPolicy RemoteSigned -Scope CurrentUser
+
+### Вручную
+
 1. Нажимаем `Ctrl + Shift + Esc`;
 2. У вас откроется **Диспетчер задач**;
 3. В левом верхнем углу нажимаем `Файл` -> `Запустить новую задачу`;
