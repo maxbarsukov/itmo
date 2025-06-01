@@ -2,7 +2,7 @@
 
 ## Вариант `4`
 
-<img alt="lain-crazy" src="https://github.com/maxbarsukov/itmo/blob/master/.docs/lain-crazy.gif" height="320">
+<img alt="lain-intro" src="https://github.com/maxbarsukov/itmo/blob/master/.docs/lain-intro.gif" height="320">
 
 |.pdf|.docx|
 |-|-|
