@@ -1,6 +1,12 @@
-# Лабораторная работа [#4](https://se.ifmo.ru/courses/db#lab4)
+# Лабораторная работа [№4](https://se.ifmo.ru/courses/db#lab4)
 
-## Вариант 1501
+## Вариант `1501`
+
+<img alt="bocchi-bocchi-the-rock" src="https://github.com/maxbarsukov/itmo/blob/master/.docs/bocchi-bocchi-the-rock.gif" height="350">
+
+|.pdf|.docx|
+|-|-|
+| [report](./docs/report.pdf) | [report](./docs/report.docx) |
 
 ### Задание
 
@@ -45,7 +51,10 @@
 
 Вид соединения: `INNER JOIN`.
 
+---
 
-## Выполнение
+## Полезные ссылки
 
-- [Отчёт](./docs/report.pdf)
+| Ссылка | Описание |
+| --- | --- |
+| [youtube.com/playlist?list=PLSE8ODhjZXjYCZfIbmEWH7f6MnYqyPwCE](https://www.youtube.com/playlist?list=PLSE8ODhjZXjYCZfIbmEWH7f6MnYqyPwCE) | CMU Special Topics in Database: Query Optimization / Не прям в тему лабы, но отличный материал по оптимизации SQL-запросов для любознательных |
