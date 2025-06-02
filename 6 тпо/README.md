@@ -6,6 +6,8 @@
 > A QA engineer walks into a bar. Orders a beer. Orders 0 beers. Orders 999999999 beers. Orders a lizard. Orders -1 beers. Orders a ueicbksjdhd. \
 > First real customer walks in and asks where the bathroom is. The bar bursts into flames, killing everyone.
 
+---
+
 **Лектор:** [Клименков Сергей Викторович](https://my.itmo.ru/persons/105395) \
 **Практик:** [Цопа Евгений Алексеевич](https://my.itmo.ru/persons/126287)
 
