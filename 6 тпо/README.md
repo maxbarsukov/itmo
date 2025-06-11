@@ -24,6 +24,15 @@
 - [Лабораторная работа №3 (8.5/10)](https://github.com/maxbarsukov-itmo/tpo-3);
 - [Лабораторная работа №4 (9.5/10)](./лабораторные/lab4/).
 
+## Лекции
+
+- [Лекция 1. Основные понятия](https://github.com/maxbarsukov/itmo/tree/master/6%20%D1%82%D0%BF%D0%BE/%D0%BB%D0%B5%D0%BA%D1%86%D0%B8%D0%B8#%D0%BB%D0%B5%D0%BA%D1%86%D0%B8%D1%8F-1-%D0%BE%D1%81%D0%BD%D0%BE%D0%B2%D0%BD%D1%8B%D0%B5-%D0%BF%D0%BE%D0%BD%D1%8F%D1%82%D0%B8%D1%8F);
+- [Лекция 2. Тестовый сценарий](https://github.com/maxbarsukov/itmo/tree/master/6%20%D1%82%D0%BF%D0%BE/%D0%BB%D0%B5%D0%BA%D1%86%D0%B8%D0%B8#%D0%BB%D0%B5%D0%BA%D1%86%D0%B8%D1%8F-1-%D0%BE%D1%81%D0%BD%D0%BE%D0%B2%D0%BD%D1%8B%D0%B5-%D0%BF%D0%BE%D0%BD%D1%8F%D1%82%D0%B8%D1%8F);
+- [Лекция 3. Модульное и интеграционное тестирование](https://github.com/maxbarsukov/itmo/tree/master/6%20%D1%82%D0%BF%D0%BE/%D0%BB%D0%B5%D0%BA%D1%86%D0%B8%D0%B8#%D0%BB%D0%B5%D0%BA%D1%86%D0%B8%D1%8F-1-%D0%BE%D1%81%D0%BD%D0%BE%D0%B2%D0%BD%D1%8B%D0%B5-%D0%BF%D0%BE%D0%BD%D1%8F%D1%82%D0%B8%D1%8F);
+- [Лекция 4. Статистическое тестирование](https://github.com/maxbarsukov/itmo/tree/master/6%20%D1%82%D0%BF%D0%BE/%D0%BB%D0%B5%D0%BA%D1%86%D0%B8%D0%B8#%D0%BB%D0%B5%D0%BA%D1%86%D0%B8%D1%8F-1-%D0%BE%D1%81%D0%BD%D0%BE%D0%B2%D0%BD%D1%8B%D0%B5-%D0%BF%D0%BE%D0%BD%D1%8F%D1%82%D0%B8%D1%8F);
+- [Лекция 5. Системное тестирование](https://github.com/maxbarsukov/itmo/tree/master/6%20%D1%82%D0%BF%D0%BE/%D0%BB%D0%B5%D0%BA%D1%86%D0%B8%D0%B8#%D0%BB%D0%B5%D0%BA%D1%86%D0%B8%D1%8F-1-%D0%BE%D1%81%D0%BD%D0%BE%D0%B2%D0%BD%D1%8B%D0%B5-%D0%BF%D0%BE%D0%BD%D1%8F%D1%82%D0%B8%D1%8F);
+- [Лекция 6. Тестирование безопасноти](https://github.com/maxbarsukov/itmo/tree/master/6%20%D1%82%D0%BF%D0%BE/%D0%BB%D0%B5%D0%BA%D1%86%D0%B8%D0%B8#%D0%BB%D0%B5%D0%BA%D1%86%D0%B8%D1%8F-1-%D0%BE%D1%81%D0%BD%D0%BE%D0%B2%D0%BD%D1%8B%D0%B5-%D0%BF%D0%BE%D0%BD%D1%8F%D1%82%D0%B8%D1%8F).
+
 ## Рубежная работа
 
 - [Рубежная работа (.../20)](./рубежка/)
