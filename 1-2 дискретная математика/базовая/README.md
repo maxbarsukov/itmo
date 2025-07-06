@@ -13,6 +13,7 @@
 
 | Ссылка | Описание |
 | --- | --- |
+| [t.me/+qO4dE84coBlkNDU6](https://t.me/c/1854461388/) | Решения тестов №2-6 по базовой дискретной математике |
 | https://dima.mysoftware.ru/karnaugh_map.html | Карты Карно |
 | https://dima.mysoftware.ru/T2P_EDITOR.html?id=2 | Алгоритм Вейсмана |
 | https://dima.mysoftware.ru/T2P_EDITOR.html?id=3 | Алгоритм Краскала |
