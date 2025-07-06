@@ -2,11 +2,10 @@
 
 <img alt="Princess Mononoke Running" src="https://github.com/maxbarsukov/itmo/blob/master/.docs/princess-mononoke-running.gif" height="150">
 
+> [!TIP]
 > вот бы была лаба по тактильным свойствам травянистых
-> 
 
-**Лектор:** [Егошин Алексей Васильевич](https://my.itmo.ru/persons/285578)
-
+**Лектор:** [Егошин Алексей Васильевич](https://my.itmo.ru/persons/285578) \
 **Практик:** [Кустарев Иван Павлович](https://my.itmo.ru/persons/309681)
 
 ## Результаты
@@ -26,6 +25,8 @@
 
 - [Рубежная работа №1](./рубежки/1)
 - [Рубежная работа №2](./рубежки/2)
+
+---
 
 ## Полезные ссылки
 
