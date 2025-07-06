@@ -3,6 +3,12 @@
 
 <img alt="rei-rei-ayanami gif" src="https://github.com/maxbarsukov/itmo/blob/master/.docs/rei-rei-ayanami.gif" height="250">
 
+## Результаты
+
+- 2 семестр: **4B** (84/100 баллов)
+
+---
+
 ## Полезные ссылки
 
 | Ссылка | Описание |
