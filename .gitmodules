@@ -22,6 +22,9 @@
 [submodule "4 архитектура компьютера/lab3"]
 	path = 4 архитектура компьютера/lab3
 	url = https://github.com/maxbarsukov/csa3-stack-machine
+[submodule "4 архитектура компьютера/лабораторные/lab3"]
+	path = 4 архитектура компьютера/лабораторные/lab3
+	url = https://github.com/maxbarsukov/csa3-stack-machine
 [submodule "5 фп/лабораторные/lab0"]
 	path = 5 фп/лабораторные/lab0
 	url = https://github.com/maxbarsukov-itmo/functional-programming-0

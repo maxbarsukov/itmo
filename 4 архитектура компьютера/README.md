@@ -1,15 +1,21 @@
 # Архитектура компьютера
 
-<img alt="running" src="https://github.com/maxbarsukov/itmo/blob/master/.docs/running.gif" height="200">
+<img alt="running" src="https://github.com/maxbarsukov/itmo/blob/master/.docs/running.gif" height="250">
 
-> "Г", "Ж" и "консультация"
+> [!NOTE]
+> Консультация.
 
+> [!TIP]
 > Краткая, неполная и, в основном, неверная история вычислительных платформ
 
+---
 
-**Лектор:** [Пенской Александр Владимирович](https://my.itmo.ru/persons/142415)
-
+**Лектор:** [Пенской Александр Владимирович](https://my.itmo.ru/persons/142415) \
 **Практик:** [Горбачев Ярослав Георгиевич](https://my.itmo.ru/persons/172909)
+
+## Результаты
+
+- 4 семестр: **5A** (97/100 баллов)
 
 ## Структура курса, оценивание и баллы
 
@@ -42,20 +48,18 @@
 
 ## Лабораторные работы
 
-- [Лаба 1. Семинар](./lab1/README.md)
-- [Лаба 2. Эссе](./lab2/README.md)
+- [Лаба 1. Семинар](./лабораторные/lab1/README.md)
+- [Лаба 2. Эссе](./лабораторные/lab2/README.md)
 - [Лаба 3. Эксперимет](https://github.com/maxbarsukov/csa3-stack-machine/)
 
-## Результаты
-
-- 4 семестр: **5A** (97/100 баллов)
+---
 
 ## Полезные ссылки
 
 | Ссылка | Описание |
 | --- | --- |
-| https://gitlab.se.ifmo.ru/computer-systems/csa-rolling | Вся, **вся**, **ВСЯ** инфа о курсе! |
+| [gitlab.se.ifmo.ru/computer-systems/csa-rolling](https://gitlab.se.ifmo.ru/computer-systems/csa-rolling) | Вся, **вся**, **ВСЯ** инфа о курсе! |
 | [https://docs.google.com/...](https://docs.google.com/spreadsheets/d/1PPRAjR6tkpIcHdkmx_CZn42y_402-B9Lus6zmLfcUoA/edit#gid=580192402) | Ведомость |
-| http://csa.edu.swampbuds.me/ | Слайды лекций |
-| https://gitlab.se.ifmo.ru/computer-systems/csa-rolling/-/blob/master/bot-guide.md | Гайд на бота |
+| [csa.edu.swampbuds.me](http://csa.edu.swampbuds.me/) | Слайды лекций |
+| [gitlab.se.ifmo.ru/computer-systems/csa-rolling/-/blob/master/bot-guide.md](https://gitlab.se.ifmo.ru/computer-systems/csa-rolling/-/blob/master/bot-guide.md) | Гайд на бота |
 
