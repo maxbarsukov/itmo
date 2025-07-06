@@ -106,8 +106,8 @@ ___
 
 | Предмет / семестр | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 |
 | ----------------- | - | - | - | - | - | - | - | - |
-| Физическая культура и спорт | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :construction: | | |
-| [Иностранный язык](./1-6%20английский%20язык) | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :construction: | | |
+| Физическая культура и спорт | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | | |
+| [Иностранный язык](./1-6%20английский%20язык) | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | | |
 | ITMO Enter | :white_check_mark: | | | | | | | |
 | [Информатика](./1%20информатика) | :white_check_mark: | | | | | | | |
 | [История (ИЗРК)](./1%20история) | :white_check_mark: | | | | | | | |
@@ -140,24 +140,24 @@ ___
 | [Проектирование пользовательских интерфейсов](./5%20ппи) | | | | | :white_check_mark: | | | |
 | [Системы искусственного интеллекта](./5%20сии) | | | | | :white_check_mark: | | | |
 | [Функциональное программирование](./5%20фп) | | | | | :white_check_mark: | | | |
-| [Бизнес-логика программных систем](./6%20блпс) | | | | | | :construction: | | |
-| [Компьютерные сети](./6%20сети) | | | | | | :construction: | | |
-| [Обработка сигналов](./6%20цк/обработка%20сигналов) | | | | | | :construction: | | |
-| [Основы сетевых технологий](./6%20цк/основы%20сетевых%20технологий) | | | | | | :construction: | | |
-| [Разработка мобильных приложений](./6%20рмп) | | | | | | :construction: | | |
-| [Распределенные системы хранения данных](./6%20рсхд) | | | | | | :construction: | | |
-| [Системы ввода-вывода](./6%20свв) | | | | | | :construction: | | |
-| [Тестирование программного обеспечения](./6%20тпо) | | | | | | :construction: | | |
-| [Философия](./6%20философия) | | | | | | :construction: | | |
-| Информационная безопасность | | | | | | | :hourglass: | |
-| Качество программного обеспечения | | | | | | | :hourglass: | |
-| Облачные и туманные вычисления | | | | | | | :hourglass: | |
-| Проектирование вычислительных систем | | | | | | | :hourglass: | |
-| Распределенные вычисления | | | | | | | :hourglass: | |
-| Рефакторинг баз данных и приложений | | | | | | | :hourglass: | |
-| Сервис-ориентированная архитектура | | | | | | | :hourglass: | |
-| Технологии виртуализации | | | | | | | :hourglass: | |
-| Экономика программной инженерии | | | | | | | :hourglass: | |
+| [Бизнес-логика программных систем](./6%20блпс) | | | | | | :white_check_mark: | | |
+| [Компьютерные сети](./6%20сети) | | | | | | :white_check_mark: | | |
+| [Обработка сигналов](./6%20цк/обработка%20сигналов) | | | | | | :white_check_mark: | | |
+| [Основы сетевых технологий](./6%20цк/основы%20сетевых%20технологий) | | | | | | :white_check_mark: | | |
+| [Разработка мобильных приложений](./6%20рмп) | | | | | | :white_check_mark: | | |
+| [Распределенные системы хранения данных](./6%20рсхд) | | | | | | :white_check_mark: | | |
+| [Системы ввода-вывода](./6%20свв) | | | | | | :white_check_mark: | | |
+| [Тестирование программного обеспечения](./6%20тпо) | | | | | | :white_check_mark: | | |
+| [Философия](./6%20философия) | | | | | | :white_check_mark: | | |
+| Информационная безопасность | | | | | | | :construction: | |
+| Качество программного обеспечения | | | | | | | :construction: | |
+| Облачные и туманные вычисления | | | | | | | :construction: | |
+| Проектирование вычислительных систем | | | | | | | :construction: | |
+| Распределенные вычисления | | | | | | | :construction: | |
+| Рефакторинг баз данных и приложений | | | | | | | :construction: | |
+| Сервис-ориентированная архитектура | | | | | | | :construction: | |
+| Технологии виртуализации | | | | | | | :construction: | |
+| Экономика программной инженерии | | | | | | | :construction: | |
 | Защита и действия человека в условиях ЧС | | | | | | | | :hourglass: |
 | Производственная, преддипломная практика | | | | | | | | :hourglass: |
 | Производственная, технологическая<br>(проектно-технологическая) практика | | | | | | | | :hourglass: |
@@ -179,15 +179,14 @@ ___
 | Ссылка | Описание |
 | --- | --- |
 | [yank0vy3rdna.github.io/itmo-faq/](https://yank0vy3rdna.github.io/itmo-faq/) | Гайд для первокурсников и абитуриентов |
-| [github.com/Imtjl/1st-year-guide](https://github.com/Imtjl/1st-year-guide) | Гайд для первого курса |
-| [github.com/Imtjl/2nd-year-guide](https://github.com/Imtjl/2nd-year-guide) | Гайд для второго курса |
+| [github.com/Imtjl/1st-year-guide](https://github.com/Imtjl/1st-year-guide) <br> [github.com/Imtjl/2nd-year-guide](https://github.com/Imtjl/2nd-year-guide) | :star: Гайд для первого курса <br> :star: Гайд для второго курса |
 | [docs.google.com/spreadsheets/...](https://docs.google.com/spreadsheets/d/1TFTOKxqml1agwgo6Vp0Ql6Rgj9f9ciyOqQPF8VvUkJQ/edit?gid=591156939#gid=591156939) | Таблица с отзывами на лекторов / практиков |
-| [Imtjl](https://github.com/Imtjl), [EgorMIt/ITMO](https://github.com/EgorMIt/ITMO), [RedGry/ITMO](https://github.com/RedGry/ITMO), [band-of-four/cheatsheets](https://github.com/band-of-four/cheatsheets) | Популярные репозитории с работами |
+| [Imtjl](https://github.com/Imtjl), [EgorMIt/ITMO](https://github.com/EgorMIt/ITMO), [RedGry/ITMO](https://github.com/RedGry/ITMO), [band-of-four/cheatsheets](https://github.com/band-of-four/cheatsheets) | :star: Популярные репозитории с работами |
 | [Vsev0l0d](https://github.com/Vsev0l0d?tab=repositories), [RomanVassilchenko/ITMOProjects](https://github.com/RomanVassilchenko/ITMOProjects), [testpassword](https://github.com/testpassword?tab=repositories) | Репозитории студентов (до 2022) |
 | [Zerumi-ITMO-Related](https://github.com/Zerumi-ITMO-Related), [XVIIStarPlatinum/ITMO](https://github.com/XVIIStarPlatinum/ITMO), [Kuchizu/ItmoLabs](https://github.com/Kuchizu/ItmoLabs), [FEgor04/labs](https://github.com/FEgor04/labs), [sultanowskii/itmo-edu](https://github.com/sultanowskii/itmo-edu) | Репозитории студентов (2022-2026) |
-|  [petrovviacheslav/myitmo](https://github.com/petrovviacheslav/myitmo), [bilyardvmetro/ITMO-System-Application-Software](https://github.com/bilyardvmetro/ITMO-System-Application-Software), [Gastozavr/itmo](https://github.com/Gastozavr/itmo), [awesoma31/ITMO_Labs](https://github.com/awesoma31/ITMO_Labs), [deadxraver](https://github.com/deadxraver/deadxraver/blob/87c813436568571e5eabef93752cdec5a6b5d9ce/README.md) | Репозитории студентов (2023-2027) |
+|  [petrovviacheslav/myitmo](https://github.com/petrovviacheslav/myitmo), [bilyardvmetro/ITMO-System-Application-Software](https://github.com/bilyardvmetro/ITMO-System-Application-Software), [Gastozavr/itmo](https://github.com/Gastozavr/itmo), [awesoma31/ITMO_Labs](https://github.com/awesoma31/ITMO_Labs), [deadxraver](https://github.com/deadxraver/deadxraver/blob/87c813436568571e5eabef93752cdec5a6b5d9ce/README.md), [Vaneshik/VT-Labs](https://github.com/Vaneshik/VT-Labs), [2BuRy1/itmo](https://github.com/2BuRy1/itmo) | Репозитории студентов (2023-2027) |
 | [AstroSoup/ITMO.STUDY](https://github.com/AstroSoup/ITMO.STUDY), [ldpst/itmo](https://github.com/ldpst/itmo) | Репозитории студентов (2024-2028) |
-| [CandyGoose/ITMO_Software_engineering](https://github.com/CandyGoose/ITMO_Software_engineering) | Отличный репозиторий с лабами/заданиями **нейротеха** (+ много разных факультативов) |
+| [CandyGoose/ITMO_Software_engineering](https://github.com/CandyGoose/ITMO_Software_engineering) | :star: Отличный репозиторий с лабами/заданиями **нейротеха** (+ много разных факультативов) |
 | [buffer404/university](https://github.com/buffer404/university) | Много лаб с направления **ИВТ** |
 | [MakeCheerfulUpload](https://github.com/orgs/MakeCheerfulUpload/repositories) | Сборник работ 1 сема |
 | [205826.github.io](https://205826.github.io) | Полезные ссылки для первого курса |
