@@ -80,7 +80,7 @@
 | Ссылка | Описание |
 | --- | --- |
 | [dbms-full-2025.pdf](./dbms-full-2025.pdf) | Слайды всех лекций |
-| [youtube.com/playlist?list=PLhNobRI2f0wYVL7N4WLyOYy2DQDn7bgoQ](https://youtube.com/playlist?list=PLhNobRI2f0wYVL7N4WLyOYy2DQDn7bgoQ&si=_wFt6Lb-ZX21eT3O) | Плейлист с лекциями Распределённые системы хранения данных 2024/2025 на YouTube (*спасибо [@XVIIStarPlatinum](https://github.com/XVIIStarPlatinum/)*) |
+| [youtube.com/playlist?list=PLhNobRI2f0wYVL7N4WLyOYy2DQDn7bgoQ](https://youtube.com/playlist?list=PLhNobRI2f0wYVL7N4WLyOYy2DQDn7bgoQ&si=_wFt6Lb-ZX21eT3O) | Плейлист с лекциями «Распределённые системы хранения данных 2024/2025» на YouTube (*спасибо [@XVIIStarPlatinum](https://github.com/XVIIStarPlatinum/)*) |
 
 ## Лицензия <a name="license"></a>
 
