@@ -2,7 +2,7 @@
 
 > Системное и прикладное программное обеспечение в Университете |/iТМО<br><sub><sup>(Механико-оптическое и часовое отделение Ремесленного училища цесаревича Николая)</sup></sub>
 
-<img alt="Let's all love Lain!" src="https://github.com/maxbarsukov/itmo/blob/master/.docs/lain4.gif" height="220">
+<img alt="Let's all love Lain!" src="https://github.com/maxbarsukov/itmo/blob/master/.docs/lain4.gif" width="610">
 
 | :exclamation: <b>Любое копирование материалов целиком или частично,<br>но без ссылки на автора, является кражей интеллектуальной собственности.<br>Это плагиат, за который из ИТМО отчисляют.</b> :exclamation: |
 |-----------------------------------------|
