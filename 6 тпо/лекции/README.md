@@ -4,9 +4,6 @@
 
 <img alt="mitsuha-miyamizu" src="https://github.com/maxbarsukov/itmo/blob/master/.docs/mitsuha-miyamizu.gif" height="300">
 
-- [Слайды лекций с комментариями](./Материалы%20лекций.pdf);
-- [Плейлист с лекциями «Тестирование ПО 2020/2021» на YouTube](https://www.youtube.com/playlist?list=PLBWafxh1dFuxSlcqz5099WzvHhiIgaa8v);
-
 ---
 
 ### Лекция 1. Основные понятия
@@ -39,3 +36,19 @@
 
 - [Лекция](https://www.youtube.com/watch?v=_aiSDNdPU4k&list=PLBWafxh1dFuxSlcqz5099WzvHhiIgaa8v&index=6&pp=iAQB);
 - [Конспект](https://docs.ryodan.tech/s/931819b5-2981-4ab3-828c-598df312ec54).
+
+---
+
+## Полезные ссылки
+
+| Ссылка | Описание |
+| --- | --- |
+| [Материалы лекций.pdf](./Материалы%20лекций.pdf) | Слайды лекций с комментариями |
+| [youtube.com/playlist?list=PLBWafxh1dFuxSlcqz5099WzvHhiIgaa8v](https://www.youtube.com/playlist?list=PLBWafxh1dFuxSlcqz5099WzvHhiIgaa8v) | Плейлист с лекциями «Тестирование ПО 2020/2021» на YouTube |
+
+## Лицензия <a name="license"></a>
+
+Проект доступен с открытым исходным кодом на условиях [Лицензии GNU GPL 3](https://opensource.org/license/gpl-3-0/). \
+*Авторские права 2025 Max Barsukov*
+
+**Поставьте звезду :star:, если вы нашли этот проект полезным.**
