@@ -192,7 +192,7 @@ ___
 | [205826.github.io](https://205826.github.io) | Полезные ссылки для первого курса |
 | [picloud.pw](https://picloud.pw/about/) | Хранилище работ до 2020 года |
 | [rosroble.github.io](https://rosroble.github.io/) | Конспекты к лабораторным |
-| [t.me/ITMOhomework](https://t.me/ITMOhomework) | Примеры готовых лабораторных работ |
+| [t.me/ITMOhomework](https://t.me/ITMOhomework) | :star: Telegram-канал с большим количеством материалов по различным предметам, в т.ч. примеры готовых лабораторных работ |
 | [t.me/vt_itmo_bot](https://t.me/vt_itmo_bot) | Бот содержит материалы многих рубежек/тестов + даёт ссылки на нужные репозитории |
 | [Полезные ссылки для первокурсников ВТ, 2022](https://telegra.ph/Poleznye-ssylki-dlya-pervokursnikov-VT-08-26) | Другие полезные ссылки |
 
@@ -211,7 +211,6 @@ ___
 
 Ожидается, что все, кто взаимодействует с учебными материалами, кодовыми базами, системами отслеживания проблем, чатами и списками рассылки проекта **itmo**, будут следовать [кодексу поведения](https://github.com/maxbarsukov/itmo/blob/master/CODE_OF_CONDUCT.md).
 
-
 ## Лицензия <a name="license"></a>
 
 [![License: CC BY-NC-SA 4.0](https://licensebuttons.net/l/by-nc-sa/4.0/80x15.png)](https://creativecommons.org/licenses/by-nc-sa/4.0/)
@@ -219,5 +218,7 @@ ___
 Проект доступен с открытым исходным кодом на условиях [Лицензии CC BY-NC-SA 4.0](./LICENSE). \
 *Авторские права 2025 Максим Барсуков*
 
+> [!NOTE]
+> <picture> <source srcset="https://count.getloli.com/@maxbarsukov?name=maxbarsukov&theme=moebooru-h&padding=6&offset=0&align=top&scale=1&pixelated=1&darkmode=1" media="(prefers-color-scheme: dark)" alt="Количество просмотров" height="85" align="left"/><source srcset="https://count.getloli.com/@maxbarsukov?name=maxbarsukov&theme=moebooru-h&padding=6&offset=0&align=top&scale=1&pixelated=1&darkmode=0" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)" alt="Количество просмотров" height="85" align="left"/><img src="https://count.getloli.com/@maxbarsukov?name=maxbarsukov&theme=moebooru-h&padding=6&offset=0&align=top&scale=1&pixelated=1&darkmode=0" alt="Количество просмотров" height="85" align="left"/></picture><i>Если репозиторий просмотрен уже  <br>раз, но никто не оставил звезду — <br> был ли вообще этот просмотр? <br>Спасибо, что делаете его реальным!</i>
 
 **Поставьте звезду :star:, если вы нашли этот проект полезным.**
