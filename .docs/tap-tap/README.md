@@ -3,6 +3,9 @@
 > [!NOTE]
 > Сделано с помощью [sergatv.neocities.org](https://sergatv.neocities.org/).
 
+> [!TIP]
+> Я буду рад увидеть ваши предложения, которые вы хотели бы добавить в репозиторий. Не стесняйтесь отправлять **Pull request** :mailbox_with_mail:, чтобы я добавил вашу GIFку!
+
 Большое спасибо творческому объединению [*@kiviandgoose*](https://t.me/kiviandgoose) и [*@sniyaq*](https://t.me/sniyaq) лично за идею и большую часть исходных GIF. Без вас ничего этого не было бы!
 
 Оригинальный стикерпак: [t.me/addstickers/itmop_by_fStikBot](https://t.me/addstickers/itmop_by_fStikBot).
@@ -35,6 +38,7 @@
 | <img alt="penskoy" src="./penskoy.gif" height="60"> | Пенской |
 | <img alt="perl" src="./perl.gif" height="60"> | Перл |
 | <img alt="pismak" src="./pismak.gif" height="60"> | Письмак |
+| <img alt="pogrebnyak" src="./pogrebnyak.gif" height="60"> | Погребняк |
 | <img alt="polyakov" src="./polyakov.gif" height="60"> <br> <img alt="" src="./polyakov2.gif" height="60"> | Поляков |
 | <img alt="pravdin" src="./pravdin.gif" height="60"> | Правдин |
 | <img alt="ptitsyn" src="./ptitsyn.gif" height="60"> | Птицын |
