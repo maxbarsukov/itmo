@@ -178,7 +178,7 @@ ___
 
 | Ссылка | Описание |
 | --- | --- |
-| [yank0vy3rdna.github.io/itmo-faq/](https://yank0vy3rdna.github.io/itmo-faq/) | :star: Гайд для первокурсников и абитуриентов |
+| [yank0vy3rdna.github.io/itmo-faq/](https://yank0vy3rdna.github.io/itmo-faq/) <br> [e1turin.github.io/itmo-abit/faq](https://e1turin.github.io/itmo-abit/faq) | :star: Гайды для первокурсников и абитуриентов |
 | [github.com/Imtjl/1st-year-guide](https://github.com/Imtjl/1st-year-guide) <br> [github.com/Imtjl/2nd-year-guide](https://github.com/Imtjl/2nd-year-guide) | :star: Гайд для первого курса <br> :star: Гайд для второго курса |
 | [docs.google.com/spreadsheets/...](https://docs.google.com/spreadsheets/d/1TFTOKxqml1agwgo6Vp0Ql6Rgj9f9ciyOqQPF8VvUkJQ/edit?gid=591156939#gid=591156939) | Таблица с отзывами на лекторов / практиков |
 | [Imtjl](https://github.com/Imtjl), [EgorMIt/ITMO](https://github.com/EgorMIt/ITMO), [RedGry/ITMO](https://github.com/RedGry/ITMO), [band-of-four/cheatsheets](https://github.com/band-of-four/cheatsheets) | :star: Другие популярные репозитории с работами |
@@ -194,7 +194,8 @@ ___
 | [rosroble.github.io](https://rosroble.github.io/) | Конспекты к лабораторным |
 | [t.me/ITMOhomework](https://t.me/ITMOhomework) | :star: Telegram-канал с большим количеством материалов по различным предметам, в т.ч. примеры готовых лабораторных работ |
 | [t.me/vt_itmo_bot](https://t.me/vt_itmo_bot) | Бот содержит материалы многих рубежек/тестов + даёт ссылки на нужные репозитории |
-| [Полезные ссылки для первокурсников ВТ, 2022](https://telegra.ph/Poleznye-ssylki-dlya-pervokursnikov-VT-08-26) | Другие полезные ссылки |
+| [t.me/kiviandgoose](https://t.me/kiviandgoose) | Telegram-канал с кучей разных ИТМОшных мемов |
+| [Полезные ссылки для первокурсников ВТ](https://telegra.ph/Poleznye-ssylki-dlya-pervokursnikov-VT-08-26) | Другие полезные ссылки (2022) |
 
 ---
 
