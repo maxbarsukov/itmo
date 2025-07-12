@@ -35,9 +35,22 @@
 - [Этап №3 (90/100)](https://github.com/maxbarsukov/MyFilmList/blob/master/docs/part3/report.pdf);
 - [Этап №4 (90/100)](https://github.com/maxbarsukov/MyFilmList/blob/master/docs/part4/report.pdf).
 
+## Лекции
+
+- [Лекция №1. Java EE & Beans](./лекции/is1-javaee.pdf);
+- [Лекция №2. Jakarta Persistence](./лекции/is2-persistence.pdf);
+- [Лекция №3. Введение в Spring Framework](./лекции/is3-spring.pdf);
+- [Лекция №4. Транзакции](./лекции/is4-transactions.pdf);
+- [Лекция №5. EJB](./лекции/is5-ejb.pdf);
+- [Лекция №6. Распределенные транзакции](./лекции/is6-distributed.pdf).
+
 ## Рубежная работа
 
 - [Рубежная работа (85/100)](./рубежка/).
+
+## Экзамен
+
+- [Экзамен](./экзамен/).
 
 ---
 
