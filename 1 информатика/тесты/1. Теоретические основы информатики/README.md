@@ -3,6 +3,7 @@
 ## Аттестационный тест №1
 
 - [Вопросы + Ответы](./Аттестационный%20тест/answers.pdf);
+- [Ответы на 1 ЦДО по информатике](https://docs.google.com/document/d/1ist0inCu-R825WZbU0f0yOEgP-tKA2mNIz10meXCw0k/edit);
 - Результат: 10/10.
 
 ---
