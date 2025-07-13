@@ -46,12 +46,12 @@
 
 | Ссылка | Описание |
 | --- | --- |
-| https://github.com/VeraKasianenko/Fundamentals_of_SE/tree/main/lab1 | Пример хорошей ЛР1 |
+| [github.com/VeraKasianenko/Fundamentals_of_SE/lab1](https://github.com/VeraKasianenko/Fundamentals_of_SE/tree/main/lab1) | Пример хорошей ЛР1 |
 | [Конспект лекций v1.4.0](https://se.ifmo.ru/documents/10180/671657/%D0%9B%D0%B5%D0%BA%D1%86%D0%B8%D0%B8+%D0%BF%D0%BE+%D0%9E%D0%9F%D0%98+v1.3.3.pdf/50ce1e06-00d9-4900-be9c-a3316a746d6d) | Конспект лекций |
-| [ОПИ, весна 23/24, 2 курс](https://docs.google.com/spreadsheets/d/1G5DiqM7wJt3m5EmKG1V1vv9qNsdL3ztSSQO-QfhJ1WM/edit#gid=1166494430) | Журнал 2024 |
-| https://notesitmo.github.io/cse-notes/second-course/methods-means-SE/lab-1.html | Обзор теории |
+| [notesitmo.github.io/cse-notes/second-course/methods-means-SE/lab-1.html](https://notesitmo.github.io/cse-notes/second-course/methods-means-SE/lab-1.html) | Обзор теории |
 | https://habr.com/ru/articles/52681/ | Гайд по SRS |
-| https://habr.com/ru/companies/edison/articles/269789/ | Гайд по методологиям разработки |
+| [habr.com/ru/articles/269789/](https://habr.com/ru/companies/edison/articles/269789/) | Гайд по методологиям разработки |
+| [www.uml-diagrams.org/use-case-diagrams-examples.html](https://www.uml-diagrams.org/use-case-diagrams-examples.html) | Примеры Use-Case диаграмм |
 
 ## Лицензия <a name="license"></a>
 
