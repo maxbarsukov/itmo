@@ -58,3 +58,10 @@
 | Ссылка | Описание |
 | --- | --- |
 | [youtube.com/playlist?list=PLSE8ODhjZXjYCZfIbmEWH7f6MnYqyPwCE](https://www.youtube.com/playlist?list=PLSE8ODhjZXjYCZfIbmEWH7f6MnYqyPwCE) | CMU Special Topics in Database: Query Optimization / Не прям в тему лабы, но отличный материал по оптимизации SQL-запросов для любознательных |
+
+## Лицензия <a name="license"></a>
+
+Проект доступен с открытым исходным кодом на условиях [Лицензии GNU GPL 3](https://opensource.org/license/gpl-3-0/). \
+*Авторские права 2025 Max Barsukov*
+
+**Поставьте звезду :star:, если вы нашли этот проект полезным.**
