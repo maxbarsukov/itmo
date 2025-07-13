@@ -11,14 +11,14 @@
 
 - 3 семестр: **5A** (100/100 баллов)
 
+---
+
 ## Полезные ссылки
 
 | Ссылка | Описание |
 | --- | --- |
 | [drive.google.com/drive/...](https://drive.google.com/drive/folders/1zsQkFSzktJnkVNw-pr8x8Gu1g0GZFC1j) | Материалы курса (2023) |
 | [drive.google.com/drive/...](https://drive.google.com/drive/folders/1Jpn87TEAm56WrU13bRPqDc1i8xqBwatU) | Практики одного из потоков |
-
----
 
 ## Лицензия <a name="license"></a>
 
