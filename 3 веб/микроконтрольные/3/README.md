@@ -2,7 +2,8 @@
 
 ## Вариант 01234
 
-- [Разбор микроконтрольной](https://github.com/worthant/web-programming-course/blob/main/test3.md#%D0%B2%D0%B0%D1%80%D0%B8%D0%B0%D0%BD%D1%82%D1%8B-01234) от [*@worthant*](https://github.com/worthant).
+- [Разбор микроконтрольной](https://github.com/worthant/web-programming-course/blob/main/test3.md#%D0%B2%D0%B0%D1%80%D0%B8%D0%B0%D0%BD%D1%82%D1%8B-01234) от [*@worthant*](https://github.com/worthant);
+- [Разбор микроконтрольной](https://github.com/eliteSufferer/ITMO_Studies/blob/main/Web/web_mk3.md#%D0%B2%D0%B0%D1%80%D0%B8%D0%B0%D0%BD%D1%82%D1%8B-01234) от [*@eliteSufferer*](https://github.com/eliteSufferer).
 
 ### 1. В чём отличия типизации между JS и Java?
 
@@ -85,7 +86,8 @@ function removeLinks() {
 
 ## Вариант 56789
 
-- [Разбор микроконтрольной](https://github.com/worthant/web-programming-course/blob/main/test3.md#%D0%B2%D0%B0%D1%80%D0%B8%D0%B0%D0%BD%D1%82%D1%8B-56789) от [*@worthant*](https://github.com/worthant).
+- [Разбор микроконтрольной](https://github.com/worthant/web-programming-course/blob/main/test3.md#%D0%B2%D0%B0%D1%80%D0%B8%D0%B0%D0%BD%D1%82%D1%8B-56789) от [*@worthant*](https://github.com/worthant);
+- [Разбор микроконтрольной](https://github.com/eliteSufferer/ITMO_Studies/blob/main/Web/web_mk3.md#%D0%B2%D0%B0%D1%80%D0%B8%D0%B0%D0%BD%D1%82%D1%8B-56789) от [*@eliteSufferer*](https://github.com/eliteSufferer).
 
 ### 1. Для чего нужна конструкция `@extend` в SCSS?
 

@@ -20,6 +20,7 @@
 | [Разбор рубежки](https://github.com/sub-myitmo/web-rubezhka1) |
 | [Билеты рубежки (2022)](./Билеты%20Веб%20рубеж%201%202022.pdf) |
 | [Расписанная теория для рубежки](./РубежВеб1.docx) |
+| [Разбор практических заданий](https://github.com/eliteSufferer/ITMO_Studies/blob/main/Web/scripts-rubezhka.md) |
 
 ## Лицензия <a name="license"></a>
 

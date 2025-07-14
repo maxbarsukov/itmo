@@ -2,7 +2,8 @@
 
 ## Вариант 13579
 
-- [Разбор микроконтрольной](https://github.com/worthant/web-programming-course/blob/main/test4.md#%D0%B2%D0%B0%D1%80%D0%B8%D0%B0%D0%BD%D1%82%D1%8B-13579) от [*@worthant*](https://github.com/worthant).
+- [Разбор микроконтрольной](https://github.com/worthant/web-programming-course/blob/main/test4.md#%D0%B2%D0%B0%D1%80%D0%B8%D0%B0%D0%BD%D1%82%D1%8B-13579) от [*@worthant*](https://github.com/worthant);
+- [Разбор микроконтрольной](https://github.com/eliteSufferer/ITMO_Studies/blob/main/Web/mk4.md#%D0%B2%D0%B0%D1%80%D0%B8%D0%B0%D0%BD%D1%82%D1%8B-13579) от [*@eliteSufferer*](https://github.com/eliteSufferer).
 
 ### 1. Почему `RequestDispatcher` через контекст сервлета можно получить только по абсолютному пути?
 
@@ -83,7 +84,8 @@ public class MyServlet extends HttpServlet {
 
 ## Вариант 02468
 
-- [Разбор микроконтрольной](https://github.com/worthant/web-programming-course/blob/main/test4.md#%D0%B2%D0%B0%D1%80%D0%B8%D0%B0%D0%BD%D1%82%D1%8B-24680) от [*@worthant*](https://github.com/worthant).
+- [Разбор микроконтрольной](https://github.com/worthant/web-programming-course/blob/main/test4.md#%D0%B2%D0%B0%D1%80%D0%B8%D0%B0%D0%BD%D1%82%D1%8B-24680) от [*@worthant*](https://github.com/worthant);
+- [Разбор микроконтрольной](https://github.com/eliteSufferer/ITMO_Studies/blob/main/Web/mk4.md#%D0%B2%D0%B0%D1%80%D0%B8%D0%B0%D0%BD%D1%82-24680) от [*@eliteSufferer*](https://github.com/eliteSufferer).
 
 ### 1. В каком порядке вызываются фильтры в `FilterChain`?
 

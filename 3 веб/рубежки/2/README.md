@@ -19,6 +19,8 @@
 | [Разбор рубежки от Декафа](https://www.youtube.com/watch?v=ylU-BFjhvD8) |
 | [Сборник билетов](https://docs.google.com/document/d/1lNUjNyu-ybeYOqlt1ypfulWUxTpSIYkuaBl4qFK_Ipc/edit) |
 | [Старый разбор билетов](https://docs.google.com/document/d/1D1_kqO2uKzI1KBHiUZXV9C-IkrAS2kd8Cti5NC0MXhE/mobilebasic#heading=h.xfc4cqw9jyj) |
+| [Расписанная половина билетов 2-го рубежа по вебу](https://github.com/eliteSufferer/ITMO_Studies/blob/main/Web/rubezka%232.md) |
+| [Разбор некоторых билетов](https://github.com/eliteSufferer/ITMO_Studies/blob/main/Web/rubezhka%232_latest.md) |
 | [Подготовка к рубежке №2 (2020)](https://docs.google.com/document/d/1rxs4s0Doio-lO-AE80VbveIL1emfbnPkMmfbh-jJUVc) |
 | [Билеты с второй переписи рубежки](./Рубеж2%202%20перепись.docx) |
 

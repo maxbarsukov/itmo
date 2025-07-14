@@ -24,6 +24,17 @@
 - [Лабораторная работа №3 (12/12)](https://github.com/maxbarsukov-itmo/web-3);
 - [Лабораторная работа №4 (12/12)](https://github.com/maxbarsukov-itmo/web-4).
 
+## Микроконтрольные
+
+Почти на каждой лекции (включая первую) будет проводиться микроконтрольные. Всего их 6, каждая стоит 2 балла (то есть 12 баллов за все). Баллы за микрокры не стесняются резать, поэтому если хотите **5A**, крайне желательно написать их все.
+
+- [Микроконтрольная №1](./микроконтрольные/1/);
+- [Микроконтрольная №2](./микроконтрольные/2/);
+- [Микроконтрольная №3](./микроконтрольные/3/);
+- [Микроконтрольная №4](./микроконтрольные/4/);
+- [Микроконтрольная №5](./микроконтрольные/5/);
+- [Микроконтрольная №6](./микроконтрольные/6/).
+
 ## Рубежные работы
 
 - [Рубежная работа №1 (9.5/10)](./рубежки/1);
@@ -41,7 +52,8 @@
 
 | Ссылка | Описание |
 | --- | --- |
-| [docs.google.com/spreadsheets/d/...](https://docs.google.com/spreadsheets/d/1quq4LCK7EXYgNiAnbCFnsg54IUDDKf5Ei-4Fn-CuVuk/edit?gid=30654966#gid=30654966) | Журнал Веб 2023/24 |
+| [docs.google.com/spreadsheets/d/...](https://docs.google.com/spreadsheets/d/1quq4LCK7EXYgNiAnbCFnsg54IUDDKf5Ei-4Fn-CuVuk/edit?gid=30654966#gid=30654966) <br> [docs.google.com/spreadsheets/d/...](https://docs.google.com/spreadsheets/d/1vs1xQkT7KoZPZGVcM2BVqdXDqxqEZBsplkQocgepxxU/edit?gid=1268936541#gid=1268936541) | Журнал Веб 2023/24 <br> Журнал Веб 2024/25 |
+| [лекции/Программирование интернет-приложений.pdf](./лекции/Программирование%20интернет-приложений.pdf) | Слайды лекций |
 | [github.com/AppLoidx/Web-Development-Cheats](https://github.com/AppLoidx/Web-Development-Cheats) | Web Development Cheatsheets |
 | [github.com/EgorMIt/ITMO/tree/master/2%20-%20Веб-Программирование](https://github.com/EgorMIt/ITMO/tree/master/2%20-%20Веб-Программирование) | Ответы на вопросы к лабам |
 | [github.com/worthant/web-programming-course](https://github.com/worthant/web-programming-course) | Хорошо выполненные лабораторные работы |
