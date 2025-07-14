@@ -15,6 +15,7 @@
 | <img alt="abdadzhandadze" src="./abdadzhandadze.gif" height="60"> | Абдаджандадзе |
 | <img alt="aliev" src="./aliev.gif" height="60"> | Алиев |
 | <img alt="balakshin" src="./balakshin.gif" height="60"> | Балакшин |
+| <img alt="balkanskiy" src="./balkanskiy.gif" height="60"> | Балканский |
 | <img alt="bessmertniy" src="./bessmertniy.gif" height="60"> | Бессмертный |
 | <img alt="bostrikova" src="./bostrikova.gif" height="60"> | Бострикова |
 | <img alt="bykovskiy" src="./bykovskiy.gif" height="60"> | Быковский |
