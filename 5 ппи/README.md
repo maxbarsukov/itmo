@@ -1,6 +1,6 @@
 # Проектирование пользовательских интерфейсов
 
-<img alt="picking-card" src="https://github.com/maxbarsukov/itmo/blob/master/.docs/picking-card.gif" height="260">
+<img alt="edward-balance" src="https://github.com/maxbarsukov/itmo/blob/master/.docs/edward-balance.gif" height="260">
 
 > [!TIP]
 > «Мэтч между системом и реальным ворлдом.» \
