@@ -69,7 +69,7 @@
 
 | Ссылка | Описание |
 | --- | --- |
-| [cosm-lab.science/ru/)](https://cosm-lab.science/ru/) | Веб-сайт Лаборатории COSM |
+| [cosm-lab.science/ru/](https://cosm-lab.science/ru/) | Веб-сайт Лаборатории COSM |
 | [vk.com/cosm_lab](https://vk.com/cosm_lab) | Официальная группа Лаборатории COSM |
 | [rutube.ru/channel/24199109/](https://rutube.ru/channel/24199109/) | Официальный канал Лаборатории COSM |
 | [XVIIStarPlatinum/ITMO](https://github.com/XVIIStarPlatinum/ITMO/tree/master/Software%20Engineering/Software%20Architecture) <br> [RedGry/ITMO](https://github.com/RedGry/ITMO/tree/master/Architecture%20of%20software%20systems) <br> [CodeAxeAttacks/SystemApplication...](http://github.com/CodeAxeAttacks/SystemApplicationSoftware-09.03.04-ITMO/tree/main/3rd%20stage/%D0%B0%D0%BF%D1%81) | Примеры лабораторных работ по АПС <br> *(только для ознакомления)* |
