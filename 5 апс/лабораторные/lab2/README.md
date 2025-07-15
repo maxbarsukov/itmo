@@ -1,9 +1,9 @@
-# Лабораторная работа 2
+# Лабораторная работа №2
 
 <img alt="lucky-star-2" src="https://github.com/maxbarsukov/itmo/blob/master/.docs/lucky-star-2.gif" height="200">
 
 > [!TIP]
-> Выбранные паттерны: Facade (GoF), Visitor (GoF), Controller (GRASP), Pure Fabrication (GRASP)
+> Выбранные паттерны: **Facade** (GoF), **Visitor** (GoF), **Controller** (GRASP), **Pure Fabrication** (GRASP)
 
 |.pdf|.docx|
 |-|-|
@@ -28,8 +28,7 @@
 
 ## Лицензия <a name="license"></a>
 
-Проект доступен с открытым исходным кодом на условиях [Лицензии GNU GPL 3](https://opensource.org/license/gpl-3-0/).
-
-*Авторские права 2024 Max Barsukov*
+Проект доступен с открытым исходным кодом на условиях [Лицензии GNU GPL 3](https://opensource.org/license/gpl-3-0/). \
+*Авторские права 2025 Max Barsukov*
 
 **Поставьте звезду :star:, если вы нашли этот проект полезным.**
