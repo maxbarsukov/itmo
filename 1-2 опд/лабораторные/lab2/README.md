@@ -11,3 +11,20 @@
 ![Задание](./docs/task.png)
 
 - [Отчёт](./docs/report.pdf)
+
+---
+
+## Полезные ссылки
+
+| Ссылка | Описание |
+| --- | --- |
+| [www.youtube.com/watch?v=5DXYGx7RtZY](https://www.youtube.com/watch?v=5DXYGx7RtZY) | Лучший видос для кристального понимания |
+| [docs.google.com/document/d/...](https://docs.google.com/document/d/1uIEith7IyBjr1Ml_8ONNz5hXl6lLQfBaHNtGxB_ksww/edit) | Мануал по сдаче 2 ЛР |
+| [github.com/petrovviacheslav/myitmo/OPD/README.md](https://github.com/petrovviacheslav/myitmo/blob/main/BCS_or_OPD/README.md#%D0%BF%D0%BE%D1%8F%D1%81%D0%BD%D0%B5%D0%BD%D0%B8%D0%B5-%D0%BF%D1%80%D0%BE-%D0%BE%D0%B4%D0%B7) | Пояснение про ОДЗ от [*@petrovviacheslav*](https://github.com/petrovviacheslav) |
+
+## Лицензия <a name="license"></a>
+
+Проект доступен с открытым исходным кодом на условиях [Лицензии GNU GPL 3](https://opensource.org/license/gpl-3-0/). \
+*Авторские права 2025 Max Barsukov*
+
+**Поставьте звезду :star:, если вы нашли этот проект полезным.**
