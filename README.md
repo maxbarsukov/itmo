@@ -176,26 +176,59 @@ ___
 
 [**Сайт кафедры Вычислительной техники с заданиями к работам**](https://se.ifmo.ru)
 
+### Полезные сайты
+
 | Ссылка | Описание |
 | --- | --- |
 | [yank0vy3rdna.github.io/itmo-faq/](https://yank0vy3rdna.github.io/itmo-faq/) <br> [e1turin.github.io/itmo-abit/faq](https://e1turin.github.io/itmo-abit/faq) | :star: Гайды для первокурсников и абитуриентов |
-| [github.com/Imtjl/1st-year-guide](https://github.com/Imtjl/1st-year-guide) <br> [github.com/Imtjl/2nd-year-guide](https://github.com/Imtjl/2nd-year-guide) | :star: Гайд для первого курса <br> :star: Гайд для второго курса |
-| [docs.google.com/spreadsheets/...](https://docs.google.com/spreadsheets/d/1TFTOKxqml1agwgo6Vp0Ql6Rgj9f9ciyOqQPF8VvUkJQ/edit?gid=591156939#gid=591156939) | Таблица с отзывами на лекторов / практиков |
-| [Imtjl](https://github.com/Imtjl), [EgorMIt/ITMO](https://github.com/EgorMIt/ITMO), [RedGry/ITMO](https://github.com/RedGry/ITMO), [band-of-four/cheatsheets](https://github.com/band-of-four/cheatsheets) | :star: Другие популярные репозитории с работами |
-| [Vsev0l0d](https://github.com/Vsev0l0d?tab=repositories), [RomanVassilchenko/ITMOProjects](https://github.com/RomanVassilchenko/ITMOProjects), [testpassword](https://github.com/testpassword?tab=repositories) | Репозитории студентов (до 2022) |
-| [Zerumi-ITMO-Related](https://github.com/Zerumi-ITMO-Related), [XVIIStarPlatinum/ITMO](https://github.com/XVIIStarPlatinum/ITMO), [Kuchizu/ItmoLabs](https://github.com/Kuchizu/ItmoLabs), [FEgor04/labs](https://github.com/FEgor04/labs), [sultanowskii/itmo-edu](https://github.com/sultanowskii/itmo-edu) | :star: Репозитории студентов (2022-2026) |
-|  [petrovviacheslav/myitmo](https://github.com/petrovviacheslav/myitmo), [bilyardvmetro/ITMO-System-Application-Software](https://github.com/bilyardvmetro/ITMO-System-Application-Software), [Gastozavr/itmo](https://github.com/Gastozavr/itmo), [awesoma31/ITMO_Labs](https://github.com/awesoma31/ITMO_Labs), [deadxraver](https://github.com/deadxraver/deadxraver/blob/87c813436568571e5eabef93752cdec5a6b5d9ce/README.md), [Vaneshik/VT-Labs](https://github.com/Vaneshik/VT-Labs), [2BuRy1/itmo](https://github.com/2BuRy1/itmo) | :star: Репозитории студентов (2023-2027) |
-| [AstroSoup/ITMO.STUDY](https://github.com/AstroSoup/ITMO.STUDY), [ldpst/itmo](https://github.com/ldpst/itmo) | Репозитории студентов (2024-2028) |
-| [CandyGoose/ITMO_Software_engineering](https://github.com/CandyGoose/ITMO_Software_engineering) | :star: Отличный репозиторий с лабами/заданиями **нейротеха** (+ много разных факультативов) |
-| [buffer404/university](https://github.com/buffer404/university) | Много лаб с направления **ИВТ** |
-| [MakeCheerfulUpload](https://github.com/orgs/MakeCheerfulUpload/repositories) | Сборник работ 1 сема |
+| [my.itmo.ru](https://my.itmo.ru) | :star: Упрощённая версия ИСУ, главный студенческий портал |
+| [isu.ifmo.ru](https://isu.ifmo.ru) | :star: Основной портал (ИСУ) с полной информацией об учёбе |
+| [se.ifmo.ru](https://se.ifmo.ru) | :star: Сайт с заданиями к большинству лабораторных работ |
+| [bars.itmo.ru](https://bars.itmo.ru/) | Балльно-рейтинговая система (Электронный журнал) |
+| [kronbars.itmo.ru](https://kronbars.itmo.ru) | Всё про физкультуру и спорт в ИТМО |
+| [student.itmo.ru](https://student.itmo.ru/ru/) | Портал с ответами на общие вопросы по студенческой жизни |
+| [псж.онлайн](https://псж.онлайн) | Гарантированный отдых от учебы |
+| [docs.google.com/spreadsheets/...](https://docs.google.com/spreadsheets/d/1TFTOKxqml1agwgo6Vp0Ql6Rgj9f9ciyOqQPF8VvUkJQ/edit?gid=591156939#gid=591156939) <br> [docs.google.com/spreadsheets/...](http://docs.google.com/spreadsheets/d/1wncYkv1fR64b7Y3Kk-fs3JnK4EUCwGZ7Bn7tJG5avz0/edit?gid=0#gid=0) | Таблицы с отзывами на лекторов / практиков |
+| [itmo.maxbarsukov.ru/repo/](https://itmo.maxbarsukov.ru/repo/) | Удобная для скачивания версия этого репозитория |
 | [205826.github.io](https://205826.github.io) | Полезные ссылки для первого курса |
 | [picloud.pw](https://picloud.pw/about/) | Хранилище работ до 2020 года |
 | [rosroble.github.io](https://rosroble.github.io/) | Конспекты к лабораторным |
-| [t.me/ITMOhomework](https://t.me/ITMOhomework) | :star: Telegram-канал с большим количеством материалов по различным предметам, в т.ч. примеры готовых лабораторных работ |
-| [t.me/vt_itmo_bot](https://t.me/vt_itmo_bot) | Бот содержит материалы многих рубежек/тестов + даёт ссылки на нужные репозитории |
-| [t.me/kiviandgoose](https://t.me/kiviandgoose) | Telegram-канал с кучей разных ИТМОшных мемов |
 | [Полезные ссылки для первокурсников ВТ](https://telegra.ph/Poleznye-ssylki-dlya-pervokursnikov-VT-08-26) | Другие полезные ссылки (2022) |
+
+### Полезные репозитории для ознакомления
+
+| Ссылка | Описание |
+| --- | --- |
+| [github.com/Imtjl/1st-year-guide](https://github.com/Imtjl/1st-year-guide) <br> [github.com/Imtjl/2nd-year-guide](https://github.com/Imtjl/2nd-year-guide) | :star: Гайд для первого курса <br> :star: Гайд для второго курса |
+| [Imtjl](https://github.com/Imtjl), [EgorMIt/ITMO](https://github.com/EgorMIt/ITMO), [RedGry/ITMO](https://github.com/RedGry/ITMO), [band-of-four/cheatsheets](https://github.com/band-of-four/cheatsheets) | :star: Другие популярные репозитории с работами |
+| [Vsev0l0d](https://github.com/Vsev0l0d?tab=repositories), [RomanVassilchenko/ITMOProjects](https://github.com/RomanVassilchenko/ITMOProjects), [testpassword](https://github.com/testpassword?tab=repositories) | Репозитории студентов (до 2022) |
+| [Zerumi-ITMO-Related](https://github.com/Zerumi-ITMO-Related), [XVIIStarPlatinum/ITMO](https://github.com/XVIIStarPlatinum/ITMO), [Kuchizu/ItmoLabs](https://github.com/Kuchizu/ItmoLabs), [FEgor04/labs](https://github.com/FEgor04/labs), [sultanowskii/itmo-edu](https://github.com/sultanowskii/itmo-edu), [belovlaska/itmo](https://github.com/belovlaska/itmo) | :star: Репозитории студентов (2022-2026) |
+|  [petrovviacheslav/myitmo](https://github.com/petrovviacheslav/myitmo), [bilyardvmetro/ITMO-System-Application-Software](https://github.com/bilyardvmetro/ITMO-System-Application-Software), [Gastozavr/itmo](https://github.com/Gastozavr/itmo), [awesoma31/ITMO_Labs](https://github.com/awesoma31/ITMO_Labs), [deadxraver](https://github.com/deadxraver/deadxraver/blob/87c813436568571e5eabef93752cdec5a6b5d9ce/README.md), [Vaneshik/VT-Labs](https://github.com/Vaneshik/VT-Labs), [2BuRy1/itmo](https://github.com/2BuRy1/itmo) | :star: Репозитории студентов (2023-2027) |
+| [AstroSoup/ITMO.STUDY](https://github.com/AstroSoup/ITMO.STUDY), [ldpst/itmo](https://github.com/ldpst/itmo) | Репозитории студентов (2024-2028) |
+| [CandyGoose/ITMO_Software_engineering](https://github.com/CandyGoose/ITMO_Software_engineering) | :star: Отличный репозиторий с лабами **Нейротеха** (+ факультативs) |
+| [buffer404/university](https://github.com/buffer404/university) | Много лаб с направления **ИВТ** |
+| [MakeCheerfulUpload](https://github.com/orgs/MakeCheerfulUpload/repositories) | Сборник работ 1 семестра |
+
+### Полезные Telegram-каналы
+
+| Ссылка | Описание |
+| --- | --- |
+| [t.me/itmolnia](https://t.me/itmolnia) | :star: Главный новостной канал для студентов |
+| [t.me/itmouniverse_b](https://t.me/itmouniverse_b) | Канал для знакомства с ИТМО 1-3 сентября |
+| [t.me/momentitmo](https://t.me/momentitmo) | Канал с анонсами мероприятий |
+| [t.me/ITMO_print_bot](https://t.me/ITMO_print_bot) | Бот для бесплатного использования принтеров (50 листов на семестр) |
+| [t.me/ITMOhomework](https://t.me/ITMOhomework) | :star: Telegram-канал с большим количеством материалов по различным предметам, в т.ч. примеры готовых лабораторных работ (*для добавления писать [@ITMOAdmin](https://t.me/ITMOAdmin)*) |
+| [t.me/vt_itmo_bot](https://t.me/vt_itmo_bot) | Бот содержит материалы многих рубежек/тестов + даёт ссылки на нужные репозитории |
+| [t.me/militaryitmo](https://t.me/militaryitmo) | Всё про военную кафедру |
+| [t.me/kiviandgoose](https://t.me/kiviandgoose) | :star: Мемы и юмор ВТ |
+| [t.me/serge_klimenkov](https://t.me/serge_klimenkov) | *Канал главного препода* |
+| [t.me/vitmozasipashki](https://t.me/vitmozasipashki) | Засыпашки ИТМО |
+| [t.me/ia_panorama_itmo](https://t.me/ia_panorama_itmo) | ИА Панорама ИТМО |
+| [t.me/itmoushen](https://t.me/itmoushen) | Студенческая подслушка |
+| [t.me/vtflood](https://t.me/vtflood) | :star: Общий чат для флуда студентов ВТ |
+| [t.me/itmoru](https://t.me/itmoru) | :star: Официальный канал ИТМО |
+| [t.me/itmo_students](https://t.me/itmo_students) | Официальный канал ITMO STUDENTS |
+| [t.me/PICT_ITMO](https://t.me/PICT_ITMO) | Официальный канал ФПИиКТ |
 
 ---
 
