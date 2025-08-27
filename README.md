@@ -35,6 +35,7 @@ ___
 ---
 
 ## Оглавление
+
 1. [Обновления](#updates)
 2. [Предметы](#disciplines)
 3. [Полезные ссылки](#links)
@@ -173,8 +174,6 @@ ___
 
 ## Полезные ссылки <a name="links"></a>
 
-[**Сайт кафедры Вычислительной техники с заданиями к работам**](https://se.ifmo.ru)
-
 ### Полезные сайты
 
 | Ссылка | Описание |
@@ -182,7 +181,7 @@ ___
 | [yank0vy3rdna.github.io/itmo-faq/](https://yank0vy3rdna.github.io/itmo-faq/) <br> [e1turin.github.io/itmo-abit/faq](https://e1turin.github.io/itmo-abit/faq) | :star: Гайды для первокурсников и абитуриентов |
 | [my.itmo.ru](https://my.itmo.ru) | :star: Упрощённая версия ИСУ, главный студенческий портал |
 | [isu.ifmo.ru](https://isu.ifmo.ru) | :star: Основной портал (ИСУ) с полной информацией об учёбе |
-| [se.ifmo.ru](https://se.ifmo.ru) | :star: Сайт с заданиями к большинству лабораторных работ |
+| [se.ifmo.ru](https://se.ifmo.ru) | :star: Сайт кафедры с заданиями к лабораторным работам |
 | [bars.itmo.ru](https://bars.itmo.ru/) | Балльно-рейтинговая система (Электронный журнал) |
 | [kronbars.itmo.ru](https://kronbars.itmo.ru) | Всё про физкультуру и спорт в ИТМО |
 | [student.itmo.ru](https://student.itmo.ru/ru/) | Портал с ответами на общие вопросы по студенческой жизни |
