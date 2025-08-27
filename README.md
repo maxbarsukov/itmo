@@ -204,7 +204,7 @@ ___
 | [Zerumi-ITMO-Related](https://github.com/Zerumi-ITMO-Related), [XVIIStarPlatinum/ITMO](https://github.com/XVIIStarPlatinum/ITMO), [Kuchizu/ItmoLabs](https://github.com/Kuchizu/ItmoLabs), [FEgor04/labs](https://github.com/FEgor04/labs), [sultanowskii/itmo-edu](https://github.com/sultanowskii/itmo-edu), [belovlaska/itmo](https://github.com/belovlaska/itmo) | :star: Репозитории студентов (2022-2026) |
 |  [petrovviacheslav/myitmo](https://github.com/petrovviacheslav/myitmo), [bilyardvmetro/ITMO-System-Application-Software](https://github.com/bilyardvmetro/ITMO-System-Application-Software), [Gastozavr/itmo](https://github.com/Gastozavr/itmo), [awesoma31/ITMO_Labs](https://github.com/awesoma31/ITMO_Labs), [deadxraver](https://github.com/deadxraver/deadxraver/blob/87c813436568571e5eabef93752cdec5a6b5d9ce/README.md), [Vaneshik/VT-Labs](https://github.com/Vaneshik/VT-Labs), [2BuRy1/itmo](https://github.com/2BuRy1/itmo) | :star: Репозитории студентов (2023-2027) |
 | [AstroSoup/ITMO.STUDY](https://github.com/AstroSoup/ITMO.STUDY), [ldpst/itmo](https://github.com/ldpst/itmo) | Репозитории студентов (2024-2028) |
-| [CandyGoose/ITMO_Software_engineering](https://github.com/CandyGoose/ITMO_Software_engineering) | :star: Отличный репозиторий с лабами **Нейротеха** (+ факультативs) |
+| [CandyGoose/ITMO_Software_engineering](https://github.com/CandyGoose/ITMO_Software_engineering) | :star: Отличный репозиторий с лабами **Нейротеха** |
 | [buffer404/university](https://github.com/buffer404/university) | Много лаб с направления **ИВТ** |
 | [MakeCheerfulUpload](https://github.com/orgs/MakeCheerfulUpload/repositories) | Сборник работ 1 семестра |
 
