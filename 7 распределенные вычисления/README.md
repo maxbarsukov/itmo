@@ -63,8 +63,8 @@
 
 | Ссылка | Описание |
 | --- | --- |
-| [vk.com/distributedclass_2025](https://vk.com/distributedclass_2025) | Группа в ВК 2025 |
-| [drive.google.com/drive/folders/...](https://drive.google.com/drive/folders/1MXVH0OjDgolOSBBKvq9T43TdI_kqjtME?usp=sharing) | Материалы курса 2025 |
+| [vk.com/distributedclass_2025](https://vk.com/distributedclass_2025) | Группа в ВК (2025) |
+| [drive.google.com/drive/folders/...](https://drive.google.com/drive/folders/1MXVH0OjDgolOSBBKvq9T43TdI_kqjtME?usp=sharing) | Материалы курса (2025) |
 
 ## Лицензия <a name="license"></a>
 
