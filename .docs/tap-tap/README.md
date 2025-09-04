@@ -34,6 +34,7 @@
 | <img alt="kudashov" src="./kudashov.gif" height="60"> | Кудашов |
 | <img alt="kugaevskih" src="./kugaevskih.gif" height="60"> | Кугаевских |
 | <img alt="malysheva" src="./malysheva.gif" height="60"> | Малышева |
+| <img alt="markina" src="./markina.gif" height="60"> | Маркина |
 | <img alt="mikhu" src="./mikhu.gif" height="60"> | Миху |
 | <img alt="nikolaev" src="./nikolaev.gif" height="60"> | Николаев |
 | <img alt="pastor" src="./pastor.gif" height="60"> | Пастор |
