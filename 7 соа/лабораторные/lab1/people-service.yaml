@@ -1,0 +1,597 @@
+openapi: 3.0.4
+info:
+  title: People Collection API
+  version: 1.0.0
+  description: API for managing a collection of Person objects with advanced filtering, sorting and pagination capabilities
+
+servers:
+  - url: https://localhost:51313/api/v1'
+    description: Helios server
+
+paths:
+  /people:
+    get:
+      summary: Get list of people
+      description: Returns a list of people with support for filtering, sorting, and pagination
+      operationId: getPeople
+      parameters:
+        - name: sort
+          in: query
+          description: |
+            Array of fields that are used for sorting. The "-" sign means sorting in descending order.
+            Available fields: id, name, creationDate, coordinates.x, coordinates.y, height, eyeColor, hairColor, nationality, location.x, location.y, location.z, location.name
+          required: false
+          explode: true
+          schema:
+            type: array
+            items:
+              type: string
+              default: id
+              enum:
+                - id
+                - name
+                - creationDate
+                - coordinates.x
+                - coordinates.y
+                - height
+                - eyeColor
+                - hairColor
+                - nationality
+                - location.x
+                - location.y
+                - location.z
+                - location.name
+                - -id
+                - -name
+                - -creationDate
+                - -coordinates.x
+                - -coordinates.y
+                - -height
+                - -eyeColor
+                - -hairColor
+                - -nationality
+                - -location.x
+                - -location.y
+                - -location.z
+                - -location.name
+        - name: filter
+          in: query
+          required: false
+          description: |
+            Array of fields used for filtering. Each element must contain the name of the field and the filtering method in parentheses, 
+            as well as the value that will be used for filtering. Supported operators: eq, ne, gt, lt, lte, gte.
+            Example: name[eq]=John, height[gt]=1.75
+          schema:
+            type: array
+            items:
+              type: string
+              example: name[eq]=John
+              pattern: '^(id|name|creationDate|coordinates\.x|coordinates\.y|height|eyeColor|hairColor|nationality|location\.x|location\.y|location\.z|location\.name)\[(eq|ne|gt|lt|lte|gte)\]=.+$'
+          style: deepObject
+          explode: true
+        - name: page
+          in: query
+          required: false
+          description: |
+            Specifies the page number to be paginated. If used without the "pageSize" parameter, the page size will be 10.
+            If none of the parameters "page" or "pageSize" is used, then all People will be returned.
+          schema:
+            type: integer
+            default: 0
+            minimum: 0
+        - name: pageSize
+          in: query
+          required: false
+          description: |
+            The specified page size for pagination. If used without the "page" parameter, the first page will be displayed.
+            If none of the parameters "page" or "pageSize" is used, then all People will be returned.
+          schema:
+            type: integer
+            default: 10
+            minimum: 1
+      tags:
+        - People
+      responses:
+        '200':
+          description: Returns an array of people based on the specified parameters
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PeopleResponse'
+        '400':
+          description: Invalid query parameter
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+        '500':
+          description: Internal server error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+    post:
+      summary: Add a new person
+      description: Creates a new person in the collection
+      operationId: addPerson
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PersonInput'
+      tags:
+        - People
+      responses:
+        '201':
+          description: Person successfully created
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Person'
+        '400':
+          description: Invalid input data
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+        '405':
+          description: Validation exception
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+        '500':
+          description: Internal server error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+
+  /people/{id}:
+    get:
+      summary: Get a person by ID
+      description: Returns a person with the specified ID
+      operationId: getPerson
+      parameters:
+        - name: id
+          in: path
+          required: true
+          description: Person ID to find
+          schema:
+            type: integer
+            format: int64
+            minimum: 1
+      tags:
+        - People
+      responses:
+        '200':
+          description: Returns the person with the specified ID
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Person'
+        '400':
+          description: Invalid ID parameter
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+        '404':
+          description: Person not found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+        '500':
+          description: Internal server error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+    put:
+      summary: Update a person by ID
+      description: Updates an existing person with the specified ID
+      operationId: updatePerson
+      parameters:
+        - name: id
+          in: path
+          required: true
+          description: Person ID to update
+          schema:
+            type: integer
+            format: int64
+            minimum: 1
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PersonInput'
+      tags:
+        - People
+      responses:
+        '200':
+          description: Person successfully updated
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Person'
+        '400':
+          description: Invalid input data
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+        '404':
+          description: Person not found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+        '405':
+          description: Validation exception
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+        '500':
+          description: Internal server error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+    delete:
+      summary: Delete a person by ID
+      description: Deletes a person with the specified ID
+      operationId: deletePerson
+      parameters:
+        - name: id
+          in: path
+          required: true
+          description: Person ID to delete
+          schema:
+            type: integer
+            format: int64
+            minimum: 1
+      tags:
+        - People
+      responses:
+        '204':
+          description: Person successfully deleted
+        '400':
+          description: Invalid ID parameter
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+        '404':
+          description: Person not found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+        '500':
+          description: Internal server error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+
+  /people/nationality/{nationality}:
+    delete:
+      summary: Delete all people with specified nationality
+      description: Deletes all people with the specified nationality
+      operationId: deletePeopleByNationality
+      parameters:
+        - name: nationality
+          in: path
+          required: true
+          description: Nationality to filter by
+          schema:
+            $ref: '#/components/schemas/Country'
+      tags:
+        - Operations
+      responses:
+        '204':
+          description: People successfully deleted
+        '400':
+          description: Invalid nationality parameter
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+        '500':
+          description: Internal server error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+
+  /people/location:
+    delete:
+      summary: Delete one person with specified location
+      description: Deletes one person with the specified location
+      operationId: deleteOnePersonByLocation
+      parameters:
+        - name: x
+          in: query
+          required: true
+          description: Location X coordinate
+          schema:
+            type: integer
+        - name: y
+          in: query
+          required: true
+          description: Location Y coordinate
+          schema:
+            type: integer
+            format: int64
+        - name: z
+          in: query
+          required: true
+          description: Location Z coordinate
+          schema:
+            type: integer
+        - name: name
+          in: query
+          required: false
+          description: Location name
+          schema:
+            type: string
+            maxLength: 704
+      tags:
+        - Operations
+      responses:
+        '204':
+          description: Person successfully deleted
+        '400':
+          description: Invalid location parameters
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+        '404':
+          description: Person not found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+        '500':
+          description: Internal server error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+
+  /people/location/greater:
+    get:
+      summary: Get people with location greater than specified
+      description: Returns people whose location is greater than the specified coordinates
+      operationId: getPeopleWithLocationGreaterThan
+      parameters:
+        - name: x
+          in: query
+          required: true
+          description: Location X coordinate to compare against
+          schema:
+            type: integer
+        - name: y
+          in: query
+          required: true
+          description: Location Y coordinate to compare against
+          schema:
+            type: integer
+            format: int64
+        - name: z
+          in: query
+          required: true
+          description: Location Z coordinate to compare against
+          schema:
+            type: integer
+      tags:
+        - Operations
+      responses:
+        '200':
+          description: Returns people with location greater than specified
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PeopleResponse'
+        '400':
+          description: Invalid location parameters
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+        '500':
+          description: Internal server error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+
+components:
+  schemas:
+    Person:
+      type: object
+      required:
+        - id
+        - name
+        - coordinates
+        - creationDate
+        - eyeColor
+        - location
+      properties:
+        id:
+          type: integer
+          format: int64
+          minimum: 1
+          readOnly: true
+          description: Auto-generated unique identifier
+        name:
+          type: string
+          minLength: 1
+          description: Person's name
+        coordinates:
+          $ref: '#/components/schemas/Coordinates'
+        creationDate:
+          type: string
+          format: date-time
+          readOnly: true
+          description: Auto-generated creation date
+        height:
+          type: number
+          format: float
+          minimum: 0
+          exclusiveMinimum: true
+          nullable: true
+          description: Person's height
+        eyeColor:
+          $ref: '#/components/schemas/EyeColor'
+        hairColor:
+          $ref: '#/components/schemas/HairColor'
+          nullable: true
+        nationality:
+          $ref: '#/components/schemas/Country'
+          nullable: true
+        location:
+          $ref: '#/components/schemas/Location'
+
+    PersonInput:
+      type: object
+      required:
+        - name
+        - coordinates
+        - eyeColor
+        - location
+      properties:
+        name:
+          type: string
+          minLength: 1
+          description: Person's name
+        coordinates:
+          $ref: '#/components/schemas/Coordinates'
+        height:
+          type: number
+          format: float
+          minimum: 0
+          exclusiveMinimum: true
+          nullable: true
+          description: Person's height
+        eyeColor:
+          $ref: '#/components/schemas/EyeColor'
+        hairColor:
+          $ref: '#/components/schemas/HairColor'
+          nullable: true
+        nationality:
+          $ref: '#/components/schemas/Country'
+          nullable: true
+        location:
+          $ref: '#/components/schemas/Location'
+
+    Coordinates:
+      type: object
+      required:
+        - x
+        - y
+      properties:
+        x:
+          type: integer
+          nullable: false
+        y:
+          type: integer
+          nullable: false
+
+    Location:
+      type: object
+      required:
+        - x
+        - y
+        - z
+      properties:
+        x:
+          type: integer
+          nullable: false
+        y:
+          type: integer
+          format: int64
+          nullable: false
+        z:
+          type: integer
+          nullable: false
+        name:
+          type: string
+          maxLength: 704
+          nullable: true
+
+    EyeColor:
+      type: string
+      enum:
+        - RED
+        - BLUE
+        - YELLOW
+        - ORANGE
+      description: Eye color enumeration
+
+    HairColor:
+      type: string
+      enum:
+        - GREEN
+        - RED
+        - YELLOW
+        - ORANGE
+        - BROWN
+      description: Hair color enumeration
+
+    Country:
+      type: string
+      enum:
+        - CHINA
+        - INDIA
+        - ITALY
+        - NORTH_KOREA
+      description: Country enumeration
+
+    PeopleResponse:
+      type: object
+      properties:
+        people:
+          type: array
+          items:
+            $ref: '#/components/schemas/Person'
+        page:
+          type: integer
+          nullable: true
+          description: Current page number
+        pageSize:
+          type: integer
+          nullable: true
+          description: Number of items per page
+        totalPages:
+          type: integer
+          nullable: true
+          description: Total number of pages
+        totalCount:
+          type: integer
+          nullable: true
+          description: Total number of items
+
+    Error:
+      type: object
+      required:
+        - code
+        - message
+        - time
+      properties:
+        code:
+          type: integer
+          format: int32
+          description: HTTP status code
+        message:
+          type: string
+          description: Error description
+        time:
+          type: string
+          format: date-time
+          description: Error occurrence time
