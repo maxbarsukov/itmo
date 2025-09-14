@@ -99,13 +99,41 @@ paths:
               schema:
                 $ref: '#/components/schemas/PeopleResponse'
         '400':
-          description: Invalid query parameter
+          description: Invalid query param
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/Error'
+                type: object
+                properties:
+                  code:
+                    type: integer
+                    format: int32
+                    example: 400
+                  message:
+                    type: string
+                    example: Invalid query param value
+                  time:
+                    type: string
+                    format: date-time
         '500':
           description: Internal server error
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  code:
+                    type: integer
+                    format: int32
+                    example: 500
+                  message:
+                    type: string
+                    example: Internal server error
+                  time:
+                    type: string
+                    format: date-time
+        default:
+          description: Returns error code, message and time in case of error
           content:
             application/json:
               schema:
@@ -134,15 +162,54 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/Error'
+                type: object
+                properties:
+                  code:
+                    type: integer
+                    format: int32
+                    example: 400
+                  message:
+                    type: string
+                    example: Invalid input data
+                  time:
+                    type: string
+                    format: date-time
         '405':
           description: Validation exception
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/Error'
+                type: object
+                properties:
+                  code:
+                    type: integer
+                    format: int32
+                    example: 405
+                  message:
+                    type: string
+                    example: Height must be greater than 0!
+                  time:
+                    type: string
+                    format: date-time
         '500':
           description: Internal server error
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  code:
+                    type: integer
+                    format: int32
+                    example: 500
+                  message:
+                    type: string
+                    example: Internal server error
+                  time:
+                    type: string
+                    format: date-time
+        default:
+          description: Returns error code, message and time in case of error
           content:
             application/json:
               schema:
@@ -176,15 +243,54 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/Error'
+                type: object
+                properties:
+                  code:
+                    type: integer
+                    format: int32
+                    example: 400
+                  message:
+                    type: string
+                    example: Invalid param supplied
+                  time:
+                    type: string
+                    format: date-time
         '404':
           description: Person not found
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/Error'
+                type: object
+                properties:
+                  code:
+                    type: integer
+                    format: int32
+                    example: 404
+                  message:
+                    type: string
+                    example: Person not found
+                  time:
+                    type: string
+                    format: date-time
         '500':
           description: Internal server error
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  code:
+                    type: integer
+                    format: int32
+                    example: 500
+                  message:
+                    type: string
+                    example: Internal server error
+                  time:
+                    type: string
+                    format: date-time
+        default:
+          description: Returns error code, message and time in case of error
           content:
             application/json:
               schema:
@@ -218,25 +324,75 @@ paths:
               schema:
                 $ref: '#/components/schemas/Person'
         '400':
-          description: Invalid input data
+          description: Invalid ID parameter
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/Error'
+                type: object
+                properties:
+                  code:
+                    type: integer
+                    format: int32
+                    example: 400
+                  message:
+                    type: string
+                    example: Invalid param supplied
+                  time:
+                    type: string
+                    format: date-time
         '404':
           description: Person not found
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/Error'
+                type: object
+                properties:
+                  code:
+                    type: integer
+                    format: int32
+                    example: 404
+                  message:
+                    type: string
+                    example: Person not found
+                  time:
+                    type: string
+                    format: date-time
         '405':
           description: Validation exception
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/Error'
+                type: object
+                properties:
+                  code:
+                    type: integer
+                    format: int32
+                    example: 405
+                  message:
+                    type: string
+                    example: Validation exception
+                  time:
+                    type: string
+                    format: date-time
         '500':
           description: Internal server error
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  code:
+                    type: integer
+                    format: int32
+                    example: 500
+                  message:
+                    type: string
+                    example: Internal server error
+                  time:
+                    type: string
+                    format: date-time
+        default:
+          description: Returns error code, message and time in case of error
           content:
             application/json:
               schema:
@@ -264,15 +420,54 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/Error'
+                type: object
+                properties:
+                  code:
+                    type: integer
+                    format: int32
+                    example: 400
+                  message:
+                    type: string
+                    example: Invalid param supplied
+                  time:
+                    type: string
+                    format: date-time
         '404':
           description: Person not found
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/Error'
+                type: object
+                properties:
+                  code:
+                    type: integer
+                    format: int32
+                    example: 404
+                  message:
+                    type: string
+                    example: Person not found
+                  time:
+                    type: string
+                    format: date-time
         '500':
           description: Internal server error
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  code:
+                    type: integer
+                    format: int32
+                    example: 500
+                  message:
+                    type: string
+                    example: Internal server error
+                  time:
+                    type: string
+                    format: date-time
+        default:
+          description: Returns error code, message and time in case of error
           content:
             application/json:
               schema:
@@ -300,9 +495,37 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/Error'
+                type: object
+                properties:
+                  code:
+                    type: integer
+                    format: int32
+                    example: 400
+                  message:
+                    type: string
+                    example: Invalid nationality supplied
+                  time:
+                    type: string
+                    format: date-time
         '500':
           description: Internal server error
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  code:
+                    type: integer
+                    format: int32
+                    example: 500
+                  message:
+                    type: string
+                    example: Internal server error
+                  time:
+                    type: string
+                    format: date-time
+        default:
+          description: Returns error code, message and time in case of error
           content:
             application/json:
               schema:
@@ -346,19 +569,58 @@ paths:
         '204':
           description: Person successfully deleted
         '400':
-          description: Invalid location parameters
+          description: Invalid location parameter
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/Error'
+                type: object
+                properties:
+                  code:
+                    type: integer
+                    format: int32
+                    example: 400
+                  message:
+                    type: string
+                    example: Invalid location supplied
+                  time:
+                    type: string
+                    format: date-time
         '404':
           description: Person not found
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/Error'
+                type: object
+                properties:
+                  code:
+                    type: integer
+                    format: int32
+                    example: 404
+                  message:
+                    type: string
+                    example: Person not found
+                  time:
+                    type: string
+                    format: date-time
         '500':
           description: Internal server error
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  code:
+                    type: integer
+                    format: int32
+                    example: 500
+                  message:
+                    type: string
+                    example: Internal server error
+                  time:
+                    type: string
+                    format: date-time
+        default:
+          description: Returns error code, message and time in case of error
           content:
             application/json:
               schema:
@@ -399,13 +661,41 @@ paths:
               schema:
                 $ref: '#/components/schemas/PeopleResponse'
         '400':
-          description: Invalid location parameters
+          description: Invalid location parameter
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/Error'
+                type: object
+                properties:
+                  code:
+                    type: integer
+                    format: int32
+                    example: 400
+                  message:
+                    type: string
+                    example: Invalid location supplied
+                  time:
+                    type: string
+                    format: date-time
         '500':
           description: Internal server error
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  code:
+                    type: integer
+                    format: int32
+                    example: 500
+                  message:
+                    type: string
+                    example: Internal server error
+                  time:
+                    type: string
+                    format: date-time
+        default:
+          description: Returns error code, message and time in case of error
           content:
             application/json:
               schema:
