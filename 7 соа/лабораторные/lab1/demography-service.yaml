@@ -1,0 +1,198 @@
+openapi: 3.0.4
+info:
+  title: Demography API
+  version: 1.0.0
+  description: API for demographic statistics based on Person collection data
+
+servers:
+  - url: https://localhost:51312/api/v1'
+    description: Helios server
+
+paths:
+   /demography/hair-color/{hairColor}/percentage:
+    get:
+      summary: Get percentage of people with specified hair color
+      description: Returns the percentage of people with the specified hair color in the total population
+      parameters:
+        - in: path
+          name: hairColor
+          required: true
+          schema:
+            $ref: './people-service.yaml#/components/schemas/HairColor'
+      tags:
+        - Demography
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: number
+                format: float
+                minimum: 0
+                maximum: 100
+                description: Percentage value
+        '400':
+          description: Invalid parameters supplied
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  code:
+                    type: integer
+                    format: int32
+                    example: 400
+                  message:
+                    type: string
+                    example: Invalid parameters supplied
+                  time:
+                    type: string
+                    format: date-time
+                    example: 2025-09-14T00:00:09Z
+        '404':
+          description: No data available
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  code:
+                    type: integer
+                    format: int32
+                    example: 404
+                  message:
+                    type: string
+                    example: No data available
+                  time:
+                    type: string
+                    format: date-time
+                    example: 2025-09-14T00:00:09Z
+        '500':
+          description: Internal server error
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  code:
+                    type: integer
+                    format: int32
+                    example: 500
+                  message:
+                    type: string
+                    example: Internal server error
+                  time:
+                    type: string
+                    format: date-time
+                    example: 2025-09-14T00:00:09Z
+        default:
+          description: Returns error code, message and time in case of error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+
+   /demography/eye-color/{eyeColor}:
+    get:
+      summary: Get count of people with specified eye color
+      description: Returns the count of people with the specified eye color
+      parameters:
+        - in: path
+          name: eyeColor
+          required: true
+          schema:
+            $ref: './people-service.yaml#/components/schemas/EyeColor'
+      tags:
+        - Demography
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: integer
+                minimum: 0
+                description: Count of people
+                example: 69
+        '400':
+          description: Invalid parameters supplied
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  code:
+                    type: integer
+                    format: int32
+                    example: 400
+                  message:
+                    type: string
+                    example: Invalid parameters supplied
+                  time:
+                    type: string
+                    format: date-time
+                    example: 2025-09-14T00:00:09Z
+        '404':
+          description: No data available
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  code:
+                    type: integer
+                    format: int32
+                    example: 404
+                  message:
+                    type: string
+                    example: No data available
+                  time:
+                    type: string
+                    format: date-time
+                    example: 2025-09-14T00:00:09Z
+        '500':
+          description: Internal server error
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  code:
+                    type: integer
+                    format: int32
+                    example: 500
+                  message:
+                    type: string
+                    example: Internal server error
+                  time:
+                    type: string
+                    format: date-time
+                    example: 2025-09-14T00:00:09Z
+        default:
+          description: Returns error code, message and time in case of error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+
+components:
+  schemas:
+    Error:
+      type: object
+      required:
+        - httpCode
+        - message
+        - time
+      properties:
+        code:
+          type: integer
+          format: int32
+          example: 404
+        message:
+          type: string
+          example: Not Found
+        time:
+          type: string
+          format: date-time
+          example: 2025-09-14T00:00:09Z
