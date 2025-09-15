@@ -5,7 +5,7 @@
 <img alt="evil-iruma-kun-iruma-kun" src="https://github.com/maxbarsukov/itmo/blob/master/.docs/evil-iruma-kun-iruma-kun.gif" height="300">
 
 > [!NOTE]
-> Развернутая на сервере `Helios` веб-документация: [se.ifmo.ru/~s367081/](https://se.ifmo.ru/~s367081/).
+> Развернутая на сервере `Helios` веб-документация: [se.ifmo.ru/~s367081/soa/lab1/](https://se.ifmo.ru/~s367081/soa/lab1/).
 
 |.pdf|.docx|
 |-|-|
