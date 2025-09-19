@@ -83,12 +83,6 @@ paths:
                   time:
                     type: string
                     format: date-time
-        default:
-          description: Returns error code, message and time in case of error
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/Error'
 
    /demography/eye-color/{eyeColor}:
     get:
@@ -163,12 +157,6 @@ paths:
                   time:
                     type: string
                     format: date-time
-        default:
-          description: Returns error code, message and time in case of error
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/Error'
 
 components:
   schemas:
