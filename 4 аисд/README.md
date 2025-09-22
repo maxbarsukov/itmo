@@ -2,21 +2,23 @@
 
 <img alt="dead-lofi" src="https://github.com/maxbarsukov/itmo/blob/master/.docs/dead-lofi.gif" height="250">
 
+> [!NOTE]
 > O(n!)
 
-**Лектор:** [Косяков Михаил Сергеевич](https://my.itmo.ru/persons/139799)
+---
 
+**Лектор:** <a href="https://github.com/maxbarsukov/itmo/blob/master/.docs/tap-tap/README.md"><img alt="kosyakov" src="https://github.com/maxbarsukov/itmo/blob/master/.docs/tap-tap/kosyakov.gif" height="20"></a> [Косяков Михаил Сергеевич](https://my.itmo.ru/persons/139799) \
 **Практик:** [Тараканов Денис Сергеевич](https://my.itmo.ru/persons/173960)
 
 ## Оценки
 
-- Оценки **3E**, **3D**, **4C**: `8` / `10` / `14` основных задач с *Яндекс.Контест*
+- Оценки **3/E**, **3/D**, **4/C**: `8` / `10` / `14` основных задач с *Яндекс.Контест*
 - Работает система антиплагиата: списанная и оригинальная работы аннулируются навсегда без права пересдачи
     - Исключение: 4 попытки обмануть антиплагиат на оценку **3Е**
 - Если решены и прошли антиплагиат все основные задачи
 - *Яндекс.Контест* по теме, появляется возможность очно сдать дополнительные задачи Timus
-- Оценка **4B** и допуск на экзамен: все `24` задачи и очная защита задач с *Timus*
-- Оценка **5A**: автоматом не ставится
+- Оценка **4/B** и допуск на экзамен: все `24` задачи и очная защита задач с *Timus*
+- Оценка **5/A**: автоматом не ставится
 - На экзамене можно получить любую оценку
 
 ## Задачи
@@ -91,7 +93,7 @@
 
 ### БАРС
 
-- 4 семестр: **...**
+- 4 семестр: **4/C** (77/100 баллов)
 
 ### Яндекс.Контест
 
@@ -147,22 +149,24 @@
     </tbody>
 </table>
 
+---
 
 ## Полезные ссылки
 
 | Ссылка | Описание |
 | --- | --- |
-| [Журнал](https://docs.google.com/spreadsheets/d/1_Vozd6MMAwertVP0M9M3tGCpY1nvXpYkFHdcv9ohngU/edit#gid=662727099) | Журнал (весна 2024) |
-| https://vk.com/algoclass_2024?w=club224540471 | Группа в ВК 2024 |
-| https://drive.google.com/drive/folders/19xmhWsh6zjPT6TBvOncOoD7Y94hATKK7 | Слайды лекций 2024 |
-| https://contest.yandex.ru/contest/35179/problems/ | Задачи на *Яндекс.Контест* |
-| https://acm.timus.ru/ | Задачи на оценки **4B**/**5A** (Регистрация: `vtalgo24_## (фамилия_isu_id)`) |
-
+| [docs.google.com/spreadsheets/d/...)](https://docs.google.com/spreadsheets/d/1_Vozd6MMAwertVP0M9M3tGCpY1nvXpYkFHdcv9ohngU/edit#gid=662727099) <br> [docs.google.com/spreadsheets/d/...](https://docs.google.com/spreadsheets/d/1HV1SIibcDS1Y5AjWVu0X1aol_J9XFDcvDAtZSu3jXsc/edit?gid=1584175508#gid=1584175508) | Журнал (весна 2024) <br> Журнал (весна 2025) |
+| [vk.com/algoclass_2024?w=club224540471](https://vk.com/algoclass_2024?w=club224540471) | Группа в ВК 2024 |
+| [drive.google.com/drive/folders/...](https://drive.google.com/drive/folders/19xmhWsh6zjPT6TBvOncOoD7Y94hATKK7) | Слайды лекций 2024 |
+| [contest.yandex.ru/contest/35179/problems/](https://contest.yandex.ru/contest/35179/problems/) | Задачи на *Яндекс.Контест* |
+| [acm.timus.ru/](https://acm.timus.ru/) | Задачи на оценки **4/B**/**5/A** (Регистрация: `vtalgo24_## (фамилия_isu_id)`) |
+| [github.com/Hyperb0rean/itmo_algo](https://github.com/Hyperb0rean/itmo_algo) | Лабораторные работы по АиСД (тимус + я.контест) |
+| [github.com/Vsev0l0d/se4-algorithms-tasks](https://github.com/Vsev0l0d/se4-algorithms-tasks) | Лабораторные работы по АиСД (я.контест) |
+| [github.com/testpassword/Algorithms-and-data-structures](https://github.com/testpassword/Algorithms-and-data-structures) | Лабораторные работы по АиСД (тимус) |
 
 ## Лицензия <a name="license"></a>
 
-Проект доступен с открытым исходным кодом на условиях [Лицензии GNU GPL 3](https://opensource.org/license/gpl-3-0/).
-
-*Авторские права 2024 Max Barsukov*
+Проект доступен с открытым исходным кодом на условиях [Лицензии GNU GPL 3](https://opensource.org/license/gpl-3-0/). \
+*Авторские права 2025 Max Barsukov*
 
 **Поставьте звезду :star:, если вы нашли этот проект полезным.**
