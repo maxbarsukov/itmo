@@ -8,8 +8,8 @@
 
 ---
 
-**Лектор:** [Ключев Аркадий Олегович](https://my.itmo.ru/persons/104008) \
-**Практик:** [Ключев Аркадий Олегович](https://my.itmo.ru/persons/104008)
+**Лектор:** <a href="https://github.com/maxbarsukov/itmo/blob/master/.docs/tap-tap/README.md"><img alt="klyuchev" src="https://github.com/maxbarsukov/itmo/blob/master/.docs/tap-tap/klyuchev.gif" height="20"></a> [Ключев Аркадий Олегович](https://my.itmo.ru/persons/104008) \
+**Практик:** <a href="https://github.com/maxbarsukov/itmo/blob/master/.docs/tap-tap/README.md"><img alt="klyuchev" src="https://github.com/maxbarsukov/itmo/blob/master/.docs/tap-tap/klyuchev.gif" height="20"></a> [Ключев Аркадий Олегович](https://my.itmo.ru/persons/104008)
 
 ## Результаты
 
