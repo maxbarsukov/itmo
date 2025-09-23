@@ -9,6 +9,8 @@
 |-|-|-|
 | [report](./docs/report.pdf) | [report](./docs/report.docx) | [template](./docs/template.docx) |
 
+- [Гайд по выполнению Работы 4](./guide/README.md).
+
 ---
 
 ## Задание
