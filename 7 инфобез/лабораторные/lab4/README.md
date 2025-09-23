@@ -5,9 +5,9 @@
 > [!TIP]
 > What the fuck is «функционал»?
 
-|.pdf|.docx|
-|-|-|
-| [report](./docs/report.pdf) | [report](./docs/report.docx) |
+|.pdf|.docx|.docx|
+|-|-|-|
+| [report](./docs/report.pdf) | [report](./docs/report.docx) | [template](./docs/template.docx) |
 
 ---
 
@@ -95,6 +95,7 @@
 
 | Ссылка | Описание |
 | --- | --- |
+| [docs/template.docx](./docs/template.docx) | Шаблон отчёта для Работы 4 |
 | [www.zaproxy.org/docs/](https://www.zaproxy.org/docs/) | Официальная документация OWASP ZAP |
 | [testphp.vulnweb.com](http://testphp.vulnweb.com/) | Тестовый сайт |
 | [owasp.org/www-project-top-ten/](https://owasp.org/www-project-top-ten/) | OWASP Top 10: Краткое описание уязвимостей |
