@@ -1,0 +1,8 @@
+# Log files
+*.log
+
+# Object files
+*.o
+
+# Executable
+pa1
