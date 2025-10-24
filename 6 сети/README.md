@@ -3,7 +3,7 @@
 <img alt="lain-iwakura-lain" src="https://github.com/maxbarsukov/itmo/blob/master/.docs/lain-iwakura-lain.gif" height="350">
 
 > [!TIP]
-> Ребята, отключайте или не орите, а то.... в дурдом попадете.»\
+> «Ребята, отключайте или не орите, а то.... в дурдом попадете.»\
 > — Тауфик Измайлович Алиев
 
 ---
