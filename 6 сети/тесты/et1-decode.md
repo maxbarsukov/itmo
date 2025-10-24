@@ -26,4 +26,12 @@
 
 ---
 
-*Спасибо [@ColdDirol](https://github.com/ColdDirol) за помощь с составлением гайда!*
+## Лицензия <a name="license"></a>
+
+> [!NOTE]
+> Спасибо [@ColdDirol](https://github.com/ColdDirol) за помощь с составлением гайда!
+
+Проект доступен с открытым исходным кодом на условиях [Лицензии GNU GPL 3](https://opensource.org/license/gpl-3-0/). \
+*Авторские права 2025 Max Barsukov*
+
+**Поставьте звезду :star:, если вы нашли этот проект полезным.**

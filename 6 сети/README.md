@@ -8,14 +8,14 @@
 
 ---
 
-**Лектор:** [Алиев Тауфик Измайлович](https://my.itmo.ru/persons/100040) \
-**Практик:** [Тропченко Андрей Александрович](https://my.itmo.ru/persons/111848)
+**Лектор:** <a href="https://github.com/maxbarsukov/itmo/blob/master/.docs/tap-tap/README.md"><img alt="aliev" src="https://github.com/maxbarsukov/itmo/blob/master/.docs/tap-tap/aliev.gif" height="20"></a> [Алиев Тауфик Измайлович](https://my.itmo.ru/persons/100040) \
+**Практик:** <a href="https://github.com/maxbarsukov/itmo/blob/master/.docs/tap-tap/README.md"><img alt="tropchenko" src="https://github.com/maxbarsukov/itmo/blob/master/.docs/tap-tap/tropchenko.gif" height="20"></a> [Тропченко Андрей Александрович](https://my.itmo.ru/persons/111848)
 
 ## Результаты
 
-- 6 семестр: **4B** (86/100 баллов)
+- 6 семестр: **4/B** (86/100 баллов)
 
-## Лабораторные
+## Лабораторные работы
 
 Задания для [лабораторных работ](./лабораторные/) и прочие материалы можно найти на [lms.itmo.ru](https://lms.itmo.ru/).
 

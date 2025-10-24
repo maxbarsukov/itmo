@@ -38,7 +38,7 @@
 
 ## Защита
 
-Если ваш практик — [Тропченко А. А.](https://my.itmo.ru/persons/111848), то скорее всего на защите у вас спросят один из этих вопросов:
+Если ваш практик — <a href="https://github.com/maxbarsukov/itmo/blob/master/.docs/tap-tap/README.md"><img alt="tropchenko" src="https://github.com/maxbarsukov/itmo/blob/master/.docs/tap-tap/tropchenko.gif" height="20"></a> [Тропченко Андрей Александрович](https://my.itmo.ru/persons/111848), то скорее всего на защите у вас спросят один из этих вопросов:
 
 1. **Можно ли использовать топологию «колько» в этапе 3?**
 
