@@ -52,6 +52,7 @@
 | --- | --- |
 | [https://techlibrary.ru/b/...](https://techlibrary.ru/b/2h1m1j1f1c_3a.2q._2w1s1o1p1c2c_1n1p1e1f1m1j1r1p1c1a1o1j2g_1e1j1s1l1r1f1t1o2c1w_1s1j1s1t1f1n._2009.pdf) | Учебное пособие «Основы моделирования дискретных систем» (2009), Т.И. Алиев |
 | [ТеорВер_конспект.pdf](../../презентации/ТеорВер_конспект.pdf) | Методичка «Элементы теории вероятности» (2024), Т.И. Алиев |
+| [typst.app/project/r0PMtz...](https://typst.app/project/r0PMtzgyx0a9NvtHp19NsR) | Генератор отчёта УИР 1 (нужно подставить свои данные в `data`) от [*@lostinwinelands*](https://t.me/lostinwinelands) |
 
 ## Лицензия <a name="license"></a>
 
