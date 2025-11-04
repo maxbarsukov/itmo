@@ -1,0 +1,48 @@
+services:
+  web:
+    build:
+      context: .
+      dockerfile: nginx.Dockerfile
+    container_name: nginx-webserver
+    restart: unless-stopped
+    ports:
+      - "8080:80"
+    volumes:
+      - /home/www/html:/usr/share/nginx/html:ro
+    networks:
+      - nextcloud-network
+
+  db:
+    image: mariadb:12.1.1-rc
+    container_name: nextcloud-mariadb
+    restart: unless-stopped
+    environment:
+      MYSQL_ROOT_PASSWORD: admin
+      MYSQL_DATABASE: mariadb
+    volumes:
+      - /home/DB:/var/lib/mysql
+    networks:
+      - nextcloud-network
+      
+  nextcloud:
+    image: nextcloud:latest
+    container_name: nextcloud-app
+    restart: unless-stopped
+    ports:
+      - "2022:80"
+    environment:
+      MYSQL_HOST: db
+      MYSQL_DATABASE: mariadb
+      MYSQL_USER: root
+      MYSQL_PASSWORD: admin
+    volumes:
+      - /home/www/NextCloud:/var/www/html
+    depends_on:
+      - db
+      - web
+    networks:
+      - nextcloud-network
+
+networks:
+  nextcloud-network:
+    driver: bridge
