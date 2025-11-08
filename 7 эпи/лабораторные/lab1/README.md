@@ -12,6 +12,8 @@
 |-|-|
 | [report](./docs/report.pdf) | [report](./docs/report.docx) |
 
+---
+
 ## Задание
 
 Для выданного веб-проекта:
