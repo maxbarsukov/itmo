@@ -17,6 +17,7 @@
 | <img alt="balakshin" src="./balakshin.gif" height="60"> | Балакшин |
 | <img alt="balkanskiy" src="./balkanskiy.gif" height="60"> | Балканский |
 | <img alt="bessmertniy" src="./bessmertniy.gif" height="60"> | Бессмертный |
+| <img alt="blokhina" src="./blokhina.gif" height="60"> | Блохина |
 | <img alt="bostrikova" src="./bostrikova.gif" height="60"> | Бострикова |
 | <img alt="bykovskiy" src="./bykovskiy.gif" height="60"> | Быковский |
 | <img alt="durnev" src="./durnev.gif" height="60"> | Дурнев |
