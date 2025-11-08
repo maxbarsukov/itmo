@@ -16,6 +16,9 @@
 
 ## Задание
 
+> [!NOTE]
+> Тем, кто выполняет лабораторную работу втроём, необходимо также оценить трудоёмкость задач с помощью техники покера планирования (Planning Poker).
+
 Для выданного веб-проекта:
 
 1. Сформировать набор функциональных требований для разработки проекта.
@@ -42,6 +45,8 @@
 | [citforum.ru/SE/project/arkhipenkov_lectures/12.shtml](https://citforum.ru/SE/project/arkhipenkov_lectures/12.shtml) | Обзор метода функциональных точек |
 | [citforum.ru/SE/project/arkhipenkov_lectures/13.shtml](https://citforum.ru/SE/project/arkhipenkov_lectures/13.shtml) | Основы методики COCOMO II |
 | [wikipedia.org/wiki/Program_evaluation_and_review_technique](https://en.wikipedia.org/wiki/Program_evaluation_and_review_technique) | Program evaluation and review technique |
+| [wikipedia.org/wiki/Planning_poker](https://en.wikipedia.org/wiki/Planning_poker) | Покер-планирование |
+| [planningpokeronline.com](https://planningpokeronline.com/) | Покер-планирование онлайн |
 
 ## Лицензия <a name="license"></a>
 
