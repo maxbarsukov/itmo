@@ -23,6 +23,7 @@
 | Ссылка | Описание |
 | --- | --- |
 | [docs.google.com/forms/d/e/...](https://docs.google.com/forms/d/e/1FAIpQLScgynnN4GkK-MyHzmJltccGIiTkNAhz6yAwQCxJm6lngoA6IQ/viewform) | Форма для ввода варианта |
+| [docs.google.com/spreadsheets/d/...](https://docs.google.com/spreadsheets/d/1WahdtQ26KpIzaf1NyD_NHxLXO_eUDwyuBCfY49PW4XQ/edit?gid=978196014#gid=978196014) | Текущий список веб-сайтов |
 | [similarweb.com/top-websites/](https://www.similarweb.com/top-websites/) | Top Websites Ranking |
 | [wikipedia.org/wiki/List_of_virtual_...](https://en.wikipedia.org/wiki/List_of_virtual_communities_with_more_than_1_million_users) | List of virtual communities with more than 1 million users |
 | [top100.rambler.ru](https://top100.rambler.ru/) | Рейтинг сайтов от Рамблер |
