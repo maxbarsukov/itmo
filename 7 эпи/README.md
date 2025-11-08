@@ -3,7 +3,8 @@
 <img alt="yukine-noragami" src="https://github.com/maxbarsukov/itmo/blob/master/.docs/yukine-noragami.gif" height="320">
 
 > [!TIP]
-> Экономика должна быть экономной.
+> «Экономика должна быть экономной.» \
+> — Леонид Ильич Брежнев, из доклада XXVI съезду КПСС, 23 февраля 1981 года
 
 ---
 
