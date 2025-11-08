@@ -16,7 +16,7 @@
 ## Задание
 
 > [!NOTE]
-> Лабораторную работу можно выполнять не только в [YouTrack](https://www.jetbrains.com/ru-ru/youtrack/download/get_youtrack.html#section=cloud), но и в других трекерах: [Jira](https://www.atlassian.com/software/jira), [Yandex Tracker](https://360.yandex.ru/business/tracker/), [Redmine](https://www.redmine.org/) или любом другом. Главное — предварительно согласовать это с вашим практиком.
+> Лабораторную работу можно выполнять не только в [YouTrack](https://www.jetbrains.com/ru-ru/youtrack/download/get_youtrack.html#section=cloud), но и в других трекерах: [Jira](https://www.atlassian.com/software/jira), [Яндекс Трекере](https://tracker.yandex.ru/), [Redmine](https://www.redmine.org/) или любом другом. Главное — предварительно согласовать это с вашим практиком.
 
 Зарегистрироваться для использования бесплатной облачной версии ПО [YouTrack](https://www.jetbrains.com/ru-ru/youtrack/download/get_youtrack.html#section=cloud) для управления своим программным проектом:
 
@@ -36,7 +36,7 @@
 
 ### Импорт задач в YouTrack из CSV-файла
 
-Более подробно о импорте из CSV-файла можно прочитать в [**документации YouTrack**](https://www.jetbrains.com/help/youtrack/cloud/2025.3/import-from-csv.html).
+Более подробно об импорте из CSV-файла можно прочитать в [**документации YouTrack**](https://www.jetbrains.com/help/youtrack/cloud/2025.3/import-from-csv.html).
 
 - [tasks.csv](./tasks.csv) — выведенный путем проб и ошибок **пример успешно импортируемого CSV-файла с задачами**.
 
@@ -116,6 +116,7 @@ TODO WIP
 | [youtu.be/p4WU6cMMsls](https://youtu.be/p4WU6cMMsls) | Основы YouTrack |
 | [jetbrains.com/.../mailbox-integration](https://www.jetbrains.com/help/youtrack/cloud/2025.3/mailbox-integration.html) | Интеграция YouTrack с электронной почтой (для **п.3**) |
 | [wikipedia.org/wiki/Kanban](https://en.wikipedia.org/wiki/Kanban_(development)) | Kanban |
+| [sberbusiness.live/publications/kanban](https://sberbusiness.live/publications/kanban) | Что такое Kanban и как использовать методологию в бизнесе |
 | [wikipedia.org/wiki/Scrum](https://en.wikipedia.org/wiki/Scrum_(project_management)) | Scrum |
 | [www.scrum.org](https://www.scrum.org/) | Ресурсы и руководства Scrum |
 | [wikipedia.org/wiki/Burndown_chart](https://en.wikipedia.org/wiki/Burndown_chart) | Burndown-диаграмма |
