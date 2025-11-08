@@ -8,14 +8,14 @@
 
 ---
 
-**Лектор:** [Клименков Сергей Викторович](https://my.itmo.ru/persons/105395) \
-**Практик:** [Цопа Евгений Алексеевич](https://my.itmo.ru/persons/126287)
+**Лектор:** <a href="https://github.com/maxbarsukov/itmo/blob/master/.docs/tap-tap/README.md"><img alt="klimenkov" src="https://github.com/maxbarsukov/itmo/blob/master/.docs/tap-tap/klimenkov.gif" height="20"></a> [Клименков Сергей Викторович](https://my.itmo.ru/persons/105395) \
+**Практик:** <a href="https://github.com/maxbarsukov/itmo/blob/master/.docs/tap-tap/README.md"><img alt="tsopa" src="https://github.com/maxbarsukov/itmo/blob/master/.docs/tap-tap/tsopa.gif" height="20"></a> [Цопа Евгений Алексеевич](https://my.itmo.ru/persons/126287)
 
 ## Результаты
 
 - 6 семестр: **зачёт** (90/100 баллов)
 
-## Лабораторные
+## Лабораторные работы
 
 Задания для лабораторных работ: [se.ifmo.ru/courses/testing](https://se.ifmo.ru/courses/testing#labs).
 
