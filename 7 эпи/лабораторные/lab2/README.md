@@ -105,7 +105,12 @@
 
 Сначала нужно получить токен доступа: перейдите в `Profile` → `Account Security` → `Tokens` → `New token`, там введите имя токена, `Scope` можно оставить по умолчанию (`YouTrack` и `YouTrack Administration`). После получения токена скопируйте его, чтобы использовать в скрипте для загрузки задач.
 
-TODO WIP
+> [!WARNING]
+> Так как YouTrack автоматически заполняет поле `Resolved` временем загрузки задачи, помеченной как `DONE`, ломается Burndown-диаграмма.
+
+1. Вставьте ваши данные в скрипт [`youtrack_uploader.js`](./youtrack_uploader.js) (*by [DimaThenekov](https://github.com/DimaThenekov)*).
+2. Откройте консоль DevTools на странице своего YouTrack.
+3. Скопируйте скрипт в консоль и запустите.
 
 ---
 
