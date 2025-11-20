@@ -32,6 +32,7 @@
 | <img alt="klyuchev" src="./klyuchev.gif" height="60"> | Ключев |
 | <img alt="korobkov" src="./korobkov.gif" height="60"> | Коробков |
 | <img alt="kosyakov" src="./kosyakov.gif" height="60"> | Косяков |
+| <img alt="krivonosov" src="./krivonosov.gif" height="60"> | Кривоносов |
 | <img alt="kudashov" src="./kudashov.gif" height="60"> | Кудашов |
 | <img alt="kugaevskih" src="./kugaevskih.gif" height="60"> | Кугаевских |
 | <img alt="malysheva" src="./malysheva.gif" height="60"> | Малышева |
