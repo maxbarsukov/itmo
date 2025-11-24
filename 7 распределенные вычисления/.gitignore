@@ -1,0 +1,8 @@
+# VS Code
+.vscode
+
+# CLion
+.idea
+
+# Other
+.DS_Store
