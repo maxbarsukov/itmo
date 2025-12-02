@@ -1,6 +1,16 @@
-# Лабораторная работа #5
+# Лабораторная работа №5
 
-<img alt="megumin1 gif" src="https://github.com/maxbarsukov/itmo/blob/master/.docs/megumin1.gif" height="150">
+## Вариант `8139`
+
+<img alt="megumin" src="https://github.com/maxbarsukov/itmo/blob/master/.docs/megumin1.gif" height="150">
+
+|.pdf|.doc|
+|-|-|
+| [report](./docs/report.pdf) | [report](./docs/report.doc) |
+
+---
+
+## Задание
 
 По выданному преподавателем варианту разработать программу асинхронного обмена данными с внешним устройством. При помощи программы осуществить ввод или вывод информации, используя в качестве подтверждения данных сигнал (кнопку) готовности ВУ.
 
@@ -10,11 +20,13 @@
 4. Формат представления строки в памяти: `АДР1: СИМВ2 СИМВ1 АДР2: СИМВ4 СИМВ3 ... СТОП_СИМВ`.
 5. Ввод или вывод строки должен быть завершен по символу c кодом 0A (NL). Стоп символ является обычным символом строки и подчиняется тем же правилам расположения в памяти что и другие символы строки.
 
-## Вариант 8139
-
-- [Отчёт](./docs/report.pdf)
-
 ---
+
+## Полезные ссылки
+
+| Ссылка | Описание |
+| --- | --- |
+| [vk.com/@p3113-ya-vvodil-menya-vyvodili-ili-manual-k-5-laboratornoi-po-opd](https://vk.com/@p3113-ya-vvodil-menya-vyvodili-ili-manual-k-5-laboratornoi-po-opd) <br> [vk.com/@p3113-bnopnya-vhruk-ili-manual-k-5-laboratornoi-po-opd-2-chast](https://vk.com/@p3113-bnopnya-vhruk-ili-manual-k-5-laboratornoi-po-opd-2-chast) | Мануал к ЛР 5 |
 
 ## Лицензия <a name="license"></a>
 

@@ -1,12 +1,14 @@
-# Лабораторная работа 4
+# Лабораторная работа №4
 
 ## Вариант `19821`
 
-<img alt="lain3 gif" src="https://github.com/maxbarsukov/itmo/blob/master/.docs/lain3.gif" height="150">
+<img alt="lain" src="https://github.com/maxbarsukov/itmo/blob/master/.docs/lain3.gif" height="150">
 
 |.pdf|.doc|
 |-|-|
-| [report](./docs/report.pdf) | [report](./docs/P3115%20ОПД%20ЛР4%20Барсуков%20М.А.doc) |
+| [report](./docs/report.pdf) | [report](./docs/report.doc) |
+
+---
 
 ## Задание
 
@@ -22,6 +24,7 @@
 
 | Ссылка | Описание |
 | --- | --- |
+| [vk.com/@p3113-opd-ura-my-sdaem-4-uu-labu](https://vk.com/@p3113-opd-ura-my-sdaem-4-uu-labu) | Мануал к ЛР 4 |
 | [github.com/Azat2202/itmo-labs/1 year/ОПД/Лабораторная работа 4](https://github.com/Azat2202/itmo-labs/blob/master/1%20year/%D0%9E%D0%9F%D0%94/%D0%9B%D0%B0%D0%B1%D0%BE%D1%80%D0%B0%D1%82%D0%BE%D1%80%D0%BD%D0%B0%D1%8F%20%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D0%B0%204/P3116%20%D0%A1%D0%B8%D1%80%D0%B0%D0%B7%D0%B5%D1%82%D0%B4%D0%B8%D0%BD%D0%BE%D0%B2_%D0%90%D0%B7%D0%B0%D1%82_%D0%9D%D0%B8%D1%8F%D0%B7%D0%BE%D0%B2%D0%B8%D1%87%20%D0%9B%D0%A04%20%D0%97%D0%B0%D1%89%D0%B8%D1%82%D0%B0.pdf) | Пример отчёта для ЛР 4 |
 
 ## Лицензия <a name="license"></a>

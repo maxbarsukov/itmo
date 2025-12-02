@@ -1,9 +1,9 @@
 # Основы профессиональной деятельности
 
-<img alt="Angry" src="https://github.com/maxbarsukov/itmo/blob/master/.docs/angry2.gif" height="240">
+<img alt="аngry" src="https://github.com/maxbarsukov/itmo/blob/master/.docs/angry2.gif" height="240">
 
 > [!NOTE]
-> диагональные вложенные микрохальты
+> Диагональные вложенные микрохальты
 
 > [!TIP]
 > «Знаете почему символ ВТ — уточка? ... Уточка, как студенты, когда ее сжимаешь, она попискивает.» \

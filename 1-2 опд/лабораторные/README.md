@@ -2,15 +2,17 @@
 
 ## Лабораторные работы
 
-<img alt="Scared" src="https://github.com/maxbarsukov/itmo/blob/master/.docs/scared.gif" height="150">
+<img alt="scared" src="https://github.com/maxbarsukov/itmo/blob/master/.docs/scared.gif" height="150">
 
-- [Лабораторная работа №1](./lab1);
-- [Лабораторная работа №2](./lab2);
-- [Лабораторная работа №3](./lab3);
-- [Лабораторная работа №4](./lab4);
-- [Лабораторная работа №5](./lab5);
-- [Лабораторная работа №6](./lab6);
-- [Лабораторная работа №7](./lab7).
+Задания для лабораторных работ: [se.ifmo.ru/courses/csbasics#labs](https://se.ifmo.ru/courses/csbasics#labs).
+
+1. [Лабораторная работа №1](./lab1);
+2. [Лабораторная работа №2](./lab2);
+3. [Лабораторная работа №3](./lab3);
+4. [Лабораторная работа №4](./lab4);
+5. [Лабораторная работа №5](./lab5);
+6. [Лабораторная работа №6](./lab6);
+7. [Лабораторная работа №7](./lab7).
 
 ---
 
@@ -18,9 +20,7 @@
 
 | Ссылка | Описание |
 | --- | --- |
-| [vk.com/@p3113-opd-ura-my-sdaem-4-uu-labu](https://vk.com/@p3113-opd-ura-my-sdaem-4-uu-labu) | Мануал к ЛР 4 |
-| [vk.com/@p3113-ya-vvodil-menya-vyvodili-ili-manual-k-5-laboratornoi-po-opd](https://vk.com/@p3113-ya-vvodil-menya-vyvodili-ili-manual-k-5-laboratornoi-po-opd) <br> [vk.com/@p3113-bnopnya-vhruk-ili-manual-k-5-laboratornoi-po-opd-2-chast](https://vk.com/@p3113-bnopnya-vhruk-ili-manual-k-5-laboratornoi-po-opd-2-chast) | Мануал к ЛР 5 |
-| [vk.com/@p3113-preryvaniya-kak-smysl-zhizni-ili-manual-k-6-laboratornoi-po](https://vk.com/@p3113-preryvaniya-kak-smysl-zhizni-ili-manual-k-6-laboratornoi-po) | Мануал к ЛР 6 |
+| [Методические указания в ЛР (1.45.09).pdf](./Методические%20указания%20к%20лабораторным%20работам%20(версия%201.45.09).pdf) | Методические указания к лабораторным работам (версия 1.45.09) |
 
 ## Лицензия <a name="license"></a>
 
