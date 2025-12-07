@@ -28,7 +28,7 @@
 
 ## Лекции
 
-Слайды лекций: [лекции/Лекции по ЭПИ v1.14.pdf](./лекции/Лекции%20по%20ЭПИ%20v1.14.pdf).
+Слайды лекций: [лекции/Лекции по ЭПИ v1.16.pdf](./лекции/Лекции%20по%20ЭПИ%20v1.16.pdf).
 
 ## Рубежная работа
 
@@ -45,7 +45,7 @@
 | Ссылка | Описание |
 | --- | --- |
 | [docs.google.com/spreadsheets/d/...](https://docs.google.com/spreadsheets/d/1WahdtQ26KpIzaf1NyD_NHxLXO_eUDwyuBCfY49PW4XQ/edit?gid=0#gid=0) | Журнал ЭПИ 2025 |
-| [лекции/Лекции по ЭПИ v1.14.pdf](./лекции/Лекции%20по%20ЭПИ%20v1.14.pdf) | Слайды лекций |
+| [лекции/Лекции по ЭПИ v1.16.pdf](./лекции/Лекции%20по%20ЭПИ%20v1.16.pdf) | Слайды лекций |
 | [youtube.com/playlist?list=PLBWafxh...](https://www.youtube.com/playlist?list=PLBWafxh1dFuy5v7wAueiVTuIiroN4TZAo) | Видео лекций 2019/2020 уч. года на YouTube |
 | [books/mythical-man-month-brooks.pdf](https://maxbarsukov.ru/bookshelf/books/mythical-man-month-brooks.pdf) | Мифический человеко-месяц, Фредерик Брукс |
 | [citforum.ru/SE/project/arkhipenkov_lectures/](https://citforum.ru/SE/project/arkhipenkov_lectures/) | Лекции по управлению программными проектами, С. Архипенков |
