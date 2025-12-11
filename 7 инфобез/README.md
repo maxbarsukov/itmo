@@ -75,6 +75,7 @@
 | --- | --- |
 | [disk.yandex.ru/i/Ckk-QmZoypCBrA](https://disk.yandex.ru/i/Ckk-QmZoypCBrA) | Журнал ИБ (2025/26) |
 | [прочее/infobez_and_practice_reports.pdf](./прочее/infobez_and_practice_reports.pdf) | Методичка по Маркиной. Пользуйтесь с умом |
+| [прочее/how-to-remove-metadata.md](./прочее/how-to-remove-metadata.md) | Как удалить метаданные из документа |
 
 ## Лицензия <a name="license"></a>
 
