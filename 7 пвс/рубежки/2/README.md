@@ -35,6 +35,7 @@
 | Ссылка | Описание |
 | --- | --- |
 | [прочее/SDK-1.1M_24110601.pdf](../../прочее/SDK-1.1M_24110601.pdf) | Методичка по стенду SDK-1.1M |
+| [github.com/RedGry/ITMO/Computer systems design/tests/rybej_1.pdf](https://github.com/RedGry/ITMO/blob/master/Computer%20systems%20design/tests/rybej_1.pdf) <br> [github.com/RedGry/ITMO/Computer systems design/docs/Рубежка по практике - ПВС [Done].pdf](https://github.com/RedGry/ITMO/blob/master/Computer%20systems%20design/docs/%D0%A0%D1%83%D0%B1%D0%B5%D0%B6%D0%BA%D0%B0%20%D0%BF%D0%BE%20%D0%BF%D1%80%D0%B0%D0%BA%D1%82%D0%B8%D0%BA%D0%B5%20-%20%D0%9F%D0%92%D0%A1%20%5BDone%5D.pdf) | Рубежная работа по темам лабораторных работ прошлых лет |
 
 ## Лицензия <a name="license"></a>
 

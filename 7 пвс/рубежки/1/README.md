@@ -70,6 +70,7 @@ HW и SW в маршруте проектирования ВС больше не
 | Ссылка | Описание |
 | --- | --- |
 | [лекции/slides.pdf](../../лекции/slides.pdf) | Слайды лекций |
+| [github.com/RedGry/ITMO/Computer systems design/tests/rybej_2.pdf](https://github.com/RedGry/ITMO/blob/master/Computer%20systems%20design/tests/rybej_2.pdf) | Рубежная работа по темам лекций прошлых лет |
 
 ## Лицензия <a name="license"></a>
 
