@@ -39,7 +39,7 @@
 
 | Ссылка | Описание |
 | --- | --- |
-| [лекции/Лекции по ЭПИ v1.14.pdf](../../лекции/Лекции%20по%20ЭПИ%20v1.14.pdf) | Слайды лекций |
+| [лекции/Лекции по ЭПИ v1.17.pdf](../../лекции/Лекции%20по%20ЭПИ%20v1.17.pdf) | Слайды лекций |
 | [qsm.com/resources/function-point-languages-table](https://www.qsm.com/resources/function-point-languages-table) | Таблица количества строк на точку для разных ЯП |
 | [citforum.ru/SE/project/arkhipenkov_lectures/11.shtml](https://citforum.ru/SE/project/arkhipenkov_lectures/11.shtml) | Оценка трудоемкости и сроков разработки ПО. Метод PERT |
 | [citforum.ru/SE/project/arkhipenkov_lectures/12.shtml](https://citforum.ru/SE/project/arkhipenkov_lectures/12.shtml) | Обзор метода функциональных точек |
