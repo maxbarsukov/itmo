@@ -1,0 +1,34 @@
+services:
+    frontend:
+        build: .
+        image: lab1-frontend:latest
+        ports:
+            - "5002:5000"
+        env_file:
+            - .env
+        environment:
+            - REDIS_HOST=${REDIS_HOST:-redis}
+            - REDIS_PORT=${REDIS_PORT:-6379}
+            - REDIS_DB=${REDIS_DB:-0}
+            - REDIS_PASSWORD=${REDIS_PASSWORD}
+        depends_on:
+            - redis
+        deploy:
+            replicas: 1
+            restart_policy:
+                condition: any
+
+    redis:
+        image: redis:7-alpine
+        env_file:
+            - .env
+        command: ["redis-server", "--appendonly", "yes", "--requirepass", "${REDIS_PASSWORD}"]
+        volumes:
+            - redis-data:/data
+        deploy:
+            replicas: 1
+            restart_policy:
+                condition: any
+
+volumes:
+    redis-data:

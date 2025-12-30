@@ -1,0 +1,61 @@
+services:
+  edge-broker:
+    image: eclipse-mosquitto:2
+    container_name: edge-broker
+    ports:
+      - "1883:1883"
+    volumes:
+      - ./mosquitto.conf:/mosquitto/config/mosquitto.conf
+    networks:
+      - factory-net
+
+  sensor:
+    build: ./sensor
+    container_name: sensor
+    environment:
+      - MQTT_BROKER=edge-broker
+      - MQTT_TOPIC=factory/temp
+    depends_on:
+      - edge-broker
+    networks:
+      - factory-net
+
+  fog-node:
+    image: nodered/node-red
+    container_name: fog-node
+    ports:
+      - "1880:1880"
+    environment:
+      - TZ=Europe/Moscow
+    volumes:
+      - node-red-data:/data
+    networks:
+      - factory-net
+
+  cloud-broker:
+    image: eclipse-mosquitto:2
+    container_name: cloud-broker
+    ports:
+      - "1884:1883"
+    volumes:
+      - ./mosquitto.conf:/mosquitto/config/mosquitto.conf
+    networks:
+      - factory-net
+
+  cloud-dashboard:
+    build: ./cloud_dashboard
+    container_name: cloud-dashboard
+    environment:
+      - MQTT_BROKER=cloud-broker
+      - MQTT_TOPIC=cloud/alerts
+    depends_on:
+      - cloud-broker
+    networks:
+      - factory-net
+
+networks:
+  factory-net:
+    driver: bridge
+
+volumes:
+  node-red-data:

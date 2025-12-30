@@ -1,0 +1,16 @@
+apiVersion: v1
+kind: Secret
+metadata:
+  name: app-secrets
+type: Opaque
+stringData:
+  REDIS_PASSWORD: password
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: app-config
+data:
+  REDIS_HOST: redis
+  REDIS_PORT: "${REDIS_PORT}"
+  REDIS_DB: "0"
