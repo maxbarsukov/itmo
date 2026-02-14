@@ -16,6 +16,7 @@
 | <img alt="aliev" src="./aliev.gif" height="60"> | Алиев |
 | <img alt="balakshin" src="./balakshin.gif" height="60"> | Балакшин |
 | <img alt="balkanskiy" src="./balkanskiy.gif" height="60"> | Балканский |
+| <img alt="barsukov" src="./barsukov.gif" height="60"> | Барсуков |
 | <img alt="bessmertniy" src="./bessmertniy.gif" height="60"> | Бессмертный |
 | <img alt="blokhina" src="./blokhina.gif" height="60"> | Блохина |
 | <img alt="bostrikova" src="./bostrikova.gif" height="60"> | Бострикова |

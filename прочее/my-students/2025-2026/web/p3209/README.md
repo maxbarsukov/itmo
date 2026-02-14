@@ -4,7 +4,7 @@
 
 Уважаемые студенты!
 
-Меня зовут Максим Барсуков, в этом семестре я буду вашим практиком по дисциплине Веб-программирование.
+Меня зовут <a href="https://github.com/maxbarsukov/itmo/blob/master/.docs/tap-tap/README.md"><img alt="barsukov" src="https://github.com/maxbarsukov/itmo/blob/master/.docs/tap-tap/barsukov.gif" height="20"></a> [Максим Барсуков](https://my.itmo.ru/persons/367081), в этом семестре я буду вашим практиком по дисциплине Веб-программирование.
 
 ### Контакты
 
