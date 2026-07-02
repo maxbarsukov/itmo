@@ -1,6 +1,6 @@
 # maxbarsukov/itmo
 
-> Системное и прикладное программное обеспечение в Университете |/iТМО<br><sub><sup>(Механико-оптическое и часовое отделение Ремесленного училища цесаревича Николая)</sup></sub>
+> Системное и прикладное программное обеспечение в Университете l/iТМО<br><sub><sup>(Механико-оптическое и часовое отделение Ремесленного училища цесаревича Николая)</sup></sub>
 
 <img alt="Let's all love Lain!" src="https://github.com/maxbarsukov/itmo/blob/master/.docs/lain4.gif" width="610">
 
@@ -104,6 +104,9 @@ ___
 
 ## Предметы <a name="disciplines"></a>
 
+> [!TIP]
+> Средний балл (GPA): **4,77**; диплом с отличием.
+
 | Предмет / семестр | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 |
 | ----------------- | - | - | - | - | - | - | - | - |
 | Физическая культура и спорт | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | | |
@@ -159,10 +162,10 @@ ___
 | [Технологии виртуализации](./7%20технологии%20виртуализации) | | | | | | | :white_check_mark: | |
 | [Экономика программной инженерии](./7%20эпи) | | | | | | | :white_check_mark: | |
 | [Защита и действия человека в условиях ЧС](./8%20чс) | | | | | | | | :white_check_mark: |
-| [Производственная, преддипломная практика](./8%20преддипломная%20практика) | | | | | | | | :construction: |
+| [Производственная, преддипломная практика](./8%20преддипломная%20практика) | | | | | | | | :white_check_mark: |
 | [Производственная, технологическая<br>(проектно-технологическая) практика](./8%20производственная%20практика) | | | | | | | | :white_check_mark: |
 | [Учебная, ознакомительная практика](./8%20учебная%20практика) | | | | | | | | :white_check_mark: |
-| [Государственная итоговая аттестация](./8%20вкр) | | | | | | | | :construction: |
+| [Государственная итоговая аттестация](./8%20вкр) | | | | | | | | :white_check_mark: |
 
 | :white_check_mark: | :construction: | :hourglass: |
 | ---                | ---            | ---         |
@@ -201,8 +204,7 @@ ___
 | [Imtjl](https://github.com/Imtjl), [EgorMIt/ITMO](https://github.com/EgorMIt/ITMO), [RedGry/ITMO](https://github.com/RedGry/ITMO), [band-of-four/cheatsheets](https://github.com/band-of-four/cheatsheets) | :star: Другие популярные репозитории с работами |
 | [Vsev0l0d](https://github.com/Vsev0l0d?tab=repositories), [RomanVassilchenko/ITMOProjects](https://github.com/RomanVassilchenko/ITMOProjects), [testpassword](https://github.com/testpassword?tab=repositories) | Репозитории студентов (до 2022) |
 | [Zerumi-ITMO-Related](https://github.com/Zerumi-ITMO-Related),&nbsp;[XVIIStarPlatinum/ITMO](https://github.com/XVIIStarPlatinum/ITMO),&nbsp;[FEgor04/labs](https://github.com/FEgor04/labs),<br>[Kuchizu/ItmoLabs](https://github.com/Kuchizu/ItmoLabs),&nbsp;[sultanowskii/itmo-edu](https://github.com/sultanowskii/itmo-edu),&nbsp;[belovlaska/itmo](https://github.com/belovlaska/itmo) | :star: Репозитории студентов (2022-2026) |
-| [petrovviacheslav/myitmo](https://github.com/petrovviacheslav/myitmo),&nbsp;[bilyardvmetro/ITMO](https://github.com/bilyardvmetro/ITMO-System-Application-Software),&nbsp;[2BuRy1/itmo](https://github.com/2BuRy1/itmo),<br>[Gastozavr/itmo](https://github.com/Gastozavr/itmo),&nbsp;[awesoma31/ITMO_Labs](https://github.com/awesoma31/ITMO_Labs),&nbsp;[Vaneshik/VT-Labs](https://github.com/Vaneshik/VT-Labs) | :star: Репозитории студентов (2023-2027) |
-| [AstroSoup/ITMO.STUDY](https://github.com/AstroSoup/ITMO.STUDY), [ldpst/itmo](https://github.com/ldpst/itmo), [vladlenblch/ITMO_VT](https://github.com/vladlenblch/ITMO_VT) | Репозитории студентов (2024-2028) |
+| [petrovviacheslav/myitmo](https://github.com/petrovviacheslav/myitmo),&nbsp;[bilyardvmetro/ITMO](https://github.com/bilyardvmetro/ITMO-System-Application-Software),&nbsp;[2BuRy1/itmo](https://github.com/2BuRy1/itmo),<br>[Gastozavr/itmo](https://github.com/Gastozavr/itmo),&nbsp;[awesoma31/ITMO_Labs](https://github.com/awesoma31/ITMO_Labs),&nbsp;[Vaneshik/VT-Labs](https://github.com/Vaneshik/VT-Labs),<br>[e345ee/MyITMOProjects](https://github.com/e345ee/MyITMOProjects) | :star: Репозитории студентов (2023-2027) || [AstroSoup/ITMO.STUDY](https://github.com/AstroSoup/ITMO.STUDY), [ldpst/itmo](https://github.com/ldpst/itmo), [vladlenblch/ITMO_VT](https://github.com/vladlenblch/ITMO_VT) | Репозитории студентов (2024-2028) |
 | [CandyGoose/ITMO_Software_engineering](https://github.com/CandyGoose/ITMO_Software_engineering) | :star: Отличный репозиторий с **Нейротеха** |
 | [buffer404/university](https://github.com/buffer404/university) | Много лаб с направления **ИВТ** |
 | [MakeCheerfulUpload](https://github.com/orgs/MakeCheerfulUpload/repositories) | Сборник работ 1 семестра |
