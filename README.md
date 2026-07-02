@@ -250,7 +250,7 @@ ___
 [![License: CC BY-NC-SA 4.0](https://licensebuttons.net/l/by-nc-sa/4.0/80x15.png)](https://creativecommons.org/licenses/by-nc-sa/4.0/)
 
 Проект доступен с открытым исходным кодом на условиях [Лицензии CC BY-NC-SA 4.0](./LICENSE). \
-*Авторские права 2025 Максим Барсуков*
+*Авторские права 2026 Максим Барсуков*
 
 > [!NOTE]
 > <picture> <source srcset="https://count.getloli.com/@maxbarsukov?name=maxbarsukov&theme=moebooru-h&padding=6&offset=0&align=top&scale=1&pixelated=1&darkmode=1" media="(prefers-color-scheme: dark)" alt="Количество просмотров" height="85" align="left"/><source srcset="https://count.getloli.com/@maxbarsukov?name=maxbarsukov&theme=moebooru-h&padding=6&offset=0&align=top&scale=1&pixelated=1&darkmode=0" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)" alt="Количество просмотров" height="85" align="left"/><img src="https://count.getloli.com/@maxbarsukov?name=maxbarsukov&theme=moebooru-h&padding=6&offset=0&align=top&scale=1&pixelated=1&darkmode=0" alt="Количество просмотров" height="85" align="left"/></picture><i>Если репозиторий просмотрен уже  <br>раз, но никто не оставил звезду — <br> был ли вообще этот просмотр? <br>Спасибо, что делаете его реальным!</i>
