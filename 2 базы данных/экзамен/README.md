@@ -30,6 +30,7 @@
 | [docs.google.com/document/d/1VlCpJ...](https://docs.google.com/document/d/1VlCpJtjxr4mZcazKUanbjqBC2RfhEM9D/edit?tab=t.0) | Полный текст задания и предметные области от [*@XVIIStarPlatinum*](https://github.com/XVIIStarPlatinum/) |
 | [https://github.com/Imtjl/1st-year-guide/tree/main/DB/Экзамен_подготовка](https://github.com/Imtjl/1st-year-guide/tree/main/DB/%D0%AD%D0%BA%D0%B7%D0%B0%D0%BC%D0%B5%D0%BD_%D0%BF%D0%BE%D0%B4%D0%B3%D0%BE%D1%82%D0%BE%D0%B2%D0%BA%D0%B0) | Материалы для подготовки к экзамену |
 | [чеклист.pdf](./чеклист.pdf) | Чеклист выполнения экзамена |
+| [sergeypugin/ITMO/2_DB/exam/README.md](https://github.com/sergeypugin/ITMO/blob/main/2_DB/exam/README.md) | Разбор экзамена (2026) |
 
 ## Лицензия <a name="license"></a>
 
